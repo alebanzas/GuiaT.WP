@@ -36,7 +36,7 @@ namespace GuiaTBAWP
 
         private void Button_Click_Subtes(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Subte.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/Subtes.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Trenes(object sender, RoutedEventArgs e)

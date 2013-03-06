@@ -16,7 +16,7 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="Guia Transporte BA">
+        <controls:Panorama Title="Guía Transporte BA">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="PanoramaBackground.png" Opacity=".35"/>
             </controls:Panorama.Background>
@@ -45,7 +45,7 @@
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
                             <Paragraph>
-                                Guia Trasporte BA te ayuda a moverte por el area metropolitana de Buenos Aires (CABA y GBA)
+                                Guía Trasporte BA te ayuda a moverte por el area metropolitana de Buenos Aires (CABA y GBA)
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
@@ -79,10 +79,10 @@
                     <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
 						Desarrollado por BTB Solutions
                         <LineBreak /><LineBreak />
-                        Encuentra toda la información sobre GuiaTBA, puntos de carga, de venta, y encuentra la ruta al punto mas cercano.
+                        Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
                         <LineBreak /><LineBreak />
                         <LineBreak /><LineBreak />
-                        La aplicación no almacena ningún tipo de información personal, ubicacion, identificación de la red, ni del equipo. Solamente utiliza internet para obtener los puntos de carga y venta.
+                        La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza internet para obtener los puntos de carga y venta.
                     </TextBlock>
                 </ScrollViewer>
             </controls:PanoramaItem>

@@ -68,11 +68,8 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Width="110" Height="150" Source="{Binding ImageUrl}" VerticalAlignment="Top"/>
                 <StackPanel Grid.Column="1" VerticalAlignment="Top">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="12,-12,12,6"/>
-                    <TextBlock Text="{Binding Stars}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
-                    <TextBlock Text="{Binding Information}" Style="{StaticResource PhoneTextSmallStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
                     <TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
                 </StackPanel>
             </Grid>

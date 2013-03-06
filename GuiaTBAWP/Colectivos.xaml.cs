@@ -26,7 +26,7 @@ namespace GuiaTBAWP
         {
             var buss = new List<Bus>();
 
-
+            buss.Add(new Bus("Línea 1 a 10"));
 
 
             var byCategory = from Bus in buss

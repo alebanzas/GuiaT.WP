@@ -85,6 +85,7 @@
     <Compile Include="BelgranoSur.xaml.cs">
       <DependentUpon>BelgranoSur.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BusData\Bus.cs" />
     <Compile Include="Colectivos.xaml.cs">
       <DependentUpon>Colectivos.xaml</DependentUpon>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>
     </Compile>

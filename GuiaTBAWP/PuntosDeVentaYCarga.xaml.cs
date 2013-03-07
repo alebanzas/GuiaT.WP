@@ -33,27 +33,29 @@ namespace GuiaTBAWP
 
         public PuntosDeVentaYCarga()
         {
-            requests = 0;
-            SetLocationService(GeoPositionAccuracy.High);
             InitializeComponent();
 
-            DataContext = App.ViewModel;
+            SetLocationService(GeoPositionAccuracy.High);
 
 
             if (!NetworkInterface.GetIsNetworkAvailable() ||
                 (App.ViewModel.watcher.Permission.Equals(GeoPositionPermission.Denied) ||
                  App.ViewModel.watcher.Permission.Equals(GeoPositionPermission.Unknown)))
             {
-                var res = App.Current.RootVisual as PhoneApplicationFrame;
-                res.Navigate(new Uri("/Error.xaml", UriKind.Relative));
+                this.Loaded += (s, e) =>
+                {
+                    var ns = NavigationService;
+                    ns.Navigate(new Uri("/Error.xaml", UriKind.Relative));
+                };
+                return;
             }
-            else
-            {
-                progress.IsVisible = true;
-                progress.IsIndeterminate = true;
 
-                StartLocationService();
-            }
+            DataContext = App.ViewModel;
+
+            progress.IsVisible = true;
+            progress.IsIndeterminate = true;
+
+            StartLocationService();
         }
         
         private void SetProgressBar(string msj, bool showProgress = true)

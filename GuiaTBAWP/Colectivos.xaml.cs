@@ -195,7 +195,7 @@ REGRESO A ESTACIÓN TERMINAL DE ÓMNIBUS DE RETIRO: Desde MENDOZA y MARCO AVELLA
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 1 a 10")
             {
                 Title = "Línea 10",
                 Description = @"
@@ -1215,7 +1215,7 @@ Los servicios del Recorrido C se prestarán durante el lapso comprendido entre l
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 41 a 50")
             {
                 Title = "Línea 50",
                 Description = @"
@@ -1459,7 +1459,7 @@ REGRESO A ESTACIÓN BUENOS AIRES: Desde ARISTÓBULO DEL VALLE y 25 DE MAYO por 2
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 51 a 60")
             {
                 Title = "Línea 60",
                 Description = @"
@@ -1725,7 +1725,7 @@ ULTIMO ANEXO  Resolución C.N.R.T. (I) 2583 de fecha 30/09/05
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 61 a 70")
             {
                 Title = "Línea 70",
                 Description = @"
@@ -1886,7 +1886,7 @@ PLAZA CONSTITUCIÓN - RAFAEL CALZADA - BARRIO SAN JOSÉ - PLAZA CONSTITUCIÓN: D
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 71 a 80")
             {
                 Title = "Línea 80",
                 Description = @"
@@ -2556,7 +2556,7 @@ La citada resolución entrará en vigencia con la efectiva habilitación para su
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 91 a 100")
             {
                 Title = "Línea 100",
                 Description = @"
@@ -2789,7 +2789,7 @@ La citada resolución entrará en vigencia con la efectiva habilitación para su
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 101 a 110")
             {
                 Title = "Línea 110",
                 Description = @"
@@ -3186,7 +3186,7 @@ REGRESO A AVENIDA SANTA FE y CERRITO: 	Total restricción de tráfico en el tr
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 121 a 130")
             {
                 Title = "Línea 130",
                 Description = @"
@@ -3317,7 +3317,7 @@ REGRESO A MORON: Desde CARABOBO y ALFREDO PALACIOS por ésta, AVENIDA REMEDIOS D
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 131 a 140")
             {
                 Title = "Línea 140",
                 Description = @"
@@ -3533,7 +3533,7 @@ Con motivo de lo dispuesto mediante Resolución Nº 101 de fecha 30 de octubre d
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 141 a 150")
             {
                 Title = "Línea 150",
                 Description = @"
@@ -3678,7 +3678,7 @@ La citada resolución entrará en vigencia con la efectiva habilitación para su
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 151 a 160")
             {
                 Title = "Línea 160",
                 Description = @"
@@ -4059,7 +4059,7 @@ REGRESO A NUEVA POMPEYA: Desde JUJUY y AMENEDO por AMENEDO, SALTA, JOSÉ SÁNCHE
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 171 a 180")
             {
                 Title = "Línea 180",
                 Description = @"
@@ -4437,7 +4437,7 @@ En el resto del recorrido se observará el tráfico de pasajeros correspondiente
             var buss = new List<Bus>();
 
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 491 a 500")
             {
                 Title = "Línea 500A",
                 Description = @"
@@ -4498,7 +4498,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 501 a 510")
             {
                 Title = "Línea 500B",
                 Description = @"
@@ -4656,7 +4656,7 @@ Estación San F. Solano - Estación Burzaco (Ramal 1): De Av. 24 y Humberto 1º 
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 501 a 510")
             {
                 Title = "Línea 510",
                 Description = @"
@@ -4705,7 +4705,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 511 a 520")
             {
                 Title = "Línea 520",
                 Description = @"
@@ -4802,7 +4802,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 531 a 540")
             {
                 Title = "Línea 540",
                 Description = @"
@@ -4910,7 +4910,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 541 a 550")
             {
                 Title = "Línea 550",
                 Description = @"
@@ -5000,7 +5000,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 571 a 580")
             {
                 Title = "Línea 580",
                 Description = @"
@@ -5077,7 +5077,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 611 a 620")
             {
                 Title = "Línea 620",
                 Description = @"
@@ -5267,7 +5267,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 621 a 630")
             {
                 Title = "Línea 630",
                 Description = @"
@@ -5309,7 +5309,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 661 a 670")
             {
                 Title = "Línea 670",
                 Description = @"
@@ -5347,7 +5347,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 691 a 700")
             {
                 Title = "Línea 700",
                 Description = @"
@@ -5387,7 +5387,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 701 a 710")
             {
                 Title = "Línea 710",
                 Description = @"
@@ -5414,7 +5414,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 711 a 720")
             {
                 Title = "Línea 720",
                 Description = @"
@@ -5461,7 +5461,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 731 a 740")
             {
                 Title = "Línea 740",
                 Description = @"
@@ -5543,250 +5543,7 @@ Regreso por similar recorrido
             var buss = new List<Bus>();
 
 
-            buss.Add(new Bus("Línea 391 a 400")
-            {
-                Title = "Línea 394",
-                Description = @"
-Estación Monte Grande - Los Rosales: De Estación Monte Grande - por Petrazzi - V. López - E. Santamarina - Gral. Paz - M. Acosta - R. Santamaría - Ruta 205 - Jacarandá - (Estación Jagüel) - P. Dreyer - J. Newbery - Sgto. Cabral - Terminal frente a Country Los Rosales. 
-Regreso por similar recorrido. 
-Ramal Monte Grande - Ruta 4: A partir de la intersección de las calles Alvear y Reconquista por ésta - Rosas - Liniers - Madariaga - Siciliano - hasta Ruta 4. 
-Regreso por similar recorrido. 
-Estación Monte Grande - Estación Ezeiza: De Estación Monte Grande - por Petrazzi - Dorrego - su cont. Constanzó - F. de Toro - Cervetti - Edison - J. Newery - Vértiz - San Lorenzo - French - hasta Rep. Estación Ezeiza. 
-Regreso por similar recorrido. 
-Estación Monte Grande - Bruzzone y Ruta Nº 4: De Estación M. Grande por Petrazzini - Dorrego - su cont. Constanzo - M. Paz - su cont. Ocantos - Sarmiento - Bruzzone - hasta Ruta 4. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 391 a 400")
-            {
-                Title = "Línea 395",
-                Description = @"
-Ramal Morón - Ituzaingó: Cabecera D. Alvarez y Canadá - (Estación Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Doyhenar - Sarmiento - Avellaneda - Marqués de Loreto - C. Casares (Estación Castelar) - Francia - R. Peña - I. Arias - J. M. Paz - Bacacay - Soler - Zufriategui - (Estación Ituzaingó) - Las Heras - Mansilla - Av. Ratti - Carabobo - Pérez Quintana - Posta de Pardo - Almagro - Cerrito - Portugal - Mirave - Almagro - Alcalde Loza - Brandsen - Olazabal - Piran - Zufriategui - Juncal - 2da. Rivadavia - Las Heras (Estación Ituzaingó) donde estaciona. 
-Regreso: De Estación Ituzaingo por Las Heras - Mansilla - Brandsen - Alcalde Loza - Almagro - Mirave - Portugal - Cerrito - Almagro - Posta de Pardo - Pérez Quintana - Carabobo - Av. Ratti - Olazabal - (Estación Ituzaingó) - Las Heras - Bacacay - J. M. Paz - (Partido de Morón) - I. Arias - (Estación Castelar) - Avellaneda - Sarmiento - Saldias - Machado hasta Independencia - (Universidad de Morón) donde estaciona. 
-Ramal Ituzaingó - Villa Las Naciones: De Las Heras (Est. Ituzaingó) - Alvear - Perez Quintana - Emperanza - Gral. Rivera - Posta de Pardo - Haiti - Hasta Aguaribay donde estaciona. 
-Regreso: De Aguaribay y Haiti por Haiti - Posta de Pardo - Gral. Rivera - Perez Quintana - Laprida - Videla - Alvear - Juncal - 2da. Rivadavia - Las Heras (Estación Ituzaingó) donde estaciona. 
-"
-            });
-
-            buss.Add(new Bus("Línea 401 a 410")
-            {
-                Title = "Línea 403",
-                Description = @"
-De Estación L. de Zamora - Balcarce y Alsina - A. Brown - (Almte. Brown) - Espora (Ruta 210) - Humberto 1º - Estación Burzaco - C. Pellegrini - R. Rojas - Ruta 210 - Ruta 4 - Figueroa - Araujo - Barrio Don Orione - Gral. Hornos - Perón - Humahuaca - Ruta 4 - (Quilmes) - (Florencio Varela) - Cno. Gral. Belgrano - Cruce Varela - Av. H. Yrigoyen - Av. San Martín - Sallares - Alberdi - Av. Perón - Estación F. Varela. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 401 a 410")
-            {
-                Title = "Línea 404",
-                Description = @"
-San Vicente - Estación Glew: De Larrea y Santoro - (San Vicente) - por ésta - Lavalle - Liebertador San Martín - Av. Perón - C. Lorenzini - Brasil - Av. Independencia - Ruta 210 - (Alte. Brown) - Estación Glew. 
-Regreso por similar recorrido. 
-Ramal 2: De Larrea y Santoro - (San Vicente) - su ruta hasta Ruta 210 y Av. 29 - por ésta - Calle 139 - (San Vicente). 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 401 a 410")
-            {
-                Title = "Línea 405",
-                Description = @"
-De Recondo y Av. Pres. Perón - (Lomas de Zamora) - por Recondo - (Lanús) - Mendoza - Magallanes - Av. San Martín - Av. 25 de Mayo - Estación Lanús. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 401 a 410")
-            {
-                Title = "Línea 406",
-                Description = @"
-De Rotonda de San Justo - Mñor. Bufano (Ruta 4) - (E. Echeverría) - Ruta de la Tradición (Ruta 4) - (A. Brown) - Av. Monteverde - Av. H. Yrigoyen - A. del Valle - 25 de Mayo - C. Colón - Gral. Roca - Estación Burzaco - 9 de Julio - Av. H. Yrigoyen - Bouchard - M. Rodríguez - Nother - Avellaneda - Seguí - Estación Adrogué - Somellera - Rosales - Diag. Toll - Estación J. Mármol - Salta - Gaboto - Santa Ana - (Lomas de Zamora) - San Cristobál - Av. Eva Perón - hasta Estación Pasco. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 401 a 410")
-            {
-                Title = "Línea 407",
-                Description = @"
-De M. Estrada y El Zorzal - (San Martín) - por El Zorzal - Sarratea - (San Isidro) - Cno. Gral. Belgrano - C. Tejedor - Patagonia - E. Reclus - R. Falcón - Blanco Encalada - Int. Tomkinson - Ing. Bergallo - 3 de Febrero - Av. Centenario - Estación San Isidro - Av. Santa Fe - Estación Acassuso - D. Rocha - Av. A. Fleming - Edison - Fondo de la Legua - (Vicente López) - Av. Mitre - V. Sarsfield - Sgto. Baigorria - hasta Estación Munro. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 421 a 430")
-            {
-                Title = "Línea 421",
-                Description = @"
-De: Camino de Cintura (Ruta 4) y Av. Juan XXIII - (Lomas de Zamora) - por ésta - su cont. Perón - Virgen de Itatí - El Plumerillo - Ejército de los Andes - Av. Gral. San Martín - (Lanús) - Remedios de Escalada de San Martín - Av. Rivadavia - (Avellaneda) - Chile - Cabildo - Av. Rivadavia - José M. Freire - Av. Rivadavia - Gorriti - Pavón - Colón - Maipú - Belgrano - Montes de Oca - Av. Mitre - Av. Estevez. 
-Regreso por similar recorrido. 
-Desdoblamiento Puente de la Noria: De: Camino de Cintura (Ruta 4) y Av. Juan XVIII - (L. de Zamora) - Av. Perón - hasta Puente de la Noria - Camino de la Ribera Sur - (Lanús) - Osorio - Av. Remedios de Escalada de San Martín - su ruta. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 421 a 430")
-            {
-                Title = "Línea 429",
-                Description = @"
-De Av. San Martín y Av. Gral. Paz - (San Martín) - por Av. San Martín - Perdriel - Int. Campos - R. Carrillo - Av. Perón - Av. Balbín - (3 de Febrero) - Cruce Cno. del Buen Ayre - (San Miguel) - Av. A. Illia - Estación Barrufaldi - Estación Cap. Barrufaldi - Estación Cap. Lozano - Estación Tte. Agneta - Ruta 8 hasta Pilar. 
-Regreso por similar recorrido 
-"
-            });
-
-            buss.Add(new Bus("Línea 0 a 0")
-            {
-                Title = "Línea 430",
-                Description = @"
-De Av. Maipú y Av. Gral. Paz - (V. López) - por Av. Gral. Paz - Ruta Panamericana - (San Isidro) - Ruta Panamericana Ramal Tigre - (San Fernando) - (Tigre) - Liniers - hasta Rincón de Miliberg.
-
-"
-            });
-
-            buss.Add(new Bus("Línea 431 a 440")
-            {
-                Title = "Línea 435",
-                Description = @"
-De Estación por H. Yrigoyen - S. Ortiz - Estación R. de Escalada - 29 de Septiembre - (L. de Zamora) - Malabia - Alsina - Estación Banfield - Estación L. de Zamora - Ruta 210 - Av. A. Brown - Estación Temperley - (A. Brown) - Av. Espora (Ruta 210) - Estación Adrogué - Humberto 1º - C. Pellegrini - Estación Burzaco - R. Rojas - Av. Espora (Ruta 210) - Av. Berlín - Av. Longchamps - C. Diel - Av. H. Yrigoyen - Sarmiento - Moreno - Estación Glew - A. del Valle - Av. H. Yrigoyen - Estación Guernica - Ruta 210 - Independencia - Estación A. Körn - Bolv. de Mayo - Perón - Lavalle - Santoro - Matheu - Hosp. Rural San Vicente - Necochea - Lavalle - 25 de Mayo - Sarmiento - hasta Tucumán - (San Vicente). 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 431 a 440")
-            {
-                Title = "Línea 436",
-                Description = @"
-De Estación Banfield - (Lanús) - Maipú - Av. Alsina - Gallo - A. Lugano - Matheu - Gral. Lavalle - Allemamdri - R. Darío - Av. Eva Perón - Asunción - La Golondrina - Q. Costa - Nicaragua - Asunción - Juramento - Lituanania - (A. Brown) - Py y Margall - Amenedo - Dorrego - Canale - Erezcano - Amenedo - vías del FF.CC. Gral. Roca - Estación Adrogué. 
-Regreso por similar recorrido 
-"
-            });
-
-            buss.Add(new Bus("Línea 431 a 440")
-            {
-                Title = "Línea 437",
-                Description = @"
-Recorrido A  Ramal Bajo San Isidro 
-Ida a Garín: Desde Combate de la Vuelta de Obligado y Vicente López y Planes por Combate de la Vuelta de Obligado, Roque Sáenz Peña, Pedro de Mendoza, Avenida Tiscornia, Primera Junta, Avenida Centenario, Alsina, Avenida Andrés Rolón, D. Palma, Avenida Juan S. Fernández, Avenida Bernabé Márquez, Avenida Avelino Rolón, Ruta Panamericana, Avenida Belgrano, Boulevard Perón Lado Norte, Avenida F. Díaz, Boulevard Perón Sur hasta Bourdet. 
-Vuelta a Bajo San Isidro: Desde Bourdet y Boulevard Perón por Bourdet, Boulevard Perón Sur, Avenida F. Díaz, Boulevard Perón Norte, Churich, Ruta Panamericana, Avenida Avelino Rolón, Avenida Bernabé Márquez, Avenida Andrés Rolón, Alsina, Misiones, Laprida, Avenida Centenario, Primera Junta, 25 de Mayo, Almirante Brown, Juan B. de La Salle, Primera Junta, Avenida Tiscornia, Pedro de Mendoza hasta S. Elcano. 
-Recorrido B  Ramal Boulogne 
-Ida a Garín: Desde Combate de la Vuelta de Obligado y Vicente López y Planes por Combate de la Vuelta de Obligado, Roque Sáenz Peña, Pedro de Mendoza, Avenida Tiscornia, Primera Junta, Avenida Centenario, Alsina, Avenida Andrés Rolón, D. Palma, Avenida Juan S. Fernández, Avenida Bernabé Márquez, Avenida Avelino Rolón, Doctor Scalabrini Ortiz, Godoy Cruz, Virrey Vertiz, Avenida Avelino Rolón, Ruta Panamericana, Avenida Belgrano, Boulevard Perón Lado Norte, Avenida F. Díaz, Boulevard Perón Sur hasta Bourdet. 
-Vuelta a Bajo San Isidro: Desde Bourdet y Boulevard Perón por Bourdet, Boulevard Perón Sur, Avenida F. Díaz, Boulevard Perón Norte, Churich, Ruta Panamericana, Avenida Avelino Rolón, Virrey Vertiz, Godoy Cruz, Doctor Scalabrini Ortiz, Avenida Avelino Rolón, Avenida Bernabé Márquez, Avenida Andrés Rolón, Alsina, Misiones, Laprida, Avenida Centenario, Primera Junta, 25 de Mayo, Almirante Brown, Juan B. de La Salle, Primera Junta, Avenida Tiscornia, Pedro de Mendoza hasta S. Elcano. 
-"
-            });
-
-            buss.Add(new Bus("Línea 0 a 0")
-            {
-                Title = "Línea 440",
-                Description = @"
-San Miguel - J. C. Paz - Grand. Bourg - P. Nogués - Los Polvorines - San Miguel (Recorrido 1): De Fraga entre Av. Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Consejal Tribulato - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Ruta 197 - Lavallol - Cangallo - Cura Brochero - Pasco - Eva Perón - Beiró - J. F. Seguí - Eva Perón - El Callao - Ruta 197 - Sol de Mayo - Soldado ex Comb. de Malvinas - Hernandarias - Gorostiaga - C. Lorenzini - Dr. Baroni - Gral. Savio - 9 de Julio - Av. Maipú - Gral. San Martín - Gral. Savio - Rivadavia - Av. Maipú - Ruta 202 - Ruta 8 - Consejal Tribulato - L. N. Alem y Belgreno. 
-Regreso por similar recorrido. 
-Estación Lemos - Parque Jardín - Barrio del Sol - J. C. Paz - S. Miguel - Estación Lemos (Recorrido 2, Ramal 1): De Belgrano y Ruta 8 - por Belgrano - Ruta 8 - Av Mitre - Malnatti - Consejal Tribulato - L. N. Alem - Irigoin - M. Sastre - Pichincha - M. Ferreyra - P. de Mendoza - Gral. Pintos - J. V. González - G. Campos - Irigoin - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - 25 de Mayo - C. Lorenzini - Boedo - Gral. San Martín - Gral. Savio - 25 de Mayo - Av. Maipú - Dr. Baroni - R. Mejía - Gorriti - San Ignacio - Ruta 197 - Ruta 24 - Dr. M. Fitte - J. C. Paz - Zuviría - Av. Altube - G. Campos - Av. Mitre - Farías - Belgrano - Fraga y Av. Mitre. 
-Regreso por similar recorrido. 
-San Miguel - Base - J. C. Paz - San Miguel (Recorrido 2, Ramal 2): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - M. Ferreyra - T. Guido - Marchena - Ruta 24 - Dr. Fitte - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
-San Miguel - Barrio El Jaguel - San Miguel (Recorrido 3, Ramal 2): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - D´Elía - Belgrano - Munóz - 1º Junta - Darrageira - J. L. Suárez - Belgrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
-Regreso por similar recorrido. 
-San Miguel - Barrio El Jaguel - por Ruta 8 San Miguel (Recorrido 3, Ramal 3): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - Medrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
-Regreso por similar recorrido. 
-Estación San Miguel - Abascal - Estación J. C. Paz - San Miguel (Recorrido 4, Ramal 3): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Sarmiento - R. Franco - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
-Estación Lemos - Estación J. C. Paz - Estación Lemos (Recorrido 4, Ramal 4): De Av. Mitre entre Ruta 8 y Pavón - Mitre - Malnattí - Consejal Tribulato - Perón - Rivadavia - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
-Estación San Miguel - Cementerio Parque - Estación G. Bourg - Estación Lemos - Pinta - Estrella - San Miguel - (Rec. 5): De Av. Mitre entre Fraga y Farías por Av. Mitre - L. N. Alem - Belgrano - Perón - Pringles - Paunero - Irigoin - Muñoz - Chile - Ruta 8 - Conesa - Ventura Coll - M. Coronado - J. Henández - Pasco - A. Brown - S. Vega - Palacios - Eva Perón - F. Beiró - Seguí - Eva Perón - El Callao - Ruta 197 - Ruta 8 - Av. Mitre - C. Malnatti - C. Tribulato - La Pinta y Güemes. 
-Regreso por similar recorrido. 
-San Miguel - Parque Jardín - J. C. Paz - San Miguel (Rec. 7): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - M. Ferreyra - P. de Mendoza - G. Pinto - J. V. González - Av. G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Dr. M. Fitte - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
-San Miguel - Barrio Abascal - Estación J. C. Paz - Estación Grand Bourg (Rec. 8): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - Av. Sarmiento - R. Franco - Ruta 24 - Ruta 197 - El Callao - F. Beiró - J. F. Seguí - San Martín y Paso de los Patos. 
-Regreso por similar recorrido 
-"
-            });
-
-            buss.Add(new Bus("Línea 441 a 450")
-            {
-                Title = "Línea 441",
-                Description = @"
-Ramal San Alberto: De su Cabecera D. Alvarez y Canadá - (Morón) - Larrea - J. Ingenieros - Rauch - Salta - Alem - Saldías - Munilla - Bragado - Alem - Zapiola - Tucumán - San Pedro - Alem - C. Casares - Arias - Avellaneda - M. de Oca - Italia - Alem - (Ituzaingó) - L. Bloy - Paysandú - Herrera - Argain - L. Bloy - De la Cruz - Muñíz - Difilippi - Olavarría - Alvear - Juncal - 2da. Rivadavia - Las Heras - Mansilla - Videla - Peredo - L. de la Torre - Pringles - Almagro - Cosquín - Terminal Cosquín y Haití. 
-Regreso por similar recorrido. Ramal San Alberto por Ratti: De estación Ituzaingó (Ituzaingó) - Las Heras - Mansilla - Ratti - Andalgalá - Videla - Peredo - L. de la Torre - Pringles - Almagro - Cosquín - Haití. 
-Regreso por similar recorrido. Ramal Estación Castelar - Udaondo: De C. Casares - (Morón) - Francia - España - Cardoso - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - Leloir - Udaondo - De la Tradición - R. Balbín - Tabaré. 
-Regreso por similar recorrido. 
-Ramal Ituzaingó - Parque Leloir: De Las Heras - Condarco - J. M. Paz - M. Fierro - Del Cielito. 
-Regreso por similar recorrido. 
-Ramal Barrio Nuevo por Curuchet: De su Cabecera D. Alvarez y Canadá - (Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Salta - Azcuenaga - Vergara - Curuchet - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - Leloir - Udaondo - De la Tradición - El Rancho. 
-Regreso por similar recorrido. 
-Ramal La Refaloza: De su Cabecera D. Alvarez y Canadá - (Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Salta - Azcuenaga - Vergara - Curuchet - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - La Refaloza - Balbín - Cipolletti - terminal Cipolletti y Udaondo. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 441 a 450")
-            {
-                Title = "Línea 443A",
-                Description = @"
-Ramal Rubén Darío por Jufré: De Sarmiento - Salta - Munilla - Azcuénaga - Lamadrid - D. Alvarez - Del Carril - Santamarina - Cañada de Ruiz - Salazar - Jufré - Rodríguez - Acha - Husares - Rotherdam - Salas - M. Bravo - Vergara - Scholnik - Freud - Villaroel - H. Cortés - Roma - Ocampo - Escalada - Necochea - Ricchieri - Canning - Roca - Jauretche. 
-Regreso por similar recorrido. 
-Ramal Barrio Gaona: De Sarmiento - Salta - Azcuénaga - Balbín - Newton - Derqui - Rodó - Aldecoa - Balcarce - Aldao - Blandengues - Pasco - Bayló - Wasckman - Jufré - Bradley - Acuña - Rodríguez - Ortega y Gasset - Pedraza - Pizzagalli - Cetrángolo. 
-Regreso por similar recorrido. 
-Ramal Villa Club por Fábrica: De Sarmiento - Salta - Azcuénaga - Vergara - Scholnik - Jufré - Naon - Villaroel - R. Castillo - Masenet - Bergamini - Gaboto - Miranda - Alfaro - Ocampo - Escalada - Necochea - Ricchieri - Canning - Roca - Santa Ana - Los Patos - Bocayuva - Achapallas - Epecuen - Vergara - Km. 18.
-Regreso por similar recorrido. 
-Ramal Libertador - Cementerio Parque: De Sarmiento - Salta - Azcuénaga - Vergara - El Cóndor - Lima - Kierman - Santa Isabel - Ordóñez - Castagna - Kierman - Juramento - hasta Ñandú (campo del INTA). 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 441 a 450")
-            {
-                Title = "Línea 443B",
-                Description = @"
-De Sarmeinto - Salta - Azcuénaga - Vergara - Hidalgo - Lobos - Ventura Bustos - Chivilcoy - Tucumán - Navarro - L. N. Alem - Chivilcoy - Sarmiento - Avellaneda - M. de Loreto - C. Casares - Los Incas - Francia - R. Peña - Arias - J. M. Paz - Paysandú - Lavalleja - Malabia - J. M. Paz - G. Mistral - Brandsen - Patagonia - Ringuelet - Pringles - Alamgro - Cerrito - Brandsen - Mirave - Ringuelet - Famatina. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 441 a 450")
-            {
-                Title = "Línea 448",
-                Description = @"
-Ramal Grand Bourg - Tortuguitas - Barrio Sargento Cabral: De Constituyentes y Panamericana por Constituyentes - Valparaíso - Brasil - El Callao - Areguati - J. F. Seguí - Beiró - J. F. Seguí - Eva Perón - Chacabuco - Ruta 197 - Ruta 8 - Barrio Sargento Cabral. 
-Regreso por similar recorrido. 
-Ramal Del Viso - Pardo y la Pinta: Acceso Pilar - L. de la Torre - Pontinari - Maza - V. Gómez - Berutti - Independencia - L. de la Torre - Arata - Beceo - D. Cruz - L. de la Torre - Prov. de Bs. As. - Luis M. Drago - Cura Bruchero - Pasco - Eva Perón - Av. F. Beiró - J. Seguí - Av. Eva Perón - Bouchard - B. de Chacabuco - R. Rojas - Paso de los Patos - Palpa - Ambrosetti - Seaver - J. Hernández - A. Alsina - M. Oliden - Piñero - Polonia - H. Yrigoyen - Muñoz - Cnel. Arias - Av. Perón - J. C. Paz - L. N. Alem - Ruta 197 - Munóz - Cnel. Arias - Mendoza - Chile - San Lorenzo - 1º Junta - Perón - Irigoin - Sarmiento - C. Tribulato - L. N. Alem - Belgrano - Sarmiento - Conesa - Irigoyen - Saavedra - G. Campos - Azcuénaga - El Maestro - J. J. Paso - S. Berón de Astrada - Azcuénaga - Uriarte - Pardo y La Pinta. 
-Regreso por similar recorrido. 
-Ramal Constituyentes y Panamericana: De Constituyentes - Descartes - Haití - Patricias Arg. - Puerto Rico - El Callao - Diag. Seguí - Estación Grand Bourg - Diag. Seguí - Eva Perón - Paso de los Patos - Mozart - Quiroga - Ruta 8 - Av. Mitre - C. Malnatti - Cjal. Tribulato - L. N. Alem - Belgrano - Sarmiento - Conesa - Irigoyen - Saavedra - Gaspar Campos - Azcuénaga - El Maestro - J. J. Paso - J. Berón de Astrada - Azcuéanga - Uriarte - Pardo - hasta La Pinta (San Miguel). 
-Regreso por similar recorrido. 
-Ramal Estación Grand Bourg - Ruta 8 y Avellaneda: Estación Grand Bourg - (Malvinas Arg.) - Eva Perón - Paso de los Patos - Santos Vega - Martínez - Triunvirato - Acerboni - Compostela - L. N. Alem - Estación J. C. Paz - Perón - Ruta 197 - Muñoz - Hosp. D. Mercante - Cnel. Arias - Mendoza - Chile - San Lorenzo - 1º Junta - Ruta 8 - (San Miguel). 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 461 a 470")
-            {
-                Title = "Línea 462",
-                Description = @"
-De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Gob. Vergara - A. Jauretche - J. A. Roca (Ruta 201) - Centenera - hasta Los Patos. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 461 a 470")
-            {
-                Title = "Línea 464",
-                Description = @"
-________________________________________ De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Bonorio - E. Plass - Oyhanarte - Mazzarello - Malarredo - F. Frías - P. Díaz - Coraceros - Malespina - Mascagni - Gaboto - Jauretche - J. A. Roca - Km. 18 - Garay - Lavalle - Solís - Villegas - Dante - Las Calandrias 
-Regreso por similar recorrido 
-"
-            });
-
-            buss.Add(new Bus("Línea 461 a 470")
-            {
-                Title = "Línea 463",
-                Description = @"
-De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Gob. Vergara - Bustamante y Vergara - Villegas - Dolores de Huici - M. de Avilés - J. A. Roca - Jauretche - Argerich - Bolívar - Acassuso. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 191 a 200")
             {
                 Title = "Línea 200",
                 Description = @"
@@ -6273,7 +6030,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 291 a 300")
             {
                 Title = "Línea 300",
                 Description = @"
@@ -6312,7 +6069,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 301 a 310")
             {
                 Title = "Línea 310",
                 Description = @"
@@ -6411,7 +6168,7 @@ Regreso por similar recorrido
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 311 a 320")
             {
                 Title = "Línea 320",
                 Description = @"
@@ -6701,7 +6458,7 @@ Regreso por similar recorrido.
 "
             });
 
-            buss.Add(new Bus("Línea 0 a 0")
+            buss.Add(new Bus("Línea 381 a 390")
             {
                 Title = "Línea 390",
                 Description = @"
@@ -6728,6 +6485,249 @@ Regreso por similar recorrido.
 "
             });
 
+
+
+            buss.Add(new Bus("Línea 391 a 400")
+            {
+                Title = "Línea 394",
+                Description = @"
+Estación Monte Grande - Los Rosales: De Estación Monte Grande - por Petrazzi - V. López - E. Santamarina - Gral. Paz - M. Acosta - R. Santamaría - Ruta 205 - Jacarandá - (Estación Jagüel) - P. Dreyer - J. Newbery - Sgto. Cabral - Terminal frente a Country Los Rosales. 
+Regreso por similar recorrido. 
+Ramal Monte Grande - Ruta 4: A partir de la intersección de las calles Alvear y Reconquista por ésta - Rosas - Liniers - Madariaga - Siciliano - hasta Ruta 4. 
+Regreso por similar recorrido. 
+Estación Monte Grande - Estación Ezeiza: De Estación Monte Grande - por Petrazzi - Dorrego - su cont. Constanzó - F. de Toro - Cervetti - Edison - J. Newery - Vértiz - San Lorenzo - French - hasta Rep. Estación Ezeiza. 
+Regreso por similar recorrido. 
+Estación Monte Grande - Bruzzone y Ruta Nº 4: De Estación M. Grande por Petrazzini - Dorrego - su cont. Constanzo - M. Paz - su cont. Ocantos - Sarmiento - Bruzzone - hasta Ruta 4. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 391 a 400")
+            {
+                Title = "Línea 395",
+                Description = @"
+Ramal Morón - Ituzaingó: Cabecera D. Alvarez y Canadá - (Estación Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Doyhenar - Sarmiento - Avellaneda - Marqués de Loreto - C. Casares (Estación Castelar) - Francia - R. Peña - I. Arias - J. M. Paz - Bacacay - Soler - Zufriategui - (Estación Ituzaingó) - Las Heras - Mansilla - Av. Ratti - Carabobo - Pérez Quintana - Posta de Pardo - Almagro - Cerrito - Portugal - Mirave - Almagro - Alcalde Loza - Brandsen - Olazabal - Piran - Zufriategui - Juncal - 2da. Rivadavia - Las Heras (Estación Ituzaingó) donde estaciona. 
+Regreso: De Estación Ituzaingo por Las Heras - Mansilla - Brandsen - Alcalde Loza - Almagro - Mirave - Portugal - Cerrito - Almagro - Posta de Pardo - Pérez Quintana - Carabobo - Av. Ratti - Olazabal - (Estación Ituzaingó) - Las Heras - Bacacay - J. M. Paz - (Partido de Morón) - I. Arias - (Estación Castelar) - Avellaneda - Sarmiento - Saldias - Machado hasta Independencia - (Universidad de Morón) donde estaciona. 
+Ramal Ituzaingó - Villa Las Naciones: De Las Heras (Est. Ituzaingó) - Alvear - Perez Quintana - Emperanza - Gral. Rivera - Posta de Pardo - Haiti - Hasta Aguaribay donde estaciona. 
+Regreso: De Aguaribay y Haiti por Haiti - Posta de Pardo - Gral. Rivera - Perez Quintana - Laprida - Videla - Alvear - Juncal - 2da. Rivadavia - Las Heras (Estación Ituzaingó) donde estaciona. 
+"
+            });
+
+            buss.Add(new Bus("Línea 401 a 410")
+            {
+                Title = "Línea 403",
+                Description = @"
+De Estación L. de Zamora - Balcarce y Alsina - A. Brown - (Almte. Brown) - Espora (Ruta 210) - Humberto 1º - Estación Burzaco - C. Pellegrini - R. Rojas - Ruta 210 - Ruta 4 - Figueroa - Araujo - Barrio Don Orione - Gral. Hornos - Perón - Humahuaca - Ruta 4 - (Quilmes) - (Florencio Varela) - Cno. Gral. Belgrano - Cruce Varela - Av. H. Yrigoyen - Av. San Martín - Sallares - Alberdi - Av. Perón - Estación F. Varela. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 401 a 410")
+            {
+                Title = "Línea 404",
+                Description = @"
+San Vicente - Estación Glew: De Larrea y Santoro - (San Vicente) - por ésta - Lavalle - Liebertador San Martín - Av. Perón - C. Lorenzini - Brasil - Av. Independencia - Ruta 210 - (Alte. Brown) - Estación Glew. 
+Regreso por similar recorrido. 
+Ramal 2: De Larrea y Santoro - (San Vicente) - su ruta hasta Ruta 210 y Av. 29 - por ésta - Calle 139 - (San Vicente). 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 401 a 410")
+            {
+                Title = "Línea 405",
+                Description = @"
+De Recondo y Av. Pres. Perón - (Lomas de Zamora) - por Recondo - (Lanús) - Mendoza - Magallanes - Av. San Martín - Av. 25 de Mayo - Estación Lanús. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 401 a 410")
+            {
+                Title = "Línea 406",
+                Description = @"
+De Rotonda de San Justo - Mñor. Bufano (Ruta 4) - (E. Echeverría) - Ruta de la Tradición (Ruta 4) - (A. Brown) - Av. Monteverde - Av. H. Yrigoyen - A. del Valle - 25 de Mayo - C. Colón - Gral. Roca - Estación Burzaco - 9 de Julio - Av. H. Yrigoyen - Bouchard - M. Rodríguez - Nother - Avellaneda - Seguí - Estación Adrogué - Somellera - Rosales - Diag. Toll - Estación J. Mármol - Salta - Gaboto - Santa Ana - (Lomas de Zamora) - San Cristobál - Av. Eva Perón - hasta Estación Pasco. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 401 a 410")
+            {
+                Title = "Línea 407",
+                Description = @"
+De M. Estrada y El Zorzal - (San Martín) - por El Zorzal - Sarratea - (San Isidro) - Cno. Gral. Belgrano - C. Tejedor - Patagonia - E. Reclus - R. Falcón - Blanco Encalada - Int. Tomkinson - Ing. Bergallo - 3 de Febrero - Av. Centenario - Estación San Isidro - Av. Santa Fe - Estación Acassuso - D. Rocha - Av. A. Fleming - Edison - Fondo de la Legua - (Vicente López) - Av. Mitre - V. Sarsfield - Sgto. Baigorria - hasta Estación Munro. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 421 a 430")
+            {
+                Title = "Línea 421",
+                Description = @"
+De: Camino de Cintura (Ruta 4) y Av. Juan XXIII - (Lomas de Zamora) - por ésta - su cont. Perón - Virgen de Itatí - El Plumerillo - Ejército de los Andes - Av. Gral. San Martín - (Lanús) - Remedios de Escalada de San Martín - Av. Rivadavia - (Avellaneda) - Chile - Cabildo - Av. Rivadavia - José M. Freire - Av. Rivadavia - Gorriti - Pavón - Colón - Maipú - Belgrano - Montes de Oca - Av. Mitre - Av. Estevez. 
+Regreso por similar recorrido. 
+Desdoblamiento Puente de la Noria: De: Camino de Cintura (Ruta 4) y Av. Juan XVIII - (L. de Zamora) - Av. Perón - hasta Puente de la Noria - Camino de la Ribera Sur - (Lanús) - Osorio - Av. Remedios de Escalada de San Martín - su ruta. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 421 a 430")
+            {
+                Title = "Línea 429",
+                Description = @"
+De Av. San Martín y Av. Gral. Paz - (San Martín) - por Av. San Martín - Perdriel - Int. Campos - R. Carrillo - Av. Perón - Av. Balbín - (3 de Febrero) - Cruce Cno. del Buen Ayre - (San Miguel) - Av. A. Illia - Estación Barrufaldi - Estación Cap. Barrufaldi - Estación Cap. Lozano - Estación Tte. Agneta - Ruta 8 hasta Pilar. 
+Regreso por similar recorrido 
+"
+            });
+
+            buss.Add(new Bus("Línea 421 a 430")
+            {
+                Title = "Línea 430",
+                Description = @"
+De Av. Maipú y Av. Gral. Paz - (V. López) - por Av. Gral. Paz - Ruta Panamericana - (San Isidro) - Ruta Panamericana Ramal Tigre - (San Fernando) - (Tigre) - Liniers - hasta Rincón de Miliberg.
+
+"
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 435",
+                Description = @"
+De Estación por H. Yrigoyen - S. Ortiz - Estación R. de Escalada - 29 de Septiembre - (L. de Zamora) - Malabia - Alsina - Estación Banfield - Estación L. de Zamora - Ruta 210 - Av. A. Brown - Estación Temperley - (A. Brown) - Av. Espora (Ruta 210) - Estación Adrogué - Humberto 1º - C. Pellegrini - Estación Burzaco - R. Rojas - Av. Espora (Ruta 210) - Av. Berlín - Av. Longchamps - C. Diel - Av. H. Yrigoyen - Sarmiento - Moreno - Estación Glew - A. del Valle - Av. H. Yrigoyen - Estación Guernica - Ruta 210 - Independencia - Estación A. Körn - Bolv. de Mayo - Perón - Lavalle - Santoro - Matheu - Hosp. Rural San Vicente - Necochea - Lavalle - 25 de Mayo - Sarmiento - hasta Tucumán - (San Vicente). 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 436",
+                Description = @"
+De Estación Banfield - (Lanús) - Maipú - Av. Alsina - Gallo - A. Lugano - Matheu - Gral. Lavalle - Allemamdri - R. Darío - Av. Eva Perón - Asunción - La Golondrina - Q. Costa - Nicaragua - Asunción - Juramento - Lituanania - (A. Brown) - Py y Margall - Amenedo - Dorrego - Canale - Erezcano - Amenedo - vías del FF.CC. Gral. Roca - Estación Adrogué. 
+Regreso por similar recorrido 
+"
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 437",
+                Description = @"
+Recorrido A  Ramal Bajo San Isidro 
+Ida a Garín: Desde Combate de la Vuelta de Obligado y Vicente López y Planes por Combate de la Vuelta de Obligado, Roque Sáenz Peña, Pedro de Mendoza, Avenida Tiscornia, Primera Junta, Avenida Centenario, Alsina, Avenida Andrés Rolón, D. Palma, Avenida Juan S. Fernández, Avenida Bernabé Márquez, Avenida Avelino Rolón, Ruta Panamericana, Avenida Belgrano, Boulevard Perón Lado Norte, Avenida F. Díaz, Boulevard Perón Sur hasta Bourdet. 
+Vuelta a Bajo San Isidro: Desde Bourdet y Boulevard Perón por Bourdet, Boulevard Perón Sur, Avenida F. Díaz, Boulevard Perón Norte, Churich, Ruta Panamericana, Avenida Avelino Rolón, Avenida Bernabé Márquez, Avenida Andrés Rolón, Alsina, Misiones, Laprida, Avenida Centenario, Primera Junta, 25 de Mayo, Almirante Brown, Juan B. de La Salle, Primera Junta, Avenida Tiscornia, Pedro de Mendoza hasta S. Elcano. 
+Recorrido B  Ramal Boulogne 
+Ida a Garín: Desde Combate de la Vuelta de Obligado y Vicente López y Planes por Combate de la Vuelta de Obligado, Roque Sáenz Peña, Pedro de Mendoza, Avenida Tiscornia, Primera Junta, Avenida Centenario, Alsina, Avenida Andrés Rolón, D. Palma, Avenida Juan S. Fernández, Avenida Bernabé Márquez, Avenida Avelino Rolón, Doctor Scalabrini Ortiz, Godoy Cruz, Virrey Vertiz, Avenida Avelino Rolón, Ruta Panamericana, Avenida Belgrano, Boulevard Perón Lado Norte, Avenida F. Díaz, Boulevard Perón Sur hasta Bourdet. 
+Vuelta a Bajo San Isidro: Desde Bourdet y Boulevard Perón por Bourdet, Boulevard Perón Sur, Avenida F. Díaz, Boulevard Perón Norte, Churich, Ruta Panamericana, Avenida Avelino Rolón, Virrey Vertiz, Godoy Cruz, Doctor Scalabrini Ortiz, Avenida Avelino Rolón, Avenida Bernabé Márquez, Avenida Andrés Rolón, Alsina, Misiones, Laprida, Avenida Centenario, Primera Junta, 25 de Mayo, Almirante Brown, Juan B. de La Salle, Primera Junta, Avenida Tiscornia, Pedro de Mendoza hasta S. Elcano. 
+"
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440",
+                Description = @"
+San Miguel - J. C. Paz - Grand. Bourg - P. Nogués - Los Polvorines - San Miguel (Recorrido 1): De Fraga entre Av. Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Consejal Tribulato - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Ruta 197 - Lavallol - Cangallo - Cura Brochero - Pasco - Eva Perón - Beiró - J. F. Seguí - Eva Perón - El Callao - Ruta 197 - Sol de Mayo - Soldado ex Comb. de Malvinas - Hernandarias - Gorostiaga - C. Lorenzini - Dr. Baroni - Gral. Savio - 9 de Julio - Av. Maipú - Gral. San Martín - Gral. Savio - Rivadavia - Av. Maipú - Ruta 202 - Ruta 8 - Consejal Tribulato - L. N. Alem y Belgreno. 
+Regreso por similar recorrido. 
+Estación Lemos - Parque Jardín - Barrio del Sol - J. C. Paz - S. Miguel - Estación Lemos (Recorrido 2, Ramal 1): De Belgrano y Ruta 8 - por Belgrano - Ruta 8 - Av Mitre - Malnatti - Consejal Tribulato - L. N. Alem - Irigoin - M. Sastre - Pichincha - M. Ferreyra - P. de Mendoza - Gral. Pintos - J. V. González - G. Campos - Irigoin - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - 25 de Mayo - C. Lorenzini - Boedo - Gral. San Martín - Gral. Savio - 25 de Mayo - Av. Maipú - Dr. Baroni - R. Mejía - Gorriti - San Ignacio - Ruta 197 - Ruta 24 - Dr. M. Fitte - J. C. Paz - Zuviría - Av. Altube - G. Campos - Av. Mitre - Farías - Belgrano - Fraga y Av. Mitre. 
+Regreso por similar recorrido. 
+San Miguel - Base - J. C. Paz - San Miguel (Recorrido 2, Ramal 2): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - M. Ferreyra - T. Guido - Marchena - Ruta 24 - Dr. Fitte - J. C. Paz y Zuviría. 
+Regreso por similar recorrido. 
+San Miguel - Barrio El Jaguel - San Miguel (Recorrido 3, Ramal 2): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - D´Elía - Belgrano - Munóz - 1º Junta - Darrageira - J. L. Suárez - Belgrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
+Regreso por similar recorrido. 
+San Miguel - Barrio El Jaguel - por Ruta 8 San Miguel (Recorrido 3, Ramal 3): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - Medrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
+Regreso por similar recorrido. 
+Estación San Miguel - Abascal - Estación J. C. Paz - San Miguel (Recorrido 4, Ramal 3): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Sarmiento - R. Franco - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
+Regreso por similar recorrido. 
+Estación Lemos - Estación J. C. Paz - Estación Lemos (Recorrido 4, Ramal 4): De Av. Mitre entre Ruta 8 y Pavón - Mitre - Malnattí - Consejal Tribulato - Perón - Rivadavia - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
+Regreso por similar recorrido. 
+Estación San Miguel - Cementerio Parque - Estación G. Bourg - Estación Lemos - Pinta - Estrella - San Miguel - (Rec. 5): De Av. Mitre entre Fraga y Farías por Av. Mitre - L. N. Alem - Belgrano - Perón - Pringles - Paunero - Irigoin - Muñoz - Chile - Ruta 8 - Conesa - Ventura Coll - M. Coronado - J. Henández - Pasco - A. Brown - S. Vega - Palacios - Eva Perón - F. Beiró - Seguí - Eva Perón - El Callao - Ruta 197 - Ruta 8 - Av. Mitre - C. Malnatti - C. Tribulato - La Pinta y Güemes. 
+Regreso por similar recorrido. 
+San Miguel - Parque Jardín - J. C. Paz - San Miguel (Rec. 7): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - M. Ferreyra - P. de Mendoza - G. Pinto - J. V. González - Av. G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Dr. M. Fitte - J. C. Paz y Zuviría. 
+Regreso por similar recorrido. 
+San Miguel - Barrio Abascal - Estación J. C. Paz - Estación Grand Bourg (Rec. 8): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - Av. Sarmiento - R. Franco - Ruta 24 - Ruta 197 - El Callao - F. Beiró - J. F. Seguí - San Martín y Paso de los Patos. 
+Regreso por similar recorrido 
+"
+            });
+
+            buss.Add(new Bus("Línea 441 a 450")
+            {
+                Title = "Línea 441",
+                Description = @"
+Ramal San Alberto: De su Cabecera D. Alvarez y Canadá - (Morón) - Larrea - J. Ingenieros - Rauch - Salta - Alem - Saldías - Munilla - Bragado - Alem - Zapiola - Tucumán - San Pedro - Alem - C. Casares - Arias - Avellaneda - M. de Oca - Italia - Alem - (Ituzaingó) - L. Bloy - Paysandú - Herrera - Argain - L. Bloy - De la Cruz - Muñíz - Difilippi - Olavarría - Alvear - Juncal - 2da. Rivadavia - Las Heras - Mansilla - Videla - Peredo - L. de la Torre - Pringles - Almagro - Cosquín - Terminal Cosquín y Haití. 
+Regreso por similar recorrido. Ramal San Alberto por Ratti: De estación Ituzaingó (Ituzaingó) - Las Heras - Mansilla - Ratti - Andalgalá - Videla - Peredo - L. de la Torre - Pringles - Almagro - Cosquín - Haití. 
+Regreso por similar recorrido. Ramal Estación Castelar - Udaondo: De C. Casares - (Morón) - Francia - España - Cardoso - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - Leloir - Udaondo - De la Tradición - R. Balbín - Tabaré. 
+Regreso por similar recorrido. 
+Ramal Ituzaingó - Parque Leloir: De Las Heras - Condarco - J. M. Paz - M. Fierro - Del Cielito. 
+Regreso por similar recorrido. 
+Ramal Barrio Nuevo por Curuchet: De su Cabecera D. Alvarez y Canadá - (Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Salta - Azcuenaga - Vergara - Curuchet - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - Leloir - Udaondo - De la Tradición - El Rancho. 
+Regreso por similar recorrido. 
+Ramal La Refaloza: De su Cabecera D. Alvarez y Canadá - (Morón) - Canadá - Larrea - J. Ingenieros - Rauch - Salta - Azcuenaga - Vergara - Curuchet - Sta. Rosa - (Hurlingham) - Dr. Repetto - (Ituzaingó) - La Refaloza - Balbín - Cipolletti - terminal Cipolletti y Udaondo. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 441 a 450")
+            {
+                Title = "Línea 443A",
+                Description = @"
+Ramal Rubén Darío por Jufré: De Sarmiento - Salta - Munilla - Azcuénaga - Lamadrid - D. Alvarez - Del Carril - Santamarina - Cañada de Ruiz - Salazar - Jufré - Rodríguez - Acha - Husares - Rotherdam - Salas - M. Bravo - Vergara - Scholnik - Freud - Villaroel - H. Cortés - Roma - Ocampo - Escalada - Necochea - Ricchieri - Canning - Roca - Jauretche. 
+Regreso por similar recorrido. 
+Ramal Barrio Gaona: De Sarmiento - Salta - Azcuénaga - Balbín - Newton - Derqui - Rodó - Aldecoa - Balcarce - Aldao - Blandengues - Pasco - Bayló - Wasckman - Jufré - Bradley - Acuña - Rodríguez - Ortega y Gasset - Pedraza - Pizzagalli - Cetrángolo. 
+Regreso por similar recorrido. 
+Ramal Villa Club por Fábrica: De Sarmiento - Salta - Azcuénaga - Vergara - Scholnik - Jufré - Naon - Villaroel - R. Castillo - Masenet - Bergamini - Gaboto - Miranda - Alfaro - Ocampo - Escalada - Necochea - Ricchieri - Canning - Roca - Santa Ana - Los Patos - Bocayuva - Achapallas - Epecuen - Vergara - Km. 18.
+Regreso por similar recorrido. 
+Ramal Libertador - Cementerio Parque: De Sarmiento - Salta - Azcuénaga - Vergara - El Cóndor - Lima - Kierman - Santa Isabel - Ordóñez - Castagna - Kierman - Juramento - hasta Ñandú (campo del INTA). 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 441 a 450")
+            {
+                Title = "Línea 443B",
+                Description = @"
+De Sarmeinto - Salta - Azcuénaga - Vergara - Hidalgo - Lobos - Ventura Bustos - Chivilcoy - Tucumán - Navarro - L. N. Alem - Chivilcoy - Sarmiento - Avellaneda - M. de Loreto - C. Casares - Los Incas - Francia - R. Peña - Arias - J. M. Paz - Paysandú - Lavalleja - Malabia - J. M. Paz - G. Mistral - Brandsen - Patagonia - Ringuelet - Pringles - Alamgro - Cerrito - Brandsen - Mirave - Ringuelet - Famatina. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 441 a 450")
+            {
+                Title = "Línea 448",
+                Description = @"
+Ramal Grand Bourg - Tortuguitas - Barrio Sargento Cabral: De Constituyentes y Panamericana por Constituyentes - Valparaíso - Brasil - El Callao - Areguati - J. F. Seguí - Beiró - J. F. Seguí - Eva Perón - Chacabuco - Ruta 197 - Ruta 8 - Barrio Sargento Cabral. 
+Regreso por similar recorrido. 
+Ramal Del Viso - Pardo y la Pinta: Acceso Pilar - L. de la Torre - Pontinari - Maza - V. Gómez - Berutti - Independencia - L. de la Torre - Arata - Beceo - D. Cruz - L. de la Torre - Prov. de Bs. As. - Luis M. Drago - Cura Bruchero - Pasco - Eva Perón - Av. F. Beiró - J. Seguí - Av. Eva Perón - Bouchard - B. de Chacabuco - R. Rojas - Paso de los Patos - Palpa - Ambrosetti - Seaver - J. Hernández - A. Alsina - M. Oliden - Piñero - Polonia - H. Yrigoyen - Muñoz - Cnel. Arias - Av. Perón - J. C. Paz - L. N. Alem - Ruta 197 - Munóz - Cnel. Arias - Mendoza - Chile - San Lorenzo - 1º Junta - Perón - Irigoin - Sarmiento - C. Tribulato - L. N. Alem - Belgrano - Sarmiento - Conesa - Irigoyen - Saavedra - G. Campos - Azcuénaga - El Maestro - J. J. Paso - S. Berón de Astrada - Azcuénaga - Uriarte - Pardo y La Pinta. 
+Regreso por similar recorrido. 
+Ramal Constituyentes y Panamericana: De Constituyentes - Descartes - Haití - Patricias Arg. - Puerto Rico - El Callao - Diag. Seguí - Estación Grand Bourg - Diag. Seguí - Eva Perón - Paso de los Patos - Mozart - Quiroga - Ruta 8 - Av. Mitre - C. Malnatti - Cjal. Tribulato - L. N. Alem - Belgrano - Sarmiento - Conesa - Irigoyen - Saavedra - Gaspar Campos - Azcuénaga - El Maestro - J. J. Paso - J. Berón de Astrada - Azcuéanga - Uriarte - Pardo - hasta La Pinta (San Miguel). 
+Regreso por similar recorrido. 
+Ramal Estación Grand Bourg - Ruta 8 y Avellaneda: Estación Grand Bourg - (Malvinas Arg.) - Eva Perón - Paso de los Patos - Santos Vega - Martínez - Triunvirato - Acerboni - Compostela - L. N. Alem - Estación J. C. Paz - Perón - Ruta 197 - Muñoz - Hosp. D. Mercante - Cnel. Arias - Mendoza - Chile - San Lorenzo - 1º Junta - Ruta 8 - (San Miguel). 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 461 a 470")
+            {
+                Title = "Línea 462",
+                Description = @"
+De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Gob. Vergara - A. Jauretche - J. A. Roca (Ruta 201) - Centenera - hasta Los Patos. 
+Regreso por similar recorrido. 
+"
+            });
+
+            buss.Add(new Bus("Línea 461 a 470")
+            {
+                Title = "Línea 464",
+                Description = @"
+________________________________________ De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Bonorio - E. Plass - Oyhanarte - Mazzarello - Malarredo - F. Frías - P. Díaz - Coraceros - Malespina - Mascagni - Gaboto - Jauretche - J. A. Roca - Km. 18 - Garay - Lavalle - Solís - Villegas - Dante - Las Calandrias 
+Regreso por similar recorrido 
+"
+            });
+
+            buss.Add(new Bus("Línea 461 a 470")
+            {
+                Title = "Línea 463",
+                Description = @"
+De Estación Morón - (Morón) - por Sarmiento - Salta - Azcuénaga - Av. Rosas - (Hurlingham) - Gob. Vergara - Bustamante y Vergara - Villegas - Dolores de Huici - M. de Avilés - J. A. Roca - Jauretche - Argerich - Bolívar - Acassuso. 
+Regreso por similar recorrido."
+            });
 
             var byCategory = from Bus in buss
                              group Bus by Bus.Category into c

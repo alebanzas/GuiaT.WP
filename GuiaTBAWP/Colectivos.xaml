@@ -64,11 +64,7 @@
         <!-- The template for Bus items -->
         <DataTemplate x:Key="BusItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                <StackPanel VerticalAlignment="Top">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="12,-12,12,6"/>
                     <TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
                 </StackPanel>

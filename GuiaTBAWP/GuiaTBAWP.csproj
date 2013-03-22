@@ -98,6 +98,15 @@
     <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
+    <Compile Include="SubteEstado.xaml.cs">
+      <DependentUpon>SubteEstado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubteLineas.xaml.cs">
+      <DependentUpon>SubteLineas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubteMapa.xaml.cs">
+      <DependentUpon>SubteMapa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataColectivos.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="HomeSUBE.xaml.cs">
@@ -199,6 +208,18 @@
     <Page Include="Colectivos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubteEstado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubteLineas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubteMapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HomeSUBE.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -320,6 +341,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Resource Include="Resources\Icons\svg2raster.png" />
+    <Content Include="Resources\Icons\ApplicationBar\sync.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <None Include="Service References\Bing.Route\common.xsd">
       <SubType>Designer</SubType>

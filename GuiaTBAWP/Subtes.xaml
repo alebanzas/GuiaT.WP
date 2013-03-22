@@ -29,33 +29,17 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image Name="image"
-                  Source="/Images/subtes.jpg"
-                  Stretch="Uniform"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Top">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <MatrixTransform x:Name="previousTransform" />
-
-                        <TransformGroup x:Name="currentTransform">
-                            <ScaleTransform x:Name="scaleTransform" />
-                            <RotateTransform x:Name="rotateTransform" />
-                            <TranslateTransform x:Name="translateTransform" />
-                        </TransformGroup>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-
-            <toolkit:GestureService.GestureListener>
-                <toolkit:GestureListener  DragDelta="OnGestureListenerDragDelta"
-                                          PinchStarted="OnGestureListenerPinchStarted"
-                                         PinchDelta="OnGestureListenerPinchDelta"
-                                         PinchCompleted="OnGestureListenerPinchCompleted"
-                                         DragCompleted="OnGestureListenerDragCompleted"
-                                          DragStarted="OnGestureListenerDragStarted"
-                                       />
-            </toolkit:GestureService.GestureListener>
+            <StackPanel>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteLineas">
+                    <TextBlock Text="líneas y horarios" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteMapa">
+                    <TextBlock Text="mapa de la red" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteEstado">
+                    <TextBlock Text="estado del servicio" />
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 

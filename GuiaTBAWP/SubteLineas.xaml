@@ -146,7 +146,7 @@
                                     <Rectangle Margin="0,-230,0,0" Width="6" Height="30" Fill="#EF1729"></Rectangle>
                                     <Ellipse Margin="0,0,0,100" Width="30" Height="30" Fill="White" />
                                     <Rectangle Margin="0,-247,0,0" Width="6" Height="15" Fill="#EF1729"></Rectangle>
-                                    <Rectangle Margin="0,-221,0,0" Width="6" Height="15" Fill="#999999"></Rectangle>
+                                    <Rectangle Margin="0,-215,0,0" Width="6" Height="18" Fill="#999999"></Rectangle>
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
                                 </StackPanel>

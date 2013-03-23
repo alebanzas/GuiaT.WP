@@ -62,7 +62,7 @@ namespace GuiaTBAWP
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 ConnectionError.Visibility = Visibility.Collapsed;
-                _progress.Text = "Buscando cotizaciones";
+                _progress.Text = "Obteniendo estado del servicio...";
                 SystemTray.SetIsVisible(this, true);
                 SystemTray.SetProgressIndicator(this, _progress);
 

@@ -58,7 +58,7 @@
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Subte: mapa de la red.
+                                •Subte: mapa de la red, lineas, estado del servicio, precios.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
@@ -83,6 +83,14 @@
                         <LineBreak /><LineBreak />
                         <LineBreak /><LineBreak />
                         La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza internet para obtener los puntos de carga y venta.
+                        <LineBreak /><LineBreak /><LineBreak /><LineBreak />
+                        Notas de versión
+                        <LineBreak /><LineBreak />
+                        1.2 (próximamente): Correcciones de líneas de colectivo municipales. Agregado de sección horarios y frecuencias en subte, mas información de estaciones de subte.
+                        <LineBreak /><LineBreak />
+                        1.1: (29-03-2013) Correcciones de líneas de colectivo provinciales. Agregado de sección líneas y estaciones en subte, sección precio, seccion estado del servicio.
+                        <LineBreak /><LineBreak />
+                        1.0: (12-03-2013) Versión inicial. Recorridos de colectivos, mapa de la red de subte, recorridos de trenes metropolitanos, puntos de carga y venta de tarjeta SUBE.
                     </TextBlock>
                 </ScrollViewer>
             </controls:PanoramaItem>

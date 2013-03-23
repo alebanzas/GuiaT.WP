@@ -16,6 +16,16 @@ namespace GuiaTBAWP
             this.NavigationService.Navigate(new Uri("/SubteLineas.xaml", UriKind.Relative));
         }
 
+        private void Button_Click_SubteHorarios(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/SubteHorarios.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_SubtePrecio(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/SubtePrecio.xaml", UriKind.Relative));
+        }
+
         private void Button_Click_SubteMapa(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/SubteMapa.xaml", UriKind.Relative));

@@ -31,7 +31,13 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteLineas">
-                    <TextBlock Text="líneas y horarios" />
+                    <TextBlock Text="líneas y estaciones" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteHorarios">
+                    <TextBlock Text="horarios" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubtePrecio">
+                    <TextBlock Text="precio" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteMapa">
                     <TextBlock Text="mapa de la red" />

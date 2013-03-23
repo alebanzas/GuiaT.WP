@@ -22,6 +22,15 @@
             <controls:PivotItem Header="línea A">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                        <StackPanel Margin="0,0,0,50">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Width="300">
+                                    <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">días habiles</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextSmallStyle}">con combinación</TextBlock>
+                                </StackPanel>
+                                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">05:00</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -57,55 +66,56 @@
 
                             <StackPanel Margin="30,0,0,0">
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Plaza de Mayo</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de Mayo</TextBlock>
+                                <TextBlock>ultimo</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Perú</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Perú</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Piedras</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Piedras</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Lima</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lima</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Congreso</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Congreso</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pasco</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasco</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Alberti</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Alberti</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Plaza Miserere</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Miserere</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Loria</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Loria</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Castro Barros</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Castro Barros</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Río de Janeiro</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Río de Janeiro</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Acoyte</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Acoyte</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Primera Junta</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Primera Junta</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Puán</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Puán</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Carabobo</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carabobo</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">San José de Flores</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San José de Flores</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">San Pedrito</TextBlock>
@@ -154,52 +164,52 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Leandro N. Alem</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Leandro N. Alem</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Florida</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Florida</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Carlos Pelegrini</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Pelegrini</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Uruguay</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Uruguay</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pasteur</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasteur</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Carlos Gardel</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Gardel</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Medrano</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Medrano</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Angel Gallardo</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Angel Gallardo</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Malabia - Osvaldo Pugliese</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Malabia - Osvaldo Pugliese</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Dorrego</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Dorrego</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Federico Lacroze</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Federico Lacroze</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Tronador</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tronador</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Los Incas - Parque Chas</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Los Incas - Parque Chas</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Echeverría</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Echeverría</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Villa Urquiza</TextBlock>
@@ -235,28 +245,28 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">General San Martín</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">General San Martín</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Lavalle</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lavalle</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Diagonal Norte</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Diagonal Norte</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Avenida de Mayo</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Avenida de Mayo</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">San Juan</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San Juan</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Constitución</TextBlock>
@@ -302,52 +312,52 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Catedral</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catedral</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">9 de Julio</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">9 de Julio</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Tribunales</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tribunales</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Facultad de Medicina</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Facultad de Medicina</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Agüero</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Agüero</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Bulnes</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bulnes</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Scalabrini Ortiz</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Scalabrini Ortiz</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Plaza Italia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Italia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Palermo</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Palermo</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ministro Carranza</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ministro Carranza</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Olleros</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Olleros</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">José Hernandez</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">José Hernandez</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Juramento</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Juramento</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Congreso de Tucumán</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Congreso de Tucumán</TextBlock>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -391,55 +401,55 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Catalinas</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catalinas</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Correo Central</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Correo Central</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Bolívar</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bolívar</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Belgrano</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Belgrano</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">San José</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San José</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Entre Ríos - Rodolfo Walsh</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Entre Ríos - Rodolfo Walsh</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pichincha</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pichincha</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Jujuy</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Jujuy</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">General Urquiza</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">General Urquiza</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Boedo</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Boedo</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Avenida La Plata</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Avenida La Plata</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">José María Moreno</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">José María Moreno</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Emilio Mitre</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Emilio Mitre</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Medalla Milagrosa</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Medalla Milagrosa</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Varela</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Varela</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Plaza de los Virreyes</TextBlock>
@@ -479,40 +489,40 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Plaza Francia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Francia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Las Heras</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Las Heras</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Santa Fe</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Santa Fe</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Cordoba</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Cordoba</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Venezuela</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Venezuela</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Humberto 1°</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Humberto 1°</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Inclán</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Inclán</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Caseros</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Caseros</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Parque Patricios</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque Patricios</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Hospitales</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Hospitales</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Sáenz</TextBlock>
@@ -551,40 +561,40 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Mariano Acosta</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Mariano Acosta</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Somellera</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Somellera</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ana María Janer</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ana María Janer</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ntra. Sra. de Fátima</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ntra. Sra. de Fátima</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Fernández de la Cruz</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Fernández de la Cruz</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Escalada</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Escalada</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pola</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pola</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ana Díaz</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ana Díaz</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Centro Cívico Lugano</TextBlock>
@@ -624,43 +634,43 @@
 
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Mariano Acosta</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Mariano Acosta</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Somellera</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Somellera</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ana María Janer</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ana María Janer</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Ntra. Sra. de Fátima</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ntra. Sra. de Fátima</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Fernández de la Cruz</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Fernández de la Cruz</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Escalada</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Escalada</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Pola</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pola</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Nicolás Descalzi</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Nicolás Descalzi</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Margin="0,0,0,130" Style="{StaticResource PhoneTextLargeStyle}">Gabino Ezeiza</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Gabino Ezeiza</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">General Savio</TextBlock>

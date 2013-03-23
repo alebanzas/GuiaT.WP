@@ -98,6 +98,9 @@
     <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
+    <Compile Include="SubteHorarios.xaml.cs">
+      <DependentUpon>SubteHorarios.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubteEstado.xaml.cs">
       <DependentUpon>SubteEstado.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,9 @@
     </Compile>
     <Compile Include="Sarmiento.xaml.cs">
       <DependentUpon>Sarmiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubtePrecio.xaml.cs">
+      <DependentUpon>SubtePrecio.xaml</DependentUpon>
     </Compile>
     <Compile Include="Subtes.xaml.cs">
       <DependentUpon>Subtes.xaml</DependentUpon>
@@ -209,6 +215,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SubteHorarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SubteEstado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,6 +280,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sarmiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubtePrecio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

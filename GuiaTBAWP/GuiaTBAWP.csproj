@@ -79,7 +79,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AtencionAlUsuario.xaml.cs">
+    <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
@@ -89,7 +89,7 @@
       <DependentUpon>BelgranoSur.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusData\Bus.cs" />
-    <Compile Include="Colectivos.xaml.cs">
+    <Compile Include="Views\Colectivos\Colectivos.xaml.cs">
       <DependentUpon>Colectivos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\DistanceConverter.cs" />
@@ -112,10 +112,10 @@
     </Compile>
     <Compile Include="BusData\DataColectivos.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="HomeSUBE.xaml.cs">
+    <Compile Include="Views\SUBE\HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DondeUsarSUBE.xaml.cs">
+    <Compile Include="Views\SUBE\DondeUsarSUBE.xaml.cs">
       <DependentUpon>DondeUsarSUBE.xaml</DependentUpon>
     </Compile>
     <Compile Include="Error.xaml.cs">
@@ -155,25 +155,19 @@
     </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
-    <Compile Include="MainPage.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\LocalServiceModel.cs" />
     <Compile Include="Models\PointExtensions.cs" />
     <Compile Include="Models\PushpinCatalog.cs" />
     <Compile Include="Models\PushpinModel.cs" />
     <Compile Include="Models\RouteModel.cs" />
-    <Compile Include="PerdidaRoboDanio.xaml.cs">
+    <Compile Include="Views\SUBE\PerdidaRoboDanio.xaml.cs">
       <DependentUpon>PerdidaRoboDanio.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PreguntasFrecuentes.xaml.cs">
+    <Compile Include="Views\SUBE\PreguntasFrecuentes.xaml.cs">
       <DependentUpon>PreguntasFrecuentes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PuntosDeVentaYCarga.xaml.cs">
+    <Compile Include="Views\SUBE\PuntosDeVentaYCarga.xaml.cs">
       <DependentUpon>PuntosDeVentaYCarga.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\Bing.Geocode\Reference.cs">
@@ -199,7 +193,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="AtencionAlUsuario.xaml">
+    <Page Include="Views\SUBE\AtencionAlUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,7 +205,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Colectivos.xaml">
+    <Page Include="Views\Colectivos\Colectivos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,11 +225,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="HomeSUBE.xaml">
+    <Page Include="Views\SUBE\HomeSUBE.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DondeUsarSUBE.xaml">
+    <Page Include="Views\SUBE\DondeUsarSUBE.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -251,23 +245,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PerdidaRoboDanio.xaml">
+    <Page Include="Views\SUBE\PerdidaRoboDanio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PreguntasFrecuentes.xaml">
+    <Page Include="Views\SUBE\PreguntasFrecuentes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PuntosDeVentaYCarga.xaml">
+    <Page Include="Views\SUBE\PuntosDeVentaYCarga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Styles\DefaultStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -306,14 +296,14 @@
       <SubType>Designer</SubType>
     </None>
     <Resource Include="PanoramaBackground.jpg" />
-    <Content Include="Images\mapa_ffcc_belgranonorte.jpg" />
-    <Content Include="Images\mapa_ffcc_belgranosur.jpg" />
-    <Content Include="Images\mapa_ffcc_mitre.jpg" />
-    <Content Include="Images\mapa_ffcc_roca.jpg" />
-    <Content Include="Images\mapa_ffcc_sanmartin.jpg" />
-    <Content Include="Images\mapa_ffcc_sarmiento.jpg" />
-    <Content Include="Images\mapa_ffcc_urquiza.jpg" />
-    <Content Include="Images\subtes.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranosur.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_mitre.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_roca.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sanmartin.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sarmiento.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_urquiza.jpg" />
+    <Content Include="Images\Subtes\subtes.jpg" />
     <Content Include="logo-ministeriointeriorytransporte.png" />
     <Content Include="logo-transportepublico.png" />
     <Content Include="PanoramaBackground.png" />
@@ -435,10 +425,7 @@
     <WCFMetadataStorage Include="Service References\Bing.Route\" />
     <WCFMetadataStorage Include="Service References\Bing.Search\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Colectivos\" />
-    <Folder Include="Views\SUBE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -44,7 +44,7 @@
                 </Paragraph>
                 <Paragraph>
                     Para adquirir tu nueva Tarjeta podés acercarte a cualquiera de nuestros
-                    <Hyperlink NavigateUri="/PuntosDeVentaYCarga.xaml">Centros de Obtención</Hyperlink>
+                    <Hyperlink NavigateUri="/Views/SUBE/PuntosDeVentaYCarga.xaml">Centros de Obtención</Hyperlink>
                     y abonarla 15 pesos, o también podés
                     <Hyperlink NavigateUri="https://gestiones.SUBE.gob.ar/Formulariodecompra.aspx" TargetName="_blank">solicitarla vía web</Hyperlink>
                     con un valor final de 25 pesos que incluye el costo por envío a domicilio.

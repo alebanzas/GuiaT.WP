@@ -58,7 +58,7 @@
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Subte: mapa de la red, lineas, estado del servicio, precios.
+                                •Subte: mapa de la red, horarios, lineas, estado del servicio, precios.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
@@ -86,7 +86,9 @@
                         <LineBreak /><LineBreak /><LineBreak /><LineBreak />
                         Notas de versión
                         <LineBreak /><LineBreak />
-                        1.2 (próximamente): Correcciones de líneas de colectivo municipales. Agregado de sección horarios y frecuencias en subte, mas información de estaciones de subte.
+                        1.3 (próximamente): Frecuencias y horarios de trenes, mejoras de presentación.
+                        <LineBreak /><LineBreak />
+                        1.2 (05-04-2013): Correcciones de líneas de colectivo municipales. Agregado de sección horarios y frecuencias en subte, mas información de estaciones de subte.
                         <LineBreak /><LineBreak />
                         1.1: (29-03-2013) Correcciones de líneas de colectivo provinciales. Agregado de sección líneas y estaciones en subte, sección precio, seccion estado del servicio.
                         <LineBreak /><LineBreak />

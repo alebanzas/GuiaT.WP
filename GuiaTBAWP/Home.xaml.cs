@@ -13,7 +13,7 @@ namespace GuiaTBAWP
 
         private void Button_Click_SUBE(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/HomeSUBE.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/Views/SUBE/HomeSUBE.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Colectivos(object sender, RoutedEventArgs e)

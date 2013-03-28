@@ -21,7 +21,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="belgrano sur">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_belgranosur.jpg"
+                      Source="/Images/Trenes/mapa_ffcc_belgranosur.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

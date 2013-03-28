@@ -21,7 +21,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="mitre">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_mitre.jpg"
+                      Source="/Images/Trenes/mapa_ffcc_mitre.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

@@ -15,10 +15,10 @@ namespace GuiaTBAWP.BusData
                     Title = "Línea 1",
                     Description = @"
 Recorrido A 
-\n PRIMERA JUNTA (CAPITAL FEDERAL) - ESTACIÓN MORÓN (FERROCARRIL DOMINGO FAUSTINO SARMIENTO - PARTIDO DE MORÓN - PROVINCIA DE BUENOS AIRES) Itinerario entre Cabeceras 
-\n Recorrido A 
-\n IDA A ESTACIÓN MORÓN: Desde ROJAS y AVENIDA RIVADAVIA por AVENIDA RIVADAVIA, cruce AVENIDA GENERAL PAZ, AVENIDA GENERAL PAZ OESTE, RAMÓN L. FALCON, rampa de ascenso a AVENIDA GENERAL PAZ, AVENIDA JUAN B. JUSTO, cruce AVENIDA GENERAL PAZ, AVENIDA PRESIDENTE PERÓN (ex-GAONA), 9 DE JULIO, LEANDRO NICEFORO ALEM, TENIENTE GENERAL RICCHIERI, AVENIDA PRESIDENTE PERÓN (ex-GAONA), EL RODEO, NEWTON, PRESIDENTE DERQUI, RICARDO BALBIN (ex-FLORENCIO VARELA), RAWSON, LUGONES, DONATO ALVAREZ, CONSTITUYENTES, LEANDRO NICEFORO ALEM, CABILDO hasta CRISOLOGO LARRALDE (ex-RAUCH). 
-\n REGRESO A PRIMERA JUNTA: Desde CRISOLOGO LARRALDE (ex-RAUCH) y ESCALADA por CRISOLOGO LARRALDE (ex-RAUCH), SALTA, GENERAL MUNILLA, INTENDENTE GAEBERLER, DONATO ALVAREZ, RICARDO BALBIN (ex-FLORENCIO VARELA), AVENIDA PRESIDENTE PERÓN (ex-GAONA), DOCTOR LUIS GÜEMES, VIRREY LINIERS, CHILE, AVENIDA PRESIDENTE PERÓN (ex-GAONA), AMEGHINO, EMILIO MITRE, TRES DE FEBRERO, MACHO VIDAL, 9 DE JULIO, LEANDRO NICEFORO ALEM, DOCTOR G. ARDOINO, MONTEAGUDO, SEGUROLA, OCONNOR, SAN ROQUE, IRIGOYEN, LINIERS, ALFREDO L. PALACIOS, AVENIDA JUAN BAUTISTA JUSTO, AVENIDA GENERAL PAZ, AVENIDA RIVADAVIA, ROSARIO, SAN JOSE DE CALASANZ, AVENIDA RIVADAVIA hasta ROJAS. 
+PRIMERA JUNTA (CAPITAL FEDERAL) - ESTACIÓN MORÓN (FERROCARRIL DOMINGO FAUSTINO SARMIENTO - PARTIDO DE MORÓN - PROVINCIA DE BUENOS AIRES) Itinerario entre Cabeceras 
+Recorrido A 
+IDA A ESTACIÓN MORÓN: Desde ROJAS y AVENIDA RIVADAVIA por AVENIDA RIVADAVIA, cruce AVENIDA GENERAL PAZ, AVENIDA GENERAL PAZ OESTE, RAMÓN L. FALCON, rampa de ascenso a AVENIDA GENERAL PAZ, AVENIDA JUAN B. JUSTO, cruce AVENIDA GENERAL PAZ, AVENIDA PRESIDENTE PERÓN (ex-GAONA), 9 DE JULIO, LEANDRO NICEFORO ALEM, TENIENTE GENERAL RICCHIERI, AVENIDA PRESIDENTE PERÓN (ex-GAONA), EL RODEO, NEWTON, PRESIDENTE DERQUI, RICARDO BALBIN (ex-FLORENCIO VARELA), RAWSON, LUGONES, DONATO ALVAREZ, CONSTITUYENTES, LEANDRO NICEFORO ALEM, CABILDO hasta CRISOLOGO LARRALDE (ex-RAUCH). 
+REGRESO A PRIMERA JUNTA: Desde CRISOLOGO LARRALDE (ex-RAUCH) y ESCALADA por CRISOLOGO LARRALDE (ex-RAUCH), SALTA, GENERAL MUNILLA, INTENDENTE GAEBERLER, DONATO ALVAREZ, RICARDO BALBIN (ex-FLORENCIO VARELA), AVENIDA PRESIDENTE PERÓN (ex-GAONA), DOCTOR LUIS GÜEMES, VIRREY LINIERS, CHILE, AVENIDA PRESIDENTE PERÓN (ex-GAONA), AMEGHINO, EMILIO MITRE, TRES DE FEBRERO, MACHO VIDAL, 9 DE JULIO, LEANDRO NICEFORO ALEM, DOCTOR G. ARDOINO, MONTEAGUDO, SEGUROLA, OCONNOR, SAN ROQUE, IRIGOYEN, LINIERS, ALFREDO L. PALACIOS, AVENIDA JUAN BAUTISTA JUSTO, AVENIDA GENERAL PAZ, AVENIDA RIVADAVIA, ROSARIO, SAN JOSE DE CALASANZ, AVENIDA RIVADAVIA hasta ROJAS. 
 "
                 });
 
@@ -4439,112 +4439,336 @@ Ramal '8': De Av. San Martín y Sperandío - por ésta - La Loma - Calle 14 - P.
                 });
 
             buss.Add(new Bus("Línea 501 a 510")
-                {
-                    Title = "Línea 501A",
-                    Description = @"
+            {
+                Title = "Línea 500B Ramal A",
+                Description = @"
+ Ida a Pontevedra: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Noguera, Avenida Eva Peron, Avenida Patricios, Nicaragua, Malvinas, Gallo, Santo Domingo, P. Rivarola, Avenida Bella Vista, Otero (Ruta Provincial N° 21), De La Union, De los Franceses hasta Del Perú. 
+
+ Vuelta a Estación San Antonio de Padua: Desde Del Perú y De los Franceses por De los Franceses De La Union, Otero (Ruta Provincial N° 21), Avenida Bella Vista, P. Rivarola, Santo Domingo, Gallo, Malvinas, Nicaragua, Avenida Patricios, Avenida Eva Peron, Directorio, Chaco, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal B",
+                Description = @"
+Ida a Campanilla: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Noguera, Avenida Eva Peron, Avenida Patricios, Avenida Domingo Sica, Lafayette, Almirante Brown, Garmendia, Zarraga hasta A. Nervo. 
+
+ Vuelta a Estación San Antonio de Padua: Desde A. Nervo y Zarraga por Zarraga, Garmendia, Almirante Brown, Lafayette, Avenida Domingo Sica, Avenida Patricios, Avenida Eva Peron, Directorio, Chaco, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal C",
+                Description = @"
+Ida a El Ceibo: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Noguera, Cochabamba, J. Barabino, Miller, Marcos Paz hasta Melian. 
+
+ Vuelta a Estación San Antonio de Padua: Desde Melian y Marcos Paz por Marcos Paz, Miller, J. Barabino, Cochabamba, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal D",
+                Description = @"
+Ida a Barrio Nuevo: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Ayacucho, Intendente Mendiluce, Scalabrini Ortiz, Centenario, A. Nobel, Pueyrredon, Martín Fierro, Juan Baustista Alberdi, Habana, Pueyrredon, Avenida Eva Perón, Avenida Patricios, Nicaragua, Malvinas, Colombia, Avenida Bella Vista hasta Obarrio. 
+
+ Vuelta a Estación San Antonio de Padua: Desde Obarrio y Avenida Bella Vista por Avenida Bella Vista, Colombia, Malvinas, Nicaragua, Avenida Patricios, Avenida Eva Peron, Pueyrredon, Habana, Juan Baustista Alberdi, Martín Fierro, Pueyrredon, A. Nobel, Centenario, Scalabrini Ortiz, Intendente Mendiluce, Italia, Noguera, Chaco, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal E",
+                Description = @"
+Ida a Pericon: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Ayacucho, Intendente Mendiluce, Scalabrini Ortiz, Centenario, A. Nobel, Sarmiento, Lisandro de la Torre, Bartolomé Mitre, French, J. M. Castro, Blanco Encalada hasta Balbastro. 
+
+ Vuelta a Estación San Antonio de Padua: Desde Balbastro y Blanco Encalada por Blanco Encalada, J. M. Castro, French, Bartolomé Mitre, Lisandro de la Torre, Sarmiento, A. Nobel, Centenario, Scalabrini Ortiz, Intendente Mendiluce, Italia, Noguera, Chaco, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal F",
+                Description = @"
+Ida a San Lorenzo: Desde Estación San Antonio de Padua, Avenida Juan Domingo Perón y Directorio por Avenida Juan Domingo Perón, Ayacucho, Calle Real, San Lorenzo, J. M. Castro hasta Almirante Brown. 
+
+ Vuelta a Estación San Antonio de Padua: Desde Almirante Brown y J. M. Castro por J. M. Castro, San Lorenzo, Calle Real, Ayacucho, Centenario, M. Quintana, Italia, Noguera, Chaco, Avenida de los Estudiantes hasta Avenida Juan Domingo Perón, Estación San Antonio de Padua. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal G",
+                Description = @"
+Ida a Helvecia: Desde Estación Merlo, Moreno y Avellaneda por Moreno, Falucho, Avenida Juan Domingo Peron, Avenida del Libertador, Calle Real, San Martín, Italia, M. Quintana, Avenida Presidente Juan Domingo Perón, Avenida de los Estudiantes, Defensa, Noguera, Avenida Eva Peron, V. Mercante, H. Vieytes, Helvecia, Costa Rica, Boulogne Sur Mer, J. Jufre hasta Colombia. 
+
+ Vuelta a Estación Merlo: Desde Colombia y J. Jufre por J. Jufre, Boulogne Sur Mer, Costa Rica, Helvecia, H. Vieytes, V. Mercante, Avenida Eva Peron, Ayacucho, General Alvear, M. Quintana, Italia, Diaz de Solis, Calle Real, Avenida del Libertador hasta Avenida Presidente Juan Domingo Perón. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal H",
+                Description = @"
+Ida a Petracci: Desde Estación Merlo, Moreno y Avellaneda por Moreno, Falucho, Avenida Juan Domingo Peron, Avenida del Libertador, Calle Real, San Martín, Italia, M. Quintana, Avenida Presidente Juan Domingo Perón, Avenida de los Estudiantes, Defensa, Noguera, Avenida Eva Peron, V. Mercante, H. Vieytes, Helvecia, Castañares, Mataco hasta M. Gamboa. 
+
+ Vuelta a Estación Merlo: Desde Mataco y M. Gamboa por Mataco, Castañares, Helvecia, H. Vieytes, V. Mercante, Avenida Eva Peron, Ayacucho, General Alvear, M. Quintana, Italia, Diaz de Solis, Calle Real, Avenida del Libertador hasta Avenida Presidente Juan Domingo Perón. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal I",
+                Description = @"
+Ida a Merlo Gomez: Desde Estación Merlo, Moreno y Avellaneda por Moreno, Falucho, Avenida Juan Domingo Peron, Avenida del Libertador, Calle Real, Avenida Eva Perón, Avenida Patricios, Nicaragua, Malvinas, Colombia, Avenida Bella Vista, Avenida Callao hasta Coronel Hortiguera. 
+
+ Vuelta a Estación Merlo: Desde Merlo Gomez, Avenida Callao y Coronel Hortiguera por Avenida Callao, Avenida Bella Vista, Colombia, Malvinas, Nicaragua, Avenida Patricios, Avenida Eva Peron, Calle Real, Avenida del Libertador hasta Avenida Juan Domingo Peron. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B Ramal J",
+                Description = @"
+Ida a Barrio Lasalle: Desde Estación Merlo, Moreno y Avellaneda por Moreno, Falucho, Avenida Juan Domingo Peron, Avenida del Libertador, Maipú, Avellaneda, Avenida Argentina, Perú, Avenida del Libertador, Calle Real, Avenida Eva Perón, Avenida Patricios, Otero (Ruta Provincial N° 21), Monte Dinero, Montes de Oca, Monte Dinero, Otero (Ruta Provincial N° 21) hasta Pedro Diaz Colodrero. 
+
+ Vuelta a Estación Merlo: Desde Pedro Diaz Colodrero y Otero (Ruta Provincial N° 21) por Otero (Ruta Provincial N° 21), Monte Dinero, Montes de Oca, Monte Dinero, Otero (Ruta Provincial N° 21), Avenida Patricios, Avenida Eva Perón, Calle Real, Avenida del Libertador, Perú, Avenida Argentina, Avellaneda, Maipú, Avenida del Liberador, Avenida Juan Domingo Peron, Ayacucho, General Alvear, M. Quintana, Italia, Diaz de Solis, Calle Real, Avenida del Libertador hasta Avenida Juan Domingo Peron. 
+"
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501A R1",
+                Description = @"
 Moreno - La Reja - Paso del Rey - Cruce Castelar 
 Estación Moreno - Barrio La Perlita (Ramal 1): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - M. del Bueno - Ecuador - L. de la Torre - Ruta 23 - Estación Moreno. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R2",
+                Description = @"
 Estación Moreno - Mi Barrio (Ramal 2): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - L. de la Torre - Ecuador - M. del Bueno - Ruta 23 - Av. San Martín - Ruta 7 - hasta Terminal Moreno. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R5",
+                Description = @"
 Estación Moreno - Barrio La Victoria (Ramal 5): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - Shakespeare - F. de Azara - Segurola - Gutiérrez - Hughes - Ecuador - M. del Bueno - Paraguay - Diag. Norte (Ruta 25) - Av. Victorica - Sarmiento - Av. San Martín - Terminal Moreno. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R6",
+                Description = @"
 Estación Moreno - Barrio Cortejarena (Ramal 6): De Estación Moreno - Epaña - Viamonte - Molina Campos - Güemes - Roldán - C. Larralde - Av. Storni - Amancay - F. Rodríguez - Curupayti - Cuyo - Diag. Nápoles - Sófocles - Cabrera - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R8",
+                Description = @"
 Estación Moreno - Lomas de Moreno (Ramal 8): De Estación Moreno - Epaña - B. Mitre - Juan XVIII - Av. Victorica - Ruta 25 - Lamadrid - Agote - Payró - Madariaga - M. del Bueno - Nicaragua - Av. Storni - L. de la Torre - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R9",
+                Description = @"
 Estación Moreno - Planta Pfizar (Ramal 9): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Av. John Kennedy - Av. Gaona - Colonia UTA - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R11",
+                Description = @"
 Estación Moreno - Barrio La Reja Grande (Ramal 11): De Estación Moreno - España - Córdoba (Ombú) - Av. Gaona - La Rioja - M. Coronado - La Madre - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R12",
+                Description = @"
 Estación Moreno -Villa Asunción - Paso del Rey (Ramal 12): De Diag. Gnecco - Uruguay - Int. Pagano - Bouchard - W. Scott - San J. Bautista - V. López y Planes - Guido - R. de Escalada de San Martín - Concordia - Quiroga - Santa Fe - Pío XII - Independencia - S. M. del Carril - Boulv. Alcorta - Estación Paso del Rey - volviendo por las mismas hasta Int. Pagano - Boulv. Evita - Rivadavia - Piovano - Estación Moreno. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R13",
+                Description = @"
 Estación Moreno - Barrio Santa Brigida (Ramal 13): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Cervantes - Roldán - A. Argentina - Carriego - Murillo - Lafinur - 3 de Febrero - Av. Storni - Murillo - G. A. Becquer - Calle 6 (deslinde). 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R14",
+                Description = @"
 Estación Moreno - Barrio 25 de Mayo (Ramal 14): De Estación Moreno - Epaña - Córdoba (Ombú) - Colateral Gaona - Ruta 25 - Lamadrid - Agote - Payró - Madariaga - M. Sastre - Nicaragua - A. Storni - L. de la Torre - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R15",
+                Description = @"
 Estación Moreno - Barrio Satélite (Ramal 15): De Estación Moreno - Epaña - S. Vega - Sarmiento - Victorica - Ruta 25 - Paraguay - M. del Bueno - Ecuador - Huges - Gutiérrez - Segurola - F. Azara - Shakespeare - Ruta 23 - Av. San Martín - Ruta 7 - Estación Moreno - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R16",
+                Description = @"
 Estación Moreno - Barrio Villa Anita - Cementerio - Virgencita Gaucha (Ramal 16): De Estación Moreno - Epaña - Sarratea - Av. Victorica - Libertad - Sold. Toledo - Güemes - Roldán - C. Larralde - Storni - Amacay - Fray Cayetano - Rodríguez - F. Sánchez - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R17",
+                Description = @"
 Estación Moreno - Barrio Las Flores (Ramal 17): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Demósteneres - N. Vega - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R19",
+                Description = @"
 Villanueva - Cruce Castelar (Ramal 19): De Ruta 23 y Cervantes por Ruta 23 a Pirovano - por ésta hasta Larreta - Namuncurá - Pericles - San Emilio - Roldán - Einstein - Larreta - Pirovano - Echeverría - Gutiérrez - Cervantes - Ruta 23 - Terminal. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 500B R23",
+                Description = @"
 Estación Moreno - Cruce Derqui con Prolongación a San Atilio (Ramal 23): De Estación Moreno - Epaña - Córdoba (Ombú) - Colateral Gaona - Ruta 25 - Ruta 24 - Av. Pres. Derqui. 
 Regreso por similar recorrido. 
 "
-                });
+            });
 
             buss.Add(new Bus("Línea 501 a 510")
                 {
-                    Title = "Línea 500B",
-                    Description = @"
-San Antonio de Padua - Merlo - Pontevedra 
-Ramal San Antonio de Pádua - Barrio Nuevo: De Dársena Pádua - Perón - Ayacucho - Italia - Noguera - Gaona - Acosta - Centenario - Garibaldi - Centenario - Nobel - Pueyrredón - Eva Perón - Nicaragua - 1º Junta - Colombia - B. Vista - Obarrio. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - El Ceibo: De Dársena Pádua - Perón - Noruega - Cochabamba - Barabino - Tamarindo - El Gráfico - Marcos Paz - Castañares - Mataco. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Mariano Acosta (cruce): De Dársena Pádua - Perón - Noguera - Eva Perón - El Hornero. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Los Paraísos: De Dársena Pádua - Perón - Ayacucho - Vergara - S. Lorenzo - Av. Castro - A. Brown. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Barrio El Pericón: De Dársena Pádua - Ayacucho - Italia - Noruega - Acosta - Roca - Garibaldi - Alberdi - Nobel - Pellegrini - De la Torre - B. Mitre - French - J. Castro - B. Encalada - Balbastro. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Las Campanillas: De Dársena Pádua - Perón - Noguera - Eva Perón - Sicca - Lafayette - Brown - Garmendia - Zárraga - A. Nervo. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Barrio Rivadavia: De Dársena Pádua - Perón - Noguera - Eva Perón - Sicca - Lafayette - Brown. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Villa Magdalena: De Dársena Pádua - Noguera - Chaco - Echeverría - Eva Perón - Rivarola - Bella Vista. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Río Alegre: De Dársena Pádua - Perón - Noguera - Eva Perón - Otero - De la Unión - Pola - Ruta 1003 - Colpayo - Viedma - Cno. de la Rivera - Lamadrid. 
-Regreso por similar recorrido. 
-Ramal San Antonio de Pádua - Pontevedra: Igual al recorrido Ramal Río Alegre - hasta De la Unión - por ésta - De los Franceses - Del Perú. 
-Regreso por similar recorrido. 
-Ramal Merlo - Los Aromos: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - San Martín - Italia - Quintana - Perón - Echeverría - Defensa - Noguera - Eva Perón - V. Mercante - Estación Libertad - V. Mercante - Eva Perón - Almagro - Querandí - Helvecia - C. Rica - B. Sur Mer - Maderna - D´Onofrio - Bella Vista. 
-Regreso por similar recorrido. 
-Ramal Merlo - Helvecia: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - San Martín - Italia - Quintana - Perón - Echeverría - Defensa - Noguera - Eva Perón - V. Mercante - Estación Libertad - V. Mercante - Eva Perón - Almagro - Querandí - Helvecia - C. Rica - B. Sur Mer - Jufré - Colombia. 
-Regreso por similar recorrido. 
-Ramal Merlo - Merlo Gómez: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - Eva Perón - Nicaragua - 1º Junta - Colombia - Bella Vista - Hortiguera. 
-Regreso por similar recorrido. 
-Ramal Merlo - Pontevedra: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - Eva Perón - Patricios - Otero - de la Unión - Pola. 
-Regreso por similar recorrido. 
-Ramal Merlo - Merlo Gómez por Av. J. M. Castro: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - Perú - Constitución - J. Castro - Gallo - Sto. Domingo - Rivarola - Ruta 1003 - hasta Ruta 1003 y Hortiguera. 
-Regreso por similar recorrido 
-"
-                });
-
-            buss.Add(new Bus("Línea 501 a 510")
-                {
-                    Title = "Línea 501B",
+                    Title = "Línea 501B R1",
                     Description = @"
 Merlo - S. A. de Padua 
 Merlo - Loma Grande (Ramal 1): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - Diag. Salada - G. Fretes - Aguado - 25 de Mayo - Echeverry - Liszt. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+                });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R2",
+                Description = @"
 Merlo - Gral. Belgrano (Ramal 2): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - 1º de Mayo - 25 de Mayo - R. de Escalada de San Martín - Aristóbulo del Valle - Pasco - Matanza - Einstein - Bebedero - Fleming - 12 de Febrero - 25 de Mayo - Echeverry - G. Mistral - Posta de Yatasto. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R3",
+                Description = @"
 Merlo - Barrio el Pericón (Ramal 3): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - R. de Escalada de San Martín - Aristóbulo del Valle - Balbastro - vías del FF.CC. Belgrano. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R4",
+                Description = @"
 Merlo - Almafuerte (Ramal 4): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - Arenales - A. del Valle - Bariloche - Lourdes - Ivanowski. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R5",
+                Description = @"
 Alto Merlo - Barrio los Paraísos (Ramal 5): De Maure - Bettinoti - Ameghino - Av. San Martín - Patricias Arg. - Dilón - Bebedero - Diag. Salada - Av. San Martín - V. Lozada - Azara - Iriarte - Posadas - Lainez - Koch - Gral. Paz - Perú - Pringles - Bolívar - Constitución - Moreno - Córdoba - R. Balbín - Perón - Libertador - Maipú - Avellaneda - Mitre - Brown - Vergara - Alem - 9 de Julio - 25 de Mayo - Tacuarí - A. del Valle - Tejedor - San Martín - M. Sastre - San Lorenzo. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R6",
+                Description = @"
 San Antonio de Padua - Liszt y Balbín (Ramal 6): De Dársena San Antonio de Padua - Perón - F. Espinal - 1º de Mayo - 25 de Mayo - Echeverry - Liszt - R. Balbín. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R7",
+                Description = @"
 Estación Merlo - Barrio Gral. Belgrano (Ramal 7): De Dársena de Merlo - Moreno - Juncal - Perón - Libertador - Chacabuco - Constitución - Perú - Gral. Paz - Koch - Laines - Posadas - Iriarte - Azara - 25 de Mayo - Echeverri - G. Mistral. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R8",
+                Description = @"
 San Antonio de Padua - Dillón y Yatasto (Ramal 8): De Dársena San Antonio de Padua - Perón - Libertador - Riobamba - Córdoba - Constitución - Av. San Martín - P. Yataso - Dillón. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R9",
+                Description = @"
 Merlo - Ferrari (Ramal 9): De Dársena de Merlo - Moreno - Cervantes - Av. Balbín (Ruta 200) - Pda. KM. 34,5 - Pda. Ferrari - Viedama hasta Canada. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R10",
+                Description = @"
 Merlo - Cementerio Santa Mónica (Ramal 10): De Chacabuco - Colón - Moreno - Juncal - Perón - Libertador - Av. Argentina - Av. San Martín - Murray - A. del Valle - Bariloche - B. Encalada - Arenales - Pericón Bebedero - Av. Eva Perón. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R11",
+                Description = @"
 Hospital Eva Perón - Loma Grande (Ramal 11): De Hospital Eva Perón - Chacabuco - Libertador - Moreno - Cervantes - Constitución - R. Balbín - Gral. Paz - Cachimayo - Curupaytí - Filiberto - Montalvo - Arévalo - Tres Arroyos. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R12",
+                Description = @"
 San Antonio de Padua - Barrio Martín Fierro (Ramal 12): De Dársena San Antonio de Padua - Perón - 25 de Mayo - Espinal - 1º de Mayo - 25 de Mayo - Echeverri - A. del Valle - Garmendia - Andalgalá. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R13",
+                Description = @"
 San Antonio de Padua - Barrio Martín Fierro (Ramal 13): De Dársena San Antonio de Padua - Perón - Av. Argentina - Perú - Libertador - Av. Argentina - Av. San Martín - Salada - G. Fretes - Aguado - 25 de Mayo - Echeverri - A. del Valle - Garmendia. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 501 a 510")
+            {
+                Title = "Línea 501B R14",
+                Description = @"
 Merlo - Loma Grande (Ramal 14): De Dársena de Merlo - Moreno - Juncal - Perón - R. Balbín - Mozart - Bach - Garmendia. 
 Regreso por similar recorrido. 
 "

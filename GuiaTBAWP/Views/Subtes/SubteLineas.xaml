@@ -57,63 +57,163 @@
 
                             <StackPanel Margin="30,0,0,0">
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de Mayo</TextBlock>
-                            </StackPanel>
-                            <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Perú</TextBlock>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                    <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
-                                    <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de Mayo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Piedras</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Perú</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            <StackPanel Height="130">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Piedras</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lima</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Congreso</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Congreso</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasco</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasco</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Alberti</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Alberti</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Miserere</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Loria</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Loria</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Castro Barros</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Castro Barros</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Río de Janeiro</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Río de Janeiro</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Acoyte</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Acoyte</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Primera Junta</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Primera Junta</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Puán</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Puán</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carabobo</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carabobo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San José de Flores</TextBlock>
                             </StackPanel>
@@ -165,55 +265,157 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Leandro N. Alem</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Florida</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Pelegrini</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
-                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Uruguay</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasteur</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Gardel</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Medrano</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Angel Gallardo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Malabia - Osvaldo Pugliese</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Dorrego</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Federico Lacroze</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tronador</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Los Incas - Parque Chas</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Echeverría</TextBlock>
@@ -253,40 +455,94 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <!--Image Source="/Images/Subtes/bus.png" Height="30" Width="30" Margin="5"></Image-->
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">General San Martín</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lavalle</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Diagonal Norte</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
-                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Avenida de Mayo</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San Juan</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Constitución</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -331,58 +587,167 @@
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catedral</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
-                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">9 de Julio</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
-                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tribunales</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Callao</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Facultad de Medicina</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Agüero</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bulnes</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Scalabrini Ortiz</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Italia</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Palermo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ministro Carranza</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Olleros</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">José Hernandez</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Juramento</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Congreso de Tucumán</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -443,59 +808,145 @@
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bolívar</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
-                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Belgrano</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San José</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Entre Ríos - Rodolfo Walsh</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pichincha</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Jujuy</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">General Urquiza</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Boedo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Avenida La Plata</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">José María Moreno</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Emilio Mitre</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Medalla Milagrosa</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Varela</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de los Virreyes</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaP.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaP.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
@@ -550,32 +1001,82 @@
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Venezuela</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Humberto 1°</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Inclán</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Caseros</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque Patricios</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Hospitales</TextBlock>

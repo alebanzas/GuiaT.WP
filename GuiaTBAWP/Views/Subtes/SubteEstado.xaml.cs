@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Views.Subtes
 {
     public partial class SubteEstado : PhoneApplicationPage
     {
@@ -34,8 +34,10 @@ namespace GuiaTBAWP
 
         public SubteEstado()
         {
-            InitializeComponent();
+            ViewModel.Lineas.Clear();
 
+            InitializeComponent();
+            
             // Set the data context of the listbox control to the sample data
             DataContext = ViewModel;
             Loaded += MainPage_Loaded;
@@ -61,6 +63,7 @@ namespace GuiaTBAWP
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
+                Loading.Visibility = Visibility.Visible;
                 ConnectionError.Visibility = Visibility.Collapsed;
                 _progress.Text = "Obteniendo estado del servicio...";
                 SystemTray.SetIsVisible(this, true);

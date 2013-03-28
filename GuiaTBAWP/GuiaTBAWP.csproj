@@ -98,16 +98,16 @@
     <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
-    <Compile Include="SubteHorarios.xaml.cs">
+    <Compile Include="Views\Subtes\SubteHorarios.xaml.cs">
       <DependentUpon>SubteHorarios.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubteEstado.xaml.cs">
+    <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
       <DependentUpon>SubteEstado.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubteLineas.xaml.cs">
+    <Compile Include="Views\Subtes\SubteLineas.xaml.cs">
       <DependentUpon>SubteLineas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubteMapa.xaml.cs">
+    <Compile Include="Views\Subtes\SubteMapa.xaml.cs">
       <DependentUpon>SubteMapa.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataColectivos.cs" />
@@ -141,10 +141,10 @@
     <Compile Include="Sarmiento.xaml.cs">
       <DependentUpon>Sarmiento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubtePrecio.xaml.cs">
+    <Compile Include="Views\Subtes\SubtePrecio.xaml.cs">
       <DependentUpon>SubtePrecio.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Subtes.xaml.cs">
+    <Compile Include="Views\Subtes\Subtes.xaml.cs">
       <DependentUpon>Subtes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Trenes.xaml.cs">
@@ -215,19 +215,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubteHorarios.xaml">
+    <Page Include="Views\Subtes\SubteHorarios.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SubteEstado.xaml">
+    <Page Include="Views\Subtes\SubteEstado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubteLineas.xaml">
+    <Page Include="Views\Subtes\SubteLineas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubteMapa.xaml">
+    <Page Include="Views\Subtes\SubteMapa.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -283,11 +283,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubtePrecio.xaml">
+    <Page Include="Views\Subtes\SubtePrecio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Subtes.xaml">
+    <Page Include="Views\Subtes\Subtes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

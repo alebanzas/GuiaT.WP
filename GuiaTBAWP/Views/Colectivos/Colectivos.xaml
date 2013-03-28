@@ -85,8 +85,8 @@
                 </toolkit:LongListSelector>
             </controls:PivotItem>
 
-            <controls:PivotItem Header="municipales">
-                <toolkit:LongListSelector x:Name="busesMuni" Background="Transparent"
+            <controls:PivotItem Header="provinciales">
+                <toolkit:LongListSelector x:Name="busesProv" Background="Transparent"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     GroupItemTemplate="{StaticResource groupItemHeader}"
@@ -94,8 +94,8 @@
                 </toolkit:LongListSelector>
             </controls:PivotItem>
 
-            <controls:PivotItem Header="provinciales">
-                <toolkit:LongListSelector x:Name="busesProv" Background="Transparent"
+            <controls:PivotItem Header="municipales">
+                <toolkit:LongListSelector x:Name="busesMuni" Background="Transparent"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     GroupItemTemplate="{StaticResource groupItemHeader}"

@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
+using GuiaTBAWP.BusData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GuiaTBAWP.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class ColectivosDataTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void WhenDescripcionesLargas()
         {
             int i = 0;
             int j = 0;

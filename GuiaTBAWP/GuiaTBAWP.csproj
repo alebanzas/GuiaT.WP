@@ -82,10 +82,10 @@
     <Compile Include="AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BelgranoNorte.xaml.cs">
+    <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
       <DependentUpon>BelgranoNorte.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BelgranoSur.xaml.cs">
+    <Compile Include="Views\Trenes\BelgranoSur.xaml.cs">
       <DependentUpon>BelgranoSur.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusData\Bus.cs" />
@@ -110,7 +110,7 @@
     <Compile Include="Views\Subtes\SubteMapa.xaml.cs">
       <DependentUpon>SubteMapa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataColectivos.cs" />
+    <Compile Include="BusData\DataColectivos.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>
@@ -129,16 +129,16 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Mitre.xaml.cs">
+    <Compile Include="Views\Trenes\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Roca.xaml.cs">
+    <Compile Include="Views\Trenes\Roca.xaml.cs">
       <DependentUpon>Roca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SanMartin.xaml.cs">
+    <Compile Include="Views\Trenes\SanMartin.xaml.cs">
       <DependentUpon>SanMartin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sarmiento.xaml.cs">
+    <Compile Include="Views\Trenes\Sarmiento.xaml.cs">
       <DependentUpon>Sarmiento.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Subtes\SubtePrecio.xaml.cs">
@@ -147,10 +147,10 @@
     <Compile Include="Views\Subtes\Subtes.xaml.cs">
       <DependentUpon>Subtes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Trenes.xaml.cs">
+    <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Urquiza.xaml.cs">
+    <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -203,11 +203,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BelgranoNorte.xaml">
+    <Page Include="Views\Trenes\BelgranoNorte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BelgranoSur.xaml">
+    <Page Include="Views\Trenes\BelgranoSur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -247,7 +247,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Mitre.xaml">
+    <Page Include="Views\Trenes\Mitre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,15 +271,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Roca.xaml">
+    <Page Include="Views\Trenes\Roca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SanMartin.xaml">
+    <Page Include="Views\Trenes\SanMartin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sarmiento.xaml">
+    <Page Include="Views\Trenes\Sarmiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,11 +291,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Trenes.xaml">
+    <Page Include="Views\Trenes\Trenes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Urquiza.xaml">
+    <Page Include="Views\Trenes\Urquiza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -435,7 +435,10 @@
     <WCFMetadataStorage Include="Service References\Bing.Route\" />
     <WCFMetadataStorage Include="Service References\Bing.Search\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Colectivos\" />
+    <Folder Include="Views\SUBE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

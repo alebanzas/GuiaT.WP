@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="GuiaTBAWP.Sarmiento"
+    x:Class="GuiaTBAWP.Views.Trenes.Mitre"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -18,10 +18,10 @@
     <Grid x:Name="LayoutRoot">
         <controls:Panorama Title="trenes" TitleTemplate="{StaticResource SmallPanoramaTitle}">
 
-            <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="sarmiento">
+            <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="mitre">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_sarmiento.jpg"
+                      Source="/Images/mapa_ffcc_mitre.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

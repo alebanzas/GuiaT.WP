@@ -1,4 +1,5 @@
-﻿using Microsoft.Phone.Controls;
+﻿using GuiaTBAWP.BusData;
+using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP
 {

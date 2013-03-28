@@ -61,13 +61,20 @@
                             </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Perú</TextBlock>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                    <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                    <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                </StackPanel>
                             </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Piedras</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lima</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Lima</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
                             </StackPanel>
@@ -81,8 +88,11 @@
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Alberti</TextBlock>
                             </StackPanel>
                             <StackPanel Height="130">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Miserere</TextBlock>
-                            </StackPanel>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Miserere</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
+                                </StackPanel>
                             <StackPanel Height="130">
                                 <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Loria</TextBlock>
                             </StackPanel>
@@ -161,6 +171,10 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Pelegrini</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Uruguay</TextBlock>
@@ -173,6 +187,9 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Carlos Gardel</TextBlock>
@@ -245,15 +262,25 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Diagonal Norte</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Avenida de Mayo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San Juan</TextBlock>
@@ -303,9 +330,17 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catedral</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">9 de Julio</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tribunales</TextBlock>
@@ -392,21 +427,34 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catalinas</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Correo Central</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bolívar</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Belgrano</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Independencia</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San José</TextBlock>
@@ -419,6 +467,9 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Jujuy</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">General Urquiza</TextBlock>
@@ -443,6 +494,9 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de los Virreyes</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaP.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -486,21 +540,33 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Santa Fe</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Cordoba</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Venezuela</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Humberto 1°</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Inclán</TextBlock>
@@ -552,6 +618,9 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>
@@ -625,6 +694,9 @@
                             <StackPanel Margin="30,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <Image Source="/Images/Subtes/lineaE.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Balbastro</TextBlock>

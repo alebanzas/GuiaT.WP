@@ -79,6 +79,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\SubteNombreImagenConverter.cs" />
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
@@ -296,6 +297,17 @@
       <SubType>Designer</SubType>
     </None>
     <Resource Include="PanoramaBackground.jpg" />
+    <Content Include="Images\Subtes\accesibilidad.png" />
+    <Content Include="Images\Subtes\lineaA.png" />
+    <Content Include="Images\Subtes\lineaB.png" />
+    <Content Include="Images\Subtes\lineaC.png" />
+    <Content Include="Images\Subtes\lineaD.png" />
+    <Content Include="Images\Subtes\lineaE.png" />
+    <Content Include="Images\Subtes\lineaH.png" />
+    <Content Include="Images\Subtes\lineaP.png" />
+    <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\sanitarios.png" />
+    <Content Include="Images\Subtes\tren.png" />
     <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />
     <Content Include="Images\Trenes\mapa_ffcc_belgranosur.jpg" />
     <Content Include="Images\Trenes\mapa_ffcc_mitre.jpg" />

@@ -14,7 +14,7 @@ namespace GuiaTBAWP.Tests
             int i = 0;
             int j = 0;
             int k = 0;
-            int max = 3000;
+            int max = 2700;
 
             var list = DataColectivos.LoadBusesIUrb();
             foreach (var bus in list.Where(bus => bus.Description.Length > max))

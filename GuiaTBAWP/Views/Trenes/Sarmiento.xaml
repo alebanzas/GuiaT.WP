@@ -21,7 +21,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="sarmiento">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_sarmiento.jpg"
+                      Source="/Images/Trenes/mapa_ffcc_sarmiento.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

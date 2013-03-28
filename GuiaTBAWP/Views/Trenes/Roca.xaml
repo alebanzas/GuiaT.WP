@@ -20,7 +20,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="roca">
                 <StackPanel>
                     <Image x:Name="image"
-                		Source="/Images/mapa_ffcc_roca.jpg"
+                		Source="/Images/Trenes/mapa_ffcc_roca.jpg"
                 		Stretch="None"
                 		HorizontalAlignment="Left"
                 		VerticalAlignment="Top" />

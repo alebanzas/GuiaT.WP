@@ -1,7 +1,7 @@
 ﻿using GuiaTBAWP.BusData;
 using Microsoft.Phone.Controls;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Views.Colectivos
 {
     public partial class Colectivos : PhoneApplicationPage
     {

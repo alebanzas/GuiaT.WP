@@ -22,7 +22,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="belgrano norte">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_belgranonorte.jpg"
+                      Source="/Images/Trenes/mapa_ffcc_belgranonorte.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

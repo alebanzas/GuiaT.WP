@@ -1,30 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Device.Location;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Net.NetworkInformation;
 using Microsoft.Phone.Shell;
-using GuiaTBAWP.Bing.Route;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using GeocodeLocation = GuiaTBAWP.Bing.Geocode.GeocodeLocation;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Views.SUBE
 {
     public partial class PuntosDeVentaYCarga : PhoneApplicationPage
     {

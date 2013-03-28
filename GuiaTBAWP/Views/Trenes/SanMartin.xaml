@@ -21,7 +21,7 @@
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="san martín">
                 <StackPanel>
                     <Image Name="image"
-                      Source="/Images/mapa_ffcc_sanmartin.jpg"
+                      Source="/Images/Trenes/mapa_ffcc_sanmartin.jpg"
                       Stretch="None"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top" />

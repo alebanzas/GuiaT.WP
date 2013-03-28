@@ -33,9 +33,9 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteLineas">
                     <TextBlock Text="líneas y estaciones" />
                 </Button>
-                <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteHorarios">
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubteHorarios">
                     <TextBlock Text="horarios" />
-                </Button-->
+                </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SubtePrecio">
                     <TextBlock Text="precio" />
                 </Button>

@@ -12,6 +12,7 @@
     <converters:PushpinTypeBrushConverter x:Key="PushpinTypeBrushConverter" />
     <converters:LocationGeoCoordinateConverter x:Key="LocationGeoCoordinateConverter" />
     <converters:DistanceConverter x:Key="DistanceConverter" />
+    <converters:SubteNombreImagenConverter x:Key="SubteNombreImagenConverter" />
     
     <!-- #Brushes -->
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#A52E2E2E" />

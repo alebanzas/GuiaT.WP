@@ -5060,61 +5060,46 @@ Regreso por similar recorrido.
                     Title = "Línea 620",
                     Description = @"
 Lomas del Mirador - San Justo - Laferrere - Gonzalez Catán 
-
 Av. Gral. Paz y Av. Brig. Gral. Juan M. de Rosas (ex Prov. Unidas) - Ruta 3 km 47,700: De Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - hasta km 47,700. 
-
 Regreso por similar recorrido. 
 
 Av. Gral. Paz y Av. Brig. Gral. Juan M. de Rosas (ex Prov. Unidas) - Km 47,700 por Catán: De Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - hasta km 29 - Senguel - (Ruta 21) - Cepeda - Sáenz - Pérez - Ruta 3 km 32 al 38 - H. Wast - Av. Montecarlo - Ruta 3 km 39 al 47,700 (Av. Rosas). 
-
 Regreso por similar recorrido. 
 
 Barrio Esperanza: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Av. Montecarlo - hasta Schubert. 
-
 Regreso por similar recorrido. 
 
 La Foresta: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - California - Colorado - Maure. 
-
 Regreso por similar recorrido. 
 
 Villa Dorrego: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Av. Montecarlo - hasta Schubert. 
-
 Regreso por similar recorrido. 
 
 KM 29º Barrio Independencia: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Céspedes - M. Coronado - Ringlos - Puelches - Juan F. Cobo - hasta V. Hugo. 
-
 Regreso por similar recorrido. 
 
 Barrio las Torres (por Scasso): Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Da Vinci - La Bastilla - C. de la Barca - Luján - Echauri - Zepellin - C. de la Barca - Ruta 3 - Ruta 21 - hasta Díaz Colodero. 
-
 Regreso por similar recorrido. 
 
 Gral. Paz - Barrio Luz y Fuerza - Laferrere - Scasso: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Ambrosetti - Perú - L. Gallo - Balbastro - Mocoretá - Moldes - José I. Rucci - R. Pérez - Zepellin - Marconi - Encina - C. Casares - V. Gómez - Santa Rosa - Freire - Sudamérica - Murgiondo - H. Luque - García Merou - M. Coronado - Reaño - V. Martínez - Rocamora - Watt - Del Tejar - Voissin - Da Vinci - La Bastilla - C. de la Barca - hasta Alagón. 
-
 Regreso por similar recorrido. 
 
 Gral. Paz - KM 32 - Los Ceibos: Ruta 3 km 32 - Dr. José Equiza - hasta Esteco. 
-
 Regreso por similar recorrido. 
 
 Laferrere - Villa Scasso: De Estación Laferrere - Piedrabuena - Sob. Nacional - H. Luque - García Moreau - M. Coronado - Reaño - V. Martínez - Rocamora - Watt - Del Tejar - Voissin - Da Vinci - La Bastilla - C. de la Barca - hasta Ruta 3. 
-
 Regreso por similar recorrido. 
 
 Ramos Mejía - G. Catán - KM 47,700: De Av. de Mayo - F. Varela - Perón - H. Yrigoyen - Almafuerte - Av. Brig. Gral. Juan M. de Rosas - Ruta 3 km 31 - E. Catón - Barrientos - Inca - Conde - Posamay - Cepeda - Sáenz - E. S. Pérez - Ruta 3 km 47,700. 
-
 Regreso por similar recorrido. 
 
 San Marino: Igual al Ramal anterior hasta Ruta 3 km 44,500 - H. Quiroga - Cañada de Gómez - H. Quiroga - hasta Villaroel. 
-
 Regreso por similar recorrido. 
 
 Villa Dorrego: Igual al Ramal anterior hasta Av. Brig. Gral. Juan M. de Rosas - B. Matienzo - E. Garzón - B. Catáneo - J. C. Varela - Armonía - Zelada. 
-
 Regreso por similar recorrido. 
 
 V. Costructora - Borgward: Igual al Ramal anterior hasta Av. Brig. Gral. Juan M. de Rosas - Derqui - Terrada - Ambrosetti - Montañeses - J. I. Rucci - R. Pérez - Zepellin - Andalgalá - Tinogasta - hasta Marconi. 
-
 Regreso por similar recorrido. 
 
 "
@@ -5723,18 +5708,56 @@ Regreso por similar recorrido.
 
             buss.Add(new Bus("Línea 241 a 250")
                 {
-                    Title = "Línea 242",
+                    Title = "Línea 242 Liniers - Morón",
                     Description = @"
 Ramal Liniers - Estación Morón: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Luchter - Nolting - Génova - Av. díaz Vélez - (La Matanza) - 11 de Septiembre - Balcarce - Pizzurno - Av. Gral. San Martín - Moreno - Av. Rivadavia - Estación Ramos Mejía - Bolívar - Espora - Av. de Mayo - Alvarado - Cnel. Brandsen - Triunvirato - Dr. Arieta - Buchardo - Almafuerte - (Morón) - Concordia - El Ceibo - Constitución - Int. Carrere - J. Murias - E. Castro - R. Escalada de San Martín - Estación Haedo - Estrada - Av. Rivadavia - Libertad - Gob. E. Castro - Gral. Pueyrredón - Huaura - D. French - Vicente López - Córdoba - Av. H. Yrigoyen - Yatay - M. J. García - 25 de Mayo - Estación Morón. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+                });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 Liniers - Rafael Castillo",
+                Description = @"
 Ramal Liniers - Estación Rafael Castillo: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Ibarrola - Av. Rivadavia - Estación Ciudadela - (La Matanza) - Estación Ramos Mejía - Bolívar - Alsina - Medrano - Triunvirato - Cuba - Av. Don Bosco - Suiza - La Porteña - Carabobo - Bermúdez - Cristianía - Granville - Torquinst - Beazley - Carlos Casáres - V. de la Plaza - hasta Estación R. Castillo. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 Liniers - Barrio B.I.D.",
+                Description = @"
 Ramal Liniers - Barrio B.I.D.: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Ibarrola - Av. Rivadavia - Estación Ciudadela - (La Matanza) - Estación Ramos Mejía - Bolívar - T. Espora - Av. de Mayo - Gral. Alvarado - Castellanos - América - Estación Ing. S. Brian - Av. Perón - Gral. Villegas - Almafuerte - Av. Brig. Gral. J. M. de Rosas (Ruta Nº 3) - Sarratea - Montañeses - Ambrosetti - Cnel. Terrada - Pedro Léon Gallo - Anatole France - Ambrosetti - Av. Crovara - Estación Justo Villegas - Cristianía - hasta Barrio B.I.D. 
-Regreso por similar recorrido. 
-Ramal San Justo - Estación Morón: De Sarandí y Asamblea (La Matanza) - por ésta - Arieta - Peribebuy - Av. Perón - Av. Brig. Gral. J. M. de Rosas (Ruta Nº 3) - Arieta - Garibaldi - Chile - Don Bosco - (Morón) - D. French - Ntra. Sra. del Buen Viaje - 25 de Mayo - Estación Morón. Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 San Justo - Morón",
+                Description = @"
+Ramal San Justo - Estación Morón: De Sarandí y Asamblea (La Matanza) - por ésta - Arieta - Peribebuy - Av. Perón - Av. Brig. Gral. J. M. de Rosas (Ruta Nº 3) - Arieta - Garibaldi - Chile - Don Bosco - (Morón) - D. French - Ntra. Sra. del Buen Viaje - 25 de Mayo - Estación Morón. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 San Justo - Haedo",
+                Description = @"
 Ramal San Justo - Haedo: De De Sarandí y Asamblea (La Matanza) - por ésta - Arieta - Peribebuy - Av. Perón - Av. Brig. Gral. J. M. de Rosas (Ruta Nº 3) - Arieta - América - Rep. de Chile - (Morón) - Pueyrredón - El Ceibo - J. M. Moreno - Esmeralda - Libertad - E. Castro - R. de Escalada de San Martín - hasta Estación Haedo. 
-Regreso por similar recorrido. 
-Ramal Liniers - Rafael Castillo - Barrio El Cortijo: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Ibarrola - Av. Rivadavia - Estación Ciudadela - (La Matanza) - Estación Ramos Mejía - Bolívar - Medrano - Triunvirato - Rivera Indarte - Miguel Cané - Mñor. Bufano (Ruta Nº 4) - Carabobo - Bermúdez - Cristianía - Granville - Torquinst - Beazley - C. Casares - V. de la Plaza - Estación R. Castillo - Jaramillo - N. Dávila - Cnel. Montt - Cnte. Pierrestegui - hasta Barrio El Cortijo. Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 Liniers - Rafael Castillo",
+                Description = @"
+Ramal Liniers - Rafael Castillo - Barrio El Cortijo: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Ibarrola - Av. Rivadavia - Estación Ciudadela - (La Matanza) - Estación Ramos Mejía - Bolívar - Medrano - Triunvirato - Rivera Indarte - Miguel Cané - Mñor. Bufano (Ruta Nº 4) - Carabobo - Bermúdez - Cristianía - Granville - Torquinst - Beazley - C. Casares - V. de la Plaza - Estación R. Castillo - Jaramillo - N. Dávila - Cnel. Montt - Cnte. Pierrestegui - hasta Barrio El Cortijo. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 241 a 250")
+            {
+                Title = "Línea 242 Liniers - Los Pinos",
+                Description = @"
 Ramal Liniers - Los Pinos: De D´Onofrio y Ramón Falcón (3 de Febrero) - por D´Onofrio - Rafaela - Ibarrola - Av. Rivadavia - Estación Ciudadela - (La Matanza) - Estación Ramos Mejía - Bolívar - T. Espora - Av. de Mayo - Gral. Alvarado - Castellanos - Constitución - América - Estación Ing. S. Brian - Thames - Miguel Cané - Camino de Cintura - Carabobo - Bermúdez - Cristianía - hasta Av. Don Bosco - Barrio Los Pinos. 
 Regreso por similar recorrido. 
 "
@@ -5869,27 +5892,82 @@ Regreso por similar recorrido.
 
             buss.Add(new Bus("Línea 271 a 280")
                 {
-                    Title = "Línea 273",
+                    Title = "Línea 273 A1",
                     Description = @"
 Ramal 'A1' por Villa Elizalde a Ringuelet: De Calle 77 y Calle 134 - por ésta - Calle 76 - Calle 29 - Calle 77 - Calle 26 - Calle 75 - Calle 23 - Calle 72 - Av. 19 - vuelve por Calle 72 - Calle 23 - Calle 71 - Calle 12 - Calle 68 - Calle 14 - Calle 64 - Av. 13 - Calle 14 - Calle 64 - Av. 13 - Calle 54 - Av. 7 - Calle 532 - Cno. Gral. Belgrano - Calle 528 - Calle 5 - Calle 523 - Calle 3 - Calle 516 - Calle 5 - Calle 515. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+                });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 A2",
+                Description = @"
 Ramal 'A2' por Villa Elizalde a Calle 32 y Calle 120: Por el mismo recorrido del ramal A1 hasta Calle 3 y Calle 520 - por ésta - Calle 120 - Calle 32. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 B",
+                Description = @"
 Ramal 'B' City Bell por Cantilo: De Calle 77 y Calle 134 - por ésta - Calle 75 - Calle 31 - Diag. 74 - Boulevard 81 - Calle 72 - Calle 25 - Calle 71 - Av. 19 - Calle 66 - Calle 14 - Calle 64 - Av. 13 -Calle 54 - Av. 7 - Calle 532 - Cno. Gral. Belgrano - Cantilo - Calle 21 - 15 - Estación City Bell. 
 Regreso por similar recorrido. 
 Ramal 'B' City Bell por Calle 11: Por el mismo recorrido del Ramal 'B' por Cantilo hasta Cantilo y Cno. Gral. Belgrano - por ésta - Calle 11 - Cno. Centenario - Estación City Bell. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 C",
+                Description = @"
 Ramal 'C' Gorina por Cno. Gral. Belgrano: De Calle 77 y Calle 134 - por ésta - Calle 76 - Calle 31 - Diag. 74 - Bolv. 81 - Calle 72 - Calle 20 - Calle 72 - Calle 23 - Calle 71 - Calle 12 - Calle 68 - Calle 14 - Calle 64 - Av. 13 - Calle 54 - Av. 7 - Calle 532 - Av. 13 - Calle 54 - Av. 7 - Calle 532 - Av. 13 - Calle 524 - Rotonda Monumento al Gaucho - Av. 13 - Distribuidor Pedro Benoit - Cno. gral. Belgrano - Lacroze - Cervantes - Mitre - Gaona - Circunvalación - Estación Gorina - Calle 501. 
-Regreso por similar recorrido. Ramal 'E' Lederle por Cno. Centenario: Por el mismo recorrido del Ramal 'B' hasta Av. 66 y Av. 19 - cont. por ésta - Calle 54 - Av. 7 - Rotonda al Ingeniero - Av. Ant. Argentina - Calle 11 - Calle 520 - Calle 12 - Calle 514 - Cno. Centenario - cruce Guitiérrez - Rotonda de Alpargatas - Laboratorio Lederle. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido."
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 E",
+                Description = @" 
+Ramal 'E' Lederle por Cno. Centenario: Por el mismo recorrido del Ramal 'B' hasta Av. 66 y Av. 19 - cont. por ésta - Calle 54 - Av. 7 - Rotonda al Ingeniero - Av. Ant. Argentina - Calle 11 - Calle 520 - Calle 12 - Calle 514 - Cno. Centenario - cruce Guitiérrez - Rotonda de Alpargatas - Laboratorio Lederle. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 F",
+                Description = @"
 Ramal 'F' Gorina por Cno. Centenario: Por el mismo recorrido del Ramal 'E' hasta Cno. Centenario y 514 - Cno. Centenario - Lacroze - Cervantes - Mitre - Gaona - Circunvalación - Estación Gorina - 501 - Frigorífico Gorina. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 G",
+                Description = @"
 Ramal 'G' Arturo Seguí por Cno. Gral. Belgrano: Por el mismo recorrido del Ramal 'E' hasta Av. 7 y Calle 532 - por ésta - Av. 13 - Calle 524 - Rotonda Monumento al Gaucho - Av. 13 - Dist. Pedro Benoit - Cno. Gral. Belgrano - Arana - Estación Seguí. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 H",
+                Description = @"
 Ramal 'H' Villa Elisa por Cno. Gral. Belgrano: Por el mismo recorrido del Ramal 'E' hasta Calle 7 y Calle 532 - sigue igual al ramal 'G' hasta Cno. Gral. Belgrano y Arana por ésta - Estación Villa Elisa - Calle 12 - Plaza Villa Elisa - Cno. Centenario - Santa Rosa (Arco Triunfo Parque Pereyra). 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 I",
+                Description = @"
 Ramal 'I' Los Porteños por Cno. Centenario: Por el mismo recorrido del Ramal 'D' hasta Cno. Centenario y Cantilo (Estación City Bell) - Diag. 25 de Mayo - Plaza San Martín - Calle 11 - Lebbenson - Los Porteños. 
-Desdoblamiento: Por Bº Santa Ana de City Bell. 
+Desdoblamiento: Por Bº Santa Ana de City Bell. "
+            });
+
+            buss.Add(new Bus("Línea 271 a 280")
+            {
+                Title = "Línea 273 BG",
+                Description = @"
 Ramal 'BG' Laboratorio Lederle por Cno. Gral. Belgrano: Por el mismo recorrido del Ramal 'H' hasta Cno. Gral. Belgrano y Arana - cont. por el camino Gral. Belgrano - cruce Gutiérrez y Lederle. 
 Regreso por similar recorrido. 
 "
@@ -6693,26 +6771,81 @@ Vuelta a Bajo San Isidro: Desde Bourdet y Boulevard Perón por Bourdet, Boulevar
 
             buss.Add(new Bus("Línea 431 a 440")
                 {
-                    Title = "Línea 440",
+                    Title = "Línea 440 1",
                     Description = @"
 San Miguel - J. C. Paz - Grand. Bourg - P. Nogués - Los Polvorines - San Miguel (Recorrido 1): De Fraga entre Av. Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Consejal Tribulato - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Ruta 197 - Lavallol - Cangallo - Cura Brochero - Pasco - Eva Perón - Beiró - J. F. Seguí - Eva Perón - El Callao - Ruta 197 - Sol de Mayo - Soldado ex Comb. de Malvinas - Hernandarias - Gorostiaga - C. Lorenzini - Dr. Baroni - Gral. Savio - 9 de Julio - Av. Maipú - Gral. San Martín - Gral. Savio - Rivadavia - Av. Maipú - Ruta 202 - Ruta 8 - Consejal Tribulato - L. N. Alem y Belgreno. 
 Regreso por similar recorrido. 
+"
+                });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 2 R1",
+                Description = @"
 Estación Lemos - Parque Jardín - Barrio del Sol - J. C. Paz - S. Miguel - Estación Lemos (Recorrido 2, Ramal 1): De Belgrano y Ruta 8 - por Belgrano - Ruta 8 - Av Mitre - Malnatti - Consejal Tribulato - L. N. Alem - Irigoin - M. Sastre - Pichincha - M. Ferreyra - P. de Mendoza - Gral. Pintos - J. V. González - G. Campos - Irigoin - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - 25 de Mayo - C. Lorenzini - Boedo - Gral. San Martín - Gral. Savio - 25 de Mayo - Av. Maipú - Dr. Baroni - R. Mejía - Gorriti - San Ignacio - Ruta 197 - Ruta 24 - Dr. M. Fitte - J. C. Paz - Zuviría - Av. Altube - G. Campos - Av. Mitre - Farías - Belgrano - Fraga y Av. Mitre. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 2 R2",
+                Description = @"
 San Miguel - Base - J. C. Paz - San Miguel (Recorrido 2, Ramal 2): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - M. Ferreyra - T. Guido - Marchena - Ruta 24 - Dr. Fitte - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 3 R2",
+                Description = @"
 San Miguel - Barrio El Jaguel - San Miguel (Recorrido 3, Ramal 2): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - D´Elía - Belgrano - Munóz - 1º Junta - Darrageira - J. L. Suárez - Belgrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 3 R3",
+                Description = @"
 San Miguel - Barrio El Jaguel - por Ruta 8 San Miguel (Recorrido 3, Ramal 3): De Sarmiento entre Av. Mitre y Consejal Tribulato - Sarmiento - Av. Mitre - Ruta 8 - Darragueira - J. L. Suárez - Medrano - C. Bacle - Rivadavia - Av. Maipú y Chorrarín. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 4 R3",
+                Description = @"
 Estación San Miguel - Abascal - Estación J. C. Paz - San Miguel (Recorrido 4, Ramal 3): De Fraga entre Mitre y Consejal Tribulato - por Fraga - Av. Mitre - Sarmiento - R. Franco - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 4 R4",
+                Description = @"
 Estación Lemos - Estación J. C. Paz - Estación Lemos (Recorrido 4, Ramal 4): De Av. Mitre entre Ruta 8 y Pavón - Mitre - Malnattí - Consejal Tribulato - Perón - Rivadavia - G. Campos - Av. Altube - R. S. Peña - Ruta 24 - M. Jones - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 5",
+                Description = @"
 Estación San Miguel - Cementerio Parque - Estación G. Bourg - Estación Lemos - Pinta - Estrella - San Miguel - (Rec. 5): De Av. Mitre entre Fraga y Farías por Av. Mitre - L. N. Alem - Belgrano - Perón - Pringles - Paunero - Irigoin - Muñoz - Chile - Ruta 8 - Conesa - Ventura Coll - M. Coronado - J. Henández - Pasco - A. Brown - S. Vega - Palacios - Eva Perón - F. Beiró - Seguí - Eva Perón - El Callao - Ruta 197 - Ruta 8 - Av. Mitre - C. Malnatti - C. Tribulato - La Pinta y Güemes. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 7",
+                Description = @"
 San Miguel - Parque Jardín - J. C. Paz - San Miguel (Rec. 7): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - M. Ferreyra - P. de Mendoza - G. Pinto - J. V. González - Av. G. Campos - Av. Altube - R. S. Peña - Ruta 24 - Dr. M. Fitte - J. C. Paz y Zuviría. 
-Regreso por similar recorrido. 
+Regreso por similar recorrido. "
+            });
+
+            buss.Add(new Bus("Línea 431 a 440")
+            {
+                Title = "Línea 440 8",
+                Description = @"
 San Miguel - Barrio Abascal - Estación J. C. Paz - Estación Grand Bourg (Rec. 8): De Fraga entre C. Tribulato y Av. Mitre por Fraga - Av. Mitre - Av. Sarmiento - R. Franco - Ruta 24 - Ruta 197 - El Callao - F. Beiró - J. F. Seguí - San Martín y Paso de los Patos. 
 Regreso por similar recorrido 
 "

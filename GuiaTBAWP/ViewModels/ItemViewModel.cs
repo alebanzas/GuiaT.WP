@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Device.Location;
 
 namespace GuiaTBAWP.ViewModels
 {
@@ -18,6 +19,23 @@ namespace GuiaTBAWP.ViewModels
                 {
                     _titulo = value;
                     NotifyPropertyChanged("Titulo");
+                }
+            }
+        }
+
+        private GeoCoordinate _punto;
+        public GeoCoordinate Punto
+        {
+            get
+            {
+                return _punto;
+            }
+            set
+            {
+                if (value != _punto)
+                {
+                    _punto = value;
+                    NotifyPropertyChanged("Punto");
                 }
             }
         }

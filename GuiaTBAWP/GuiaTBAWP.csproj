@@ -87,6 +87,9 @@
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SUBE\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
       <DependentUpon>BelgranoNorte.xaml</DependentUpon>
     </Compile>
@@ -123,7 +126,7 @@
     <Compile Include="Views\SUBE\DondeUsarSUBE.xaml.cs">
       <DependentUpon>DondeUsarSUBE.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Error.xaml.cs">
+    <Compile Include="Views\SUBE\Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\RouteCalculationError.cs" />
@@ -202,6 +205,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SUBE\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Trenes\BelgranoNorte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,7 +245,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Error.xaml">
+    <Page Include="Views\SUBE\Error.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

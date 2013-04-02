@@ -34,19 +34,22 @@ namespace GuiaTBAWP.ViewModels
         public PushpinModel DefaultPushPin = new PushpinModel
         {
             Location = DefaultLocation,
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinLocation.png", UriKind.Relative)
+            Icon = new Uri("/Resources/Icons/Pushpins/PushpinLocation.png", UriKind.Relative),
+            TypeName = "PushpinFuel",
         };
         
         public PushpinModel RecargaPushPin = new PushpinModel
         {
             Location = DefaultLocation,
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinFuel.png", UriKind.Relative)
+            Icon = new Uri("/Resources/Icons/Pushpins/PushpinFuel.png", UriKind.Relative),
+            TypeName = "PushpinShop",
         };
 
         public PushpinModel VentaPushPin = new PushpinModel
         {
             Location = DefaultLocation,
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinShop.png", UriKind.Relative)
+            Icon = new Uri("/Resources/Icons/Pushpins/PushpinShop.png", UriKind.Relative),
+            TypeName = "PushpinHouse",
         };
 
         #endregion

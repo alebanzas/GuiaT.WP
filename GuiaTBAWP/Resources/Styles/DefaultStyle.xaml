@@ -40,6 +40,23 @@
     </DataTemplate>
 
     <!-- #Styles -->
+    <Style x:Key="ListBoxStyle" TargetType="ListBoxItem">
+        <!-- Below setter disables selection, and stretches content -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Stretch" 
+                                                      Margin="{TemplateBinding Padding}" 
+                                                      x:Name="contentPresenter"                                                       
+                                                      Content="{TemplateBinding Content}" 
+                                                      ContentTemplate="{TemplateBinding ContentTemplate}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style x:Key="PushpinStyle" TargetType="m:Pushpin">
         <Setter Property="BorderBrush" Value="#FFF4F4F5" />
         <Setter Property="Template">

@@ -13,12 +13,15 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="puntos de venta y carga">
-
+        <controls:Panorama Title="puntos de venta y recarga">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/background.jpg" />
+            </controls:Panorama.Background>
+            
             <!--Panorama item one-->
             <controls:PanoramaItem Header="inicio">
                 <Grid Grid.Row="1" Margin="12,0,12,0">
@@ -26,101 +29,123 @@
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
                                 <Paragraph>
-                                    En base a tu ubicación, buscamos los 10 puntos de venta y de carga mas cercanos.
+                                    En base a tu ubicación, buscamos los 10 puntos de venta y de carga más cercanos.
                                 </Paragraph>
                                 <Paragraph></Paragraph>
                                 <Paragraph>
-                                    Utilizá el mapa para encontrarlos mas facilmente.
+                                    Utilizá el mapa para encontrarlos más fácilmente.
                                 </Paragraph>
                                 <Paragraph></Paragraph>
                             </RichTextBox>
+							<StackPanel Margin="24,0,0,0">
+								<TextBlock>Referencias:</TextBlock>
+								<StackPanel Orientation="Horizontal" Margin="12,0,0,0">
+									<Image Source="/Resources/Icons/Pushpins/PushpinFuel.png"></Image>
+									<TextBlock Margin="0,5,0,0">Recarga</TextBlock>
+								</StackPanel>
+								<StackPanel Orientation="Horizontal" Margin="12,0,0,0">
+									<Image Source="/Resources/Icons/Pushpins/PushpinShop.png"></Image>
+									<TextBlock Margin="0,5,0,0">Venta</TextBlock>
+								</StackPanel>
+							</StackPanel>
 
-                            <StackPanel Margin="24,0,0,0">
-                                <TextBlock>Referencias:</TextBlock>
-                                <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Image Source="Resources\Icons\Pushpins\PushpinFuel.png"></Image>
-                                    <TextBlock Margin="0,5,0,0">Recarga</TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Image Source="Resources\Icons\Pushpins\PushpinShop.png"></Image>
-                                    <TextBlock Margin="0,5,0,0">Venta</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
+						</StackPanel>
                     </ScrollViewer>
                 </Grid>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
-            <controls:PanoramaItem Header="carga">
-                <StackPanel Margin="0,0,0,15">
-                    <ListBox Margin="0,0,-12,0" ItemsSource="{Binding PuntosRecarga}">
-                        <ListBox.ItemTemplate>
+            <controls:PanoramaItem Header="recarga">
+                <StackPanel Margin="10,0,0,15">
+                    <TextBlock Name="RecargaLoading" TextWrapping="Wrap">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="RecargaError" TextWrapping="Wrap" Visibility="Collapsed">
+                        Ocurrió un error.
+                        <LineBreak /><LineBreak />
+                        Verifique su conexión a internet.
+                    </TextBlock>
+                    <ListBox Margin="10,0,0,0" 
+                             ItemContainerStyle="{StaticResource ListBoxStyle}" 
+                             ItemsSource="{Binding PuntosRecarga}"
+                             Height="400">
+                        <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Margin="0,0,0,17" Orientation="Horizontal">
-                                    <TextBlock Width="432" Margin="10,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                <StackPanel Margin="0,0,0,18" Orientation="Horizontal">
+                                    <TextBlock Width="432" Margin="0,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap"/>
                                 </StackPanel>
                             </DataTemplate>
-                        </ListBox.ItemTemplate>
+                        </ItemsControl.ItemTemplate>
                     </ListBox>
                 </StackPanel>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
             <controls:PanoramaItem Header="venta">
-                <StackPanel Margin="0,0,0,15">
-                    <ListBox Margin="0,0,-12,0" ItemsSource="{Binding PuntosVenta}">
-                        <ListBox.ItemTemplate>
+                <StackPanel Margin="10,0,0,15">
+                    <TextBlock Name="VentaLoading" TextWrapping="Wrap">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="VentaError" TextWrapping="Wrap" Visibility="Collapsed">
+                        Ocurrió un error.
+                        <LineBreak /><LineBreak />
+                        Verifique su conexión a internet.
+                    </TextBlock>
+                    <ListBox Margin="10,0,0,0" 
+                             ItemContainerStyle="{StaticResource ListBoxStyle}" 
+                             ItemsSource="{Binding PuntosVenta}"
+                             Height="400">
+                        <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Margin="0,0,0,17" Orientation="Horizontal">
-                                    <TextBlock Width="432" Margin="10,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                <StackPanel Margin="0,0,0,18" Orientation="Horizontal">
+                                    <TextBlock Width="432" Margin="0,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap"/>
                                 </StackPanel>
                             </DataTemplate>
-                        </ListBox.ItemTemplate>
+                        </ItemsControl.ItemTemplate>
                     </ListBox>
                 </StackPanel>
             </controls:PanoramaItem>
             
             <!--Panorama item two-->
             <controls:PanoramaItem Header="mapa">
-                <my:Map Name="Map"
-                    CredentialsProvider="{Binding CredentialsProvider}"
-                    CopyrightVisibility="Collapsed" LogoVisibility="Collapsed"
-                    ZoomLevel="{Binding Zoom, Mode=TwoWay}"
-                    Center="{Binding Center, Mode=TwoWay}" Margin="0,0,0,15">
+                <Grid Margin="24,0,0,15">
+                    <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
+                    <my:Map Name="Map"
+                        IsEnabled="False"
+                        CredentialsProvider="{Binding CredentialsProvider}"
+                        CopyrightVisibility="Collapsed" LogoVisibility="Collapsed"
+                        ZoomLevel="{Binding Zoom, Mode=TwoWay}"
+                        Center="{Binding Center, Mode=TwoWay}">
 
-                    <my:Map.Mode>
-                        <my:RoadMode />
-                    </my:Map.Mode>
+                        <my:Map.Mode>
+                            <my:RoadMode />
+                        </my:Map.Mode>
 
-                    <my:MapItemsControl ItemsSource="{Binding Pushpins}">
-                        <my:MapItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <my:Pushpin Style="{StaticResource PushpinStyle}"
-                                        MouseLeftButtonUp="Pushpin_MouseLeftButtonUp"
-                                        Location="{Binding Location}"
-                                        Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}">
-                                    <Image Source="{Binding Icon}" />
-                                </my:Pushpin>
-                            </DataTemplate>
-                        </my:MapItemsControl.ItemTemplate>
-                    </my:MapItemsControl>
-
-                    <Button x:Name="ButtonZoomIn"
-                        Style="{StaticResource ButtonZoomInStyle}"
-                        HorizontalAlignment="Left" VerticalAlignment="Top"
-                        Height="56" Width="56" Margin="8,180,0,0"
-                        Click="ButtonZoomIn_Click" />
-
-                    <Button x:Name="ButtonZoomOut"
-                        Style="{StaticResource ButtonZoomOutStyle}"
-                        HorizontalAlignment="Left" VerticalAlignment="Top"
-                        Height="56" Width="56" Margin="8,260,0,0"
-                        Click="ButtonZoomOut_Click" />
-
-                </my:Map>
+                        <my:MapItemsControl ItemsSource="{Binding Pushpins}">
+                            <my:MapItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <my:Pushpin Style="{StaticResource PushpinStyle}"
+                                            MouseLeftButtonUp="Pushpin_MouseLeftButtonUp"
+                                            Location="{Binding Location}"
+                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}">
+                                        <Image Source="{Binding Icon}" />
+                                    </my:Pushpin>
+                                </DataTemplate>
+                            </my:MapItemsControl.ItemTemplate>
+                        </my:MapItemsControl>
+                    </my:Map>
+                </Grid>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="¿Qué es SUBE?" Click="QueEsSUBE_Click"/>
+                <shell:ApplicationBarMenuItem Text="¿Donde usar SUBE?" Click="Button_Click_DondeUsarSUBE"/>
+                <shell:ApplicationBarMenuItem Text="Atención al usuario" Click="Button_Click_AtencionAlUsuario"/>
+                <shell:ApplicationBarMenuItem Text="Perdida | robo | daño" Click="Button_Click_PerdidaRoboDanio"/>
+                <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -44,7 +44,9 @@ namespace GuiaTBAWP
             InitializeComponent();
 
             // Phone-specific initialization
-            InitializePhoneApplication();            
+            InitializePhoneApplication();
+
+            ThemeManager.ToDarkTheme();
         }        
 
         // Code to execute when the application is launching (eg, from Start)

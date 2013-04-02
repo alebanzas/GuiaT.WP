@@ -30,5 +30,15 @@ namespace GuiaTBAWP
         {
             this.NavigationService.Navigate(new Uri("/Views/Trenes/Trenes.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_Bicicletas(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_Taxis(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -27,6 +27,18 @@
     <SolidColorBrush x:Key="PushpinRestaurantBrush" Color="#FF7D4199" />
     <SolidColorBrush x:Key="PushpinShopBrush" Color="#FF00B25A" />
 
+    <DataTemplate x:Key="SmallPanoramaTitle">
+        <ContentPresenter>
+            <TextBlock Text="{Binding}" FontSize="50" Margin="0,70,0,0" />
+        </ContentPresenter>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SmallHomePanoramaTitle">
+        <ContentPresenter>
+            <TextBlock Text="{Binding}" FontSize="50" Margin="0,0,0,0" />
+        </ContentPresenter>
+    </DataTemplate>
+
     <!-- #Styles -->
     <Style x:Key="PushpinStyle" TargetType="m:Pushpin">
         <Setter Property="BorderBrush" Value="#FFF4F4F5" />

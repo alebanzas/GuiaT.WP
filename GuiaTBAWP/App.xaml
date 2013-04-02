@@ -10,16 +10,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-    			<ResourceDictionary Source="Resources/Styles/DefaultStyle.xaml"/>
-    		</ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/DefaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         
-        <DataTemplate x:Key="SmallPanoramaTitle">
-            <ContentPresenter>
-                <TextBlock Text="{Binding}" FontSize="50" Margin="0,70,0,0" />
-            </ContentPresenter>
-        </DataTemplate>
-
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

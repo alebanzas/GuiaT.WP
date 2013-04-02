@@ -17,11 +17,15 @@
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="#0092D7">
         <controls:Panorama Title="Guía Transporte BA">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/background.jpg" />
+            </controls:Panorama.Background>
+            
             <!--Panorama item one-->
             <controls:PanoramaItem Header="menú" Orientation="Horizontal">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Subtes">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Subtes">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/subtes.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -29,7 +33,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Colectivos">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Colectivos">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/colectivos.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -37,7 +41,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Bicicletas">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Bicicletas">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/bicicletas.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -47,7 +51,7 @@
                         </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Trenes">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Trenes">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/trenes.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -55,7 +59,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SUBE">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SUBE">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/sube.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -63,7 +67,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        <Button Background="#0075af" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Taxis">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Taxis">
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/taxis.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">

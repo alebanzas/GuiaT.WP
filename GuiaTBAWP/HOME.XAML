@@ -5,37 +5,73 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="#0092D7">
         <controls:Panorama Title="Guía Transporte BA">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="PanoramaBackground.png" Opacity=".35"/>
-            </controls:Panorama.Background>
-            
             <!--Panorama item one-->
-            <controls:PanoramaItem Header="menú">
+            <controls:PanoramaItem Header="menú" Orientation="Horizontal">
                 <StackPanel>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SUBE">
-                        <TextBlock Text="tarjeta SUBE" />
-                    </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Colectivos">
-                        <TextBlock Text="colectivos" />
-                    </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Subtes">
-                        <TextBlock Text="red de subte" />
-                    </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Trenes">
-                        <TextBlock Text="trenes metropolitanos" />
-                    </Button>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Subtes">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/subtes.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="SUBTES" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Colectivos">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/colectivos.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="COLECTIVOS" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Bicicletas">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/bicicletas.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="BICICLETAS" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Trenes">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/trenes.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="TRENES" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SUBE">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/sube.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="SUBE" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button Background="White" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Taxis">
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/taxis.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="Gray" Margin="10,0,0,0" Text="TAXIS" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
             </controls:PanoramaItem>
 

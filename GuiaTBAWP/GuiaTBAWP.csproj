@@ -297,6 +297,12 @@
       <SubType>Designer</SubType>
     </None>
     <Resource Include="PanoramaBackground.jpg" />
+    <Content Include="Images\Home\bicicletas.png" />
+    <Content Include="Images\Home\colectivos.png" />
+    <Content Include="Images\Home\sube.png" />
+    <Content Include="Images\Home\subtes.png" />
+    <Content Include="Images\Home\taxis.png" />
+    <Content Include="Images\Home\trenes.png" />
     <Content Include="Images\Subtes\accesibilidad.png" />
     <Content Include="Images\Subtes\lineaA.png" />
     <Content Include="Images\Subtes\lineaB.png" />

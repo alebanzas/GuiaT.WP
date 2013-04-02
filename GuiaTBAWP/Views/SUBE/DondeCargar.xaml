@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="GuiaTBAWP.Views.SUBE.PuntosDeVentaYCarga"
+    x:Class="GuiaTBAWP.Views.SUBE.DondeCargar"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -17,44 +17,11 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="puntos de venta y recarga">
+        <controls:Panorama Title="¿dónde cargar?">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
-            
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="inicio">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
-                    <ScrollViewer>
-                        <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
-                                <Paragraph>
-                                    En base a tu ubicación, buscamos los 10 puntos de venta y de carga más cercanos.
-                                </Paragraph>
-                                <Paragraph></Paragraph>
-                                <Paragraph>
-                                    Utilizá el mapa para encontrarlos más fácilmente.
-                                </Paragraph>
-                                <Paragraph></Paragraph>
-                            </RichTextBox>
-							<StackPanel Margin="24,0,0,0">
-								<TextBlock>Referencias:</TextBlock>
-								<StackPanel Orientation="Horizontal" Margin="12,0,0,0">
-									<Image Source="/Resources/Icons/Pushpins/PushpinFuel.png"></Image>
-									<TextBlock Margin="0,5,0,0">Recarga</TextBlock>
-								</StackPanel>
-								<StackPanel Orientation="Horizontal" Margin="12,0,0,0">
-									<Image Source="/Resources/Icons/Pushpins/PushpinShop.png"></Image>
-									<TextBlock Margin="0,5,0,0">Venta</TextBlock>
-								</StackPanel>
-							</StackPanel>
 
-						</StackPanel>
-                    </ScrollViewer>
-                </Grid>
-            </controls:PanoramaItem>
-
-            <!--Panorama item two-->
             <controls:PanoramaItem Header="recarga">
                 <StackPanel Margin="10,0,0,15">
                     <TextBlock Name="RecargaLoading" TextWrapping="Wrap">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
@@ -78,31 +45,6 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <!--Panorama item two-->
-            <controls:PanoramaItem Header="venta">
-                <StackPanel Margin="10,0,0,15">
-                    <TextBlock Name="VentaLoading" TextWrapping="Wrap">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
-                    <TextBlock Name="VentaError" TextWrapping="Wrap" Visibility="Collapsed">
-                        Ocurrió un error.
-                        <LineBreak /><LineBreak />
-                        Verifique su conexión a internet.
-                    </TextBlock>
-                    <ListBox Margin="10,0,0,0" 
-                             ItemContainerStyle="{StaticResource ListBoxStyle}" 
-                             ItemsSource="{Binding PuntosVenta}"
-                             Height="400">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="0,0,0,18" Orientation="Horizontal">
-                                    <TextBlock Width="432" Margin="0,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </controls:PanoramaItem>
-            
-            <!--Panorama item two-->
             <controls:PanoramaItem Header="mapa">
                 <Grid Margin="24,0,0,15">
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
@@ -123,8 +65,12 @@
                                     <my:Pushpin Style="{StaticResource PushpinStyle}"
                                             MouseLeftButtonUp="Pushpin_MouseLeftButtonUp"
                                             Location="{Binding Location}"
-                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}">
-                                        <Image Source="{Binding Icon}" />
+                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}"
+                                            Name="prueba">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Title}"></TextBlock>
+                                            <Image Source="{Binding Icon}" />
+                                        </StackPanel>
                                     </my:Pushpin>
                                 </DataTemplate>
                             </my:MapItemsControl.ItemTemplate>
@@ -139,10 +85,6 @@
         <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="¿Qué es SUBE?" Click="QueEsSUBE_Click"/>
-                <shell:ApplicationBarMenuItem Text="¿Donde usar SUBE?" Click="Button_Click_DondeUsarSUBE"/>
-                <shell:ApplicationBarMenuItem Text="Atención al usuario" Click="Button_Click_AtencionAlUsuario"/>
-                <shell:ApplicationBarMenuItem Text="Perdida | robo | daño" Click="Button_Click_PerdidaRoboDanio"/>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>

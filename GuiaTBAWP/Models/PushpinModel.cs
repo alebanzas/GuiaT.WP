@@ -23,13 +23,19 @@ namespace GuiaTBAWP.Models
         /// </summary>
         public string TypeName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the pushpin title.
+        /// </summary>
+        public string Title { get; set; }
+
         public PushpinModel Clone(GeoCoordinate location)
         {
             return new PushpinModel
             {
                 Location = location,
                 TypeName = TypeName,
-                Icon = Icon
+                Icon = Icon,
+                Title = Title,
             };
         }
     }

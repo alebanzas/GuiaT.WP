@@ -18,7 +18,7 @@ using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.SUBE
 {
-    public partial class PuntosDeVentaYCarga : PhoneApplicationPage
+    public partial class DondeComprar : PhoneApplicationPage
     {
         private static MainViewModel _viewModel;
         /// <summary>
@@ -41,22 +41,10 @@ namespace GuiaTBAWP.Views.SUBE
 
         public static void RefreshAllPushpins()
         {
-            foreach (var recarga in ViewModel.PuntosRecarga)
-            {
-                CreateNewRecargaPushpin(recarga.Punto);
-            }
             foreach (var venta in ViewModel.PuntosVenta)
             {
-                CreateNewVentaPushpin(venta.Punto);
+                CreateNewVentaPushpin(venta);
             }
-        }
-
-        private void CreateNewPushpin(Point point)
-        {
-            // Translate the map viewport touch point to a geo coordinate.
-            GeoCoordinate location;
-            Map.TryViewportPointToLocation(point, out location);
-            CreateNewPushpin(location);
         }
 
         public static void CreateNewPushpin(GeoCoordinate location)
@@ -65,18 +53,13 @@ namespace GuiaTBAWP.Views.SUBE
             CreateNewPushpin(pushpin);
         }
 
-        public static void CreateNewVentaPushpin(GeoCoordinate location)
+        public static void CreateNewVentaPushpin(ItemViewModel itemViewModel)
         {
-            var pushpin = ViewModel.VentaPushPin.Clone(location);
+            var pushpin = ViewModel.VentaPushPin.Clone(itemViewModel.Punto);
+            pushpin.Title = itemViewModel.Titulo;
             CreateNewPushpin(pushpin);
         }
-
-        public static void CreateNewRecargaPushpin(GeoCoordinate location)
-        {
-            var pushpin = ViewModel.RecargaPushPin.Clone(location);
-            CreateNewPushpin(pushpin);
-        }
-
+        
         private static void CreateNewPushpin(PushpinModel pushpin)
         {
             ViewModel.Pushpins.Add(pushpin);
@@ -98,7 +81,7 @@ namespace GuiaTBAWP.Views.SUBE
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
 
-        public PuntosDeVentaYCarga()
+        public DondeComprar()
         {
             InitializeComponent();
 
@@ -278,40 +261,13 @@ namespace GuiaTBAWP.Views.SUBE
         private void GetMasCercanos()
         {
             SetProgressBar("Buscando más cercano...");
-
-            var httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
-            httpReq.Method = "POST";
-            httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
-            _pendingRequests++;
-
+            
             var httpReq2 = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/ventanear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             httpReq2.Method = "POST";
             httpReq2.BeginGetResponse(HTTPWebRequestCallBackVenta, httpReq2);
             _pendingRequests++;
         }
-
-        private void HTTPWebRequestCallBack(IAsyncResult result)
-        {
-            try
-            {
-                var httpRequest = (HttpWebRequest)result.AsyncState;
-                var response = httpRequest.EndGetResponse(result);
-                var stream = response.GetResponseStream();
-
-                var serializer = new DataContractJsonSerializer(typeof(List<SUBEPuntoModel>));
-                var o = (List<SUBEPuntoModel>)serializer.ReadObject(stream);
-
-                Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
-            }
-            catch (Exception ex)
-            {
-                RecargaLoading.Visibility = Visibility.Collapsed;
-                RecargaError.Visibility = Visibility.Visible;
-                FinishRequest();
-                //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
-            }
-        }
-
+        
         private void HTTPWebRequestCallBackVenta(IAsyncResult result)
         {
             try
@@ -333,31 +289,7 @@ namespace GuiaTBAWP.Views.SUBE
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
             }
         }
-
         delegate void DelegateUpdateWebBrowser(List<SUBEPuntoModel> local);
-        private void UpdateWebBrowser(List<SUBEPuntoModel> l)
-        {
-            var model = new Collection<ItemViewModel>();
-            foreach (var puntoModel in l)
-            {
-                var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
-                model.Add(new ItemViewModel
-                {
-                    Titulo = puntoModel.Nombre,
-                    Punto = punto,
-                });
-                CreateNewRecargaPushpin(punto);
-            }
-
-            if (!ViewModel.IsPuntosRecargaLoaded)
-            {
-                ViewModel.LoadPuntosRecarga(model);
-            }
-
-            RecargaLoading.Visibility = Visibility.Collapsed;
-            RecargaError.Visibility = Visibility.Collapsed;
-            FinishRequest();
-        }
 
         private void FinishRequest()
         {
@@ -376,12 +308,12 @@ namespace GuiaTBAWP.Views.SUBE
             foreach (var puntoModel in l)
             {
                 var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
-                model.Add(new ItemViewModel
-                            {
-                                Titulo = puntoModel.Nombre,
-                                Punto = punto,
-                            });
-                CreateNewVentaPushpin(punto);
+                var itemViewModel = new ItemViewModel
+                    {
+                        Titulo = puntoModel.Nombre, Punto = punto,
+                    };
+                model.Add(itemViewModel);
+                CreateNewVentaPushpin(itemViewModel);
             }
 
             if (!ViewModel.IsPuntosVentaLoaded)
@@ -419,33 +351,6 @@ namespace GuiaTBAWP.Views.SUBE
             NavigationService.Navigate(new Uri("/Views/SUBE/Opciones.xaml", UriKind.Relative));
         }
 
-        private void Button_Click_PerdidaRoboDanio(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/SUBE/PerdidaRoboDanio.xaml", UriKind.Relative));
-        }
-
-        private void Button_Click_DondeUsarSUBE(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/SUBE/DondeUsarSUBE.xaml", UriKind.Relative));
-        }
-
-/*
-        private void Button_Click_PreguntasFrecuentes(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/SUBE/PreguntasFrecuentes.xaml", UriKind.Relative));
-        }
-*/
-
-        private void Button_Click_AtencionAlUsuario(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/SUBE/AtencionAlUsuario.xaml", UriKind.Relative));
-        }
-
-        private void QueEsSUBE_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/SUBE/QueEsSUBE.xaml", UriKind.Relative));
-        }
-
         private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/SUBE/Mapa.xaml", UriKind.Relative));
@@ -455,13 +360,5 @@ namespace GuiaTBAWP.Views.SUBE
         {
             ResetLocationService();
         }
-    }
-
-    public class SUBEPuntoModel
-    {
-        public virtual string Nombre { get; set; }
-
-        public double Latitud { get; set; }
-        public double Longitud { get; set; }
     }
 }

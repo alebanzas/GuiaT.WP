@@ -22,7 +22,7 @@
             </controls:Panorama.Background>
             
             <!--Panorama item one-->
-            <controls:PanoramaItem Header="menú" Orientation="Horizontal">
+            <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Subtes">
@@ -80,7 +80,7 @@
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
-            <controls:PanoramaItem Header="¿qué es?">
+            <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
@@ -114,7 +114,7 @@
             </controls:PanoramaItem>
 
             <!--Panorama item three-->
-            <controls:PanoramaItem Header="acerca de...">
+            <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
 						Desarrollado por BTB Solutions

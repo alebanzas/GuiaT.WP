@@ -104,6 +104,8 @@ namespace GuiaTBAWP.Views.SUBE
         {
             InitializeComponent();
 
+            ResetUI();
+
             if (!IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
                 IsolatedStorageSettings.ApplicationSettings["localizacion"] = true;
             InitializeGPS();
@@ -341,7 +343,13 @@ namespace GuiaTBAWP.Views.SUBE
         {
             _pendingRequests--;
             if (_pendingRequests != 0) return;
+
             StopLocationService();
+            ResetUI();
+        }
+
+        private void ResetUI()
+        {
             SetProgressBar(null);
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)

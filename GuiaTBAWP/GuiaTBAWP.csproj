@@ -84,6 +84,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
+    <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
+      <DependentUpon>Bicicletas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
@@ -96,7 +99,10 @@
     <Compile Include="Views\SUBE\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SUBE\SUBEPuntoModel.cs" />
+    <Compile Include="Models\SUBEPuntoModel.cs" />
+    <Compile Include="Views\Taxis\Taxis.xaml.cs">
+      <DependentUpon>Taxis.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
       <DependentUpon>BelgranoNorte.xaml</DependentUpon>
     </Compile>
@@ -208,6 +214,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Views\Bicicletas\Bicicletas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SUBE\AtencionAlUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -223,6 +233,10 @@
     <Page Include="Views\SUBE\Opciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\Taxis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Trenes\BelgranoNorte.xaml">
       <SubType>Designer</SubType>

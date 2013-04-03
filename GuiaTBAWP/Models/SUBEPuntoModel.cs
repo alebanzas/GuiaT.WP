@@ -1,4 +1,4 @@
-﻿namespace GuiaTBAWP.Views.SUBE
+﻿namespace GuiaTBAWP.Models
 {
     public class SUBEPuntoModel
     {

@@ -33,12 +33,12 @@ namespace GuiaTBAWP
 
         private void Button_Click_Bicicletas(object sender, RoutedEventArgs e)
         {
-            
+            this.NavigationService.Navigate(new Uri("/Views/Bicicletas/Bicicletas.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Taxis(object sender, RoutedEventArgs e)
         {
-            
+            this.NavigationService.Navigate(new Uri("/Views/Taxis/Taxis.xaml", UriKind.Relative));
         }
     }
 }

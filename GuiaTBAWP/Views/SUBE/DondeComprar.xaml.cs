@@ -85,6 +85,8 @@ namespace GuiaTBAWP.Views.SUBE
         {
             InitializeComponent();
 
+            ResetUI();
+
             if (!IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
                 IsolatedStorageSettings.ApplicationSettings["localizacion"] = true;
             InitializeGPS();
@@ -164,8 +166,8 @@ namespace GuiaTBAWP.Views.SUBE
                         MessageBox.Show("El servicio de localización se encuentra sin funcionamiento.");
                         //this.ApplicationTitle.Text = "Estado: Servicio de localización sin funcionamiento";
                     }
-                    Ubicacion.Stop();
-                    Ubicacion.Dispose();
+                    StopLocationService();
+                    ResetUI();
                     break;
 
                 case GeoPositionStatus.Initializing:
@@ -298,7 +300,13 @@ namespace GuiaTBAWP.Views.SUBE
         {
             _pendingRequests--;
             if (_pendingRequests != 0) return;
+            
             StopLocationService();
+            ResetUI();
+        }
+
+        private void ResetUI()
+        {
             SetProgressBar(null);
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)

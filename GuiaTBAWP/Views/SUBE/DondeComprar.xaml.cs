@@ -108,6 +108,9 @@ namespace GuiaTBAWP.Views.SUBE
                     _progress.IsVisible = true;
                     _progress.IsIndeterminate = true;
 
+                    if (ViewModel.IsPuntosVentaLoaded) return;
+
+                    VentaLoading.Visibility = Visibility.Visible;
                     StartLocationService();
                 };
         }

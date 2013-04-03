@@ -93,6 +93,9 @@
     <Compile Include="Views\SUBE\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SUBE\Opciones.xaml.cs">
+      <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SUBE\SUBEPuntoModel.cs" />
     <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
       <DependentUpon>BelgranoNorte.xaml</DependentUpon>
@@ -214,6 +217,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SUBE\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SUBE\Opciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -347,9 +354,13 @@
     <Content Include="Images\SUBE\logo-transportepublico.png" />
     <Content Include="PanoramaBackground.png" />
     <Content Include="PanoramaBackgroundSUBE.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\Mode.png" />
     <Content Include="Resources\Icons\ApplicationBar\Directions.png" />
     <Content Include="Resources\Icons\ApplicationBar\Location.png" />
+    <Content Include="Resources\Icons\ApplicationBar\new.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\Route.png" />
     <None Include="Service References\Bing.Geocode\Arrays.xsd">
       <SubType>Designer</SubType>

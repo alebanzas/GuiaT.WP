@@ -127,6 +127,9 @@ namespace GuiaTBAWP.Views.SUBE
                     _progress.IsVisible = true;
                     _progress.IsIndeterminate = true;
 
+                    if (ViewModel.IsPuntosRecargaLoaded) return;
+
+                    RecargaLoading.Visibility = Visibility.Visible;
                     StartLocationService();
                 };
         }

@@ -24,13 +24,14 @@
             
             <controls:PanoramaItem Header="venta">
                 <StackPanel Margin="10,0,0,15">
-                    <TextBlock Name="VentaLoading" TextWrapping="Wrap">Buscando los 10 puntos mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="VentaLoading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 puntos mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
                     <TextBlock Name="VentaError" TextWrapping="Wrap" Visibility="Collapsed">
                         Ocurrió un error.
                         <LineBreak /><LineBreak />
                         Verifique su conexión a internet.
                     </TextBlock>
                     <ListBox Margin="10,0,0,0" 
+                             x:Name="Lista"
                              ItemContainerStyle="{StaticResource ListBoxStyle}" 
                              ItemsSource="{Binding PuntosVenta}"
                              Height="400">

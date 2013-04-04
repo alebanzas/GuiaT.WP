@@ -9,6 +9,7 @@ namespace GuiaTBAWP.Models
         private BicicletaEstacionDC(string connectionString)
             : base(connectionString)
         {
+            
         }
 
         static BicicletaEstacionDC dataContext = null;

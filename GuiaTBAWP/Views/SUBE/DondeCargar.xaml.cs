@@ -97,8 +97,6 @@ namespace GuiaTBAWP.Views.SUBE
 
             ResetUI();
 
-            if (!IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
-                IsolatedStorageSettings.ApplicationSettings["localizacion"] = true;
             InitializeGPS();
             SetLocationService();
 

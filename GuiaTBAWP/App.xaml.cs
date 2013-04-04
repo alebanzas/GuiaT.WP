@@ -1,4 +1,5 @@
 ﻿using System.Device.Location;
+using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
 
@@ -52,6 +53,9 @@ namespace GuiaTBAWP
             InitializePhoneApplication();
 
             ThemeManager.ToDarkTheme();
+            
+            if (!IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
+                IsolatedStorageSettings.ApplicationSettings["localizacion"] = true;
         }        
 
         // Code to execute when the application is launching (eg, from Start)

@@ -16,24 +16,24 @@ namespace GuiaTBAWP.Views.Bicicletas
 {
     public partial class Estaciones : PhoneApplicationPage
     {
-        Pushpin PosicionActual;
-        bool zoomAjustado;
-        System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+        Pushpin _posicionActual;
+        bool _zoomAjustado;
+        readonly System.Windows.Threading.DispatcherTimer _timer = new System.Windows.Threading.DispatcherTimer();
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
 
         public Estaciones()
         {
             InitializeComponent();
-            this.Loaded += Page_Loaded;
-            this.MiMapa.ViewChangeEnd += MiMapa_ViewChangeEnd;
+            Loaded += Page_Loaded;
+            MiMapa.ViewChangeEnd += MiMapa_ViewChangeEnd;
         }
 
         void MiMapa_ViewChangeEnd(object sender, MapEventArgs e)
         {
-            if (!zoomAjustado)
-                this.MiMapa.ZoomLevel--;
-            zoomAjustado = true;
+            if (!_zoomAjustado)
+                MiMapa.ZoomLevel--;
+            _zoomAjustado = true;
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
@@ -52,15 +52,16 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void ActualizarUbicacion(GeoCoordinate location)
         {
-            MiMapa.Children.Remove(PosicionActual);
+            MiMapa.Children.Remove(_posicionActual);
 
-            if (location != null && !location.IsUnknown)
-            {
-                PosicionActual = new Pushpin();
-                PosicionActual.Location = location;
-                PosicionActual.Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"]);
-                MiMapa.Children.Add(PosicionActual);
-            }
+            if (location == null || location.IsUnknown) return;
+
+            _posicionActual = new Pushpin
+                {
+                    Location = location,
+                    Template = (ControlTemplate) (App.Current.Resources["locationPushpinTemplate"])
+                };
+            MiMapa.Children.Add(_posicionActual);
         }
 
 
@@ -73,18 +74,20 @@ namespace GuiaTBAWP.Views.Bicicletas
                         orderby l.Id
                         select l;
 
-            this.LstLugares.ItemsSource = query.ToList();
+            LstLugares.ItemsSource = query.ToList();
 
 
-            if (this.LstLugares.Items.Count > 0)
+            if (LstLugares.Items.Count > 0)
             {
-                ObservableCollection<BicicletaEstacionTable> lugares = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
-                foreach (BicicletaEstacionTable lugar in lugares)
+                var lugares = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
+                foreach (var lugar in lugares)
                 {
-                    Pushpin pushpin = new Pushpin();
-                    pushpin.Content = lugar.Nombre;
-                    pushpin.Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud);
-                    this.MiMapa.Children.Add(pushpin);
+                    var pushpin = new Pushpin
+                        {
+                            Content = lugar.Nombre,
+                            Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud)
+                        };
+                    MiMapa.Children.Add(pushpin);
                 }
             }
 
@@ -95,21 +98,22 @@ namespace GuiaTBAWP.Views.Bicicletas
                 ActualizarUbicacion(null);
 
             //Ajusto los márgenes del mapa
-            if (this.LstLugares.Items.Count > 0 && !(App.Current as App).TimerUsed)
-            {
-                timer.Interval = new TimeSpan(0, 0, 1);
-                timer.Tick += timer_Tick;
-                timer.Start();
-            }
+            if (LstLugares.Items.Count <= 0 || (App.Current as App).TimerUsed) return;
+
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Tick += timer_Tick;
+            _timer.Start();
         }
 
         private void AjustarMapa()
         {
             //Ajusto el mapa para mostrar los items
-            var x = from l in this.MiMapa.Children
-                    select (l as Pushpin).Location;
-            this.MiMapa.SetView(LocationRect.CreateLocationRect(x));
-            this.zoomAjustado = false;
+            var x = from l in MiMapa.Children
+                    let pushpin = l as Pushpin
+                    where pushpin != null
+                    select pushpin.Location;
+            MiMapa.SetView(LocationRect.CreateLocationRect(x));
+            _zoomAjustado = false;
         }
 
 
@@ -130,7 +134,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         public void Cargar()
         {
-            SetProgressBar("Buscando estaciones...");
+            SetProgressBar("Obteniendo estado...");
 
             var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/"));
             httpReq.Method = "GET";
@@ -162,13 +166,23 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
-                //si el elemento no está guardado en el isolated storage, lo guardo
-                if (!BicicletaEstacionDC.Current.Estaciones.Contains<BicicletaEstacionTable>(ll))
+                if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
+                {
+                    var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));
+                    if (estacion != null)
+                    {
+                        estacion.Cantidad = ll.Cantidad;
+                        estacion.Horario = ll.Horario;
+                    }
+                }
+                else
+                {
                     BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(ll);
+                }   
             }
             BicicletaEstacionDC.Current.SubmitChanges();
 
-            UpdatedAt.Text = string.Format("Ultima actualizacion: {0}", l.ActualizacionStr);
+            UpdatedAt.Text = string.Format("{0} {1}", l.Actualizacion.ToShortDateString(), l.Actualizacion.ToShortTimeString());
 
             MostrarLugares();
             FinishRequest();
@@ -176,23 +190,22 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void FinishRequest()
         {
-            
+            SetProgressBar(null);
         }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ListBox listBox = sender as ListBox;
+            var listBox = sender as ListBox;
 
-            if (listBox != null && listBox.SelectedIndex != -1)
-            {
-                BicicletaEstacionTable bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
+            if (listBox == null || listBox.SelectedIndex == -1) return;
 
-                Uri uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
-                NavigationService.Navigate(uri);
+            var bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
-                //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
-                listBox.SelectedIndex = -1;
-            }
+            var uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+            NavigationService.Navigate(uri);
+
+            //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
+            listBox.SelectedIndex = -1;
         }
 
         private void Opciones_Click(object sender, EventArgs e)
@@ -212,7 +225,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void timer_Tick(object sender, EventArgs e)
         {
-            timer.Stop();
+            _timer.Stop();
             (App.Current as App).TimerUsed = true;
             AjustarMapa();
         }

@@ -33,8 +33,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             MiMapa.Children.Clear();
             this.MiMapa.Children.Add(NuevoLugar);
             //this.MiImagen.Source = new BitmapImage(new Uri(bicicletaEstacion.Imagen1, UriKind.Absolute));
-            ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = !String.IsNullOrEmpty(bicicletaEstacion.Url);
-            ((ApplicationBarIconButton)ApplicationBar.Buttons[2]).IsEnabled = (ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("LugarDetalles.xaml?id={0}", bicicletaEstacion.Id))) == null);
+            //((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = !String.IsNullOrEmpty(bicicletaEstacion.Url);
+            //((ApplicationBarIconButton)ApplicationBar.Buttons[2]).IsEnabled = (ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("LugarDetalles.xaml?id={0}", bicicletaEstacion.Id))) == null);
 
          
             //Ajusto el mapa a la ubicacion del lugar
@@ -150,7 +150,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void Opciones_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Opciones.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
         private void Directions(object sender, EventArgs e)

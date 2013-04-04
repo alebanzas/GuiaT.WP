@@ -38,6 +38,9 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            _progress.IsVisible = true;
+            _progress.IsIndeterminate = true;
+
             MostrarLugares();
             Cargar();
         }

@@ -7,7 +7,6 @@ using System.Windows.Navigation;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
-using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Bicicletas

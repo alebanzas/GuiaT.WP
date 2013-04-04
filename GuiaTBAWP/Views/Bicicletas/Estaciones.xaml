@@ -28,6 +28,7 @@
                         <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                         <my:Map Name="MiMapa" IsEnabled="False" CredentialsProvider="{StaticResource CredentialsProvider}"></my:Map>
                     </Grid>
+                    <TextBlock>Ultima actualización:</TextBlock>
                     <TextBlock x:Name="UpdatedAt"></TextBlock>
                 </StackPanel>
             </controls:PanoramaItem>
@@ -36,21 +37,20 @@
                 <ListBox Name="LstLugares" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel>
-                                    <TextBlock x:Name="tNombre" Margin="8"
-                                        Width="300"
-                                        TextWrapping="Wrap"
-                                        VerticalAlignment="Top"
-                                        HorizontalAlignment="Left"
-                                        Text="{Binding Path=Nombre}"/>
-                                    <TextBlock Width="300"
-                                        TextWrapping="Wrap"
-                                        Margin="8"
-                                        VerticalAlignment="Top"
-                                        HorizontalAlignment="Left"
-                                        Text="{Binding Path=Descripcion}" />
-                                </StackPanel>
+                            <StackPanel>
+                                <TextBlock x:Name="tNombre" Margin="0,8,0,8"
+                                    Width="420"
+                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Left"
+                                    Text="{Binding Path=NombreLista}"
+                                    Style="{StaticResource PhoneTextLargeStyle}"/>
+                                <TextBlock Width="420"
+                                    TextWrapping="Wrap"
+                                    Margin="0,0,0,8"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Left"
+                                    Text="{Binding Path=Descripcion}" />
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

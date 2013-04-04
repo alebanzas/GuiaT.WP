@@ -4,10 +4,10 @@ using System.Data.Linq.Mapping;
 namespace GuiaTBAWP.Models
 {
     [Table]
-    public class BicicletaEstacionTable
+    public class BicicletaEstacionTable : IEquatable<BicicletaEstacionTable>
     {
         private Guid id;
-        [Column(IsPrimaryKey = true)]
+        [Column]
         public Guid Id
         {
             get { return id; }
@@ -15,7 +15,7 @@ namespace GuiaTBAWP.Models
         }
 
         private string nombre;
-        [Column]
+        [Column(IsPrimaryKey = true)]
         public string Nombre
         {
             get { return nombre; }
@@ -59,7 +59,11 @@ namespace GuiaTBAWP.Models
         public string Horario
         {
             get { return _horario; }
-            set { _horario = value; }
+            set
+            {
+                if(!string.IsNullOrEmpty(value))
+                    _horario = value;
+            }
         }
 
         private string url;
@@ -72,7 +76,12 @@ namespace GuiaTBAWP.Models
 
         public string Descripcion
         {
-            get { return string.Format("{0} | {1}", Horario, Cantidad); }
+            get { return string.Format("Cantidad disponible: {0}", Cantidad); }
+        }
+
+        public string NombreLista
+        {
+            get { return string.Format("ESTACIÓN {0}", nombre.ToUpperInvariant()); }
         }
 
         public BicicletaEstacionTable()
@@ -91,6 +100,10 @@ namespace GuiaTBAWP.Models
             this.Url = url;
         }
 
+        public bool Equals(BicicletaEstacionTable other)
+        {
+            return this.Nombre.Equals(other.Nombre);
+        }
     }
     
 }

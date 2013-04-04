@@ -1,4 +1,5 @@
 ﻿using System.Data.Linq;
+using System.Linq;
 
 namespace GuiaTBAWP.Models
 {
@@ -14,13 +15,20 @@ namespace GuiaTBAWP.Models
 
         static BicicletaEstacionDC dataContext = null;
 
+        public void Truncate()
+        {
+            var query = from r in Estaciones select r;
+            dataContext.Estaciones.DeleteAllOnSubmit(query);
+            dataContext.SubmitChanges();
+        }
+
         public static BicicletaEstacionDC Current
         {
             get
             {
                 if (dataContext == null)
                 {
-                    dataContext = new BicicletaEstacionDC("isostore:/BicicletaEstacionDC.sdf");
+                    dataContext = new BicicletaEstacionDC("isostore:/BicicletaEstacionTable.sdf");
 
                     if (!dataContext.DatabaseExists())
                     {

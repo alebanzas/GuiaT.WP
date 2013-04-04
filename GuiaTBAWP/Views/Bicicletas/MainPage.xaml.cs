@@ -1,14 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
+using GuiaTBAWP;
+using GuiaTBAWP.Models;
+using GuiaTBAWP.ViewModels;
+using GuiaTBAWP.Views.SUBE;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using System.Globalization;
+using Microsoft.Phone.Shell;
 
 namespace WPLugares
 {
@@ -18,11 +26,12 @@ namespace WPLugares
         bool zoomAjustado;
         System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
 
+        readonly ProgressIndicator _progress = new ProgressIndicator();
+
         public MainPage()
         {
             InitializeComponent();
             this.Loaded += Page_Loaded;
-            (App.Current as App).Ubicacion.PositionChanged += new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(Ubicacion_PositionChanged);
             this.MiMapa.ViewChangeEnd += MiMapa_ViewChangeEnd;
         }
 
@@ -36,8 +45,7 @@ namespace WPLugares
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MostrarLugares();
-            if (!(App.Current as App).DataLoaded)
-                Cargar();   
+            Cargar();
         }
 
         void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
@@ -64,7 +72,7 @@ namespace WPLugares
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
-            var query = from l in LugarDC.Current.Lugares
+            var query = from l in BicicletaEstacionDC.Current.Estaciones
                         orderby l.Id
                         select l;
 
@@ -73,8 +81,8 @@ namespace WPLugares
 
             if (this.LstLugares.Items.Count > 0)
             {
-                ObservableCollection<Lugar> lugares = new ObservableCollection<Lugar>(query.ToList());
-                foreach (Lugar lugar in lugares)
+                ObservableCollection<BicicletaEstacionTable> lugares = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
+                foreach (BicicletaEstacionTable lugar in lugares)
                 {
                     Pushpin pushpin = new Pushpin();
                     pushpin.Content = lugar.Nombre;
@@ -85,12 +93,12 @@ namespace WPLugares
 
             //Si uso localizacion, agrego mi ubicación
             if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
-                ActualizarUbicacion((App.Current as App).Ubicacion.Position.Location);
+                ActualizarUbicacion((App.Current as App).Ubicacion);
             else
                 ActualizarUbicacion(null);
 
             //Ajusto los márgenes del mapa
-            if (this.LstLugares.Items.Count > 0 && !(App.Current as App).TimerUsed)
+            if (this.LstLugares.Items.Count > 0)
             {
                 timer.Interval = new TimeSpan(0, 0, 1);
                 timer.Tick += timer_Tick;
@@ -107,32 +115,69 @@ namespace WPLugares
             this.zoomAjustado = false;
         }
 
-        public void Cargar()
+
+        private void SetProgressBar(string msj, bool showProgress = true)
         {
-            XDocument loadedData = XDocument.Load("Assets/lugares.xml");
-            var filteredData = from c in loadedData.Descendants("lugar")
-                               select new Lugar()
-                               {
-                                   Id = int.Parse(c.Element("id").Value),
-                                   Nombre = c.Element("nombre").Value,
-                                   Longitud = Convert.ToDouble(c.Element("longitud").Value, CultureInfo.InvariantCulture),
-                                   Latitud = Convert.ToDouble(c.Element("latitud").Value, CultureInfo.InvariantCulture),
-                                   Descripcion = c.Element("descripcion").Value,
-                                   Imagen1 = c.Element("imagen1").Value,
-                                   Imagen2 = c.Element("imagen2").Value,
-                                   Url = c.Element("url").Value
-                               };
-            foreach (Lugar l in filteredData)
+            if (string.IsNullOrEmpty(msj))
             {
-                //si el elemento no está guardado en el isolated storage, lo guardo
-                if (!LugarDC.Current.Lugares.Contains<Lugar>(l))
-                    LugarDC.Current.Lugares.InsertOnSubmit(l);
+                SystemTray.SetProgressIndicator(this, null);
             }
-            LugarDC.Current.SubmitChanges();
-            (App.Current as App).DataLoaded = true;
-            MostrarLugares();
+            else
+            {
+                _progress.Text = msj;
+                _progress.IsIndeterminate = showProgress;
+                SystemTray.SetIsVisible(this, true);
+                SystemTray.SetProgressIndicator(this, _progress);
+            }
         }
 
+        public void Cargar()
+        {
+            SetProgressBar("Buscando estaciones...");
+
+            var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/"));
+            httpReq.Method = "GET";
+            httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+        }
+
+        private void HTTPWebRequestCallBack(IAsyncResult result)
+        {
+            try
+            {
+                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var response = httpRequest.EndGetResponse(result);
+                var stream = response.GetResponseStream();
+
+                var serializer = new DataContractJsonSerializer(typeof(BicicletasStatusModel));
+                var o = (BicicletasStatusModel)serializer.ReadObject(stream);
+
+                Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
+            }
+            catch (Exception ex)
+            {
+                FinishRequest();
+                //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
+            }
+        }
+
+        delegate void DelegateUpdateWebBrowser(BicicletasStatusModel local);
+        private void UpdateWebBrowser(BicicletasStatusModel l)
+        {
+            foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
+            {
+                //si el elemento no está guardado en el isolated storage, lo guardo
+                if (!BicicletaEstacionDC.Current.Estaciones.Contains<BicicletaEstacionTable>(ll))
+                    BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(ll);
+            }
+            BicicletaEstacionDC.Current.SubmitChanges();
+            MostrarLugares();
+            FinishRequest();
+        }
+
+        private void FinishRequest()
+        {
+            
+        }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -140,9 +185,9 @@ namespace WPLugares
 
             if (listBox != null && listBox.SelectedIndex != -1)
             {
-                Lugar lugar = (Lugar)listBox.SelectedItem;
+                BicicletaEstacionTable bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
-                Uri uri = new Uri(String.Format("/LugarDetalles.xaml?id={0}", lugar.Id), UriKind.Relative);
+                Uri uri = new Uri(String.Format("/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
                 NavigationService.Navigate(uri);
 
                 //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo

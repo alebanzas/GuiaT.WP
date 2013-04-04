@@ -1,25 +1,25 @@
 ﻿using System.Data.Linq;
 
-namespace WPLugares
+namespace GuiaTBAWP.Models
 {
-    public class LugarDC : DataContext
+    public class BicicletaEstacionDC : DataContext
     {
-        public Table<Lugar> Lugares;
+        public Table<BicicletaEstacionTable> Estaciones;
 
-        private LugarDC(string connectionString)
+        private BicicletaEstacionDC(string connectionString)
             : base(connectionString)
         {
         }
 
-        static LugarDC dataContext = null;
+        static BicicletaEstacionDC dataContext = null;
 
-        public static LugarDC Current
+        public static BicicletaEstacionDC Current
         {
             get
             {
                 if (dataContext == null)
                 {
-                    dataContext = new LugarDC("isostore:/LugarBD.sdf");
+                    dataContext = new BicicletaEstacionDC("isostore:/BicicletaEstacionDC.sdf");
 
                     if (!dataContext.DatabaseExists())
                     {

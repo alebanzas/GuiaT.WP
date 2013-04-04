@@ -13,6 +13,7 @@
     <converters:LocationGeoCoordinateConverter x:Key="LocationGeoCoordinateConverter" />
     <converters:DistanceConverter x:Key="DistanceConverter" />
     <converters:SubteNombreImagenConverter x:Key="SubteNombreImagenConverter" />
+    <converters:PushpinVisibilityIconConverter x:Key="PushpinVisibilityIconConverter" />
     
     <!-- #Brushes -->
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#A52E2E2E" />

@@ -11,7 +11,7 @@ namespace GuiaTBAWP.ViewModels
         {
             get
             {
-                return _titulo;
+                return string.Format("{0} - {1}", Index, _titulo);
             }
             set
             {
@@ -19,6 +19,23 @@ namespace GuiaTBAWP.ViewModels
                 {
                     _titulo = value;
                     NotifyPropertyChanged("Titulo");
+                }
+            }
+        }
+
+        private int _index;
+        public int Index
+        {
+            get
+            {
+                return _index;
+            }
+            set
+            {
+                if (value != _index)
+                {
+                    _index = value;
+                    NotifyPropertyChanged("Index");
                 }
             }
         }

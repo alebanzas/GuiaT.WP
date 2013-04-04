@@ -22,37 +22,65 @@ namespace WebScraping
         {
             string result = string.Empty;
 
-            for (int i = 1; i <= 80; i++)
-            {
-                HtmlNode html = new Scraper().GetNodes(new Uri(string.Format("http://www.dolarsi.com/cotizaciones_anteriores.asp?page={0}&zona=1&dia=1&mes=1&anio=2002&dia1=24&mes1=3&anio1=2013", i.ToString())));
+            HtmlNode html = new Scraper().GetNodes(new Uri("http://www.bicicletapublica.com.ar/mapa.aspx"));
 
-                var cssSelect = html.CssSelect("table[width=400] tr");
-                var count = cssSelect.Count();
-                var script = cssSelect.Skip(2).Take(count - 3);
-
-                foreach (var htmlNode in script)
-                {
-                    var datos = htmlNode.CssSelect("td");
-
-                    var auxFecha = datos.ElementAt(0).CssSelect("div font").FirstOrDefault().InnerText.Split('/');
-                    DateTime fecha = new DateTime(int.Parse(auxFecha[2]), int.Parse(auxFecha[1]), int.Parse(auxFecha[0]));
-                    var fechasql = string.Format("{0}-{1}-{2}", auxFecha[2], auxFecha[1], auxFecha[0]);
-
-                    var auxCompra = datos.ElementAt(1).CssSelect("div").FirstOrDefault().InnerText;
-                    var compra = float.Parse(auxCompra.Replace(',','.'), NumberStyles.Any, CultureInfo.InvariantCulture);
-
-                    var auxVenta = datos.ElementAt(2).CssSelect("div").FirstOrDefault().InnerText;
-                    var venta = float.Parse(auxVenta.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture);
-
-                    //result += string.Format("{0} | {1} | {2} <br>", fecha.ToLongDateString(), compra, venta);
-                    result += string.Format("INSERT INTO [DOLAR_Historico] ([ID],[date],[valorCompra],[valorVenta],[tipoMoneda]) VALUES (NEWID(),'{0}',{1},{2},1) <br>", fechasql, compra.ToString(CultureInfo.InvariantCulture), venta.ToString(CultureInfo.InvariantCulture));
-                }
-            }
-
+            var cssSelect = html.CssSelect("script");
+            var script = cssSelect.Skip(1).FirstOrDefault().InnerText;
             
+            foreach (var posta in script.Split(new[] { "new GLatLng(" }, StringSplitOptions.RemoveEmptyEntries).Skip(2))
+            {
+                var a = posta.Split(new[] {"openInfoWindowHtml('"}, StringSplitOptions.RemoveEmptyEntries);
 
+                //-34.592308,-58.37501
+                string arg0 = a[0].Split(new[] { ")," }, StringSplitOptions.RemoveEmptyEntries)[0];
+
+                var lat = double.Parse(arg0.Split(',')[0].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
+                var lon = double.Parse(arg0.Split(',')[1].Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
+                
+                //<div style="height:100px;"><span class="style1">RETIRO
+                //<br>Cerrado. Horario de atención: Lun a Vie de 8 a 20. Sáb 9 a 15.</span>
+                //<br><span class="style2">Cant. Bicicletas disponibles: 8</span><br></div>
+                string arg1 = a[1].Split(new[] { "'," }, StringSplitOptions.RemoveEmptyEntries)[0];
+
+                var arg2 = arg1.Split(new[] {"<br>"}, StringSplitOptions.RemoveEmptyEntries);
+
+                var nombre = arg2[0].Split('>')[2].Trim();
+
+                var estado = arg2[1].Split('.')[0].Trim();
+
+                var horario = arg2[1].Split(':')[1].Split('<')[0].Trim();
+
+                var cantidad = int.Parse(arg2[2].Split(':')[1].Split('<')[0].Trim());
+                
+                var estacion = new BicicletaEstacion();
+                estacion.Latitud = lat;
+                estacion.Longitud = lon;
+                estacion.Nombre = nombre;
+                estacion.Estado = estado;
+                estacion.Horario = horario;
+                estacion.Cantidad = cantidad;
+
+
+                result += string.Format("{0} <br><br> {1} <br><br> {2} <br>", arg0, arg1, string.Empty);
+            }
+            
             Resultado = result;
         }
 
+    }
+
+    public class BicicletaEstacion
+    {
+        public double Latitud { get; set; }
+
+        public double Longitud { get; set; }
+
+        public string Nombre { get; set; }
+
+        public string Estado { get; set; }
+
+        public string Horario { get; set; }
+
+        public int Cantidad { get; set; }
     }
 }

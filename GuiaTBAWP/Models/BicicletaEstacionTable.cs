@@ -1,14 +1,14 @@
-﻿using System.Data.Linq.Mapping;
+﻿using System;
+using System.Data.Linq.Mapping;
 
-
-namespace WPLugares
+namespace GuiaTBAWP.Models
 {
     [Table]
-    public class Lugar
+    public class BicicletaEstacionTable
     {
-        private int id;
+        private Guid id;
         [Column(IsPrimaryKey = true)]
-        public int Id
+        public Guid Id
         {
             get { return id; }
             set { id = value; }
@@ -38,28 +38,28 @@ namespace WPLugares
             set { latitud = value; }
         }
 
-        private string imagen1;
+        private string _estado;
         [Column]
-        public string Imagen1
+        public string Estado
         {
-            get { return imagen1; }
-            set { imagen1 = value; }
+            get { return _estado; }
+            set { _estado = value; }
         }
 
-        private string imagen2;
+        private int _cantidad;
         [Column]
-        public string Imagen2
+        public int Cantidad
         {
-            get { return imagen2; }
-            set { imagen2 = value; }
+            get { return _cantidad; }
+            set { _cantidad = value; }
         }
 
-        private string descripcion;
+        private string _horario;
         [Column]
-        public string Descripcion
+        public string Horario
         {
-            get { return descripcion; }
-            set { descripcion = value; }
+            get { return _horario; }
+            set { _horario = value; }
         }
 
         private string url;
@@ -70,19 +70,24 @@ namespace WPLugares
             set { url = value; }
         }
 
-        public Lugar()
+        public string Descripcion
+        {
+            get { return string.Format("{0} | {1}", Horario, Cantidad); }
+        }
+
+        public BicicletaEstacionTable()
         {
         }
 
-        public Lugar(int id, string nombre, double longitud, double latitud, string imagen1, string imagen2, string descripcion, string url)
+        public BicicletaEstacionTable(Guid id, string nombre, double longitud, double latitud, string estado, int cantidad, string horario, string url)
         {
             this.Id = id; 
             this.Nombre = nombre;
             this.Longitud = longitud;
             this.Latitud = latitud;
-            this.Imagen1 = imagen1;
-            this.Imagen2 = imagen2;
-            this.Descripcion = descripcion;
+            this.Estado = estado;
+            this.Cantidad = cantidad;
+            this.Horario = horario;
             this.Url = url;
         }
 

@@ -17,52 +17,46 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="Sedes de Fútbol">
+        <controls:Panorama Title="estaciones" TitleTemplate="{StaticResource SmallPanoramaTitle}">
             <controls:Panorama.Background>
-                <ImageBrush ImageSource="PanoramaBackground.png"/>
+                <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
 
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="Mapa">
-                <Grid >
+            <controls:PanoramaItem Header="mapa">
+                <Grid>
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                     <my:Map Name="MiMapa" IsEnabled="False" CredentialsProvider="{StaticResource CredentialsProvider}"></my:Map>
                 </Grid>
             </controls:PanoramaItem>
 
-            <!--Panorama item two-->
-            <controls:PanoramaItem Header="Lista">
-                <Grid>
-                    <ListBox Name="LstLugares" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Margin="8"
-                                         VerticalAlignment="Top"
-                                         Source="{Binding Path=Imagen1}"
-                                         Width="100"
-                                         Height="100"
-                                         Stretch="Fill" />
-                                    <StackPanel>
-                                        <TextBlock x:Name="tNombre" Margin="8"
-                                           Width="300"
-                                           TextWrapping="Wrap"
-                                           VerticalAlignment="Top"
-                                           HorizontalAlignment="Left"
-                                           Text="{Binding Path=Nombre}"/>
-                                        <TextBlock Width="300"
-                                         TextWrapping="Wrap"
-                                           Margin="8"
-                                           VerticalAlignment="Top"
-                                           HorizontalAlignment="Left"
-                                           Text="{Binding Path=Descripcion}" />
+            <controls:PanoramaItem Header="lista">
+                <StackPanel>
+                    <ScrollViewer>
+                        <ListBox Name="LstLugares" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel>
+                                            <TextBlock x:Name="tNombre" Margin="8"
+                                               Width="300"
+                                               TextWrapping="Wrap"
+                                               VerticalAlignment="Top"
+                                               HorizontalAlignment="Left"
+                                               Text="{Binding Path=Nombre}"/>
+                                            <TextBlock Width="300"
+                                             TextWrapping="Wrap"
+                                               Margin="8"
+                                               VerticalAlignment="Top"
+                                               HorizontalAlignment="Left"
+                                               Text="{Binding Path=Descripcion}" />
+                                        </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-                            </DataTemplate>
-
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                    <TextBlock x:Name="UpdatedAt"></TextBlock>
+                </StackPanel>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>

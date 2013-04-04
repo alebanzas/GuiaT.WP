@@ -377,7 +377,7 @@ namespace GuiaTBAWP.Views.SUBE
         
         private void Opciones_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/SUBE/Opciones.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
         private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)

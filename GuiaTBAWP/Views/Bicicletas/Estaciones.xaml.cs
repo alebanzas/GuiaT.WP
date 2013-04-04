@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.IO.IsolatedStorage;
@@ -8,19 +7,14 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
-using System.Xml.Linq;
-using GuiaTBAWP;
 using GuiaTBAWP.Models;
-using GuiaTBAWP.ViewModels;
-using GuiaTBAWP.Views.SUBE;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
-using System.Globalization;
 using Microsoft.Phone.Shell;
 
-namespace WPLugares
+namespace GuiaTBAWP.Views.Bicicletas
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class Estaciones : PhoneApplicationPage
     {
         Pushpin PosicionActual;
         bool zoomAjustado;
@@ -28,7 +22,7 @@ namespace WPLugares
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
 
-        public MainPage()
+        public Estaciones()
         {
             InitializeComponent();
             this.Loaded += Page_Loaded;

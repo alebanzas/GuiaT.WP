@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Globalization;
 using System.IO.IsolatedStorage;
+using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
@@ -45,17 +46,13 @@ namespace GuiaTBAWP.Views.SUBE
             {
                 CreateNewRecargaPushpin(recarga);
             }
-            foreach (var venta in ViewModel.PuntosVenta)
-            {
-                CreateNewVentaPushpin(venta);
-            }
         }
 
         private void CreateNewPushpin(Point point)
         {
             // Translate the map viewport touch point to a geo coordinate.
             GeoCoordinate location;
-            Map.TryViewportPointToLocation(point, out location);
+            Mapa.TryViewportPointToLocation(point, out location);
             CreateNewPushpin(location);
         }
 
@@ -64,18 +61,12 @@ namespace GuiaTBAWP.Views.SUBE
             var pushpin = ViewModel.DefaultPushPin.Clone(location);
             CreateNewPushpin(pushpin);
         }
-
-        public static void CreateNewVentaPushpin(ItemViewModel itemViewModel)
-        {
-            var pushpin = ViewModel.VentaPushPin.Clone(itemViewModel.Punto);
-            pushpin.Title = itemViewModel.Titulo;
-            CreateNewPushpin(pushpin);
-        }
-
+        
         public static void CreateNewRecargaPushpin(ItemViewModel itemViewModel)
         {
             var pushpin = ViewModel.RecargaPushPin.Clone(itemViewModel.Punto);
             pushpin.Title = itemViewModel.Titulo;
+            pushpin.Index = itemViewModel.Index;
             CreateNewPushpin(pushpin);
         }
 
@@ -318,12 +309,15 @@ namespace GuiaTBAWP.Views.SUBE
         private void UpdateWebBrowser(List<SUBEPuntoModel> l)
         {
             var model = new Collection<ItemViewModel>();
+            var i = 0;
             foreach (var puntoModel in l)
             {
                 var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
                 var itemViewModel = new ItemViewModel
                     {
-                        Titulo = puntoModel.Nombre, Punto = punto,
+                        Titulo = puntoModel.Nombre, 
+                        Punto = punto,
+                        Index = i++,
                     };
                 model.Add(itemViewModel);
                 CreateNewRecargaPushpin(itemViewModel);
@@ -333,6 +327,11 @@ namespace GuiaTBAWP.Views.SUBE
             {
                 ViewModel.LoadPuntosRecarga(model);
             }
+
+            var x = from ll in ViewModel.Pushpins
+                    select ll.Location;
+            Mapa.SetView(LocationRect.CreateLocationRect(x));
+
 
             RecargaLoading.Visibility = Visibility.Collapsed;
             RecargaError.Visibility = Visibility.Collapsed;

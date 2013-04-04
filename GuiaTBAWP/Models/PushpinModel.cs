@@ -28,6 +28,11 @@ namespace GuiaTBAWP.Models
         /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// Gets or sets the pushpin index.
+        /// </summary>
+        public int Index { get; set; }
+
         public PushpinModel Clone(GeoCoordinate location)
         {
             return new PushpinModel
@@ -36,6 +41,7 @@ namespace GuiaTBAWP.Models
                 TypeName = TypeName,
                 Icon = Icon,
                 Title = Title,
+                Index = Index,
             };
         }
     }

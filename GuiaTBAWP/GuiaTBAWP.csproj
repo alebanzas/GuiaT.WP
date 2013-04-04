@@ -83,6 +83,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
     <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
       <DependentUpon>Bicicletas.xaml</DependentUpon>

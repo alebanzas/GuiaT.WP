@@ -65,6 +65,7 @@
       <HintPath>..\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="mscorlib.Extensions" />
     <Reference Include="Phone.Controls">
       <HintPath>..\libs\Phone.Controls.dll</HintPath>
     </Reference>
@@ -80,6 +81,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Lugar.cs" />
+    <Compile Include="Models\LugarDC.cs" />
+    <Compile Include="Views\Acerca.xaml.cs">
+      <DependentUpon>Acerca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -88,6 +94,19 @@
     <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
       <DependentUpon>Bicicletas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Bicicletas\LugarDetalles.xaml.cs">
+      <DependentUpon>LugarDetalles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\TileControl.xaml.cs">
+      <DependentUpon>TileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\TileData.cs" />
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
@@ -97,7 +116,7 @@
     <Compile Include="Views\SUBE\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SUBE\Opciones.xaml.cs">
+    <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\SUBEPuntoModel.cs" />
@@ -215,9 +234,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Resources\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acerca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Bicicletas\Bicicletas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bicicletas\LugarDetalles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\TileControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SUBE\AtencionAlUsuario.xaml">
       <SubType>Designer</SubType>
@@ -231,7 +274,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\SUBE\Opciones.xaml">
+    <Page Include="Views\Opciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -369,6 +412,16 @@
     <Content Include="Images\SUBE\logo-transportepublico.png" />
     <Content Include="PanoramaBackground.png" />
     <Content Include="PanoramaBackgroundSUBE.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.camera.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.clouds.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.pin.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.share.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.folder.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.minus.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.new.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.stop.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />

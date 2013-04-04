@@ -91,7 +91,7 @@ namespace WPLugares
 
                 List<BicicletaEstacionTable> listaLugares = query.ToList();
                 BicicletaEstacionTable bicicletaEstacion = listaLugares.FirstOrDefault();
-                Uri uri = new Uri(String.Format("/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+                Uri uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
                 NavigationService.Navigate(uri);
             }
         }
@@ -116,7 +116,7 @@ namespace WPLugares
 
         private void Opciones_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Opciones.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
     }

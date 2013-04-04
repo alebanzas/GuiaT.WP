@@ -99,8 +99,8 @@
     <Compile Include="Views\Bicicletas\LugarDetalles.xaml.cs">
       <DependentUpon>LugarDetalles.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Bicicletas\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Views\Bicicletas\Estaciones.xaml.cs">
+      <DependentUpon>Estaciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Bicicletas\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
@@ -248,7 +248,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Bicicletas\MainPage.xaml">
+    <Page Include="Views\Bicicletas\Estaciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

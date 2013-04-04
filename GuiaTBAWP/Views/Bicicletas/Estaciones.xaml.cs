@@ -92,7 +92,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                 ActualizarUbicacion(null);
 
             //Ajusto los márgenes del mapa
-            if (this.LstLugares.Items.Count > 0)
+            if (this.LstLugares.Items.Count > 0 && !(App.Current as App).TimerUsed)
             {
                 timer.Interval = new TimeSpan(0, 0, 1);
                 timer.Tick += timer_Tick;
@@ -181,7 +181,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 BicicletaEstacionTable bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
-                Uri uri = new Uri(String.Format("/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+                Uri uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
                 NavigationService.Navigate(uri);
 
                 //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
@@ -191,17 +191,17 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void Opciones_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Opciones.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
         private void Acerca_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Acerca.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
         }
 
         private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Mapa.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
         }
 
         void timer_Tick(object sender, EventArgs e)

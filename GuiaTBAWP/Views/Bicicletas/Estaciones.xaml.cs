@@ -164,6 +164,9 @@ namespace GuiaTBAWP.Views.Bicicletas
                     BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(ll);
             }
             BicicletaEstacionDC.Current.SubmitChanges();
+
+            UpdatedAt.Text = string.Format("Ultima actualizacion: {0}", l.ActualizacionStr);
+
             MostrarLugares();
             FinishRequest();
         }

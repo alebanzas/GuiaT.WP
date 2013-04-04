@@ -14,7 +14,12 @@
     shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
+        </Grid.Background>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -37,9 +42,9 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar x:Name="appBar" IsVisible="True" IsMenuEnabled="True" Mode="Default"  Opacity="1.0">
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.eye.rest.png" Text="Vista" Click="SwitchView"/>
-            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.clouds.rest.png" Text="Web" Click="Browse"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.clouds.rest.png" Text="Web" Click="Browse"/>
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.pin.rest.png" Text="Anclar" Click="Pin"/>
-            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.share.rest.png" Text="Compartir" Click="Share"/>
+            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.share.rest.png" Text="Compartir" Click="Share"/>-->
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Como llegar" Click="Directions"/>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Device.Location;
+using System.Windows;
 using System.Windows.Navigation;
 
 using Microsoft.Phone.Controls;
@@ -26,6 +27,8 @@ namespace GuiaTBAWP
                 return viewModel;
             }
         }
+
+        public GeoCoordinate Ubicacion { get; set; }
 
         /// <value>Registered ID used to access map control and Bing maps service.</value>
         internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";

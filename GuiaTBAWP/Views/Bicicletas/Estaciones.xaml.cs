@@ -147,7 +147,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 SetProgressBar(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
-                var httpReq = (HttpWebRequest) WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/"));
+                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
                 httpReq.Method = "GET";
                 httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
             }

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Models;
+using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -168,73 +169,5 @@ namespace GuiaTBAWP.Views.Subtes
         {
             LoadData();
         }
-    }
-
-    public class SubteItemViewModel
-    {
-        public string Nombre { get; set; }
-
-        public string Detalles { get; set; }
-    }
-
-    public class SubteStatusViewModel : INotifyPropertyChanged
-    {
-        private ObservableCollection<SubteItemViewModel> _lineas;
-
-        public SubteStatusViewModel()
-        {
-            Lineas = new ObservableCollection<SubteItemViewModel>();
-        }
-
-        public ObservableCollection<SubteItemViewModel> Lineas
-        {
-            get { return _lineas; }
-            private set { 
-                    _lineas = value;
-                    NotifyPropertyChanged("SampleProperty");
-                }
-        }
-
-        public void AddLinea(SubteItemViewModel linea)
-        {
-            Lineas.Add(linea);
-        }
-
-        public string Actualizacion { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-    }
-
-    public class SubteStatusModel
-    {
-        public SubteStatusModel()
-        {
-            Lineas = new List<SubteStatusItem>();
-        }
-
-        public IList<SubteStatusItem> Lineas { get; set; }
-
-        public DateTime Actualizacion { get; set; }
-
-        public string ActualizacionStr
-        {
-            get { return string.Format("{0} {1}", Actualizacion.ToLongDateString(), Actualizacion.ToLongTimeString()); }
-        }
-    }
-
-    public class SubteStatusItem
-    {
-        public string Nombre { get; set; }
-
-        public string Detalles { get; set; }
     }
 }

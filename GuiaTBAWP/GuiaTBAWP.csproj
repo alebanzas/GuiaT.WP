@@ -127,6 +127,10 @@
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\SUBEPuntoModel.cs" />
+    <Compile Include="ViewModels\SubteItemViewModel.cs" />
+    <Compile Include="Models\SubteStatusItem.cs" />
+    <Compile Include="Models\SubteStatusModel.cs" />
+    <Compile Include="ViewModels\SubteStatusViewModel.cs" />
     <Compile Include="Views\Taxis\Taxis.xaml.cs">
       <DependentUpon>Taxis.xaml</DependentUpon>
     </Compile>

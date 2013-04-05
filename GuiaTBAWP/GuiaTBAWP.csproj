@@ -96,6 +96,12 @@
     <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
       <DependentUpon>Bicicletas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Bicicletas\Inscripcion.xaml.cs">
+      <DependentUpon>Inscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\ElServicio.xaml.cs">
+      <DependentUpon>ElServicio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Bicicletas\LugarDetalles.xaml.cs">
       <DependentUpon>LugarDetalles.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <Compile Include="Views\Bicicletas\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\ElSistema.xaml.cs">
+      <DependentUpon>ElSistema.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
@@ -244,6 +253,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Bicicletas\Inscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\ElServicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Bicicletas\LugarDetalles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -253,6 +270,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Bicicletas\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\ElSistema.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

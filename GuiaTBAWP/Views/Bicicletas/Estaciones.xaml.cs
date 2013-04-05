@@ -190,7 +190,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void FinishRequest()
         {
-            SetProgressBar(null);
+            Dispatcher.BeginInvoke(() => SetProgressBar(null));
         }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)

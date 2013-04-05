@@ -25,10 +25,13 @@ namespace GuiaTBAWP.Views.Bicicletas
         private void UpdateLugar()
         {
             PageTitle.Text = bicicletaEstacion.Nombre;
-            MiDescripcion.Text = bicicletaEstacion.Horario;
             Pushpin NuevoLugar = new Pushpin();
             NuevoLugar.Content = bicicletaEstacion.Nombre;
             NuevoLugar.Location = new GeoCoordinate(bicicletaEstacion.Latitud, bicicletaEstacion.Longitud);
+            Horario.Text = bicicletaEstacion.Horario;
+            Estado.Text = bicicletaEstacion.Estado;
+            Cantidad.Text = bicicletaEstacion.Cantidad.ToString();
+            
             MiMapa.Children.Clear();
             this.MiMapa.Children.Add(NuevoLugar);
             //this.MiImagen.Source = new BitmapImage(new Uri(bicicletaEstacion.Imagen1, UriKind.Absolute));

@@ -173,6 +173,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                     {
                         estacion.Cantidad = ll.Cantidad;
                         estacion.Horario = ll.Horario;
+                        estacion.Estado = ll.Estado;
                     }
                 }
                 else

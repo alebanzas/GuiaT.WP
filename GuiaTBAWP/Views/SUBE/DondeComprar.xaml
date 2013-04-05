@@ -66,11 +66,10 @@
                                     <my:Pushpin Style="{StaticResource PushpinStyle}"
                                             MouseLeftButtonUp="Pushpin_MouseLeftButtonUp"
                                             Location="{Binding Location}"
-                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}"
-                                            Name="prueba">
-                                        <StackPanel>
-                                            <TextBlock Text="{Binding Title}"></TextBlock>
-                                            <Image Source="{Binding Icon}" />
+                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}">
+                                        <StackPanel Width="30">
+                                            <Image Visibility="{Binding Index, Converter={StaticResource PushpinVisibilityIconConverter}}" Source="{Binding Icon}" />
+                                            <TextBlock HorizontalAlignment="Center" Text="{Binding Index}"></TextBlock>
                                         </StackPanel>
                                     </my:Pushpin>
                                 </DataTemplate>

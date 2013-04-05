@@ -317,12 +317,15 @@ namespace GuiaTBAWP.Views.SUBE
         private void UpdateWebBrowserVenta(List<SUBEPuntoModel> l)
         {
             var model = new Collection<ItemViewModel>();
+            var i = 1;
             foreach (var puntoModel in l)
             {
                 var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
                 var itemViewModel = new ItemViewModel
                     {
-                        Titulo = puntoModel.Nombre, Punto = punto,
+                        Titulo = puntoModel.Nombre, 
+                        Punto = punto,
+                        Index = i++,
                     };
                 model.Add(itemViewModel);
                 CreateNewVentaPushpin(itemViewModel);

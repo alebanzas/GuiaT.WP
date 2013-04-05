@@ -211,10 +211,8 @@ namespace GuiaTBAWP.ViewModels
         public void LoadPuntosRecarga(IEnumerable<ItemViewModel> items)
         {
             this.PuntosRecarga.Clear();
-            var i = 1;
             foreach (var itemViewModel in items)
             {
-                itemViewModel.Index = ++i;
                 this.PuntosRecarga.Add(itemViewModel);
             }
             this.IsPuntosRecargaLoaded = true;
@@ -226,10 +224,8 @@ namespace GuiaTBAWP.ViewModels
         public void LoadPuntosVenta(IEnumerable<ItemViewModel> items)
         {
             this.PuntosVenta.Clear();
-            var i = 1;
             foreach (var itemViewModel in items)
             {
-                itemViewModel.Index = ++i;
                 this.PuntosVenta.Add(itemViewModel);
             }
             this.IsPuntosVentaLoaded = true;

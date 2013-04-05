@@ -15,9 +15,9 @@ namespace GuiaTBAWP.Converters
             if (int.TryParse(value.ToString(), out val))
             {
                 if(val != 0)
-                    return Visibility.Visible;
+                    return Visibility.Collapsed;
             }
-            return Visibility.Collapsed;
+            return Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

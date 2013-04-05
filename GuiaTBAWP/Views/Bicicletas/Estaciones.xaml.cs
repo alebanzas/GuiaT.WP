@@ -4,6 +4,7 @@ using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,6 +27,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             InitializeComponent();
             Loaded += Page_Loaded;
+            Unloaded += Page_UnLoaded;
             MiMapa.ViewChangeEnd += MiMapa_ViewChangeEnd;
         }
 
@@ -36,10 +38,17 @@ namespace GuiaTBAWP.Views.Bicicletas
             _zoomAjustado = true;
         }
 
+        void Page_UnLoaded(object sender, RoutedEventArgs e)
+        {
+            (App.Current as App).TimerUsed = false;
+        }
+
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             _progress.IsVisible = true;
             _progress.IsIndeterminate = true;
+
+            UpdatedAt.Text = ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas);
 
             MostrarLugares();
             Cargar();
@@ -134,11 +143,24 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         public void Cargar()
         {
-            SetProgressBar("Obteniendo estado...");
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                SetProgressBar(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
-            var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/"));
-            httpReq.Method = "GET";
-            httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+                var httpReq = (HttpWebRequest) WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/"));
+                httpReq.Method = "GET";
+                httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+            }
+            else
+            {
+                ShowErrorConnection();
+            }
+        }
+
+        private void ShowErrorConnection()
+        {
+            //Luego le aviso al usuario que no se pudo cargar nueva información.
+            Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
         }
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
@@ -183,10 +205,15 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
             BicicletaEstacionDC.Current.SubmitChanges();
 
-            UpdatedAt.Text = string.Format("{0} {1}", l.Actualizacion.ToShortDateString(), l.Actualizacion.ToShortTimeString());
+            UpdatedAt.Text = ToLocalDateTime(l.Actualizacion);
 
             MostrarLugares();
             FinishRequest();
+        }
+
+        private static string ToLocalDateTime(DateTime dt)
+        {
+            return string.Format("{0} {1}", dt.ToLocalTime().ToShortDateString(), dt.ToLocalTime().ToShortTimeString());
         }
 
         private void FinishRequest()
@@ -231,5 +258,9 @@ namespace GuiaTBAWP.Views.Bicicletas
             AjustarMapa();
         }
 
+        private void ButtonGo_Click(object sender, EventArgs e)
+        {
+            Cargar();
+        }
     }
 }

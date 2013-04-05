@@ -1,4 +1,5 @@
-﻿using System.Device.Location;
+﻿using System;
+using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
@@ -30,6 +31,17 @@ namespace GuiaTBAWP
         }
 
         public GeoCoordinate Ubicacion { get; set; }
+
+        public DateTime UltimaActualizacionBicicletas
+        {
+            get
+            {
+                if (!IsolatedStorageSettings.ApplicationSettings.Contains("UltimaActualizacionBicicletas"))
+                    IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = DateTime.UtcNow;
+                return (DateTime)IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"];
+            }
+            set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = value; }
+        }
 
         /// <value>Registered ID used to access map control and Bing maps service.</value>
         internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";

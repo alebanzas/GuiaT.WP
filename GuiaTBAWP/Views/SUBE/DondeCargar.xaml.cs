@@ -107,7 +107,7 @@ namespace GuiaTBAWP.Views.SUBE
                 Loaded += (s, e) =>
                 {
                     var ns = NavigationService;
-                    ns.Navigate(new Uri("/Error.xaml", UriKind.Relative));
+                    ns.Navigate(new Uri("/Views/SUBE/Error.xaml", UriKind.Relative));
                 };
                 return;
             }
@@ -379,6 +379,11 @@ namespace GuiaTBAWP.Views.SUBE
         private void Opciones_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
+        }
+
+        private void Acerca_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
         }
 
         private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)

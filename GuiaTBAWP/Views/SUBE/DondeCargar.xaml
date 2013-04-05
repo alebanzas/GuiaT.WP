@@ -85,6 +85,7 @@
         <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
             <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Acerca de" Click="Acerca_Click"/>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>

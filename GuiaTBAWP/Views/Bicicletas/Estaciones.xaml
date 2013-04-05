@@ -61,6 +61,7 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Acerca de" Click="Acerca_Click"/>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>

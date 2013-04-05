@@ -296,9 +296,12 @@ namespace GuiaTBAWP.Views.SUBE
             }
             catch (Exception ex)
             {
-                RecargaLoading.Visibility = Visibility.Collapsed;
-                RecargaError.Visibility = Visibility.Visible;
-                FinishRequest();
+                Dispatcher.BeginInvoke(() =>
+                    {
+                        RecargaLoading.Visibility = Visibility.Collapsed;
+                        RecargaError.Visibility = Visibility.Visible;
+                        FinishRequest();
+                    });
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
             }
         }

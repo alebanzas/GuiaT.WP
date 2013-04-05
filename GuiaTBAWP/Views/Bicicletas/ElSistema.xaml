@@ -42,7 +42,9 @@
                                 <LineBreak />
                             </Paragraph>
                             <Paragraph>
-                                Es muy fácil: te registrás, buscás una bici en la estación más cercana y empezás a disfrutar de un medio de transporte rápido, ecológico y saludable.
+                                Es muy fácil: te registrás, buscás una bici en la
+                                <Hyperlink NavigateUri="/Views/Bicicletas/Estaciones.xaml" TargetName="_blank">estación más cercana</Hyperlink> 
+                                y empezás a disfrutar de un medio de transporte rápido, ecológico y saludable.
                                 <LineBreak />
                             </Paragraph>
                             <Paragraph>

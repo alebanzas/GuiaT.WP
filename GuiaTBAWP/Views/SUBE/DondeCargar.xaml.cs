@@ -310,7 +310,7 @@ namespace GuiaTBAWP.Views.SUBE
         private void UpdateWebBrowser(List<SUBEPuntoModel> l)
         {
             var model = new Collection<ItemViewModel>();
-            var i = 0;
+            var i = 1;
             foreach (var puntoModel in l)
             {
                 var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);

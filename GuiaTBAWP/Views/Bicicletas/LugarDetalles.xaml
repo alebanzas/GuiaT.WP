@@ -32,10 +32,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="12,50,0,0">
-            <TextBlock x:Name="Horario" Style="{StaticResource PhoneTextLargeStyle}">Horario</TextBlock>
-            <TextBlock x:Name="Estado" Style="{StaticResource PhoneTextLargeStyle}">Cerrada</TextBlock>
+            <TextBlock x:Name="Horario" Style="{StaticResource PhoneTextLargeStyle}"></TextBlock>
+            <TextBlock x:Name="Estado" Style="{StaticResource PhoneTextLargeStyle}"></TextBlock>
             <StackPanel Orientation="Horizontal" Margin="0">
-                <TextBlock x:Name="Cantidad" Style="{StaticResource PhoneTextExtraLargeStyle}">999</TextBlock>
+                <TextBlock x:Name="Cantidad" Style="{StaticResource PhoneTextExtraLargeStyle}"></TextBlock>
                 <TextBlock Width="300" Margin="0,10,0,0" Style="{StaticResource PhoneTextLargeStyle}">bicicletas disponibles</TextBlock>
             </StackPanel>
         </StackPanel>

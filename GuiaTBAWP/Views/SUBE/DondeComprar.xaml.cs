@@ -57,6 +57,7 @@ namespace GuiaTBAWP.Views.SUBE
         {
             var pushpin = ViewModel.VentaPushPin.Clone(itemViewModel.Punto);
             pushpin.Title = itemViewModel.Titulo;
+            pushpin.Index = itemViewModel.Index;
             CreateNewPushpin(pushpin);
         }
         

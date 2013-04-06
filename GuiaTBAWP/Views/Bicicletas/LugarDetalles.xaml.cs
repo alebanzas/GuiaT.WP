@@ -2,6 +2,7 @@
 using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using GuiaTBAWP.Models;
@@ -20,6 +21,12 @@ namespace GuiaTBAWP.Views.Bicicletas
         public LugarDetalles()
         {
             InitializeComponent();
+            Unloaded += Page_UnLoaded;
+        }
+
+        private void Page_UnLoaded(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void UpdateLugar()

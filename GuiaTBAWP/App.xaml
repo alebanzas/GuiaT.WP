@@ -4,11 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:m="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+    xmlns:m="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    xmlns:core="clr-namespace:System;assembly=mscorlib">
 
     <!--Application Resources-->
     <Application.Resources>
         <ResourceDictionary>
+            <core:String x:Key="BingMapsKey">AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp</core:String>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/ResourceDictionary.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/DefaultStyle.xaml"/>

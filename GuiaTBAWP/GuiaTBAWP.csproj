@@ -54,6 +54,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JeffWilcox.Maps">
+      <HintPath>..\libs\JeffWilcox.Maps.dll</HintPath>
+    </Reference>
     <Reference Include="JeffWilcox.PhoneThemeManager">
       <HintPath>..\packages\PhoneThemeManager.1.3.3\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll</HintPath>
     </Reference>

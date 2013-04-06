@@ -3,7 +3,6 @@ using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
-
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GuiaTBAWP.ViewModels;
@@ -141,11 +140,20 @@ namespace GuiaTBAWP
         // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
+            //if (e.ExceptionObject is QuitException)
+            //    return;
+
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
                 //System.Diagnostics.Debugger.Break();
             }
+
+            // Running on a device / emulator without debugging
+            e.Handled = true;
+            GeneralError.Exception = e.ExceptionObject;
+            (RootVisual as Microsoft.Phone.Controls.PhoneApplicationFrame).Source = new Uri("/GeneralError.xaml", UriKind.Relative);
+
         }
 
         #region Phone application initialization

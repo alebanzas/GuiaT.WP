@@ -85,6 +85,12 @@
     <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletaEstacionDC.cs" />
+    <Compile Include="Models\TrenesRamalEstadoDC.cs" />
+    <Compile Include="Models\TrenesRamalEstadoTable.cs" />
+    <Compile Include="Models\TrenesLineaEstadoDC.cs" />
+    <Compile Include="Models\TrenesLineaEstadoTable.cs" />
+    <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
+    <Compile Include="ViewModels\TrenStatusViewModel.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
     </Compile>
@@ -181,9 +187,11 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\LineaTrenModel.cs" />
     <Compile Include="Views\Trenes\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\RamalTrenModel.cs" />
     <Compile Include="Views\Trenes\Roca.xaml.cs">
       <DependentUpon>Roca.xaml</DependentUpon>
     </Compile>
@@ -202,6 +210,7 @@
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\TrenesStatusModel.cs" />
     <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>

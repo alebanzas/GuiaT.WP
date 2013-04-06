@@ -43,6 +43,17 @@ namespace GuiaTBAWP
             set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = value; }
         }
 
+        public DateTime UltimaActualizacionTrenes
+        {
+            get
+            {
+                if (!IsolatedStorageSettings.ApplicationSettings.Contains("UltimaActualizacionTrenes"))
+                    IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"] = DateTime.UtcNow;
+                return (DateTime)IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"];
+            }
+            set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"] = value; }
+        }
+
         /// <value>Registered ID used to access map control and Bing maps service.</value>
         internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";
 

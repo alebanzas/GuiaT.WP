@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Device.Location;
-using System.IO.IsolatedStorage;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Navigation;
 using GuiaTBAWP.Models;
+using JeffWilcox.Controls;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Bicicletas
 {
     public partial class LugarDetalles : PhoneApplicationPage
     {
-        Pushpin PosicionActual;
-        BicicletaEstacionTable bicicletaEstacion;
+        BicicletaEstacionTable _bicicletaEstacion;
         
         // Constructor
         public LugarDetalles()
@@ -31,78 +29,36 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void UpdateLugar()
         {
-            PageTitle.Text = bicicletaEstacion.Nombre;
-            Pushpin NuevoLugar = new Pushpin();
-            NuevoLugar.Content = bicicletaEstacion.Nombre;
-            NuevoLugar.Location = new GeoCoordinate(bicicletaEstacion.Latitud, bicicletaEstacion.Longitud);
-            Horario.Text = bicicletaEstacion.Horario;
-            Estado.Text = bicicletaEstacion.Estado;
-            Cantidad.Text = bicicletaEstacion.Cantidad.ToString();
-            
-            MiMapa.Children.Clear();
-            this.MiMapa.Children.Add(NuevoLugar);
-            //this.MiImagen.Source = new BitmapImage(new Uri(bicicletaEstacion.Imagen1, UriKind.Absolute));
-            //((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = !String.IsNullOrEmpty(bicicletaEstacion.Url);
-            //((ApplicationBarIconButton)ApplicationBar.Buttons[2]).IsEnabled = (ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("LugarDetalles.xaml?id={0}", bicicletaEstacion.Id))) == null);
+            PageTitle.Text = _bicicletaEstacion.Nombre;
+            Horario.Text = _bicicletaEstacion.Horario;
+            Estado.Text = _bicicletaEstacion.Estado;
+            Cantidad.Text = _bicicletaEstacion.Cantidad.ToString(CultureInfo.InvariantCulture);
 
-         
-            //Ajusto el mapa a la ubicacion del lugar
-            MiMapa.SetView(NuevoLugar.Location,17);
-            MiMapa.Mode = new AerialMode();
-
-            //Si uso localizacion, agrego mi ubicación
-            if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
-                ActualizarUbicacion((App.Current as App).Ubicacion);
-            else
-                ActualizarUbicacion(null);
+            MiMapa.MapCenter = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud);
+            MiMapa.MapMode = StaticMapMode.Satellite;
+            MiMapa.ZoomLevel = 17;
         }
 
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             //Al navegar a la página, busco el lugar en base al id pasado y luego lo muestro.
-            Guid id = Guid.Parse(Uri.EscapeUriString(NavigationContext.QueryString["id"]));
-            var query = from MiLugar in BicicletaEstacionDC.Current.Estaciones
-                        where MiLugar.Id == id
-                        select MiLugar;
+            var id = Guid.Parse(Uri.EscapeUriString(NavigationContext.QueryString["id"]));
+            var query = from miLugar in BicicletaEstacionDC.Current.Estaciones
+                        where miLugar.Id == id
+                        select miLugar;
 
-            this.bicicletaEstacion = query.FirstOrDefault();
+            _bicicletaEstacion = query.FirstOrDefault();
             UpdateLugar();
 
             base.OnNavigatedTo(e);
         }
-
-        private void ActualizarUbicacion(GeoCoordinate location)
-        {
-            MiMapa.Children.Remove(PosicionActual);
-            if (location != null && !location.IsUnknown)
-            {
-                PosicionActual = new Pushpin();
-                PosicionActual.Location = location;
-                PosicionActual.Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"]);
-                MiMapa.Children.Add(PosicionActual);
-            }
-        }
-
+        
         private void SwitchView(object sender, EventArgs e)
         {
-            if (MiMapa.Mode is RoadMode)
-                MiMapa.Mode = new AerialMode();
-            else
-                MiMapa.Mode = new RoadMode();
+            MiMapa.MapMode = MiMapa.MapMode.Equals(StaticMapMode.Map) ? StaticMapMode.Satellite : StaticMapMode.Map;
         }
-
-        private void Browse(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(bicicletaEstacion.Url))
-            {
-                // Creo una nueva tarea WebBrowserTask para navegar al item  
-                WebBrowserTask webBrowserTask = new WebBrowserTask();
-                webBrowserTask.Uri = new Uri(bicicletaEstacion.Url, UriKind.Absolute);
-                webBrowserTask.Show();
-            }
-        }
-
+        
         private void Pin(object sender, EventArgs e)
         {
             /*
@@ -150,10 +106,12 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void Share(object sender, EventArgs e)
         {
-            ShareLinkTask shareLinkTask = new ShareLinkTask();
-            shareLinkTask.Title = bicicletaEstacion.Nombre;
-            shareLinkTask.Message = bicicletaEstacion.Horario;
-            shareLinkTask.LinkUri = new Uri(bicicletaEstacion.Url, UriKind.Absolute);
+            var shareLinkTask = new ShareLinkTask
+                {
+                    Title = _bicicletaEstacion.Nombre,
+                    Message = _bicicletaEstacion.Horario,
+                    LinkUri = new Uri(_bicicletaEstacion.Url, UriKind.Absolute)
+                };
             shareLinkTask.Show();
         }
 
@@ -164,8 +122,13 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void Directions(object sender, EventArgs e)
         {
-            BingMapsDirectionsTask bingMapsDirectionsTask = new BingMapsDirectionsTask();
-            bingMapsDirectionsTask.End = new LabeledMapLocation(String.Format("{0},{1}", bicicletaEstacion.Latitud, bicicletaEstacion.Longitud), new GeoCoordinate(bicicletaEstacion.Latitud, bicicletaEstacion.Longitud));
+            var bingMapsDirectionsTask = new BingMapsDirectionsTask
+                {
+                    End =
+                        new LabeledMapLocation(
+                            String.Format("{0},{1}", _bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud),
+                            new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud))
+                };
             bingMapsDirectionsTask.Show();
         }
 

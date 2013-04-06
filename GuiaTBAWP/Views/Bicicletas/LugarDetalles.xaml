@@ -12,7 +12,9 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True" 
-    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    xmlns:jwMaps="clr-namespace:JeffWilcox.Controls;assembly=JeffWilcox.Maps"
+    xmlns:geo="clr-namespace:System.Device.Location;assembly=System.Device">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
@@ -41,12 +43,11 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
-            <my:Map x:Name="MiMapa" Height="315" HorizontalAlignment="Left" Margin="9,220,0,0"  VerticalAlignment="Top" Width="441" CredentialsProvider="{StaticResource CredentialsProvider}">
-                <my:Map.CacheMode>
-                    <BitmapCache />
-                </my:Map.CacheMode>
-            </my:Map>
+        <Grid x:Name="ContentPanel" Background="WhiteSmoke" Grid.Row="2" Height="250" Width="450" Margin="9,220,0,0">
+            <TextBlock HorizontalAlignment="Left" Foreground="SlateGray">Cargando mapa</TextBlock>
+            <jwMaps:StaticMap x:Name="MiMapa" Height="250" VerticalAlignment="Top" Width="450" CacheMode="BitmapCache" />
+            
+            <!--<my:Map x:Name="MiMapa" Height="315" HorizontalAlignment="Left" Margin="9,220,0,0"  VerticalAlignment="Top" Width="441" CredentialsProvider="{StaticResource CredentialsProvider}" CacheMode="BitmapCache" />-->
         </Grid>
    </Grid>
 

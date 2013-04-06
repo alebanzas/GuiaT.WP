@@ -214,9 +214,9 @@ namespace GuiaTBAWP.Views.Trenes
 
                 foreach (var ramalTrenModel in ltm.Ramales.ConvertToTrenesRamalEstadoTable(lineaTrenModel.NickName))
                 {
-                    if (TrenesRamalEstadoDC.Current.Estaciones.Contains(ramalTrenModel))
+                    if (TrenesRamalEstadoDC.Current.Ramales.Contains(ramalTrenModel))
                     {
-                        var ramal = TrenesRamalEstadoDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ramalTrenModel));
+                        var ramal = TrenesRamalEstadoDC.Current.Ramales.FirstOrDefault(x => x.Equals(ramalTrenModel));
                         if (ramal != null)
                         {
                             ramal.Estado = ramalTrenModel.Estado;
@@ -225,7 +225,7 @@ namespace GuiaTBAWP.Views.Trenes
                     }
                     else
                     {
-                        TrenesRamalEstadoDC.Current.Estaciones.InsertOnSubmit(ramalTrenModel);
+                        TrenesRamalEstadoDC.Current.Ramales.InsertOnSubmit(ramalTrenModel);
                     }
                 }
             }

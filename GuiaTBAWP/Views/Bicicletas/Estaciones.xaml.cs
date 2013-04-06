@@ -19,7 +19,7 @@ namespace GuiaTBAWP.Views.Bicicletas
     {
         Pushpin _posicionActual;
         bool _zoomAjustado;
-        WebRequest _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
+        WebRequest _httpReq;
         readonly System.Windows.Threading.DispatcherTimer _timer = new System.Windows.Threading.DispatcherTimer();
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
@@ -42,6 +42,9 @@ namespace GuiaTBAWP.Views.Bicicletas
         void Page_UnLoaded(object sender, RoutedEventArgs e)
         {
             (App.Current as App).TimerUsed = false;
+
+            if (_httpReq != null)
+                _httpReq.Abort();
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
@@ -153,7 +156,10 @@ namespace GuiaTBAWP.Views.Bicicletas
             if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataBicicletas ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
                 return true;
 
-            _httpReq.Abort();
+            if (_httpReq != null)
+                _httpReq.Abort();
+            EndRequest();
+
             return false;
         }
 
@@ -211,7 +217,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         delegate void DelegateUpdateWebBrowser(BicicletasStatusModel local);
         private void UpdateWebBrowser(BicicletasStatusModel l)
         {
-            (App.Current as App).UltimaActualizacionTrenes = l.Actualizacion;
+            (App.Current as App).UltimaActualizacionBicicletas = l.Actualizacion;
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
@@ -233,7 +239,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             BicicletaEstacionDC.Current.SubmitChanges();
 
 
-            (App.Current as App).InitialDataTrenes = true;
+            (App.Current as App).InitialDataBicicletas = true;
             _datosLoaded = true;
 
             UpdatedAt.Text = ToLocalDateTime(l.Actualizacion);
@@ -249,7 +255,14 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void EndRequest()
         {
-            Dispatcher.BeginInvoke(() => SetProgressBar(null));
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
+                if (applicationBarIconButton != null)
+                    applicationBarIconButton.IsEnabled = true;
+
+                SystemTray.SetProgressIndicator(this, null);
+            });
         }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)

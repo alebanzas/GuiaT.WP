@@ -181,7 +181,7 @@ namespace GuiaTBAWP.Views.Trenes
             {
                 EndRequest();
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error.. " + ex.Message));
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener las cotizaciones. Verifique su conexión a internet."));
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
             }
         }
 

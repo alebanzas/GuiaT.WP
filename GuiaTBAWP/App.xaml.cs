@@ -43,6 +43,17 @@ namespace GuiaTBAWP
             set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = value; }
         }
 
+        public bool InitialDataBicicletas
+        {
+            get
+            {
+                if (!IsolatedStorageSettings.ApplicationSettings.Contains("InitialDataBicicletas"))
+                    IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"] = false;
+                return (bool)IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"];
+            }
+            set { IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"] = value; }
+        }
+
         public DateTime UltimaActualizacionTrenes
         {
             get

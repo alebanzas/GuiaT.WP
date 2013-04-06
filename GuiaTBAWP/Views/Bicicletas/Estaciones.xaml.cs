@@ -19,6 +19,7 @@ namespace GuiaTBAWP.Views.Bicicletas
     {
         Pushpin _posicionActual;
         bool _zoomAjustado;
+        WebRequest _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
         readonly System.Windows.Threading.DispatcherTimer _timer = new System.Windows.Threading.DispatcherTimer();
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
@@ -51,7 +52,9 @@ namespace GuiaTBAWP.Views.Bicicletas
             UpdatedAt.Text = ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas);
 
             MostrarLugares();
-            Cargar();
+
+            if (!_datosLoaded)
+                Cargar();
         }
 
         void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
@@ -141,15 +144,29 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
         }
 
+        private static bool _datosLoaded = false;
+        private bool CancelarRequest()
+        {
+            if (_datosLoaded)
+                return false;
+
+            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataBicicletas ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
+                return true;
+
+            _httpReq.Abort();
+            return false;
+        }
+
         public void Cargar()
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 SetProgressBar(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
-                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
-                httpReq.Method = "GET";
-                httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+                _datosLoaded = false;
+                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
+                _httpReq.Method = "GET";
+                _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }
             else
             {
@@ -176,9 +193,17 @@ namespace GuiaTBAWP.Views.Bicicletas
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
             }
+            catch (WebException e)
+            {
+                if (e.Status == WebExceptionStatus.RequestCanceled && (App.Current as App).InitialDataBicicletas)
+                {
+                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas))));
+                }
+                EndRequest();
+            }
             catch (Exception ex)
             {
-                FinishRequest();
+                EndRequest();
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
             }
         }
@@ -186,6 +211,8 @@ namespace GuiaTBAWP.Views.Bicicletas
         delegate void DelegateUpdateWebBrowser(BicicletasStatusModel local);
         private void UpdateWebBrowser(BicicletasStatusModel l)
         {
+            (App.Current as App).UltimaActualizacionTrenes = l.Actualizacion;
+
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
                 if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
@@ -205,10 +232,14 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
             BicicletaEstacionDC.Current.SubmitChanges();
 
+
+            (App.Current as App).InitialDataTrenes = true;
+            _datosLoaded = true;
+
             UpdatedAt.Text = ToLocalDateTime(l.Actualizacion);
 
             MostrarLugares();
-            FinishRequest();
+            EndRequest();
         }
 
         private static string ToLocalDateTime(DateTime dt)
@@ -216,7 +247,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             return string.Format("{0} {1}", dt.ToLocalTime().ToShortDateString(), dt.ToLocalTime().ToShortTimeString());
         }
 
-        private void FinishRequest()
+        private void EndRequest()
         {
             Dispatcher.BeginInvoke(() => SetProgressBar(null));
         }
@@ -226,6 +257,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             var listBox = sender as ListBox;
 
             if (listBox == null || listBox.SelectedIndex == -1) return;
+
+            if (CancelarRequest()) return;
 
             var bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
@@ -238,16 +271,22 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void Opciones_Click(object sender, EventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
         private void Acerca_Click(object sender, EventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
         }
 
         private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
         }
 

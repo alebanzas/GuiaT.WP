@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Linq.Mapping;
+using System.Linq;
+using GuiaTBAWP.ViewModels;
 
 namespace GuiaTBAWP.Models
 {
@@ -39,5 +42,23 @@ namespace GuiaTBAWP.Models
             return Nombre.Equals(other.Nombre);
         }
     }
-    
+
+    public static class TrenesRamalEstadoTableExtensions
+    {
+        public static IEnumerable<TrenRamalItemViewModel> ConvertToTrenesLineaEstadoTable(this IList<TrenesRamalEstadoTable> ramales)
+        {
+            return ramales.Select(ConvertToTrenRamalItemViewModel);
+        }
+
+        public static TrenRamalItemViewModel ConvertToTrenRamalItemViewModel(this TrenesRamalEstadoTable ramal)
+        {
+            return new TrenRamalItemViewModel
+            {
+                Nombre = ramal.Nombre,
+                Estado = ramal.Estado,
+                MasInfo = ramal.MasInfo,
+            };
+        }
+    }
+
 }

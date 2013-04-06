@@ -1,11 +1,13 @@
-﻿using System.Data.Linq;
+﻿using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
+using GuiaTBAWP.ViewModels;
 
 namespace GuiaTBAWP.Models
 {
     public class TrenesRamalEstadoDC : DataContext
     {
-        public Table<TrenesRamalEstadoTable> Estaciones;
+        public Table<TrenesRamalEstadoTable> Ramales;
 
         private TrenesRamalEstadoDC(string connectionString)
             : base(connectionString)
@@ -17,9 +19,14 @@ namespace GuiaTBAWP.Models
 
         public void Truncate()
         {
-            var query = from r in Estaciones select r;
-            _dataContext.Estaciones.DeleteAllOnSubmit(query);
+            var query = from r in Ramales select r;
+            _dataContext.Ramales.DeleteAllOnSubmit(query);
             _dataContext.SubmitChanges();
+        }
+
+        public List<TrenRamalItemViewModel> ByLinea(string lineaNickName)
+        {
+            return _dataContext.Ramales.Where(x => x.LineaNickName.Equals(lineaNickName)).Select(x => x.ConvertToTrenRamalItemViewModel()).ToList();
         }
 
         public static TrenesRamalEstadoDC Current

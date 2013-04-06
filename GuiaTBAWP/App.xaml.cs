@@ -87,6 +87,7 @@ namespace GuiaTBAWP
         // Constructor
         public App()
         {
+            Current.Host.Settings.EnableFrameRateCounter = true;
             // Global handler for uncaught exceptions. 
             // Note that exceptions thrown by ApplicationBarItem.Click will not get caught here.
             UnhandledException += Application_UnhandledException;

@@ -42,7 +42,10 @@ namespace GuiaTBAWP.Views.Trenes
             if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataTrenes ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
                 return true;
 
-            _httpReq.Abort();
+            if(_httpReq != null)
+                _httpReq.Abort();
+            EndRequest();
+
             return false;
         }
 

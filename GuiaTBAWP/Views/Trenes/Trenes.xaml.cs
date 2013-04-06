@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -24,47 +22,82 @@ namespace GuiaTBAWP.Views.Trenes
             // Set the data context of the listbox control to the sample data
             DataContext = ViewModel;
             Loaded += MainPage_Loaded;
+            Unloaded += MainPage_Unloaded;
 
             _progress.IsVisible = true;
             _progress.IsIndeterminate = true;
         }
 
+        private void MainPage_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if(_httpReq != null)
+                _httpReq.Abort();
+        }
+
+        private bool CancelarRequest()
+        {
+            if (_datosLoaded)
+                return false;
+
+            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataTrenes ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
+                return true;
+
+            _httpReq.Abort();
+            return false;
+        }
+
         private void Button_Click_BelgranoNorte(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+            
             NavigationService.Navigate(new Uri("/Views/Trenes/BelgranoNorte.xaml", UriKind.Relative));
         }
 
         private void Button_Click_BelgranoSur(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/BelgranoSur.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Mitre(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/Mitre.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Roca(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/Roca.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SanMartin(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/SanMartin.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Sarmiento(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/Sarmiento.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Urquiza(object sender, RoutedEventArgs e)
         {
+            if (CancelarRequest()) return;
+
             NavigationService.Navigate(new Uri("/Views/Trenes/Urquiza.xaml", UriKind.Relative));
         }
 
         private static SubteStatusViewModel _viewModel = new SubteStatusViewModel();
+
+        private static bool _datosLoaded = false;
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.
@@ -85,12 +118,14 @@ namespace GuiaTBAWP.Views.Trenes
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            LoadData();
+            if (!_datosLoaded)
+                LoadData();
         }
 
 
         #region DataInit
 
+        private WebRequest _httpReq;
 
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
@@ -99,7 +134,7 @@ namespace GuiaTBAWP.Views.Trenes
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                _progress.Text = "Obteniendo estado del servicio...";
+                _progress.Text = string.Format("{0} estado del servicio...", !(App.Current as App).InitialDataTrenes ? "Obteniendo" : "Actualizando");
                 SystemTray.SetIsVisible(this, true);
                 SystemTray.SetProgressIndicator(this, _progress);
 
@@ -110,9 +145,10 @@ namespace GuiaTBAWP.Views.Trenes
                         applicationBarIconButton.IsEnabled = false;
                 });
 
-                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=1"));
-                httpReq.Method = "GET";
-                httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+                _datosLoaded = false;
+                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=1"));
+                _httpReq.Method = "GET";
+                _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }
             else
             {
@@ -133,7 +169,15 @@ namespace GuiaTBAWP.Views.Trenes
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateStatus), o);
             }
-            catch (Exception)
+            catch (WebException e)
+            {
+                if (e.Status == WebExceptionStatus.RequestCanceled && (App.Current as App).InitialDataTrenes)
+                {
+                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime((App.Current as App).UltimaActualizacionTrenes))));    
+                }
+                EndRequest();
+            }
+            catch (Exception ex)
             {
                 EndRequest();
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error.. " + ex.Message));
@@ -141,10 +185,15 @@ namespace GuiaTBAWP.Views.Trenes
             }
         }
 
+        private static string ToLocalDateTime(DateTime dt)
+        {
+            return string.Format("{0} {1}", dt.ToLocalTime().ToShortDateString(), dt.ToLocalTime().ToShortTimeString());
+        }
+
         delegate void DelegateUpdateWebBrowser(TrenesStatusModel local);
         private void UpdateStatus(TrenesStatusModel model)
         {
-            (App.Current as App).UltimaActualizacionBicicletas = model.Actualizacion;
+            (App.Current as App).UltimaActualizacionTrenes = model.Actualizacion;
 
             foreach (var ltm in model.Lineas)
             {
@@ -183,6 +232,9 @@ namespace GuiaTBAWP.Views.Trenes
 
             TrenesLineaEstadoDC.Current.SubmitChanges();
             TrenesRamalEstadoDC.Current.SubmitChanges();
+
+            (App.Current as App).InitialDataTrenes = true;
+            _datosLoaded = true;
 
             EndRequest();
         }

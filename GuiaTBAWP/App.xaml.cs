@@ -133,15 +133,21 @@ namespace GuiaTBAWP
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // A navigation has failed; break into the debugger
-                System.Diagnostics.Debugger.Break();
+                //System.Diagnostics.Debugger.Break();
             }
+
+            GeneralError.Exception = e.Exception;
+            ((PhoneApplicationFrame)RootVisual).Source = new Uri("/GeneralError.xaml", UriKind.Relative);
+
+            e.Handled = true;
         }
 
         // Code to execute on Unhandled Exceptions
+        // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
-            //if (e.ExceptionObject is QuitException)
-            //    return;
+            if (e.ExceptionObject is QuitException)
+                return;
 
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -149,11 +155,18 @@ namespace GuiaTBAWP
                 //System.Diagnostics.Debugger.Break();
             }
 
-            // Running on a device / emulator without debugging
-            e.Handled = true;
+            //MessageBox.Show(e.ExceptionObject.ToString(), "Unexpected error", MessageBoxButton.OK);
             GeneralError.Exception = e.ExceptionObject;
-            (RootVisual as Microsoft.Phone.Controls.PhoneApplicationFrame).Source = new Uri("/GeneralError.xaml", UriKind.Relative);
+            ((PhoneApplicationFrame)RootVisual).Source = new Uri("/GeneralError.xaml", UriKind.Relative);
 
+            e.Handled = true;
+        }
+
+        private class QuitException : Exception { }
+
+        public static void Quit()
+        {
+            throw new QuitException();
         }
 
         #region Phone application initialization

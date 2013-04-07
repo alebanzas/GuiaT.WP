@@ -21,6 +21,25 @@
             <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
         </Grid.Background>
 
+        <controls:PanoramaItem Header="estado">
+            <StackPanel>
+                <Grid>
+                    <ListBox Height="520" ItemsSource="{Binding Ramales}" Margin="0,0,0,10" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,20" Width="432">
+                                    <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                    <TextBlock Text="{Binding Estado}" Margin="20,5,5,5" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                                    <TextBlock Text="{Binding MasInfo}" Margin="20,5,5,5" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+                <TextBlock Text="{Binding Actualizacion, Converter={StaticResource DateTimeToLocalConverter}}" />
+            </StackPanel>
+        </controls:PanoramaItem>
+
         <controls:Panorama Title="trenes" TitleTemplate="{StaticResource SmallPanoramaTitle}">
             <controls:PanoramaItem Orientation="Horizontal" Width="850" Header="roca">
                 <StackPanel>

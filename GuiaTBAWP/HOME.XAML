@@ -85,28 +85,36 @@
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
                             <Paragraph>
-                                Guía Trasporte BA te ayuda a moverte por el area metropolitana de Buenos Aires (CABA y GBA)
+                                Guía Trasporte BA te ayuda a moverte por el Area Metropolitana de Buenos Aires (AMBA = CABA + GBA)
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                Encuentra informacion sobre los principales medios de transporte:
+                                Encuentra información sobre los principales medios de transporte:
                             </Paragraph>
                             <Paragraph>
                             </Paragraph>
                             <Paragraph>
-                                •Colectivo: info lineas y recorridos.
-                            </Paragraph>
-                            <Paragraph></Paragraph>
-                            <Paragraph>
-                                •Subte: mapa de la red, horarios, lineas, estado del servicio, precios.
+                                •Subtes: lineas y estaciones, horarios, precios, mapa de la red, estado del servicio.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Trenes: recorridos y ramales.
+                                •Trenes: estado de servicio, y mapa de recorridos y ramales.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Donde comprar y cargar tu tarjeta SUBE.
+                                •Colectivos: información de lineas y recorridos de AMBA.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                •SUBE: información del servicio, donde comprar y cargar tu tarjeta.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                •Bicicletas: información del sistema y servicio, como inscribirte, ubicación e información de disponibilidad en estaciones.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                •Taxis: información del servicio, precios, donde reclamar.
                             </Paragraph>
                         </RichTextBox>
                     </StackPanel>
@@ -117,7 +125,7 @@
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
-						Desarrollado por BTB Solutions
+						Versión 1.3 - Desarrollado por BTB Solutions
                         <LineBreak /><LineBreak />
                         Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
                         <LineBreak /><LineBreak />
@@ -126,7 +134,7 @@
                         <LineBreak /><LineBreak /><LineBreak /><LineBreak />
                         Notas de versión
                         <LineBreak /><LineBreak />
-                        1.4 (próximamente): Frecuencias y horarios de trenes.
+                        1.4 (próximamente): Frecuencias y horarios del servicio de trenes.
                         <LineBreak /><LineBreak />
                         1.3 (12-04-2013): Mejoras de presentación. Sección taxis y bicicletas. Estado de servicio de trenes en tiempo real. Mejora en puntos de venta y carga de SUBE.
                         <LineBreak /><LineBreak />

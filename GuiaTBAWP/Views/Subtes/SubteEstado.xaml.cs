@@ -159,6 +159,7 @@ namespace GuiaTBAWP.Views.Subtes
         private void ShowErrorConnection()
         {
             //Luego le aviso al usuario que no se pudo cargar nueva información.
+            ViewModel.Lineas.Clear();
             ConnectionError.Visibility = Visibility.Visible;
             Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
         }
@@ -167,6 +168,7 @@ namespace GuiaTBAWP.Views.Subtes
 
         private void ButtonGo_Click(object sender, EventArgs e)
         {
+            ViewModel.Lineas.Clear();
             LoadData();
         }
     }

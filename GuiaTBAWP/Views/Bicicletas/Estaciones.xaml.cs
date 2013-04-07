@@ -187,8 +187,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
             catch (Exception ex)
             {
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Se produjo un error inesperado. Error:" + ex.Message));
                 EndRequest();
-                //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
             }
         }
 

@@ -42,5 +42,4 @@ namespace GuiaTBAWP.Views.Trenes
             ViewModel.Actualizacion = (App.Current as App).UltimaActualizacionTrenes;
         }
     }
-    }
 }

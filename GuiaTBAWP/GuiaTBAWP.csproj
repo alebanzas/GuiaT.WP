@@ -85,6 +85,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>

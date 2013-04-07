@@ -9,14 +9,14 @@ namespace GuiaTBAWP.Models
     {
         public Table<TrenesRamalEstadoTable> Ramales;
 
-        private TrenesRamalEstadoDC(string connectionString)
+        public TrenesRamalEstadoDC(string connectionString)
             : base(connectionString)
         {
             
         }
 
         static TrenesRamalEstadoDC _dataContext;
-
+        
         public void Truncate()
         {
             var query = from r in Ramales select r;
@@ -24,9 +24,13 @@ namespace GuiaTBAWP.Models
             _dataContext.SubmitChanges();
         }
 
-        public List<TrenRamalItemViewModel> ByLinea(string lineaNickName)
+        public IQueryable<TrenesRamalEstadoTable> ByLinea(string lineaNickName)
         {
-            return _dataContext.Ramales.Where(x => x.LineaNickName.Equals(lineaNickName)).Select(x => x.ConvertToTrenRamalItemViewModel()).ToList();
+            var list = from ramal in Current.Ramales
+                       where ramal.LineaNickName.Equals(lineaNickName)
+                       select ramal;
+            return list;
+
         }
 
         public static TrenesRamalEstadoDC Current

@@ -45,7 +45,7 @@ namespace GuiaTBAWP.Models
 
     public static class TrenesRamalEstadoTableExtensions
     {
-        public static IEnumerable<TrenRamalItemViewModel> ConvertToTrenesLineaEstadoTable(this IList<TrenesRamalEstadoTable> ramales)
+        public static IEnumerable<TrenRamalItemViewModel> ConvertToTrenesRamalEstadoTable(this IList<TrenesRamalEstadoTable> ramales)
         {
             return ramales.Select(ConvertToTrenRamalItemViewModel);
         }

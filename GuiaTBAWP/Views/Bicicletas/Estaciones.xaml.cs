@@ -18,10 +18,7 @@ namespace GuiaTBAWP.Views.Bicicletas
     public partial class Estaciones : PhoneApplicationPage
     {
         Pushpin _posicionActual;
-        bool _zoomAjustado;
         WebRequest _httpReq;
-        readonly System.Windows.Threading.DispatcherTimer _timer = new System.Windows.Threading.DispatcherTimer();
-
         readonly ProgressIndicator _progress = new ProgressIndicator();
 
         public Estaciones()
@@ -29,20 +26,10 @@ namespace GuiaTBAWP.Views.Bicicletas
             InitializeComponent();
             Loaded += Page_Loaded;
             Unloaded += Page_UnLoaded;
-            MiMapa.ViewChangeEnd += MiMapa_ViewChangeEnd;
         }
-
-        void MiMapa_ViewChangeEnd(object sender, MapEventArgs e)
-        {
-            if (!_zoomAjustado)
-                MiMapa.ZoomLevel--;
-            _zoomAjustado = true;
-        }
-
+        
         void Page_UnLoaded(object sender, RoutedEventArgs e)
         {
-            (App.Current as App).TimerUsed = false;
-
             if (_httpReq != null)
                 _httpReq.Abort();
         }
@@ -55,6 +42,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             UpdatedAt.Text = ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas);
 
             MostrarLugares();
+            
+            EndRequest();
 
             if (!_datosLoaded)
                 Cargar();
@@ -112,23 +101,15 @@ namespace GuiaTBAWP.Views.Bicicletas
             else
                 ActualizarUbicacion(null);
 
-            //Ajusto los márgenes del mapa
-            if (LstLugares.Items.Count <= 0 || (App.Current as App).TimerUsed) return;
-
-            _timer.Interval = new TimeSpan(0, 0, 1);
-            _timer.Tick += timer_Tick;
-            _timer.Start();
+            AjustarMapa();
         }
 
         private void AjustarMapa()
         {
             //Ajusto el mapa para mostrar los items
             var x = from l in MiMapa.Children
-                    let pushpin = l as Pushpin
-                    where pushpin != null
-                    select pushpin.Location;
+                    select (l as Pushpin).Location;
             MiMapa.SetView(LocationRect.CreateLocationRect(x));
-            _zoomAjustado = false;
         }
 
 
@@ -158,8 +139,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             if (_httpReq != null)
                 _httpReq.Abort();
-            EndRequest();
-
+            
             return false;
         }
 
@@ -302,14 +282,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
         }
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            _timer.Stop();
-            (App.Current as App).TimerUsed = true;
-            AjustarMapa();
-        }
-
+        
         private void ButtonGo_Click(object sender, EventArgs e)
         {
             Cargar();

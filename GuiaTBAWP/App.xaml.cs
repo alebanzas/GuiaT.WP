@@ -80,9 +80,7 @@ namespace GuiaTBAWP
 
         // Easy access to the root frame
         public PhoneApplicationFrame RootFrame { get; private set; }
-
-        public bool TimerUsed { get; set; }
-
+        
         // Constructor
         public App()
         {

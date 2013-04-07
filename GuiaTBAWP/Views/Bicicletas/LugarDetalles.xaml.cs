@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using GuiaTBAWP.Models;
 using JeffWilcox.Controls;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Controls.Maps;
+using Microsoft.Phone.Controls.Maps.Core;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Bicicletas
@@ -34,8 +36,16 @@ namespace GuiaTBAWP.Views.Bicicletas
             Estado.Text = _bicicletaEstacion.Estado;
             Cantidad.Text = _bicicletaEstacion.Cantidad.ToString(CultureInfo.InvariantCulture);
 
-            MiMapa.MapCenter = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud);
-            MiMapa.MapMode = StaticMapMode.Satellite;
+            var nuevoLugar = new Pushpin
+                {
+                    Content = _bicicletaEstacion.Nombre,
+                    Location = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud)
+                };
+            MiMapa.Children.Clear();
+            MiMapa.Children.Add(nuevoLugar);
+
+            MiMapa.Center = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud);
+            MiMapa.Mode = new AerialMode();
             MiMapa.ZoomLevel = 17;
         }
 
@@ -56,7 +66,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         
         private void SwitchView(object sender, EventArgs e)
         {
-            MiMapa.MapMode = MiMapa.MapMode.Equals(StaticMapMode.Map) ? StaticMapMode.Satellite : StaticMapMode.Map;
+            MiMapa.Mode = (MiMapa.Mode is RoadMode) ? (MapMode) new AerialMode() : new RoadMode();
         }
         
         private void Pin(object sender, EventArgs e)

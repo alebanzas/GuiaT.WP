@@ -43,9 +43,14 @@ namespace GuiaTBAWP.ViewModels
 
     public class TrenLineaItemViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<TrenLineaItemViewModel> _ramales;
+        private ObservableCollection<TrenRamalItemViewModel> _ramales;
 
-        public ObservableCollection<TrenLineaItemViewModel> Ramales
+        public TrenLineaItemViewModel()
+        {
+            Ramales = new ObservableCollection<TrenRamalItemViewModel>();
+        }
+
+        public ObservableCollection<TrenRamalItemViewModel> Ramales
         {
             get { return _ramales; }
             private set
@@ -76,8 +81,19 @@ namespace GuiaTBAWP.ViewModels
             }
         }
 
+        private DateTime _actualizacion;
+        public DateTime Actualizacion
+        {
+            get { return _actualizacion; }
+            set
+            {
+                _actualizacion = value;
+                NotifyPropertyChanged("Actualizacion");
+            }
+        }
 
-        public void AddLinea(TrenLineaItemViewModel linea)
+
+        public void AddRamal(TrenRamalItemViewModel linea)
         {
             Ramales.Add(linea);
         }

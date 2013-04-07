@@ -14,6 +14,7 @@
     <converters:DistanceConverter x:Key="DistanceConverter" />
     <converters:SubteNombreImagenConverter x:Key="SubteNombreImagenConverter" />
     <converters:PushpinVisibilityIconConverter x:Key="PushpinVisibilityIconConverter" />
+    <converters:DateTimeToLocalConverter x:Key="DateTimeToLocalConverter" />
     
     <!-- #Brushes -->
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#A52E2E2E" />

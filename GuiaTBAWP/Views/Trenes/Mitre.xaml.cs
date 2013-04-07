@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
@@ -34,7 +35,7 @@ namespace GuiaTBAWP.Views.Trenes
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var query = TrenesRamalEstadoDC.Current.ByLinea("mitre");
-
+            ViewModel.Ramales.Clear();
             foreach (var estadoTable in query.ToList())
             {
                 ViewModel.AddRamal(estadoTable.ConvertToTrenRamalItemViewModel());

@@ -33,7 +33,7 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var query = TrenesRamalEstadoDC.Current.ByLinea("roca");
+            var query = TrenesRamalEstadoDC.Current.ByLinea("gral. roca");
             ViewModel.Ramales.Clear();
             foreach (var estadoTable in query.ToList())
             {

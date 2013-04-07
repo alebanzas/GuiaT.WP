@@ -43,8 +43,6 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             MostrarLugares();
             
-            EndRequest();
-
             if (!_datosLoaded)
                 Cargar();
         }
@@ -241,7 +239,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                 if (applicationBarIconButton != null)
                     applicationBarIconButton.IsEnabled = true;
 
-                SystemTray.SetProgressIndicator(this, null);
+                SetProgressBar(null);
             });
         }
 

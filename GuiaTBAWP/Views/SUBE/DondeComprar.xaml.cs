@@ -82,6 +82,8 @@ namespace GuiaTBAWP.Views.SUBE
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
 
+        private HttpWebRequest _httpReq;
+
         public DondeComprar()
         {
             InitializeComponent();
@@ -90,6 +92,8 @@ namespace GuiaTBAWP.Views.SUBE
 
             InitializeGPS();
             SetLocationService();
+
+            Unloaded += DondeComprar_Unloaded;
 
             if (!NetworkInterface.GetIsNetworkAvailable() ||
                 (Ubicacion.Permission.Equals(GeoPositionPermission.Denied) ||
@@ -115,7 +119,13 @@ namespace GuiaTBAWP.Views.SUBE
                     StartLocationService();
                 };
         }
-        
+
+        private void DondeComprar_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if(_httpReq != null)
+                _httpReq.Abort();
+        }
+
         private void SetProgressBar(string msj, bool showProgress = true)
         {
             if (string.IsNullOrEmpty(msj))
@@ -266,9 +276,9 @@ namespace GuiaTBAWP.Views.SUBE
         {
             SetProgressBar("Buscando más cercano...");
             
-            var httpReq2 = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/ventanear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
-            httpReq2.Method = "POST";
-            httpReq2.BeginGetResponse(HTTPWebRequestCallBackVenta, httpReq2);
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/ventanear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq.Method = "POST";
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBackVenta, _httpReq);
             _pendingRequests++;
         }
         

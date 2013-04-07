@@ -90,6 +90,7 @@ namespace GuiaTBAWP.Views.SUBE
         #endregion
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
+        private HttpWebRequest _httpReq;
 
         public DondeCargar()
         {
@@ -99,6 +100,8 @@ namespace GuiaTBAWP.Views.SUBE
 
             InitializeGPS();
             SetLocationService();
+
+            Unloaded += DondeCargar_Unloaded;
 
             if (!NetworkInterface.GetIsNetworkAvailable() ||
                 (Ubicacion.Permission.Equals(GeoPositionPermission.Denied) ||
@@ -124,7 +127,13 @@ namespace GuiaTBAWP.Views.SUBE
                     StartLocationService();
                 };
         }
-        
+
+        private void DondeCargar_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if(_httpReq !=null)
+                _httpReq.Abort();
+        }
+
         private void SetProgressBar(string msj, bool showProgress = true)
         {
             if (string.IsNullOrEmpty(msj))
@@ -275,9 +284,9 @@ namespace GuiaTBAWP.Views.SUBE
         {
             SetProgressBar("Buscando más cercano...");
 
-            var httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
-            httpReq.Method = "POST";
-            httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq.Method = "POST";
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;
         }
 

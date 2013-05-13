@@ -26,12 +26,12 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="Acerca de" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Acerca de" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Height="125" HorizontalAlignment="Left" Margin="13,6,0,0" Name="textBlock3" Text="Política de Privacidad" VerticalAlignment="Top" Width="437" TextWrapping="Wrap" FontSize="40" />
-            <TextBlock Height="386" HorizontalAlignment="Left" Margin="13,137,0,0" Name="textBlock4" Text="El uso de esta aplicación puede implicar la transmisión de datos y el envío de información su posición. Puede que las funciones no siempre esten disponibles o sean precisas. Así mismo se brinda la posibilidad de que el usuario pueda activar o desactivar la busqueda de su posición. La información recolectada en ningún caso será utilizada para identificarte ni ponerse en contacto contigo. " VerticalAlignment="Top" Width="424" TextTrimming="None" TextWrapping="Wrap" />
+            <TextBlock Height="60" HorizontalAlignment="Left" Margin="12,6,0,0" Name="textBlock3" Text="Política de Privacidad" VerticalAlignment="Top" Width="437" TextWrapping="Wrap" FontSize="40" />
+            <TextBlock Height="386" HorizontalAlignment="Left" Margin="12,80,0,0" Name="textBlock4" Text="El uso de esta aplicación puede implicar la transmisión de datos y el envío de información su posición. Puede que las funciones no siempre esten disponibles o sean precisas. Así mismo se brinda la posibilidad de que el usuario pueda activar o desactivar la busqueda de su posición. La información recolectada en ningún caso será utilizada para identificarte ni ponerse en contacto contigo. " VerticalAlignment="Top" Width="424" TextTrimming="None" TextWrapping="Wrap" />
         </Grid>
     </Grid>
     

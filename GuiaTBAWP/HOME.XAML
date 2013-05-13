@@ -83,9 +83,9 @@
             <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
-                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                             <Paragraph>
-                                Guía Trasporte BA te ayuda a moverte por el Area Metropolitana de Buenos Aires (AMBA = CABA + GBA)
+                                Guía Trasporte BA te ayuda a moverte por el Área Metropolitana de Buenos Aires (AMBA = CABA + GBA)
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
@@ -94,27 +94,27 @@
                             <Paragraph>
                             </Paragraph>
                             <Paragraph>
-                                •Subtes: lineas y estaciones, horarios, precios, mapa de la red, estado del servicio.
+                                • Subtes: líneas y estaciones, horarios, precios, mapa de la red, estado del servicio.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Trenes: estado de servicio, y mapa de recorridos y ramales.
+                                • Trenes: estado de servicio, y mapa de recorridos y ramales.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Colectivos: información de lineas y recorridos de AMBA.
+                                • Colectivos: información de líneas y recorridos de AMBA.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •SUBE: información del servicio, donde comprar y cargar tu tarjeta.
+                                • SUBE: información del servicio, dónde comprar y cargar tu tarjeta.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Bicicletas: información del sistema y servicio, como inscribirte, ubicación e información de disponibilidad en estaciones.
+                                • Bicicletas: información del sistema y servicio, como inscribirte, ubicación e información de disponibilidad en estaciones.
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                •Taxis: información del servicio, precios, donde reclamar.
+                                • Taxis: información del servicio, precios, dónde reclamar.
                             </Paragraph>
                         </RichTextBox>
                     </StackPanel>
@@ -130,7 +130,7 @@
                         Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
                         <LineBreak /><LineBreak />
                         <LineBreak /><LineBreak />
-                        La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza internet para obtener los puntos de carga y venta.
+                        La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener los puntos de carga y venta más cercanos.
                         <LineBreak /><LineBreak /><LineBreak /><LineBreak />
                         Notas de versión
                         <LineBreak /><LineBreak />
@@ -143,6 +143,7 @@
                         1.1: (29-03-2013) Correcciones de líneas de colectivo provinciales. Agregado de sección líneas y estaciones en subte, sección precio, seccion estado del servicio.
                         <LineBreak /><LineBreak />
                         1.0: (12-03-2013) Versión inicial. Recorridos de colectivos, mapa de la red de subte, recorridos de trenes metropolitanos, puntos de carga y venta de tarjeta SUBE.
+						<LineBreak /><LineBreak />
                     </TextBlock>
                 </ScrollViewer>
             </controls:PanoramaItem>

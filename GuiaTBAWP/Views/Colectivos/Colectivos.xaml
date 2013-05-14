@@ -49,7 +49,7 @@
         <!-- The group header template, for groups in the main list -->
         <DataTemplate x:Key="BusGroupHeader">
             <Border Background="#10283a" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
             </Border>
         </DataTemplate>
 
@@ -57,7 +57,7 @@
         <!-- the GroupItemTemplate property will disable "jump list" functionality. -->
         <DataTemplate x:Key="groupItemHeader">
             <Border Background="#10283a" Margin="{StaticResource PhoneTouchTargetOverhang}" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
             </Border>
         </DataTemplate>
 
@@ -65,8 +65,8 @@
         <DataTemplate x:Key="BusItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <StackPanel VerticalAlignment="Top">
-                    <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="12,-12,12,6"/>
-                    <TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                    <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="0,0,0,6" />
+					<TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}" Margin="0,0,0,0" />
                 </StackPanel>
             </Grid>
         </DataTemplate>

@@ -28,12 +28,12 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="SUBE" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="perdida | robo | daño" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="pérdida | robo | daño" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="12,0,0,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
+            <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,0,0">
                 <Paragraph>
                     Por gestiones por Robo, Pérdida o Rotura podés acercarte a un centro de atención SUBE o realizar el trámite a través de nuestro call center
                     <Hyperlink Click="SUBETel_OnClick">0800-777-7823 (SUBE)</Hyperlink>.

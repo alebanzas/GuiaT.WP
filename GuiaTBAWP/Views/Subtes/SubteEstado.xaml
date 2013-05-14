@@ -31,10 +31,10 @@
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="25,-10,0,10">
-            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="15,0,-12,0">
+            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">
                 <Run Text="Buscando estado actual. Aguarde.."/>
             </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="15,0,-12,0">
+            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
                 <Run Text="No hay conexión a la red."/>
             </TextBlock>
             <ListBox ItemsSource="{Binding Lineas}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
@@ -45,7 +45,7 @@
                                 <Image Source="{Binding Nombre, Converter={StaticResource SubteNombreImagenConverter}}"></Image>
                                 <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                             </StackPanel>
-                            <TextBlock Margin="50,5,5,5" Text="{Binding Detalles}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            <TextBlock Margin="65,5,5,5" Text="{Binding Detalles}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

@@ -25,22 +25,22 @@
             <controls:PanoramaItem Header="menú">
                 <StackPanel>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Venta">
-                        <TextBlock Text="¿dónde comprar la tarjeta?" />
+						<TextBlock Margin="-12,0,0,0" Text="¿dónde comprar la tarjeta?" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Carga">
-                        <TextBlock Text="¿dónde cargar la tarjeta?" />
+						<TextBlock Margin="-12,0,0,0" Text="¿dónde cargar la tarjeta?" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_DondeUsarSUBE">
-                        <TextBlock Text="¿donde usar SUBE?" />
+						<TextBlock Margin="-12,0,0,0" Text="¿donde usar SUBE?" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_PerdidaRoboDanio">
-                        <TextBlock Text="perdida | robo | daño" />
+						<TextBlock Margin="-12,0,0,0" Text="pérdida | robo | daño" />
                     </Button>
                     <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_PreguntasFrecuentes">
                         <TextBlock Text="preguntas frecuentes" />
                     </Button-->
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AtencionAlUsuario">
-                        <TextBlock Text="atención al usuario" />
+						<TextBlock Margin="-12,0,0,0" Text="atención al usuario" />
                     </Button>
                 </StackPanel>
             </controls:PanoramaItem>
@@ -49,7 +49,7 @@
             <controls:PanoramaItem Header="¿qué es?">
                 <ScrollViewer>
                     <StackPanel>
-                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                             <Paragraph>
                                 El SUBE o Sistema Único de Boleto Electrónico es:
                             </Paragraph>
@@ -64,24 +64,24 @@
                         </RichTextBox>
                         <Image Source="/Images/SUBE/logo-transportepublico.png"></Image>
                         <Image Source="/Images/SUBE/logo-ministeriointeriorytransporte.png"></Image>
-                        <RichTextBox Visibility="Collapsed" VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                        <RichTextBox Visibility="Collapsed" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                             <Paragraph>
                             Al viajar con SUBE:
                             </Paragraph>
                             <Paragraph>
-                            •Ganás tiempo y comodidad.
+                            • Ganás tiempo y comodidad.
                             </Paragraph>
                             <Paragraph>
-                            •Evitás esperas y búsqueda de monedas.
+                            • Evitás esperas y búsqueda de monedas.
                             </Paragraph>
                             <Paragraph>
-                            •Tenés mayor seguridad porque llevás menos efectivo.
+                            • Tenés mayor seguridad porque llevás menos efectivo.
                             </Paragraph>
                             <Paragraph>
-                            •Colaborás con el medio ambiente al utilizar menos papel.
+                            • Colaborás con el medio ambiente al utilizar menos papel.
                             </Paragraph>
                             <Paragraph>
-                            •Viajás mejor.
+                            • Viajás mejor.
                             </Paragraph>
                         </RichTextBox>
                     </StackPanel>

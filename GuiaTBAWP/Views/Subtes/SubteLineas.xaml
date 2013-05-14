@@ -26,7 +26,7 @@
 
             <controls:PivotItem Header="línea A">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -60,7 +60,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                             <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza de Mayo</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -233,7 +233,7 @@
 
             <controls:PivotItem Header="línea B">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -267,7 +267,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Leandro N. Alem</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -436,7 +436,7 @@
 
             <controls:PivotItem Header="línea C">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -457,7 +457,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -557,7 +557,7 @@
 
             <controls:PivotItem Header="línea D">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -588,7 +588,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Catedral</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -762,7 +762,7 @@
 
             <controls:PivotItem Header="línea E">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -794,7 +794,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -962,7 +962,7 @@
 
             <controls:PivotItem Header="línea H">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
@@ -987,7 +987,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Francia</TextBlock>
                                 </StackPanel>
@@ -1001,7 +1001,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Cordoba</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Córdoba</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
@@ -1097,7 +1097,7 @@
 
             <controls:PivotItem Header="línea P">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20">A Centro Cívico Lugano</TextBlock>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
@@ -1121,7 +1121,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -1172,7 +1172,7 @@
 
             <controls:PivotItem Header="línea P">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="20,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20">A General Savio</TextBlock>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
@@ -1197,7 +1197,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="30,0,0,0">
+                            <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Intendente Saguier</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">

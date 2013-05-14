@@ -22,35 +22,33 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Guia Transporte Buenos Aires" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="verifica" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Guía Transporte Buenos Aires" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="verifica" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer>
-                <StackPanel>
-                    <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
-                        <Paragraph>
-                            En base a tu ubicación, buscamos los 10 puntos de venta y de carga mas cercanos.
-                        </Paragraph>
-                        <Paragraph></Paragraph>
-                        <Paragraph>
-                            Verifica:
-                        </Paragraph>
-                        <Paragraph>• Conexión a internet</Paragraph>
-                        <Paragraph>• GPS habilitado</Paragraph>
-                        <Paragraph></Paragraph>
-                        <Paragraph></Paragraph>
-                    </RichTextBox>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_PuntosDeVentaYCarga">
-                        <TextBlock Text="volver a venta y carga" />
-                    </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Home">
-                        <TextBlock Text="volver a inicio" />
-                    </Button>
-                </StackPanel>
-            </ScrollViewer>
+        <Grid Grid.Row="1" Margin="12,0,0,0">
+            <StackPanel>
+                <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                    <Paragraph>
+                        En base a tu ubicación, buscamos los 10 puntos de venta y de carga mas cercanos.
+                    </Paragraph>
+                    <Paragraph></Paragraph>
+                    <Paragraph>
+                        Verifica:
+                    </Paragraph>
+                    <Paragraph>• Conexión a internet</Paragraph>
+                    <Paragraph>• GPS habilitado</Paragraph>
+                    <Paragraph></Paragraph>
+                    <Paragraph></Paragraph>
+                </RichTextBox>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_PuntosDeVentaYCarga">
+                    <TextBlock Margin="-12,0,0,0" Text="volver a venta y carga" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Home">
+					<TextBlock Margin="-12,0,0,0" Text="volver a inicio" />
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 

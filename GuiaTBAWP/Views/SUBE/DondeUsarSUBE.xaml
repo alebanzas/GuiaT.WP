@@ -82,39 +82,35 @@
             <!--Panorama item two-->
             <controls:PanoramaItem Header="trenes">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
-                    <ScrollViewer>
-                        <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph>Belgrano Norte</Paragraph>
-                                <Paragraph>Belgrano Sur</Paragraph>
-                                <Paragraph>Mitre</Paragraph>
-                                <Paragraph>San Martín</Paragraph>
-                                <Paragraph>Sarmiento</Paragraph>
-                                <Paragraph>Urquiza</Paragraph>
-                                <Paragraph>General Roca</Paragraph>
-                            </RichTextBox>
-                        </StackPanel>
-                    </ScrollViewer>
+                    <StackPanel>
+                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                            <Paragraph>Belgrano Norte</Paragraph>
+                            <Paragraph>Belgrano Sur</Paragraph>
+                            <Paragraph>Mitre</Paragraph>
+                            <Paragraph>San Martín</Paragraph>
+                            <Paragraph>Sarmiento</Paragraph>
+                            <Paragraph>Urquiza</Paragraph>
+                            <Paragraph>General Roca</Paragraph>
+                        </RichTextBox>
+                    </StackPanel>
                 </Grid>
             </controls:PanoramaItem>
 
             <!--Panorama item three-->
             <controls:PanoramaItem Header="subtes">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
-                    <ScrollViewer>
-                        <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph>linea A</Paragraph>
-                                <Paragraph>linea B</Paragraph>
-                                <Paragraph>linea C</Paragraph>
-                                <Paragraph>linea D</Paragraph>
-                                <Paragraph>linea E</Paragraph>
-                                <Paragraph>linea H</Paragraph>
-                                <Paragraph>premetro</Paragraph>
-                                <Paragraph></Paragraph>
-                            </RichTextBox>
-                        </StackPanel>
-                    </ScrollViewer>
+                    <StackPanel>
+                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                            <Paragraph>Línea A</Paragraph>
+                            <Paragraph>Línea B</Paragraph>
+                            <Paragraph>Línea C</Paragraph>
+                            <Paragraph>Línea D</Paragraph>
+                            <Paragraph>Línea E</Paragraph>
+                            <Paragraph>Línea H</Paragraph>
+                            <Paragraph>Premetro</Paragraph>
+                            <Paragraph></Paragraph>
+                        </RichTextBox>
+                    </StackPanel>
                 </Grid>
             </controls:PanoramaItem>
         </controls:Panorama>

@@ -24,10 +24,10 @@
             
             <!--Panorama item one-->
             <controls:PanoramaItem Header="inicio">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph>
                                     Para facilitar las gestiones personalizadas de nuestros usuarios, habilitamos Centros de Atención SUBE en distintos puntos de la Región Metropolitana.
                                 </Paragraph>
@@ -81,10 +81,10 @@
 
             <!--Panorama item two-->
             <controls:PanoramaItem Header="CABA">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph FontWeight="Bold">Sucursal Belgrano</Paragraph>
                                 <Paragraph>Sucre 2430</Paragraph>
                                 <Paragraph>de Lunes a Viernes 09:00 a 16:30 hs.</Paragraph>
@@ -122,10 +122,10 @@
 
             <!--Panorama item three-->
             <controls:PanoramaItem Header="Zona Norte">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph FontWeight="Bold">Sucursal General Pacheco (Tigre)</Paragraph>
                                 <Paragraph>Santiago del Estero 350 (El Talar)</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 16 hs.</Paragraph>
@@ -153,10 +153,10 @@
 
             <!--Panorama item four-->
             <controls:PanoramaItem Header="Zona Oeste">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph FontWeight="Bold">Sucursal Ciudadela (3 de Febrero)</Paragraph>
                                 <Paragraph>Av. Rivadavia 12602</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 09:00 a 15:00 hs.</Paragraph>
@@ -194,10 +194,10 @@
 
             <!--Panorama item five-->
             <controls:PanoramaItem Header="Zona Sur">
-                <Grid Grid.Row="1" Margin="12,0,12,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
-                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="12,0,0,0">
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph FontWeight="Bold">Sucursal La Plata (La Plata)</Paragraph>
                                 <Paragraph>Plaza Italia 109</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 09:00 a 17:30 hs.</Paragraph>

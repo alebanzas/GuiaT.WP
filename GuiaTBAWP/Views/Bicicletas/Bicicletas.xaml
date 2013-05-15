@@ -34,17 +34,17 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_ElSistema">
-                    <TextBlock Text="el sistema" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ElSistema">
+                    <TextBlock Margin="-12,0,0,0" Text="el sistema" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Inscripcion">
-                    <TextBlock Text="inscripción" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Inscripcion">
+					<TextBlock Margin="-12,0,0,0" Text="inscripción" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_ElServicio">
-                    <TextBlock Text="el servicio" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ElServicio">
+					<TextBlock Margin="-12,0,0,0" Text="el servicio" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Estaciones">
-                    <TextBlock Text="estaciones" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Estaciones">
+					<TextBlock Margin="-12,0,0,0" Text="estaciones" />
                 </Button>
                 
                 <Grid Margin="0,70,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">

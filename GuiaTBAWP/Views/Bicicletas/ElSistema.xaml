@@ -36,7 +36,7 @@
             <ScrollViewer>
                 <StackPanel Margin="0,0,0,30">
                     <StackPanel>
-                        <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="0,40,0,0">
+                        <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="0,0,0,0">
                             <Paragraph>
                                 La Ciudad de Buenos Aires tiene su Sistema de Transporte Público en Bicicletas, una manera sustentable de moverse que se está usando con gran éxito en más de 200 ciudades del mundo.
                                 <LineBreak />

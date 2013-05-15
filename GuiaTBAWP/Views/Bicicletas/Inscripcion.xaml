@@ -36,33 +36,33 @@
             <ScrollViewer>
                 <StackPanel Margin="0,0,0,30">
                     <StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">1</TextBlock>
                             <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">
                                 Presentá tu documento de identidad (DNI, Cédula de identidad o Pasaporte) y una factura de un servicio a tu nombre (en caso de no tenerla, de un servicio del domicilio de tu documento) o un certificado de domicilio de Policía Federal Argentina, y fotocopia de ambos. El servicio tiene que tener como máximo 2 meses de antigüedad y no debe tener deuda.
                             </TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">2</TextBlock>
                             <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">
                                 Te sacamos una foto que permite la identificación en las estaciones e introducís un número de PIN
                             </TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">3</TextBlock>
                             <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">
                                 Firmá la declaración jurada de responsabilidad y la aceptación de condiciones:
                             </TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="30,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">a</TextBlock>
                             <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center">Declara responsabilidad de manejo.</TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="30,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">b</TextBlock>
                             <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center">Pago de una multa por no devolución de la bicicleta, o devolución con cuadro roto por uso indebido.</TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="30,0,0,20">
+                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">c</TextBlock>
                             <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center"> Baja del servicio por devolución tardía en más de una oportunidad.</TextBlock>
                         </StackPanel>

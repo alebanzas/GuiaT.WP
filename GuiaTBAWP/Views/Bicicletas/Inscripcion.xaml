@@ -54,17 +54,17 @@
                                 Firmá la declaración jurada de responsabilidad y la aceptación de condiciones:
                             </TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
+                        <StackPanel Orientation="Horizontal" Margin="48,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">a</TextBlock>
-                            <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center">Declara responsabilidad de manejo.</TextBlock>
+                            <TextBlock Width="350" TextWrapping="Wrap" VerticalAlignment="Center">Declara responsabilidad de manejo.</TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
+                        <StackPanel Orientation="Horizontal" Margin="48,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">b</TextBlock>
-                            <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center">Pago de una multa por no devolución de la bicicleta, o devolución con cuadro roto por uso indebido.</TextBlock>
+                            <TextBlock Width="350" TextWrapping="Wrap" VerticalAlignment="Center">Pago de una multa por no devolución de la bicicleta, o devolución con cuadro roto por uso indebido.</TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="24,0,0,24">
+                        <StackPanel Orientation="Horizontal" Margin="48,0,0,24">
                             <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">c</TextBlock>
-                            <TextBlock Width="370" TextWrapping="Wrap" VerticalAlignment="Center"> Baja del servicio por devolución tardía en más de una oportunidad.</TextBlock>
+                            <TextBlock Width="350" TextWrapping="Wrap" VerticalAlignment="Center"> Baja del servicio por devolución tardía en más de una oportunidad.</TextBlock>
                         </StackPanel>
 
                     </StackPanel>

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Colectivos.aspx" />
     <Content Include="Bicicletas.aspx" />
+    <Content Include="Trenes.aspx" />
     <Content Include="Dolar.aspx" />
     <Content Include="Subte.aspx" />
     <Content Include="Default.aspx" />
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="Bicicletas.aspx.designer.cs">
       <DependentUpon>Bicicletas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trenes.aspx.cs">
+      <DependentUpon>Trenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trenes.aspx.designer.cs">
+      <DependentUpon>Trenes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dolar.aspx.cs">
       <DependentUpon>Dolar.aspx</DependentUpon>

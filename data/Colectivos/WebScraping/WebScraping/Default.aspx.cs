@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading;
-using System.Web;
-using System.Xml;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 
@@ -204,17 +199,21 @@ namespace WebScraping
         {
             //ShowSubte();
             //ShowTren();
-            ShowColectivo();
+            //ShowColectivo();
+
+            //ShowSubte(true);
+            //ShowTren(true);
+            ShowColectivo(true);
 
         }
 
-        protected void ShowSubte()
+        protected void ShowSubte(bool regreso = false)
         {
             string result = string.Empty;
 
             foreach (var linea in LineasSubte)
             {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-subte-" + linea + "/"));
+                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-subte-" + linea + "/" + (regreso ? "&r=1" : "")));
 
                 var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
 
@@ -224,12 +223,12 @@ namespace WebScraping
                 foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
                 {
                     string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])" +
-                                "VALUES (NEWID(),'{0}','Linea {1}','{1}','{2}','{3}','','')";
+                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
+                                "VALUES (NEWID(),'{0}','Linea {1}','{1}','{2}','{3}','',{4})";
 
                     var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
 
-                    result += string.Format(query, Subte.Id, linea, ramales[i].InnerText, GetLocationsFromString(item[0])) + "<br><br>";
+                    result += string.Format(query, Subte.Id, linea, ramales[i].InnerText, GetLocationsFromString(item[0]), regreso ? "1" : "0") + "<br><br>";
                     i++;
                 }
             }
@@ -237,7 +236,7 @@ namespace WebScraping
             Resultado = result;
         }
 
-        protected void ShowTren()
+        protected void ShowTren(bool regreso = false)
         {
             string result = string.Empty;
 
@@ -246,7 +245,7 @@ namespace WebScraping
 
             foreach (var linea in LineasTren)
             {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-tren-" + linea + "/"));
+                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-tren-" + linea + "/" + (regreso ? "&r=1" : "")));
 
                 var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
 
@@ -256,20 +255,20 @@ namespace WebScraping
                 foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
                 {
                     string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])" +
-                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','','')";
+                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
+                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','',{5})";
 
                     var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
 
-                    result += string.Format(query, Tren.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea) + "<br><br>";
+                    result += string.Format(query, Tren.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea, regreso ? "1" : "0") + "<br><br>";
                     i++;
                 }
             }
 
             Resultado = result;
         }
-        
-        protected void ShowColectivo()
+
+        protected void ShowColectivo(bool regreso = false)
         {
             string result = string.Empty;
 
@@ -278,7 +277,7 @@ namespace WebScraping
 
             foreach (var linea in LineasColectivo)
             {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-" + linea + "/"));
+                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-" + linea + "/" + (regreso ? "&r=1" : "")));
 
                 var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
 
@@ -288,12 +287,12 @@ namespace WebScraping
                 foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
                 {
                     string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionIda],[DescripcionVuelta])" +
-                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','','')";
+                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
+                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','',{5})";
 
                     var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
 
-                    result += string.Format(query, Colectivo.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea) + "<br><br>";
+                    result += string.Format(query, Colectivo.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea, regreso ? "1" : "0") + "<br><br>";
                     i++;
                 }
             }
@@ -347,7 +346,7 @@ namespace WebScraping
             double reslat = rslat * (rablat + (double)rcdelat / 1000 + (double)rfghlat / 1000000);
             double reslng = rslng * (rablng + (double)rcdelng / 1000 + (double)rfghlng / 1000000);
 
-            return string.Format("{0} {1}, <br>", reslat, reslng);
+            return string.Format("{0} {1}, <br>", reslng, reslat);
         }
 
 

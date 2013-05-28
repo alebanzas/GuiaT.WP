@@ -967,8 +967,8 @@
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
                                     <Rectangle Margin="0,15,0,0" Fill="#999999" HorizontalAlignment="Left" Height="520" Stroke="Black" VerticalAlignment="Top" Width="30"/>
-                                    <Rectangle Margin="0,0,0,0" Fill="#FFD601" HorizontalAlignment="Left" Height="780" Stroke="Black" VerticalAlignment="Top" Width="30"/>
-                                    <Rectangle Margin="0,0,0,0" Fill="#999999" HorizontalAlignment="Left" Height="265" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,0,0,0" Fill="#FFD601" HorizontalAlignment="Left" Height="915" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,0,0,0" Fill="#999999" HorizontalAlignment="Left" Height="130" Stroke="Black" VerticalAlignment="Top" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1580,0,0">
                                     <Ellipse Margin="0,0,0,100" Width="30" Height="30" Fill="White" />
@@ -981,8 +981,8 @@
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
-                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="30" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="30" Fill="White" />
                                     <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
                                 </StackPanel>
                             </StackPanel>
@@ -1085,6 +1085,14 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Hospitales</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz</TextBlock>

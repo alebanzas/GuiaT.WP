@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Globalization;
 using System.IO.IsolatedStorage;
-using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
-using System.Windows.Input;
 using GuiaTBAWP.Bing.Geocode;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Net.NetworkInformation;
 using Microsoft.Phone.Shell;
 
@@ -21,17 +17,17 @@ namespace GuiaTBAWP.Views.Colectivos
 {
     public partial class Cercanos : PhoneApplicationPage
     {
-        private static MainViewModel _viewModel;
+        private static ColectivoCercanoViewModel _viewModel;
         /// <summary>
         /// A static ViewModel used by the views to bind against.
         /// </summary>
         /// <returns>The MainViewModel object.</returns>
-        public static MainViewModel ViewModel
+        public static ColectivoCercanoViewModel ViewModel
         {
             get
             {
                 // Delay creation of the view model until necessary
-                return _viewModel ?? (_viewModel = new MainViewModel());
+                return _viewModel ?? (_viewModel = new ColectivoCercanoViewModel());
             }
         }
 
@@ -68,10 +64,7 @@ namespace GuiaTBAWP.Views.Colectivos
 
                     _progress.IsVisible = true;
                     _progress.IsIndeterminate = true;
-
-                    if (ViewModel.IsPuntosRecargaLoaded) return;
-
-                    RecargaLoading.Visibility = Visibility.Visible;
+                    
                     StartLocationService();
                 };
         }
@@ -212,26 +205,26 @@ namespace GuiaTBAWP.Views.Colectivos
                 Longitude = e.Position.Location.Longitude
             };
 
-            if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
-            {
-                return;
-            }
+            //if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
+            //{
+            //    return;
+            //}
 
-            ViewModel.CurrentLocation = e.Position.Location;
+            //ViewModel.CurrentLocation = e.Position.Location;
 
-            SetLocation(location);
+            //SetLocation(location);
             //StopLocationService();
             SetProgressBar(null);
 
-            GetMasCercanos();
+            GetMasCercanos(location);
         }
 
         private int _pendingRequests;
-        private void GetMasCercanos()
+        private void GetMasCercanos(GeocodeLocation location)
         {
             SetProgressBar("Buscando más cercano...");
 
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;
@@ -245,8 +238,8 @@ namespace GuiaTBAWP.Views.Colectivos
                 var response = httpRequest.EndGetResponse(result);
                 var stream = response.GetResponseStream();
 
-                var serializer = new DataContractJsonSerializer(typeof(List<SUBEPuntoModel>));
-                var o = (List<SUBEPuntoModel>)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof(List<ColectivoModel>));
+                var o = (List<ColectivoModel>)serializer.ReadObject(stream);
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
             }
@@ -254,38 +247,46 @@ namespace GuiaTBAWP.Views.Colectivos
             {
                 Dispatcher.BeginInvoke(() =>
                     {
-                        RecargaLoading.Visibility = Visibility.Collapsed;
-                        RecargaError.Visibility = Visibility.Visible;
+                        //RecargaLoading.Visibility = Visibility.Collapsed;
+                        //RecargaError.Visibility = Visibility.Visible;
                         FinishRequest();
                     });
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
             }
         }
 
-        delegate void DelegateUpdateWebBrowser(List<SUBEPuntoModel> local);
-        private void UpdateWebBrowser(List<SUBEPuntoModel> l)
+        delegate void DelegateUpdateWebBrowser(List<ColectivoModel> local);
+        private void UpdateWebBrowser(List<ColectivoModel> l)
         {
-            var model = new Collection<ItemViewModel>();
-            var i = 1;
-            foreach (var puntoModel in l)
-            {
-                var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
-                var itemViewModel = new ItemViewModel
-                    {
-                        Titulo = puntoModel.Nombre, 
-                        Punto = punto,
-                        Index = i++,
-                    };
-                model.Add(itemViewModel);
-            }
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "12", Detalles = "A - Puente Pueyrredon", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "12", Detalles = "B - Constitución", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "A - Barrancas de Belgrano por Hospital Militar   ", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "B - Barrancas de Belgrano por Hipódromo", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "E - Barrancas de Belgrano por Hospital Militar", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "A - Olivos", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "B - Olivos por UCA", });
+            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "C - Est. Mitre", });
 
-            if (!ViewModel.IsPuntosRecargaLoaded)
-            {
-                ViewModel.LoadPuntosRecarga(model);
-            }
+
+            //var model = new Collection<ColectivoItemViewModel>();
+
+            //var i = 1;
+            //foreach (var puntoModel in l)
+            //{
+            //    var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
+            //    var itemViewModel = new ItemViewModel
+            //        {
+            //            Titulo = puntoModel.Nombre, 
+            //            Punto = punto,
+            //            Index = i++,
+            //        };
+            //    model.Add(itemViewModel);
+            //}
             
-            RecargaLoading.Visibility = Visibility.Collapsed;
-            RecargaError.Visibility = Visibility.Collapsed;
+            //RecargaLoading.Visibility = Visibility.Collapsed;
+            //RecargaError.Visibility = Visibility.Collapsed;
             FinishRequest();
         }
 
@@ -308,24 +309,6 @@ namespace GuiaTBAWP.Views.Colectivos
 
         #endregion
 
-
-        private static void SetLocation(GeoCoordinate location)
-        {
-            // Center map to default location.
-            ViewModel.Center = location;
-
-            // Reset zoom default level.
-            ViewModel.Zoom = ViewModel.DefaultZoomLevel;
-        }
-
-        private void Pushpin_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            var pushpin = sender as Pushpin;
-
-            // Center the map on a pushpin when touched.
-            if (pushpin != null) ViewModel.Center = pushpin.Location;
-        }
-        
         private void Opciones_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
@@ -334,11 +317,6 @@ namespace GuiaTBAWP.Views.Colectivos
         private void Acerca_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
-        }
-
-        private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            //NavigationService.Navigate(new Uri("/Views/SUBE/Mapa.xaml", UriKind.Relative));
         }
 
         private void ButtonRefresh_Click(object sender, EventArgs e)

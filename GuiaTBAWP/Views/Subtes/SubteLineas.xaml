@@ -981,8 +981,8 @@
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,103" Width="30" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,103" Width="24" Height="30" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
                                     <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
                                 </StackPanel>
                             </StackPanel>

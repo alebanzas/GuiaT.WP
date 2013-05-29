@@ -127,6 +127,12 @@
     <Compile Include="Views\Bicicletas\ElSistema.xaml.cs">
       <DependentUpon>ElSistema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Colectivos\Cercanos.xaml.cs">
+      <DependentUpon>Cercanos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colectivos\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
@@ -298,6 +304,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Bicicletas\ElSistema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Cercanos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

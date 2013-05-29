@@ -18,7 +18,7 @@ namespace GuiaTBAWP
 
         private void Button_Click_Colectivos(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Colectivos/Colectivos.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/Views/Colectivos/Home.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Subtes(object sender, RoutedEventArgs e)

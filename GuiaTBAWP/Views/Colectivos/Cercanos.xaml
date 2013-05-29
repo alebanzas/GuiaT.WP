@@ -1,0 +1,61 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="GuiaTBAWP.Views.Colectivos.Cercanos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Panorama Title="¿dónde cargar?">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/background.jpg" />
+            </controls:Panorama.Background>
+
+            <controls:PanoramaItem Header="recarga">
+                <StackPanel Margin="12,0,0,12">
+                    <TextBlock Name="RecargaLoading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="RecargaError" TextWrapping="Wrap" Visibility="Collapsed">
+                        Ocurrió un error.
+                        <LineBreak /><LineBreak />
+                        Verifique su conexión a internet.
+                    </TextBlock>
+                    <ListBox Margin="0,0,0,0" 
+                             x:Name="Lista"
+                             ItemContainerStyle="{StaticResource ListBoxStyle}" 
+                             ItemsSource="{Binding PuntosRecarga}"
+                             Height="400">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,12" Orientation="Horizontal">
+                                    <TextBlock Width="432" Margin="0,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Acerca de" Click="Acerca_Click"/>
+                <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

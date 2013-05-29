@@ -92,10 +92,13 @@
     <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletaEstacionDC.cs" />
+    <Compile Include="Models\ColectivoModel.cs" />
     <Compile Include="Models\TrenesRamalEstadoDC.cs" />
     <Compile Include="Models\TrenesRamalEstadoTable.cs" />
     <Compile Include="Models\TrenesLineaEstadoDC.cs" />
     <Compile Include="Models\TrenesLineaEstadoTable.cs" />
+    <Compile Include="ViewModels\ColectivoItemViewModel.cs" />
+    <Compile Include="ViewModels\ColectivoCercanoViewModel.cs" />
     <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
     <Compile Include="ViewModels\TrenStatusViewModel.cs" />
     <Compile Include="Views\Acerca.xaml.cs">

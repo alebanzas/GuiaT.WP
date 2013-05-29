@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using GuiaTBAWP.Views.Subtes;
+
+namespace GuiaTBAWP.Models
+{
+    public class SubteStatusModel
+    {
+        public SubteStatusModel()
+        {
+            Lineas = new List<SubteStatusItem>();
+        }
+
+        public IList<SubteStatusItem> Lineas { get; set; }
+
+        public DateTime Actualizacion { get; set; }
+
+        public string ActualizacionStr
+        {
+            get { return string.Format("{0} {1}", Actualizacion.ToLongDateString(), Actualizacion.ToLongTimeString()); }
+        }
+    }
+}

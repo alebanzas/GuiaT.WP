@@ -1,0 +1,1528 @@
+<div name="newboxes" class="recuadro_titularV2" id="newboxes_Recorrido Municipal">
+		<h6>Recorrido Municipal</h6>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea1" id="linea1a">Línea 500A</a></div>
+		<div class="content_box" id="linea1" style="display: none;">		
+			<p>Florencio Varela - Bosques
+<br>
+Ramal "1": De Av. San Martín y Sperandío - por Av. San Martín - Av. del Trabajo - L. Braile - Cabral - Cno. Gral. Belgrano - H. Yrigoyen - San Martín - Dr. Sallares - Alberdi - Perón - Cabello - 13 de Diciembre - Calle 556 - Calle 517 - hasta Humahuaca.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "2": De Av. San Martín y Sperandío - por ésta - La Loma - Calle 14 - P. Morán - Ruta 4 - Cno. Gral. Belgrano - Av. Calchaquí - Senzabello - Gral. Güemes - Solis - Av. San Martín - Dr. Sallares - Alberdi - Lavalle - Belgrano - 12 de Octubre - Progreso - San Nicolás - Chañar - Río Jáchel - Mar Chiquita - Río Turbio - Río Carapachay - Luis Cariboni.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "3": Igual al recorrido del Ramal 2 hasta Alberdi - Perón - Pringles - Sallares - Ituzaingó - Vazquez - Perón - Túnez - Calle 879 - Monserrat - San José - El Cairo - Av. Bosques - R. Rojas - Calle 1014 - Luis Agote - O´Gorman - Bosques Norte.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "4": De Av. San Martín y Sperandío - por ésta - La Loma - Calle 14 - P. Morán - Ruta 4 - Cno. Gral. Belgrano - H. Yrigoyen - Av. San Martín - Dr. Sallares - Alberdi - Perón - J. Brown - Barzi - Serrano - Av. 13 de Diciembre - Milán - Yugaslavía - Paysandú - Noruega - La Haya - Rumania - Pisani - Suecia.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "5": De Av. San Martín y Sperandío - por Av. San Martín - Av. del Trabajo - L. Braile - Cabral - Cno. Gral. Belgrano - H. Yrigoyen - San Martín - Dr. Sallares - Alberdi - Perón - Eva Perón - Cacheuta - Calle 1363 - Los Inmigrantes - Av. Hudson.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "6": Igual al recorrido del Ramal 5 hasta Cacheuta y Calle 1363.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "7": De Km. 26,700 por Paso de la Patria - F. Sánchez - Av. San Martín - Dr. Sallares - Alberdi - Perón.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "8": De Av. San Martín y Sperandío - por ésta - La Loma - Calle 14 - P. Morán - Larrea - Darragueira - La Argentina - Azara - H. Cortéz - Las Heras - Río de Janeiro - Alvear - Calle 54 - EE.UU. - V. Sarsfield - Alberdi - Perón - Lavalle - Belgrano - 12 de Octubre - Progreso - San Nicolás - Chañar - Río Jáchal. 
+Regreso por similar recorrido.
+<br>
+ 
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea126" id="linea126a">Línea 501A</a></div>
+		<div class="content_box" id="linea126" style="display: none;">		
+			<p>Moreno - La Reja - Paso del Rey - Cruce Castelar
+<br>
+Estación Moreno - Barrio La Perlita (Ramal 1): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - M. del Bueno - Ecuador - L. de la Torre - Ruta 23 - Estación Moreno.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Mi Barrio (Ramal 2): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - L. de la Torre - Ecuador - M. del Bueno - Ruta 23 - Av. San Martín - Ruta 7 - hasta Terminal Moreno.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio La Victoria (Ramal 5): De Estación Moreno - Epaña - Córdoba (Ombú) - Ruta 23 - Shakespeare - F. de Azara - Segurola - Gutiérrez - Hughes - Ecuador - M. del Bueno - Paraguay - Diag. Norte (Ruta 25) - Av. Victorica - Sarmiento - Av. San Martín - Terminal Moreno.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Cortejarena (Ramal 6): De Estación Moreno - Epaña - Viamonte - Molina Campos - Güemes - Roldán - C. Larralde - Av. Storni - Amancay - F. Rodríguez - Curupayti - Cuyo - Diag. Nápoles - Sófocles - Cabrera - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Lomas de Moreno (Ramal 8): De Estación Moreno - Epaña - B. Mitre - Juan XVIII - Av. Victorica - Ruta 25 - Lamadrid - Agote - Payró - Madariaga - M. del Bueno - Nicaragua - Av. Storni - L. de la Torre - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Planta Pfizar (Ramal 9): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Av. John Kennedy - Av. Gaona - Colonia UTA - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio La Reja Grande (Ramal 11): De Estación Moreno - España - Córdoba (Ombú) - Av. Gaona - La Rioja - M. Coronado - La Madre - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno -Villa Asunción - Paso del Rey (Ramal 12): De Diag. Gnecco - Uruguay - Int. Pagano - Bouchard - W. Scott - San J. Bautista - V. López y Planes - Guido - R. de Escalada de San Martín - Concordia - Quiroga - Santa Fe - Pío XII - Independencia - S. M. del Carril - Boulv. Alcorta - Estación Paso del Rey - volviendo por las mismas hasta Int. Pagano - Boulv. Evita - Rivadavia - Piovano - Estación Moreno.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Santa Brigida (Ramal 13): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Cervantes - Roldán - A. Argentina - Carriego - Murillo - Lafinur - 3 de Febrero - Av. Storni - Murillo - G. A. Becquer - Calle 6 (deslinde).
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio 25 de Mayo (Ramal 14): De Estación Moreno - Epaña - Córdoba (Ombú) - Colateral Gaona - Ruta 25 - Lamadrid - Agote - Payró - Madariaga - M. Sastre - Nicaragua - A. Storni - L. de la Torre - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Satélite (Ramal 15): De Estación Moreno - Epaña - S. Vega - Sarmiento - Victorica - Ruta 25 - Paraguay - M. del Bueno - Ecuador - Huges - Gutiérrez - Segurola - F. Azara - Shakespeare - Ruta 23 - Av. San Martín - Ruta 7 - Estación Moreno - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Villa Anita - Cementerio - Virgencita Gaucha (Ramal 16): De Estación Moreno - Epaña - Sarratea - Av. Victorica - Libertad - Sold. Toledo - Güemes - Roldán - C. Larralde - Storni - Amacay - Fray Cayetano - Rodríguez - F. Sánchez - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Las Flores (Ramal 17): De Estación Moreno - Córdoba (Ombú) - Ruta 23 - Demósteneres - N. Vega - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Villanueva - Cruce Castelar (Ramal 19): De Ruta 23 y Cervantes por Ruta 23 a Pirovano - por ésta hasta Larreta - Namuncurá - Pericles - San Emilio - Roldán - Einstein - Larreta - Pirovano - Echeverría - Gutiérrez - Cervantes - Ruta 23 - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Cruce Derqui con Prolongación a San Atilio (Ramal 23): De Estación Moreno - Epaña - Córdoba (Ombú) - Colateral Gaona - Ruta 25 - Ruta 24 - Av. Pres. Derqui.
+<br>
+Regreso por similar recorrido.
+<br>
+
+
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea127" id="linea127a">Línea 500B</a></div>
+		<div class="content_box" id="linea127" style="display: none;">		
+			<p>San Antonio de Padua - Merlo - Pontevedra
+<br>
+Ramal San Antonio de Pádua - Barrio Nuevo: De Dársena Pádua - Perón - Ayacucho - Italia - Noguera - Gaona - Acosta - Centenario - Garibaldi - Centenario - Nobel - Pueyrredón - Eva Perón - Nicaragua - 1º Junta - Colombia - B. Vista - Obarrio.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - El Ceibo: De Dársena Pádua - Perón - Noruega - Cochabamba - Barabino - Tamarindo - El Gráfico - Marcos Paz - Castañares - Mataco.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Mariano Acosta (cruce): De Dársena Pádua - Perón - Noguera - Eva Perón - El Hornero.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Los Paraísos: De Dársena Pádua - Perón - Ayacucho - Vergara - S. Lorenzo - Av. Castro - A. Brown.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Barrio El Pericón: De Dársena Pádua - Ayacucho - Italia - Noruega - Acosta - Roca - Garibaldi - Alberdi - Nobel - Pellegrini - De la Torre - B. Mitre - French - J. Castro - B. Encalada - Balbastro.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Las Campanillas: De Dársena Pádua - Perón - Noguera - Eva Perón - Sicca - Lafayette - Brown - Garmendia - Zárraga - A. Nervo.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Barrio Rivadavia: De Dársena Pádua - Perón - Noguera - Eva Perón - Sicca - Lafayette - Brown.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Villa Magdalena: De Dársena Pádua - Noguera - Chaco - Echeverría - Eva Perón - Rivarola - Bella Vista.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Río Alegre: De Dársena Pádua - Perón - Noguera - Eva Perón - Otero - De la Unión - Pola - Ruta 1003 - Colpayo - Viedma - Cno. de la Rivera - Lamadrid.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal San Antonio de Pádua - Pontevedra: Igual al recorrido Ramal Río Alegre - hasta De la Unión - por ésta - De los Franceses - Del Perú.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Merlo - Los Aromos: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - San Martín - Italia - Quintana - Perón - Echeverría - Defensa - Noguera - Eva Perón - V. Mercante - Estación Libertad - V. Mercante - Eva Perón - Almagro - Querandí - Helvecia - C. Rica - B. Sur Mer - Maderna - D´Onofrio - Bella Vista.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Merlo - Helvecia: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - San Martín - Italia - Quintana - Perón - Echeverría - Defensa - Noguera - Eva Perón - V. Mercante - Estación Libertad - V. Mercante - Eva Perón - Almagro - Querandí - Helvecia - C. Rica - B. Sur Mer - Jufré - Colombia.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Merlo - Merlo Gómez: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - Eva Perón - Nicaragua - 1º Junta - Colombia - Bella Vista - Hortiguera.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Merlo - Pontevedra: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - V. López - Vergara - Eva Perón - Patricios - Otero - de la Unión - Pola.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Merlo - Merlo Gómez por Av. J. M. Castro: De Dársena Merlo - Moreno - Juncal - Perón - Libertador - Perú - Constitución - J. Castro - Gallo - Sto. Domingo - Rivarola - Ruta 1003 - hasta Ruta 1003 y Hortiguera.
+<br>
+Regreso por similar recorrido
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea128" id="linea128a">Línea 501B</a></div>
+		<div class="content_box" id="linea128" style="display: none;">		
+			<p>Merlo - S. A. de Padua
+<br>
+Merlo - Loma Grande (Ramal 1): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - Diag. Salada - G. Fretes - Aguado - 25 de Mayo - Echeverry - Liszt.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Gral. Belgrano (Ramal 2): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - 1º de Mayo - 25 de Mayo - R. de Escalada de San Martín - Aristóbulo del Valle - Pasco - Matanza - Einstein - Bebedero - Fleming - 12 de Febrero - 25 de Mayo - Echeverry - G. Mistral - Posta de Yatasto.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Barrio el Pericón (Ramal 3): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - R. de Escalada de San Martín - Aristóbulo del Valle - Balbastro - vías del FF.CC. Belgrano.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Almafuerte (Ramal 4): De Dársena de Merlo - Moreno - Juncal - Perón - Av. Libertador - Av. Argentina - Av. San Martín - Arenales - A. del Valle - Bariloche - Lourdes - Ivanowski.
+<br>
+Regreso por similar recorrido.
+<br>
+Alto Merlo - Barrio los Paraísos (Ramal 5): De Maure - Bettinoti - Ameghino - Av. San Martín - Patricias Arg. - Dilón - Bebedero - Diag. Salada - Av. San Martín - V. Lozada - Azara - Iriarte - Posadas - Lainez - Koch - Gral. Paz - Perú - Pringles - Bolívar - Constitución - Moreno - Córdoba - R. Balbín - Perón - Libertador - Maipú - Avellaneda - Mitre - Brown - Vergara - Alem - 9 de Julio - 25 de Mayo - Tacuarí - A. del Valle - Tejedor - San Martín - M. Sastre - San Lorenzo.
+<br>
+Regreso por similar recorrido.
+<br>
+San Antonio de Padua - Liszt y Balbín (Ramal 6): De Dársena San Antonio de Padua - Perón - F. Espinal - 1º de Mayo - 25 de Mayo - Echeverry - Liszt - R. Balbín.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Merlo - Barrio Gral. Belgrano (Ramal 7): De Dársena de Merlo - Moreno - Juncal - Perón - Libertador - Chacabuco - Constitución - Perú - Gral. Paz - Koch - Laines - Posadas - Iriarte - Azara - 25 de Mayo - Echeverri - G. Mistral.
+<br>
+Regreso por similar recorrido.
+<br>
+San Antonio de Padua - Dillón y Yatasto (Ramal 8): De Dársena San Antonio de Padua - Perón - Libertador - Riobamba - Córdoba - Constitución - Av. San Martín - P. Yataso - Dillón.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Ferrari (Ramal 9): De Dársena de Merlo - Moreno - Cervantes - Av. Balbín (Ruta 200) - Pda. KM. 34,5 - Pda. Ferrari - Viedama hasta Canada.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Cementerio Santa Mónica (Ramal 10): De Chacabuco - Colón - Moreno - Juncal - Perón - Libertador - Av. Argentina - Av. San Martín - Murray - A. del Valle - Bariloche - B. Encalada - Arenales - Pericón Bebedero - Av. Eva Perón.
+<br>
+Regreso por similar recorrido.
+<br>
+Hospital Eva Perón - Loma Grande (Ramal 11): De Hospital Eva Perón - Chacabuco - Libertador - Moreno - Cervantes - Constitución - R. Balbín - Gral. Paz - Cachimayo - Curupaytí - Filiberto - Montalvo - Arévalo - Tres Arroyos.
+<br>
+Regreso por similar recorrido.
+<br>
+San Antonio de Padua - Barrio Martín Fierro (Ramal 12): De Dársena San Antonio de Padua - Perón - 25 de Mayo - Espinal - 1º de Mayo - 25 de Mayo - Echeverri - A. del Valle - Garmendia - Andalgalá.
+<br>
+Regreso por similar recorrido.
+<br>
+San Antonio de Padua - Barrio Martín Fierro (Ramal 13): De Dársena San Antonio de Padua - Perón - Av. Argentina - Perú - Libertador - Av. Argentina - Av. San Martín - Salada - G. Fretes - Aguado - 25 de Mayo - Echeverri - A. del Valle - Garmendia.
+<br>
+Regreso por similar recorrido.
+<br>
+Merlo - Loma Grande (Ramal 14): De Dársena de Merlo - Moreno - Juncal - Perón - R. Balbín - Mozart - Bach - Garmendia.
+<br>
+Regreso por similar recorrido.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea129" id="linea129a">Línea 501C</a></div>
+		<div class="content_box" id="linea129" style="display: none;">		
+			<p>Monte Grande - Cruce Lomas - Ezeiza
+<br>
+Estación Monte Grande - Cementerio: De Estación Monte Grande por Petrazzini - V. López - Sofía T. de Santamarina - L. N. Alem - P. Dreyer - Rocatagliata - Libertad - Barbier - Terminal Cementerio.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Monte Grande - Colón y Dreyer: De Estación Monte Grande por Petrazzini - Sofía T. de Santamarina - Boulv. Bs. As. - Alvear - Ascasubi - su cont. Terrarosa - Colón - hasta P. Dreyer.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Monte Grande - Universidad de Lomas: De Estación Monte Grande por Petrazzini - Dorrego - su cont. Constanzo - Roca - N. Malvinas - Petraca - 9 de Julio - Scaglia - Monte Grande - Maxer - hasta Ruta 4 (Cruce Lomas).
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Estación Monte Grande - Restelli y Huergo: De Estación Monte Grande por Petrazzini - V. López - D. Rocha - Arana - Rivadavia - H. Yrigoyen - Alvear - Arana - Matienzo - Pravones - Independencia - Almafuerte - Varisco - Hernández - Del Castillo - U. González - Valette - Cno. de Cintura - Restelli - Terminal en Restelli y Huergo.
+<br>
+Regreso por similar recorrido.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea130" id="linea130a">Línea 501D</a></div>
+		<div class="content_box" id="linea130" style="display: none;">		
+			<p>Longchamps - Adrogue
+<br>
+Ramal Barrio Los Patos: De Estación Longchamps - San Martín - Lima - Bs. As. - Los Cipreses - Quintana - Pringles - Castillo - Santa Fe y Espora.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Villa París: De Estación Longchamps - San Martín - Santa Fe - S. Ortiz - Méndez - Estación Glew.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Los Alamos: De Carrefour Adrogué por Av. H. Yrigoyen - Estación Longchamps - Bolívar - Arias - C. Dihel - Ruta 210 - Payró - Gorrillo - Aguirre - Ruta 210 - Estación Glew - Longchamps.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Los Pinos: De Estación Longchamps - Bolívar - O. Lagos - Av. Burgwardt - Dihel - San Ignacio - Tieghi - Canalejas - Av. Berlín - Circunvalación - Saavedra - Essoin - Cavallos y Gavino Ezeiza.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Municipal: De Estación Longchamps - San Martín - Dihel - Burgwardt - Bs. As. - Los Studs.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Ipona: De Estación Glew - Sarmiento - Mansilla - A. del Valle - Moreno y Olivera.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Parque Roma: De Estación Glew - Sarmiento - Ruta 210 - Clark - Edison y el Ceibo.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio U.O.C.R.A.: De Estación Glew - Sarmiento - Ruta 210 - Belou - Franklin y Cabrera.
+<br>
+Regreso por similar recorrido.
+<br>
+ 
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea131" id="linea131a">Línea 503A</a></div>
+		<div class="content_box" id="linea131" style="display: none;">		
+			<p>Moreno - Paso del Rey - La Reja
+<br>
+Estación Moreno - Barrio Rififi - Puente Cascallares: De Estación Moreno - Alcorta - Piovano - Yrigoyen - Av. de la Argentinidad - El Tiziano - Puente Cascallares - Termianl.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Frigorífico Minguillón: De Estación Moreno - Alcorta - Asconape - Joly - De la Vega - E. Mitre - J. M. Paz - Frigorífico Minguillón - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Barrio Santa rosa - Pileta Lomas Casasco: De Estación Moreno - Alcorta - Piovano - 9 de Julio - Catamarca - Cerviño - Miero - M. Angel - Padre Ansaldo - Bouchard - M. Obarrio - Monsegur - P. Fahy - San Luis - Escuela 43 - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Estación Paso del Rey (por S. Peña): De Estación Moreno - Alcorta - Asconape - E. Mitre - Centenario - S. Peña - Latteri - Luján - S. Cabral - M. de Grandi - Av. Alcorta - Estación Paso del Rey - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Estación Paso del Rey: De Moreno por Av. Alcorta - Asconape - Joly - Luján - S. Cabral - M. de Grandi - cruce de vías - Alcorta - Padre Varvello - D´Errico - Del Carril - Morón - Hernández - Graham Bell - hasta Gaona.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Parque Paso del Rey (por Joly y por Beltrán): De Estación Moreno - Alcorta - Asconape - Joly - Luján - S. Cabral - M. de Grandi - cruce de vías - Alcorta - Padre Varvello - D´Errico - Del Carril - Brown - Hernández - Graham Bell - Pío XII - Brown - Gaona - G. Bell - Bouchard - Talcahuano - V. López y Planes - Beltran - G. Galilei - J. Ingenieros - Av. Libertador (Ruta 23) - Terminal.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Estación Paso del Rey (por Beltrán): De Estación Moreno - Alcorta - cruce de la vías - (M. Melo) - España - Gaona - G. Bell - Maipú - Brown - Bouchard - Talcahuano - V. López y Planes - Beltran - G. Galilei - J. Ingenieros.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - Frigorífico Moreno (Afta): De Estación Moreno - Alcorta - Asconape - Perón - Diag. del Cañón - Ituzaingó - R. Koch - de la Vega - Frigorífico Moreno - Termianl.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Moreno - La Reja - Barrio Atalaya - Puente Cascallares: De Estación Moreno - Alcorta - España - Juan XVIII - M. Fierro - Av. Piovano - Estación La Reja - R. Darío - Av. La Argentina - El Tiziano - Puente Cascallares.
+<br>
+Regreso por similar recorrido.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea132" id="linea132a">Línea 505A</a></div>
+		<div class="content_box" id="linea132" style="display: none;">		
+			<p>Paso del Rey - Puente Gnecco (Part. de Moreno)
+De Estación Paso del Rey por El Mirlo - Independencia - Int. Dastugue - Av. Zapiola - Padre Varvello - Int. Gnecco - Cruce de Puente Gnecco sobre Av. Gaona - Quilmes - Bongiovanni - D. Funes - Roma hasta De la Quintana.
+<br>
+Regreso por similar recorrido.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea133" id="linea133a">Línea 505B</a></div>
+		<div class="content_box" id="linea133" style="display: none;">		
+			<p>San F. Solano - Burzaco - Claypole
+<br>
+Estación San F. Solano - Estación Burzaco (Ramal 1): De Av. 24 y Humberto 1º - por Av. 24 - Falucho - Py Margall - D. Rocha - M. Arín - Gorriti - Altamira - Rivadavia - 20 deSeptiembre - R. Calzada - (Estación FF.CC.) - Cervantes - Altamira - Agüero - D. Rocha - Pío White - Azopardo - Rep. Argentina - J. V. González - El Chiripá - Sempere - Goyena - Humberto 1º - Av. Espora - Colón - Pellegrini - Estación Burzaco - terminal Pellegrini y Ricardo Rojas.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea134" id="linea134a">Línea 510</a></div>
+		<div class="content_box" id="linea134" style="display: none;">		
+			<p>Burzaco - Longchamps - Mtro. Rivadavia
+<br>
+ 
+________________________________________
+Ramal "1": De Estación Burzaco - R. Rojas - Av. Espora - H. del Carril - O. Bozán - P. Podestá - Av. Espora - Sarcione - Morganti - 25 de Mayo - Lahiller - M. Acosta - Plaza Ministro Rivadavia.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "2": De Estación Burzaco - R. Rojas - Av. Espora - Av. Monteverde (Ruta 4) - C. Gardel - Rosas - 25 de Mayo - Av. Espora.
+<br>
+Desdoblamiento: De 25 de Mayo hasta Cementerio Parque Eterno. 
+Regreso por similar recorrido.
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea135" id="linea135a">Línea 514</a></div>
+		<div class="content_box" id="linea135" style="display: none;">		
+			<p>Barrio Lindo - Claypole
+<br>
+________________________________________
+Ramal "A": De Argentina y Alamo por Alamo - Roble - M. Diomede - Gral. Madariaga - Moyano - Guatambú - Policastro - P. Echagüe - Serrano - H. Yrigoyen - Seguí - M. Rodríguez - C. Ameguino - Macias - Canale - Somellera - Estación Adrogué - Rosales - Av. Espora - Diag. Brown - Erescano - España - J. Calvo - Humbberto 1º - Rep. Argentina - Av. 2 de Abril - hasta Garilbaldi.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal "B": De Moyano y Guatambú - por Moyano - Echagüe - Prieto - Bradley - Castagnino - Santo Domingo - Pueyrredón - Santa María - Ituzaingó - E. de Burzaco - Roca - Quintana - Mitre - Colón - Av. H. Yrigoyen - Ituzangó - Santa Maria - Pueyrredón - F. Ameghino - Ituzangó - Arenales - Av. H. Yrigoyen - Bouchard - V. Alsina - Nother - Avellaneda - Spiro - Cordero - Int. González - Canale - Somellera - Rosales - Diag. A. Brown - Diag. Toll - Mitre - Echeverry - Rosales - Sáenz Peña - Av. San Martín - 20 de Diciembre - Saavedra - Altamira - San Martín - Calle 24 - Estación S. F. Solano.
+<br>
+Regreso por similar recorrido.
+<br>
+ 
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea136" id="linea136a">Línea 515</a></div>
+		<div class="content_box" id="linea136" style="display: none;">		
+			<p>Estación Longchamps - Estación Burzaco
+<br>
+<br>
+
+Estación Longchamps - Barrio Rayo de Sol (Ramal A): De Burwardt - Av. Longchamps - C. Dihel - Granderos - San Lorenzo.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Longchamps - Estación Burzaco (Ramal B): De Estación Longchamps - Av. San Martín - B. Sur Mer - O. Lagos - H. Ascasubi - Cte. Prado - Combate de Mte. Santiago - Fonrouge - Vallejos - Av. Monteverde - Italia - C. Amenedo - Alsina - Roca.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Longchamps - Barrio Francia (Ramal C): De Av. Aviación - (Estación Longchamps) - Bolívar - Av. Pavón - B. Sur Mer - Alvear - Francia.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Longchamps - Barrio Palumbo (Ramal D): De Av. Aviación - Av. Pavón - Palumbo - L. M. Drago - Arce - Finochietto - Gran Vía del Sur - Estación Longchamps.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+ 
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea137" id="linea137a">Línea 520</a></div>
+		<div class="content_box" id="linea137" style="display: none;">		
+			<p>Estación Lanus - Hospital Evita
+<br>
+<br>
+
+Estación Lanús - M. Avellaneda y C. Pellegrini: De Estación Lanús - 20 de Octubre - J. Piñeiro - 20 de Septiembre - 25 de Mayo - Río de Janeiro - G. Spano - Yerbal - L. Vernet - M. Castro - Mñor. Hladnik - M. Avellaneda - Mendoza - Olazábal - Boqueron - M. Avellaneda hasta C. Pellegrini.
+<br>
+<br>
+Regreso por similar recorrido. 
+Estación Lanús - Hornos y Boqueron: De Estación Lanús - J. Piñeiro - 20 de Septiembre - 25 de Mayo - Tagle - Olazábal - Murature - Gral. Hornos - hasta Boqueron.
+<br>
+<br>
+Regreso por similar recorrido. 
+Estación Lanús - Hospital Evita: Igual al Ramal B hasta 25 de Mayo y Tagle - Warnes - Rivadavia - M. Pedraza - Pilcomayo - Maza - Canadá - S. del Estero - Viamonte - H. Noya - Balcarce - Hospital Evita.
+<br>
+<br>
+Regreso por similar recorrido. 
+ 
+Hornos y Boqueron - Hospital Evita: De Hornos y Boqueron - por Hornos - Murature - Olazábal - Tagle - 25 de Mayo - Cjal. Noya - Balcarce - hasta Río de Janeiro - Hospital Evita.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea138" id="linea138a">Línea 521</a></div>
+		<div class="content_box" id="linea138" style="display: none;">		
+			<p>Estación Lanús - Villa Gral. Guemes
+<br>
+<br>
+
+De: Estación Lanús - 29 de Septiembre - E. Mitre - Pres. Sarmiento - B. Encalada - A. France - Rodríguez - Gral. Deheza - Pichincha - Centenario Uruguayo - Bolaños - Bulv. Italianos - Bouchard - Condarco - B. Encalada - Condarco - B. Encalada - Yapeyú.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea139" id="linea139a">Línea 522</a></div>
+		<div class="content_box" id="linea139" style="display: none;">		
+			<p>Barrio Pampa - Hornos
+<br>
+<br>
+
+De: Lynch - Eva Perón - Alzaga - Barrio Pampa - B. de Estrada - Méndez - Albariños - Centenario Uruguayo - Tucumán - Magdalena - Eva Perón - Pergamino - Ituzangó - A. France - M. Weild - 29 de Septiembre - Estación Lanús - 29 de Septiembre - paso bajo nivel M. Lebhenson - Tucumán - H. Yrigoyen - Cnel. Rico - V. Sarsfield - Eva Perón - M. Paz - Río de Janeiro - Rosales - G. Velloso - M. Avellaneda - Ugarte - Magallanes - Taborda - Hornos.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+ 
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea140" id="linea140a">Línea 523</a></div>
+		<div class="content_box" id="linea140" style="display: none;">		
+			<p>Estación Lanús - Estación Remedios de Escalada
+<br>
+<br>
+
+De: Estación Lanús - 20 de Octubre - J. Piñeiro - Mtro. Brin - S. Peña - Av. Rosales - C. Namuncurá - N. Avellaneda - Pastor Ferreyra - J. de Garay - Av. H. Yrigoyen - Caputo - Estación Remedios de Escalada.
+<br>
+<br>
+Regreso por similar recorrido
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea141" id="linea141a">Línea 524</a></div>
+		<div class="content_box" id="linea141" style="display: none;">		
+			<p>Estación Lanús - Charcas y Cno. Gral. Belgrano
+<br>
+<br>
+
+De: Estación Lanús - 29 de Septiembre - E. Mitre - O´Higgins - Pringles - Centenario Uruguayo - Pichincha - Gral. Pinto - Méndez - Guido - Rondeau - cruce vías Ferrovías - Pitágoras - Cazón - Bolaños - Dirk Kloosterman - Cno. Gral. Belgrano.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea142" id="linea142a">Línea 526</a></div>
+		<div class="content_box" id="linea142" style="display: none;">		
+			<p>Estación Lanús - Cno. Gral. Belgrano y V. Hugo
+<br>
+<br>
+
+De: Estación Lanús - 29 de Septiembre - Sitio de Montevideo - Héctor Guidi - Av. 9 de Julio - Dirk H. Kloosterman - Pitágoras - V. Hugo - Cno. Gral. Belgrano.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea143" id="linea143a">Línea 527</a></div>
+		<div class="content_box" id="linea143" style="display: none;">		
+			<p>Lanus - Puente Uriburu - Monte Chingolo
+<br>
+<br>
+
+Estación Lanús - Circunvalación y Lynch (Ramal A): De Estación Lanús - 29 de Septiembre - Av. Eva Perón - Héroes de Malvinas - Sitio de Montevideo - Centenario Uruguayo - B. de Estrada - Bulv. de los Italianos - Aguapay - Matanza - Roma - Circunvalación y Lynch.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea144" id="linea144a">Línea 540</a></div>
+		<div class="content_box" id="linea144" style="display: none;">		
+			<p>Estación Lomas de Zamora - Puente de la Noria
+<br>
+<br>
+
+De: Estación Lomas de Zamora - Boedo - M. Castro - Sarmiento - Oliden - M. Arrotea - Falucho - Tropero - Virgilio - Homero - Tabaré - Cno. de la Rivera - Puente de la Noria.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea145" id="linea145a">Línea 541</a></div>
+		<div class="content_box" id="linea145" style="display: none;">		
+			<p>Banfield - Villa Vibertina
+<br>
+<br>
+
+Ramal "A": De Estación Banfield - L. N. Alem - Vieytes - Santa Fe - R. Peña - Carlos Glade - Guidi de Franc - Luis Siciliano - M. Rodríguez - Cno. Perón - Marsella - Machado - París - A. Bello - hasta Itatí.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal "B": Su ruta hasta R. Peña - Gutiérrez - Bilbao - La Vieja - Rodríguez - Milán - París - Nuñes de Arce - Marsella - su ruta hasta Itatí.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea146" id="linea146a">Línea 542</a></div>
+		<div class="content_box" id="linea146" style="display: none;">		
+			<p>Estación Lomas de Zamora - Puente de la Noria
+<br>
+<br>
+
+De: Estación Lomas de Zamora - Boedo - Manuel Castro - Sarmiento - Colombres - Cno. Perón - hasta Puente de la Noria.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea147" id="linea147a">Línea 543</a></div>
+		<div class="content_box" id="linea147" style="display: none;">		
+			<p>Estación Lomas de Zamora - Universidad de Lomas
+<br>
+<br>
+
+De: Estación Lomas de Zamora - Boedo - Manuel Castro - Laprida - Cervantes Saavedra - Lope de Vega - E. del Campo - Falucho - Olmos - Bustos - Juan XIII - hasta Ruta 4.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea148" id="linea148a">Línea 544</a></div>
+		<div class="content_box" id="linea148" style="display: none;">		
+			<p>Estación Lomas de Zamora - Copihue y Virgilio
+<br>
+<br>
+
+De: Estación Lomas de Zamora - Boedo - Almafuerte - Portela - F. Chopín - Boedo - Gaito - Laprida - O. Andrade - Potosí - Virgilio - Hidaldo - Iparraguirre - Copihue - hasta Virgilio.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea149" id="linea149a">Línea 547</a></div>
+		<div class="content_box" id="linea149" style="display: none;">		
+			<p>Banfield - Barrio La Perla
+<br>
+<br>
+
+De: Estación Banfield - Maipú - Av. Alsina - Gallo - Lugano - Bombero Ariño - Juncal - J. Mármol - Allemandri - R. Darío -Av. Eva Perón - Asunción - Tarija - Quirno - Costa hasta 30 de Septiembre.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea150" id="linea150a">Línea 548</a></div>
+		<div class="content_box" id="linea150" style="display: none;">		
+			<p>Banfield - Barrio S.I.T.R.A.
+<br>
+<br>
+
+De: Estación Banfield - L. N. Alem - Larroque - Cno. Perón - C. Rodríguez - Prensa Argentina - M. Rodríguez - hasta Virgilio.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea151" id="linea151a">Línea 549</a></div>
+		<div class="content_box" id="linea151" style="display: none;">		
+			<p>Estación Temperley - Universidad
+<br>
+<br>
+
+De: Estación Temperley - Avellaneda - Ing. Huergo - Garibaldi - Madrid - Juan XVIII - hasta Ruta 4.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea152" id="linea152a">Línea 550</a></div>
+		<div class="content_box" id="linea152" style="display: none;">		
+			<p>Estación Lomas de Zamora - Puente de la Noria
+<br>
+<br>
+
+Estación Lomas de Zamora - Puente de la Noria (Ramal "A"): De Estación Lomas de Zamora - Boedo - Azara - Portela - Baliña - Las Heras - Santa Fe - C. Glade - Emerson - Mayor Olivero - Talleres - M. Rodríguez - El Plumerillo - E. de los Andes - Murature - Pilcomayo - Larrazábal - Rocondo - C. de Alas - calle de la rivera hasta Puente de la Noria.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Puente de la Noria - Estación Lavallol (Ramal "B"): De Puente de la Noria - Camino de la Rivera - Larrazábal - Recondo - Murature - E. de los Andes - El Plumerillo - Constitución - Santa Fe - Gral. Frías - Garibaldi - hasta Estación Lavallol.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea153" id="linea153a">Línea 551</a></div>
+		<div class="content_box" id="linea153" style="display: none;">		
+			<p>Estación Lomas de Zamora - Puente de la Noria
+<br>
+<br>
+
+De: Estación Lomas de Zamora - Boedo - Carlos Croce - Las Heras - Cno. Perón - Puente de la Noria.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea154" id="linea154a">Línea 552</a></div>
+		<div class="content_box" id="linea154" style="display: none;">		
+			<p>Estación Banfield - Universidad de Lomas de Zamora
+<br>
+<br>
+
+De: Estación Banfield - L. N. Alem - Las Heras - Las Tropas - Lisandro de la Torre - Virgilio - Copihue - Iparraguirre - Juan XVIII - Hasta - Ruta 4 (Cno. de Cintura).
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea155" id="linea155a">Línea 561</a></div>
+		<div class="content_box" id="linea155" style="display: none;">		
+			<p>Estación Lomas de Zamora - Universidad de Lomas de Zamora
+<br>
+<br>
+
+Estación Lomas de Zamora - Universidad (Ramal A): De Lomas de Zamora - Boedo - M. Castro - Sarmiento - Loria - Av. H. Yrigoyen - Garibaldi - Vago - 25 de Mayo - San Mateo - A. Argentina - Cno. de Cintura - Universidad.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Lomas de Zamora - Universidad (Ramal B): De Lomas de Zamora - Boedo - M. Castro - Sarmiento - Loria - Av. H. Yrigoyen - Garibaldi - Vago - Gral. Paz - San Benito - Lavalle - Gral. Frías - Pobladora - Cno. de Cintura - Universidad.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea156" id="linea156a">Línea 562</a></div>
+		<div class="content_box" id="linea156" style="display: none;">		
+			<p>Est. Lomas de Zamora - Loma Verde
+<br>
+<br>
+
+Estación Lomas de Zamora - Seguí y Wilde (Ramal A): De Estación Lomas de Zamora - Boedo - M. Castro - Sarmiento - Oliden - Gral. Bermúdez - Garibalde - Gral. Frías - Liniers - La Huella - La Armonía - Recreo - Directorio - Ameghino - N. de la Peña - Doyhenard - D. Enz - Pareta - G. Kuhr - Doyhenard - Seguí hasta Wilde.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Lomas de Zamora - Seguí y Wilde (Ramal B): De Estación Lomas de Zamora - Boedo - M. Castro - Sarmiento - Oliden - Madrid - Garibaldi - Rawson - Recreo - Directorio - Ameghino - N. de la Peña - Doyhenard - D. Enz - Pareta - G. Kuhr - Doyhenard - Seguí hasta Wilde.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea157" id="linea157a">Línea 564</a></div>
+		<div class="content_box" id="linea157" style="display: none;">		
+			<p>Lomas de Zamora - Pasco
+<br>
+<br>
+
+Estación Lomas de Zamora - Donato Alvarez y Garay (Ramal A): De Estación Lomas de Zamora - Balcarce - Cerrito - A. France - Cangallo - Boston - Av. Eva Perón - J. Neglia - El Churrinche - Kant - El Zorzal - San Cristobal - Av. Eva Perón - Donato Alvarez - hasta Garay.
+<br>
+<br>
+Regreso por similar recorrido. 
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea158" id="linea158a">Línea 580</a></div>
+		<div class="content_box" id="linea158" style="display: none;">		
+			<p>Quilmes - Barrio El Jalón
+<br>
+<br>
+
+Quilmes - Lebenshon y Pueyrredón: De Brandsen y Mozart - A. Bell - Humberto 1º - Libertad - Brandsen - Pringles - Guido - H. Yrigoyen - Olavarría - San Martín - L. N. Alem - Gaboto - Rivadavia - Estación Quilmes - H. Yrigoyen - Garibaldi - Mitre - Las Heras - Lebensohn - Pueyrredón - Terminal.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Quilmes - Santo Domingo: De el Hospital de Quilmes - su ruta hasta San Martín - Garibaldi - Moreno - Humberto 1º - Puente 14 de Agosto - A. del Valle - Corrientes - M. Rodríguez - San Mauro de Castelverde - Av. La Plata - Einstein - Av. Aramburu - L. de la Torre - Barrio " El Jalón" - Terminal.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea159" id="linea159a">Línea 582</a></div>
+		<div class="content_box" id="linea159" style="display: none;">		
+			<p>Cementerio de Ezpeleta - Estación S. F. Solano - Quilmes Oeste
+<br>
+<br>
+
+Cementerio de Ezpeleta - Tucumán y Calle 390: De el Cementerio de Ezpeleta - Monroe - La Guarda - Derqui - Padre Bruzzone - Pringles - Mendoza - Uriburu - Güiraldes - Cevallos - Varela - Zola - Gelly y Obes - Monroe - 1º Junta - Humberto 1º - Punte 14 de Agosto - A. del Valle - 3 de Febrero - Estación Quilmes - Gran Canaria - C. Pellegrini - Roca - Islas Malvinas - Tschiffely - Tucumán - Calle 390.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Pellegrini por Av. 850: De Belgrano - C. Pellegrini - Calchaquí - Barrio Cooperadora - de Hacendados - Av. 850 - Av. 844 - Estación S. F. Solano.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea160" id="linea160a">Línea 583</a></div>
+		<div class="content_box" id="linea160" style="display: none;">		
+			<p>Estación Quilmes - Cno. Gral. Belgrano - Villanueva Argentina
+<br>
+<br>
+
+Ramal Estación Quilmes - Gran Canaria y Corrientes: De Estación Quilmes - Gran Canaria - C. Pellegrini - B. de Irigoyen - Islas Malvinas - A. Baranda - Triunvirato - M. T. de Alvear - hasta Rep. de Francia.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Estación Quilmes - Cno. Gral. Belgrano: De Estación Quilmes - Gran Canaria - C. Pellegrini - B. de Irigoyen - Islas Malvinas - A. Baranda - Triunvirato - Magallanes - Ayolas - Av. La Plata - A. Einstein - Aramburu - J. V. González - Gutiérrez - E. del Campo - Andrade - M. de Unamuno - N. de Laprida - hasta Cno. Gral. Belgrano.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea161" id="linea161a">Línea 584</a></div>
+		<div class="content_box" id="linea161" style="display: none;">		
+			<p>Bernal Oeste - Garage
+<br>
+<br>
+
+De: Montevideo y Cno. Gral. Belgrano (Escuela 33) - Cno. Gral. Belgrano - Los Andes - Mosconi - Montevideo - Viejo Bueno - Cmte. Franco - L. M. Campos - Zapiola - Av. D. Rocha - Lamadrid - Condarco - Rep. del Líbano - V. López - R. López - A. del Valle - Int. Oliveri - H. Yrigoyen - Alsina - Gaboto - Rivadavia - H. Yrigoyen - Garibaldi - Alvear - 1º Junta - Av. Mitre - La Guarda - Paz - Salta - Río Desaguadero - Río Negro - Esquel - Brown - La Guarda - Centenario - Sucre - Nicaragua - San Martín - F. Varela - Av. Calchaquí - Derivador Cruce Varela - Cno. Gral. Belgrano - Calle 13 - Calle 102 - Av. 14 - hasta Garage.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea162" id="linea162a">Línea 619</a></div>
+		<div class="content_box" id="linea162" style="display: none;">		
+			<p>Cruce Varela - El Pato
+<br>
+<br>
+
+De: Terminal Cruce Varela - Finochietto - Av. Calchaquí - Derivador Cruce Varela - Av. 7 - Lisandro de la Torre - Calle 11 - Calle 146 -Lisandro de la Torre - Av. 21 - Lisandro de la Torre - Calle 145 - Calle 14 - Calle 138 - Av. 21 - Calle 137 - Calle 27 - Calle 135 - Av. Eva Perón (Sevilla) - Calle 359 - Av. Este - Calle 162 - Calle 161 - Av. Plátanos - Calle 149 - Av. 55 - Calle 138 - Calle 137 A - Calle 53 - Cno. Gral. Belgrano - Calle 413 - Calle 455 - Calle 416 - Calle 455 - Calle 413 - Ruta 36 - Calle 619 - Calle 544 - Terminal Escuela 12.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+ 
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea163" id="linea163a">Línea 620</a></div>
+		<div class="content_box" id="linea163" style="display: none;">		
+			<p>Lomas del Mirador - San Justo - Laferrere - Gonzalez Catán
+<br>
+<br>
+
+Av. Gral. Paz y Av. Brig. Gral. Juan M. de Rosas (ex Prov. Unidas) - Ruta 3 km 47,700: De Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - hasta km 47,700.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Av. Gral. Paz y Av. Brig. Gral. Juan M. de Rosas (ex Prov. Unidas) - Km 47,700 por Catán: De Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - hasta km 29 - Senguel - (Ruta 21) - Cepeda - Sáenz - Pérez - Ruta 3 km 32 al 38 - H. Wast - Av. Montecarlo - Ruta 3 km 39 al 47,700 (Av. Rosas).
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Barrio Esperanza: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Av. Montecarlo - hasta Schubert.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+La Foresta: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - California - Colorado - Maure.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Villa Dorrego: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Av. Montecarlo - hasta Schubert.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+KM 29º Barrio Independencia: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Céspedes - M. Coronado - Ringlos - Puelches - Juan F. Cobo - hasta V. Hugo.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Barrio las Torres (por Scasso): Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Da Vinci - La Bastilla - C. de la Barca - Luján - Echauri - Zepellin - C. de la Barca - Ruta 3 - Ruta 21 - hasta Díaz Colodero.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Gral. Paz - Barrio Luz y Fuerza - Laferrere - Scasso: Av. Brig. Gral. Juan M. de Rosas (Ruta 3) - Ambrosetti - Perú - L. Gallo - Balbastro - Mocoretá - Moldes - José I. Rucci - R. Pérez - Zepellin - Marconi - Encina - C. Casares - V. Gómez - Santa Rosa - Freire - Sudamérica - Murgiondo - H. Luque - García Merou - M. Coronado - Reaño - V. Martínez - Rocamora - Watt - Del Tejar - Voissin - Da Vinci - La Bastilla - C. de la Barca - hasta Alagón.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Gral. Paz - KM 32 - Los Ceibos: Ruta 3 km 32 - Dr. José Equiza - hasta Esteco.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Laferrere - Villa Scasso: De Estación Laferrere - Piedrabuena - Sob. Nacional - H. Luque - García Moreau - M. Coronado - Reaño - V. Martínez - Rocamora - Watt - Del Tejar - Voissin - Da Vinci - La Bastilla - C. de la Barca - hasta Ruta 3.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - G. Catán - KM 47,700: De Av. de Mayo - F. Varela - Perón - H. Yrigoyen - Almafuerte - Av. Brig. Gral. Juan M. de Rosas - Ruta 3 km 31 - E. Catón - Barrientos - Inca - Conde - Posamay - Cepeda - Sáenz - E. S. Pérez - Ruta 3 km 47,700.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+San Marino: Igual al Ramal anterior hasta Ruta 3 km 44,500 - H. Quiroga - Cañada de Gómez - H. Quiroga - hasta Villaroel.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Villa Dorrego: Igual al Ramal anterior hasta Av. Brig. Gral. Juan M. de Rosas - B. Matienzo - E. Garzón - B. Catáneo - J. C. Varela - Armonía - Zelada.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+V. Costructora - Borgward: Igual al Ramal anterior hasta Av. Brig. Gral. Juan M. de Rosas - Derqui - Terrada - Ambrosetti - Montañeses - J. I. Rucci - R. Pérez - Zepellin - Andalgalá - Tinogasta - hasta Marconi.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea164" id="linea164a">Línea 621</a></div>
+		<div class="content_box" id="linea164" style="display: none;">		
+			<p>Ramos Mejia - Gonzalez Catán - Ruta 3 Km. 47.700
+<br>
+<br>
+
+Ramos Mejía - Barrio Esperanza: Av. de Mayo - F. Varela - Perón - H. Yrigoyen - Almafuerte - Av. Brig. J. M. de Rosas - Hugo Wast - hasta Schubert.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - La Foresta: Su ruta hasta Av. Brig. J. M. de Rosas - California - hasta Colodaro.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - Villa Dorrego: Su ruta hasta Av. Brig. J. M. de Rosas - B. Matienzo - E. Garzón - J. C. Varela - Armonía - Zelado.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - Villa Scasso (por Da Vinci): Su ruta hasta Av. Brig. J. M. de Rosas - L. da Vinci - Oliveri - C. de la Barca - hasta Luján.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - R. Castillo: Su ruta hasta Av. Brig. J. M. de Rosas - C. Casáres - Granville - Santa Cruz.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramos Mejía - Atalaya: Su ruta hasta Av. Brig. J. M. de Rosas - Islas Malvinas - Seguí - Rep. de Portugal - Cristianía - R. Lista - hasta Tornquist.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea165" id="linea165a">Línea 622</a></div>
+		<div class="content_box" id="linea165" style="display: none;">		
+			<p>Laferrere - Villa Insuperable
+<br>
+<br>
+
+Gral. Paz - Villa Unión: Lisandro de la Torre y Gral. Paz - por ésta - Salguero - Vita D. Sabia - Rosas - Rafaela - R. Ortega - M. Pita - La Bastilla - Da Vinci - hasta Lanza - donde termina.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Gral. Paz - San Marino: Su ruta hasta Ruta 3 - por ésta hasta Km 44,500 - H. Quiroga - Cañada de Gómez - H. Quiroga - hasta Villaroel.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Laferrere - Barrio Don Juan: De Comodoro Py y Luro - por ésta - M. Paz - Beethoven - J. C. Varela - García Moreau - Garmendia - Salvigny - Tarija.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Por Spiro: De Comodoro Py y Luro - Comodoro Py - Spiro hasta J. M. Echauri.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal La Loma: De Comodoro Py y Luro - por Luro - M. Paz - Cjal. V. Gómez - Da Vinci.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Estación R. Castillo: De Del Campo y R. Lista por Victorino de la Plaza - Granville - Lacar - Bogado - Polledo - Estación del Campo - hasta R. Lista.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+ 
+ 
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea166" id="linea166a">Línea 624</a></div>
+		<div class="content_box" id="linea166" style="display: none;">		
+			<p>San Justo - Ramos Mejia - Atalaya - Villegas
+<br>
+<br>
+
+Cemeterio de Villegas - Atalaya (por Mocoretá): De L. Gallo y Peribebuy - por ésta - Ambrosetti - Rosas - Arieta - A. Illia - Carrasco - Cerviño - J. I. Rucci - Caupolicán - Cristianía - de las Casas - Marconi - Ñorquin - C. Casares - Hualfin - María Pita - P. Ferré - hasta E. del Campo.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Barrio B.I.D. - Atalaya: Maciel y Cristianía por ésta - Av. Central - El Pindo - Crovara - Ambrosetti - Terrada - Bermejo - Montañeses - Sarratea - Rosas - Arieta - Venezuela - Ensenada - Granada - Atenas - J. Jaures - París - hasta R. Falcón.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+San Justo - Los Pinos: Paraguay y Arieta - por ésta - A. Illia - Carrasco - Venezuela - Thames - Lartigau - Pampa - La Paz - Rivera Indarte - América - Themes - Cané - Mñor. Bufano - Carabobo - La Porteña - Cané - Pujol - Cristianía - hasta Don Bosco.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Cementerio de Villegas - Ramos Mejía: León Gallo y Peribebuy - por Peribebuy - Ambrosetti - Rosas - Arieta - A. Illia - Santamaría - América - Rivera Indarte - Garibaldi - Zapiola - Triunvirato - Brandsen - Dr. Iannone - Rondeau - Rosales - Av. de Mayo - Belgrano.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea167" id="linea167a">Línea 628</a></div>
+		<div class="content_box" id="linea167" style="display: none;">		
+			<p>San Justo - Mendeville - La Salada
+<br>
+<br>
+
+San Justo - Mendeville: De Perón e Yrigoyen - Almafuerte - Paraguay - Pichincha - Rosas - Sarandí - Peribebuy - Arieta - Crovara - Nazar - J. Alicó - Cochrane - Campión - Estación Mendeville.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+San Justo - La Salada: Su ruta Cochrane - Darragueira - Moctezuma - J. Alico - Gorriti - De la Cooperación - B. Sur Mer - Roosevelt - Gral. Paz - A. Díaz - Pablo VI - Puerto Rico - Juan XVIII - A. Díaz - Aquino - Av. El Tala - Paso de los Andes - Vieytes hasta Tequendama.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+San Justo - La Salada (por Migueletes): De Perón e Yrigoyen - Almafuerte - Paraguay - Pichincha - Rosas - Sarandí - Peribebuy - Arieta - Crovara - Nazar - J. Alicó - Cochrane - Campión - Mñor. Bufano - Migueletes - Lino Lagos - Pilcomayo - C. Barros - Arozarena - M. Satre - Darragueira - su ruta hasta La Salada.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea168" id="linea168a">Línea 629</a></div>
+		<div class="content_box" id="linea168" style="display: none;">		
+			<p>Estación Laferrere - Barrio Central - Rafael Castillo
+<br>
+<br>
+
+De: Echeverría y Piedrabuena - por Echeverría - Sob. Nacional - Luro - Ruta 3 - E. del Campo - Aguapey - M. Pita - P. Ferré - Lacar - E. Voguel - M. Zamudio - Polledo - Lacar - Granville - hasta V. de la Plaza.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea169" id="linea169a">Línea 630</a></div>
+		<div class="content_box" id="linea169" style="display: none;">		
+			<p>Crovara y Gral. Paz - San Justo - Estación Independencia
+<br>
+<br>
+
+Crovara y Gral. Paz - KM 29 (por San Alberto): Crovara - Cristianía - Peribebuy - J. I. Rucci - Ruta 3 km 29.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Independencia (por Laferrere): Crovara - Cristianía - Ruta 21 - hasta Ruta 3 km 29.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Crovara y Gral. Paz - San Justo: Crovara - Arieta - Villegas - Perón - Yrigoyen.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Crovara y Gral. Paz - KM 29 (por Víctor Martínez): Crovara - Cristianía - Ant. Argentina - V. Martínez - Marconi - Enciana - Soldado Sosa - V. Martínez - L. Vernet - Encina - H. Ascasubi - P. Obligado - Ezaiza - Gral. Rojo (Ruta 21) hasta Ruta 3 km 29 (Estación Independencia).
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea170" id="linea170a">Línea 634</a></div>
+		<div class="content_box" id="linea170" style="display: none;">		
+			<p>Morón - Palomar
+<br>
+<br>
+Ramal Morón - Don Bosco - Palomar: De Estación Morón por 9 de Julio - Entre Rios - Int. A. Costa - J. Perez - Castaños - HOSP. LAVIGNOLE - Dr. R. Monte - Weizman - J. A. Mazza - C. de Patagones - Virgilio - Cartagena - Av. Don Bosco - C. de Patagones - Av. Eva Perón - CEMENTERIO DE MORÓN - J. M. Casullo - C. Pellegrini - Belgrano - Est. MORON - Salta - Azcuenaga - R. Balbín - Donato Alvarez - Lamadrid- V. Gómez - Int. Goria - M. Lainez - Amado Nervo - Sullivan - F. Beiro - D. Prats - Mtra. Rocha Montarce - Int. R. Amato - J. Bianco - F. Moraga - Padre E. Vanini - Cap. C. Rosales - Carosella - Int. Ramos Mejia - Tte. Grl. Bergamini - Año 1852 - Grl. B. Victorica hasta Estación El Palomar.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Morón - Barrio Aguero: Por 9 de Julio - Ntra. Señora del Buen Viaje - Humberto 1° - CEMENTERIO DE MORÓN - Av. Eva Perón - Pres. Alessandri - M. Avellaneda - Azul hasta Padre Castañer.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea171" id="linea171a">Línea 670</a></div>
+		<div class="content_box" id="linea171" style="display: none;">		
+			<p>Miguelete - Loma Hermosa - Jose L. Suarez
+<br>
+<br>
+
+Ramal "1": Loma Hermoza: De Estación Migueletes por R. Peña - 25 de Mayo - Moreno - González - Belgrano - Saavedra - Mitre - Ayacucho - Pueyrredón - San Lorenzo - Mitre - Av. Balbín - 9 de julio - Av. Rosas - Ex Ruta 8 - Rivadavia - Mendoza - Einstein - Paraná - Las Hortencias.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal "2": Barrio Libertador: De Estación Migueletes - su ruta hasta Av. Balbín - Ex Ruta 8 - J. Hernández - S. Cabral - Maipú - Av. Eva Perón - Cuba - España - Calle 132 - 1º de Agosto - Sarandí - San Martín - Av. del Libertador - J. de Irbarbouru.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal "3": Parque San Martín: De Estación Migueletes - su ruta hasta 9 de Julio - J. de Irbarbouru - E. Zeballos - Calle 204 - Debenedetti - Camino del Buen Ayre - Parque San Martín.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal "4" Estación J. L. Suárez - Barrio Independencia: De Estación Migueletes - su ruta hasta 9 de Julio - Av. Márquez - Estación J. L. Suárez - San Martín - Av. Márquez - Prof. Aguer - Diag. 180 - Barrio Independencia.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea172" id="linea172a">Línea 691</a></div>
+		<div class="content_box" id="linea172" style="display: none;">		
+			<p>Villa Hidalgo - Lomas del Mirador
+<br>
+<br>
+
+De: Sarratea y Yatay por R. Obligado - Virrey Cisneros - Malabia - Ing. Huergo - Esquiú - J. Madero - E. de la Crovara - Italia - Washington - Esmeralda - Roldán - Lacroze - Washington - E. Zola - Libertador - Italia - Moreno - Lacroze - Lavalle - Independencia - Estación V. Ballester - Witcomb - Rosario - Int. Casares - Marengo - Santa Rosalía - Dr. Aleu - Estación San Andrés - S. Peña - Santa Marta - Gral. Savio y Constituyentes.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea173" id="linea173a">Línea 700</a></div>
+		<div class="content_box" id="linea173" style="display: none;">		
+			<p>Beccar - Martinez - Boulogne
+<br>
+<br>
+
+Ramal Beccar - Martínez: De Juncal y Uruguay - Av. Rolón - Av. Fleming - Monseñor Larumbe - Av. Santa Fe - hasta Alvear.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Martínez - Villa Adelina: De Av. Santa Fe y Alvear - por Av. Santa Fe - Cuyo - Monteagudo - Entre Ríos - Av. Fleming - Catamarca - Av. Fondo de la Legua - Av. Márquez - Curupaytí - Thames - Yerbal - Soldado de Malvinas - M. Rodrígues - Estación V. Adelina.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Ramal Martínez - Boulogne: De Av. Santa Fe y Alvear - por Av. Santa Fe - Córdoba - Av. Fleming - Cuyo - hasta Panamericana - Yrigoyen - Av. de Mayo - Lamadrid - Thames - Yerbal - Salguero - Estación Boulogne.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+ 
+ 
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea174" id="linea174a">Línea 707</a></div>
+		<div class="content_box" id="linea174" style="display: none;">		
+			<p>Estación Martinez - Villa Adelina - Estación Boulogne 
+
+Estación Martínez - Villa Adelina: De Estación Martínez - Gral. Alvear - Av. Santa Fe - Cuyo - Av. Fleming - Catamarca - Fondo de la Legua - Av. Márquez - Pichincha - Thames - Yerbal - Sold. de Malvinas - M. Rodríguez - Av. de Mayo - hasta Estación V. Adelina.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+Estación Martínez - Estación Boulogne: De Estación Martínez - Gral. Alvear - Av. Santa Fe - Córdoba - Av. Fleming - Cuyo - Fondo de la Legua - L. M. Drago - Av. de Mayo - Gral. Lamadrid - Thames - Yerbal - Salguero - Estación Boulogne.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+C. Tejedor y Uruguay - Estación Martínez: De C. Tejedor y Uruguay - R. Falcón - B. Encalada - Mñor. Larumbe - Av. Santa Fe - hasta Alvear - Estación Martínez.
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea175" id="linea175a">Línea 710</a></div>
+		<div class="content_box" id="linea175" style="display: none;">		
+			<p>Carupa - San Fernando - Virreyes - Victoria
+<br>
+<br>
+Estación Virreyes - Victoria - San Fernando: De Estación Virreyes - Av. Avellaneda - Italia - Pasteur - Santa M. de Oro - C. Casares - B. Encalada - Uruguay - Brandsen - Estación Victoria - Uruguay - Sobremonte - cruce Av. Avellaneda - Sobremonte - Madero - Estación San Fernando - Ruta 202 - hasta Balcarce.
+<br>
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+<br>
+Estación Virreyes - Carupá - Barrio Infico: De Estación Virreyes - Av. Avellaneda - cruce Acc. Norte Ramal Tigre - Av. Avellaneda - Ruta 202 - Barrio San Jorge - Aeródromo San Fernando - Ruta 202 - Estación San Fernando - Madero - Sobremonte - Rivadavia - Estación Carupá - Las Heras - Sobremonte - Alvear - Plumerillo - Barrio Infico.
+<br>
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+<br>
+Canal San Fernando - Punta Chica: De Canal San Fernando - (Estación Fluvial) - Colón - (Tren de la Costa) - 3 de Febrero - Municipalidad de San Fernando - 9 de Julio - Estación San Fernando - Belgrano - Estación Virreyes - C. Casares - Lavalle - Estación Victoria - Santa Marina - Av. Perón - Uruguay - Av. Libertador Gral. San Martín.
+<br>
+<br>
+<br>
+Regreso por similar recorrido.
+<br>
+<br>
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea176" id="linea176a">Línea 720</a></div>
+		<div class="content_box" id="linea176" style="display: none;">		
+			<p>Almirante Brown - Estación Don Torcuato
+<br>
+
+Almirante Brown - Ruta 197 (H. Yrigoyen) - Estación Don Torcuato: De A. Brown - Ruta 197 - San Martín - Ruta 202 - Calle Carlos - Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+KM 38 por Don Torcuato: De A. Brown - Mitre - San Martín - Liniers - Ruta 197 - Ruta 9 - Groussac - Vilela - M. Sastre - Ruta 197 - Zeballos - Boena - M. Sastre - Gral. Pacheco - Fader - Alem - Campos - Estrada - Ruta 202 - Calle Carlos - Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+Calle Chile a Don Torcuato: De A. Brown - Cazón - Mitre - San Martín - Liniers - Acceso Norte - C. Larralde - Ruta 197 - Chile - Libertad - Groussac - B. Sur Mer - Ruta 202 - Calle Carlos - Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+Almirante Brown - Don Torcuato: De A. Brown - Ruta 197 - B. Sur Mer - Ruta 202 - Calle Carlos - Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea177" id="linea177a">Línea 721</a></div>
+		<div class="content_box" id="linea177" style="display: none;">		
+			<p>Tigre - Benavidez - Gral. Pacheco
+<br>
+
+Colombia y Las Achiras - Estación Benavidez: De Colombia - Las Achiras - 29 de Noviembre - 9 de Julio - Quevedo - Las Dalias - El Clavel - Av. La Paloma - Groussac - Las Heras - Lavalle - Ruta 197 - Estación Carupá - Colón - Cazón - Estación Tigre - San Martín - Ruta 27 - Ruta 9 - Alvear - Estación Benávidez.
+<br>
+Regreso por similar recorrido.
+<br>
+Puerto de Frutos - Gral. Pacheco: De Puerto de Frutos - Sarmiento - Pizarro - Gral. Mitre - Italia - A. Brown - Pocha - R. Mazza - Uruguay - Ruta 197 - A. Brown - Librtad.
+<br>
+Regreso por similar recorrido.
+<br>
+Colombia y Las Achiras - Canal Villanueva: De Colombia - Las Achiras - 29 de Noviembre - 9 de Julio - Quevedo - Las Dalias - El Clavel - Cotenaster - Las Achiras - Av. La Paloma - Groussac - Las Heras - Lavalle - Ruta 197 - Estación Carupá - Cazón - Estación Tigre - San Martín - Liniers - Sta. María - Ruta 27 - Villa La Ñata - Saavedra - Canal Villanueva.
+<br>
+Regreso por similar recorrido.
+<br>
+Colombia y Las Achiras - Canal Aliviador: Por el mismo recorrido del Ramal ant. hasta Estación Carupá - Colón - Cazón - Estación Tigre - San Martín - Liniers - Sta. María - Ruta 27 - Canal Aliviador.
+<br>
+Regreso por similar recorrido.
+<br>
+Colombia y Las Achiras - S.O.E.V.A.: Por el mismo recorrido del Ramal ant. hasta Estación Carupá - Colón - Cazón - Estación Tigre - San Martín - Liniers - Sta. María - Ruta 27 - Recreo El Zorzal y S.O.E.V.A..
+<br>
+Regreso por similar recorrido.
+<br>
+Rincón de Milberg - O´Higgins y Ameghino: De Chubut por Callao - Sta. María - 25 de Mayo - Estrada - S. Díaz - Liniers - San Martín - Estación Tigre - Av. Cazón - A. Brown - Ruta 197 - Tte. Chappa - R. Mazza - Saavedra - Larralde - Ruta 197 - Bogotá - FF.CC. Gral. Mitre - O´Higgins - Ameghino.
+<br>
+Regreso por similar recorrido. 
+ 
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea178" id="linea178a">Línea 723</a></div>
+		<div class="content_box" id="linea178" style="display: none;">		
+			<p>Aeródromo Don Torcuato - Panamericana y Belgrano
+<br>
+
+De: Aviación - Av. del Trabajo - Garay - Alberdi - Triunvirato - Chile - Santa María de Oro - Ruta 202 - Menedez y Pelayo - Constituyentes - Riobamba - Rubén Darío - Berruete - Aique - Itlia - Av. del Trabajo - Arata - Asunción - Buschiazo - Ruta 202 - Calle Carlos - Chile - Av. del Trabajo - A. Brown - Ruta 202 - Elcano - Ituzaingó - Triunvirato - Posadas - Santa María de Oro - Emilio Lamarca - B. Sur Mer - Belgrano - Belgrano - Panamericana.
+<br>
+Regreso por similar recorrido.
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea179" id="linea179a">Línea 740</a></div>
+		<div class="content_box" id="linea179" style="display: none;">		
+			<p>San Miguel - Santa Brigida - Estación Lemos
+<br>
+
+San Miguel - Escuela 20 - San Miguel: De Mitre entre Fraga y Farías por Av. Mitre - L. N. Alem - Belgrano - Perón - Pringles - Paunero - Irigoin - G. Campos - W. Morris - Las Delicias y Mateo Bootz.
+<br>
+Regreso por similar recorrido.
+<br>
+San Miguel - Santa Brígida - San Miguel: De Fraga entre Cjal. Tribulato y Av. Mitre por Fraga - Av. Mitre - M. Ferrayra - M. Cané y M. García.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Lemos - Parque Jardín - Santa Brígida - Estación Lemos: De Av. Mitre entre Ruta 8 y Pavón por Av. Mitre - C. Malnatti - C. Tribulato - Alem - Irigoin - G. Campos - J. V. González - gral. Pinto - P. de Mendoza - M. Ferreyra - M. Cané y M. García.
+<br>
+Regreso por similar recorrido.
+<br>
+San Miguel - Barrio Mitre - San Miguel: De Fraga entre Belgrano y Av. Mitre por Fraga - C. Tribulato - Av. G. Campos - Av. Mitre - Defensa - R. Peña - El Maestro - Caseros y Bramante.
+<br>
+Regreso por similar recorrido.
+<br>
+San Miguel - Barrio Manuelita - San Miguel: De Fraga entre Belgrano y Av. Mitre por Fraga - C. Tribulato - Av. G. Campos - W. Morris - 1º Junta - Blasco Ibánez - Av. Mitre - Farías - Belgrano - Fraga y Mitre.
+<br>
+Regreso por similar recorrido.
+<br>
+San Miguel - Barrio Trujuy - Estación Lemos - Barrio Marilo: De Fraga entre Belgrano y Av. Mitre por Fraga - C. Tribulato - Av. G. Campos - Av. Mitre - I. la Católica - Caseros - Rivera - Azcuénaga - I. la Católica - San José - Maestro Ferreyra - Av. Mitre - Vicente López - Belgrano - Ruta 8 - Quirno - O. Andrade - Sourdeaux - Formosa - Moreno - Chubut - Moine - Tte. Gral. Ricchieri - Senador Morón - Entre Ríos - Moises Lebenshon - Maestra Munzón - Tucumán - G. Campos - Río Cuarto - Río Limay - Irusta y Tartagal.
+<br>
+Regreso por similar recorrido.
+<br>
+San Miguel - Barrio Constantini - San Miguel: De Fraga entre Belgrano y Av. Mitre por Fraga - Cjal. Tribulato - G. Campos - Av. Mitre - Angel Gallardo y Pringles.
+<br>
+Regreso por similar recorrido.
+<br>
+
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea180" id="linea180a">Línea 741</a></div>
+		<div class="content_box" id="linea180" style="display: none;">		
+			<p>Estación J. C. Paz - Gral. Sarmiento
+<br>
+
+De: Florida y Ruta 197 - (Estación José C. Paz) - Florida - Piñero - Rivadavia - Ugarteche - Fray Guillermo Butler - Fray Castañeda - Vera Paz - Dinamarca - Cezagna.
+<br>
+Regreso por similar recorrido.
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea181" id="linea181a">Línea 745</a></div>
+		<div class="content_box" id="linea181" style="display: none;">		
+			<p>Pablo Nogués - Don Torcuato - Los Polvorines - Bella Vista
+<br>
+
+Ing. Pablo Nogués - Estación Don Torcuato: De Cabecera Estación P. Nogués por Ruta 197 - hasta San Ignacio - J. C. Baroni - Los Eucaliptus - Comodoro Rivadavia - Av. Maipú - 25 de Mayo - Talcahuano - Maipú - Gral. Mosconi - Remedios de Escalada - Sucre - Ruta 202 - Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Los Polvorines - Estación Don Torcuato: De Estación Los Polvorines por Av. Maipú - hasta Ruta 202 - por ésta hasta Estación Don Torcuato.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Los Polvorines - Gaspar Campos y Pardo: De Estación Los Polvorines por 25 de Mayo - Talcahuano - Rivadavia - César Bacle - Medrano - Colombres - Ruta 8 - Pardo - Gaspar Campos.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Los Polvorines - Estación Bella Vista: Por su ruta - hasta Ruta 8 - Pardo - Farías - Azcuénaga - Martín Irigoyen - Saavedra - Gaspar Campos - Senador Morón - Estación Bella Vista.
+<br>
+Regreso por similar recorrido.
+<br>
+Estación Los Polvorines - Estación Sarmiento: Por su ruta - hasta Ruta 8 - Pardo - Farías - Saavedra - Martín Irigoyen - Estación Muñiz - Conesa - Fraga - Av. Mitre.
+<br>
+Regreso por similar recorrido.
+<br>
+</p>	
+		</div>
+		
+		<div class="content_title content_dropdown"><a href="http://www.transporte.gov.ar/content/servicios-colectivos/#linea182" id="linea182a">Línea 749</a></div>
+		<div class="content_box" id="linea182" style="display: none;">		
+			<p>J. Vucetich - Estación Lemos
+<br>
+
+Ramal J. Vucetich - José C. Paz: De Av. Croacia y Grito de Asencio (J. Vucetich) - por Av. Croacia - F. Lacroze - B. Bartok - Uspallata - La Gaceta - Fray G. Buttler - Zuviría - Av. J. Altube - Av. G. Campos - Av. H. Yrigoyen - Av. Croacia - hasta Santo Domingo (J. Vucetich).
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Barrio Centenario: Su ruta hasta H. Yrigoyen - J. G. de Artigas - Oribe - J. M. Gorrite - 16 de Octubre - hasta Av. Croacia.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Villa Altube: Su ruta hasta G. Campos - J. C. Paz - Monteagudo - Díaz de Solis - hasta Gral. Pintos.
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal Estación General Lemos: De Av. Croacia y Grito de Asencio (J. Vucetich) - por Av. Croacia - F. Lacroze - B. Bartok - Uspallata - Varsovia - su cont. Ugarteche - Florida - Piñero - Compostela - Av. H. Yrigoyen - D. F. Sarmiento - Av. J. Altube - Muñoz - Chile - Malnatti - Av. 1º Junta - Vicente López - Int. J. Irigoin - Av. A. Illia - Cjal. Tribulato - Pavón - Av. B. Mitre - hasta Av. Illia (Gral. Lemos).
+<br>
+Regreso por similar recorrido.
+<br>
+Ramal General Lemos por Calle Dinamarca: De Finlandi y Fray G. Buttler (J. Vucetich) por Finlandia - Dinamarca - Vera Paz - Castañeda - Fray G. Buttler - Ugarteche - Florida - Piñero - Compostela - Av. H. Yrigoyen - Sarmiento - Av. J. Altube - Muñoz - J. Newbery - Mendoza - Chile - Malnatti - Av. 1º Junta - Vicente López - Int. J. Irigoin - Av. A. Illia - Cjal. Tribulato - Pavón - Av. B. Mitre - hasta Av. Illia (Gral. Lemos).
+<br>
+Regreso por similar recorrido
+<br>
+</p>	
+		</div>
+		
+	</div>

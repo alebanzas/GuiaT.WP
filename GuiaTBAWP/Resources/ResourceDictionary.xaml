@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Microsoft_Phone_Controls_Maps="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+	<!-- Resource dictionary entries should be defined here. -->
+    <Microsoft_Phone_Controls_Maps:ApplicationIdCredentialsProvider x:Key="CredentialsProvider" ApplicationId="AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp"/>
+    <ControlTemplate x:Key="locationPushpinTemplate">
+        <Grid Height="26" Width="26" Margin="-13,-13,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform Rotation="-45"/>
+            </Grid.RenderTransform>
+            <Rectangle Fill="Red" HorizontalAlignment="Center"          
+                Margin="0" Stroke="White" VerticalAlignment="Center"        
+                 Height="26" Width="26"/>
+            <Ellipse HorizontalAlignment="Center" Height="16" Margin="0"          
+                 VerticalAlignment="Center" Fill="Yellow"
+                 Width="16"/>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

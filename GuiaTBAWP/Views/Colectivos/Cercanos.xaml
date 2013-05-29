@@ -15,39 +15,49 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="¿dónde cargar?">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
 
-            <controls:PanoramaItem Header="recarga">
-                <StackPanel Margin="12,0,0,12">
-                    <TextBlock Name="RecargaLoading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
-                    <TextBlock Name="RecargaError" TextWrapping="Wrap" Visibility="Collapsed">
-                        Ocurrió un error.
-                        <LineBreak /><LineBreak />
-                        Verifique su conexión a internet.
-                    </TextBlock>
-                    <ListBox Margin="0,0,0,0" 
-                             x:Name="Lista"
-                             ItemContainerStyle="{StaticResource ListBoxStyle}" 
-                             ItemsSource="{Binding PuntosRecarga}"
-                             Height="400">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="0,0,0,12" Orientation="Horizontal">
-                                    <TextBlock Width="432" Margin="0,0,0,0" Text="{Binding Titulo}" TextWrapping="Wrap"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="COLECTIVOS" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="cercanos" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="25,-10,0,10">
+            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">
+                <Run Text="Buscando colectivos cercanos. Aguarde.."/>
+            </TextBlock>
+            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
+                <Run Text="No hay conexión a la red."/>
+            </TextBlock>
+            <ListBox ItemsSource="{Binding Items}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,0" Width="432">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                            </StackPanel>
+                            <TextBlock Margin="65,5,5,5" Text="{Binding Detalles}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
     </Grid>
 
+
+    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
@@ -57,5 +67,4 @@
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
-
 </phone:PhoneApplicationPage>

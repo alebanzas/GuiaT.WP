@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Device.Location;
 using System.Globalization;
 using System.IO.IsolatedStorage;
+using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
@@ -224,7 +225,7 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             SetProgressBar("Buscando más cercano...");
 
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;
@@ -238,8 +239,8 @@ namespace GuiaTBAWP.Views.Colectivos
                 var response = httpRequest.EndGetResponse(result);
                 var stream = response.GetResponseStream();
 
-                var serializer = new DataContractJsonSerializer(typeof(List<ColectivoModel>));
-                var o = (List<ColectivoModel>)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
+                var o = (List<TransporteModel>)serializer.ReadObject(stream);
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
             }
@@ -255,35 +256,17 @@ namespace GuiaTBAWP.Views.Colectivos
             }
         }
 
-        delegate void DelegateUpdateWebBrowser(List<ColectivoModel> local);
-        private void UpdateWebBrowser(List<ColectivoModel> l)
+        delegate void DelegateUpdateWebBrowser(List<TransporteModel> local);
+        private void UpdateWebBrowser(List<TransporteModel> l)
         {
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "12", Detalles = "A - Puente Pueyrredon", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "12", Detalles = "B - Constitución", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "A - Barrancas de Belgrano por Hospital Militar   ", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "B - Barrancas de Belgrano por Hipódromo", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "C - Barrancas de Belgrano por Hospital Militar y Univ.Cat.Arg.", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "D - Barrancas de Belgrano por Hipódromo y Univ.Cat.Arg.", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "64", Detalles = "E - Barrancas de Belgrano por Hospital Militar", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "A - Olivos", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "B - Olivos por UCA", });
-            ViewModel.AddLinea(new ColectivoItemViewModel { Nombre = "152", Detalles = "C - Est. Mitre", });
-
-
-            //var model = new Collection<ColectivoItemViewModel>();
-
-            //var i = 1;
-            //foreach (var puntoModel in l)
-            //{
-            //    var punto = new GeoCoordinate(puntoModel.Latitud, puntoModel.Longitud);
-            //    var itemViewModel = new ItemViewModel
-            //        {
-            //            Titulo = puntoModel.Nombre, 
-            //            Punto = punto,
-            //            Index = i++,
-            //        };
-            //    model.Add(itemViewModel);
-            //}
+            ViewModel.Items.Clear();
+            foreach (var transporteModel in l.Where(x => x.TipoNickName == "colectivo").OrderBy(x => x.Linea))
+            {
+                ViewModel.AddLinea(new ColectivoItemViewModel { 
+                    Nombre = transporteModel.Linea, 
+                    Detalles = transporteModel.Ramal, 
+                });
+            }
             
             //RecargaLoading.Visibility = Visibility.Collapsed;
             //RecargaError.Visibility = Visibility.Collapsed;

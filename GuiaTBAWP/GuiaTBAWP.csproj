@@ -93,6 +93,7 @@
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletaEstacionDC.cs" />
     <Compile Include="Models\ColectivoModel.cs" />
+    <Compile Include="Models\TransporteModel.cs" />
     <Compile Include="Models\TrenesRamalEstadoDC.cs" />
     <Compile Include="Models\TrenesRamalEstadoTable.cs" />
     <Compile Include="Models\TrenesLineaEstadoDC.cs" />

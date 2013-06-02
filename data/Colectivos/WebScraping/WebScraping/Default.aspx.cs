@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 
@@ -193,18 +194,119 @@ namespace WebScraping
                 "195"
             };
 
+        public List<string> LineasColectivoProv = new List<string>
+            {
+                "203",
+"204A",
+"204B",
+"205", 
+"218", 
+"219", 
+"228a",
+"228b",
+"228d",
+"228e",
+"228f",
+"236",
+"237",
+"238",
+"242",
+"243",
+"244",
+"247",
+"252",
+"253",
+"257",
+"263",
+"266",
+"269",
+"271",
+"273",
+"275",
+"277",
+"278",
+"281",
+"283",
+"284",
+"291",
+"293",
+"295",
+"298",
+"299",
+"300",
+"302",
+"303",
+"306",
+"307",
+"310",
+"312",
+"314",
+"315",
+"317",
+"318",
+"320",
+"321",
+"322",
+"324",
+"325",
+"326",
+"328",
+"333",
+"336",
+"338",
+"341",
+"343",
+"354",
+"365",
+"371",
+"372",
+"378",
+"379",
+"382",
+"384",
+"386",
+"390",
+"391",
+"392",
+"395",
+"403",
+"405",
+"406",
+"407",
+"410",
+"414",
+"418",
+"421",
+"422",
+"429",
+"430",
+"435",
+"437",
+"441",
+"443",
+"446",
+"461",
+"462",
+"463",
+"464",
+"500"
+            };
+
         public string Resultado { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //ShowSubte();
             //ShowTren();
-            //ShowColectivo();
-
+            
             //ShowSubte(true);
             //ShowTren(true);
-            ShowColectivo(true);
 
+            //ShowColectivo(LineasColectivo);
+            //ShowColectivo(LineasColectivo, true);
+
+            //ShowColectivo(LineasColectivoProv);
+            ShowColectivo(LineasColectivoProv, true);
         }
 
         protected void ShowSubte(bool regreso = false)
@@ -268,14 +370,15 @@ namespace WebScraping
             Resultado = result;
         }
 
-        protected void ShowColectivo(bool regreso = false)
+        protected void ShowColectivo(List<string> lineas, bool regreso = false)
         {
             string result = string.Empty;
 
             CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
             TextInfo textInfo = cultureInfo.TextInfo;
 
-            foreach (var linea in LineasColectivo)
+
+            Parallel.ForEach(lineas, linea =>
             {
                 HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-" + linea + "/" + (regreso ? "&r=1" : "")));
 
@@ -295,7 +398,7 @@ namespace WebScraping
                     result += string.Format(query, Colectivo.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea, regreso ? "1" : "0") + "<br><br>";
                     i++;
                 }
-            }
+            });
 
             Resultado = result;
         }

@@ -104,7 +104,7 @@ namespace GuiaTBAWP.Views.Colectivos
         
         public void InitializeGPS()
         {
-            Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
+            Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
             Ubicacion.StatusChanged += Ubicacion_StatusChanged;
 
             Ubicacion.MovementThreshold = 20;
@@ -206,12 +206,12 @@ namespace GuiaTBAWP.Views.Colectivos
                 Longitude = e.Position.Location.Longitude
             };
 
-            //if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
-            //{
-            //    return;
-            //}
+            if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
+            {
+                return;
+            }
 
-            //ViewModel.CurrentLocation = e.Position.Location;
+            ViewModel.CurrentLocation = e.Position.Location;
 
             //SetLocation(location);
             //StopLocationService();

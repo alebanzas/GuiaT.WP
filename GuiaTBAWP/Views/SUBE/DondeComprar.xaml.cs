@@ -154,7 +154,7 @@ namespace GuiaTBAWP.Views.SUBE
         
         public void InitializeGPS()
         {
-            Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
+            Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
             Ubicacion.StatusChanged += Ubicacion_StatusChanged;
 
             Ubicacion.MovementThreshold = 20;

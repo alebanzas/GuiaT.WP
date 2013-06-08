@@ -98,18 +98,18 @@ namespace GuiaTBAWP.Views.Subtes
                 var serializer = new DataContractJsonSerializer(typeof(SubteStatusModel));
                 var o = (SubteStatusModel)serializer.ReadObject(stream);
 
-                Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateCotizaciones), o);
+                Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
             }
             catch (Exception)
             {
                 EndRequest();
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error.. " + ex.Message));
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener las cotizaciones. Verifique su conexión a internet."));
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
             }
         }
 
-        delegate void DelegateUpdateWebBrowser(SubteStatusModel local);
-        private void UpdateCotizaciones(SubteStatusModel model)
+        delegate void DelegateUpdateEstado(SubteStatusModel estado);
+        private void UpdateEstadoServicio(SubteStatusModel model)
         {
             var result = new Collection<SubteItemViewModel>();
 

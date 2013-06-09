@@ -206,7 +206,7 @@ namespace GuiaTBAWP.Views.Colectivos
                 Longitude = e.Position.Location.Longitude
             };
 
-            if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
+            if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography && Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
             {
                 return;
             }
@@ -248,8 +248,8 @@ namespace GuiaTBAWP.Views.Colectivos
             {
                 Dispatcher.BeginInvoke(() =>
                     {
-                        //RecargaLoading.Visibility = Visibility.Collapsed;
-                        //RecargaError.Visibility = Visibility.Visible;
+                        Loading.Visibility = Visibility.Collapsed;
+                        ConnectionError.Visibility = Visibility.Visible;
                         FinishRequest();
                     });
                 //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
@@ -260,16 +260,16 @@ namespace GuiaTBAWP.Views.Colectivos
         private void UpdateWebBrowser(List<TransporteModel> l)
         {
             ViewModel.Items.Clear();
-            foreach (var transporteModel in l.Where(x => x.TipoNickName == "colectivo").OrderBy(x => x.Linea))
+            foreach (IGrouping<string, TransporteModel> transporteModel in l.Where(x => x.TipoNickName == "colectivo").GroupBy(x => x.Linea))
             {
                 ViewModel.AddLinea(new ColectivoItemViewModel { 
-                    Nombre = transporteModel.Linea, 
-                    Detalles = transporteModel.Ramal, 
+                    Nombre = transporteModel.Key, 
+                    //Detalles = transporteModel.Ramal, 
                 });
             }
             
-            //RecargaLoading.Visibility = Visibility.Collapsed;
-            //RecargaError.Visibility = Visibility.Collapsed;
+            Loading.Visibility = Visibility.Collapsed;
+            ConnectionError.Visibility = Visibility.Collapsed;
             FinishRequest();
         }
 

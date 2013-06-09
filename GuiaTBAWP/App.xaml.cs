@@ -29,6 +29,8 @@ namespace GuiaTBAWP
             }
         }
 
+        public static double MinDiffGeography = 0.0001;
+
         public GeoCoordinate Ubicacion { get; set; }
 
         public DateTime UltimaActualizacionBicicletas

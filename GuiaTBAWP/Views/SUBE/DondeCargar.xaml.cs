@@ -264,7 +264,7 @@ namespace GuiaTBAWP.Views.SUBE
                 Longitude = e.Position.Location.Longitude
             };
 
-            if (location.Latitude == ViewModel.CurrentLocation.Latitude && location.Longitude == ViewModel.CurrentLocation.Longitude)
+            if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography && Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
             {
                 return;
             }

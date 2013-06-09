@@ -165,7 +165,7 @@ namespace GuiaTBAWP.Views.SUBE
             Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
             Ubicacion.StatusChanged += Ubicacion_StatusChanged;
 
-            Ubicacion.MovementThreshold = 20;
+            Ubicacion.MovementThreshold = 100;
         }
 
         void Ubicacion_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)

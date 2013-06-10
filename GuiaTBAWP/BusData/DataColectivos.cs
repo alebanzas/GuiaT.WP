@@ -2765,6 +2765,30 @@ REGRESO A HOSPITAL FERROVIARIO: Desde AVENIDA EVA PERON y AVENIDA GENERAL PAZ po
             buss.Add(new Bus("Línea 91 a 100")
             {
                 Tipo = "I",
+                Title = "Línea 93 A",
+                Description = @"Ida:  Desde Eduardo Sivori Y Armenia, Por Eduardo Sivori, General Manuel Belgrano, Sargento Baigorria, Velez Sarsfield, Av. Bartolome Mitre, Cruce Av. General Paz, Av. Ricardo Balbin, Pico, Lugones, Pedro Ignacio Rivera, Mariano Acha, Roosevelt, Lugones, La Pampa, Donado, Alvarez Thomas, Donado, Charlone, Forest, Lacroze, Corrientes, Dorrego, Bonpland, Santa Fe, Calzada Circular Plaza Italia, Las Heras, Cantilo, Pacheco De Melo, Azcuenaga, Pueyrredon, Av. Del Libertador, Leandro N. Alem, De La Rabida, Paseo Colon, Martin Garcia, Regimiento De Patricios, Iriarte, Herrera, Subida Aut. 9 De Julio, Cruce Nuevo Puente Pueyrredón, Bartolomé Mitre, Pavon, Pagola, Moises Lebenshon, Fernandez Hasta Giribone. 
+Regreso: Desde Fernandez Y Giribone, Por Fernandez, Giribone, Roseti, Pavon, Cruce Nuevo Puente Pueyrredon, Riio Cuarto, Regimiento De Patricios, Martin Garcia, Paseo Colon, De La Rabida, Leandro N. Alem, Av. Del Libertador, Figueroa Alcorta, Darsena Frente Al Centro Municipal De Exposiciones, Calle S/ Nombre Oficial, Eduardo Juan Couture, Carlos Vaz Ferreira, Figueroa Alcorta, Pueyrredon, Vicente Lopez, Luis Agote, Las Heras, Calzada Circular Plaza Italia, Santa Fe, Angel Carranza, Dorrego, Guzman, Jorge Newbery, Corrientes, Olleros, Alvarez Thomas, Mariano Acha, Deheza, Ricardo Balbin, Av. General Paz, Bartolome Mitre, Jose Hernandez, Tejedor, Sivori Hasta Armenia."
+            });
+
+            buss.Add(new Bus("Línea 91 a 100")
+            {
+                Tipo = "I",
+                Title = "Línea 93 B",
+                Description = @"Ida: Desde Eduardo Sivori y Armenia, Por Sivori, Bartolome Mitre, Cruce Av. Gral. Paz, Balbin, Pico, Lugones, Pedro Ignacio Rivera, Mariano Acha, Roosevelt, Lugones, La Pampa. Donado, Alvarez Thomas, Donado, Charlone, Forest, Lacroze, Corrientes, Dorrego, Bonpland, Santa Fe, Calzada Circular Plaza Italia, Las Heras, Cantilo, Pacheco De Melo, Azcuenaga, Pueyrredon, Del Libertador, Leandro N. Alem, La Rabida, Paseo Colon, Martin Garcia, Regimientos De Patricios, Iriarte, Herrera, Subida Aut. 9 De Julio, Cruce Nuevo Puente Pueyrredón Bartolome Mitre, Pavon, Pagola, Lebenshon, Fernandez Hasta Giribone. 
+Regreso: Desde Fernandez Y Giribone, Por Fernandez, Roseti, Pavon, Cruce Nuevo Puente Pueyrredon, Rio Cuarto, Regimiento De Patricios, Martin Garcia, Paseo Colon, De La Rabida, Leandro N. Alem, Del Libertador, Figueroa Alcorta, Darsena Frente Al Centro Municipal De Exposiciones, Calle S/ Nombre Oficial, Eduardo Juan Couture, Carlos Vaz Ferreira, Figueroa Alcorta, Pueyrredon, Vicente Lopez, Luis Agote, Las Heras, Calzada Circula Plaza Italia, Santa Fe, Carranza, Dorrego, Guzman, Jorge Newbery, Corrientes, Olleros, Alvarez Thomas, Mariano Acha, Deheza, Balbin, Av. General Paz, Bartolome Mitre, Sivori Hasta Armenia. "
+            });
+
+            buss.Add(new Bus("Línea 91 a 100")
+            {
+                Tipo = "I",
+                Title = "Línea 93 C",
+                Description = @"Ida: Desde Mariano Acha Y Monroe, Por Monroe, Lugones, La Pampa, Donado, Alvarez Thomas, Donado, Charlone, Forest, Lacroze, Corrientes, Dorrego, Bonpland, Santa Fe, Calzada Circular Plaza Italia, Las Heras, Cantilo, Pacheco De Melo, Azcuenaga, Pueyrredon, Del Libertador, Leandro N. Alem, De La Rabida, Paseo Colon, Martin Garcia, Regimiento De Patricios, Iriarte, Herrera, Subida Aut. 9 De Julio, Cruce Nuevo Puente Pueyrredon, Bartolome Mitre, Pavon, Pagola, Lebenshon, Fernandez Hasta Giribone. 
+Regreso:  Desde Fernandez Y Giribone, Por Fernandez, Giribone, Roseti, Pavon, Cruce Nuevo Puente Pueyrredon, Rio Cuarto, Regimiento De Patricios, Martin Garcia, Paseo Colon, De La Rabida, Leandro N. Alem, Del Libertador, Figueroa Alcorta, Darsena Fernte Al Centro Municipal De Exposiciones, Calle S/ Nombre Oficial, Eduardo Juan Couture, Carlos Vaz Ferreira, Figueroa Alcorta, Pueyrredon, Vicente Lopez, Luis Agote, Las Heras, Calzada Circular Plaza Italia, Santa Fe, Carranza, Dorrego, Guzman, Jorge Newbery, Corrientes, Olleros, Alvarez Thomas, Mariano Acha Hasta Monroe. "
+            });
+
+            buss.Add(new Bus("Línea 91 a 100")
+            {
+                Tipo = "I",
                 Title = "Línea 95 A",
                 Description = @"
 Recorrido A 
@@ -5537,6 +5561,51 @@ REGRESO A ESTACIÓN SÁENZ: Desde HONORIO LUQUE y COMODORO PY por HONORIO LUQUE,
 IDA A ESTACIÓN INDEPENDENCIA: Desde ANCASTE y ENRIQUE OCHOA por ANCASTE, ENRIQUE OCHOA, AVENIDA PERITO MORENO, lateral norte AUTOPISTA TENIENTE GENERAL LUIS J. DELLEPIANE, AUTOPISTA TENIENTE GENERAL LUIS J. DELLEPIANE, cruce AVENIDA GENERAL PAZ, AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, lateral norte AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, lateral este MONSEÑOR RODOLFO BUFANO (RUTA PROVINCIAL Nº 4 - CAMINO DE CINTURA), lateral oeste MONSEÑOR RODOLFO BUFANO (RUTA PROVINCIAL Nº 4 - CAMINO DE CINTURA), AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, ITALIA, EL PAYADOR, MARTÍN MIGUEL DE GÜEMES, AVENIDA GENERAL ROJO (RUTA PROVINCIAL Nº 21) hasta RUTA NACIONAL Nº 3. 
 REGRESO A ESTACIÓN SÁENZ: Desde AVENIDA GENERAL ROJO (RUTA PROVINCIAL Nº 21) y RUTA NACIONAL Nº 3 por AVENIDA GENERAL ROJO (RUTA PROVINCIAL Nº 21), MARTÍN MIGUEL DE GÜEMES, EL PAYADOR, ITALIA, AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, lateral oeste MONSEÑOR RODOLFO BUFANO (RUTA PROVINCIAL N° 4 - CAMINO DE CINTURA), lateral este MONSEÑOR RODOLFO BUFANO (RUTA PROVINCIAL N° 4 - CAMINO DE CINTURA), lateral sur AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, AUTOPISTA TENIENTE GENERAL PABLO RICCHIERI, cruce AVENIDA GENERAL PAZ, AUTOPISTA TENIENTE GENERAL LUIS J. DELLEPIANE, lateral sur AUTOPISTA TENIENTE GENERAL LUIS J. DELLEPIANE, AVENIDA PERITO MORENO, AVENIDA TILCARA, ESQUIÚ, TRAFUL SUR, TRAFUL, ALBERTO EINSTEIN, ANCASTE hasta ENRIQUE OCHOA. 
 "
+            });
+
+            buss.Add(new Bus("Línea 191 a 200")
+            {
+                Tipo = "I",
+                Title = "Línea 194 A",
+                Description = @"Ida A Zárate: Desde Catamarca N° 47 Por Catamarca, Avenida Rivadavia, Ecuador, Bartolomé Mitre, Larrea, Marcelo Torcuato De Alvear, Charcas, Gallo, Guemes, Darregueyra, Avenida Santa Fe, Viaducto Carranza, Avenida Cabildo, Avenida General Paz, Autopista Ingeniero Pascual Palazzo, Ruta Panamericana, Entrada A Escobar Por Don Bosco, Rivadavia, Avenida E. Tapia De Cruz, Ruta Nacional N° 9, Entrando A Campana Por Avenida Rivadavia, Jacob, Belgrano, Jean Jaures, Balcarce, Avenida Mitre, Ruta Nacional N° 12, Entrada En Zárate Por General Lavalle, Avenida Mitre, Leandro Nicéforo Alem, F. Andrade, Bolívar Hasta Avenida Anta. 
+
+Regreso A Plaza De Miserere: Desde Bolívar Y Avenida Anta Por Avenida Anta, Rivadavia, Almirante Brown, Ameghino, Conesa, Avenida Mitre, General Lavalle, Ruta Nacional N° 12, Entrada A Campana Por Avenida Mitre, Fray Justo Santa María De Oro, 9 De Julio, San Martín, Jacob, Avenida Rivadavia, Ruta Nacional N° 9 Entrada A Escobar Por Avenida E. Tapia De Cruz, Sarmiento, Doctor H. Travi, Rivadavia, Spadaccini, Alberdi, Avenida 25 De Mayo, Ruta Panamericana, Autopista Ingeniero Pascual Palazzo, Avenida General Paz, Avenida San Isidro, Deheza, Avenida Cabildo, Viaducto Carranza, Avenida Santa Fe, Avenida Pueyrredón Avenida Jujuy, Moreno, Catamarca Hasta El N° 47."
+            });
+
+            buss.Add(new Bus("Línea 191 a 200")
+            {
+                Tipo = "I",
+                Title = "Línea 194 B",
+                Description = @"Ida A Estación Escobar: Desde Catamarca N° 47 Por Catamarca, Avenida Rivadavia, Ecuador, Bartolomé Mitre, Larrea, Marcelo Torcuato De Alvear, Charcas, Gallo, Guemes, Darregueyra, Avenida Santa Fe, Viaducto Carranza, Avenida Cabildo, Avenida General Paz, Autopista Ingeniero Pascual Palazzo, Ruta Panamericana, Entrada A Escobar Por Don Bosco, Rivadavia Hasta Estación Escobar. 
+
+ Regreso A Plaza De Miserere: Desde Estación Escobar Por Rivadavia, Spadaccini, Alberdi, Avenida 25 De Mayo, Ruta Panamericana, Autopista Ingeniero Pascual Palazzo, Avenida General Paz, Avenida San Isidro, Deheza, Avenida Cabildo, Viaducto Carranza, Avenida Santa Fe, Avenida Pueyrredón Avenida Jujuy, Moreno, Catamarca Hasta El N° 47. "
+            });
+
+            buss.Add(new Bus("Línea 191 a 200")
+            {
+                Tipo = "I",
+                Title = "Línea 194 C",
+                Description = @"Ida A Estación Matheu: Desde Catamarca N° 47 Por Catamarca, Avenida Rivadavia, Ecuador, Bartolomé Mitre, Larrea, Marcelo Torcuato De Alvear, Charcas, Gallo, Guemes, Darregueyra, Avenida Santa Fe, Viaducto Carranza, Avenida Cabildo, Avenida General Paz, Autopista Ingeniero Pascual Palazzo, Ruta Panamericana, Entrada A Escobar Por Don Bosco, Rivadavia, Spadaccini, Independencia, Avenida 25 De Mayo, Avenida Domingo Faustino Sarmiento (Ruta Provincial N° 25) Hasta Estación Matheu. 
+
+Regreso A Plaza De Miserere: Desde Estación Matheu Por Avenida Domingo Faustino Sarmiento (Ruta Provincial N° 25), Independencia, Entrando A Escobar Por Avenida 25 De Mayo, Ruta Panamericana, Autopista Ingeniero Pascual Palazzo, Avenida General Paz, Avenida San Isidro, Deheza, Avenida Cabildo, Viaducto Carranza, Avenida Santa Fe, Avenida Pueyrredón Avenida Jujuy, Moreno, Catamarca Hasta El N° 47. "
+            });
+
+            buss.Add(new Bus("Línea 191 a 200")
+            {
+                Tipo = "I",
+                Title = "Línea 194 D",
+                Description = @"Ida A Zárate: Desde Catamarca N° 47 Por Catamarca, Avenida Rivadavia, Ecuador, Bartolomé Mitre, Larrea, Marcelo Torcuato De Alvear, Charcas, Gallo, Guemes, Darregueyra, Avenida Santa Fe, Viaducto Carranza, Avenida Cabildo, Avenida General Paz, Autopista Ingeniero Pascual Palazzo, Ruta Panamericana, Entrando A Escobar Por Don Bosco, Rivadavia, Avenida E. Tapia De Cruz,. Ruta Nacional N° 9, Entrando A Campana Por Avenida Rivadavia, Jacob, Belgrano, Jean Jaures, Balcarce, Avenida Mitre, Ruta Nacional N° 12, Entrando A Zárate Por General Lavalle, Avenida Mitre, Leandro Nicéforo Alem, F. Andrade, Bolívar Hasta Avenida Anta. 
+
+Regreso A Plaza De Miserere: Desde Bolívar Y Avenida Anta Por Avenida Anta, Rivadavia, Almirante Brown, Ameghino, Conesa, Avenida Mitre, General Lavalle, Ruta Nacional N° 12, Entrando A Campana Por Avenida Mitre, Fray Justo Santa María De Oro, 9 De Julio, San Martín, Jacob, Avenida Rivadavia, Ruta Nacional N° 9, Entrando A Escobar Por Avenida E. Tapia De Cruz, Sarmiento, Doctor H. Travi, Rivadavia, Spadaccini, Alberdi, Avenida 25 De Mayo, Ruta Panamericana, Autopista Ingeniero Pascual Palazzo, Avenida General Paz, Avenida San Isidro, Deheza, Avenida Cabildo, Viaducto Carranza, Avenida Santa Fe, Avenida Pueyrredón, Avenida Jujuy, Moreno, Catamarca Hasta El N° 47."
+            });
+
+            buss.Add(new Bus("Línea 191 a 200")
+            {
+                Tipo = "I",
+                Title = "Línea 194 E",
+                Description = @"Ida A Zárate: Desde Catamarca N° 47 Por Catamarca, Avenida Rivadavia, Ecuador, Bartolomé Mitre, Larrea, Marcelo Torcuato De Alvear, Charcas, Gallo, Guemes, Darregueyra, Avenida Santa Fe, Viaducto Carranza, Avenida Cabildo, Avenida General Paz, Autopista Ingeniero Pascual Palazzo, Ruta Panamericana, Ruta Nacional N° 9, Ruta Nacional N° 12, Entrando A Zárate Por General Lavalle, Avenida Mitre, Leandro Nicéforo Alem, F. Andrade, Bolívar Hasta Avenida Anta. 
+
+Regreso A Plaza De Miserere: Desde Bolívar Y Avenida Anta Por Avenida Anta, Rivadavia, Almirante Brown, Ameghino, Conesa, Avenida Mitre, General Lavalle, Ruta Nacional N° 12, Ruta Nacional N° 9, Ruta Panamericana, Autopista Ingeniero Pascual Palazzo, Avenida General Paz, Avenida San Isidro, Deheza, Avenida Cabildo, Viaducto Carranza, Avenida Santa Fe, Avenida Pueyrredón, Avenida Jujuy, Moreno, Catamarca Hasta El N° 47. "
             });
 
             buss.Add(new Bus("Línea 191 a 200")

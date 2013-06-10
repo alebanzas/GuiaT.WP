@@ -8,6 +8,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using GuiaTBAWP.Bing.Geocode;
+using GuiaTBAWP.BusData;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -264,7 +265,7 @@ namespace GuiaTBAWP.Views.Colectivos
             {
                 ViewModel.AddLinea(new ColectivoItemViewModel { 
                     Nombre = transporteModel.Key, 
-                    //Detalles = transporteModel.Ramal, 
+                    Detalles = DataColectivos.ByCode(transporteModel.Key), 
                 });
             }
             

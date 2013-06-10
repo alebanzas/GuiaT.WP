@@ -17,5 +17,7 @@
         }
 
         public string Category { get; private set; }
+
+        public string Tipo { get; set; }
     }
 }

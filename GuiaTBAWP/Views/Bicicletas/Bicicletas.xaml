@@ -48,7 +48,7 @@
                 </Button>
                 
                 <Grid Margin="0,70,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">
-                    <adctl:AdControl Height="80" Width="480" ApplicationId="fe6bdcf1-6548-40dc-be24-22f81ef87700" AdUnitId="10067189" />
+					<adctl:AdControl Height="80" Width="480" ApplicationId="fe6bdcf1-6548-40dc-be24-22f81ef87700" AdUnitId="10077178" />
                 </Grid>
             </StackPanel>
         </Grid>

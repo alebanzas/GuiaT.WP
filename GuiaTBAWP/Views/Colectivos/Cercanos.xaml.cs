@@ -226,7 +226,7 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             SetProgressBar("Buscando más cercano...");
 
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}&version=" + App.Version, location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;

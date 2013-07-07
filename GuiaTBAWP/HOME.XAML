@@ -124,27 +124,29 @@
             <!--Panorama item three-->
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
-                    <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
-						Versión 1.3 - Desarrollado por BTB Solutions
-                        <LineBreak /><LineBreak />
-                        Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
-                        <LineBreak /><LineBreak />
-                        <LineBreak /><LineBreak />
-                        La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener los puntos de carga y venta más cercanos.
-                        <LineBreak /><LineBreak /><LineBreak /><LineBreak />
-                        Notas de versión
-                        <LineBreak /><LineBreak />
-                        1.4 (próximamente): Frecuencias y horarios del servicio de trenes.
-                        <LineBreak /><LineBreak />
-                        1.3 (12-04-2013): Mejoras de presentación. Sección taxis y bicicletas. Estado de servicio de trenes en tiempo real. Mejora en puntos de venta y carga de SUBE.
-                        <LineBreak /><LineBreak />
-                        1.2 (05-04-2013): Correcciones de líneas de colectivo municipales. Agregado de sección horarios y frecuencias en subte, mas información de estaciones de subte.
-                        <LineBreak /><LineBreak />
-                        1.1: (29-03-2013) Correcciones de líneas de colectivo provinciales. Agregado de sección líneas y estaciones en subte, sección precio, seccion estado del servicio.
-                        <LineBreak /><LineBreak />
-                        1.0: (12-03-2013) Versión inicial. Recorridos de colectivos, mapa de la red de subte, recorridos de trenes metropolitanos, puntos de carga y venta de tarjeta SUBE.
-						<LineBreak /><LineBreak />
-                    </TextBlock>
+                    <StackPanel>
+                        <TextBlock x:Name="TxtVersion"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
+						    <LineBreak />
+                            Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
+                            <LineBreak /><LineBreak />
+                            <LineBreak /><LineBreak />
+                            La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener los puntos de carga y venta más cercanos.
+                            <LineBreak /><LineBreak /><LineBreak /><LineBreak />
+                            Notas de versión
+                            <LineBreak /><LineBreak />
+                            1.4 (próximamente): Frecuencias y horarios del servicio de trenes.
+                            <LineBreak /><LineBreak />
+                            1.3 (12-04-2013): Mejoras de presentación. Sección taxis y bicicletas. Estado de servicio de trenes en tiempo real. Mejora en puntos de venta y carga de SUBE.
+                            <LineBreak /><LineBreak />
+                            1.2 (05-04-2013): Correcciones de líneas de colectivo municipales. Agregado de sección horarios y frecuencias en subte, mas información de estaciones de subte.
+                            <LineBreak /><LineBreak />
+                            1.1: (29-03-2013) Correcciones de líneas de colectivo provinciales. Agregado de sección líneas y estaciones en subte, sección precio, seccion estado del servicio.
+                            <LineBreak /><LineBreak />
+                            1.0: (12-03-2013) Versión inicial. Recorridos de colectivos, mapa de la red de subte, recorridos de trenes metropolitanos, puntos de carga y venta de tarjeta SUBE.
+						    <LineBreak /><LineBreak />
+                        </TextBlock>
+                    </StackPanel>
                 </ScrollViewer>
             </controls:PanoramaItem>
         </controls:Panorama>

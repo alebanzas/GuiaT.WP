@@ -69,6 +69,10 @@ namespace GuiaTBAWP.Views.Colectivos
                     
                     StartLocationService();
                 };
+            Unloaded += (s, e) =>
+            {
+                Ubicacion.Dispose();
+            };
         }
 
         private void DondeCargar_Unloaded(object sender, RoutedEventArgs e)
@@ -126,8 +130,7 @@ namespace GuiaTBAWP.Views.Colectivos
                         MessageBox.Show("El servicio de localización se encuentra sin funcionamiento.");
                         //this.ApplicationTitle.Text = "Estado: Servicio de localización sin funcionamiento";
                     }
-                    Ubicacion.Stop();
-                    Ubicacion.Dispose();
+                    StopLocationService();
                     break;
 
                 case GeoPositionStatus.Initializing:
@@ -169,7 +172,7 @@ namespace GuiaTBAWP.Views.Colectivos
             {
                 SetProgressBar(null);
                 MessageBox.Show("El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para ubicarlo en el mapa.");
-                Ubicacion.Stop();
+                StopLocationService();
             }
                 
         }
@@ -181,7 +184,6 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             // Stop data acquisition
             Ubicacion.Stop();
-            Ubicacion.Dispose();
         }
 
         /// <summary>
@@ -209,6 +211,8 @@ namespace GuiaTBAWP.Views.Colectivos
 
             if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography && Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
             {
+                StopLocationService();
+                ResetUI();
                 return;
             }
 
@@ -285,6 +289,7 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private void ResetUI()
         {
+            if (_pendingRequests != 0) return;
             SetProgressBar(null);
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)

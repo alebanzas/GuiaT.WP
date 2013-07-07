@@ -77,7 +77,7 @@ namespace GuiaTBAWP.Views.Subtes
                         applicationBarIconButton.IsEnabled = false;
                 });
 
-                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/subte/?type=WP&version=1"));
+                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/subte/?type=WP&version=" + App.Version));
                 httpReq.Method = "GET";
                 httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
             }

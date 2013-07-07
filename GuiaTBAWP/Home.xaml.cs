@@ -9,6 +9,8 @@ namespace GuiaTBAWP
         public Home()
         {
             InitializeComponent();
+
+            TxtVersion.Text = string.Format("Versión {0} - Desarrollado por BTB Solutions", App.Version);
         }
 
         private void Button_Click_SUBE(object sender, RoutedEventArgs e)

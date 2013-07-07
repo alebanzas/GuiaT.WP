@@ -29,6 +29,18 @@ namespace GuiaTBAWP
             }
         }
 
+        public static string Version 
+        { 
+            get
+            {
+                var v = "1.4.0.0";
+#if DEBUG
+                v += "d";
+#endif
+                return v;
+            }
+        }
+
         public static double MinDiffGeography = 0.0001;
 
         public GeoCoordinate Ubicacion { get; set; }

@@ -149,7 +149,7 @@ namespace GuiaTBAWP.Views.Trenes
                 });
 
                 _datosLoaded = false;
-                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=1"));
+                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=" + App.Version));
                 _httpReq.Method = "GET";
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }

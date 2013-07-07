@@ -284,7 +284,7 @@ namespace GuiaTBAWP.Views.SUBE
         {
             SetProgressBar("Buscando más cercano...");
 
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10&version=" + App.Version, ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;

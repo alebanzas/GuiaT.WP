@@ -134,6 +134,9 @@
     <Compile Include="Views\Colectivos\Cercanos.xaml.cs">
       <DependentUpon>Cercanos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Colectivos\Detalle.xaml.cs">
+      <DependentUpon>Detalle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Colectivos\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -314,6 +317,10 @@
     <Page Include="Views\Colectivos\Cercanos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Detalle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Colectivos\Home.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -268,14 +268,20 @@ namespace GuiaTBAWP.Views.Colectivos
             foreach (IGrouping<string, TransporteModel> transporteModel in l.Where(x => x.TipoNickName == "colectivo").GroupBy(x => x.Linea))
             {
                 ViewModel.AddLinea(new ColectivoItemViewModel { 
-                    Nombre = transporteModel.Key, 
-                    Detalles = DataColectivos.ByCode(transporteModel.Key), 
+                    Nombre = "Línea " + transporteModel.Key, 
+                    Detalles = SetDetalleByLinea(transporteModel.Key, l),
+                    //Detalles = DataColectivos.ByCode(transporteModel.Key), 
                 });
             }
             
             Loading.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             FinishRequest();
+        }
+
+        private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)
+        {
+            return string.Join("\n", transporteModels.Where(x => x.Linea.Equals(key)).OrderBy(x => x.Ramal).Select(x => x.Ramal));
         }
 
         private void FinishRequest()

@@ -20,19 +20,42 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="24,24,0,12">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,20,0,0">
             <TextBlock x:Name="ApplicationTitle" Text="GUIA TRANSPORTE BUENOS AIRES" 
-                    Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="error" Margin="-3,-8,0,0" 
+                    Style="{StaticResource PhoneTextNormalStyle}" Margin="0,0,0,10"/>
+            <TextBlock x:Name="PageTitle" Text="ups." Margin="0,-20,0,10"
                     Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1">
-            <Border BorderBrush="White">
-                <TextBlock x:Name="ErrorText" 
-                       Style="{StaticResource PhoneTextSmallStyle}" 
-                       TextWrapping="Wrap" />
-            </Border>
+            <StackPanel x:Name="DvError" Visibility="Visible" Margin="12,0,0,0" Orientation="Vertical">
+                <TextBlock>OCURRIO UN ERROR INESPERADO.</TextBlock>
+                <ScrollViewer Height="100" Margin="0,20,0,20">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock>DETALLE DEL ERROR:</TextBlock>
+                        <TextBlock Margin="0" x:Name="ErrorText" Style="{StaticResource PhoneTextSmallStyle}" TextWrapping="Wrap">
+                            Recorrido A IDA A PLAZA FALUCHO: Desde PEDRO DE LUJAN y SAN ANTONIO por PEDRO DE LUJAN, HIPOLITO VIEYTES, CALIFORNIA, AVENIDA MANUEL MONTES DE OCA, BERNARDO DE IRIGOYEN, AVENIDA JUAN DE GARAY, LIMA ESTE, AVENIDA BRASIL NORTE, LIMA OESTE, CONSTITUCION, AVENIDA ENTRE RIOS, AVENIDA CALLAO, MARCELO TORCUATO DE ALVEAR, (*) CHARCAS, GALLO, GÜEMES, SERRANO, calzada circular de PLAZA ITALIA, AVENIDA SANTA FE hasta el Nº 4927 donde ingresa a su terminal. REGRESO A PUENTE PUEYRREDON: Desde su terminal ubicada en AVENIDA SANTA FE Nº 4927 por AVENIDA LUIS MARIA CAMPOS, AVENIDA SANTA FE, RIOBAMBA, (**) COMBATE DE LOS POZOS, AVENIDA BRASIL, GENERAL HORNOS, DOCTOR ENRIQUE FINOCHIETTO, AVENIDA MANUEL MONTES DE OCA, IRIARTE, SAN ANTONIO hasta PEDRO DE LUJAN.Recorrido A IDA A PLAZA FALUCHO: Desde PEDRO DE LUJAN y SAN ANTONIO por PEDRO DE LUJAN, HIPOLITO VIEYTES, CALIFORNIA, AVENIDA MANUEL MONTES DE OCA, BERNARDO DE IRIGOYEN, AVENIDA JUAN DE GARAY, LIMA ESTE, AVENIDA BRASIL NORTE, LIMA OESTE, CONSTITUCION, AVENIDA ENTRE RIOS, AVENIDA CALLAO, MARCELO TORCUATO DE ALVEAR, (*) CHARCAS, GALLO, GÜEMES, SERRANO, calzada circular de PLAZA ITALIA, AVENIDA SANTA FE hasta el Nº 4927 donde ingresa a su terminal. REGRESO A PUENTE PUEYRREDON: Desde su terminal ubicada en AVENIDA SANTA FE Nº 4927 por AVENIDA LUIS MARIA CAMPOS, AVENIDA SANTA FE, RIOBAMBA, (**) COMBATE DE LOS POZOS, AVENIDA BRASIL, GENERAL HORNOS, DOCTOR ENRIQUE FINOCHIETTO, AVENIDA MANUEL MONTES DE OCA, IRIARTE, SAN ANTONIO hasta PEDRO DE LUJAN.
+                        </TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock Margin="0,30,0,10">¿Desea ayudarnos a mejorar?</TextBlock>
+                <TextBlock>Comentario (opcional):</TextBlock>
+                <TextBox x:Name="TxtComentario"></TextBox>
+                <Button Click="SendErrorReport_OnClick">ENVIAR REPORTE</Button>
+                <TextBlock TextWrapping="Wrap">
+                    Utilizaremos el reporte de error y tus comentarios para mejorar la aplicación.
+                    No almacenamos ni enviamos información que te identifique.
+                </TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="DvThanks" Visibility="Collapsed">
+                <RichTextBox TextWrapping="Wrap">
+                    <Paragraph>GRACIAS POR AYUDARNOS A MEJORAR.</Paragraph>
+                    <Paragraph><LineBreak /></Paragraph>
+                    <Paragraph>Utilizamos los reportes de error para solucionar posibles problemas. Tu ayuda es muy importante.</Paragraph>
+                    <Paragraph><LineBreak /></Paragraph>
+                </RichTextBox>
+                <Button Click="GoToHome_OnClick">VOLVER AL INICIO</Button>
+            </StackPanel>
         </Grid>
     </Grid>
 

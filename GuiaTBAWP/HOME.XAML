@@ -125,9 +125,13 @@
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
-                        <TextBlock x:Name="TxtVersion"></TextBlock>
+                        <TextBlock Margin="12,0,0,0" x:Name="TxtVersion">
+                            Versión 1.4.0.0d
+                        </TextBlock>
                         <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
-						    <LineBreak />
+                            <LineBreak />
+                            Desarrollado por BTB Solutions
+						    <LineBreak /><LineBreak />
                             Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
                             <LineBreak /><LineBreak />
                             <LineBreak /><LineBreak />
@@ -135,7 +139,11 @@
                             <LineBreak /><LineBreak /><LineBreak /><LineBreak />
                             Notas de versión
                             <LineBreak /><LineBreak />
-                            1.4 (próximamente): Frecuencias y horarios del servicio de trenes.
+                            1.5 (próximamente): Frecuencias y horarios del servicio de trenes.
+                            <LineBreak /><LineBreak />
+                            1.5 (12-07-2013): Frecuencias y horarios del servicio de trenes.
+                            <LineBreak /><LineBreak />
+                            1.3.1 (02-06-2013): Inauguración de la estación Hospitales de la Línea H.
                             <LineBreak /><LineBreak />
                             1.3 (12-04-2013): Mejoras de presentación. Sección taxis y bicicletas. Estado de servicio de trenes en tiempo real. Mejora en puntos de venta y carga de SUBE.
                             <LineBreak /><LineBreak />

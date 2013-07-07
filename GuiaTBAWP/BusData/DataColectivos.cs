@@ -8844,5 +8844,11 @@ Regreso por similar recorrido."
             var firstOrDefault = Repository.FirstOrDefault(x => x.Title.Contains(" " + code));
             return firstOrDefault != null ? firstOrDefault.Description : string.Empty;
         }
+
+        public static Dictionary<string, string> AllByCode(string code)
+        {
+            var list = Repository.Where(x => x.Title.Contains(" " + code + " ") || (x.Title.Contains(" " + code) && x.Title.EndsWith(code)));
+            return list.ToDictionary(bus => bus.Title, bus => bus.Description);
+        }
     }
 }

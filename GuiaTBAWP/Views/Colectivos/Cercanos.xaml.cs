@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using System.Windows.Controls;
 using GuiaTBAWP.Bing.Geocode;
 using GuiaTBAWP.BusData;
 using GuiaTBAWP.Models;
@@ -41,27 +42,14 @@ namespace GuiaTBAWP.Views.Colectivos
         public Cercanos()
         {
             InitializeComponent();
-
-            ResetUI();
-
-            InitializeGPS();
-            SetLocationService();
-
-            Unloaded += DondeCargar_Unloaded;
-
-            if (!NetworkInterface.GetIsNetworkAvailable() ||
-                (Ubicacion.Permission.Equals(GeoPositionPermission.Denied) ||
-                 Ubicacion.Permission.Equals(GeoPositionPermission.Unknown)))
-            {
-                Loaded += (s, e) =>
-                {
-                    var ns = NavigationService;
-                    ns.Navigate(new Uri("/Views/SUBE/Error.xaml", UriKind.Relative));
-                };
-                return;
-            }
+            
             Loaded += (s, e) =>
                 {
+                    ResetUI();
+
+                    InitializeGPS();
+                    SetLocationService();
+
                     DataContext = ViewModel;
 
                     _progress.IsVisible = true;
@@ -71,16 +59,11 @@ namespace GuiaTBAWP.Views.Colectivos
                 };
             Unloaded += (s, e) =>
             {
+                CancelarRequest();
                 Ubicacion.Dispose();
             };
         }
-
-        private void DondeCargar_Unloaded(object sender, RoutedEventArgs e)
-        {
-            if(_httpReq !=null)
-                _httpReq.Abort();
-        }
-
+        
         private void SetProgressBar(string msj, bool showProgress = true)
         {
             if (string.IsNullOrEmpty(msj))
@@ -110,6 +93,16 @@ namespace GuiaTBAWP.Views.Colectivos
         public void InitializeGPS()
         {
             Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
+
+            if (!NetworkInterface.GetIsNetworkAvailable() ||
+                (Ubicacion.Permission.Equals(GeoPositionPermission.Denied) ||
+                 Ubicacion.Permission.Equals(GeoPositionPermission.Unknown)))
+            {
+                var ns = NavigationService;
+                ns.Navigate(new Uri("/Views/SUBE/Error.xaml", UriKind.Relative));
+                return;
+            }
+
             Ubicacion.StatusChanged += Ubicacion_StatusChanged;
 
             Ubicacion.MovementThreshold = 100;
@@ -268,6 +261,7 @@ namespace GuiaTBAWP.Views.Colectivos
             foreach (IGrouping<string, TransporteModel> transporteModel in l.Where(x => x.TipoNickName == "colectivo").GroupBy(x => x.Linea))
             {
                 ViewModel.AddLinea(new ColectivoItemViewModel { 
+                    Id = transporteModel.Key,
                     Nombre = "Línea " + transporteModel.Key, 
                     Detalles = SetDetalleByLinea(transporteModel.Key, l),
                     //Detalles = DataColectivos.ByCode(transporteModel.Key), 
@@ -317,6 +311,29 @@ namespace GuiaTBAWP.Views.Colectivos
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             ResetLocationService();
+        }
+
+        private void ListaColectivos_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var listBox = sender as ListBox;
+
+            if (listBox == null || listBox.SelectedIndex == -1) return;
+
+            CancelarRequest();
+
+            var colectivoItem = (ColectivoItemViewModel)listBox.SelectedItem;
+
+            var uri = new Uri(String.Format("/Views/Colectivos/Detalle.xaml?id={0}", colectivoItem.Id), UriKind.Relative);
+            NavigationService.Navigate(uri);
+
+            //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
+            listBox.SelectedIndex = -1;
+        }
+
+        private void CancelarRequest()
+        {
+            if (_httpReq != null)
+                _httpReq.Abort();
         }
     }
 }

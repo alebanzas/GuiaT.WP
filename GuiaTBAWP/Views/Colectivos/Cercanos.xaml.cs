@@ -9,12 +9,11 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Bing.Geocode;
-using GuiaTBAWP.BusData;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Net.NetworkInformation;
 using Microsoft.Phone.Shell;
+using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 
 namespace GuiaTBAWP.Views.Colectivos
 {
@@ -35,6 +34,7 @@ namespace GuiaTBAWP.Views.Colectivos
         }
 
         public GeoCoordinateWatcher Ubicacion { get; set; }
+        private static bool _datosLoaded = false;
 
         readonly ProgressIndicator _progress = new ProgressIndicator();
         private HttpWebRequest _httpReq;
@@ -202,11 +202,15 @@ namespace GuiaTBAWP.Views.Colectivos
                 Longitude = e.Position.Location.Longitude
             };
 
-            if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography && Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
+            if (_datosLoaded)
             {
-                StopLocationService();
-                ResetUI();
-                return;
+                if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography &&
+                    Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
+                {
+                    StopLocationService();
+                    ResetUI();
+                    return;
+                }
             }
 
             ViewModel.CurrentLocation = e.Position.Location;
@@ -222,7 +226,7 @@ namespace GuiaTBAWP.Views.Colectivos
         private void GetMasCercanos(GeocodeLocation location)
         {
             SetProgressBar("Buscando más cercano...");
-
+            CancelarRequest();
             _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}&version=" + App.Version, location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
@@ -267,7 +271,7 @@ namespace GuiaTBAWP.Views.Colectivos
                     //Detalles = DataColectivos.ByCode(transporteModel.Key), 
                 });
             }
-            
+            _datosLoaded = true;
             Loading.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             FinishRequest();

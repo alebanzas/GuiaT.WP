@@ -41,6 +41,14 @@ namespace GuiaTBAWP
             }
         }
 
+        public static string Name
+        {
+            get
+            {
+                return "GUIATBAWP";
+            }
+        }
+
         public static double MinDiffGeography = 0.0001;
 
         public GeoCoordinate Ubicacion { get; set; }

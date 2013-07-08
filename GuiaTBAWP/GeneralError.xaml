@@ -41,7 +41,7 @@
                 <TextBlock Margin="0,30,0,10">¿Desea ayudarnos a mejorar?</TextBlock>
                 <TextBlock>Comentario (opcional):</TextBlock>
                 <TextBox x:Name="TxtComentario"></TextBox>
-                <Button Click="SendErrorReport_OnClick">ENVIAR REPORTE</Button>
+                <Button x:Name="BtnSend" Click="SendErrorReport_OnClick">ENVIAR REPORTE</Button>
                 <TextBlock TextWrapping="Wrap">
                     Utilizaremos el reporte de error y tus comentarios para mejorar la aplicación.
                     No almacenamos ni enviamos información que te identifique.
@@ -54,6 +54,7 @@
                     <Paragraph>Utilizamos los reportes de error para solucionar posibles problemas. Tu ayuda es muy importante.</Paragraph>
                     <Paragraph><LineBreak /></Paragraph>
                 </RichTextBox>
+                <TextBlock x:Name="TxtErrorCode"></TextBlock>
                 <Button Click="GoToHome_OnClick">VOLVER AL INICIO</Button>
             </StackPanel>
         </Grid>

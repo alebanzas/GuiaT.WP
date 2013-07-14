@@ -203,7 +203,7 @@ namespace GuiaTBAWP.Views.Colectivos
                 Longitude = e.Position.Location.Longitude
             };
 
-            if (_datosLoaded)
+            if (_datosLoaded || _pendingRequests > 0)
             {
                 if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.Configuration.MinDiffGeography &&
                     Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.Configuration.MinDiffGeography)

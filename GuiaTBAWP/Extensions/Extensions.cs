@@ -10,8 +10,21 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Extensions
 {
+    public static class UriExtensions
+    {
+        public static Uri ToApiCallUri(this string source)
+        {
+            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}&t={4}", 
+                source, 
+                App.Configuration.Name, 
+                App.Configuration.Version,
+                App.Configuration.InstallationId,
+                DateTime.UtcNow.Ticks));
+        }
+    }
+
     public static class Extensions
     {
         /// <summary>

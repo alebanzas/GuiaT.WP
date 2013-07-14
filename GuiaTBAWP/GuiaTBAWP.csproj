@@ -190,7 +190,7 @@
       <DependentUpon>SubteMapa.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusData\DataColectivos.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Views\SUBE\HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>
     </Compile>

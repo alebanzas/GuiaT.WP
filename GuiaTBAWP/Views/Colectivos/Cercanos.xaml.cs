@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Bing.Geocode;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -227,8 +228,15 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             SetProgressBar("Buscando más cercano...");
             CancelarRequest();
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}&version=" + App.Configuration.Version, location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
-            _httpReq.Method = "POST";
+            
+            var param = new Dictionary<string, object>
+                {
+                    {"lat", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lon", location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                };
+
+            _httpReq = (HttpWebRequest)WebRequest.Create("/transporte/cercano".ToApiCallUri(param));
+            _httpReq.Method = "GET";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;
         }

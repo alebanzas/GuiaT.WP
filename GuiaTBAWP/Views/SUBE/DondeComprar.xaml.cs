@@ -284,8 +284,8 @@ namespace GuiaTBAWP.Views.SUBE
                     {"cant", 10},
                 };
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/ventanear/".ToApiCallUri(param));
-            _httpReq.Method = "POST";
+            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/ventanear".ToApiCallUri(param));
+            _httpReq.Method = "GET";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBackVenta, _httpReq);
             _pendingRequests++;
         }

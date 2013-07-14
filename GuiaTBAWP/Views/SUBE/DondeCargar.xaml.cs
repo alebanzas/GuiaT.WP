@@ -292,8 +292,8 @@ namespace GuiaTBAWP.Views.SUBE
                     {"cant", 10},
                 };
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/recarganear/".ToApiCallUri(param));
-            _httpReq.Method = "POST";
+            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/recarganear".ToApiCallUri(param));
+            _httpReq.Method = "GET";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;
         }

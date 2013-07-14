@@ -52,7 +52,7 @@ namespace GuiaTBAWP.Views.SUBE
             MiMapa.SetView(LocationRect.CreateLocationRect(x));
 
             //Si uso localizacion, agrego mi ubicación
-            //if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
+            //if (App.Configuration.IsLocationEnabled)
             //    ActualizarUbicacion((App.Current as App).Ubicacion.Position.Location);
             //else
             //    ActualizarUbicacion(null);

@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
@@ -94,7 +95,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
 
             //Si uso localizacion, agrego mi ubicación
-            if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
+            if (App.Configuration.IsLocationEnabled)
                 ActualizarUbicacion(App.Configuration.Ubicacion);
             else
                 ActualizarUbicacion(null);
@@ -148,7 +149,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                 SetProgressBar(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
                 _datosLoaded = false;
-                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/bicicletas/?type=WP&version=1"));
+                _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri());
                 _httpReq.Method = "GET";
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }

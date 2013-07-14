@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -77,7 +78,7 @@ namespace GuiaTBAWP.Views.Subtes
                         applicationBarIconButton.IsEnabled = false;
                 });
 
-                var httpReq = (HttpWebRequest)WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/subte/?type=WP&version=" + App.Configuration.Version));
+                var httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri());
                 httpReq.Method = "GET";
                 httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
             }

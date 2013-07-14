@@ -39,7 +39,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             _progress.IsVisible = true;
             _progress.IsIndeterminate = true;
 
-            UpdatedAt.Text = ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas);
+            UpdatedAt.Text = ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas);
 
             MostrarLugares();
             
@@ -95,7 +95,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             //Si uso localizacion, agrego mi ubicación
             if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
-                ActualizarUbicacion((App.Current as App).Ubicacion);
+                ActualizarUbicacion(App.Configuration.Ubicacion);
             else
                 ActualizarUbicacion(null);
 
@@ -132,7 +132,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             if (_datosLoaded)
                 return false;
 
-            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataBicicletas ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
+            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !App.Configuration.InitialDataBicicletas ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
                 return true;
 
             if (_httpReq != null)
@@ -179,9 +179,9 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
             catch (WebException e)
             {
-                if (e.Status == WebExceptionStatus.RequestCanceled && (App.Current as App).InitialDataBicicletas)
+                if (e.Status == WebExceptionStatus.RequestCanceled && App.Configuration.InitialDataBicicletas)
                 {
-                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime((App.Current as App).UltimaActualizacionBicicletas))));
+                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas))));
                 }
                 EndRequest();
             }
@@ -195,7 +195,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         delegate void DelegateUpdateWebBrowser(BicicletasStatusModel local);
         private void UpdateWebBrowser(BicicletasStatusModel l)
         {
-            (App.Current as App).UltimaActualizacionBicicletas = l.Actualizacion;
+            App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
@@ -217,7 +217,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             BicicletaEstacionDC.Current.SubmitChanges();
 
 
-            (App.Current as App).InitialDataBicicletas = true;
+            App.Configuration.InitialDataBicicletas = true;
             _datosLoaded = true;
 
             UpdatedAt.Text = ToLocalDateTime(l.Actualizacion);

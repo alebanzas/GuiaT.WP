@@ -39,7 +39,7 @@ namespace GuiaTBAWP.Views.Trenes
             if (_datosLoaded)
                 return false;
 
-            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !(App.Current as App).InitialDataTrenes ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
+            if (MessageBox.Show(string.Format("¿Abortar la {0} de datos?", !App.Configuration.InitialDataTrenes ? "obtención" : "actualización"), "Estado del servicio", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
                 return true;
 
             if(_httpReq != null)
@@ -137,7 +137,7 @@ namespace GuiaTBAWP.Views.Trenes
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                _progress.Text = string.Format("{0} estado del servicio...", !(App.Current as App).InitialDataTrenes ? "Obteniendo" : "Actualizando");
+                _progress.Text = string.Format("{0} estado del servicio...", !App.Configuration.InitialDataTrenes ? "Obteniendo" : "Actualizando");
                 SystemTray.SetIsVisible(this, true);
                 SystemTray.SetProgressIndicator(this, _progress);
 
@@ -149,7 +149,7 @@ namespace GuiaTBAWP.Views.Trenes
                 });
 
                 _datosLoaded = false;
-                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=" + App.Version));
+                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=" + App.Configuration.Version));
                 _httpReq.Method = "GET";
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }
@@ -174,9 +174,9 @@ namespace GuiaTBAWP.Views.Trenes
             }
             catch (WebException e)
             {
-                if (e.Status == WebExceptionStatus.RequestCanceled && (App.Current as App).InitialDataTrenes)
+                if (e.Status == WebExceptionStatus.RequestCanceled && App.Configuration.InitialDataTrenes)
                 {
-                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime((App.Current as App).UltimaActualizacionTrenes))));    
+                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime(App.Configuration.UltimaActualizacionTrenes))));    
                 }
                 EndRequest();
             }
@@ -196,7 +196,7 @@ namespace GuiaTBAWP.Views.Trenes
         delegate void DelegateUpdateWebBrowser(TrenesStatusModel local);
         private void UpdateStatus(TrenesStatusModel model)
         {
-            (App.Current as App).UltimaActualizacionTrenes = model.Actualizacion;
+            App.Configuration.UltimaActualizacionTrenes = model.Actualizacion;
 
             foreach (var ltm in model.Lineas)
             {
@@ -236,7 +236,7 @@ namespace GuiaTBAWP.Views.Trenes
             TrenesLineaEstadoDC.Current.SubmitChanges();
             TrenesRamalEstadoDC.Current.SubmitChanges();
 
-            (App.Current as App).InitialDataTrenes = true;
+            App.Configuration.InitialDataTrenes = true;
             _datosLoaded = true;
 
             EndRequest();

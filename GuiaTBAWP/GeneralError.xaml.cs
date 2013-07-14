@@ -11,7 +11,7 @@ namespace GuiaTBAWP
 {
     public partial class GeneralError : PhoneApplicationPage
     {
-        public string RegisterURL = "http://servicio.abhosting.com.ar/report/error/?type=WP&version=" + App.Version;
+        public string RegisterURL = "http://servicio.abhosting.com.ar/report/error/?type=WP&version=" + App.Configuration.Version;
         public ErrorReportRequestModel RequestModel { get; set; }
 
         public GeneralError()
@@ -130,8 +130,8 @@ namespace GuiaTBAWP
     {
         public ErrorReportRequestModel()
         {
-            AppId = App.Name;
-            AppVersion = App.Version;
+            AppId = App.Configuration.Name;
+            AppVersion = App.Configuration.Version;
         }
 
         public string AppId { get; set; }

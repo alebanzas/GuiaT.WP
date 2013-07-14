@@ -3,6 +3,7 @@ using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GuiaTBAWP.ViewModels;
@@ -11,6 +12,8 @@ namespace GuiaTBAWP
 {
     public partial class App : Application
     {
+        public static ApplicationConfiguration Configuration { get; set; }
+        
         private static MainViewModel viewModel = null;
 
         /// <summary>
@@ -28,75 +31,7 @@ namespace GuiaTBAWP
                 return viewModel;
             }
         }
-
-        public static string Version 
-        { 
-            get
-            {
-                var v = "1.4.0.0";
-#if DEBUG
-                v += "d";
-#endif
-                return v;
-            }
-        }
-
-        public static string Name
-        {
-            get
-            {
-                return "GUIATBAWP";
-            }
-        }
-
-        public static double MinDiffGeography = 0.0001;
-
-        public GeoCoordinate Ubicacion { get; set; }
-
-        public DateTime UltimaActualizacionBicicletas
-        {
-            get
-            {
-                if (!IsolatedStorageSettings.ApplicationSettings.Contains("UltimaActualizacionBicicletas"))
-                    IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = DateTime.UtcNow;
-                return (DateTime)IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"];
-            }
-            set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionBicicletas"] = value; }
-        }
-
-        public bool InitialDataBicicletas
-        {
-            get
-            {
-                if (!IsolatedStorageSettings.ApplicationSettings.Contains("InitialDataBicicletas"))
-                    IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"] = false;
-                return (bool)IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"];
-            }
-            set { IsolatedStorageSettings.ApplicationSettings["InitialDataBicicletas"] = value; }
-        }
-
-        public DateTime UltimaActualizacionTrenes
-        {
-            get
-            {
-                if (!IsolatedStorageSettings.ApplicationSettings.Contains("UltimaActualizacionTrenes"))
-                    IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"] = DateTime.UtcNow;
-                return (DateTime)IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"];
-            }
-            set { IsolatedStorageSettings.ApplicationSettings["UltimaActualizacionTrenes"] = value; }
-        }
-
-        public bool InitialDataTrenes
-        {
-            get
-            {
-                if (!IsolatedStorageSettings.ApplicationSettings.Contains("InitialDataTrenes"))
-                    IsolatedStorageSettings.ApplicationSettings["InitialDataTrenes"] = false;
-                return (bool)IsolatedStorageSettings.ApplicationSettings["InitialDataTrenes"];
-            }
-            set { IsolatedStorageSettings.ApplicationSettings["InitialDataTrenes"] = value; }
-        }
-
+        
         /// <value>Registered ID used to access map control and Bing maps service.</value>
         internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";
 
@@ -118,15 +53,14 @@ namespace GuiaTBAWP
             InitializePhoneApplication();
 
             ThemeManager.ToDarkTheme();
-            
-            if (!IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
-                IsolatedStorageSettings.ApplicationSettings["localizacion"] = true;
         }        
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration();
+            Configuration.SetInitialConfiguration();
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -224,5 +158,66 @@ namespace GuiaTBAWP
         }
 
         #endregion
+    }
+
+    public enum ApplicationConfigurationKeys
+    {
+        IsInitialized,
+        Location,
+    }
+
+    public class ApplicationConfiguration
+    {
+        public ApplicationConfiguration()
+        {
+            Ubicacion = new GeoCoordinate();
+        }
+
+        public void SetInitialConfiguration()
+        {
+            if (IsInitialized) return;
+
+            InstallationId = Guid.NewGuid();
+            
+            Config.Set(ApplicationConfigurationKeys.Location, true);
+            IsInitialized = true;
+            Config.Set(this);
+        }
+
+        public bool IsInitialized { get; set; }
+
+        public Guid InstallationId { get; set; }
+
+        public GeoCoordinate Ubicacion { get; set; }
+
+        public string Version
+        {
+            get
+            {
+                var v = "1.4.0.0";
+#if DEBUG
+                v += "d";
+#endif
+                return v;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return "GUIATBAWP";
+            }
+        }
+        
+        public double MinDiffGeography = 0.0001;
+
+        public DateTime UltimaActualizacionBicicletas { get; set; }
+
+        public bool InitialDataBicicletas { get; set; }
+
+        public DateTime UltimaActualizacionTrenes { get; set; }
+
+        public bool InitialDataTrenes { get; set; }
     }
 }

@@ -204,8 +204,8 @@ namespace GuiaTBAWP.Views.Colectivos
 
             if (_datosLoaded)
             {
-                if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.MinDiffGeography &&
-                    Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.MinDiffGeography)
+                if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.Configuration.MinDiffGeography &&
+                    Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.Configuration.MinDiffGeography)
                 {
                     StopLocationService();
                     ResetUI();
@@ -227,7 +227,7 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             SetProgressBar("Buscando más cercano...");
             CancelarRequest();
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}&version=" + App.Version, location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/transporte/cercano/?lat={0}&lon={1}&version=" + App.Configuration.Version, location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;

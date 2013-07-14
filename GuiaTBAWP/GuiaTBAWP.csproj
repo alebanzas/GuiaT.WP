@@ -89,6 +89,7 @@
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Config.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletaEstacionDC.cs" />

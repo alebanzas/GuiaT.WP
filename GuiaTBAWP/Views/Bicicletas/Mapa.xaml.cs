@@ -72,7 +72,7 @@ namespace WPLugares
 
             //Si uso localizacion, agrego mi ubicación
             if ((bool)IsolatedStorageSettings.ApplicationSettings["localizacion"])
-                ActualizarUbicacion((App.Current as App).Ubicacion);
+                ActualizarUbicacion(App.Configuration.Ubicacion);
             else
                 ActualizarUbicacion(null);
         }

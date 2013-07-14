@@ -10,7 +10,7 @@ namespace GuiaTBAWP
         {
             InitializeComponent();
 
-            TxtVersion.Text = string.Format("Versión {0}", App.Version);
+            TxtVersion.Text = string.Format("Versión {0}", App.Configuration.Version);
         }
 
         private void Button_Click_SUBE(object sender, RoutedEventArgs e)

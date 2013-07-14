@@ -39,7 +39,7 @@ namespace GuiaTBAWP.Views.Trenes
             {
                 ViewModel.AddRamal(estadoTable.ConvertToTrenRamalItemViewModel());
             }
-            ViewModel.Actualizacion = (App.Current as App).UltimaActualizacionTrenes;
+            ViewModel.Actualizacion = App.Configuration.UltimaActualizacionTrenes;
         }
     }
 }

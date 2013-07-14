@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -30,8 +31,8 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void MainPage_Unloaded(object sender, RoutedEventArgs e)
         {
-            if(_httpReq != null)
-                _httpReq.Abort();
+            //if(_httpReq != null)
+            //    _httpReq.Abort();
         }
 
         private bool CancelarRequest()
@@ -51,49 +52,49 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void Button_Click_BelgranoNorte(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
             
             NavigationService.Navigate(new Uri("/Views/Trenes/BelgranoNorte.xaml", UriKind.Relative));
         }
 
         private void Button_Click_BelgranoSur(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/BelgranoSur.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Mitre(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/Mitre.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Roca(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/Roca.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SanMartin(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/SanMartin.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Sarmiento(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/Sarmiento.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Urquiza(object sender, RoutedEventArgs e)
         {
-            if (CancelarRequest()) return;
+            //if (CancelarRequest()) return;
 
             NavigationService.Navigate(new Uri("/Views/Trenes/Urquiza.xaml", UriKind.Relative));
         }
@@ -149,7 +150,7 @@ namespace GuiaTBAWP.Views.Trenes
                 });
 
                 _datosLoaded = false;
-                _httpReq = WebRequest.Create(new Uri("http://servicio.abhosting.com.ar/trenes/?type=WP&version=" + App.Configuration.Version));
+                _httpReq = WebRequest.Create("/trenes".ToApiCallUri());
                 _httpReq.Method = "GET";
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }

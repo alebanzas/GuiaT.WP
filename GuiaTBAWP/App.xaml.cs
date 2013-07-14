@@ -179,12 +179,14 @@ namespace GuiaTBAWP
 
             InstallationId = Guid.NewGuid();
             
-            Config.Set(ApplicationConfigurationKeys.Location, true);
+            IsLocationEnabled = true;
             IsInitialized = true;
             Config.Set(this);
         }
 
         public bool IsInitialized { get; set; }
+
+        public bool IsLocationEnabled { get; set; }
 
         public Guid InstallationId { get; set; }
 

@@ -157,7 +157,7 @@ namespace GuiaTBAWP.Views.Colectivos
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = false;
-            if ((bool) IsolatedStorageSettings.ApplicationSettings["localizacion"])
+            if (App.Configuration.IsLocationEnabled)
             {
                 Ubicacion.Start();
             }

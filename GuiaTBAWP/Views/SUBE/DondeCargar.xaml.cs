@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
 using GuiaTBAWP.Bing.Geocode;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -218,7 +219,7 @@ namespace GuiaTBAWP.Views.SUBE
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = false;
-            if ((bool) IsolatedStorageSettings.ApplicationSettings["localizacion"])
+            if (App.Configuration.IsLocationEnabled)
             {
                 Ubicacion.Start();
             }
@@ -284,7 +285,14 @@ namespace GuiaTBAWP.Views.SUBE
         {
             SetProgressBar("Buscando más cercano...");
 
-            _httpReq = (HttpWebRequest)WebRequest.Create(new Uri(string.Format("http://servicio.abhosting.com.ar/sube/recarganear/?lat={0}&lon={1}&cant=10&version=" + App.Configuration.Version, ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."), ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", "."))));
+            var param = new Dictionary<string, object>
+                {
+                    {"lat", ViewModel.CurrentLocation.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lon", ViewModel.CurrentLocation.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"cant", 10},
+                };
+
+            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/recarganear/".ToApiCallUri(param));
             _httpReq.Method = "POST";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             _pendingRequests++;

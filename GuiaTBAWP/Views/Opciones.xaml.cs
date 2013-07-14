@@ -9,8 +9,8 @@ namespace GuiaTBAWP.Views
         public Opciones()
         {
             InitializeComponent();
-            if (IsolatedStorageSettings.ApplicationSettings.Contains("localizacion"))
-                TglLocalizacion.IsChecked = (bool)IsolatedStorageSettings.ApplicationSettings["localizacion"];
+
+            TglLocalizacion.IsChecked = App.Configuration.IsLocationEnabled;
             
             Localizacion_Changed(null, null);
         }
@@ -19,7 +19,7 @@ namespace GuiaTBAWP.Views
         {
             var isChecked = TglLocalizacion.IsChecked;
             var activated = isChecked != null && (bool)isChecked;
-            IsolatedStorageSettings.ApplicationSettings["localizacion"] = activated;
+            App.Configuration.IsLocationEnabled = activated;
             TglLocalizacion.Content = activated ? "Activado" : "Desactivado";
         }
 

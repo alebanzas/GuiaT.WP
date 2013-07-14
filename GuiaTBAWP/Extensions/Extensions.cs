@@ -14,14 +14,32 @@ namespace GuiaTBAWP.Extensions
 {
     public static class UriExtensions
     {
-        public static Uri ToApiCallUri(this string source)
+        private static Uri ToApiCallUri(this string source, string param)
         {
-            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}&t={4}", 
+            if (!string.IsNullOrWhiteSpace(param))
+            {
+                param = "&" + param;
+            }
+
+            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}&t={4}{5}", 
                 source, 
                 App.Configuration.Name, 
                 App.Configuration.Version,
                 App.Configuration.InstallationId,
-                DateTime.UtcNow.Ticks));
+                DateTime.UtcNow.Ticks,
+                param));
+        }
+
+        public static Uri ToApiCallUri(this string source, Dictionary<string, object> param)
+        {
+            var pp = string.Join("&", param.Select(x => x.Key + "=" + x.Value));
+
+            return ToApiCallUri(source, pp);
+        }
+
+        public static Uri ToApiCallUri(this string source)
+        {
+            return ToApiCallUri(source, string.Empty);
         }
     }
 

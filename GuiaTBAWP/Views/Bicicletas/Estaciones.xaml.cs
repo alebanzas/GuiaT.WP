@@ -50,18 +50,18 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
-            ActualizarUbicacion(e.Position.Location);
+            ActualizarUbicacion(e.Position);
         }
 
-        private void ActualizarUbicacion(GeoCoordinate location)
+        private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
         {
             MiMapa.Children.Remove(_posicionActual);
 
-            if (location == null || location.IsUnknown) return;
+            if (location == null || location.Location.IsUnknown) return;
 
             _posicionActual = new Pushpin
                 {
-                    Location = location,
+                    Location = location.Location,
                     Template = (ControlTemplate) (App.Current.Resources["locationPushpinTemplate"])
                 };
             MiMapa.Children.Add(_posicionActual);

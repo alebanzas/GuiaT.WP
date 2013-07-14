@@ -31,13 +31,13 @@ namespace WPLugares
             MostrarLugares();
         }
         
-        private void ActualizarUbicacion(GeoCoordinate location)
+        private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
         {
             MiMapa.Children.Remove(PosicionActual);
-            if (location != null && !location.IsUnknown)
+            if (location != null && !location.Location.IsUnknown)
             {
                 PosicionActual = new Pushpin();
-                PosicionActual.Location = location;
+                PosicionActual.Location = location.Location;
                 PosicionActual.Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"]);
                 MiMapa.Children.Add(PosicionActual);
             }

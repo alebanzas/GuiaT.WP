@@ -3,6 +3,7 @@ using System.Device.Location;
 using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBAWP.Bing.Geocode;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -31,13 +32,15 @@ namespace GuiaTBAWP
                 return viewModel;
             }
         }
+
+        public static GeoCoordinateWatcher Ubicacion { get; set; }
         
         /// <value>Registered ID used to access map control and Bing maps service.</value>
         internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";
 
         // Easy access to the root frame
         public PhoneApplicationFrame RootFrame { get; private set; }
-        
+
         // Constructor
         public App()
         {
@@ -61,6 +64,50 @@ namespace GuiaTBAWP
         {
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration();
             Configuration.SetInitialConfiguration();
+
+            if (Configuration.IsLocationEnabled)
+            {
+                Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
+                Ubicacion.StatusChanged += Ubicacion_StatusChanged;
+                Ubicacion.PositionChanged += Ubicacion_PositionChanged;
+                Ubicacion.MovementThreshold = 100;
+                Ubicacion.Start();
+            }
+            else
+            {
+                MessageBox.Show("El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones de la aplicación para utilizar las caracteristicas que lo requeran.");
+            }
+        }
+
+        private void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
+        {
+            Configuration.Ubicacion = e.Position;
+            Ubicacion.Stop();
+        }
+
+        private void Ubicacion_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
+        {
+            switch (e.Status)
+            {
+                case GeoPositionStatus.Disabled:
+                    MessageBox.Show(Ubicacion.Permission == GeoPositionPermission.Denied
+                                        ? "El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para utilizar las caracteristicas que lo requeran."
+                                        : "El servicio de localización se encuentra sin funcionamiento.");
+                    Ubicacion.Stop();
+                    break;
+
+                case GeoPositionStatus.Initializing: //Estado: Inicializando
+                    Ubicacion.Stop();
+                    break;
+
+                case GeoPositionStatus.NoData: //Estado: Datos no disponibles
+                    Ubicacion.Stop();
+                    break;
+
+                case GeoPositionStatus.Ready: //Estado: Servicio de localización disponible
+                    Ubicacion.Start();
+                    break;
+            }
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -81,6 +128,7 @@ namespace GuiaTBAWP
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
             Config.Set(Configuration);
+            Ubicacion.Dispose();
         }
 
         // Code to execute if a navigation fails
@@ -172,7 +220,7 @@ namespace GuiaTBAWP
     {
         public ApplicationConfiguration()
         {
-            Ubicacion = new GeoCoordinate();
+            Ubicacion = new GeoPosition<GeoCoordinate>();
         }
 
         public void SetInitialConfiguration()
@@ -180,9 +228,9 @@ namespace GuiaTBAWP
             if (IsInitialized) return;
 
             InstallationId = Guid.NewGuid();
-            
             IsLocationEnabled = true;
             IsInitialized = true;
+
             Config.Set(this);
         }
 
@@ -192,7 +240,17 @@ namespace GuiaTBAWP
 
         public Guid InstallationId { get; set; }
 
-        public GeoCoordinate Ubicacion { get; set; }
+        public GeoPosition<GeoCoordinate> Ubicacion { get; set; }
+
+        public double MinDiffGeography = 0.0001;
+
+        public DateTime UltimaActualizacionBicicletas { get; set; }
+
+        public bool InitialDataBicicletas { get; set; }
+
+        public DateTime UltimaActualizacionTrenes { get; set; }
+
+        public bool InitialDataTrenes { get; set; }
 
         public string Version
         {
@@ -213,15 +271,5 @@ namespace GuiaTBAWP
                 return "GUIATBAWP";
             }
         }
-        
-        public double MinDiffGeography = 0.0001;
-
-        public DateTime UltimaActualizacionBicicletas { get; set; }
-
-        public bool InitialDataBicicletas { get; set; }
-
-        public DateTime UltimaActualizacionTrenes { get; set; }
-
-        public bool InitialDataTrenes { get; set; }
     }
 }

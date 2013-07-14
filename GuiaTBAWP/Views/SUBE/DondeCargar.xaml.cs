@@ -35,9 +35,7 @@ namespace GuiaTBAWP.Views.SUBE
                 return _viewModel ?? (_viewModel = new MainViewModel());
             }
         }
-
-        public GeoCoordinateWatcher Ubicacion { get; set; }
-
+        
         #region TODO: mover
 
 
@@ -99,22 +97,8 @@ namespace GuiaTBAWP.Views.SUBE
 
             ResetUI();
 
-            InitializeGPS();
-            SetLocationService();
-
             Unloaded += DondeCargar_Unloaded;
 
-            if (!NetworkInterface.GetIsNetworkAvailable() ||
-                (Ubicacion.Permission.Equals(GeoPositionPermission.Denied) ||
-                 Ubicacion.Permission.Equals(GeoPositionPermission.Unknown)))
-            {
-                Loaded += (s, e) =>
-                {
-                    var ns = NavigationService;
-                    ns.Navigate(new Uri("/Views/SUBE/Error.xaml", UriKind.Relative));
-                };
-                return;
-            }
             Loaded += (s, e) =>
                 {
                     DataContext = ViewModel;
@@ -125,7 +109,12 @@ namespace GuiaTBAWP.Views.SUBE
                     if (ViewModel.IsPuntosRecargaLoaded) return;
 
                     RecargaLoading.Visibility = Visibility.Visible;
-                    StartLocationService();
+                    
+                    GetDondeCargar();
+                    //SetProgressBar("Buscando posición...");
+                    var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
+                    if (applicationBarIconButton != null)
+                        applicationBarIconButton.IsEnabled = false;
                 };
         }
 
@@ -149,116 +138,10 @@ namespace GuiaTBAWP.Views.SUBE
                 SystemTray.SetProgressIndicator(this, _progress);
             }
         }
-
-
-        //TODO: Extract to class
-        #region Location Service
-
-        private void ResetLocationService()
-        {
-            InitializeGPS();
-            SetLocationService();
-            StartLocationService();
-        }
         
-        public void InitializeGPS()
+        void GetDondeCargar()
         {
-            Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
-            Ubicacion.StatusChanged += Ubicacion_StatusChanged;
-
-            Ubicacion.MovementThreshold = 100;
-        }
-
-        void Ubicacion_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
-        {
-            switch (e.Status)
-            {
-                case GeoPositionStatus.Disabled:
-                    if (Ubicacion.Permission == GeoPositionPermission.Denied)
-                    {
-                        MessageBox.Show("El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para ubicarlo en el mapa.");
-                        //this.ApplicationTitle.Text = "Estado: Sin permisos de localización";
-                    }
-                    else
-                    {
-                        MessageBox.Show("El servicio de localización se encuentra sin funcionamiento.");
-                        //this.ApplicationTitle.Text = "Estado: Servicio de localización sin funcionamiento";
-                    }
-                    Ubicacion.Stop();
-                    Ubicacion.Dispose();
-                    break;
-
-                case GeoPositionStatus.Initializing:
-                    //this.ApplicationTitle.Text = "Estado: Inicializando";
-                    break;
-
-                case GeoPositionStatus.NoData:
-                    //this.ApplicationTitle.Text = "Estado: Datos no disponibles";
-                    break;
-
-                case GeoPositionStatus.Ready:
-                    //this.ApplicationTitle.Text = "Estado: Servicio de localización disponible";
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Helper method to start up the location data acquisition
-        /// </summary>
-        private void SetLocationService()
-        {
-            Ubicacion.PositionChanged += watcher_PositionChanged;
-        }
-
-        /// <summary>
-        /// Helper method to start up the location data acquisition
-        /// </summary>
-        private void StartLocationService()
-        {
-            SetProgressBar("Buscando posición...");
-            var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
-            if (applicationBarIconButton != null)
-                applicationBarIconButton.IsEnabled = false;
-            if (App.Configuration.IsLocationEnabled)
-            {
-                Ubicacion.Start();
-            }
-            else
-            {
-                SetProgressBar(null);
-                MessageBox.Show("El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para ubicarlo en el mapa.");
-                Ubicacion.Stop();
-            }
-                
-        }
-
-        /// <summary>
-        /// Helper method to stop up the location data acquisition
-        /// </summary>
-        private void StopLocationService()
-        {
-            // Stop data acquisition
-            Ubicacion.Stop();
-            Ubicacion.Dispose();
-        }
-
-        /// <summary>
-        /// Handler for the PositionChanged event. This invokes MyStatusChanged on the UI thread and
-        /// passes the GeoPositionStatusChangedEventArgs
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            Deployment.Current.Dispatcher.BeginInvoke(() => MyPositionChanged(e));
-        }
-
-        /// <summary>
-        /// Custom method called from the PositionChanged event handler
-        /// </summary>
-        /// <param name="e"></param>
-        void MyPositionChanged(GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
+            var e = App.Ubicacion;
             var location = new GeocodeLocation
             {
                 Latitude = e.Position.Location.Latitude,
@@ -361,7 +244,6 @@ namespace GuiaTBAWP.Views.SUBE
             _pendingRequests--;
             if (_pendingRequests != 0) return;
 
-            StopLocationService();
             ResetUI();
         }
 
@@ -372,10 +254,7 @@ namespace GuiaTBAWP.Views.SUBE
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = true;
         }
-
-        #endregion
-
-
+        
         private static void SetLocation(GeoCoordinate location)
         {
             // Center map to default location.
@@ -410,7 +289,7 @@ namespace GuiaTBAWP.Views.SUBE
 
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
-            ResetLocationService();
+            GetDondeCargar();
         }
     }
 }

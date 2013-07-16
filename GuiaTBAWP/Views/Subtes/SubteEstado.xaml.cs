@@ -106,7 +106,6 @@ namespace GuiaTBAWP.Views.Subtes
         
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
-            ViewModel.Lineas.Clear();
             LoadData();
         }
     }

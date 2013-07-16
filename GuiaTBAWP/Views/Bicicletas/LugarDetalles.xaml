@@ -44,7 +44,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="2" Height="250" Width="450" Margin="9,220,0,0">
-            <my:Map x:Name="MiMapa" Height="250" Width="450" VerticalAlignment="Top" CredentialsProvider="{StaticResource CredentialsProvider}" CacheMode="BitmapCache" />
+            <my:Map x:Name="MiMapa" Height="250" Width="450" VerticalAlignment="Top" CacheMode="BitmapCache" />
         </Grid>
    </Grid>
 

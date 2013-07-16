@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
@@ -38,7 +36,7 @@ namespace GuiaTBAWP.Views.Subtes
                 return;
             }
             
-            Loading.Visibility = Visibility.Visible;
+            if(ViewModel.Lineas.Count == 0) Loading.Visibility = Visibility.Visible;
             ProgressBar.Show("Obteniendo estado del servicio...");
             SetApplicationBarEnabled(true);
             
@@ -77,7 +75,7 @@ namespace GuiaTBAWP.Views.Subtes
             }
             catch (Exception)
             {
-                EndRequest();
+                ResetUI();
                 Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
             }
         }
@@ -85,51 +83,25 @@ namespace GuiaTBAWP.Views.Subtes
         delegate void DelegateUpdateEstado(SubteStatusModel estado);
         private void UpdateEstadoServicio(SubteStatusModel model)
         {
-            ViewModel.Lineas.Clear();
+            BindViewModel(model);
 
-            var result = new Collection<SubteItemViewModel>();
-
-            foreach (var item in model.Lineas)
-            {
-                result.Add(new SubteItemViewModel
-                {
-                    Nombre = item.Nombre,
-                    Detalles = item.Detalles,
-                });
-            }
-
-            BindViewModel(result, model.Actualizacion);
-
-            EndRequest();
+            ResetUI();
         }
 
-        private void BindViewModel(IEnumerable<SubteItemViewModel> result, DateTime actualizacion)
+        private void BindViewModel(SubteStatusModel model)
         {
-            _viewModel.Lineas.Clear();
-            foreach (var subteItemViewModel in result)
+            ViewModel.Lineas.Clear();
+            foreach (var subteItemViewModel in model.Lineas)
             {
-                _viewModel.AddLinea(new SubteItemViewModel
+                ViewModel.AddLinea(new SubteItemViewModel
                     {
                         Detalles = subteItemViewModel.Detalles,
                         Nombre = subteItemViewModel.Nombre,
                     });
             }
 
-            _viewModel.Actualizacion = string.Format("Ultima actualización: {0}", actualizacion.ToLocalDateTime());
+            ViewModel.Actualizacion = string.Format("Ultima actualización: {0}", model.Actualizacion.ToLocalDateTime());
 
-        }
-
-        private void EndRequest()
-        {
-            Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-                var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
-                if (applicationBarIconButton != null)
-                    applicationBarIconButton.IsEnabled = true;
-
-                Loading.Visibility = Visibility.Collapsed;
-                ProgressBar.Hide();
-            });
         }
         
         private void ButtonRefresh_Click(object sender, EventArgs e)

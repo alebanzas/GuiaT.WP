@@ -30,12 +30,10 @@
         <Grid x:Name="ContentPanel" Grid.Row="1">
             <StackPanel x:Name="DvError" Visibility="Visible" Margin="12,0,0,0" Orientation="Vertical">
                 <TextBlock>OCURRIO UN ERROR INESPERADO.</TextBlock>
-                <ScrollViewer Height="100" Margin="0,20,0,20">
+                <ScrollViewer x:Name="DvErrorDetail" Visibility="Collapsed" Height="100" Margin="0,20,0,20">
                     <StackPanel Orientation="Vertical">
                         <TextBlock>DETALLE DEL ERROR:</TextBlock>
-                        <TextBlock Margin="0" x:Name="ErrorText" Style="{StaticResource PhoneTextSmallStyle}" TextWrapping="Wrap">
-                            Recorrido A IDA A PLAZA FALUCHO: Desde PEDRO DE LUJAN y SAN ANTONIO por PEDRO DE LUJAN, HIPOLITO VIEYTES, CALIFORNIA, AVENIDA MANUEL MONTES DE OCA, BERNARDO DE IRIGOYEN, AVENIDA JUAN DE GARAY, LIMA ESTE, AVENIDA BRASIL NORTE, LIMA OESTE, CONSTITUCION, AVENIDA ENTRE RIOS, AVENIDA CALLAO, MARCELO TORCUATO DE ALVEAR, (*) CHARCAS, GALLO, GÜEMES, SERRANO, calzada circular de PLAZA ITALIA, AVENIDA SANTA FE hasta el Nº 4927 donde ingresa a su terminal. REGRESO A PUENTE PUEYRREDON: Desde su terminal ubicada en AVENIDA SANTA FE Nº 4927 por AVENIDA LUIS MARIA CAMPOS, AVENIDA SANTA FE, RIOBAMBA, (**) COMBATE DE LOS POZOS, AVENIDA BRASIL, GENERAL HORNOS, DOCTOR ENRIQUE FINOCHIETTO, AVENIDA MANUEL MONTES DE OCA, IRIARTE, SAN ANTONIO hasta PEDRO DE LUJAN.Recorrido A IDA A PLAZA FALUCHO: Desde PEDRO DE LUJAN y SAN ANTONIO por PEDRO DE LUJAN, HIPOLITO VIEYTES, CALIFORNIA, AVENIDA MANUEL MONTES DE OCA, BERNARDO DE IRIGOYEN, AVENIDA JUAN DE GARAY, LIMA ESTE, AVENIDA BRASIL NORTE, LIMA OESTE, CONSTITUCION, AVENIDA ENTRE RIOS, AVENIDA CALLAO, MARCELO TORCUATO DE ALVEAR, (*) CHARCAS, GALLO, GÜEMES, SERRANO, calzada circular de PLAZA ITALIA, AVENIDA SANTA FE hasta el Nº 4927 donde ingresa a su terminal. REGRESO A PUENTE PUEYRREDON: Desde su terminal ubicada en AVENIDA SANTA FE Nº 4927 por AVENIDA LUIS MARIA CAMPOS, AVENIDA SANTA FE, RIOBAMBA, (**) COMBATE DE LOS POZOS, AVENIDA BRASIL, GENERAL HORNOS, DOCTOR ENRIQUE FINOCHIETTO, AVENIDA MANUEL MONTES DE OCA, IRIARTE, SAN ANTONIO hasta PEDRO DE LUJAN.
-                        </TextBlock>
+                        <TextBlock Margin="0" x:Name="ErrorText" Style="{StaticResource PhoneTextSmallStyle}" TextWrapping="Wrap"></TextBlock>
                     </StackPanel>
                 </ScrollViewer>
                 <TextBlock Margin="0,30,0,10">¿Desea ayudarnos a mejorar?</TextBlock>

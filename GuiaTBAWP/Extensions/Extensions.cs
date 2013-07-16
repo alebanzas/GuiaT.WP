@@ -42,9 +42,9 @@ namespace GuiaTBAWP.Extensions
             return ToApiCallUri(source, pp, alwaysRefresh);
         }
 
-        public static Uri ToApiCallUri(this string source)
+        public static Uri ToApiCallUri(this string source, bool alwaysRefresh = false)
         {
-            return ToApiCallUri(source, string.Empty);
+            return ToApiCallUri(source, string.Empty, alwaysRefresh);
         }
     }
 

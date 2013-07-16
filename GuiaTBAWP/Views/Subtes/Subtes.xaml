@@ -14,7 +14,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
 
         <Grid.Background>
@@ -26,32 +25,30 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="GUÍA TRANSPORTE BA" Margin="12,0,0,0" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="red de subtes" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
             <StackPanel>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteLineas">
-                    <TextBlock Margin="-12,0,0,0" Text="líneas y estaciones" />
+                    <TextBlock Margin="0" Text="líneas y estaciones" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteHorarios">
-					<TextBlock Margin="-12,0,0,0" Text="horarios" />
+					<TextBlock Margin="0" Text="horarios" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubtePrecio">
-					<TextBlock Margin="-12,0,0,0" Text="precio" />
+					<TextBlock Margin="0" Text="precio" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteMapa">
-					<TextBlock Margin="-12,0,0,0" Text="mapa de la red" />
+					<TextBlock Margin="0" Text="mapa de la red" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteEstado">
-					<TextBlock Margin="-12,0,0,0" Text="estado del servicio" />
+					<TextBlock Margin="0" Text="estado del servicio" />
                 </Button>
                 
-                <Grid Margin="0,70,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">
+                <Grid Margin="10,110,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">
 					<adctl:AdControl Height="80" Width="480" ApplicationId="fe6bdcf1-6548-40dc-be24-22f81ef87700" AdUnitId="10077177" />
                 </Grid>
             </StackPanel>

@@ -24,6 +24,9 @@ namespace GuiaTBAWP
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+#if DEBUG
+            DvErrorDetail.Visibility = Visibility.Visible;
+#endif
             ErrorText.Text = Exception.ToString();
         }
 

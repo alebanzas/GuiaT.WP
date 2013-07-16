@@ -26,9 +26,9 @@ namespace GuiaTBAWP.Extensions
                 refresh = string.Format("&t={0}.{1}", DateTime.UtcNow.Hour, DateTime.UtcNow.Minute);
             }
 
-            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}", 
-                source, 
-                App.Configuration.Name, 
+            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
+                source,
+                App.Configuration.Name,
                 App.Configuration.Version,
                 App.Configuration.InstallationId,
                 refresh,
@@ -45,6 +45,14 @@ namespace GuiaTBAWP.Extensions
         public static Uri ToApiCallUri(this string source, bool alwaysRefresh = false)
         {
             return ToApiCallUri(source, string.Empty, alwaysRefresh);
+        }
+    }
+
+    public static class DateTimeExtensions
+    {
+        public static string ToLocalDateTime(this DateTime source)
+        {
+            return string.Format("{0} {1}", source.ToLocalTime().ToShortDateString(), source.ToLocalTime().ToShortTimeString());
         }
     }
 

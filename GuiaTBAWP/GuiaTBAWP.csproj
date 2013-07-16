@@ -85,11 +85,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
+    <Compile Include="PositionService.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Config.cs" />
+    <Compile Include="LoadingBar.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletaEstacionDC.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="Models\TrenesRamalEstadoTable.cs" />
     <Compile Include="Models\TrenesLineaEstadoDC.cs" />
     <Compile Include="Models\TrenesLineaEstadoTable.cs" />
+    <Compile Include="ProgressBar.cs" />
     <Compile Include="ViewModels\ColectivoItemViewModel.cs" />
     <Compile Include="ViewModels\ColectivoCercanoViewModel.cs" />
     <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
@@ -146,9 +150,6 @@
     </Compile>
     <Compile Include="Views\SUBE\DondeCargar.xaml.cs">
       <DependentUpon>DondeCargar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SUBE\Mapa.xaml.cs">
-      <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
@@ -267,8 +268,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Source\LocalesSource.cs" />
-    <Compile Include="Source\LocalModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -332,10 +331,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SUBE\DondeCargar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\SUBE\Mapa.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

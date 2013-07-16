@@ -29,11 +29,7 @@ namespace GuiaTBAWP.Views.Subtes
                 return _viewModel ?? (_viewModel = new SubteStatusViewModel());
             }
         }
-
-
-        readonly ProgressIndicator _progress = new ProgressIndicator();
         
-
         public SubteEstado()
         {
             ViewModel.Lineas.Clear();
@@ -43,9 +39,6 @@ namespace GuiaTBAWP.Views.Subtes
             // Set the data context of the listbox control to the sample data
             DataContext = ViewModel;
             Loaded += MainPage_Loaded;
-
-            _progress.IsVisible = true;
-            _progress.IsIndeterminate = true;
         }
 
         // Load data for the ViewModel Items
@@ -67,9 +60,7 @@ namespace GuiaTBAWP.Views.Subtes
             {
                 Loading.Visibility = Visibility.Visible;
                 ConnectionError.Visibility = Visibility.Collapsed;
-                _progress.Text = "Obteniendo estado del servicio...";
-                SystemTray.SetIsVisible(this, true);
-                SystemTray.SetProgressIndicator(this, _progress);
+                ProgressBar.Show("Obteniendo estado del servicio...");
 
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
@@ -153,7 +144,7 @@ namespace GuiaTBAWP.Views.Subtes
                     applicationBarIconButton.IsEnabled = true;
 
                 Loading.Visibility = Visibility.Collapsed;
-                SystemTray.SetProgressIndicator(this, null);
+                ProgressBar.Hide();
             });
         }
 

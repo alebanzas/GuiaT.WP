@@ -10,7 +10,6 @@
     <!--Application Resources-->
     <Application.Resources>
         <ResourceDictionary>
-            <core:String x:Key="BingMapsKey">AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp</core:String>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/ResourceDictionary.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/DefaultStyle.xaml"/>

@@ -20,7 +20,6 @@ namespace GuiaTBAWP.Views.Bicicletas
     {
         Pushpin _posicionActual;
         WebRequest _httpReq;
-        readonly ProgressIndicator _progress = new ProgressIndicator();
 
         public Estaciones()
         {
@@ -37,9 +36,6 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            _progress.IsVisible = true;
-            _progress.IsIndeterminate = true;
-
             UpdatedAt.Text = ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas);
 
             MostrarLugares();
@@ -112,21 +108,6 @@ namespace GuiaTBAWP.Views.Bicicletas
         }
 
 
-        private void SetProgressBar(string msj, bool showProgress = true)
-        {
-            if (string.IsNullOrEmpty(msj))
-            {
-                SystemTray.SetProgressIndicator(this, null);
-            }
-            else
-            {
-                _progress.Text = msj;
-                _progress.IsIndeterminate = showProgress;
-                SystemTray.SetIsVisible(this, true);
-                SystemTray.SetProgressIndicator(this, _progress);
-            }
-        }
-
         private static bool _datosLoaded = false;
         private bool CancelarRequest()
         {
@@ -146,7 +127,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                SetProgressBar(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
+                ProgressBar.Show(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
                 _datosLoaded = false;
                 _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri());
@@ -240,7 +221,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                 if (applicationBarIconButton != null)
                     applicationBarIconButton.IsEnabled = true;
 
-                SetProgressBar(null);
+                ProgressBar.Hide();
             });
         }
 

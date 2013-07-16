@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Device.Location;
 using System.Globalization;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
@@ -14,7 +12,6 @@ using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 
 namespace GuiaTBAWP.Views.Colectivos
 {
@@ -36,7 +33,6 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private static bool _datosLoaded = false;
 
-        readonly ProgressIndicator _progress = new ProgressIndicator();
         private HttpWebRequest _httpReq;
 
         public Cercanos()
@@ -48,10 +44,7 @@ namespace GuiaTBAWP.Views.Colectivos
                     ResetUI();
                     
                     DataContext = ViewModel;
-
-                    _progress.IsVisible = true;
-                    _progress.IsIndeterminate = true;
-
+                    
                     GetColectivosCercanos();
                     //SetProgressBar("Buscando posición...");
                     var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
@@ -64,29 +57,14 @@ namespace GuiaTBAWP.Views.Colectivos
             };
         }
         
-        private void SetProgressBar(string msj, bool showProgress = true)
-        {
-            if (string.IsNullOrEmpty(msj))
-            {
-                SystemTray.SetProgressIndicator(this, null);
-            }
-            else
-            {
-                _progress.Text = msj;
-                _progress.IsIndeterminate = showProgress;
-                SystemTray.SetIsVisible(this, true);
-                SystemTray.SetProgressIndicator(this, _progress);
-            }
-        }
-
         void GetColectivosCercanos()
         {
-            var e = App.Ubicacion;
+            var currentLocation = PositionService.GetCurrentLocation();
 
             var location = new GeocodeLocation
             {
-                Latitude = e.Position.Location.Latitude,
-                Longitude = e.Position.Location.Longitude
+                Latitude = currentLocation.Location.Latitude,
+                Longitude = currentLocation.Location.Longitude
             };
 
             if (_datosLoaded || _pendingRequests > 0)
@@ -99,9 +77,9 @@ namespace GuiaTBAWP.Views.Colectivos
                 }
             }
 
-            ViewModel.CurrentLocation = e.Position.Location;
+            ViewModel.CurrentLocation = currentLocation.Location;
             
-            SetProgressBar(null);
+            ProgressBar.Hide();
 
             GetMasCercanos(location);
         }
@@ -109,7 +87,7 @@ namespace GuiaTBAWP.Views.Colectivos
         private int _pendingRequests;
         private void GetMasCercanos(GeocodeLocation location)
         {
-            SetProgressBar("Buscando más cercano...");
+            ProgressBar.Show("Buscando más cercano...");
             CancelarRequest();
             
             var param = new Dictionary<string, object>
@@ -184,12 +162,13 @@ namespace GuiaTBAWP.Views.Colectivos
         private void ResetUI()
         {
             if (_pendingRequests != 0) return;
-            SetProgressBar(null);
+            ProgressBar.Hide();
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = true;
         }
         
+
         private void Opciones_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));

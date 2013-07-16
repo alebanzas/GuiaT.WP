@@ -1,45 +1,18 @@
 ﻿using System;
-using System.Device.Location;
-using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Navigation;
-using GuiaTBAWP.Bing.Geocode;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using GuiaTBAWP.ViewModels;
 
 namespace GuiaTBAWP
 {
-    public partial class App : Application
+    public partial class App
     {
         public static ApplicationConfiguration Configuration { get; set; }
         
-        private static MainViewModel viewModel = null;
-
-        /// <summary>
-        /// A static ViewModel used by the views to bind against.
-        /// </summary>
-        /// <returns>The MainViewModel object.</returns>
-        public static MainViewModel ViewModel
-        {
-            get
-            {
-                // Delay creation of the view model until necessary
-                if (viewModel == null)
-                    viewModel = new MainViewModel();
-
-                return viewModel;
-            }
-        }
-
-        public static GeoCoordinateWatcher Ubicacion { get; set; }
-        
-        /// <value>Registered ID used to access map control and Bing maps service.</value>
-        internal const string Id = "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";
-
         // Easy access to the root frame
-        public PhoneApplicationFrame RootFrame { get; private set; }
+        public static PhoneApplicationFrame RootFrame { get; private set; }
 
         // Constructor
         public App()
@@ -56,7 +29,13 @@ namespace GuiaTBAWP
             InitializePhoneApplication();
 
             ThemeManager.ToDarkTheme();
-        }        
+            
+            LoadingBar.Instance.Initialize(RootFrame);
+
+            ProgressBar.Initialize();
+        }
+
+        #region ApplicationLifetimeObjects
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
@@ -65,55 +44,14 @@ namespace GuiaTBAWP
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration();
             Configuration.SetInitialConfiguration();
 
-            if (Configuration.IsLocationEnabled)
-            {
-                Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.Default);
-                Ubicacion.StatusChanged += Ubicacion_StatusChanged;
-                Ubicacion.PositionChanged += Ubicacion_PositionChanged;
-                Ubicacion.MovementThreshold = 100;
-                Ubicacion.Start();
-            }
-            else
-            {
-                MessageBox.Show("El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones de la aplicación para utilizar las caracteristicas que lo requeran.");
-            }
-        }
-
-        private void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            Configuration.Ubicacion = e.Position;
-            Ubicacion.Stop();
-        }
-
-        private void Ubicacion_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
-        {
-            switch (e.Status)
-            {
-                case GeoPositionStatus.Disabled:
-                    MessageBox.Show(Ubicacion.Permission == GeoPositionPermission.Denied
-                                        ? "El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para utilizar las caracteristicas que lo requeran."
-                                        : "El servicio de localización se encuentra sin funcionamiento.");
-                    Ubicacion.Stop();
-                    break;
-
-                case GeoPositionStatus.Initializing: //Estado: Inicializando
-                    Ubicacion.Stop();
-                    break;
-
-                case GeoPositionStatus.NoData: //Estado: Datos no disponibles
-                    Ubicacion.Stop();
-                    break;
-
-                case GeoPositionStatus.Ready: //Estado: Servicio de localización disponible
-                    Ubicacion.Start();
-                    break;
-            }
+            PositionService.Initialize();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            PositionService.Initialize();
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -128,8 +66,12 @@ namespace GuiaTBAWP
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
             Config.Set(Configuration);
-            Ubicacion.Dispose();
+            PositionService.Destroy();
         }
+
+        #endregion
+
+        #region exception handling
 
         // Code to execute if a navigation fails
         void RootFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
@@ -173,15 +115,17 @@ namespace GuiaTBAWP
             throw new QuitException();
         }
 
-        #region Phone application initialization
+        #endregion
+
+        #region application initialization
 
         // Avoid double-initialization
-        private bool phoneApplicationInitialized = false;
+        private bool _phoneApplicationInitialized;
 
         // Do not add any additional code to this method
         private void InitializePhoneApplication()
         {
-            if (phoneApplicationInitialized)
+            if (_phoneApplicationInitialized)
                 return;
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
@@ -193,83 +137,26 @@ namespace GuiaTBAWP
             RootFrame.NavigationFailed += RootFrame_NavigationFailed;
 
             // Ensure we don't initialize again
-            phoneApplicationInitialized = true;
+            _phoneApplicationInitialized = true;
         }
 
         // Do not add any additional code to this method
         private void CompleteInitializePhoneApplication(object sender, NavigationEventArgs e)
         {
             // Set the root visual to allow the application to render
-            if (RootVisual != RootFrame)
-                RootVisual = RootFrame;
+            RootVisual = RootFrame;
 
             // Remove this handler since it is no longer needed
             RootFrame.Navigated -= CompleteInitializePhoneApplication;
+            RootFrame.Navigated += RootFrame_Navigated;
+        }
+
+        void RootFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            var navigatedPage = (PhoneApplicationPage)e.Content;
+            ProgressBar.UIElement = navigatedPage;
         }
 
         #endregion
-    }
-
-    public enum ApplicationConfigurationKeys
-    {
-        IsInitialized,
-        Location,
-    }
-
-    public class ApplicationConfiguration
-    {
-        public ApplicationConfiguration()
-        {
-            Ubicacion = new GeoPosition<GeoCoordinate>();
-        }
-
-        public void SetInitialConfiguration()
-        {
-            if (IsInitialized) return;
-
-            InstallationId = Guid.NewGuid();
-            IsLocationEnabled = true;
-            IsInitialized = true;
-
-            Config.Set(this);
-        }
-
-        public bool IsInitialized { get; set; }
-
-        public bool IsLocationEnabled { get; set; }
-
-        public Guid InstallationId { get; set; }
-
-        public GeoPosition<GeoCoordinate> Ubicacion { get; set; }
-
-        public double MinDiffGeography = 0.0001;
-
-        public DateTime UltimaActualizacionBicicletas { get; set; }
-
-        public bool InitialDataBicicletas { get; set; }
-
-        public DateTime UltimaActualizacionTrenes { get; set; }
-
-        public bool InitialDataTrenes { get; set; }
-
-        public string Version
-        {
-            get
-            {
-                var v = "1.4.0.0";
-#if DEBUG
-                v += "d";
-#endif
-                return v;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return "GUIATBAWP";
-            }
-        }
     }
 }

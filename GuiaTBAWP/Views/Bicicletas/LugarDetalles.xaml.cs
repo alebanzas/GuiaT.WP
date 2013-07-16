@@ -59,6 +59,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                         select miLugar;
 
             _bicicletaEstacion = query.FirstOrDefault();
+            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
             UpdateLugar();
 
             base.OnNavigatedTo(e);

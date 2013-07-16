@@ -31,7 +31,7 @@ namespace GuiaTBAWP.Views.Subtes
         public void LoadData()
         {
             ResetUI();
-            if (NetworkInterface.GetIsNetworkAvailable())
+            if (!NetworkInterface.GetIsNetworkAvailable())
             {    
                 ConnectionError.Visibility = Visibility.Visible;
                 Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
@@ -85,7 +85,6 @@ namespace GuiaTBAWP.Views.Subtes
         delegate void DelegateUpdateEstado(SubteStatusModel estado);
         private void UpdateEstadoServicio(SubteStatusModel model)
         {
-            ViewModel.Actualizacion = model.ActualizacionStr;
             ViewModel.Lineas.Clear();
 
             var result = new Collection<SubteItemViewModel>();
@@ -99,12 +98,12 @@ namespace GuiaTBAWP.Views.Subtes
                 });
             }
 
-            BindViewModel(result);
+            BindViewModel(result, model.Actualizacion);
 
             EndRequest();
         }
 
-        private void BindViewModel(IEnumerable<SubteItemViewModel> result)
+        private void BindViewModel(IEnumerable<SubteItemViewModel> result, DateTime actualizacion)
         {
             _viewModel.Lineas.Clear();
             foreach (var subteItemViewModel in result)
@@ -116,7 +115,7 @@ namespace GuiaTBAWP.Views.Subtes
                     });
             }
 
-            _viewModel.Actualizacion = DateTime.UtcNow.ToShortTimeString();
+            _viewModel.Actualizacion = string.Format("Ultima actualización: {0}", actualizacion.ToLocalDateTime());
 
         }
 

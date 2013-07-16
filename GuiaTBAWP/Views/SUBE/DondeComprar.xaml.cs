@@ -78,9 +78,7 @@ namespace GuiaTBAWP.Views.SUBE
 */
 
         #endregion
-
-        readonly ProgressIndicator _progress = new ProgressIndicator();
-
+        
         private HttpWebRequest _httpReq;
 
         public DondeComprar()
@@ -94,10 +92,7 @@ namespace GuiaTBAWP.Views.SUBE
             Loaded += (s, e) =>
                 {
                     DataContext = ViewModel;
-
-                    _progress.IsVisible = true;
-                    _progress.IsIndeterminate = true;
-
+                    
                     if (ViewModel.IsPuntosVentaLoaded) return;
 
                     VentaLoading.Visibility = Visibility.Visible;
@@ -116,28 +111,13 @@ namespace GuiaTBAWP.Views.SUBE
                 _httpReq.Abort();
         }
 
-        private void SetProgressBar(string msj, bool showProgress = true)
-        {
-            if (string.IsNullOrEmpty(msj))
-            {
-                SystemTray.SetProgressIndicator(this, null);
-            }
-            else
-            {
-                _progress.Text = msj;
-                _progress.IsIndeterminate = showProgress;
-                SystemTray.SetIsVisible(this, true);
-                SystemTray.SetProgressIndicator(this, _progress);
-            }
-        }
-
         void GetDondeComprar()
         {
-            var e = App.Ubicacion;
+            var currentLocation = PositionService.GetCurrentLocation();
             var location = new GeocodeLocation
             {
-                Latitude = e.Position.Location.Latitude,
-                Longitude = e.Position.Location.Longitude
+                Latitude = currentLocation.Location.Latitude,
+                Longitude = currentLocation.Location.Longitude
             };
 
             if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.Configuration.MinDiffGeography && Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.Configuration.MinDiffGeography)
@@ -145,12 +125,11 @@ namespace GuiaTBAWP.Views.SUBE
                 return;
             }
 
-            ViewModel.CurrentLocation = e.Position.Location;
+            ViewModel.CurrentLocation = currentLocation.Location;
 
             SetLocation(location);
             CreateNewPushpin(location);
-            //StopLocationService();
-            SetProgressBar(null);
+            ProgressBar.Hide();
 
             GetMasCercanos();
         }
@@ -158,7 +137,7 @@ namespace GuiaTBAWP.Views.SUBE
         private int _pendingRequests;
         private void GetMasCercanos()
         {
-            SetProgressBar("Buscando más cercano...");
+            ProgressBar.Show("Buscando más cercano...");
 
             var param = new Dictionary<string, object>
                 {
@@ -209,7 +188,7 @@ namespace GuiaTBAWP.Views.SUBE
 
         private void ResetUI()
         {
-            SetProgressBar(null);
+            ProgressBar.Hide();
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = true;

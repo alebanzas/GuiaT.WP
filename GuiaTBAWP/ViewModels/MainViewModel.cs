@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
 using Microsoft.Phone.Controls.Maps;
-using Microsoft.Phone.Shell;
 using GuiaTBAWP.Bing.Route;
 using GuiaTBAWP.Models;
 
@@ -14,8 +13,8 @@ namespace GuiaTBAWP.ViewModels
     {
         public MainViewModel()
         {
-            this.PuntosVenta = new ObservableCollection<ItemViewModel>();
-            this.PuntosRecarga = new ObservableCollection<ItemViewModel>();
+            PuntosVenta = new ObservableCollection<ItemViewModel>();
+            PuntosRecarga = new ObservableCollection<ItemViewModel>();
             InitializeDefaults();
         }
 
@@ -57,7 +56,7 @@ namespace GuiaTBAWP.ViewModels
         #region Fields
 
         /// <value>Provides credentials for the map control.</value>
-        private readonly CredentialsProvider _credentialsProvider = new ApplicationIdCredentialsProvider(App.Id);
+        private readonly CredentialsProvider _credentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
 
         /// <value>Default location coordinate (Buenos Aires).</value>
         private static readonly GeoCoordinate DefaultLocation = new GeoCoordinate(-34.6085, -58.3736);
@@ -210,12 +209,12 @@ namespace GuiaTBAWP.ViewModels
         /// </summary>
         public void LoadPuntosRecarga(IEnumerable<ItemViewModel> items)
         {
-            this.PuntosRecarga.Clear();
+            PuntosRecarga.Clear();
             foreach (var itemViewModel in items)
             {
-                this.PuntosRecarga.Add(itemViewModel);
+                PuntosRecarga.Add(itemViewModel);
             }
-            this.IsPuntosRecargaLoaded = true;
+            IsPuntosRecargaLoaded = true;
         }
 
         /// <summary>
@@ -223,12 +222,12 @@ namespace GuiaTBAWP.ViewModels
         /// </summary>
         public void LoadPuntosVenta(IEnumerable<ItemViewModel> items)
         {
-            this.PuntosVenta.Clear();
+            PuntosVenta.Clear();
             foreach (var itemViewModel in items)
             {
-                this.PuntosVenta.Add(itemViewModel);
+                PuntosVenta.Add(itemViewModel);
             }
-            this.IsPuntosVentaLoaded = true;
+            IsPuntosVentaLoaded = true;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

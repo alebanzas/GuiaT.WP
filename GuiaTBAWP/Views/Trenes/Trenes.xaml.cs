@@ -24,9 +24,6 @@ namespace GuiaTBAWP.Views.Trenes
             DataContext = ViewModel;
             Loaded += MainPage_Loaded;
             Unloaded += MainPage_Unloaded;
-
-            _progress.IsVisible = true;
-            _progress.IsIndeterminate = true;
         }
 
         private void MainPage_Unloaded(object sender, RoutedEventArgs e)
@@ -115,9 +112,6 @@ namespace GuiaTBAWP.Views.Trenes
                 return _viewModel ?? (_viewModel = new SubteStatusViewModel());
             }
         }
-
-
-        readonly ProgressIndicator _progress = new ProgressIndicator();
         
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -138,10 +132,8 @@ namespace GuiaTBAWP.Views.Trenes
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                _progress.Text = string.Format("{0} estado del servicio...", !App.Configuration.InitialDataTrenes ? "Obteniendo" : "Actualizando");
-                SystemTray.SetIsVisible(this, true);
-                SystemTray.SetProgressIndicator(this, _progress);
-
+                ProgressBar.Show(string.Format("{0} estado del servicio...", !App.Configuration.InitialDataTrenes ? "Obteniendo" : "Actualizando"));
+                
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
                     var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
@@ -251,7 +243,7 @@ namespace GuiaTBAWP.Views.Trenes
                 if (applicationBarIconButton != null)
                     applicationBarIconButton.IsEnabled = true;
 
-                SystemTray.SetProgressIndicator(this, null);
+                ProgressBar.Hide();
             });
         }
 

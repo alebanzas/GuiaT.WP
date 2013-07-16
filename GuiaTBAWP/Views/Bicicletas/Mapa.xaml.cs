@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Device.Location;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using GuiaTBAWP;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 
-
-namespace WPLugares
+namespace GuiaTBAWP.Views.Bicicletas
 {
     public partial class Mapa : PhoneApplicationPage
     {
@@ -23,11 +20,12 @@ namespace WPLugares
         public Mapa()
         {
             InitializeComponent();
-            this.Loaded += new RoutedEventHandler(Page_Loaded);
+            Loaded += Page_Loaded;
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
             MostrarLugares();
         }
         

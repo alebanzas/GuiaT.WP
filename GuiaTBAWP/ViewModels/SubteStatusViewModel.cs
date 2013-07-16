@@ -1,25 +1,34 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using GuiaTBAWP.Views.Subtes;
 
 namespace GuiaTBAWP.ViewModels
 {
     public class SubteStatusViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<SubteItemViewModel> _lineas;
-
         public SubteStatusViewModel()
         {
             Lineas = new ObservableCollection<SubteItemViewModel>();
         }
 
+        private string _actualizacion;
+        public string Actualizacion
+        {
+            get { return _actualizacion; }
+            set
+            {
+                _actualizacion = value;
+                NotifyPropertyChanged("Actualizacion");
+            }
+        }
+
+        private ObservableCollection<SubteItemViewModel> _lineas;
         public ObservableCollection<SubteItemViewModel> Lineas
         {
             get { return _lineas; }
             private set { 
                 _lineas = value;
-                NotifyPropertyChanged("SampleProperty");
+                NotifyPropertyChanged("Lineas");
             }
         }
 
@@ -28,7 +37,6 @@ namespace GuiaTBAWP.ViewModels
             Lineas.Add(linea);
         }
 
-        public string Actualizacion { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)

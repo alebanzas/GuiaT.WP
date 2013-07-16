@@ -23,6 +23,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
@@ -51,6 +52,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
+        <Grid Grid.Row="2" Margin="25,-10,0,10">
+            <TextBlock Text="{Binding Actualizacion}"></TextBlock>
+        </Grid>
     </Grid>
 
 
@@ -62,7 +66,7 @@
 							  IsMenuEnabled="True"
 							  Opacity="0.7">
 
-            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
+            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

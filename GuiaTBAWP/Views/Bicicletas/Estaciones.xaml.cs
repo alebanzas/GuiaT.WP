@@ -38,6 +38,8 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             UpdatedAt.Text = ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas);
 
+            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
+
             MostrarLugares();
             
             if (!_datosLoaded)

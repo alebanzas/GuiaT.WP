@@ -26,7 +26,7 @@
                 <StackPanel>
                     <Grid Height="460">
                         <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
-                        <my:Map Name="MiMapa" IsEnabled="False" CredentialsProvider="{StaticResource CredentialsProvider}" CacheMode="BitmapCache"></my:Map>
+                        <my:Map Name="MiMapa" IsEnabled="False" CacheMode="BitmapCache"></my:Map>
                     </Grid>
                     <TextBlock>Ultima actualización:</TextBlock>
                     <TextBlock x:Name="UpdatedAt"></TextBlock>

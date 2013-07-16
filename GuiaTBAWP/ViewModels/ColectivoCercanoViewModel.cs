@@ -10,7 +10,6 @@ namespace GuiaTBAWP.ViewModels
         public ColectivoCercanoViewModel()
         {
             Items = new ObservableCollection<ColectivoItemViewModel>();
-            CurrentLocation = new GeoCoordinate();
         }
 
         private ObservableCollection<ColectivoItemViewModel> _items;
@@ -27,8 +26,6 @@ namespace GuiaTBAWP.ViewModels
         {
             Items.Add(linea);
         }
-
-        public GeoCoordinate CurrentLocation { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)

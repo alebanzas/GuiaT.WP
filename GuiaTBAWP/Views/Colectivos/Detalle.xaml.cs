@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using GuiaTBAWP.BusData;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.Colectivos
 {
@@ -40,18 +36,9 @@ namespace GuiaTBAWP.Views.Colectivos
 
             foreach (var colectivo in colectivoRecorrido)
             {
-                var text = new TextBlock();
-                text.Text = colectivo.Value;
-                text.TextWrapping = TextWrapping.Wrap;
-
-                var scroll = new ScrollViewer();
-                scroll.Margin = new Thickness(12,0,0,40);
-                scroll.Content = text;
-
-                var item = new PanoramaItem();
-                item.Header = colectivo.Key;
-                item.Content = scroll;
-
+                var text = new TextBlock { Text = colectivo.Value, TextWrapping = TextWrapping.Wrap };
+                var scroll = new ScrollViewer { Margin = new Thickness(12, 0, 0, 40), Content = text };
+                var item = new PanoramaItem { Header = colectivo.Key, Content = scroll };
                 GeneralPanorama.Items.Add(item);
             }
 

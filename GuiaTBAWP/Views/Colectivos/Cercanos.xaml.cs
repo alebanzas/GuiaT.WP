@@ -1,39 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Device.Location;
 using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
-using GuiaTBAWP.Bing.Geocode;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
-using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 
 namespace GuiaTBAWP.Views.Colectivos
 {
-    public partial class Cercanos : PhoneApplicationPage
+    public partial class Cercanos
     {
         private static ColectivoCercanoViewModel _viewModel;
-        /// <summary>
-        /// A static ViewModel used by the views to bind against.
-        /// </summary>
-        /// <returns>The MainViewModel object.</returns>
         public static ColectivoCercanoViewModel ViewModel
         {
-            get
-            {
-                // Delay creation of the view model until necessary
-                return _viewModel ?? (_viewModel = new ColectivoCercanoViewModel());
-            }
+            get { return _viewModel ?? (_viewModel = new ColectivoCercanoViewModel()); }
         }
 
-        private static bool _datosLoaded = false;
-
         private HttpWebRequest _httpReq;
+
 
         public Cercanos()
         {
@@ -46,89 +37,57 @@ namespace GuiaTBAWP.Views.Colectivos
                     DataContext = ViewModel;
                     
                     GetColectivosCercanos();
-                    //SetProgressBar("Buscando posición...");
-                    var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
-                    if (applicationBarIconButton != null)
-                        applicationBarIconButton.IsEnabled = false;
                 };
-            Unloaded += (s, e) =>
-            {
-                CancelarRequest();
-            };
+            Unloaded += (s, e) => CancelarRequest();
         }
         
-        void GetColectivosCercanos()
+        void SetApplicationBarEnabled(bool isEnabled)
         {
-            var currentLocation = PositionService.GetCurrentLocation();
-
-            var location = new GeocodeLocation
-            {
-                Latitude = currentLocation.Location.Latitude,
-                Longitude = currentLocation.Location.Longitude
-            };
-
-            if (_datosLoaded || _pendingRequests > 0)
-            {
-                if (Math.Abs(location.Latitude - ViewModel.CurrentLocation.Latitude) < App.Configuration.MinDiffGeography &&
-                    Math.Abs(location.Longitude - ViewModel.CurrentLocation.Longitude) < App.Configuration.MinDiffGeography)
-                {
-                    ResetUI();
-                    return;
-                }
-            }
-
-            ViewModel.CurrentLocation = currentLocation.Location;
-            
-            ProgressBar.Hide();
-
-            GetMasCercanos(location);
+            var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
+            if (applicationBarIconButton != null)
+                applicationBarIconButton.IsEnabled = isEnabled;
         }
 
-        private int _pendingRequests;
-        private void GetMasCercanos(GeocodeLocation location)
+        void GetColectivosCercanos()
         {
-            ProgressBar.Show("Buscando más cercano...");
-            CancelarRequest();
+            ResetUI();
+            if (!NetworkInterface.GetIsNetworkAvailable())
+            {
+                ConnectionError.Visibility = Visibility.Visible;
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
+                return;
+            }
             
+            ProgressBar.Show("Buscando más cercanos...");
+            SetApplicationBarEnabled(false);
+            CancelarRequest();
+
+            GeoPosition<GeoCoordinate> currentLocation = PositionService.GetCurrentLocation();
             var param = new Dictionary<string, object>
                 {
-                    {"lat", location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    {"lon", location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                 };
 
             _httpReq = (HttpWebRequest)WebRequest.Create("/transporte/cercano".ToApiCallUri(param));
             _httpReq.Method = "GET";
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
-            _pendingRequests++;
         }
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
         {
-            try
-            {
-                var httpRequest = (HttpWebRequest)result.AsyncState;
-                var response = httpRequest.EndGetResponse(result);
-                var stream = response.GetResponseStream();
+            var httpRequest = (HttpWebRequest)result.AsyncState;
+            var response = httpRequest.EndGetResponse(result);
+            var stream = response.GetResponseStream();
 
-                var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
-                var o = (List<TransporteModel>)serializer.ReadObject(stream);
+            var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
+            var o = (List<TransporteModel>)serializer.ReadObject(stream);
 
-                Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
-            }
-            catch (Exception ex)
-            {
-                Dispatcher.BeginInvoke(() =>
-                    {
-                        Loading.Visibility = Visibility.Collapsed;
-                        ConnectionError.Visibility = Visibility.Visible;
-                        FinishRequest();
-                    });
-                //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error... " + ex.Message));
-            }
+            Dispatcher.BeginInvoke(new DelegateUpdateList(UpdateList), o);
         }
 
-        delegate void DelegateUpdateWebBrowser(List<TransporteModel> local);
-        private void UpdateWebBrowser(List<TransporteModel> l)
+        delegate void DelegateUpdateList(List<TransporteModel> local);
+        private void UpdateList(List<TransporteModel> l)
         {
             ViewModel.Items.Clear();
             foreach (IGrouping<string, TransporteModel> transporteModel in l.Where(x => x.TipoNickName == "colectivo").GroupBy(x => x.Linea))
@@ -137,13 +96,9 @@ namespace GuiaTBAWP.Views.Colectivos
                     Id = transporteModel.Key,
                     Nombre = "Línea " + transporteModel.Key, 
                     Detalles = SetDetalleByLinea(transporteModel.Key, l),
-                    //Detalles = DataColectivos.ByCode(transporteModel.Key), 
                 });
             }
-            _datosLoaded = true;
-            Loading.Visibility = Visibility.Collapsed;
-            ConnectionError.Visibility = Visibility.Collapsed;
-            FinishRequest();
+            ResetUI();
         }
 
         private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)
@@ -151,37 +106,18 @@ namespace GuiaTBAWP.Views.Colectivos
             return string.Join("\n", transporteModels.Where(x => x.Linea.Equals(key)).OrderBy(x => x.Ramal).Select(x => x.Ramal));
         }
 
-        private void FinishRequest()
+        private void CancelarRequest()
         {
-            _pendingRequests--;
-            if (_pendingRequests != 0) return;
-
-            ResetUI();
+            if (_httpReq != null)
+                _httpReq.Abort();
         }
 
         private void ResetUI()
         {
-            if (_pendingRequests != 0) return;
+            Loading.Visibility = Visibility.Collapsed;
+            ConnectionError.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
-            var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
-            if (applicationBarIconButton != null)
-                applicationBarIconButton.IsEnabled = true;
-        }
-        
-
-        private void Opciones_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
-        }
-
-        private void Acerca_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
-        }
-
-        private void ButtonRefresh_Click(object sender, EventArgs e)
-        {
-            GetColectivosCercanos();
+            SetApplicationBarEnabled(true);
         }
 
         private void ListaColectivos_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -201,10 +137,19 @@ namespace GuiaTBAWP.Views.Colectivos
             listBox.SelectedIndex = -1;
         }
 
-        private void CancelarRequest()
+        private void Opciones_Click(object sender, EventArgs e)
         {
-            if (_httpReq != null)
-                _httpReq.Abort();
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
+        }
+
+        private void Acerca_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
+        }
+
+        private void ButtonRefresh_Click(object sender, EventArgs e)
+        {
+            GetColectivosCercanos();
         }
     }
 }

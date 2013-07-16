@@ -36,7 +36,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            UpdatedAt.Text = ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas);
+            UpdatedAt.Text = App.Configuration.UltimaActualizacionBicicletas.ToLocalDateTime();
 
             MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
 
@@ -165,7 +165,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 if (e.Status == WebExceptionStatus.RequestCanceled && App.Configuration.InitialDataBicicletas)
                 {
-                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime(App.Configuration.UltimaActualizacionBicicletas))));
+                    Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", App.Configuration.UltimaActualizacionBicicletas.ToLocalDateTime())));
                 }
                 EndRequest();
             }
@@ -204,15 +204,10 @@ namespace GuiaTBAWP.Views.Bicicletas
             App.Configuration.InitialDataBicicletas = true;
             _datosLoaded = true;
 
-            UpdatedAt.Text = ToLocalDateTime(l.Actualizacion);
+            UpdatedAt.Text = l.Actualizacion.ToLocalDateTime();
 
             MostrarLugares();
             EndRequest();
-        }
-
-        private static string ToLocalDateTime(DateTime dt)
-        {
-            return string.Format("{0} {1}", dt.ToLocalTime().ToShortDateString(), dt.ToLocalTime().ToShortTimeString());
         }
 
         private void EndRequest()

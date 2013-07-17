@@ -12,10 +12,10 @@ namespace GuiaTBAWP
             {
                 if (Ubicacion == null)
                 {
-                    Ubicacion = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
+                    Ubicacion = new GeoCoordinateWatcher();
                     Ubicacion.StatusChanged += Ubicacion_StatusChanged;
                     Ubicacion.PositionChanged += Ubicacion_PositionChanged;
-                    Ubicacion.MovementThreshold = 250;
+                    Ubicacion.MovementThreshold = 200;
                     Ubicacion.Start();
                 }
                 else

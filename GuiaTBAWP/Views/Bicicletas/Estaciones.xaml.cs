@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Device.Location;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -46,16 +45,11 @@ namespace GuiaTBAWP.Views.Bicicletas
                 Cargar();
         }
 
-        void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            ActualizarUbicacion(e.Position);
-        }
-
         private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
         {
             MiMapa.Children.Remove(_posicionActual);
 
-            if (location == null || location.Location.IsUnknown) return;
+            if (location == null) return;
 
             _posicionActual = new Pushpin
                 {
@@ -94,7 +88,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             //Si uso localizacion, agrego mi ubicación
             if (App.Configuration.IsLocationEnabled)
-                ActualizarUbicacion(App.Configuration.Ubicacion);
+                ActualizarUbicacion(PositionService.GetCurrentLocation());
             else
                 ActualizarUbicacion(null);
 

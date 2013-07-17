@@ -8,14 +8,20 @@ namespace GuiaTBAWP
     {
         public ApplicationConfiguration()
         {
-            Ubicacion = new GeoPosition<GeoCoordinate>();
+            Ubicacion = SetUbicacionDefault();
         }
+
+        private static GeoPosition<GeoCoordinate> SetUbicacionDefault()
+        {
+            //obelisco de buenos aires
+            return new GeoPosition<GeoCoordinate>(DateTimeOffset.UtcNow, new GeoCoordinate(-34.603722, -58.381594));
+        } 
 
         public void SetInitialConfiguration()
         {
             if (IsInitialized) return;
-            
-            Ubicacion = new GeoPosition<GeoCoordinate>();
+
+            Ubicacion = SetUbicacionDefault();
             InstallationId = Guid.NewGuid();
             IsLocationEnabled = true;
             IsInitialized = true;

@@ -45,7 +45,7 @@ namespace GuiaTBAWP.Views.Subtes
             
             if(ViewModel.Lineas.Count == 0) Loading.Visibility = Visibility.Visible;
             ProgressBar.Show("Obteniendo estado del servicio...");
-            SetApplicationBarEnabled(true);
+            SetApplicationBarEnabled(false);
             
             var httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri(alwaysRefresh: true));
             httpReq.Method = "GET";

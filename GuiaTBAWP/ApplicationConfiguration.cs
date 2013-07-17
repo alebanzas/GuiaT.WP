@@ -14,7 +14,8 @@ namespace GuiaTBAWP
         public void SetInitialConfiguration()
         {
             if (IsInitialized) return;
-
+            
+            Ubicacion = new GeoPosition<GeoCoordinate>();
             InstallationId = Guid.NewGuid();
             IsLocationEnabled = true;
             IsInitialized = true;
@@ -31,7 +32,12 @@ namespace GuiaTBAWP
 
         public Guid InstallationId { get; set; }
 
-        public GeoPosition<GeoCoordinate> Ubicacion { get; set; }
+        private GeoPosition<GeoCoordinate> _ubicacion;
+        public GeoPosition<GeoCoordinate> Ubicacion
+        {
+            get { return _ubicacion ?? (_ubicacion = new GeoPosition<GeoCoordinate>()); }
+            set { _ubicacion = value; }
+        }
 
         public double MinDiffGeography = 0.0001;
 

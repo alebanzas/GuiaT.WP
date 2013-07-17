@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Device.Location;
 using GuiaTBAWP.Helpers;
+using GuiaTBAWP.Models;
 
 namespace GuiaTBAWP
 {
@@ -8,7 +9,7 @@ namespace GuiaTBAWP
     {
         public ApplicationConfiguration()
         {
-            Ubicacion = SetUbicacionDefault();
+            SetInitialConfiguration();
         }
 
         private static GeoPosition<GeoCoordinate> SetUbicacionDefault()
@@ -20,13 +21,34 @@ namespace GuiaTBAWP
         public void SetInitialConfiguration()
         {
             if (IsInitialized) return;
-
+            
             Ubicacion = SetUbicacionDefault();
             InstallationId = Guid.NewGuid();
             IsLocationEnabled = true;
             IsInitialized = true;
 
+            SetInitialData();
+
             Config.Set(this);
+        }
+
+        private void SetInitialData()
+        {
+            //Subte
+            var subteStatusModel = new SubteStatusModel();
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea A", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea B", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea C", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea D", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea E", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea H", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea P", Detalles = "obteniendo información..."});
+            subteStatusModel.Lineas.Add(new SubteStatusItem { Nombre = "Línea U", Detalles = "obteniendo información..."});
+            subteStatusModel.Actualizacion = DateTime.UtcNow;
+            
+            Config.Set(subteStatusModel);
+
+
         }
 
         /// <value>Registered ID used to access map control and Bing maps service.</value>

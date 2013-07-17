@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using GuiaTBAWP.Extensions;
+using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Shell;
@@ -23,7 +24,13 @@ namespace GuiaTBAWP.Views.Subtes
             InitializeComponent();
             
             DataContext = ViewModel;
-            Loaded += (sender, args) => LoadData();
+            Loaded += (sender, args) =>
+                {
+                    var model = Config.Get<SubteStatusModel>() ?? new SubteStatusModel();
+                    BindViewModel(model);
+
+                    LoadData();
+                };
         }
         
         public void LoadData()
@@ -86,6 +93,8 @@ namespace GuiaTBAWP.Views.Subtes
             BindViewModel(model);
 
             ResetUI();
+
+            Config.Set(model);
         }
 
         private void BindViewModel(SubteStatusModel model)
@@ -101,7 +110,6 @@ namespace GuiaTBAWP.Views.Subtes
             }
 
             ViewModel.Actualizacion = string.Format("Ultima actualización: {0}", model.Actualizacion.ToLocalDateTime());
-
         }
         
         private void ButtonRefresh_Click(object sender, EventArgs e)

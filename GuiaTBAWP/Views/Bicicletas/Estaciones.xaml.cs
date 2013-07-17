@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Linq;
@@ -64,17 +65,14 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
-
-            var query = from l in BicicletaEstacionDC.Current.Estaciones
-                        orderby l.Id
-                        select l;
-
-            LstLugares.ItemsSource = query.ToList();
+            
+            var list = BicicletaEstacionDC.GetAll();
+            LstLugares.ItemsSource = list;
 
 
             if (LstLugares.Items.Count > 0)
             {
-                var lugares = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
+                var lugares = new ObservableCollection<BicicletaEstacionTable>(list);
                 foreach (var lugar in lugares)
                 {
                     var pushpin = new Pushpin
@@ -194,7 +192,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             }
             BicicletaEstacionDC.Current.SubmitChanges();
 
-
+            App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
             App.Configuration.InitialDataBicicletas = true;
             _datosLoaded = true;
 

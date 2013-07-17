@@ -1,4 +1,6 @@
-﻿using System.Data.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 
 namespace GuiaTBAWP.Models
@@ -14,6 +16,32 @@ namespace GuiaTBAWP.Models
         }
 
         static BicicletaEstacionDC dataContext = null;
+
+        public static void Destroy()
+        {
+            dataContext = null;
+        }
+        
+        public static List<BicicletaEstacionTable> GetAll()
+        {
+            try
+            {
+                var query = from l in BicicletaEstacionDC.Current.Estaciones
+                            orderby l.Id
+                            select l;
+
+                return query.ToList();
+            }
+            catch (Exception)
+            {
+                //Ante un error en la query, reseteo todos.
+                Current.DeleteDatabase();
+                Destroy();
+                App.Configuration.InitialDataBicicletas = false;
+                App.Configuration.UltimaActualizacionBicicletas = DateTime.MinValue;
+                return new List<BicicletaEstacionTable>();
+            }
+        }
 
         public void Truncate()
         {

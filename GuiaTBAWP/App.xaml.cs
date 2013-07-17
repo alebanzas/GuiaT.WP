@@ -42,7 +42,8 @@ namespace GuiaTBAWP
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration();
-            
+            Configuration.SetInitialConfiguration();
+
             PositionService.Initialize();
         }
 
@@ -51,6 +52,7 @@ namespace GuiaTBAWP
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration();
+            Configuration.SetInitialConfiguration();
 
             PositionService.Initialize();
         }

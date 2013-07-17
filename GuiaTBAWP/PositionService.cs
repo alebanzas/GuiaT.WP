@@ -29,6 +29,15 @@ namespace GuiaTBAWP
             }
         }
 
+        public static void Stop()
+        {
+            try
+            {
+                Ubicacion.Stop();
+            }
+            catch { }
+        }
+
         public static void Destroy()
         {
             Ubicacion.Dispose();
@@ -73,7 +82,10 @@ namespace GuiaTBAWP
 
         public static GeoPosition<GeoCoordinate> GetCurrentLocation()
         {
-            if (double.IsNaN(Ubicacion.Position.Location.Latitude) ||
+            if (Ubicacion == null ||
+                Ubicacion.Position == null ||
+                Ubicacion.Position.Location == null ||
+                double.IsNaN(Ubicacion.Position.Location.Latitude) ||
                 double.IsNaN(Ubicacion.Position.Location.Longitude))
             {
                 return null;

@@ -57,12 +57,19 @@ namespace GuiaTBAWP.Views.Colectivos
                 Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
                 return;
             }
+
+            GeoPosition<GeoCoordinate> currentLocation = PositionService.GetCurrentLocation();
+
+            if (!App.Configuration.IsLocationEnabled)
+            {
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar colectivos cercanos, por favor, active la función de localización en la configuración de la aplicación."));
+                return;
+            }
             
             ProgressBar.Show("Buscando más cercanos...");
             SetApplicationBarEnabled(false);
             CancelarRequest();
 
-            GeoPosition<GeoCoordinate> currentLocation = PositionService.GetCurrentLocation();
             var param = new Dictionary<string, object>
                 {
                     {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},

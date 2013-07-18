@@ -31,8 +31,6 @@ namespace GuiaTBAWP
             ThemeManager.ToDarkTheme();
             
             LoadingBar.Instance.Initialize(RootFrame);
-
-            ProgressBar.Initialize();
         }
 
         #region ApplicationLifetimeObjects
@@ -45,6 +43,7 @@ namespace GuiaTBAWP
             Configuration.SetInitialConfiguration();
 
             PositionService.Initialize();
+            ProgressBar.Initialize();
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -55,6 +54,7 @@ namespace GuiaTBAWP
             Configuration.SetInitialConfiguration();
 
             PositionService.Initialize();
+            ProgressBar.Initialize();
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -146,6 +146,9 @@ namespace GuiaTBAWP
         // Do not add any additional code to this method
         private void CompleteInitializePhoneApplication(object sender, NavigationEventArgs e)
         {
+            var navigatedPage = (PhoneApplicationPage)e.Content;
+            SetNavigatedPage(navigatedPage);
+
             // Set the root visual to allow the application to render
             RootVisual = RootFrame;
 
@@ -157,6 +160,11 @@ namespace GuiaTBAWP
         void RootFrame_Navigated(object sender, NavigationEventArgs e)
         {
             var navigatedPage = (PhoneApplicationPage)e.Content;
+            SetNavigatedPage(navigatedPage);
+        }
+
+        void SetNavigatedPage(PhoneApplicationPage navigatedPage)
+        {
             ProgressBar.UIElement = navigatedPage;
         }
 

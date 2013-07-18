@@ -20,6 +20,15 @@ namespace GuiaTBAWP.Views
             var isChecked = TglLocalizacion.IsChecked;
             var activated = isChecked != null && (bool)isChecked;
             App.Configuration.IsLocationEnabled = activated;
+            if (activated)
+            {
+                PositionService.Initialize();
+            }
+            else
+            {
+                PositionService.Stop();
+            }
+
             TglLocalizacion.Content = activated ? "Activado" : "Desactivado";
         }
 

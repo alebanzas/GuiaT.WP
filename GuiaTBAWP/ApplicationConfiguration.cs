@@ -56,22 +56,7 @@ namespace GuiaTBAWP
 
         public bool IsInitialized { get; set; }
 
-        public bool IsLocationEnabled
-        {
-            get { return _isLocationEnabled; }
-            set
-            {
-                _isLocationEnabled = value;
-                if (value)
-                {
-                    PositionService.Initialize();
-                }
-                else
-                {
-                    PositionService.Stop();
-                }
-            }
-        }
+        public bool IsLocationEnabled { get; set; }
 
         public Guid InstallationId { get; set; }
 
@@ -83,7 +68,6 @@ namespace GuiaTBAWP
         }
 
         public double MinDiffGeography = 0.0001;
-        private bool _isLocationEnabled;
 
         public DateTime UltimaActualizacionBicicletas { get; set; }
 

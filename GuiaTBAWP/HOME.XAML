@@ -26,6 +26,11 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Subtes">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuSubte_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/subtes.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -34,6 +39,11 @@
                             </StackPanel>
                         </Button>
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Colectivos">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuColectivos_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/colectivos.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -42,6 +52,11 @@
                             </StackPanel>
                         </Button>
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Bicicletas">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuBicicletas_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/bicicletas.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -52,6 +67,11 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Trenes">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuTrenes_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/trenes.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -60,6 +80,11 @@
                             </StackPanel>
                         </Button>
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SUBE">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuSube_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/sube.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
@@ -68,6 +93,11 @@
                             </StackPanel>
                         </Button>
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Taxis">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuTaxi_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
                                 <Image Source="/Images/Home/taxis.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">

@@ -13,6 +13,8 @@ namespace GuiaTBAWP.Views.Subtes
 {
     public partial class SubteEstado
     {
+        WebRequest _httpReq;
+
         private static SubteStatusViewModel _viewModel = new SubteStatusViewModel();
         public static SubteStatusViewModel ViewModel
         {
@@ -31,6 +33,12 @@ namespace GuiaTBAWP.Views.Subtes
 
                     LoadData();
                 };
+            Unloaded += (sender, args) =>
+                {
+                    if(_httpReq != null)
+                        _httpReq.Abort();
+                };
+
         }
         
         public void LoadData()
@@ -46,10 +54,10 @@ namespace GuiaTBAWP.Views.Subtes
             if(ViewModel.Lineas.Count == 0) Loading.Visibility = Visibility.Visible;
             ProgressBar.Show("Obteniendo estado del servicio...");
             SetApplicationBarEnabled(false);
-            
-            var httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri(alwaysRefresh: true));
-            httpReq.Method = "GET";
-            httpReq.BeginGetResponse(HTTPWebRequestCallBack, httpReq);
+
+            _httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri(alwaysRefresh: true));
+            _httpReq.Method = "GET";
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 
         private void ResetUI()
@@ -109,7 +117,7 @@ namespace GuiaTBAWP.Views.Subtes
                     });
             }
 
-            ViewModel.Actualizacion = string.Format("Ultima actualización: {0}", model.Actualizacion.ToLocalDateTime());
+            ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", model.Actualizacion.ToUpdateDateTime());
         }
         
         private void ButtonRefresh_Click(object sender, EventArgs e)

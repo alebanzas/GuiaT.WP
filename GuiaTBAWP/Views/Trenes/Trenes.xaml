@@ -30,28 +30,28 @@
             <TextBlock Text="trenes" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
             <StackPanel>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_BelgranoNorte">
-                    <TextBlock Text="belgrano norte" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_BelgranoNorte">
+                    <TextBlock Margin="0" Text="belgrano norte" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_BelgranoSur">
-                    <TextBlock Text="belgrano sur" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_BelgranoSur">
+                    <TextBlock Margin="0" Text="belgrano sur" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Mitre">
-                    <TextBlock Text="mitre" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mitre">
+                    <TextBlock Margin="0" Text="mitre" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Roca">
-                    <TextBlock Text="roca" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Roca">
+                    <TextBlock Margin="0" Text="roca" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_SanMartin">
-                    <TextBlock Text="san martín" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SanMartin">
+                    <TextBlock Margin="0" Text="san martín" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Sarmiento">
-                    <TextBlock Text="sarmiento" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Sarmiento">
+                    <TextBlock Margin="0" Text="sarmiento" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Urquiza">
-                    <TextBlock Text="urquiza" />
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Urquiza">
+                    <TextBlock Margin="0" Text="urquiza" />
                 </Button>
             </StackPanel>
         </Grid>

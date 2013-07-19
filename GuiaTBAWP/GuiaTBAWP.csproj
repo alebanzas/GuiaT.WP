@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
+    <Compile Include="InitialData.cs" />
     <Compile Include="PositionService.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>

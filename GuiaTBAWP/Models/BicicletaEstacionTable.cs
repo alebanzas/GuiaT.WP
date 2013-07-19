@@ -79,11 +79,6 @@ namespace GuiaTBAWP.Models
             get { return string.Format("Cantidad disponible: {0}", Cantidad); }
         }
 
-        public string NombreLista
-        {
-            get { return string.Format("ESTACIÓN {0}", nombre.ToUpperInvariant()); }
-        }
-
         public BicicletaEstacionTable()
         {
         }

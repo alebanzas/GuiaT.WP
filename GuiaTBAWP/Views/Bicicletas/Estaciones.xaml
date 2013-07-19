@@ -23,18 +23,17 @@
             </controls:Panorama.Background>
 
             <controls:PanoramaItem Header="mapa">
-                <StackPanel>
+                <StackPanel Margin="12,0,0,0">
                     <Grid Height="460">
                         <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                         <my:Map Name="MiMapa" IsEnabled="False" CacheMode="BitmapCache"></my:Map>
                     </Grid>
-                    <TextBlock>Ultima actualización:</TextBlock>
-                    <TextBlock x:Name="UpdatedAt"></TextBlock>
+                    <TextBlock Text="{Binding Actualizacion}"></TextBlock>
                 </StackPanel>
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="lista">
-                <ListBox Name="LstLugares" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
+                <ListBox ItemsSource="{Binding Estaciones}" Margin="12,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -43,7 +42,7 @@
                                     TextWrapping="Wrap"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Left"
-                                    Text="{Binding Path=NombreLista}"
+                                    Text="{Binding Path=Nombre}"
                                     Style="{StaticResource PhoneTextLargeStyle}"/>
                                 <TextBlock Width="420"
                                     TextWrapping="Wrap"

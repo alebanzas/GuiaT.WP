@@ -39,6 +39,9 @@
             <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
                 <Run Text="No hay conexión a la red."/>
             </TextBlock>
+            <TextBlock Visibility="Collapsed" x:Name="NoResults" Margin="0,0,0,0">
+                <Run Text="No se encontraron colectivos cercanos."/>
+            </TextBlock>
             <ListBox ItemsSource="{Binding Items}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListaColectivos_OnSelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>

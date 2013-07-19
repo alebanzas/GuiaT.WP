@@ -106,6 +106,10 @@ namespace GuiaTBAWP.Views.Colectivos
                 });
             }
             ResetUI();
+            if (ViewModel.Items.Count == 0)
+            {
+                NoResults.Visibility = Visibility.Visible;
+            }
         }
 
         private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)
@@ -123,6 +127,7 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             Loading.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
+            NoResults.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
         }

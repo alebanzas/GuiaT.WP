@@ -54,6 +54,47 @@ namespace GuiaTBAWP.Extensions
         {
             return string.Format("{0} {1}", source.ToLocalTime().ToShortDateString(), source.ToLocalTime().ToShortTimeString());
         }
+
+        public static string ToUpdateDateTime(this DateTime source)
+        {
+            var localTime = DateTime.Now;
+            var lastTime = source.ToLocalTime();
+            var difference = localTime.Subtract(lastTime);
+
+            if (difference.Days == 1)
+            {
+                return "1 día";
+            }
+            if (difference.Days > 1)
+            {
+                return string.Format("{0} días", difference.Days);
+            }
+            if (difference.Hours == 1)
+            {
+                return "1 hora";
+            }
+            if (difference.Hours > 1)
+            {
+                return string.Format("{0} horas", difference.Hours);
+            }
+            if (difference.Minutes == 1)
+            {
+                return "1 minuto";
+            }
+            if (difference.Minutes > 1)
+            {
+                return string.Format("{0} minutos", difference.Minutes);
+            }
+            //if (difference.Seconds == 1)
+            //{
+            //    return "1 segundo";
+            //}
+            //if (difference.Seconds > 1)
+            //{
+            //    return string.Format("{0} segundos", difference.Seconds);
+            //}
+            return "pocos segundos";
+        }
     }
 
     public static class Extensions

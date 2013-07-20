@@ -3,11 +3,10 @@ using System.Windows;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
-using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.Trenes
 {
-    public partial class Sarmiento : PhoneApplicationPage
+    public partial class Sarmiento
     {
         public Sarmiento()
         {
@@ -18,23 +17,14 @@ namespace GuiaTBAWP.Views.Trenes
         }
 
         private static TrenLineaItemViewModel _viewModel = new TrenLineaItemViewModel();
-
-        /// <summary>
-        /// A static ViewModel used by the views to bind against.
-        /// </summary>
-        /// <returns>The MainViewModel object.</returns>
         public static TrenLineaItemViewModel ViewModel
         {
-            get
-            {
-                // Delay creation of the view model until necessary
-                return _viewModel ?? (_viewModel = new TrenLineaItemViewModel());
-            }
+            get { return _viewModel ?? (_viewModel = new TrenLineaItemViewModel()); }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var query = TrenesRamalEstadoDC.Current.ByLineas(new string[2] { "sarmiento", "pto. madero" });
+            var query = TrenesRamalEstadoDC.Current.ByLineas(new [] { "sarmiento", "pto. madero" });
             ViewModel.Ramales.Clear();
             foreach (var estadoTable in query.ToList())
             {

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Windows;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
@@ -39,7 +40,7 @@ namespace GuiaTBAWP.Views.Trenes
             {
                 ViewModel.AddRamal(estadoTable.ConvertToTrenRamalItemViewModel());
             }
-            ViewModel.Actualizacion = App.Configuration.UltimaActualizacionTrenes;
+            ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", App.Configuration.UltimaActualizacionTrenes.ToUpdateDateTime());
         }
     }
 }

@@ -34,7 +34,7 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var query = TrenesRamalEstadoDC.Current.ByLinea("sarmiento");
+            var query = TrenesRamalEstadoDC.Current.ByLineas(new string[2] { "sarmiento", "pto. madero" });
             ViewModel.Ramales.Clear();
             foreach (var estadoTable in query.ToList())
             {

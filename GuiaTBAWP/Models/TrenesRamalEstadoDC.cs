@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Data.Linq;
+﻿using System.Data.Linq;
 using System.Linq;
-using GuiaTBAWP.ViewModels;
 
 namespace GuiaTBAWP.Models
 {
@@ -28,6 +26,15 @@ namespace GuiaTBAWP.Models
         {
             var list = from ramal in Current.Ramales
                        where ramal.LineaNickName.Equals(lineaNickName)
+                       select ramal;
+            return list;
+
+        }
+
+        public IQueryable<TrenesRamalEstadoTable> ByLineas(string[] lineasNickNames)
+        {
+            var list = from ramal in Current.Ramales
+                       where lineasNickNames.Contains(ramal.LineaNickName)
                        select ramal;
             return list;
 

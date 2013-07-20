@@ -81,8 +81,8 @@ namespace GuiaTBAWP.ViewModels
             }
         }
 
-        private DateTime _actualizacion;
-        public DateTime Actualizacion
+        private string _actualizacion;
+        public string Actualizacion
         {
             get { return _actualizacion; }
             set

@@ -24,7 +24,7 @@
 
             <controls:PanoramaItem Header="lista">
                 <StackPanel Margin="12,0,0,0">
-                    <ListBox Height="475" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
+                    <ListBox Height="510" Margin="0,0,0,10" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
@@ -51,7 +51,7 @@
 
             <controls:PanoramaItem Header="mapa">
                 <StackPanel Margin="12,0,0,0">
-                    <Grid Height="500">
+                    <Grid Height="530">
                         <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                         <my:Map Name="MiMapa" IsEnabled="False" CacheMode="BitmapCache"></my:Map>
                     </Grid>

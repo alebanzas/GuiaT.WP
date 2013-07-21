@@ -65,6 +65,7 @@ namespace GuiaTBAWP.Views.SUBE
 
             ProgressBar.Show("Buscando más cercanos...");
             ViewModel.CurrentPosition = currentLocation.Location;
+            ViewModel.PuntosVenta.Clear();
             Loading.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();

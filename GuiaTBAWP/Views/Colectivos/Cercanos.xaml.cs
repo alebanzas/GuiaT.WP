@@ -65,6 +65,7 @@ namespace GuiaTBAWP.Views.Colectivos
             }
             
             ProgressBar.Show("Buscando más cercanos...");
+            Loading.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
 

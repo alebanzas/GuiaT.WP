@@ -199,9 +199,6 @@
     <Compile Include="Views\SUBE\DondeUsarSUBE.xaml.cs">
       <DependentUpon>DondeUsarSUBE.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SUBE\Error.xaml.cs">
-      <DependentUpon>Error.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\RouteCalculationError.cs" />
     <Compile Include="Helpers\RouteCalculator.cs" />
     <Compile Include="Helpers\RoutingState.cs" />
@@ -378,10 +375,6 @@
     <Page Include="Views\SUBE\DondeUsarSUBE.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\SUBE\Error.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>

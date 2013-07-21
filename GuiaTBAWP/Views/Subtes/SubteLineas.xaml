@@ -1156,6 +1156,9 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
+                                    <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>
@@ -1232,6 +1235,9 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Presidente Illia</TextBlock>
+                                    <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Parque de la Ciudad</TextBlock>

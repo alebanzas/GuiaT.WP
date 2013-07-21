@@ -21,7 +21,7 @@
             <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
         </Grid.Background>
 
-        <controls:Panorama Title="roca" TitleTemplate="{StaticResource SmallPanoramaTitle}">
+        <controls:Panorama Title="tren roca" TitleTemplate="{StaticResource SmallPanoramaTitle}">
 
             <controls:PanoramaItem Header="estado">
                 <StackPanel>

@@ -22,38 +22,40 @@
                 <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
 
-            <controls:PanoramaItem Header="mapa">
+            <controls:PanoramaItem Header="lista">
                 <StackPanel Margin="12,0,0,0">
-                    <Grid Height="460">
-                        <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
-                        <my:Map Name="MiMapa" IsEnabled="False" CacheMode="BitmapCache"></my:Map>
-                    </Grid>
+                    <ListBox Height="475" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock x:Name="tNombre" Margin="0,8,0,8"
+                                        Width="420"
+                                        TextWrapping="Wrap"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Text="{Binding Path=Nombre}"
+                                        Style="{StaticResource PhoneTextLargeStyle}"/>
+                                    <TextBlock Width="420"
+                                        TextWrapping="Wrap"
+                                        Margin="0,0,0,8"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Text="{Binding Path=Descripcion}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                     <TextBlock Text="{Binding Actualizacion}"></TextBlock>
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="lista">
-                <ListBox ItemsSource="{Binding Estaciones}" Margin="12,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <TextBlock x:Name="tNombre" Margin="0,8,0,8"
-                                    Width="420"
-                                    TextWrapping="Wrap"
-                                    VerticalAlignment="Top"
-                                    HorizontalAlignment="Left"
-                                    Text="{Binding Path=Nombre}"
-                                    Style="{StaticResource PhoneTextLargeStyle}"/>
-                                <TextBlock Width="420"
-                                    TextWrapping="Wrap"
-                                    Margin="0,0,0,8"
-                                    VerticalAlignment="Top"
-                                    HorizontalAlignment="Left"
-                                    Text="{Binding Path=Descripcion}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+            <controls:PanoramaItem Header="mapa">
+                <StackPanel Margin="12,0,0,0">
+                    <Grid Height="500">
+                        <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
+                        <my:Map Name="MiMapa" IsEnabled="False" CacheMode="BitmapCache"></my:Map>
+                    </Grid>
+                </StackPanel>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>

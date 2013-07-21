@@ -29,15 +29,17 @@
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="RED DE SUBTES" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="estado actual" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <Grid Margin="12,0,0,0">
+                <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">
+                    <Run Text="Buscando estado actual. Aguarde.."/>
+                </TextBlock>
+                <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
+                    <Run Text="No hay conexión a la red."/>
+                </TextBlock>
+            </Grid>
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="25,-10,0,10">
-            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">
-                <Run Text="Buscando estado actual. Aguarde.."/>
-            </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
-                <Run Text="No hay conexión a la red."/>
-            </TextBlock>
             <ListBox ItemsSource="{Binding Lineas}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <ListBox.ItemTemplate>
                     <DataTemplate>

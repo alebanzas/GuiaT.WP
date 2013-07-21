@@ -66,11 +66,11 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="200">
+                                        <StackPanel Orientation="Horizontal" Width="150">
                                             <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
                                         </StackPanel>
                                         <StackPanel>
@@ -190,11 +190,11 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="200">
+                                        <StackPanel Orientation="Horizontal" Width="150">
                                             <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
                                         </StackPanel>
                                         <StackPanel>
@@ -344,11 +344,11 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="200">
+                                        <StackPanel Orientation="Horizontal" Width="150">
                                             <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
                                         </StackPanel>
                                         <StackPanel>
@@ -505,7 +505,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Villa Ballester</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -613,7 +613,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Victoria</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -724,7 +724,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">

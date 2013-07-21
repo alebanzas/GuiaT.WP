@@ -30,7 +30,7 @@
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0,0,0,20" Width="432">
-                                        <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                        <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" FontSize="28" Style="{StaticResource PhoneTextLargeStyle}"/>
                                         <TextBlock Text="{Binding Estado}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
                                         <TextBlock Text="{Binding MasInfo}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
                                     </StackPanel>
@@ -69,7 +69,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Buenos Aires</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -215,7 +215,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Buenos Aires</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -334,7 +334,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="100">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">M. del Crucero Gral Belgrano</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">M. del Crucero Gral Belgrano</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
                                         </StackPanel>
@@ -367,7 +367,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Aldo Bonzi</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -404,7 +404,7 @@
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="130">
+                                <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Fiorito</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">

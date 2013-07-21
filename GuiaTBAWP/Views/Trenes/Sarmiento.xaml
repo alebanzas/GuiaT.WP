@@ -71,7 +71,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -222,7 +222,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Puerto Madero</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -336,7 +336,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -455,7 +455,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
@@ -585,7 +585,7 @@
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel Margin="12,0,0,0">
+                            <StackPanel Margin="12,0,0,0" Width="370">
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Merlo</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">

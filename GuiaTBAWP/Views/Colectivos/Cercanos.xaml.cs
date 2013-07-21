@@ -32,8 +32,6 @@ namespace GuiaTBAWP.Views.Colectivos
             
             Loaded += (s, e) =>
                 {
-                    ResetUI();
-                    
                     DataContext = ViewModel;
                     
                     GetColectivosCercanos();

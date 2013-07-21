@@ -244,7 +244,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="100">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">P.P. Turner</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">P. P. Turner</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
                                         </StackPanel>
@@ -253,7 +253,7 @@
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">De Elía</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="200">
+                                        <StackPanel Orientation="Horizontal" Width="150">
                                         </StackPanel>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
@@ -287,7 +287,7 @@
                                 <StackPanel Height="100">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Haedo</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="200">
+                                        <StackPanel Orientation="Horizontal" Width="150">
                                         </StackPanel>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">

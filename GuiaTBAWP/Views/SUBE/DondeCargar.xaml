@@ -24,8 +24,8 @@
 
             <controls:PanoramaItem Header="recarga">
                 <StackPanel Margin="12,0,0,12">
-                    <TextBlock Name="RecargaLoading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
-                    <TextBlock Name="RecargaError" TextWrapping="Wrap" Visibility="Collapsed">
+                    <TextBlock Name="Loading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="ConnectionError" TextWrapping="Wrap" Visibility="Collapsed">
                         Ocurrió un error.
                         <LineBreak /><LineBreak />
                         Verifique su conexión a internet.

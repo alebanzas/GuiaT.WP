@@ -24,8 +24,8 @@
             
             <controls:PanoramaItem Header="venta">
                 <StackPanel Margin="12,0,0,12">
-                    <TextBlock Name="VentaLoading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 puntos mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
-                    <TextBlock Name="VentaError" TextWrapping="Wrap" Visibility="Collapsed">
+                    <TextBlock Name="Loading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 puntos mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
+                    <TextBlock Name="ConnectionError" TextWrapping="Wrap" Visibility="Collapsed">
                         Ocurrió un error.
                         <LineBreak /><LineBreak />
                         Verifique su conexión a internet.
@@ -49,7 +49,7 @@
             <controls:PanoramaItem Header="mapa">
                 <Grid Margin="12,0,0,12">
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
-                    <my:Map Name="Map"
+                    <my:Map Name="Mapa"
                         IsEnabled="False"
                         CredentialsProvider="{Binding CredentialsProvider}"
                         CopyrightVisibility="Collapsed" LogoVisibility="Collapsed"

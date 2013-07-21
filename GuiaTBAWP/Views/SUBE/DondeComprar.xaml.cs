@@ -59,11 +59,13 @@ namespace GuiaTBAWP.Views.SUBE
 
             if (!App.Configuration.IsLocationEnabled)
             {
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar donde cargar SUBE, por favor, active la función de localización en la configuración de la aplicación."));
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar donde comprar SUBE, por favor, active la función de localización en la configuración de la aplicación."));
                 return;
             }
 
             ProgressBar.Show("Buscando más cercanos...");
+            ViewModel.CurrentPosition = currentLocation.Location;
+            Loading.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
 

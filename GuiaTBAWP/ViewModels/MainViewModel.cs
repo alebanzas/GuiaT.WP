@@ -62,6 +62,8 @@ namespace GuiaTBAWP.ViewModels
         /// <value>Map center coordinate.</value>
         private GeoCoordinate _center;
 
+        private GeoCoordinate _currentPosition;
+
         #endregion
 
         #region Properties
@@ -98,6 +100,16 @@ namespace GuiaTBAWP.ViewModels
             }
         }
 
+        public GeoCoordinate CurrentPosition
+        {
+            get { return _currentPosition; }
+            set
+            {
+                CreateNewPushpin(value);
+                _currentPosition = value;
+            }
+        }
+
         public ObservableCollection<PushpinModel> Pushpins
         {
             get { return _pushpins; }
@@ -125,6 +137,7 @@ namespace GuiaTBAWP.ViewModels
                 CreateNewRecargaPushpin(itemViewModel);
                 PuntosRecarga.Add(itemViewModel);
             }
+            CreateNewPushpin(CurrentPosition);
         }
 
         public void LoadPuntosVenta(IEnumerable<ItemViewModel> items)
@@ -138,6 +151,7 @@ namespace GuiaTBAWP.ViewModels
                 CreateNewVentaPushpin(itemViewModel);
                 PuntosVenta.Add(itemViewModel);
             }
+            CreateNewPushpin(CurrentPosition);
         }
 
         public void CreateNewPushpin(GeoCoordinate location)

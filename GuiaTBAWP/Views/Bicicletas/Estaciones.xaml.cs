@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
+using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
 
@@ -200,7 +201,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             var bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
-            var uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+            var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
             NavigationService.Navigate(uri);
 
             //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
@@ -225,6 +226,17 @@ namespace GuiaTBAWP.Views.Bicicletas
         private void ButtonGo_Click(object sender, EventArgs e)
         {
             Cargar(true);
+        }
+
+        private void PinToStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (List.ItemContainerGenerator == null) return;
+            var selectedListBoxItem = List.ItemContainerGenerator.ContainerFromItem(((MenuItem)sender).DataContext) as ListBoxItem;
+            if (selectedListBoxItem == null) return;
+            var selectedIndex = List.ItemContainerGenerator.IndexFromContainer(selectedListBoxItem);
+            var item = (BicicletaEstacionTable)List.Items[selectedIndex];
+            var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", item.Id), UriKind.Relative);
+            TileManager.Set(uri, string.Format("Estación {0}", item.Nombre.ToLowerInvariant()), new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
     }
 

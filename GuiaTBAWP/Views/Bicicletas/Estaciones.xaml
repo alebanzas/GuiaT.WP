@@ -6,8 +6,9 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -24,10 +25,15 @@
 
             <controls:PanoramaItem Header="lista">
                 <StackPanel Margin="12,0,0,0">
-                    <ListBox Height="510" Margin="0,0,0,10" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
+                    <ListBox x:Name="List" Height="510" Margin="0,0,0,10" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
+                                    <toolkit:ContextMenuService.ContextMenu>
+                                        <toolkit:ContextMenu>
+                                            <toolkit:MenuItem Header="anclar al inicio" Click="PinToStart_Click"/>
+                                        </toolkit:ContextMenu>
+                                    </toolkit:ContextMenuService.ContextMenu>
                                     <TextBlock x:Name="tNombre" Margin="0,8,0,8"
                                         Width="420"
                                         TextWrapping="Wrap"

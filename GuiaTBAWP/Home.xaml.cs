@@ -93,7 +93,7 @@ namespace GuiaTBAWP
             }
             else
             {
-                MessageBox.Show("Already Pinned");
+                MessageBox.Show("Ya está anclado.");
             }
         }
     }

@@ -29,11 +29,11 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
-                                    <toolkit:ContextMenuService.ContextMenu>
+                                    <!--toolkit:ContextMenuService.ContextMenu>
                                         <toolkit:ContextMenu>
                                             <toolkit:MenuItem Header="anclar al inicio" Click="PinToStart_Click"/>
                                         </toolkit:ContextMenu>
-                                    </toolkit:ContextMenuService.ContextMenu>
+                                    </toolkit:ContextMenuService.ContextMenu-->
                                     <TextBlock x:Name="tNombre" Margin="0,8,0,8"
                                         Width="420"
                                         TextWrapping="Wrap"

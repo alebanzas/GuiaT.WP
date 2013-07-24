@@ -49,7 +49,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43569B" HorizontalAlignment="Left" Height="1360" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43569B" HorizontalAlignment="Left" Height="1360" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1375,0,0">
                                     <Ellipse Margin="0,3,0,73" Width="30" Height="30" Fill="White" />
@@ -192,7 +192,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#28377C" HorizontalAlignment="Left" Height="1630" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#28377C" HorizontalAlignment="Left" Height="1630" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1645,0,0">
                                     <Ellipse Margin="0,3,0,73" Width="30" Height="30" Fill="White" />
@@ -353,7 +353,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#6F89C4" HorizontalAlignment="Left" Height="730" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#6F89C4" HorizontalAlignment="Left" Height="730" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-745,0,0">
                                     <Ellipse Margin="0,3,0,73" Width="30" Height="30" Fill="White" />

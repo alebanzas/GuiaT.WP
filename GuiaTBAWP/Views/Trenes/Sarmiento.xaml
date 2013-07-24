@@ -49,7 +49,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1560" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1560" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1575,0,0">
                                     <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
@@ -205,7 +205,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1060" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1060" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1075,0,0">
                                     <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
@@ -319,7 +319,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1060" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1060" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1075,0,0">
                                     <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
@@ -435,7 +435,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1300" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1300" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1315,0,0">
                                     <Ellipse Margin="0,3,0,73" Width="30" Height="30" Fill="White" />
@@ -567,7 +567,7 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1100" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#43BEF7" HorizontalAlignment="Left" Height="1100" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1115,0,0">
                                     <Ellipse Margin="0,3,0,73" Width="30" Height="30" Fill="White" />

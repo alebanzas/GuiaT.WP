@@ -113,7 +113,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 ProgressBar.Show(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
-                _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri(true));
+                _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri(refresh));
                 _httpReq.Method = "GET";
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }

@@ -77,6 +77,11 @@ namespace GuiaTBAWP.Extensions
 
         public static string ToUpdateDateTime(this DateTime source)
         {
+            if (DateTime.MinValue.Equals(source))
+            {
+                return "mucho tiempo";
+            }
+
             var localTime = DateTime.Now;
             var lastTime = source.ToLocalTime();
             var difference = localTime.Subtract(lastTime);
@@ -84,6 +89,10 @@ namespace GuiaTBAWP.Extensions
             if (difference.Days == 1)
             {
                 return "1 día";
+            }
+            if (difference.Days > 99)
+            {
+                return "muchos días";
             }
             if (difference.Days > 1)
             {

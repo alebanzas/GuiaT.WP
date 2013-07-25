@@ -42,7 +42,7 @@
                     Esta beta nos ayudará a trabajar en una nueva versión final.
                 </TextBlock>
                 <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
-                    Proximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
+                    Próximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                 </TextBlock>
                 
                 <Grid Margin="10,170,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">

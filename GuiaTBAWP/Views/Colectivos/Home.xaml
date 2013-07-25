@@ -38,8 +38,14 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ColectivosCercanos">
 					<TextBlock Margin="0" Text="cercanos (beta)" />
                 </Button>
+                <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
+                    Esta beta nos ayudará a trabajar en una nueva versión final.
+                </TextBlock>
+                <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
+                    Proximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
+                </TextBlock>
                 
-                <Grid Margin="10,350,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">
+                <Grid Margin="10,170,0,0" HorizontalAlignment="Left" xmlns:adctl="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Grid.Row="1">
 					<adctl:AdControl Height="80" Width="480" ApplicationId="fe6bdcf1-6548-40dc-be24-22f81ef87700" AdUnitId="10077179" />
                 </Grid>
             </StackPanel>

@@ -8,7 +8,7 @@ namespace GuiaTBAWP
     {
         public static void Initialize()
         {
-            if (App.Configuration.IsLocationEnabled)
+            if (App.Configuration.IsLocationEnabledByAppConfig)
             {
                 if (Ubicacion == null)
                 {
@@ -66,6 +66,7 @@ namespace GuiaTBAWP
                     MessageBox.Show(Ubicacion.Permission == GeoPositionPermission.Denied
                                         ? "El servicio de localización se encuentra deshabilitado. Por favor asegúrese de habilitarlo en las Opciones del dispositivo para utilizar las caracteristicas que lo requeran."
                                         : "El servicio de localización se encuentra sin funcionamiento.");
+                    App.Configuration.IsLocationEnabledByPhone = false;
                     Ubicacion.Stop();
                     break;
 
@@ -79,7 +80,7 @@ namespace GuiaTBAWP
                     break;
 
                 case GeoPositionStatus.Ready: //Estado: Servicio de localización disponible
-
+                    App.Configuration.IsLocationEnabledByPhone = true;
                     break;
             }
         }

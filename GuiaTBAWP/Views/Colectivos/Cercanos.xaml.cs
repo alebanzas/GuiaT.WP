@@ -63,6 +63,11 @@ namespace GuiaTBAWP.Views.Colectivos
                 Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar colectivos cercanos, por favor, active la función de localización en la configuración de la aplicación."));
                 return;
             }
+            if (currentLocation == null)
+            {
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar colectivos cercanos, por favor, active la función de localización."));
+                return;
+            }
             
             ProgressBar.Show("Buscando más cercanos...");
             if (ViewModel.Items.Count == 0) Loading.Visibility = Visibility.Visible;

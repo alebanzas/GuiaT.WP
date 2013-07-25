@@ -62,6 +62,11 @@ namespace GuiaTBAWP.Views.SUBE
                 Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar donde cargar SUBE, por favor, active la función de localización en la configuración de la aplicación."));
                 return;
             }
+            if (currentLocation == null)
+            {
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar donde cargar SUBE, por favor, active la función de localización."));
+                return;
+            }
 
             ProgressBar.Show("Buscando más cercanos...");
             ViewModel.CurrentPosition = currentLocation.Location;

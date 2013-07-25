@@ -157,7 +157,6 @@
                     <StackPanel>
                         <TextBlock Margin="12,0,0,0" x:Name="TxtVersion"></TextBlock>
                         <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
-                            <LineBreak />
                             Desarrollado por BTB Solutions
 						    <LineBreak /><LineBreak />
                             Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
@@ -167,7 +166,14 @@
                             <LineBreak /><LineBreak /><LineBreak /><LineBreak />
                             Notas de versión
                             <LineBreak /><LineBreak />
-                            1.5 (próximamente): Frecuencias y horarios del servicio de trenes.
+                            <LineBreak /><LineBreak />
+                            Próximamente: 
+                            <LineBreak />
+                            Frecuencias y horarios del servicio de trenes.
+                            <LineBreak />
+                            Armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
+                            <LineBreak />
+                            Información sobre transporte aereo y vehicular.
                             <LineBreak /><LineBreak />
                             1.4 (actual): Colectivos cercanos, mejoras en la actualizacion de datos de servicios de tren y subte, mejora en manejo de GPS para ahorro de energia.
                             <LineBreak /><LineBreak />

@@ -32,14 +32,14 @@
             <TextBlock Text="cercanos" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="24,0,12,0">
-            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="12,0,0,0">
                 <Run Text="Buscando colectivos cercanos. Aguarde.."/>
             </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
+            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="12,0,0,0">
                 <Run Text="No hay conexión a la red."/>
             </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="NoResults" Margin="0,0,0,0">
+            <TextBlock Visibility="Collapsed" x:Name="NoResults" Margin="12,0,0,0">
                 <Run Text="No se encontraron colectivos cercanos."/>
             </TextBlock>
             <ListBox ItemsSource="{Binding Items}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListaColectivos_OnSelectionChanged">

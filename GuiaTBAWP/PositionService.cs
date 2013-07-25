@@ -46,7 +46,11 @@ namespace GuiaTBAWP
         private static GeoCoordinateWatcher Ubicacion { get; set; }
         private static void Ubicacion_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
-            if (Math.Abs(e.Position.Location.Latitude - App.Configuration.Ubicacion.Location.Latitude) < App.Configuration.MinDiffGeography && Math.Abs(e.Position.Location.Longitude - App.Configuration.Ubicacion.Location.Longitude) < App.Configuration.MinDiffGeography)
+            var distance = ((e.Position.Location.Latitude - App.Configuration.Ubicacion.Location.Latitude)*
+                            (e.Position.Location.Latitude - App.Configuration.Ubicacion.Location.Latitude) +
+                            (e.Position.Location.Longitude - App.Configuration.Ubicacion.Location.Longitude) * (e.Position.Location.Longitude - App.Configuration.Ubicacion.Location.Longitude));
+
+            if (distance < App.Configuration.MinDiffGeography)
             {
                 return;
             }

@@ -1,16 +1,14 @@
-﻿using System.IO.IsolatedStorage;
-using System.Windows;
-using Microsoft.Phone.Controls;
+﻿using System.Windows;
 
 namespace GuiaTBAWP.Views
 {
-    public partial class Opciones : PhoneApplicationPage
+    public partial class Opciones
     {
         public Opciones()
         {
             InitializeComponent();
 
-            TglLocalizacion.IsChecked = App.Configuration.IsLocationEnabled;
+            TglLocalizacion.IsChecked = App.Configuration.IsLocationEnabledByAppConfig;
             
             Localizacion_Changed(null, null);
         }
@@ -19,7 +17,7 @@ namespace GuiaTBAWP.Views
         {
             var isChecked = TglLocalizacion.IsChecked;
             var activated = isChecked != null && (bool)isChecked;
-            App.Configuration.IsLocationEnabled = activated;
+            App.Configuration.IsLocationEnabledByAppConfig = activated;
             if (activated)
             {
                 PositionService.Initialize();

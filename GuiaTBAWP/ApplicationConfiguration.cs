@@ -24,7 +24,8 @@ namespace GuiaTBAWP
             
             Ubicacion = SetUbicacionDefault();
             InstallationId = Guid.NewGuid();
-            IsLocationEnabled = true;
+            IsLocationEnabledByPhone = true;
+            IsLocationEnabledByAppConfig = true;
             IsInitialized = true;
 
             SetInitialData();
@@ -56,7 +57,11 @@ namespace GuiaTBAWP
 
         public bool IsInitialized { get; set; }
 
-        public bool IsLocationEnabled { get; set; }
+        public bool IsLocationEnabled { get { return IsLocationEnabledByPhone && IsLocationEnabledByAppConfig; } }
+
+        public bool IsLocationEnabledByPhone { get; set; }
+
+        public bool IsLocationEnabledByAppConfig { get; set; }
 
         public Guid InstallationId { get; set; }
 

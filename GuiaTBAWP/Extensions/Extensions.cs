@@ -20,12 +20,32 @@ namespace GuiaTBAWP.Extensions
             {
                 param = "&" + param;
             }
+            else
+            {
+                param = string.Empty;
+            }
             var refresh = string.Empty;
             if (alwaysRefresh)
             {
                 refresh = string.Format("&t={0}.{1}", DateTime.UtcNow.Hour, DateTime.UtcNow.Minute);
             }
-
+            try
+            {
+                if (!param.Contains("&lat=") && !param.Contains("&lon="))
+                {
+                    var currentPosition = PositionService.GetCurrentLocation();
+                    if (currentPosition != null)
+                    {
+                        param += "&lat=" + currentPosition.Location.Latitude;
+                        param += "&lon=" + currentPosition.Location.Longitude;
+                    }
+                }
+            }
+            catch
+            {
+                //no me importa si pincha.
+            }
+            
             return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
                 source,
                 App.Configuration.Name,

@@ -14,14 +14,12 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="#0092D7">
         <controls:Panorama Title="Guía Transporte BA">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
             
-            <!--Panorama item one-->
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -61,6 +59,19 @@
                                 <Image Source="/Images/Home/bicicletas.png" Width="150" Height="150"/>
                                 <StackPanel Margin="-150,130,0,0">
                                     <TextBlock Foreground="White" Margin="10,0,0,0" Text="BICICLETAS" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Autos">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuAutos_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/autos.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="White" Margin="10,0,0,0" Text="AUTOS" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
                                 </StackPanel>
                             </StackPanel>
                         </Button>
@@ -105,11 +116,23 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Aviones">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="anclar al inicio" Click="MenuAviones_OnClick" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
+                            <StackPanel Margin="0,0,0,17" Orientation="Horizontal" Width="150" Height="150">
+                                <Image Source="/Images/Home/aviones.png" Width="150" Height="150"/>
+                                <StackPanel Margin="-150,130,0,0">
+                                    <TextBlock Foreground="White" Margin="10,0,0,0" Text="AVIONES" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
                     </StackPanel>
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <!--Panorama item two-->
             <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
@@ -151,7 +174,6 @@
                 </ScrollViewer>
             </controls:PanoramaItem>
 
-            <!--Panorama item three-->
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
@@ -159,10 +181,9 @@
                         <TextBlock TextWrapping="Wrap" Margin="12,0,0,0">
                             Desarrollado por BTB Solutions
 						    <LineBreak /><LineBreak />
-                            Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, y encuentra la ruta al punto mas cercano. Recorridos de colectivo, trenes y subte.
-                            <LineBreak /><LineBreak />
-                            <LineBreak /><LineBreak />
-                            La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener los puntos de carga y venta más cercanos.
+                            Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, encuentra la ruta al punto mas cercano. Información de colectivos, trenes, subte, estado del transito, y aviones.
+                            <LineBreak /><LineBreak /><LineBreak />
+                            La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener información solicitada.
                             <LineBreak /><LineBreak /><LineBreak />
                             Notas de versión
                             <LineBreak /><LineBreak />
@@ -174,7 +195,9 @@
                             <LineBreak />
                             Información sobre transporte aereo y vehicular.
                             <LineBreak /><LineBreak />
-                            1.4.1 (actual): Inauguración de estaciones Echeverría y Juan Manuel de Rosas del subte.
+                            1.5 (actual): Información completa sobre transporte aereo, arribos y partidas en tiempo real, suscripción a información de vuelos. Estado del transito en tiempo real y estacionamientos.
+                            <LineBreak /><LineBreak />
+                            1.4.1 (30-07-2013): Inauguración de estaciones Echeverría y Juan Manuel de Rosas del subte.
                             <LineBreak /><LineBreak />
                             1.4 (25-07-2013): Colectivos cercanos, mejoras en la actualizacion de datos de servicios de tren y subte, mejora en manejo de GPS para ahorro de energia.
                             <LineBreak /><LineBreak />
@@ -194,7 +217,5 @@
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
-
-    <!--Panorama-based applications should not show an ApplicationBar-->
 
 </phone:PhoneApplicationPage>

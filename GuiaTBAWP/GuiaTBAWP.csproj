@@ -116,6 +116,9 @@
     </Compile>
     <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
+    <Compile Include="Views\Aviones\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
       <DependentUpon>Bicicletas.xaml</DependentUpon>
     </Compile>
@@ -284,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Aviones\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Bicicletas\Bicicletas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -437,6 +444,8 @@
     </None>
     <Resource Include="PanoramaBackground.jpg" />
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\Home\autos.png" />
+    <Content Include="Images\Home\aviones.png" />
     <Content Include="Images\Home\bicicletas.png" />
     <Content Include="Images\Home\colectivos.png" />
     <Content Include="Images\Home\sube.png" />

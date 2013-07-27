@@ -237,8 +237,8 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#EF1729" HorizontalAlignment="Left" Height="1825" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
-                                    <Rectangle Margin="0,0,0,0" Fill="#999999" HorizontalAlignment="Left" Height="255" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#EF1729" HorizontalAlignment="Left" Height="2000" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                    <Rectangle Margin="0,0,0,0" Fill="#EF1729" HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-2095,0,0">
                                     <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
@@ -259,11 +259,11 @@
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Rectangle Margin="0,-230,0,0" Width="6" Height="30" Fill="#EF1729"></Rectangle>
-                                    <Ellipse Margin="0,0,0,100" Width="30" Height="30" Fill="White" />
-                                    <Rectangle Margin="0,-247,0,0" Width="6" Height="15" Fill="#EF1729"></Rectangle>
-                                    <Rectangle Margin="0,-215,0,0" Width="6" Height="18" Fill="#999999"></Rectangle>
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Rectangle Margin="0,-230,0,0" Width="6" Height="30" Fill="#EF1729"></Rectangle>
                                     <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
+                                    <Rectangle Margin="0,-30,0,0" Width="6" Height="30" Fill="#EF1729"></Rectangle>
                                 </StackPanel>
                             </StackPanel>
 
@@ -400,7 +400,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tronador</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Tronador - Villa Ortúzar</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
                                         </StackPanel>
@@ -424,9 +424,25 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Echeverría</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Villa Urquiza</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Juan Manuel de Rosas</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -989,7 +1005,7 @@
 
                             <StackPanel Margin="12,0,0,0">
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Plaza Francia</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Facultad de Derecho</TextBlock>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Las Heras</TextBlock>

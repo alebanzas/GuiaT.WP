@@ -88,6 +88,7 @@
     <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="InitialData.cs" />
+    <Compile Include="Models\AvionesStatusModel.cs" />
     <Compile Include="PositionService.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
@@ -106,6 +107,8 @@
     <Compile Include="ProgressBar.cs" />
     <Compile Include="ViewModels\ColectivoItemViewModel.cs" />
     <Compile Include="ViewModels\ColectivoCercanoViewModel.cs" />
+    <Compile Include="ViewModels\AirportStatusViewModel.cs" />
+    <Compile Include="ViewModels\AirportStatusItemViewModel.cs" />
     <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
     <Compile Include="ViewModels\TrenStatusViewModel.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
@@ -116,6 +119,12 @@
     </Compile>
     <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
+    <Compile Include="Views\Aviones\Aeroparque\ComoLlegar.xaml.cs">
+      <DependentUpon>ComoLlegar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Estado.xaml.cs">
+      <DependentUpon>Estado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Aviones\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -284,6 +293,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Acerca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Aeroparque\ComoLlegar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Aviones\Estado.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

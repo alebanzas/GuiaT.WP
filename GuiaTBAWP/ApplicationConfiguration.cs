@@ -86,7 +86,7 @@ namespace GuiaTBAWP
         {
             get
             {
-                var v = "1.4.2.0";
+                var v = "1.5.0.0";
 #if DEBUG
                 v += "d";
 #endif

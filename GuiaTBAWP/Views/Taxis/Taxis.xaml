@@ -42,7 +42,7 @@
                                 <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">inicial</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">bajada de bandera</TextBlock>
                             </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 9,10</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 10</TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="300">
@@ -50,7 +50,7 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-200 metros de recorrido</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-1 minuto de espera</TextBlock>
                             </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 0,91</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 1</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="0,40,0,0">
@@ -60,7 +60,7 @@
                                 <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">inicial</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">bajada de bandera</TextBlock>
                             </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 10,92</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 12</TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="300">
@@ -68,7 +68,7 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-200 metros de recorrido</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-1 minuto de espera</TextBlock>
                             </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 1,092</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 1,2</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel>

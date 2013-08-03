@@ -27,7 +27,7 @@ namespace GuiaTBAWP.Extensions
             var refresh = string.Empty;
             if (alwaysRefresh)
             {
-                refresh = string.Format("&t={0}.{1}", DateTime.UtcNow.Hour, DateTime.UtcNow.Minute);
+                refresh = string.Format("&__t={0}.{1}", DateTime.UtcNow.Hour, DateTime.UtcNow.Minute);
             }
             try
             {

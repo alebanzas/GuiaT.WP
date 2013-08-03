@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP
 {
-    public partial class Home : PhoneApplicationPage
+    public partial class Home
     {
         public Home()
         {
@@ -17,32 +16,42 @@ namespace GuiaTBAWP
 
         private void Button_Click_SUBE(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/SUBE/HomeSUBE.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/SUBE/HomeSUBE.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Colectivos(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Colectivos/Home.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Colectivos/Home.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Subtes(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/Subtes.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/Subtes.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Trenes(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Trenes/Trenes.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Trenes/Trenes.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Bicicletas(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Bicicletas/Bicicletas.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Bicicletas/Bicicletas.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Taxis(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Taxis/Taxis.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Taxis/Taxis.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_Autos(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Autos/Home.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_Aviones(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Aviones/Home.xaml", UriKind.Relative));
         }
 
         private void MenuSubte_OnClick(object sender, RoutedEventArgs e)
@@ -74,17 +83,28 @@ namespace GuiaTBAWP
         {
             TileManager.Set(new Uri("/Views/Taxis/Taxis.xaml", UriKind.Relative), "", new Uri("/Images/Home/taxis.png", UriKind.Relative));
         }
+
+        private void MenuAutos_OnClick(object sender, RoutedEventArgs e)
+        {
+            TileManager.Set(new Uri("/Views/Autos/Home.xaml", UriKind.Relative), "", new Uri("/Images/Home/autos.png", UriKind.Relative));
+        }
+
+        private void MenuAviones_OnClick(object sender, RoutedEventArgs e)
+        {
+            TileManager.Set(new Uri("/Views/Aviones/Home.xaml", UriKind.Relative), "", new Uri("/Images/Home/aviones.png", UriKind.Relative));
+        }
     }
 
     public static class TileManager
     {
         public static void Set(Uri navigationUrl, string title, Uri backgroundImage)
         {
-            StandardTileData standardTileData = new StandardTileData();
-            
-            standardTileData.BackgroundImage = backgroundImage;
-            standardTileData.Title = title;
-            
+            var standardTileData = new StandardTileData
+                {
+                    BackgroundImage = backgroundImage, 
+                    Title = title,
+                };
+
             ShellTile tiletopin = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(navigationUrl.ToString()));
             
             if (tiletopin == null)

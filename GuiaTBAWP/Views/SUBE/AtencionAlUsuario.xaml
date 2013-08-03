@@ -14,7 +14,6 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid>
         <controls:Panorama Title="atención al usuario">
 

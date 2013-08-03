@@ -1,0 +1,248 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="GuiaTBAWP.Views.SUBE.AtencionAlUsuario"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid>
+        <controls:Panorama Title="atención al usuario">
+
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/background.jpg" />
+            </controls:Panorama.Background>
+            
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="inicio">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                                <Paragraph>
+                                    Para facilitar las gestiones personalizadas de nuestros usuarios, habilitamos Centros de Atención SUBE en distintos puntos de la Región Metropolitana.
+                                </Paragraph>
+                                <Paragraph></Paragraph>
+                                <Paragraph>
+                                    Consultá la dirección y el horario de atención haciendo click en el punto más cercano del mapa o consultá el listado de puntos según tu zona: CABA, Norte, Oeste o Sur.
+                                </Paragraph>
+                                <Paragraph></Paragraph>
+                                <Paragraph>
+                                    Cada centro está preparado para:
+                                </Paragraph>
+                                <Paragraph></Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Venta de Tarjeta SUBE.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Realizar carga de saldo con tarjeta de débito o crédito.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Gestionar Clave Personal SUBE.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Brindar asesoramiento sobre el servicio.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Informar el estado de gestiones en curso.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Informar puntos de obtención y carga cercanos.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Solicitar la baja de la tarjeta por hurto, daño o extravío.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Asentar reclamos particulares.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Iniciar y finalizar gestiones de reintegro de saldo.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Reasignar tarjetas mezcladas.
+                                </Paragraph>
+                                <Paragraph>
+                                    &#x27A4; Actualizar datos de titulares.
+                                </Paragraph>
+                            </RichTextBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="CABA">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                                <Paragraph FontWeight="Bold">Sucursal Belgrano</Paragraph>
+                                <Paragraph>Sucre 2430</Paragraph>
+                                <Paragraph>de Lunes a Viernes 09:00 a 16:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Caballito</Paragraph>
+                                <Paragraph>Campichuelo 553 (en dependencias del Centro de Acceso a la Justicia Caballito)</Paragraph>
+                                <Paragraph>de Lunes a Viernes 10:00 a 16:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Congreso</Paragraph>
+                                <Paragraph>Callao 316</Paragraph>
+                                <Paragraph>de Lunes a Viernes 08:00 a 20:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Constitución</Paragraph>
+                                <Paragraph>Salta 2007 subsuelo (en dependencias del Centro de Acceso a la Justicia Constitución)</Paragraph>
+                                <Paragraph>de Lunes a Viernes 10:00 a 16:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Liniers</Paragraph>
+                                <Paragraph>Cuzco 220 (en dependencias Centro de Acceso a la Justicia Liniers)</Paragraph>
+                                <Paragraph>de Lunes a Viernes 09:00 a 16:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal SIGEN</Paragraph>
+                                <Paragraph>Corrientes 389 (subsuelo, esquina Reconquista)</Paragraph>
+                                <Paragraph>de Lunes a Viernes 10:00 a 16:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+                            </RichTextBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item three-->
+            <controls:PanoramaItem Header="Zona Norte">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                                <Paragraph FontWeight="Bold">Sucursal General Pacheco (Tigre)</Paragraph>
+                                <Paragraph>Santiago del Estero 350 (El Talar)</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 16 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal José León Suárez (San Martín)</Paragraph>
+                                <Paragraph>Calle D. 190 (Brigadier Don Juan Manuel de Rosas 2453 entre Buenos Aires (55) y Boulevard Ballester (57)</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal San Miguel (San Miguel)</Paragraph>
+                                <Paragraph>Domingo Faustino Sarmiento 1551</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Malvinas Argentinas</Paragraph>
+                                <Paragraph>Batallón 601 Dr. Baroni 2803</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+                            </RichTextBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item four-->
+            <controls:PanoramaItem Header="Zona Oeste">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                                <Paragraph FontWeight="Bold">Sucursal Ciudadela (3 de Febrero)</Paragraph>
+                                <Paragraph>Av. Rivadavia 12602</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 09:00 a 15:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Caseros (3 de Febrero)</Paragraph>
+                                <Paragraph>Alberdi 4840 entre Medina y Murias</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 15:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Ituzaingó (Ituzaingó)</Paragraph>
+                                <Paragraph>Av. Ratti 10</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 15:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Moreno (Moreno)</Paragraph>
+                                <Paragraph>Belgrano 84 (entre Mitre y Uruguay)</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 16:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Morón (Morón)</Paragraph>
+                                <Paragraph>Alte Brown 946/956</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 15:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">González Catán (González Catán)</Paragraph>
+                                <Paragraph>Brig. Gral. Juan Manuel de Rosas 17798 (Ruta 3. Km 32,5)</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 16:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+                            </RichTextBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item five-->
+            <controls:PanoramaItem Header="Zona Sur">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                                <Paragraph FontWeight="Bold">Sucursal La Plata (La Plata)</Paragraph>
+                                <Paragraph>Plaza Italia 109</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 09:00 a 17:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Ensenada (Ensenada)</Paragraph>
+                                <Paragraph>La Merced 491</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Temperley (Lomas de Zamora)</Paragraph>
+                                <Paragraph>Avellaneda 126 (esquina Meeks)</Paragraph>
+                                <Paragraph>de Lunes a Viernes 08:00 a 15:30 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Tristán Suárez (Ezeiza)</Paragraph>
+                                <Paragraph>Av. Néstor Kirchner 225</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 13:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Avellaneda (Avellaneda)</Paragraph>
+                                <Paragraph>Guemes 835</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 17:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Rafael Calzada (Almirante Brown)</Paragraph>
+                                <Paragraph>Av.San Martin 3149</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Lanús (Lanús)</Paragraph>
+                                <Paragraph>Hipólito Yrigoyen 3863</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+
+                                <Paragraph FontWeight="Bold">Sucursal Burzaco (Almirante Brown)</Paragraph>
+                                <Paragraph>Quintana 556</Paragraph>
+                                <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
+                                <Paragraph></Paragraph>
+                            </RichTextBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -86,7 +86,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
@@ -98,8 +97,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
-    <Compile Include="Converters\SubteNombreImagenConverter.cs" />
     <Compile Include="Views\Aviones\Aeroparque\ComoLlegar.xaml.cs">
       <DependentUpon>ComoLlegar.xaml</DependentUpon>
     </Compile>
@@ -179,12 +176,6 @@
     <Compile Include="Views\Colectivos\Colectivos.xaml.cs">
       <DependentUpon>Colectivos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\DistanceConverter.cs" />
-    <Compile Include="Converters\NumberConverter.cs" />
-    <Compile Include="Converters\ItineraryTextConverter.cs" />
-    <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
-    <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
-    <Compile Include="Converters\TextConverter.cs" />
     <Compile Include="BusData\DataColectivos.cs" />
     <Compile Include="Views\SUBE\HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>

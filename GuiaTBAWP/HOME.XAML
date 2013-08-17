@@ -220,4 +220,19 @@
         </controls:Panorama>
     </Grid>
 
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar x:Name="applicationBar"
+							  IsVisible="True"
+                              Mode="Minimized"
+							  IsMenuEnabled="True"
+							  Opacity="0.7">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="danos tus comentarios" Click="RateReview_Click"/>
+                <shell:ApplicationBarMenuItem Text="acerca de" Click="Acerca_Click"/>
+                <shell:ApplicationBarMenuItem Text="opciones" Click="Opciones_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
 </phone:PhoneApplicationPage>

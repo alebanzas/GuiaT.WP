@@ -10,10 +10,11 @@ namespace GuiaTBAWP.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public MainViewModel()
+        public MainViewModel(string bingMapsApiKey)
         {
             PuntosVenta = new ObservableCollection<ItemViewModel>();
             PuntosRecarga = new ObservableCollection<ItemViewModel>();
+            _credentialsProvider = new ApplicationIdCredentialsProvider(bingMapsApiKey);
             InitializeDefaults();
         }
 
@@ -52,7 +53,7 @@ namespace GuiaTBAWP.ViewModels
         #region Fields
 
         /// <value>Provides credentials for the map control.</value>
-        private readonly CredentialsProvider _credentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
+        private readonly CredentialsProvider _credentialsProvider;
         
         private readonly ObservableCollection<PushpinModel> _pushpins = new ObservableCollection<PushpinModel>();
         

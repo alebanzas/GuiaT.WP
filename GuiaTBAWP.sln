@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAWP", "GuiaTBAWP\Guia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAWP.Tests", "GuiaTBAWP.Tests\GuiaTBAWP.Tests.csproj", "{06DFD589-222B-45D4-98CE-79B354432366}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAWP.Commons", "GuiaTBAWP.Commons\GuiaTBAWP.Commons.csproj", "{7B12C343-5C14-434E-882B-256DC35FAE1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{06DFD589-222B-45D4-98CE-79B354432366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DFD589-222B-45D4-98CE-79B354432366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06DFD589-222B-45D4-98CE-79B354432366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B12C343-5C14-434E-882B-256DC35FAE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B12C343-5C14-434E-882B-256DC35FAE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B12C343-5C14-434E-882B-256DC35FAE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B12C343-5C14-434E-882B-256DC35FAE1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

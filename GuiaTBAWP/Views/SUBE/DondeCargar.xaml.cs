@@ -21,7 +21,7 @@ namespace GuiaTBAWP.Views.SUBE
         private static MainViewModel _viewModel;
         public static MainViewModel ViewModel
         {
-            get { return _viewModel ?? (_viewModel = new MainViewModel()); }
+            get { return _viewModel ?? (_viewModel = new MainViewModel(App.Configuration.BingMapApiKey)); }
         }
 
         private HttpWebRequest _httpReq;

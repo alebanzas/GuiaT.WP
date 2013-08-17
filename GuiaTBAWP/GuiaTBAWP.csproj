@@ -88,29 +88,13 @@
     <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="InitialData.cs" />
-    <Compile Include="Models\AvionesStatusModel.cs" />
     <Compile Include="PositionService.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="LoadingBar.cs" />
-    <Compile Include="Models\BicicletasStatusModel.cs" />
-    <Compile Include="Models\BicicletaEstacionTable.cs" />
-    <Compile Include="Models\BicicletaEstacionDC.cs" />
-    <Compile Include="Models\ColectivoModel.cs" />
-    <Compile Include="Models\TransporteModel.cs" />
-    <Compile Include="Models\TrenesRamalEstadoDC.cs" />
-    <Compile Include="Models\TrenesRamalEstadoTable.cs" />
-    <Compile Include="Models\TrenesLineaEstadoDC.cs" />
-    <Compile Include="Models\TrenesLineaEstadoTable.cs" />
     <Compile Include="ProgressBar.cs" />
-    <Compile Include="ViewModels\ColectivoItemViewModel.cs" />
-    <Compile Include="ViewModels\ColectivoCercanoViewModel.cs" />
-    <Compile Include="ViewModels\AirportStatusViewModel.cs" />
-    <Compile Include="ViewModels\AirportStatusItemViewModel.cs" />
-    <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
-    <Compile Include="ViewModels\TrenStatusViewModel.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
     </Compile>
@@ -167,11 +151,6 @@
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\SUBEPuntoModel.cs" />
-    <Compile Include="ViewModels\SubteItemViewModel.cs" />
-    <Compile Include="Models\SubteStatusItem.cs" />
-    <Compile Include="Models\SubteStatusModel.cs" />
-    <Compile Include="ViewModels\SubteStatusViewModel.cs" />
     <Compile Include="Views\Taxis\Taxis.xaml.cs">
       <DependentUpon>Taxis.xaml</DependentUpon>
     </Compile>
@@ -219,11 +198,9 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\LineaTrenModel.cs" />
     <Compile Include="Views\Trenes\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\RamalTrenModel.cs" />
     <Compile Include="Views\Trenes\Roca.xaml.cs">
       <DependentUpon>Roca.xaml</DependentUpon>
     </Compile>
@@ -242,17 +219,9 @@
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\TrenesStatusModel.cs" />
     <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\ItemViewModel.cs" />
-    <Compile Include="Models\LocalServiceModel.cs" />
-    <Compile Include="Models\PointExtensions.cs" />
-    <Compile Include="Models\PushpinCatalog.cs" />
-    <Compile Include="Models\PushpinModel.cs" />
-    <Compile Include="Models\RouteModel.cs" />
     <Compile Include="Views\SUBE\PerdidaRoboDanio.xaml.cs">
       <DependentUpon>PerdidaRoboDanio.xaml</DependentUpon>
     </Compile>
@@ -623,7 +592,12 @@
     <WCFMetadataStorage Include="Service References\Bing.Route\" />
     <WCFMetadataStorage Include="Service References\Bing.Search\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GuiaTBAWP.Commons\GuiaTBAWP.Commons.csproj">
+      <Project>{7B12C343-5C14-434E-882B-256DC35FAE1D}</Project>
+      <Name>GuiaTBAWP.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

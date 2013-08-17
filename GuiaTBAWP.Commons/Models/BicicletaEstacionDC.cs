@@ -37,8 +37,9 @@ namespace GuiaTBAWP.Models
                 //Ante un error en la query, reseteo todos.
                 Current.DeleteDatabase();
                 Destroy();
-                App.Configuration.InitialDataBicicletas = false;
-                App.Configuration.UltimaActualizacionBicicletas = DateTime.MinValue;
+                //TODO: refactor
+                //App.Configuration.InitialDataBicicletas = false;
+                //App.Configuration.UltimaActualizacionBicicletas = DateTime.MinValue;
                 return new List<BicicletaEstacionTable>();
             }
         }

@@ -7,8 +7,10 @@ namespace GuiaTBAWP
 {
     public class ApplicationConfiguration
     {
-        public ApplicationConfiguration()
+        public ApplicationConfiguration(string name, string version)
         {
+            Name = name;
+            Version = version;
             Ubicacion = SetUbicacionDefault();
         }
 
@@ -82,24 +84,21 @@ namespace GuiaTBAWP
 
         public bool InitialDataTrenes { get; set; }
 
+        private string _version;
         public string Version
         {
-            get
+            private set
             {
-                var v = "1.5.0.0";
+                var v = value;
 #if DEBUG
                 v += "d";
 #endif
-                return v;
+                _version = v;
             }
+
+            get { return _version; }
         }
 
-        public string Name
-        {
-            get
-            {
-                return "GUIATBAWP";
-            }
-        }
+        public string Name { get; private set; }
     }
 }

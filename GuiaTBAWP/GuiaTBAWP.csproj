@@ -57,8 +57,9 @@
     <Reference Include="JeffWilcox.Maps">
       <HintPath>..\libs\JeffWilcox.Maps.dll</HintPath>
     </Reference>
-    <Reference Include="JeffWilcox.PhoneThemeManager">
-      <HintPath>..\packages\PhoneThemeManager.1.3.3\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll</HintPath>
+    <Reference Include="JeffWilcox.PhoneThemeManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PhoneThemeManager.1.4\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
@@ -85,16 +86,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
-    <Compile Include="InitialData.cs" />
-    <Compile Include="PositionService.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Config.cs" />
-    <Compile Include="LoadingBar.cs" />
-    <Compile Include="ProgressBar.cs" />
+    <Compile Include="PositionService.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
     </Compile>
@@ -151,6 +148,24 @@
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
+      <DependentUpon>SubteEstado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteHorarios.xaml.cs">
+      <DependentUpon>SubteHorarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteLineas.xaml.cs">
+      <DependentUpon>SubteLineas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteMapa.xaml.cs">
+      <DependentUpon>SubteMapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubtePrecio.xaml.cs">
+      <DependentUpon>SubtePrecio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\Subtes.xaml.cs">
+      <DependentUpon>Subtes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Taxis\Taxis.xaml.cs">
       <DependentUpon>Taxis.xaml</DependentUpon>
     </Compile>
@@ -170,31 +185,13 @@
     <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
-    <Compile Include="Views\Subtes\SubteHorarios.xaml.cs">
-      <DependentUpon>SubteHorarios.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
-      <DependentUpon>SubteEstado.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\SubteLineas.xaml.cs">
-      <DependentUpon>SubteLineas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\SubteMapa.xaml.cs">
-      <DependentUpon>SubteMapa.xaml</DependentUpon>
-    </Compile>
     <Compile Include="BusData\DataColectivos.cs" />
-    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Views\SUBE\HomeSUBE.xaml.cs">
       <DependentUpon>HomeSUBE.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SUBE\DondeUsarSUBE.xaml.cs">
       <DependentUpon>DondeUsarSUBE.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\RouteCalculationError.cs" />
-    <Compile Include="Helpers\RouteCalculator.cs" />
-    <Compile Include="Helpers\RoutingState.cs" />
-    <Compile Include="Helpers\TouchBehavior.cs" />
-    <Compile Include="Helpers\TouchBehaviorEventArgs.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -209,12 +206,6 @@
     </Compile>
     <Compile Include="Views\Trenes\Sarmiento.xaml.cs">
       <DependentUpon>Sarmiento.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\SubtePrecio.xaml.cs">
-      <DependentUpon>SubtePrecio.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\Subtes.xaml.cs">
-      <DependentUpon>Subtes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
@@ -329,6 +320,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Subtes\SubteEstado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteHorarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteLineas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteMapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubtePrecio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\Subtes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Taxis\Taxis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -344,22 +359,6 @@
     <Page Include="Views\Colectivos\Colectivos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Subtes\SubteHorarios.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Subtes\SubteEstado.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Subtes\SubteLineas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Subtes\SubteMapa.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SUBE\HomeSUBE.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -402,14 +401,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Trenes\Sarmiento.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Subtes\SubtePrecio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Subtes\Subtes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

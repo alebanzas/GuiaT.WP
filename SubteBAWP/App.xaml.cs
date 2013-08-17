@@ -1,19 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Navigation;
+using System.Windows.Shapes;
+using GuiaTBAWP;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using ProgressBar = GuiaTBAWP.ProgressBar;
 
-namespace GuiaTBAWP
+namespace SubteBAWP
 {
-    public partial class App
+    public partial class App : Application
     {
-        private const string AppName = "GUIATBAWP";
+        private const string AppName = "SubteBAWP";
         private const string AppVersion = "1.5.0.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
-        
+
         // Easy access to the root frame
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
@@ -32,7 +43,7 @@ namespace GuiaTBAWP
             InitializePhoneApplication();
 
             ThemeManager.ToDarkTheme();
-            
+
             LoadingBar.Instance.Initialize(RootFrame);
         }
 

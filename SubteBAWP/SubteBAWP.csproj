@@ -118,6 +118,19 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\Subtes\accesibilidad.png" />
+    <Content Include="Images\Subtes\lineaA.png" />
+    <Content Include="Images\Subtes\lineaB.png" />
+    <Content Include="Images\Subtes\lineaC.png" />
+    <Content Include="Images\Subtes\lineaD.png" />
+    <Content Include="Images\Subtes\lineaE.png" />
+    <Content Include="Images\Subtes\lineaH.png" />
+    <Content Include="Images\Subtes\lineaP.png" />
+    <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\sanitarios.png" />
+    <Content Include="Images\Subtes\subtes.jpg" />
+    <Content Include="Images\Subtes\tren.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>

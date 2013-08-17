@@ -7,6 +7,13 @@ namespace GuiaTBAWP
 {
     public class ApplicationConfiguration
     {
+        public ApplicationConfiguration()
+        {
+            Name = "NOTSET";
+            Version = "0.0.0.0";
+            Ubicacion = SetUbicacionDefault();
+        }
+
         public ApplicationConfiguration(string name, string version)
         {
             Name = name;

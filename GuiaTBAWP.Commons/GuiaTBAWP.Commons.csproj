@@ -52,9 +52,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationConfiguration.cs" />
+    <Compile Include="Converters\DateTimeToLocalConverter.cs" />
+    <Compile Include="Converters\DistanceConverter.cs" />
+    <Compile Include="Converters\ItineraryTextConverter.cs" />
+    <Compile Include="Converters\LocationGeoCoordinateConverter.cs" />
+    <Compile Include="Converters\NumberConverter.cs" />
+    <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
+    <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
+    <Compile Include="Converters\SubteNombreImagenConverter.cs" />
+    <Compile Include="Converters\TextConverter.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\TouchBehavior.cs" />

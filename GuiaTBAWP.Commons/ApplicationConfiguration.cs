@@ -9,8 +9,6 @@ namespace GuiaTBAWP
     {
         public ApplicationConfiguration()
         {
-            Name = "NOTSET";
-            Version = "0.0.0.0";
             Ubicacion = SetUbicacionDefault();
         }
 

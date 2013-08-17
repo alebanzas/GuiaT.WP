@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP
 {
@@ -92,6 +93,23 @@ namespace GuiaTBAWP
         private void MenuAviones_OnClick(object sender, RoutedEventArgs e)
         {
             TileManager.Set(new Uri("/Views/Aviones/Home.xaml", UriKind.Relative), "", new Uri("/Images/Home/aviones.png", UriKind.Relative));
+        }
+
+        private void Opciones_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
+        }
+
+        private void Acerca_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
+        }
+
+        private void RateReview_Click(object sender, EventArgs e)
+        {
+            var marketplaceReviewTask = new MarketplaceReviewTask();
+
+            marketplaceReviewTask.Show();
         }
     }
 

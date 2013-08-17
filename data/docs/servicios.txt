@@ -1,0 +1,115 @@
+servicios
+
+RECORRIDOS
+http://servicios.usig.buenosaires.gov.ar/callejero
+match nombre altura - id
+http://ws.usig.buenosaires.gob.ar/geocoder/2.2/geocoding/?cod_calle=5001&altura=1401
+
+http://recorridos.usig.buenosaires.gob.ar/2.0/consultar_recorridos?
+tipo=transporte&
+precargar=3&
+opciones_caminata=800&
+opciones_medios_colectivo=true&
+opciones_medios_subte=true&
+opciones_medios_tren=true&
+opciones_prioridad=avenidas&
+opciones_incluir_autopistas=true&
+origen_calles=1037&
+origen_calle_altura=300&
+destino_calles=5001&
+destino_calle_altura=1401
+
+TRANSITO
+http://servicios.lanacion.com.ar/jsonp/transito/estado
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=cortes_de_transito
+http://www.clarin.com/xml/transito.xml
+
+TW TRANSITO
+https://twitter.com/AlertasTransito
+https://twitter.com/batransito
+https://twitter.com/ayudaauto
+https://twitter.com/CeroTraficoBA
+https://twitter.com/solotransito
+
+
+
+AUSA
+http://transito.buenosaires.gob.ar/getKMLausa.aspx
+
+ESTACIONAMIENTOS
+GET http://stage.parkando.com/parking_spots HTTP/1.1
+Host: stage.parkando.com
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+
+
+
+BICICLETAS
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=comercios_con_beneficios
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=bicicleterias
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=bicicleteros
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=estacionamiento_de_bicicletas
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=estaciones_de_bicicletas
+
+
+
+http://booking.lan.com/cgi-bin/compra/paso3.cgi?just_refresh=1;session_id=xy88231370398257_UGJUZ4U3ZX
+
+http://www.clarin.com/xml/subte_premetro.xml
+http://www.clarin.com/xml/trenes.xml
+
+
+
+
+1) cajeros automáticos ba
+http://epok.buenosaires.gob.ar/getGeoLayer/?categoria=cajeros_automaticos
+2) transporte cercano ba
+http://servicio.abhosting.com.ar/transporte/cercano/?lat=-34.593778&lon=-58.403379&puntos=true
+3) Traducime (bing api)
+
+4) Bicicletas de Buenos Aires
+
+5) Cotizaciones Argentinas
+
+
+----------------
+de punto a direccion
+http://maps.googleapis.com/maps/api/geocode/json?sensor=true&latlng=-34.593778,-58.403379
+de direccion a punto
+http://maps.googleapis.com/maps/api/geocode/json?sensor=true&address=avenida+san+martin+100+Buenos+Aires,+Argentina
+docs:
+https://developers.google.com/maps/documentation/geocoding/#Limits
+https://spreadsheets.google.com/a/autocosmos.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
+----------
+
+LINEAS DE MAPA --> ABM con drag and drop en mapa 
+chequear subte con estaciones nuevas
+124, no va por gallo va por callao
+METROBUS 9 de julio
+
+
+aviones:
+-UI
+-dia siguiente los primeros 10 (usar API)
+-subs
+POST http://www.aa2000.com.ar/api/api/suscripciones HTTP/1.1
+Host: www.aa2000.com.ar
+key: 59786f68277c6a59584c70384c6c575b
+Content-Type: application/json
+Referer: http://m.aa2000.com.ar/
+
+{ "id": "2611835","email": "a@a.com","lang": "ES"}
+
+
+
+http://servicio.abhosting.com.ar/transporte/cercano/?lat=-34.593778&lon=-58.403379&puntos=true
+http://servicio.abhosting.com.ar/transporte/PorLinea/?linea=64
+http://servicio.abhosting.com.ar/transporte/PorId/0cb6c6a3-d710-4865-9708-e7af25a71c09
+http://servicio.abhosting.com.ar/sube/ventanear/?lat=-34.593778&lon=-58.403379
+
+
+
+
+R#
+Autocompra.com S.A.
+488894-HrQG91EpHMOBvEuQLDkfsmKS1nUI7WHi

@@ -1,0 +1,7 @@
+convert ASCII to integer, 
+find the nth element from the end of a singly linked list, 
+convert integer to ASCII, 
+reverse the order of the words in a string, 
+find all combinations of strings a phone number can make (2 – ABC, 2 – DEF, etc), 
+and finally, write out the queue and de-queue methods for a fixed length queue that is shared between two objects.  
+

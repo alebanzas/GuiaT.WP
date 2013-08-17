@@ -1,0 +1,93 @@
+{
+"d":
+	{
+		"APIKey": "AIzaSyBQULkvlwyk3_b-_UuHIEBn9XG-7JGO3m0",
+		"APIVersion": "3",
+		"AutomaticBoundaryAndZoom": false,
+		"CenterPoint": 
+			{
+				"Address": "",
+				"Draggable": false,
+				"ID": "CenterPoint",
+				"IconAnchor_posX": 16,
+				"IconAnchor_posY": 32,
+				"IconImage": "",
+				"IconImageHeight": 32,
+				"IconImageWidth": 32,
+				"IconShadowHeight": 0,
+				"IconShadowImage": "",
+				"IconShadowWidth": 0,
+				"InfoHTML": "",
+				"InfoWindowAnchor_posX": 16,
+				"InfoWindowAnchor_posY": 5,
+				"Latitude": -34.616433,
+				"Longitude": -58.445055,
+				"PointStatus": "",
+				"ToolTip": ""
+			},
+		"Directions":
+			{
+				"Addresses":[],
+				"Locale":"en_US",
+				"ShowDirectionInstructions":false,
+				"HideMarkers":false,
+				"PolylineOpacity":0.6,
+				"PolylineWeight":3,
+				"PolylineColor":"#0000FF"
+			},
+		"Height": "600px",
+		"MapType": "",
+		"Points":
+			[
+			{
+				"PointStatus":"",
+				"Address":"",
+				"ID":"Punto Sube",
+				"IconImage":"Imagenes/carga.png",
+				"IconShadowImage":"",
+				"IconImageWidth":32,
+				"IconShadowWidth":0,
+				"IconShadowHeight":0,
+				"IconAnchor_posX":16,
+				"IconAnchor_posY":32,
+				"InfoWindowAnchor_posX":16,
+				"InfoWindowAnchor_posY":10,
+				"Draggable":false,
+				"IconImageHeight":32,
+				"Latitude":-34.81144,
+				"Longitude":-58.38503,
+				"InfoHTML":"\u003cb\u003e\u003ch4\u003eCentro de Carga\u003c/h4\u003e\u003c/b\u003e\u003cbr/\u003eDirección: \u003cb\u003ePRESIDENTE PERÓN 909\u003c/b\u003e\u003cbr/\u003e\u003cbr/\u003e Horario de atención: \u003cb\u003e08:30 a 13:00 hs 15:00 a 18:00 hs\u003c/b\u003e",
+				"ToolTip":""
+			},
+			{
+				"PointStatus":"",
+				"Address":"",
+				"ID":"Punto Sube",
+				"IconImage":"Imagenes/carga.png",
+				"IconShadowImage":"",
+				"IconImageWidth":32,
+				"IconShadowWidth":0,
+				"IconShadowHeight":0,
+				"IconAnchor_posX":16,
+				"IconAnchor_posY":32,
+				"InfoWindowAnchor_posX":16,
+				"InfoWindowAnchor_posY":10,
+				"Draggable":false,
+				"IconImageHeight":32,
+				"Latitude":-34.81144,
+				"Longitude":-58.38503,
+				"InfoHTML":"\u003cb\u003e\u003ch4\u003eCentro de Carga\u003c/h4\u003e\u003c/b\u003e\u003cbr/\u003eDirección: \u003cb\u003ePRESIDENTE PERÓN 909\u003c/b\u003e\u003cbr/\u003e\u003cbr/\u003e Horario de atención: \u003cb\u003e08:30 a 13:00 hs 15:00 a 18:00 hs\u003c/b\u003e",
+				"ToolTip":""
+			}
+			],
+			"Polygons": [],
+			"Polylines": [],
+			"RecenterMap": false,
+			"ShowMapTypesControl": true,
+			"ShowTraffic": false,
+			"ShowZoomControl": true,
+			"Width": "730px",
+			"ZoomLevel": 11,
+			"__type": "GoogleObject"
+	}
+}

@@ -22,7 +22,7 @@
             </controls:Panorama.Background>
             
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <StackPanel Margin="-10,0,0,0">
+                <StackPanel>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteLineas">
                         <TextBlock Margin="0" Text="líneas y estaciones" />
                     </Button>
@@ -39,7 +39,7 @@
                         <TextBlock Margin="0" Text="estado del servicio" />
                     </Button>
 
-                    <Grid Margin="0,0,0,0" Width="480" Height="70" HorizontalAlignment="Left" Grid.Row="1">
+                    <Grid Margin="0,0,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
                         <mobfox:AdControl Name="mobFoxadControl" PublisherID="9aac74c058460fe269c76baa216dc96d" TestMode="True" VerticalAlignment="Top" />
                     </Grid>
                 </StackPanel>

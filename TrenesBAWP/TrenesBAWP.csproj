@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2A7FBB51-77EC-42D4-A812-1B22A8799B9F}</ProjectGuid>
+    <ProjectGuid>{6F20D091-EBE4-42C1-B686-6DA53BCD46FC}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BicicletaBAWP</RootNamespace>
-    <AssemblyName>BicicletaBAWP</AssemblyName>
+    <RootNamespace>TrenesBAWP</RootNamespace>
+    <AssemblyName>TrenesBAWP</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
@@ -20,9 +20,9 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>BicicletaBAWP.xap</XapFilename>
+    <XapFilename>TrenesBAWP.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>BicicletaBAWP.App</SilverlightAppEntry>
+    <SilverlightAppEntry>TrenesBAWP.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
   </PropertyGroup>
@@ -53,7 +53,6 @@
     </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
@@ -91,26 +90,29 @@
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Bicicletas\ElServicio.xaml.cs">
-      <DependentUpon>ElServicio.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Bicicletas\ElSistema.xaml.cs">
-      <DependentUpon>ElSistema.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Bicicletas\Estaciones.xaml.cs">
-      <DependentUpon>Estaciones.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Bicicletas\Inscripcion.xaml.cs">
-      <DependentUpon>Inscripcion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Bicicletas\LugarDetalles.xaml.cs">
-      <DependentUpon>LugarDetalles.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Bicicletas\Mapa.xaml.cs">
-      <DependentUpon>Mapa.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
+      <DependentUpon>BelgranoNorte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoSur.xaml.cs">
+      <DependentUpon>BelgranoSur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mitre.xaml.cs">
+      <DependentUpon>Mitre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Roca.xaml.cs">
+      <DependentUpon>Roca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\SanMartin.xaml.cs">
+      <DependentUpon>SanMartin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Sarmiento.xaml.cs">
+      <DependentUpon>Sarmiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Urquiza.xaml.cs">
+      <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +134,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\Subtes\accesibilidad.png" />
+    <Content Include="Images\Subtes\lineaA.png" />
+    <Content Include="Images\Subtes\lineaB.png" />
+    <Content Include="Images\Subtes\lineaC.png" />
+    <Content Include="Images\Subtes\lineaD.png" />
+    <Content Include="Images\Subtes\lineaE.png" />
+    <Content Include="Images\Subtes\lineaH.png" />
+    <Content Include="Images\Subtes\lineaP.png" />
+    <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\sanitarios.png" />
+    <Content Include="Images\Subtes\subtes.jpg" />
+    <Content Include="Images\Subtes\tren.png" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranosur.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_mitre.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_roca.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sanmartin.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sarmiento.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_urquiza.jpg" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.camera.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.clouds.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.eye.rest.png" />
@@ -189,31 +210,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Bicicletas\ElServicio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Bicicletas\ElSistema.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Bicicletas\Estaciones.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Bicicletas\Inscripcion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Bicicletas\LugarDetalles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Bicicletas\Mapa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Opciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoNorte.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoSur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Roca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\SanMartin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Sarmiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Urquiza.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -224,7 +249,6 @@
       <Name>GuiaTBAWP.Commons</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

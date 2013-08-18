@@ -54,7 +54,7 @@ namespace WebScraping
                 "belgrano-sur",
             };
 
-        public List<string> LineasColectivo = new List<string>
+        /*public List<string> LineasColectivo = new List<string>
             {
                 "1",
                 "2",
@@ -192,6 +192,33 @@ namespace WebScraping
                 "193",
                 "194",
                 "195"
+            };*/
+
+        //Update metrobus 9 de julio
+        public List<string> LineasColectivo = new List<string>
+            {
+                "5",
+                "6",
+                "7",
+                "9",
+                "10",
+                "17",
+                "24",
+                "26",
+                "45",
+                "53",
+                "59",
+                "67",
+                "70",
+                "75",
+                "91",
+                "98",
+                "100",
+                "111",
+                "115",
+                "129",
+                "152",
+                "195"
             };
 
         public List<string> LineasColectivoProv = new List<string>
@@ -302,11 +329,11 @@ namespace WebScraping
             //ShowSubte(true);
             //ShowTren(true);
 
-            //ShowColectivo(LineasColectivo);
-            //ShowColectivo(LineasColectivo, true);
+            ShowColectivo(LineasColectivo);
+            ShowColectivo(LineasColectivo, true);
 
             //ShowColectivo(LineasColectivoProv);
-            ShowColectivo(LineasColectivoProv, true);
+            //ShowColectivo(LineasColectivoProv, true);
         }
 
         protected void ShowSubte(bool regreso = false)

@@ -137,7 +137,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                 {
                     End =
                         new LabeledMapLocation(
-                            String.Format("{0},{1}", _bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud),
+                            String.Format("Estación {0}", _bicicletaEstacion.Nombre),
                             new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud))
                 };
             bingMapsDirectionsTask.Show();

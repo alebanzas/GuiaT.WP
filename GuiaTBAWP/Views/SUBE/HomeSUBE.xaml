@@ -55,7 +55,7 @@
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph>
-                                Un servicio para abonar con una sola tarjeta viajes en colectivos, subtes y trenes adheridos, en la Región Metropolitana de Buenos Aires.
+                                Un servicio para abonar con una sola tarjeta viajes en colectivo, subte y tren, en la Región Metropolitana de Buenos Aires.
                             </Paragraph>
                             <Paragraph>
                                 También es un medio de pago simple y moderno, que convive con los medios tradicionales.
@@ -89,7 +89,5 @@
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
-
-    <!--Panorama-based applications should not show an ApplicationBar-->
 
 </phone:PhoneApplicationPage>

@@ -31,12 +31,12 @@
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparquePartidas">
                         <TextBlock Margin="-12,0,0,0" Text="partidas" />
                     </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparquePlano">
+                    <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparquePlano">
                         <TextBlock Margin="-12,0,0,0" Text="plano" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueOperadoras">
                         <TextBlock Margin="-12,0,0,0" Text="empresas que operan" />
-                    </Button>
+                    </Button-->
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueInfoTecnica">
                         <TextBlock Margin="-12,0,0,0" Text="información técnica" />
                     </Button>
@@ -54,12 +54,12 @@
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaPartidas">
                         <TextBlock Margin="-12,0,0,0" Text="partidas" />
                     </Button>
-                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaPlano">
+                    <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaPlano">
                         <TextBlock Margin="-12,0,0,0" Text="plano" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaOperadoras">
                         <TextBlock Margin="-12,0,0,0" Text="empresas que operan" />
-                    </Button>
+                    </Button-->
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaInfoTecnica">
                         <TextBlock Margin="-12,0,0,0" Text="información técnica" />
                     </Button>

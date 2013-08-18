@@ -1,0 +1,120 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="GuiaTBAWP.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#0092D7">
+        <controls:Panorama Title="Guía Transporte BA">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/background.jpg" />
+            </controls:Panorama.Background>
+            
+            <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+                <StackPanel>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ElSistema">
+                        <TextBlock Margin="-12,0,0,0" Text="el sistema" />
+                    </Button>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Inscripcion">
+                        <TextBlock Margin="-12,0,0,0" Text="inscripción" />
+                    </Button>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ElServicio">
+                        <TextBlock Margin="-12,0,0,0" Text="el servicio" />
+                    </Button>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Estaciones">
+                        <TextBlock Margin="-12,0,0,0" Text="estaciones" />
+                    </Button>
+
+                    <Grid Margin="0,70,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
+                        <mobfox:AdControl Name="mobFoxadControl" PublisherID="ff027dfcab1755a4fdd9c25016f3fb62" TestMode="True" VerticalAlignment="Top" />
+                    </Grid>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+                <ScrollViewer>
+                    <StackPanel>
+                        <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
+                            <Paragraph>
+                                Guía Trasporte BA te ayuda a moverte por el Área Metropolitana de Buenos Aires (AMBA = CABA + GBA)
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                Encuentra información sobre los principales medios de transporte:
+                            </Paragraph>
+                            <Paragraph>
+                            </Paragraph>
+                            <Paragraph>
+                                • Subtes: líneas y estaciones, horarios, precios, mapa de la red, estado del servicio.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                • Trenes: estado de servicio, y mapa de recorridos y ramales.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                • Colectivos: información de líneas y recorridos de AMBA, encuentra los que tienes cerca.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                • SUBE: información del servicio, dónde comprar y cargar tu tarjeta.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                • Bicicletas: información del sistema y servicio, como inscribirte, ubicación e información de disponibilidad en estaciones.
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph>
+                                • Taxis: información del servicio, precios, dónde reclamar.
+                            </Paragraph>
+                        </RichTextBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+                <ScrollViewer>
+                    <StackPanel Margin="12,0,0,0">
+                        <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
+                        <TextBlock TextWrapping="Wrap">
+                            Desarrollado por BTB Solutions
+						    <LineBreak /><LineBreak />
+                            Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, encuentra la ruta al punto mas cercano. Información de colectivos, trenes, subte, estado del transito, y aviones.
+                            <LineBreak /><LineBreak /><LineBreak />
+                            La aplicación no almacena ningún tipo de información personal, ubicación, identificación de la red, ni del equipo. Solamente utiliza Internet para obtener información solicitada.
+                        </TextBlock>
+                        <HyperlinkButton Content="VERSIÓN COMPLETA GRATIS" Click="FullApp_OnClick"></HyperlinkButton>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar x:Name="applicationBar"
+							  IsVisible="True"
+                              Mode="Minimized"
+							  IsMenuEnabled="True"
+							  Opacity="0.7">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="danos tus comentarios" Click="RateReview_Click"/>
+                <shell:ApplicationBarMenuItem Text="versión completa gratis" Click="FullApp_OnClick"/>
+                <shell:ApplicationBarMenuItem Text="acerca de" Click="Acerca_Click"/>
+                <shell:ApplicationBarMenuItem Text="opciones" Click="Opciones_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>

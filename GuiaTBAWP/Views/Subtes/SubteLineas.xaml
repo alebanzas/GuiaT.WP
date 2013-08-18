@@ -22,7 +22,7 @@
         </Grid.Background>
 
         <!--Pivot Control-->
-        <controls:Pivot Title="RED DE SUBTES">
+        <controls:Pivot Title="RED DE SUBTE">
 
             <controls:PivotItem Header="línea A">
                 <ScrollViewer>

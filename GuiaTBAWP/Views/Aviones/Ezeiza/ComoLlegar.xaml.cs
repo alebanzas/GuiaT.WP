@@ -8,7 +8,7 @@ using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Controls.Maps.Core;
 using Microsoft.Phone.Tasks;
 
-namespace GuiaTBAWP.Views.Aviones.Aeroparque
+namespace GuiaTBAWP.Views.Aviones.Ezeiza
 {
     public partial class ComoLlegar : PhoneApplicationPage
     {
@@ -16,7 +16,7 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
         {
             InitializeComponent();
 
-            var posicion = new GeoCoordinate(-34.5584560886206, -58.4167098999023);
+            var posicion = new GeoCoordinate(-34.812393945083, -58.5363578796387);
             var pushpin = new Pushpin
             {
                 Location = posicion,
@@ -50,7 +50,7 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
 
         private void Phone_OnClick(object sender, RoutedEventArgs e)
         {
-            var task = new PhoneCallTask { PhoneNumber = "+54 11 5480 6111" };
+            var task = new PhoneCallTask { PhoneNumber = "+54 11 5480 2500" };
             task.Show();
         }
 
@@ -64,8 +64,8 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
             var bingMapsDirectionsTask = new BingMapsDirectionsTask
             {
                 End =
-                    new LabeledMapLocation("Aeroparque Internacional \"Jorge Newbery\"",
-                        new GeoCoordinate(-34.5584560886206, -58.4167098999023))
+                    new LabeledMapLocation("Aeropuerto Internacional de Ezeiza \"Ministro Pistarini\"",
+                        new GeoCoordinate(-34.812393945083, -58.5363578796387))
             };
             bingMapsDirectionsTask.Show();
         }

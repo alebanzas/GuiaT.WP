@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RED DE SUBTES" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="RED DE SUBTE" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="estado actual" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
             <Grid Margin="12,0,0,0">
                 <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="0,0,0,0">

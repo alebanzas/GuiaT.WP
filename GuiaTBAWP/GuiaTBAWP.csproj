@@ -100,6 +100,15 @@
     <Compile Include="Views\Aviones\Aeroparque\ComoLlegar.xaml.cs">
       <DependentUpon>ComoLlegar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Aviones\Aeroparque\InfoTecnica.xaml.cs">
+      <DependentUpon>InfoTecnica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Ezeiza\ComoLlegar.xaml.cs">
+      <DependentUpon>ComoLlegar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Ezeiza\InfoTecnica.xaml.cs">
+      <DependentUpon>InfoTecnica.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Aviones\Estado.xaml.cs">
       <DependentUpon>Estado.xaml</DependentUpon>
     </Compile>
@@ -250,6 +259,18 @@
     <Page Include="Views\Aviones\Aeroparque\ComoLlegar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Aviones\Aeroparque\InfoTecnica.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Ezeiza\ComoLlegar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Ezeiza\InfoTecnica.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Aviones\Estado.xaml">
       <Generator>MSBuild:Compile</Generator>

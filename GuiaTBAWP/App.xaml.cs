@@ -43,7 +43,7 @@ namespace GuiaTBAWP
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
-            Configuration.SetInitialConfiguration();
+            Configuration.SetInitialConfiguration(AppName, AppVersion);
 
             PositionService.Initialize();
             ProgressBar.Initialize();
@@ -54,7 +54,7 @@ namespace GuiaTBAWP
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
-            Configuration.SetInitialConfiguration();
+            Configuration.SetInitialConfiguration(AppName, AppVersion);
 
             PositionService.Initialize();
             ProgressBar.Initialize();

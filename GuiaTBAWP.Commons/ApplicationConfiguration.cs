@@ -23,12 +23,17 @@ namespace GuiaTBAWP
         {
             //obelisco de buenos aires
             return new GeoPosition<GeoCoordinate>(DateTimeOffset.UtcNow, new GeoCoordinate(-34.603722, -58.381594));
-        } 
+        }
 
-        public void SetInitialConfiguration()
+        public void SetInitialConfiguration(string name, string version)
         {
+            OpenCount++;
+            Name = name;
+            Version = version;
+
             if (IsInitialized) return;
-            
+
+            OpenCount = 1;
             Ubicacion = SetUbicacionDefault();
             InstallationId = Guid.NewGuid();
             IsLocationEnabledByPhone = true;
@@ -105,5 +110,7 @@ namespace GuiaTBAWP
         }
 
         public string Name { get; private set; }
+
+        public int OpenCount { get; set; }
     }
 }

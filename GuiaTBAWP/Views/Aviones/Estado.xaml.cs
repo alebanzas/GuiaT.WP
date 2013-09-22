@@ -100,14 +100,27 @@ namespace GuiaTBAWP.Views.Aviones
         {
             try
             {
-                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var httpRequest = (HttpWebRequest) result.AsyncState;
                 var response = httpRequest.EndGetResponse(result);
                 var stream = response.GetResponseStream();
 
-                var serializer = new DataContractJsonSerializer(typeof(AvionesTerminalStatusModel));
-                var o = (AvionesTerminalStatusModel)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof (AvionesTerminalStatusModel));
+                var o = (AvionesTerminalStatusModel) serializer.ReadObject(stream);
 
                 Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
+            }
+            catch (WebException ex)
+            {
+                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
+
+                Dispatcher.BeginInvoke(() =>
+                {
+                    ResetUI();
+#if DEBUG
+                        MessageBox.Show(ex.ToString());
+#endif
+                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
+                });
             }
             catch (Exception ex)
             {

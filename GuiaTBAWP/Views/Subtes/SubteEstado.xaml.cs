@@ -88,10 +88,29 @@ namespace GuiaTBAWP.Views.Subtes
 
                 Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
             }
-            catch (Exception)
+            catch (WebException ex)
             {
-                ResetUI();
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
+                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
+
+                Dispatcher.BeginInvoke(() =>
+                {
+                    ResetUI();
+#if DEBUG
+                        MessageBox.Show(ex.ToString());
+#endif
+                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
+                });
+            }
+            catch (Exception ex)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    ResetUI();
+#if DEBUG
+                        MessageBox.Show(ex.ToString());
+#endif
+                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
+                });
             }
         }
 

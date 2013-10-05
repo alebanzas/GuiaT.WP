@@ -40,7 +40,7 @@
                     </Button>
 
                     <Grid Margin="0,0,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
-                        <mobfox:AdControl Name="mobFoxadControl" PublisherID="9aac74c058460fe269c76baa216dc96d" TestMode="True" VerticalAlignment="Top" />
+                        <mobfox:AdControl Name="mobFoxadControl" PublisherID="9aac74c058460fe269c76baa216dc96d" TestMode="False" VerticalAlignment="Top" />
                     </Grid>
                 </StackPanel>
             </controls:PanoramaItem>

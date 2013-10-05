@@ -11,6 +11,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             InitializeComponent();
             MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
             MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
+
+            StatusChecker.Check("HomeBicicletas");
         }
 
         private void Button_Click_ElSistema(object sender, RoutedEventArgs e)

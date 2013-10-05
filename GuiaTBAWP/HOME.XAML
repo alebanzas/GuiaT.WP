@@ -203,7 +203,7 @@
                             <LineBreak /><LineBreak />
                             Próximamente: 
                             <LineBreak />
-                            Frecuencias y horarios del servicio de trenes.
+                            Frecuencias y horarios de todas las líneas de trenes.
                             <LineBreak />
                             Armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                             <LineBreak />
@@ -211,7 +211,9 @@
                             <LineBreak /><LineBreak />
                             1.6 (próximamente): Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
-                            1.5 (actual): Información completa sobre transporte aereo, arribos y partidas en tiempo real.
+                            1.5.1 (actual): Mapa de ciclovias, inauguración de estaciones San José de Flores y San Pedrito de Línea A, frecuencia y horarios ferrocarril Sarmiento.
+                            <LineBreak /><LineBreak />
+                            1.5 (25-09-2013): Información completa sobre transporte aereo, arribos y partidas en tiempo real.
                             <LineBreak /><LineBreak />
                             1.4.2 (07-08-2013): Actualización de precios del servicio de taxis.
                             <LineBreak /><LineBreak />

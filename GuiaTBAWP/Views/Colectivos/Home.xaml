@@ -45,9 +45,9 @@
                 <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
                     Próximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                 </TextBlock>
-                
+
                 <Grid Margin="10,210,0,0" HorizontalAlignment="Left" Grid.Row="1">
-                    <mobfox:AdControl Name="mobFoxadControl" PublisherID="5e96acfbe5d7e4b856ec3a22c975aa63" TestMode="False" VerticalAlignment="Top" />
+                    <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
                 </Grid>
             </StackPanel>
         </Grid>

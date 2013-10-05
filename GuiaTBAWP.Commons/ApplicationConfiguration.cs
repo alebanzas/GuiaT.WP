@@ -112,5 +112,19 @@ namespace GuiaTBAWP
         public string Name { get; private set; }
 
         public int OpenCount { get; set; }
+
+        public string MobFoxID = "5e96acfbe5d7e4b856ec3a22c975aa63";
+
+        public bool MobFoxInTestMode
+        {
+            get
+            {
+#if DEBUG
+                return true;
+#endif
+                return false;
+            }
+        }
+
     }
 }

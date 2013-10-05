@@ -9,6 +9,8 @@ namespace GuiaTBAWP.Views.Colectivos
         public Home()
         {
             InitializeComponent();
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
         }
 
         private void Button_Click_Colectivos(object sender, RoutedEventArgs e)

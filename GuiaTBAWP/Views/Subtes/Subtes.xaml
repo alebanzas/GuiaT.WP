@@ -6,7 +6,6 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -50,7 +49,7 @@
                 </Button>
                 
                 <Grid Margin="10,140,0,0" HorizontalAlignment="Left" Grid.Row="1">
-                    <mobfox:AdControl Name="mobFoxadControl" PublisherID="5e96acfbe5d7e4b856ec3a22c975aa63" TestMode="False" VerticalAlignment="Top" />
+                    <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
                 </Grid>
             </StackPanel>
         </Grid>

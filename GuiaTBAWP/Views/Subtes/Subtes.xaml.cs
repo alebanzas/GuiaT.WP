@@ -9,6 +9,8 @@ namespace GuiaTBAWP.Views.Subtes
         public Subtes()
         {
             InitializeComponent();
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
         }
         
         private void Button_Click_SubteLineas(object sender, RoutedEventArgs e)

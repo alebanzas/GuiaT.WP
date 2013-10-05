@@ -47,7 +47,7 @@
                         </Button>
 
                         <Grid Margin="0,0,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
-                            <mobfox:AdControl Name="mobFoxadControl" PublisherID="ef138b164b415c6be9b8c5cfe38fbe29" TestMode="True" VerticalAlignment="Top" />
+                            <mobfox:AdControl Name="mobFoxadControl" PublisherID="ef138b164b415c6be9b8c5cfe38fbe29" TestMode="False" VerticalAlignment="Top" />
                         </Grid>
                     </StackPanel>
                 </ScrollViewer>

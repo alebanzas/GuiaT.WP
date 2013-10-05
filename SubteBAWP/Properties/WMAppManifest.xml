@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{e8e40f26-b899-49c7-8c8f-122e44b4a606}" Title="Subte Buenos Aires" RuntimeType="Silverlight" Version="1.5.0.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de subte de la Ciudad de Buenos Aires." Publisher="BTB Solutions">
+  <App xmlns="" ProductID="{e8e40f26-b899-49c7-8c8f-122e44b4a606}" Title="Subte Buenos Aires" RuntimeType="Silverlight" Version="1.5.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de subte de la Ciudad de Buenos Aires." Publisher="BTB Solutions">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_LOCATION" />

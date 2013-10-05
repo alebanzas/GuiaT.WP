@@ -35,8 +35,11 @@
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Estaciones">
                         <TextBlock Margin="-12,0,0,0" Text="estaciones" />
                     </Button>
+                    <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mapa">
+                        <TextBlock Margin="-12,0,0,0" Text="mapa" />
+                    </Button-->
 
-                    <Grid Margin="0,70,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
+                    <Grid Margin="0,80,0,0" Width="450" Height="70" HorizontalAlignment="Left" Grid.Row="1">
                         <mobfox:AdControl Name="mobFoxadControl" PublisherID="ff027dfcab1755a4fdd9c25016f3fb62" TestMode="False" VerticalAlignment="Top" />
                     </Grid>
                 </StackPanel>

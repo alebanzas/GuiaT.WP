@@ -9,6 +9,10 @@ namespace GuiaTBAWP.Views.Aviones
         public Home()
         {
             InitializeComponent();
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
+
+            StatusChecker.Check("HomeAviones");
         }
 
         //AEROPARQUE

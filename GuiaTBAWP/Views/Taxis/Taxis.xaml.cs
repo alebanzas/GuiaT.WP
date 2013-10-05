@@ -9,6 +9,8 @@ namespace GuiaTBAWP.Views.Taxis
         public Taxis()
         {
             InitializeComponent();
+
+            StatusChecker.Check("Taxis");
         }
 
         private void TurTel_OnClick(object sender, RoutedEventArgs e)

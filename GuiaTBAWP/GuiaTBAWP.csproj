@@ -93,6 +93,7 @@
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
     <Compile Include="PositionService.cs" />
+    <Compile Include="StatusChecker.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
     </Compile>

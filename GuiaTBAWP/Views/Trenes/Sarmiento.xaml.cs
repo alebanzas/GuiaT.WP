@@ -14,6 +14,8 @@ namespace GuiaTBAWP.Views.Trenes
         
             DataContext = ViewModel;
             Loaded += Page_Loaded;
+            
+            StatusChecker.Check("Sarmiento");
         }
 
         private static TrenLineaItemViewModel _viewModel = new TrenLineaItemViewModel();

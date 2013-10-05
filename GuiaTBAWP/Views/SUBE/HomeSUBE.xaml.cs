@@ -9,6 +9,8 @@ namespace GuiaTBAWP.Views.SUBE
         public HomeSUBE()
         {
             InitializeComponent();
+
+            StatusChecker.Check("HomeSUBE");
         }
 
         private void Button_Click_Carga(object sender, RoutedEventArgs e)

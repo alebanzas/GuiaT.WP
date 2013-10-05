@@ -9,6 +9,8 @@ namespace GuiaTBAWP.Views.Bicicletas
         public Bicicletas()
         {
             InitializeComponent();
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
         }
 
         private void Button_Click_ElSistema(object sender, RoutedEventArgs e)

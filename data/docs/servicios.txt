@@ -107,6 +107,10 @@ http://servicio.abhosting.com.ar/transporte/PorId/0cb6c6a3-d710-4865-9708-e7af25
 http://servicio.abhosting.com.ar/sube/ventanear/?lat=-34.593778&lon=-58.403379
 
 
+TIEMPO DE TRENES (SARMIENTO, MITRE, ROCA)
+http://trenes.mininterior.gov.ar/apps/api_tiempos_temp.php?ramal=1
+
+
 
 
 R#

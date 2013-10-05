@@ -21,7 +21,7 @@ namespace TrenesBAWP
     public partial class App : Application
     {
         private const string AppName = "TrenesBAWP";
-        private const string AppVersion = "1.5.0.0";
+        private const string AppVersion = "1.5.1.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

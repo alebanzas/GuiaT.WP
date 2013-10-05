@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{3D9661C5-760B-4995-BB11-62AF59408DA0}" Title="Trenes Buenos Aires" RuntimeType="Silverlight" Version="1.5.0.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de trenes de la Ciudad de Buenos Aires." Publisher="BTB Solutions">
+  <App xmlns="" ProductID="{3D9661C5-760B-4995-BB11-62AF59408DA0}" Title="Trenes Buenos Aires" RuntimeType="Silverlight" Version="1.5.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de trenes de la Ciudad de Buenos Aires." Publisher="BTB Solutions">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_LOCATION" />

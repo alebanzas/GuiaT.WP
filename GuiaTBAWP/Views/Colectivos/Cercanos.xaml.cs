@@ -87,14 +87,41 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
         {
-            var httpRequest = (HttpWebRequest)result.AsyncState;
-            var response = httpRequest.EndGetResponse(result);
-            var stream = response.GetResponseStream();
+            try
+            {
+                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var response = httpRequest.EndGetResponse(result);
+                var stream = response.GetResponseStream();
 
-            var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
-            var o = (List<TransporteModel>)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
+                var o = (List<TransporteModel>)serializer.ReadObject(stream);
 
-            Dispatcher.BeginInvoke(new DelegateUpdateList(UpdateList), o);
+                Dispatcher.BeginInvoke(new DelegateUpdateList(UpdateList), o);
+            }
+            catch (WebException ex)
+            {
+                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
+
+                Dispatcher.BeginInvoke(() =>
+                {
+                    ResetUI();
+#if DEBUG
+                        MessageBox.Show(ex.ToString());
+#endif
+                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
+                });
+            }
+            catch (Exception ex)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    ResetUI();
+#if DEBUG
+                        MessageBox.Show(ex.ToString());
+#endif
+                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
+                });
+            }
         }
 
         delegate void DelegateUpdateList(List<TransporteModel> local);

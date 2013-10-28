@@ -86,7 +86,8 @@
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     GroupItemTemplate="{StaticResource groupItemHeader}"
-                    ItemTemplate="{StaticResource BusItemTemplate}">
+                    ItemTemplate="{StaticResource BusItemTemplate}"
+                    SelectionChanged="Buses_OnSelectionChanged">
                 </toolkit:LongListSelector>
             </controls:PivotItem>
 
@@ -95,7 +96,8 @@
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     GroupItemTemplate="{StaticResource groupItemHeader}"
-                    ItemTemplate="{StaticResource BusItemTemplate}">
+                    ItemTemplate="{StaticResource BusItemTemplate}"
+                    SelectionChanged="Buses_OnSelectionChanged">
                 </toolkit:LongListSelector>
             </controls:PivotItem>
 
@@ -104,7 +106,8 @@
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     GroupItemTemplate="{StaticResource groupItemHeader}"
-                    ItemTemplate="{StaticResource BusItemTemplate}">
+                    ItemTemplate="{StaticResource BusItemTemplate}"
+                    SelectionChanged="Buses_OnSelectionChanged">
                 </toolkit:LongListSelector>
             </controls:PivotItem>
         </controls:Pivot>

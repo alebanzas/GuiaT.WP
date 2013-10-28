@@ -71,16 +71,16 @@ namespace GuiaTBAWP.Views.Colectivos
 
             if (!App.Configuration.IsLocationEnabled)
             {
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar colectivos cercanos, por favor, active la función de localización en la configuración de la aplicación."));
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar recorrido de colectivos, por favor, active la función de localización en la configuración de la aplicación."));
                 return;
             }
             if (currentLocation == null)
             {
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar colectivos cercanos, por favor, active la función de localización."));
+                Dispatcher.BeginInvoke(() => MessageBox.Show("Para buscar recorrido de colectivos, por favor, active la función de localización."));
                 return;
             }
             
-            ProgressBar.Show(string.Format("Obteniendo recorrido linea {0}...", Linea));
+            ProgressBar.Show(string.Format("Obteniendo recorrido línea {0}...", Linea));
             SetApplicationBarEnabled(false);
             CancelarRequest();
 

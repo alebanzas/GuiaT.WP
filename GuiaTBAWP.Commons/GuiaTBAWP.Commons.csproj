@@ -100,8 +100,10 @@
     <Compile Include="ViewModels\ColectivoItemViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\PuntoViewModel.cs" />
     <Compile Include="ViewModels\SubteItemViewModel.cs" />
     <Compile Include="ViewModels\SubteStatusViewModel.cs" />
+    <Compile Include="ViewModels\TransporteViewModel.cs" />
     <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
     <Compile Include="ViewModels\TrenStatusViewModel.cs" />
   </ItemGroup>

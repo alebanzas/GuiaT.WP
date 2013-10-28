@@ -37,16 +37,21 @@
                     <TextBlock Margin="0" Text="recorridos" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ColectivosCercanos">
-					<TextBlock Margin="0" Text="cercanos (beta)" />
+                    <TextBlock Margin="0" Text="cercanos" />
                 </Button>
-                <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
-                    Esta beta nos ayudará a trabajar en una nueva versión final.
-                </TextBlock>
+                <TextBlock Margin="24,20,0,0">Buscador:</TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="14,0">
+                    <toolkit:AutoCompleteBox x:Name="AcBox" Height="80" Width="320" Tap="AcBox_OnGotFocus" KeyUp="AcBox_OnKeyUp"/>
+                    <Button x:Name="BtnBuscar" Click="ButtonBuscar_OnClick">Buscar</Button>
+                </StackPanel>
+                <StackPanel Margin="24,20,0,0" Height="30">
+                    <TextBlock x:Name="NoResults" Visibility="Collapsed" Foreground="Yellow">No hay resultados.</TextBlock>
+                </StackPanel>
                 <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
                     Próximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                 </TextBlock>
 
-                <Grid Margin="10,210,0,0" HorizontalAlignment="Left" Grid.Row="1">
+                <Grid Margin="10,100,0,0" HorizontalAlignment="Left" Grid.Row="1">
                     <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
                 </Grid>
             </StackPanel>

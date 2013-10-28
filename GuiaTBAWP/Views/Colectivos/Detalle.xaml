@@ -34,4 +34,18 @@
         </controls:Panorama>
     </Grid>
 
+
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar x:Name="applicationBar"
+							  IsVisible="True"
+                              Mode="Default"
+							  IsMenuEnabled="False"
+							  Opacity="0.7">
+
+            <shell:ApplicationBarIconButton Text="mapa" IconUri="/Resources/Icons/ApplicationBar/Route.png"  Click="VerEnMapa_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+
 </phone:PhoneApplicationPage>

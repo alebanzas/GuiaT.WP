@@ -43,5 +43,13 @@ namespace GuiaTBAWP.Views.Colectivos
             }
 
         }
+
+        private void VerEnMapa_Click(object sender, EventArgs e)
+        {
+            var bus = NavigationContext.QueryString["id"];
+
+            Uri uri = new Uri(String.Format("/Views/Colectivos/Mapa.xaml?linea={0}", bus), UriKind.Relative);
+            NavigationService.Navigate(uri);
+        }
     }
 }

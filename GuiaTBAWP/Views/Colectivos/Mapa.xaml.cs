@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Globalization;
-using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
@@ -12,7 +10,6 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
-using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;

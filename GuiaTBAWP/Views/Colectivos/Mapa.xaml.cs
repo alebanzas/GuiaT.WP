@@ -141,16 +141,16 @@ namespace GuiaTBAWP.Views.Colectivos
 
             foreach (var transporteViewModel in ls)
             {
-                var routeColor = Colors.Blue;
+                var routeColor = GetRandomColor();
                 var routeBrush = new SolidColorBrush(routeColor);
 
                 var routeLine = new MapPolyline
-                {
-                    Locations = new LocationCollection(),
-                    Stroke = routeBrush,
-                    Opacity = 0.65,
-                    StrokeThickness = 5.0,
-                };
+                    {
+                        Locations = new LocationCollection(),
+                        Stroke = routeBrush,
+                        Opacity = 0.65,
+                        StrokeThickness = 5.0,
+                    };
 
                 foreach (var location in transporteViewModel.Puntos)
                 {
@@ -184,7 +184,17 @@ namespace GuiaTBAWP.Views.Colectivos
 
             ResetUI();
         }
-        
+
+        private readonly Random _random = new Random();
+        private Color GetRandomColor()
+        {
+            var red = _random.Next(1, 175);
+            var green = _random.Next(1, 175);
+            var blue = _random.Next(1, 175);
+
+            return Color.FromArgb(255, (byte)red, (byte)green, (byte)blue);
+        }
+
         private void CancelarRequest()
         {
             if (_httpReq != null)

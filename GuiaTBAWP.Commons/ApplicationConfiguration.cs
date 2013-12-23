@@ -2,6 +2,9 @@
 using System.Device.Location;
 using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
+using System.Collections.Generic;
+using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Services;
 
 namespace GuiaTBAWP
 {
@@ -61,6 +64,65 @@ namespace GuiaTBAWP
             
             Config.Set(subteStatusModel);
 
+
+            //Trenes
+            var trenesStatusModel = new TrenesStatusModel();
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Belgrano Norte", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Retiro-Villa Rosa" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Villa Rosa-Retiro" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Belgrano Sur", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Buenos Aires-González Catán" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "González Catán-Buenos Aires" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "M del Crucero Gral Belgrano-Bs As" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Bs As-M del Crucero Gral Belgrano" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pte. Alsina-Aldo Bonzi" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Aldo Bonzi-Pte. Alsina" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Gral. Roca", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-Ezeiza" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Ezeiza-Pza. Constitución" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-Bosques" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Bosques-Pza. Constitución" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-Bosques/Gutiérrez" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-Claypole" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-Alejandro Korn" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Alejandro Korn-Pza. Constitución" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Temperley-Haedo" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Haedo-Temperley" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pza. Constitución-La Plata" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "La Plata-Pza. Constitución" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Gutiérrez/Bosques-Pza. Constitución" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Claypole-Pza. Constitución" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Mitre", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Bartolomé Mitre- Retiro" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Retiro-Bartolomé Mitre" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "José León Suárez-Retiro" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Retiro-José León Suárez" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Tigre-Retiro" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Retiro-Tigre" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Pto. Madero", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Castelar-Puerto Madero" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Puerto Madero-Castelar" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "San Martín", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Pilar-Retiro" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Retiro-Pilar" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Sarmiento", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Moreno-Once" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Once-Moreno" },
+            } });
+            trenesStatusModel.Lineas.Add(new LineaTrenModel { Estado = string.Empty, Nombre = "Urquiza", Ramales = new List<RamalTrenModel> {
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Federico Lacroze-Gral. Lemos" },
+                new RamalTrenModel { MasInfo = "", Estado = "obteniendo información...", Nombre = "Gral. Lemos-Federico Lacroze" },
+            } });
+            trenesStatusModel.Actualizacion = DateTime.UtcNow;
+
+            var trenService = new TrenDataService();
+            trenService.UpdateStatus(trenesStatusModel);
 
         }
 

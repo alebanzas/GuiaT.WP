@@ -193,7 +193,7 @@ namespace WebScraping
                 "194",
                 "195"
             };*/
-
+        /*
         //Update metrobus 9 de julio
         public List<string> LineasColectivo = new List<string>
             {
@@ -219,6 +219,58 @@ namespace WebScraping
                 "129",
                 "152",
                 "195"
+            };
+        */
+
+        //Nuevas provinciales y municipales
+        public List<string> LineasColectivo = new List<string>
+            {
+                "503",
+"505",
+"506",
+"508",
+"514",
+"518",
+"520",
+"521",
+"522",
+"523",
+"526",
+"527",
+"532",
+"540",
+"541",
+"542",
+"543",
+"548",
+"549",
+"550",
+"551",
+"552",
+"553",
+"561",
+"562",
+"564",
+"570",
+"580",
+"582",
+"583",
+"584",
+"585",
+"620",
+"621",
+"622",
+"624",
+"628",
+"630",
+"634",
+"635",
+"670",
+"707",
+"710",
+"720",
+"721",
+"723"
             };
 
         public List<string> LineasColectivoProv = new List<string>

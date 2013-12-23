@@ -9,6 +9,7 @@ using GuiaTBAWP.Models;
 using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using GuiaTBAWP.Commons.Services;
 
 namespace GuiaTBAWP.Views.Trenes
 {
@@ -191,46 +192,11 @@ namespace GuiaTBAWP.Views.Trenes
         {
             App.Configuration.UltimaActualizacionTrenes = model.Actualizacion;
 
-            foreach (var ltm in model.Lineas)
-            {
-                var lineaTrenModel = ltm.ConvertToTrenesLineaEstadoTable();
+            var trenService = new TrenDataService();
+            trenService.UpdateStatus(model);
 
-                if (TrenesLineaEstadoDC.Current.Lineas.Contains(lineaTrenModel))
-                {
-                    var linea = TrenesLineaEstadoDC.Current.Lineas.FirstOrDefault(x => x.Equals(lineaTrenModel));
-                    if (linea != null)
-                    {
-                        linea.Estado = lineaTrenModel.Estado;
-                    }
-                }
-                else
-                {
-                    TrenesLineaEstadoDC.Current.Lineas.InsertOnSubmit(lineaTrenModel);
-                }
-
-                foreach (var ramalTrenModel in ltm.Ramales.ConvertToTrenesRamalEstadoTable(lineaTrenModel.NickName))
-                {
-                    if (TrenesRamalEstadoDC.Current.Ramales.Contains(ramalTrenModel))
-                    {
-                        var ramal = TrenesRamalEstadoDC.Current.Ramales.FirstOrDefault(x => x.Equals(ramalTrenModel));
-                        if (ramal != null)
-                        {
-                            ramal.Estado = ramalTrenModel.Estado;
-                            ramal.MasInfo = ramalTrenModel.MasInfo;
-                        }
-                    }
-                    else
-                    {
-                        TrenesRamalEstadoDC.Current.Ramales.InsertOnSubmit(ramalTrenModel);
-                    }
-                }
-            }
-
-            TrenesLineaEstadoDC.Current.SubmitChanges();
-            TrenesRamalEstadoDC.Current.SubmitChanges();
-
-            App.Configuration.InitialDataTrenes = true;
             _datosLoaded = true;
+            App.Configuration.InitialDataTrenes = true;
 
             EndRequest();
         }

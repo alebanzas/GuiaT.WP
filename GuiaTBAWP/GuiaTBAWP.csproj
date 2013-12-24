@@ -460,6 +460,7 @@
     <Content Include="Images\Subtes\lineaH.png" />
     <Content Include="Images\Subtes\lineaP.png" />
     <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\molinete.png" />
     <Content Include="Images\Subtes\sanitarios.png" />
     <Content Include="Images\Subtes\tren.png" />
     <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />

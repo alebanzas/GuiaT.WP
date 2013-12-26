@@ -486,6 +486,7 @@
     <Content Include="Resources\Icons\ApplicationBar\appbar.new.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.stop.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.search.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\Mode.png" />

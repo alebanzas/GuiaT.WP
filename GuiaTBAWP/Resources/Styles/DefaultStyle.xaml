@@ -13,8 +13,10 @@
     <converters:LocationGeoCoordinateConverter x:Key="LocationGeoCoordinateConverter" />
     <converters:DistanceConverter x:Key="DistanceConverter" />
     <converters:SubteNombreImagenConverter x:Key="SubteNombreImagenConverter" />
+    <converters:SubteColorTituloConverter x:Key="SubteColorTituloConverter" />
     <converters:PushpinVisibilityIconConverter x:Key="PushpinVisibilityIconConverter" />
     <converters:DateTimeToLocalConverter x:Key="DateTimeToLocalConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     
     <!-- #Brushes -->
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#A52E2E2E" />

@@ -153,9 +153,7 @@ namespace GuiaTBAWP
         public bool InitialDataBicicletas { get; set; }
 
         public DateTime UltimaActualizacionTrenes { get; set; }
-
-        public bool InitialDataTrenes { get; set; }
-
+        
         private string _version;
         public string Version
         {

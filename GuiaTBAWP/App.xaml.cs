@@ -45,8 +45,11 @@ namespace GuiaTBAWP
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
 
-            PositionService.Initialize();
-            ProgressBar.Initialize();
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                PositionService.Initialize();
+                ProgressBar.Initialize();
+            });
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -56,8 +59,11 @@ namespace GuiaTBAWP
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
 
-            PositionService.Initialize();
-            ProgressBar.Initialize();
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                PositionService.Initialize();
+                ProgressBar.Initialize();
+            });
         }
 
         // Code to execute when the application is deactivated (sent to background)

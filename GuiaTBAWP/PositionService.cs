@@ -20,7 +20,7 @@ namespace GuiaTBAWP
                 }
                 else
                 {
-                    Ubicacion.TryStart(true, TimeSpan.FromSeconds(4));
+                    Ubicacion.TryStart(true, TimeSpan.FromSeconds(5));
                 }
             }
             else

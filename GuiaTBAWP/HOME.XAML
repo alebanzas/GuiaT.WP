@@ -193,7 +193,7 @@
                     <StackPanel Margin="12,0,0,0">
                         <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
                         <TextBlock TextWrapping="Wrap">
-                            Desarrollado por BTB Solutions
+                            Desarrollado por AleBanzas
 						    <LineBreak /><LineBreak />
                             Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, encuentra la ruta al punto mas cercano. Información de colectivos, trenes, subte, estado del transito, y aviones.
                             <LineBreak /><LineBreak /><LineBreak />
@@ -211,7 +211,9 @@
                             <LineBreak /><LineBreak />
                             1.7 (próximamente): Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
-                            1.6 (actual): Buscador de colectivos, y recorridos en mapa. Lista de radio taxis para llamar con un toque.
+                            1.6.1 (actual): Actualización de precios servicio de subte. Mejoras en actualización de estado de trenes.
+                            <LineBreak /><LineBreak />
+                            1.6 (28-12-2013): Buscador de colectivos, y recorridos en mapa. Lista de radio taxis para llamar con un toque.
                             <LineBreak /><LineBreak />
                             1.5.1 (20-10-2013): Actualización de tarifa de taxis.
                             <LineBreak /><LineBreak />

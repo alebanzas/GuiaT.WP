@@ -23,21 +23,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
+
+        <StackPanel x:Name="SearchPanel" Background="Black" Canvas.ZIndex="10d" Margin="0,-280,0,0" Height="80">
+            <StackPanel Orientation="Horizontal" Margin="14,0">
+                <TextBox x:Name="AcBox" Height="80" Width="320" Tap="AcBox_OnGotFocus" KeyUp="AcBox_OnKeyUp"/>
+                <Button x:Name="BtnBuscar" Click="ButtonBuscar_OnClick" Opacity="1">Buscar</Button>
+            </StackPanel>
+        </StackPanel>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="{Binding Aeroestacion}" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="{Binding Titulo}" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <Grid Margin="12,0,0,0">
-                <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="0,0,0,0">
-                    <Run Text="No hay conexión a la red."/>
-                </TextBlock>
-            </Grid>
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="12,-10,0,10" Width="432">
-            <ListBox ItemsSource="{Binding Vuelos}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
+            <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
+            <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionError">No hay conexión a la red.</TextBlock>
+            <ListBox ItemsSource="{Binding VuelosFiltrados}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -58,7 +63,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
-        <Grid Grid.Row="2" Margin="25,-10,0,10">
+        <Grid Grid.Row="2" Margin="25,-30,0,10">
             <StackPanel Margin="0">
                 <TextBlock Text="{Binding Actualizacion}"></TextBlock>
                 <TextBlock>Hora de Argentina (GMT-3)</TextBlock>
@@ -71,10 +76,12 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar x:Name="applicationBar"
 							  IsVisible="True"
-                              Mode="Minimized"
+                              Mode="Default"
 							  IsMenuEnabled="True"
 							  Opacity="0.7">
 
+            <shell:ApplicationBarIconButton Text="Buscar" IconUri="/Resources/Icons/ApplicationBar/feature.search.png"  Click="ButtonSearch_Click" />
+            
             <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

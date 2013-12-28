@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Navigation;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
@@ -18,6 +21,8 @@ namespace GuiaTBAWP.Views.Aviones
     {
         WebRequest _httpReq;
 
+        private bool _isSearching;
+
         private static AirportStatusViewModel _viewModel = new AirportStatusViewModel();
         public static AirportStatusViewModel ViewModel
         {
@@ -29,10 +34,7 @@ namespace GuiaTBAWP.Views.Aviones
             InitializeComponent();
             
             DataContext = ViewModel;
-            Loaded += (sender, args) =>
-                {
-                    LoadData();
-                };
+            Loaded += (sender, args) => LoadData();
             Unloaded += (sender, args) =>
                 {
                     if(_httpReq != null)
@@ -53,6 +55,7 @@ namespace GuiaTBAWP.Views.Aviones
             ViewModel.NickName = nickname;
             ViewModel.Tipo = tipo;
             ViewModel.Vuelos.Clear();
+            ViewModel.VuelosFiltrados.Clear();
 
             base.OnNavigatedTo(e);
         }
@@ -68,9 +71,11 @@ namespace GuiaTBAWP.Views.Aviones
             }
             
             ProgressBar.Show(string.Format("Obteniendo {0}...", ViewModel.Titulo));
-            ViewModel.Actualizacion = "Actualizando...";
+            ViewModel.Actualizacion = "Aguarde...";
+            Refreshing.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             ViewModel.Vuelos.Clear();
+            ViewModel.VuelosFiltrados.Clear();
 
             var param = new Dictionary<string, object>
                 {
@@ -84,6 +89,8 @@ namespace GuiaTBAWP.Views.Aviones
 
         private void ResetUI()
         {
+            NoResults.Visibility = Visibility.Collapsed;
+            Refreshing.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
@@ -92,6 +99,10 @@ namespace GuiaTBAWP.Views.Aviones
         void SetApplicationBarEnabled(bool isEnabled)
         {
             var applicationBarIconButton = ApplicationBar.Buttons[0] as ApplicationBarIconButton;
+            if (applicationBarIconButton != null)
+                applicationBarIconButton.IsEnabled = isEnabled;
+
+            applicationBarIconButton = ApplicationBar.Buttons[1] as ApplicationBarIconButton;
             if (applicationBarIconButton != null)
                 applicationBarIconButton.IsEnabled = isEnabled;
         }
@@ -148,13 +159,14 @@ namespace GuiaTBAWP.Views.Aviones
         private void BindViewModel(AvionesTerminalStatusModel model)
         {
             ViewModel.Vuelos.Clear();
+            ViewModel.VuelosFiltrados.Clear();
             foreach (var itemViewModel in model.Arribos.Where(x => x.Hora > DateTime.UtcNow.AddHours(-5) || !"aterrizado".Equals(x.Estado.ToLowerInvariant())))
             {
                 ViewModel.AddVuelo(new AirportStatusItemViewModel
                 {
                     Estado = GetEstadoByStatusModel(itemViewModel),
                     Nombre = itemViewModel.Nombre,
-                    Ciudad = itemViewModel.Origen.Sanitize(),
+                    Ciudad = itemViewModel.Origen.SanitizeHtml(),
                     Terminal = string.Format("terminal {0}", itemViewModel.Terminal),
                     Horario = string.Format("{0} {1}", itemViewModel.Hora.ToString("dd/MM"), itemViewModel.Hora.ToString("HH:mm")),
                     Aerolinea = itemViewModel.Linea,
@@ -166,7 +178,7 @@ namespace GuiaTBAWP.Views.Aviones
                 {
                     Estado = GetEstadoByStatusModel(itemViewModel),
                     Nombre = itemViewModel.Nombre,
-                    Ciudad = itemViewModel.Destino.Sanitize(),
+                    Ciudad = itemViewModel.Destino.SanitizeHtml(),
                     Terminal = string.Format("terminal {0}", itemViewModel.Terminal),
                     Horario = string.Format("{0} {1}", itemViewModel.Hora.ToString("dd/MM"), itemViewModel.Hora.ToString("HH:mm")),
                     Aerolinea = itemViewModel.Linea,
@@ -187,7 +199,7 @@ namespace GuiaTBAWP.Views.Aviones
                 return string.Format("estima ({0})", itemViewModel.Estima.Value.ToString("HH:mm"));
             }
 
-            return itemViewModel.Estado.Sanitize().ToLowerInvariant();
+            return itemViewModel.Estado.SanitizeHtml().ToLowerInvariant();
         }
 
         private string GetEstadoByStatusModel(VueloPartidaModel itemViewModel)
@@ -201,20 +213,54 @@ namespace GuiaTBAWP.Views.Aviones
                 return string.Format("estima ({0})", itemViewModel.Estima.Value.ToString("HH:mm"));
             }
 
-            return itemViewModel.Estado.Sanitize().ToLowerInvariant();
+            return itemViewModel.Estado.SanitizeHtml().ToLowerInvariant();
         }
 
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
         }
-    }
 
-    public static class StringExtensions
-    {
-        public static string Sanitize(this string source)
+        private void AcBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
-            return HttpUtility.HtmlDecode(source);
+            AcBox.Text = string.Empty;
+        }
+
+        private void AcBox_OnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ProcesarBusqueda(AcBox.Text);
+            }
+        }
+
+        private void ButtonBuscar_OnClick(object sender, RoutedEventArgs e)
+        {
+            ProcesarBusqueda(AcBox.Text);
+        }
+
+        private void ProcesarBusqueda(string pattern)
+        {
+            ViewModel.FiltrarVuelos(pattern);
+            NoResults.Visibility = !ViewModel.VuelosFiltrados.Any() ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            SearchPanel.Margin = new Thickness(0, -79, 0, 0);
+            AcBox.Focus();
+            _isSearching = true;
+        }
+
+        protected override void OnBackKeyPress(CancelEventArgs e)
+        {
+            if (_isSearching)
+            {
+                SearchPanel.Margin = new Thickness(0, -280, 0, 0);
+                _isSearching = false;
+                ProcesarBusqueda(null);
+                e.Cancel = true;
+            }
         }
     }
 }

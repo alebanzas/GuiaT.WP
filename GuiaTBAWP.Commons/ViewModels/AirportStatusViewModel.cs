@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using GuiaTBAWP.Commons.Extensions;
 
 namespace GuiaTBAWP.ViewModels
 {
@@ -9,6 +11,8 @@ namespace GuiaTBAWP.ViewModels
         public AirportStatusViewModel()
         {
             Vuelos = new ObservableCollection<AirportStatusItemViewModel>();
+            VuelosFiltrados = new ObservableCollection<AirportStatusItemViewModel>();
+            EmptyResults = true;
         }
 
         private string _actualizacion;
@@ -48,9 +52,24 @@ namespace GuiaTBAWP.ViewModels
         public ObservableCollection<AirportStatusItemViewModel> Vuelos
         {
             get { return _vuelos; }
-            private set { 
+            private set
+            {
                 _vuelos = value;
                 NotifyPropertyChanged("Vuelos");
+            }
+        }
+
+
+        private ObservableCollection<AirportStatusItemViewModel> _vuelosFiltrados;
+        private bool _emptyResults;
+
+        public ObservableCollection<AirportStatusItemViewModel> VuelosFiltrados
+        {
+            get { return _vuelosFiltrados; }
+            private set
+            {
+                _vuelosFiltrados = value;
+                NotifyPropertyChanged("VuelosFiltrados");
             }
         }
 
@@ -58,12 +77,32 @@ namespace GuiaTBAWP.ViewModels
 
         public string Tipo { get; set; }
 
+        public bool EmptyResults
+        {
+            get { return _emptyResults; }
+            set
+            {
+                _emptyResults = value;
+                NotifyPropertyChanged("EmptyResults");
+            }
+        }
+
         public void AddVuelo(AirportStatusItemViewModel linea)
         {
             Vuelos.Add(linea);
+            VuelosFiltrados.Add(linea);
+            EmptyResults = false;
         }
 
+        public void FiltrarVuelos(string pattern)
+        {
+            VuelosFiltrados = string.IsNullOrWhiteSpace(pattern) ? 
+                                        new ObservableCollection<AirportStatusItemViewModel>(Vuelos.ToList()) :
+                                        new ObservableCollection<AirportStatusItemViewModel>(Vuelos.Where(x => x.Ciudad.Sanitize().Contains(pattern.Sanitize())).ToList());
 
+            EmptyResults = !VuelosFiltrados.Any();
+        }
+        
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
         {

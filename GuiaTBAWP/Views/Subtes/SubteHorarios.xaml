@@ -31,7 +31,7 @@
                             <TextBlock Style="{StaticResource PhoneTextLargeStyle}">viaje completo</TextBlock>
                         </StackPanel>
 						<StackPanel>
-							<TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextExtraLargeStyle}">23 min</TextBlock>
+							<TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextExtraLargeStyle}">26 min</TextBlock>
 						</StackPanel>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal" Height="90">
@@ -48,7 +48,7 @@
 					<StackPanel Orientation="Horizontal" Height="90">
                         <StackPanel Width="290">
                             <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Primer tren</TextBlock>
-                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Carabobo</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde San Pedrito</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
@@ -70,7 +70,7 @@
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
                             <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
-                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Carabobo</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde San Pedrito</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:28</TextBlock>

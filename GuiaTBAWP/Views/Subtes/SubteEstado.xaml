@@ -46,7 +46,7 @@
                         <StackPanel Margin="0,0,0,0" Width="432">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding Nombre, Converter={StaticResource SubteNombreImagenConverter}}"></Image>
-                                <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                <TextBlock Foreground="{Binding Detalles, Converter={StaticResource SubteColorTituloConverter}}" Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                             </StackPanel>
                             <TextBlock Margin="65,5,5,5" Text="{Binding Detalles}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}"/>
                         </StackPanel>

@@ -66,6 +66,7 @@
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
     <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\TouchBehavior.cs" />
     <Compile Include="Helpers\TouchBehaviorEventArgs.cs" />

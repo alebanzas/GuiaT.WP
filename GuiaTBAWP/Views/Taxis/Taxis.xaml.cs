@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Taxis
 {
@@ -13,18 +13,14 @@ namespace GuiaTBAWP.Views.Taxis
             StatusChecker.Check("Taxis");
         }
 
-        private void TurTel_OnClick(object sender, RoutedEventArgs e)
+        private void Button_Click_Tarifas(object sender, RoutedEventArgs e)
         {
-            var task = new PhoneCallTask();
-            task.PhoneNumber = "0800-999-2838";
-            task.Show();
+            NavigationService.Navigate(new Uri("/Views/Taxis/Tarifas.xaml", UriKind.Relative));
         }
 
-        private void GCBATel_OnClick(object sender, RoutedEventArgs e)
+        private void Button_Click_RadioTaxis(object sender, RoutedEventArgs e)
         {
-            var task = new PhoneCallTask();
-            task.PhoneNumber = "147";
-            task.Show();
+            NavigationService.Navigate(new Uri("/Views/Taxis/RadioTaxis.xaml", UriKind.Relative));
         }
     }
 }

@@ -93,6 +93,7 @@
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
     <Compile Include="PositionService.cs" />
+    <Compile Include="Services\TrenStatusService.cs" />
     <Compile Include="StatusChecker.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
       <DependentUpon>Acerca.xaml</DependentUpon>
@@ -178,6 +179,9 @@
     <Compile Include="Views\Subtes\Subtes.xaml.cs">
       <DependentUpon>Subtes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Taxis\Tarifas.xaml.cs">
+      <DependentUpon>Tarifas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Taxis\Taxis.xaml.cs">
       <DependentUpon>Taxis.xaml</DependentUpon>
     </Compile>
@@ -216,7 +220,6 @@
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Trenes\TrenStatusService.cs" />
     <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>
@@ -364,6 +367,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Subtes\Subtes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\Tarifas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

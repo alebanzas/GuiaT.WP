@@ -25,8 +25,9 @@
 
             <controls:PanoramaItem Header="estado">
                 <StackPanel>
+                    <TextBlock Margin="12,-30,0,0" Text="{Binding Actualizacion}" />
                     <Grid>
-                        <ListBox Height="520" ItemsSource="{Binding Ramales}" Margin="0,0,0,10" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <ListBox Height="500" ItemsSource="{Binding Ramales}" Margin="0,0,0,10" ScrollViewer.VerticalScrollBarVisibility="Visible">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0,0,0,20" Width="432">
@@ -38,7 +39,6 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </Grid>
-                    <TextBlock Margin="12,0,0,0" Text="{Binding Actualizacion}" />
                 </StackPanel>
             </controls:PanoramaItem>
 
@@ -678,4 +678,15 @@
         </controls:Panorama>
     </Grid>
 
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True"
+                              Mode="Default"
+							  IsMenuEnabled="True"
+							  Opacity="0.7">
+
+            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
 </phone:PhoneApplicationPage>

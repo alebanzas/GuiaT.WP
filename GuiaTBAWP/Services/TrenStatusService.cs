@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Windows;
-using System.Windows.Threading;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
-using Microsoft.Phone.Shell;
 
-namespace GuiaTBAWP.Views.Trenes
+namespace GuiaTBAWP.Services
 {
     public class TrenStatusService
     {
-        public bool DatosLoaded { get; set; }
+        private bool _datosLoaded;
+        public bool DatosLoaded
+        {
+            get { return _datosLoaded || App.Configuration.UltimaActualizacionTrenes > DateTime.UtcNow.AddMinutes(-5).ToLocalTime(); }
+            set { _datosLoaded = value; }
+        }
 
         public WebRequest Request { get; set; }
 

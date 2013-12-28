@@ -53,20 +53,11 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Urquiza">
                     <TextBlock Margin="0" Text="urquiza" />
                 </Button>
+                <!--Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mapa">
+                    <TextBlock Margin="0" Text="mapa de la red" />
+                </Button-->
             </StackPanel>
         </Grid>
     </Grid>
-
-    <!-- Application Bar -->
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar x:Name="applicationBar"
-							  IsVisible="True"
-                              Mode="Minimized"
-							  IsMenuEnabled="True"
-							  Opacity="0.7">
-
-            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
-
+    
 </phone:PhoneApplicationPage>

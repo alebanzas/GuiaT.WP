@@ -216,6 +216,7 @@
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Trenes\TrenStatusService.cs" />
     <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>

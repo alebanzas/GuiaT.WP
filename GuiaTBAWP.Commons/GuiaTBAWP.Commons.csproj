@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationConfiguration.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\SubteColorTituloConverter.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="Converters\DistanceConverter.cs" />
     <Compile Include="Converters\ItineraryTextConverter.cs" />

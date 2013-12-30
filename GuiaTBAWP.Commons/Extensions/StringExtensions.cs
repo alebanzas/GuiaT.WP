@@ -1,29 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using GuiaTBAWP.Commons.Helpers;
 
 namespace GuiaTBAWP.Commons.Extensions
 {
     public static class StringExtensions
     {
-        //TODO: implement
-        private class HashSet<T>
-        {
-            public void Add(RegexReplacement regexReplacement)
-            {
-                throw new NotImplementedException();
-            }
-
-            public string Aggregate(string word, Func<object, object, object> func)
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public static string SanitizeHtml(this string source)
         {
             return HttpUtility.HtmlDecode(source);
@@ -114,10 +99,15 @@ namespace GuiaTBAWP.Commons.Extensions
 
 		public static string Unaccent(this string word)
 		{
-		    //TODO: implement
-            return word;
-		    //return UnaccentRules.Aggregate(word, (current, rule) => rule.Regex.Replace(current, rule.Replacement));
+		    return UnaccentRules.Aggregate(word, (current, rule) => rule.Regex.Replace(current, rule.Replacement));
 		}
+
+        public static string ToSearchTerm(this string searchWord)
+        {
+            searchWord = searchWord.Trim();
+            searchWord = UrlCleanRegEx.Replace(searchWord, "");
+            return Dasherize(Unaccent(searchWord)).ToLowerInvariant();
+        }
 
 		/// <summary>
 		/// Quita todos los caracteres invalidos de un string para usarlo en una URL

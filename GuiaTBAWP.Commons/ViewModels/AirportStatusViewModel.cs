@@ -98,7 +98,7 @@ namespace GuiaTBAWP.ViewModels
         {
             VuelosFiltrados = string.IsNullOrWhiteSpace(pattern) ? 
                                         new ObservableCollection<AirportStatusItemViewModel>(Vuelos.ToList()) :
-                                        new ObservableCollection<AirportStatusItemViewModel>(Vuelos.Where(x => x.Ciudad.Sanitize().Contains(pattern.Sanitize())).ToList());
+                                        new ObservableCollection<AirportStatusItemViewModel>(Vuelos.Where(x => x.Ciudad.ToSearchTerm().Contains(pattern.ToSearchTerm())).ToList());
 
             EmptyResults = !VuelosFiltrados.Any();
         }

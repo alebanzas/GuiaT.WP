@@ -86,9 +86,8 @@ namespace GuiaTBAWP.Views.Colectivos
 
             var param = new Dictionary<string, object>
                 {
-                    //TODO: API con otros parametros
-                    //{"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    //{"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                     {"linea", Linea},
                     {"puntos", true},
                 };

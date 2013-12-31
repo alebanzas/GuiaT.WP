@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Globalization;
+using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -83,15 +86,17 @@ namespace GuiaTBAWP.Views.Colectivos
 
             var param = new Dictionary<string, object>
                 {
-                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    //TODO: API con otros parametros
+                    //{"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
+                    //{"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                     {"linea", Linea},
                     {"puntos", true},
                 };
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/transporte/PorLinea".ToApiCallUri(param));
-            _httpReq.Method = "GET";
-            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
+            var client = new HttpClient { HTTPWebRequestCallBack = HTTPWebRequestCallBack };
+            var request = client.Get("/api/transporte".ToApiCallUri(param));
+
+            request.BeginGetResponse(HTTPWebRequestCallBack, request);
         }
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
@@ -243,6 +248,88 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
+
+    }
+
+    internal class HttpClient
+    {
+        public AsyncCallback HTTPWebRequestCallBack { get; set; }
+
+        private string appKey = "8463adb194f44436a046ac36229f1571";
+        private string appSecret = "6855502326fe42f2b8ff63a9cbba52c8";
+
+        public HttpWebRequest Get(Uri requestUrl)
+        {
+            return SendRequestGetResponse(requestUrl);
+        }
+
+        private HttpWebRequest SendRequestGetResponse(Uri requestUrl)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(requestUrl);
+
+            request.Method = "GET";
+            //request.ContentType = "application/json";
+            //http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1
+            request.Headers["X-ABS-Date"] = DateTime.UtcNow.ToUniversalTime().ToString("r", CultureInfo.InvariantCulture);
+            
+            var signature = GetSignature(appSecret, request);
+            request.Headers[HttpRequestHeader.Authorization] = string.Format("{0} {1}", "ABS-H", string.Format("{0}:{1}", appKey, signature));
+
+            return request;
+        }
+
+        private string GetSignature(string secret, HttpWebRequest request)
+        {
+            string canonicalizedMessage = string.Join("\n", GetCanonicalParts(request));
+            if (string.IsNullOrEmpty(secret) || string.IsNullOrEmpty(canonicalizedMessage))
+            {
+                return "";
+            }
+            byte[] secretBytes = Encoding.UTF8.GetBytes(secret);
+            byte[] valueBytes = Encoding.UTF8.GetBytes(canonicalizedMessage);
+            string signature;
+
+            using (var hmac = new HMACSHA256(secretBytes))
+            {
+                byte[] hash = hmac.ComputeHash(valueBytes);
+                signature = Convert.ToBase64String(hash);
+            }
+            return signature;
+        }
+
+        private string[] GetCanonicalParts(HttpWebRequest request)
+        {
+            var result = new List<string>
+                {
+                    request.Method
+                };
+
+            var httpRequestHeaders = request.Headers;
+            result.Add(httpRequestHeaders[HttpRequestHeader.ContentMd5]);
+            result.Add(httpRequestHeaders[HttpRequestHeader.ContentType] ?? string.Empty);
+            result.Add(httpRequestHeaders[HttpRequestHeader.Date] ?? string.Empty);
+
+            foreach (var key in httpRequestHeaders.AllKeys)
+            {
+                if (!key.StartsWith("X-ABS", StringComparison.InvariantCultureIgnoreCase))
+                    continue;
+                result.Add(string.Format("{0}:{1}", key.ToLowerInvariant().Trim(), httpRequestHeaders[key]));
+            }
+
+            result.Add(request.RequestUri.LocalPath + request.RequestUri.Query);
+
+            return result.ToArray();
+        }
+
+        //public string ContentMd5HashForHeader(string input)
+        //{
+        //    // http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.15
+        //    MD5 md5 = MD5.Create();
+        //    byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+        //    byte[] hashBytes = md5.ComputeHash(inputBytes);
+        //
+        //    return Convert.ToBase64String(hashBytes);
+        //}
 
     }
 }

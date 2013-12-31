@@ -28,8 +28,9 @@ namespace GuiaTBAWP.Extensions
                     var currentPosition = PositionService.GetCurrentLocation();
                     if (currentPosition != null)
                     {
-                        param += "&lat=" + currentPosition.Location.Latitude;
-                        param += "&lon=" + currentPosition.Location.Longitude;
+                        //TODO: API con otros parametros
+                        //param += "&lat=" + currentPosition.Location.Latitude;
+                        //param += "&lon=" + currentPosition.Location.Longitude;
                     }
                 }
             }

@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
+using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
@@ -61,6 +62,14 @@ namespace GuiaTBAWP.Views.Colectivos
         void GetColectivo()
         {
             ResetUI();
+
+            //Esta en file system
+            if (Config.Get<List<TransporteViewModel>>("linea-" + Linea) != null)
+            {
+                UpdateList(Config.Get<List<TransporteViewModel>>("linea-" + Linea));
+                return;
+            }
+
             if (!NetworkInterface.GetIsNetworkAvailable())
             {
                 Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
@@ -140,6 +149,9 @@ namespace GuiaTBAWP.Views.Colectivos
         delegate void DelegateUpdateList(List<TransporteViewModel> local);
         private void UpdateList(List<TransporteViewModel> ls)
         {
+            if (Config.Get<List<TransporteViewModel>>("linea-" + Linea) == null)
+                Config.Set("linea-" + Linea, ls);
+
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 

@@ -28,11 +28,11 @@
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                                 <Paragraph>
-                                    Para facilitar las gestiones personalizadas de nuestros usuarios, habilitamos Centros de Atención SUBE en distintos puntos de la Región Metropolitana.
+                                    Para facilitar las gestiones personalizadas de nuestros usuarios, hay habilitados Centros de Atención SUBE en distintos puntos de la Región Metropolitana.
                                 </Paragraph>
                                 <Paragraph></Paragraph>
                                 <Paragraph>
-                                    Consultá la dirección y el horario de atención haciendo click en el punto más cercano del mapa o consultá el listado de puntos según tu zona: CABA, Norte, Oeste o Sur.
+                                    Consultá el listado de puntos según tu zona: CABA, Norte, Oeste o Sur.
                                 </Paragraph>
                                 <Paragraph></Paragraph>
                                 <Paragraph>
@@ -84,32 +84,44 @@
                     <ScrollViewer>
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph FontWeight="Bold">Sucursal Belgrano</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Belgrano_OnClick" Foreground="White">Sucursal Belgrano</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Sucre 2430</Paragraph>
                                 <Paragraph>de Lunes a Viernes 09:00 a 16:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Caballito</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Caballito_OnClick" Foreground="White">Sucursal Caballito</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Campichuelo 553 (en dependencias del Centro de Acceso a la Justicia Caballito)</Paragraph>
                                 <Paragraph>de Lunes a Viernes 10:00 a 16:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Congreso</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Congreso_OnClick" Foreground="White">Sucursal Congreso</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Callao 316</Paragraph>
                                 <Paragraph>de Lunes a Viernes 08:00 a 20:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Constitución</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Constitucion_OnClick" Foreground="White">Sucursal Constitución</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Salta 2007 subsuelo (en dependencias del Centro de Acceso a la Justicia Constitución)</Paragraph>
                                 <Paragraph>de Lunes a Viernes 10:00 a 16:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Liniers</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Liniers_OnClick" Foreground="White">Sucursal Liniers</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Cuzco 220 (en dependencias Centro de Acceso a la Justicia Liniers)</Paragraph>
                                 <Paragraph>de Lunes a Viernes 09:00 a 16:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal SIGEN</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_SIGEN_OnClick" Foreground="White">Sucursal SIGEN</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Corrientes 389 (subsuelo, esquina Reconquista)</Paragraph>
                                 <Paragraph>de Lunes a Viernes 10:00 a 16:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
@@ -125,22 +137,30 @@
                     <ScrollViewer>
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph FontWeight="Bold">Sucursal General Pacheco (Tigre)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Tigre_OnClick" Foreground="White">Sucursal General Pacheco (Tigre)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Santiago del Estero 350 (El Talar)</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 16 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal José León Suárez (San Martín)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_SanMartin_OnClick" Foreground="White">Sucursal José León Suárez (San Martín)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Calle D. 190 (Brigadier Don Juan Manuel de Rosas 2453 entre Buenos Aires (55) y Boulevard Ballester (57)</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal San Miguel (San Miguel)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_SanMiguel_OnClick" Foreground="White">Sucursal San Miguel (San Miguel)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Domingo Faustino Sarmiento 1551</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Malvinas Argentinas</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_MalvinasArgentinas_OnClick" Foreground="White">Sucursal Malvinas Argentinas</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Batallón 601 Dr. Baroni 2803</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
@@ -156,32 +176,44 @@
                     <ScrollViewer>
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph FontWeight="Bold">Sucursal Ciudadela (3 de Febrero)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Ciudadela_OnClick" Foreground="White">Sucursal Ciudadela (3 de Febrero)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Av. Rivadavia 12602</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 09:00 a 15:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Caseros (3 de Febrero)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Caseros_OnClick" Foreground="White">Sucursal Caseros (3 de Febrero)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Alberdi 4840 entre Medina y Murias</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 15:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Ituzaingó (Ituzaingó)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Ituzaingo_OnClick" Foreground="White">Sucursal Ituzaingó (Ituzaingó)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Av. Ratti 10</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 15:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Moreno (Moreno)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Moreno_OnClick" Foreground="White">Sucursal Moreno (Moreno)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Belgrano 84 (entre Mitre y Uruguay)</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 16:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Morón (Morón)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Moron_OnClick" Foreground="White">Sucursal Morón (Morón)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Alte Brown 946/956</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 15:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">González Catán (González Catán)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_GonzalezCatan_OnClick" Foreground="White">González Catán (González Catán)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Brig. Gral. Juan Manuel de Rosas 17798 (Ruta 3. Km 32,5)</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 16:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
@@ -197,42 +229,58 @@
                     <ScrollViewer>
                         <StackPanel>
                             <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
-                                <Paragraph FontWeight="Bold">Sucursal La Plata (La Plata)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_LaPlata_OnClick" Foreground="White">Sucursal La Plata (La Plata)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Plaza Italia 109</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 09:00 a 17:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Ensenada (Ensenada)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Ensenada_OnClick" Foreground="White">Sucursal Ensenada (Ensenada)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>La Merced 491</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Temperley (Lomas de Zamora)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Temperley_OnClick" Foreground="White">Sucursal Temperley (Lomas de Zamora)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Avellaneda 126 (esquina Meeks)</Paragraph>
                                 <Paragraph>de Lunes a Viernes 08:00 a 15:30 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Tristán Suárez (Ezeiza)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Ezeiza_OnClick" Foreground="White">Sucursal Tristán Suárez (Ezeiza)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Av. Néstor Kirchner 225</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 13:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Avellaneda (Avellaneda)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Avellaneda_OnClick" Foreground="White">Sucursal Avellaneda (Avellaneda)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Guemes 835</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 17:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Rafael Calzada (Almirante Brown)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_RafaelCalzada_OnClick" Foreground="White">Sucursal Rafael Calzada (Almirante Brown)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Av.San Martin 3149</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Lanús (Lanús)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_Lanus_OnClick" Foreground="White">Sucursal Lanús (Lanús)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Hipólito Yrigoyen 3863</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>
 
-                                <Paragraph FontWeight="Bold">Sucursal Burzaco (Almirante Brown)</Paragraph>
+                                <Paragraph FontWeight="Bold">
+                                    <Hyperlink Click="Hyperlink_AlmiranteBrown_OnClick" Foreground="White">Sucursal Burzaco (Almirante Brown)</Hyperlink>
+                                </Paragraph>
                                 <Paragraph>Quintana 556</Paragraph>
                                 <Paragraph>de Lunes a Viernes de 08:00 a 14:00 hs.</Paragraph>
                                 <Paragraph></Paragraph>

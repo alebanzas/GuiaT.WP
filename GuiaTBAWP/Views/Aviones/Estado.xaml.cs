@@ -9,10 +9,10 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
-using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.Aviones

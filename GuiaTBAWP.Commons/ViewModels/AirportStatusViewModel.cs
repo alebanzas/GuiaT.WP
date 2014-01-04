@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using GuiaTBAWP.Commons.Extensions;
 
-namespace GuiaTBAWP.ViewModels
+namespace GuiaTBAWP.Commons.ViewModels
 {
     public class AirportStatusViewModel : INotifyPropertyChanged
     {

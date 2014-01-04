@@ -5,9 +5,9 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using GuiaTBAWP;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
-using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 

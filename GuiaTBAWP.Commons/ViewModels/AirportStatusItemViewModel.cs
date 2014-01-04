@@ -1,4 +1,4 @@
-﻿namespace GuiaTBAWP.ViewModels
+﻿namespace GuiaTBAWP.Commons.ViewModels
 {
     public class AirportStatusItemViewModel
     {

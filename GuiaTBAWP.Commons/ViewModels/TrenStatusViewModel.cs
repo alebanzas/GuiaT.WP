@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace GuiaTBAWP.ViewModels
+namespace GuiaTBAWP.Commons.ViewModels
 {
     public class TrenStatusViewModel : INotifyPropertyChanged
     {

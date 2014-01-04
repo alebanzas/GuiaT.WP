@@ -106,6 +106,8 @@
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PuntoViewModel.cs" />
+    <Compile Include="ViewModels\RadioTaxisItemViewModel.cs" />
+    <Compile Include="ViewModels\RadioTaxisViewModel.cs" />
     <Compile Include="ViewModels\SubteItemViewModel.cs" />
     <Compile Include="ViewModels\SubteStatusViewModel.cs" />
     <Compile Include="ViewModels\TransporteViewModel.cs" />

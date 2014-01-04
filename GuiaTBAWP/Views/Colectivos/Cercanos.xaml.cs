@@ -7,9 +7,9 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
-using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Shell;
 using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 

@@ -182,7 +182,6 @@
     <Compile Include="Views\Taxis\RadioTaxis.xaml.cs">
       <DependentUpon>RadioTaxis.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Taxis\RadioTaxisItemViewModel.cs" />
     <Compile Include="Views\Taxis\Tarifas.xaml.cs">
       <DependentUpon>Tarifas.xaml</DependentUpon>
     </Compile>

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
-using Microsoft.Phone.Controls.Maps;
 using GuiaTBAWP.Models;
+using Microsoft.Phone.Controls.Maps;
 
-namespace GuiaTBAWP.ViewModels
+namespace GuiaTBAWP.Commons.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {

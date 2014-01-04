@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Device.Location;
 
-namespace GuiaTBAWP.ViewModels
+namespace GuiaTBAWP.Commons.ViewModels
 {
     public class ColectivoCercanoViewModel : INotifyPropertyChanged
     {

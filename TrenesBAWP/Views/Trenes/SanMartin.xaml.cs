@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
-using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
 using TrenesBAWP;
 

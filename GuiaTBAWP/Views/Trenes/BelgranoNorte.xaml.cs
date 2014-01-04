@@ -2,10 +2,10 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.Services;
-using GuiaTBAWP.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 

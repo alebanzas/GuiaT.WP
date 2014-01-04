@@ -33,7 +33,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox ItemsSource="{Binding Lista}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox ItemsSource="{Binding Lista}" Margin="12,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="Selector_OnSelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20" Width="432">

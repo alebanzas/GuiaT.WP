@@ -79,6 +79,8 @@
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
     <Compile Include="Models\ColectivoModel.cs" />
+    <Compile Include="Models\RadioTaxiDC.cs" />
+    <Compile Include="Models\RadioTaxiTable.cs" />
     <Compile Include="Models\LineaTrenModel.cs" />
     <Compile Include="Models\LocalServiceModel.cs" />
     <Compile Include="Models\PointExtensions.cs" />

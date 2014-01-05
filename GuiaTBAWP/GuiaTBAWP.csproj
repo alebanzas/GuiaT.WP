@@ -179,6 +179,9 @@
     <Compile Include="Views\Subtes\Subtes.xaml.cs">
       <DependentUpon>Subtes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Taxis\RadioTaxiDetalles.xaml.cs">
+      <DependentUpon>RadioTaxiDetalles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Taxis\RadioTaxis.xaml.cs">
       <DependentUpon>RadioTaxis.xaml</DependentUpon>
     </Compile>
@@ -373,6 +376,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Taxis\RadioTaxiDetalles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Taxis\RadioTaxis.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -501,6 +508,7 @@
     <Content Include="Resources\Icons\ApplicationBar\appbar.new.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.stop.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.phone.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.search.png" />
     <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />

@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Helpers;
@@ -82,8 +83,8 @@ namespace GuiaTBAWP.Views.Aviones
                     { "t", ViewModel.NickName },
                 };
 
-            _httpReq = WebRequest.Create(string.Format("/aviones/{0}", ViewModel.Tipo).ToApiCallUri(param, alwaysRefresh: true));
-            _httpReq.Method = "GET";
+            var client = new HttpClient();
+            _httpReq = client.Get(string.Format("/api/avion/{0}", ViewModel.Tipo).ToApiCallUri(param, alwaysRefresh: true));
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 

@@ -7,6 +7,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -80,8 +81,8 @@ namespace GuiaTBAWP.Views.Colectivos
                     {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                 };
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/transporte/cercano".ToApiCallUri(param));
-            _httpReq.Method = "GET";
+            var client = new HttpClient();
+            _httpReq = client.Get("/transporte/cercano".ToApiCallUri(param));
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 

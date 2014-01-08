@@ -27,7 +27,6 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private HttpWebRequest _httpReq;
 
-
         public Cercanos()
         {
             InitializeComponent();

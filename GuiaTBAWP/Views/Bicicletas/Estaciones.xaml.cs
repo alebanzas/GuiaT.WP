@@ -35,7 +35,11 @@ namespace GuiaTBAWP.Views.Bicicletas
             InitializeComponent();
             DataContext = ViewModel;
             Loaded += Page_Loaded;
-            Unloaded += Page_UnLoaded;
+            Unloaded += (sender, args) =>
+            {
+                if (_httpReq != null)
+                    _httpReq.Abort();
+            };
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
@@ -47,11 +51,6 @@ namespace GuiaTBAWP.Views.Bicicletas
             MostrarLugares();
             
             Cargar();
-        }
-
-        void Page_UnLoaded(object sender, RoutedEventArgs e)
-        {
-            CancelarRequest();
         }
 
         private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
@@ -103,13 +102,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                     select pushpin.Location;
             MiMapa.SetView(LocationRect.CreateLocationRect(x));
         }
-
-        private void CancelarRequest()
-        {
-            if (_httpReq != null)
-                _httpReq.Abort();
-        }
-
+        
         public void Cargar(bool refresh = false)
         {
             if (NetworkInterface.GetIsNetworkAvailable())

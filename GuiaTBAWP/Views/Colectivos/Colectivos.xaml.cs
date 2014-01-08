@@ -20,10 +20,15 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             try
             {
+                var listBox = (LongListSelector) sender;
+
+                if (listBox.SelectedItem == null) return;
+
                 var bus = ((Bus)e.AddedItems[0]).Title.Split(' ')[1];
 
-                Uri uri = new Uri(String.Format("/Views/Colectivos/Mapa.xaml?linea={0}", bus), UriKind.Relative);
+                var uri = new Uri(String.Format("/Views/Colectivos/Mapa.xaml?linea={0}", bus), UriKind.Relative);
                 NavigationService.Navigate(uri);
+                listBox.SelectedItem = null;
             }
             catch (Exception) {}
         }

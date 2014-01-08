@@ -122,6 +122,10 @@ namespace GuiaTBAWP.Views.SUBE
             Mapa.SetView(LocationRect.CreateLocationRect(pp));
 
             ResetUI();
+            if (ViewModel.PuntosVenta.Count == 0)
+            {
+                NoResults.Visibility = Visibility.Visible;
+            }
         }
 
         private void CancelarRequest()
@@ -139,6 +143,7 @@ namespace GuiaTBAWP.Views.SUBE
 
         private int ResetUI()
         {
+            NoResults.Visibility = Visibility.Collapsed;
             Refreshing.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();

@@ -29,8 +29,8 @@ namespace GuiaTBAWP.Services
             {
                 StartRequest();
                 DatosLoaded = false;
-                Request = WebRequest.Create("/trenes".ToApiCallUri());
-                Request.Method = "GET";
+                var client = new HttpClient();
+                Request = client.Get("/api/tren".ToApiCallUri());
                 Request.BeginGetResponse(HTTPWebRequestCallBack, Request);
                 return true;
             }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
@@ -84,6 +85,7 @@ namespace GuiaTBAWP.Views.Colectivos
                 return;
             }
             
+            Refreshing.Visibility = Visibility.Visible;
             ProgressBar.Show(string.Format("Obteniendo recorrido línea {0}...", Linea));
             SetApplicationBarEnabled(false);
 
@@ -116,14 +118,14 @@ namespace GuiaTBAWP.Views.Colectivos
             }
             catch (Exception ex)
             {
-                ex.Log(ResetUI);
+                ex.Log(ResetUI, () => { NoConnection.Visibility = Visibility.Visible; return 0; });
             }
         }
 
         delegate void DelegateUpdateList(List<TransporteViewModel> local);
         private void UpdateList(List<TransporteViewModel> ls)
         {
-            if (Config.Get<List<TransporteViewModel>>("linea-" + Linea) == null)
+            if (Config.Get<List<TransporteViewModel>>("linea-" + Linea) == null && ls.Any())
                 Config.Set("linea-" + Linea, ls);
 
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
@@ -173,6 +175,7 @@ namespace GuiaTBAWP.Views.Colectivos
             MiMapa.SetView(LocationRect.CreateLocationRect(x));
 
             ResetUI();
+            NoResults.Visibility = ls.Any() ? Visibility.Collapsed : Visibility.Visible;
         }
 
         private readonly Random _random = new Random();
@@ -187,6 +190,9 @@ namespace GuiaTBAWP.Views.Colectivos
         
         private int ResetUI()
         {
+            Refreshing.Visibility = Visibility.Collapsed;
+            NoResults.Visibility = Visibility.Collapsed;
+            NoConnection.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
             return 0;

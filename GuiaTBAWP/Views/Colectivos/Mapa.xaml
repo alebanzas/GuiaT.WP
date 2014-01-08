@@ -27,7 +27,16 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <my:Map x:Name="MiMapa"/>
+            <StackPanel x:Name="NoResults" Canvas.ZIndex="99" Visibility="Collapsed" Height="780" Width="500" Background="Black" Opacity="0.7">
+                <TextBlock Margin="140,380,0,0">recorrido no encontrado</TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="NoConnection" Canvas.ZIndex="99" Visibility="Collapsed" Height="780" Width="500" Background="Black" Opacity="0.7">
+                <TextBlock Margin="140,380,0,0">no hay conexión a la red</TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="Refreshing" Canvas.ZIndex="99" Height="780" Width="500" Background="Black" Opacity="0.7">
+                <TextBlock Margin="140,380,0,0">buscando recorridos</TextBlock>
+            </StackPanel>
+            <my:Map Canvas.ZIndex="1" x:Name="MiMapa"/>
         </Grid>
     </Grid>
  

@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
@@ -114,8 +115,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 ProgressBar.Show(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
 
-                _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri(refresh));
-                _httpReq.Method = "GET";
+                var client = new HttpClient();
+                _httpReq = client.Get("/api/bicicleta".ToApiCallUri(refresh));
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }
             else

@@ -8845,7 +8845,7 @@ Regreso por similar recorrido.
             buss.Add(new Bus("Línea 441 a 450")
             {
                 Tipo = "P",
-                Title = "Línea 443A",
+                Title = "Línea 443 A",
                 Description = @"
 Ramal Rubén Darío por Jufré: De Sarmiento - Salta - Munilla - Azcuénaga - Lamadrid - D. Alvarez - Del Carril - Santamarina - Cañada de Ruiz - Salazar - Jufré - Rodríguez - Acha - Husares - Rotherdam - Salas - M. Bravo - Vergara - Scholnik - Freud - Villaroel - H. Cortés - Roma - Ocampo - Escalada - Necochea - Ricchieri - Canning - Roca - Jauretche. 
 Regreso por similar recorrido. 
@@ -8861,7 +8861,7 @@ Regreso por similar recorrido.
             buss.Add(new Bus("Línea 441 a 450")
             {
                 Tipo = "P",
-                Title = "Línea 443B",
+                Title = "Línea 443 B",
                 Description = @"
 De Sarmeinto - Salta - Azcuénaga - Vergara - Hidalgo - Lobos - Ventura Bustos - Chivilcoy - Tucumán - Navarro - L. N. Alem - Chivilcoy - Sarmiento - Avellaneda - M. de Loreto - C. Casares - Los Incas - Francia - R. Peña - Arias - J. M. Paz - Paysandú - Lavalleja - Malabia - J. M. Paz - G. Mistral - Brandsen - Patagonia - Ringuelet - Pringles - Alamgro - Cerrito - Brandsen - Mirave - Ringuelet - Famatina. 
 Regreso por similar recorrido. 

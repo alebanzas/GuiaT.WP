@@ -104,7 +104,7 @@ namespace GuiaTBAWP.Views.Taxis
         private void SaveContact(object sender, EventArgs e)
         {
             var saveContactTask = new SaveContactTask();
-            saveContactTask.Completed += saveContactTask_Completed;
+            //saveContactTask.Completed += saveContactTask_Completed;
 
             saveContactTask.FirstName = "Radio Taxi";
             saveContactTask.LastName = _radioTaxi.Nombre;
@@ -112,28 +112,28 @@ namespace GuiaTBAWP.Views.Taxis
             if(!string.IsNullOrWhiteSpace(_radioTaxi.Url))
                 saveContactTask.Website = _radioTaxi.Url;
 
-
             saveContactTask.Show();
         }
-        void saveContactTask_Completed(object sender, SaveContactResult e)
-        {
-            switch (e.TaskResult)
-            {
-                //Logic for when the contact was saved successfully
-                case TaskResult.OK:
-                    MessageBox.Show("Contact saved.");
-                    break;
-
-                //Logic for when the task was cancelled by the user
-                case TaskResult.Cancel:
-                    MessageBox.Show("Save cancelled.");
-                    break;
-
-                //Logic for when the contact could not be saved
-                case TaskResult.None:
-                    MessageBox.Show("Contact could not be saved.");
-                    break;
-            }
-        }
+        
+        //void saveContactTask_Completed(object sender, SaveContactResult e)
+        //{
+        //    switch (e.TaskResult)
+        //    {
+        //        //Logic for when the contact was saved successfully
+        //        case TaskResult.OK:
+        //            MessageBox.Show("Contact saved.");
+        //            break;
+        //
+        //        //Logic for when the task was cancelled by the user
+        //        case TaskResult.Cancel:
+        //            MessageBox.Show("Save cancelled.");
+        //            break;
+        //
+        //        //Logic for when the contact could not be saved
+        //        case TaskResult.None:
+        //            MessageBox.Show("Contact could not be saved.");
+        //            break;
+        //    }
+        //}
     }
 }

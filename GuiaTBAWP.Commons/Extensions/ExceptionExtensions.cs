@@ -34,7 +34,7 @@ namespace GuiaTBAWP.Commons.Extensions
 #endif
                 if (showMsj)
                 {
-                    MessageBox.Show("Ocurrió un error al obtener la informacióna. Verifique su conexión a internet.");
+                    MessageBox.Show("Ocurrió un error al obtener la información. Verifique su conexión a internet.");
                 }
                 if (postAction != null)
                 {

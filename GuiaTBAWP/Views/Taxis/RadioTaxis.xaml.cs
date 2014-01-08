@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons.Models;
@@ -29,7 +30,7 @@ namespace GuiaTBAWP.Views.Taxis
         private void RadioTaxis_Loaded(object sender, RoutedEventArgs e)
         {
             ViewModel.Lista.Clear();
-            foreach (var radioTaxiTable in RadioTaxiDC.Current.Lista)
+            foreach (var radioTaxiTable in RadioTaxiDC.Current.Lista.OrderBy(x => x.Nombre))
             {
                 ViewModel.Lista.Add(new RadioTaxisItemViewModel
                 {

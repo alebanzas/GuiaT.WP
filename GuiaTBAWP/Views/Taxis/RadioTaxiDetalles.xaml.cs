@@ -5,6 +5,7 @@ using System.Windows.Navigation;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Taxis
@@ -31,6 +32,11 @@ namespace GuiaTBAWP.Views.Taxis
             Detalles.Text = _radioTaxi.Detalles;
             Telefono.Text = _radioTaxi.Telefono;
             Url.Text = _radioTaxi.Url;
+
+            
+            var applicationBarIconButton = ApplicationBar.Buttons[1] as ApplicationBarIconButton;
+            if (applicationBarIconButton != null)
+                applicationBarIconButton.IsEnabled = !string.IsNullOrWhiteSpace(_radioTaxi.Url);
         }
 
 
@@ -55,13 +61,25 @@ namespace GuiaTBAWP.Views.Taxis
         
         private void Share(object sender, EventArgs e)
         {
-            var shareLinkTask = new ShareLinkTask
+            ShareTaskBase shareTask;
+            if (string.IsNullOrWhiteSpace(_radioTaxi.Url))
+            {
+                shareTask = new ShareStatusTask
+                {
+                    Status = string.Format("Radio Taxi {0}. Teléfono: {1}", _radioTaxi.Nombre, _radioTaxi.Telefono),
+                };
+            }
+            else
+            {
+                shareTask = new ShareLinkTask
                 {
                     Title = _radioTaxi.Nombre,
                     Message = string.Format("Teléfono: {0}, Web: {1}", _radioTaxi.Telefono, _radioTaxi.Url),
                     LinkUri = new Uri(_radioTaxi.Url, UriKind.Absolute)
-                };
-            shareLinkTask.Show();
+                };    
+            }
+            
+            shareTask.Show();
         }
         
         private void Browse(object sender, EventArgs e)

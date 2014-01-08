@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -25,20 +26,18 @@ namespace GuiaTBAWP.Services
 
         public bool LoadData()
         {
-            if (NetworkInterface.GetIsNetworkAvailable())
-            {
-                StartRequest();
-                DatosLoaded = false;
-                var client = new HttpClient();
-                Request = client.Get("/api/tren".ToApiCallUri());
-                Request.BeginGetResponse(HTTPWebRequestCallBack, Request);
-                return true;
-            }
-            else
+            if (!NetworkInterface.GetIsNetworkAvailable())
             {
                 Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
                 return false;
             }
+
+            StartRequest();
+            DatosLoaded = false;
+            var client = new HttpClient();
+            Request = client.Get("/api/tren".ToApiCallUri());
+            Request.BeginGetResponse(HTTPWebRequestCallBack, Request);
+            return true;
         }
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
@@ -54,19 +53,9 @@ namespace GuiaTBAWP.Services
 
                 Deployment.Current.Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateStatus), o);
             }
-            catch (WebException e)
-            {
-                if (e.Status == WebExceptionStatus.RequestCanceled)
-                {
-                    Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", App.Configuration.UltimaActualizacionTrenes.ToLocalDateTime())));
-                }
-                EndRequest();
-            }
             catch (Exception ex)
             {
-                EndRequest();
-                //this.Dispatcher.BeginInvoke(() => MessageBox.Show("Error.. " + ex.Message));
-                Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
+                ex.Log(EndRequest);
             }
         }
 

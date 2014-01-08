@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
@@ -61,12 +62,13 @@ namespace GuiaTBAWP.Views.Subtes
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 
-        private void ResetUI()
+        private int ResetUI()
         {
             ConnectionError.Visibility = Visibility.Collapsed;
             Loading.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         void SetApplicationBarEnabled(bool isEnabled)
@@ -89,29 +91,9 @@ namespace GuiaTBAWP.Views.Subtes
 
                 Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
             }
-            catch (WebException ex)
-            {
-                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
-
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                });
-            }
             catch (Exception ex)
             {
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                });
+                ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
             }
         }
 

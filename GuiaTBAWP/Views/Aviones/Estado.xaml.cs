@@ -65,18 +65,13 @@ namespace GuiaTBAWP.Views.Aviones
         {
             ResetUI();
             if (!NetworkInterface.GetIsNetworkAvailable())
-            {    
+            {
                 ConnectionError.Visibility = Visibility.Visible;
                 Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
                 return;
             }
             
-            ProgressBar.Show(string.Format("Obteniendo {0}...", ViewModel.Titulo));
-            ViewModel.Actualizacion = "Aguarde...";
-            Refreshing.Visibility = Visibility.Visible;
-            SetApplicationBarEnabled(false);
-            ViewModel.Vuelos.Clear();
-            ViewModel.VuelosFiltrados.Clear();
+            StartUI();
 
             var param = new Dictionary<string, object>
                 {
@@ -88,13 +83,24 @@ namespace GuiaTBAWP.Views.Aviones
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 
-        private void ResetUI()
+        private void StartUI()
+        {
+            ProgressBar.Show(string.Format("Obteniendo {0}...", ViewModel.Titulo));
+            ViewModel.Actualizacion = "Aguarde...";
+            Refreshing.Visibility = Visibility.Visible;
+            SetApplicationBarEnabled(false);
+            ViewModel.Vuelos.Clear();
+            ViewModel.VuelosFiltrados.Clear();
+        }
+
+        private int ResetUI()
         {
             NoResults.Visibility = Visibility.Collapsed;
             Refreshing.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         void SetApplicationBarEnabled(bool isEnabled)
@@ -121,29 +127,9 @@ namespace GuiaTBAWP.Views.Aviones
 
                 Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
             }
-            catch (WebException ex)
-            {
-                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
-
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                });
-            }
             catch (Exception ex)
             {
-                Dispatcher.BeginInvoke(() =>
-                    {
-                        ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                        MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                    });
+                ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
             }
         }
 

@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
@@ -104,38 +105,18 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             try
             {
-                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var httpRequest = (HttpWebRequest) result.AsyncState;
                 var response = httpRequest.EndGetResponse(result);
                 var stream = response.GetResponseStream();
 
-                var serializer = new DataContractJsonSerializer(typeof(List<TransporteViewModel>));
-                var o = (List<TransporteViewModel>)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof (List<TransporteViewModel>));
+                var o = (List<TransporteViewModel>) serializer.ReadObject(stream);
 
                 Dispatcher.BeginInvoke(new DelegateUpdateList(UpdateList), o);
             }
-            catch (WebException ex)
-            {
-                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
-
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el recorrido. Verifique su conexión a internet.");
-                });
-            }
             catch (Exception ex)
             {
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el recorrido. Verifique su conexión a internet.");
-                });
+                ex.Log(ResetUI);
             }
         }
 
@@ -204,10 +185,11 @@ namespace GuiaTBAWP.Views.Colectivos
             return Color.FromArgb(255, (byte)red, (byte)green, (byte)blue);
         }
         
-        private void ResetUI()
+        private int ResetUI()
         {
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         

@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
@@ -71,7 +72,7 @@ namespace GuiaTBAWP.Views.SUBE
 
             ProgressBar.Show("Buscando más cercanos...");
             ViewModel.CurrentPosition = currentLocation.Location;
-            if (ViewModel.PuntosRecarga.Count == 0) Loading.Visibility = Visibility.Visible;
+            if (ViewModel.PuntosRecarga.Count == 0) Refreshing.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
 
@@ -89,14 +90,21 @@ namespace GuiaTBAWP.Views.SUBE
 
         private void HTTPWebRequestCallBack(IAsyncResult result)
         {
-            var httpRequest = (HttpWebRequest)result.AsyncState;
-            var response = httpRequest.EndGetResponse(result);
-            var stream = response.GetResponseStream();
+            try
+            {
+                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var response = httpRequest.EndGetResponse(result);
+                var stream = response.GetResponseStream();
 
-            var serializer = new DataContractJsonSerializer(typeof(List<SUBEPuntoModel>));
-            var o = (List<SUBEPuntoModel>)serializer.ReadObject(stream);
+                var serializer = new DataContractJsonSerializer(typeof(List<SUBEPuntoModel>));
+                var o = (List<SUBEPuntoModel>)serializer.ReadObject(stream);
 
-            Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
+                Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
+            }
+            catch (Exception ex)
+            {
+                ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
+            }
         }
 
         delegate void DelegateUpdateWebBrowser(List<SUBEPuntoModel> local);
@@ -128,12 +136,13 @@ namespace GuiaTBAWP.Views.SUBE
                 applicationBarIconButton.IsEnabled = isEnabled;
         }
 
-        private void ResetUI()
+        private int ResetUI()
         {
-            Loading.Visibility = Visibility.Collapsed;
+            Refreshing.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         private void Pushpin_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

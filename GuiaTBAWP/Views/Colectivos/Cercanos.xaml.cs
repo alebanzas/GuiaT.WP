@@ -7,6 +7,7 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
@@ -71,7 +72,7 @@ namespace GuiaTBAWP.Views.Colectivos
             }
             
             ProgressBar.Show("Buscando más cercanos...");
-            if (ViewModel.Items.Count == 0) Loading.Visibility = Visibility.Visible;
+            if (ViewModel.Items.Count == 0) Refreshing.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
 
@@ -99,29 +100,9 @@ namespace GuiaTBAWP.Views.Colectivos
 
                 Dispatcher.BeginInvoke(new DelegateUpdateList(UpdateList), o);
             }
-            catch (WebException ex)
-            {
-                if (ex.Status == WebExceptionStatus.RequestCanceled) return;
-
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                });
-            }
             catch (Exception ex)
             {
-                Dispatcher.BeginInvoke(() =>
-                {
-                    ResetUI();
-#if DEBUG
-                        MessageBox.Show(ex.ToString());
-#endif
-                    MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet.");
-                });
+                ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
             }
         }
 
@@ -155,13 +136,14 @@ namespace GuiaTBAWP.Views.Colectivos
                 _httpReq.Abort();
         }
 
-        private void ResetUI()
+        private int ResetUI()
         {
-            Loading.Visibility = Visibility.Collapsed;
+            Refreshing.Visibility = Visibility.Collapsed;
             ConnectionError.Visibility = Visibility.Collapsed;
             NoResults.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         private void ListaColectivos_OnSelectionChanged(object sender, SelectionChangedEventArgs e)

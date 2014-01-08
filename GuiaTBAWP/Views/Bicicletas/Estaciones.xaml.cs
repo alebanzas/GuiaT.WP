@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -144,9 +145,9 @@ namespace GuiaTBAWP.Views.Bicicletas
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                EndRequest();
+                ex.Log(EndRequest);
             }
         }
 
@@ -183,7 +184,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             EndRequest();
         }
 
-        private void EndRequest()
+        private int EndRequest()
         {
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
@@ -193,6 +194,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
                 ProgressBar.Hide();
             });
+            return 0;
         }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -24,12 +24,9 @@
             
             <controls:PanoramaItem Header="venta">
                 <StackPanel Margin="12,0,0,12">
-                    <TextBlock Name="Loading" TextWrapping="Wrap" Visibility="Collapsed">Buscando los 10 puntos mas cercanos.<LineBreak /><LineBreak />Aguarde por favor...</TextBlock>
-                    <TextBlock Name="ConnectionError" TextWrapping="Wrap" Visibility="Collapsed">
-                        Ocurrió un error.
-                        <LineBreak /><LineBreak />
-                        Verifique su conexión a internet.
-                    </TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionError">No hay conexión a la red.</TextBlock>
                     <ListBox Margin="0,0,0,0" 
                              x:Name="Lista"
                              ItemContainerStyle="{StaticResource ListBoxStyle}" 

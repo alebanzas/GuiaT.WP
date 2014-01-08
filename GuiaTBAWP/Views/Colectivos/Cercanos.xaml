@@ -33,15 +33,9 @@
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Visibility="Collapsed" x:Name="Loading" Margin="12,0,0,0">
-                <Run Text="Buscando colectivos cercanos. Aguarde.."/>
-            </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="ConnectionError" Margin="12,0,0,0">
-                <Run Text="No hay conexión a la red."/>
-            </TextBlock>
-            <TextBlock Visibility="Collapsed" x:Name="NoResults" Margin="12,0,0,0">
-                <Run Text="No se encontraron colectivos cercanos."/>
-            </TextBlock>
+            <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
+            <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
+            <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionError">No hay conexión a la red.</TextBlock>
             <ListBox ItemsSource="{Binding Items}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="ListaColectivos_OnSelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>

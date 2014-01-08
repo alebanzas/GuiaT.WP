@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -81,8 +82,8 @@ namespace GuiaTBAWP.Views.SUBE
                     {"cant", 10},
                 };
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/sube/ventanear".ToApiCallUri(param));
-            _httpReq.Method = "GET";
+            var client = new HttpClient();
+            _httpReq = client.Get("/api/ventasube".ToApiCallUri(param));
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 

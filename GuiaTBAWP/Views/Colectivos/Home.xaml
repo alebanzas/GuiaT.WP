@@ -39,7 +39,7 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ColectivosCercanos">
                     <TextBlock Margin="0" Text="cercanos" />
                 </Button>
-                <TextBlock Margin="24,20,0,0">Buscador:</TextBlock>
+                <TextBlock Margin="24,20,0,0">Buscador (beta):</TextBlock>
                 <StackPanel Orientation="Horizontal" Margin="14,0">
                     <toolkit:AutoCompleteBox x:Name="AcBox" InputScope="Number" Height="80" Width="320" Tap="AcBox_OnGotFocus" KeyUp="AcBox_OnKeyUp"/>
                     <Button x:Name="BtnBuscar" Click="ButtonBuscar_OnClick">Buscar</Button>

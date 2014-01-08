@@ -73,7 +73,7 @@ namespace GuiaTBAWP.Views.Taxis
             {
                 shareTask = new ShareLinkTask
                 {
-                    Title = _radioTaxi.Nombre,
+                    Title = "Radio Taxi " + _radioTaxi.Nombre,
                     Message = string.Format("Teléfono: {0}, Web: {1}", _radioTaxi.Telefono, _radioTaxi.Url),
                     LinkUri = new Uri(_radioTaxi.Url, UriKind.Absolute)
                 };    
@@ -109,7 +109,8 @@ namespace GuiaTBAWP.Views.Taxis
             saveContactTask.FirstName = "Radio Taxi";
             saveContactTask.LastName = _radioTaxi.Nombre;
             saveContactTask.MobilePhone = _radioTaxi.Telefono;
-            saveContactTask.Website = _radioTaxi.Url;
+            if(!string.IsNullOrWhiteSpace(_radioTaxi.Url))
+                saveContactTask.Website = _radioTaxi.Url;
 
 
             saveContactTask.Show();

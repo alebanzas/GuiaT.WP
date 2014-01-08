@@ -6619,6 +6619,71 @@ Regreso por similar recorrido.
 "
             });
 
+            buss.Add(new Bus("Línea 561 a 570")
+            {
+                Tipo = "M",
+                Title = "Línea 570 A",
+                Description = @"
+Troncal Villa Corina – Villa Castellino (UBA Avellaneda – Alto Avellaneda) 
+
+Ida a Villa Castellino: Desde Coronel Molinedo y Entre Rios por Entre Rios, Cabildo, Avenida Galicia, Catamarca, Entre Rios, Santa Fe, Uruguay, Avenida Hipólito Yrigoyen, Colón, Maipú, Avenida Belgrano, Avenida General Guemes, Avenida Crisologo Larralde, General O’ Higgins, Almirante Cordero, A. France, Avenida Crisologo Larralde, Oyuela, Coronel Casacuberta, Posadas, Cangallo, Los Pozos, Camino General Belgrano, Avenida F. Onsari, Las Flores, Bolivar, A. Lartigau, R. Franco, Avenida Mitre, Centenario Uruguayo, Manuel Belgrano, Lambaré, Mujeres Argentinas, Avenida General Guemes hasta Eva Duarte de Perón (UBA Avellaneda – Alto Avellaneda). 
+
+Vuelta a Villa Corina: Desde Avenida General Guemes y Eva Duarte de Perón por Avenida General Guemes, Manuel Belgrano, Magdalena, Cabo Bomb. J .J. Carbuglia, Chascomús, R. Franco, Martin Fierro, Avenida Mitre, Avenida F. Onsari, Camino General Belgrano, Oyuela, Los Pozos, Cangallo, Posadas, Coronel Casacuberta, Oyuela, Avenida Crisologo Larralde, Posadas, General Arredondo, General Madariaga, Avenida Crisologo Larralde, General O’ Higgins, Almirante Cordero, A. France, Avenida Crisologo Larralde, Avenida General Guemes, Avenida Belgrano, Lambaré, Mujeres Argentinas, Avenida Belgrano, Arenales, Avenida General Bartolomé Mitre, J. I. Rucci, Levalle, M. Estévez, Avenida Hipólito Yrigoyen, Freire, Catamarca, Avenida Galicia, Avenida Bernardino Rivadavia, Entre Rios hasta Coronel Molinedo. 
+"
+            });
+
+            buss.Add(new Bus("Línea 561 a 570")
+            {
+                Tipo = "M",
+                Title = "Línea 570 B",
+                Description = @"
+Ramal Estación Avellaneda – UBA – Alto Avellaneda por Agüero (C. Larralde) 
+
+Ida a UBA Avellaneda: Desde Estación Avellaneda por Avenida Hipólito Yrigoyen, Comisario Mayor Gutierrez, M. Lebensohn, Coronel M. Rosetti, Avenida Hipólito Yrigoyen, Díaz Vélez, A. Alsina, Avenida Crisologo Larralde, Avenida General Guemes hasta Eva Duarte de Perón (UBA Avellaneda – Alto Avellaneda). 
+
+Vuelta a Estación Avellaneda: Desde Avenida General Guemes y Eva Duarte de Perón por Avenida General Guemes, Crisologo Larralde, A. Alsina, Colón, General Lavalle, Díaz Velez, M. Acosta, Monseñor de Andrea, Avenida Hipólito Yrigoyen hasta Estación Avellaneda. 
+"
+            });
+
+            buss.Add(new Bus("Línea 561 a 570")
+            {
+                Tipo = "M",
+                Title = "Línea 570 C",
+                Description = @"
+Ramal Estación Avellaneda – UBA – Alto Avellaneda por Mitre 
+
+Ida a UBA Avellaneda: Desde Estación Avellaneda por Avenida Hipólito Yrigoyen, Comisario Mayor Gutierrez, M. Lebensohn, Coronel M. Rosetti, Avenida Hipólito Yrigoyen, Colón, Maipú, Avenida Belgrano, Avenida General Guemes, General Villegas, Avenida General Guemes hasta Eva Duarte de Perón (UBA Avellaneda – Alto Avellaneda). 
+ 
+Vuelta a Estación Avellaneda: Desde Avenida General Guemes y Eva Duarte de Perón por Avenida General Guemes, M. Belgrano, M. Ocampo, Lafayette, Mujeres Argentinas, Coronel Lacarra, Avenida General Bartolomé Mitre, J. I. Rucci, Levalle, M. Estévez, Avenida Hipólito Yrigoyen hasta Estación Avellaneda. 
+"
+            });
+
+            buss.Add(new Bus("Línea 561 a 570")
+            {
+                Tipo = "M",
+                Title = "Línea 570 D",
+                Description = @"
+Ramal 4 – Ex Linea 373
+
+Ida: Desde Carlos Pellegrini y J. M. Montaña por J. M. Montaña, Pinzón, A. Valle, Sargento Ponce, Avenida Nicolas Avellaneda, Ingeniero Huergo, Defensa, 25 de Mayo, General Lavalle, Avenida Belgrano, Avenida General Guemes hasta Crisólogo Larralde. 
+
+Vuelta: Desde Avenida General Guemes y Crisologo Larralde por Avenida General Guemes, Avenida Belgrano, Coronel Lacarra, Mujeres Argentinas, Avenida Belgrano, Arenales, San Martín, Alsina, Sarmiento, F. Ameghino, 25 de Mayo, Leandro Nicéforo Alem, Sargento Ponce, Calle Lateral Puente Nicolas Avellaneda, A. Valle, Pinzón, J. M. Montaña hasta General Frias. 
+"
+            });
+
+            buss.Add(new Bus("Línea 561 a 570")
+            {
+                Tipo = "M",
+                Title = "Línea 570 E",
+                Description = @"
+Servicio Diferencial - Estación Avellaneda – UBA – Alto Avellaneda
+
+Ida a UBA Avellaneda: Desde Estación Avellaneda por Avenida Hipólito Yrigoyen, Comisario Mayor Gutierrez, M. Lebensohn, Coronel M. Rosetti, Avenida Hipólito Yrigoyen, Colón, Maipú, Avenida Belgrano, Avenida General Guemes, General Villegas, Avenida General Guemes hasta Eva Duarte de Perón (UBA Avellaneda – Alto Avellaneda). 
+
+Vuelta a Estación Avellaneda: Desde Avenida General Guemes y Eva Duarte de Perón por Avenida General Guemes, M. Belgrano, M. Ocampo, Lafayette, Mujeres Argentinas, Coronel Lacarra, Avenida General Bartolomé Mitre, J. I. Rucci, Levalle, M. Estévez, Avenida Hipólito Yrigoyen hasta Estación Avellaneda. 
+"
+            });
+
             buss.Add(new Bus("Línea 571 a 580")
             {
                 Tipo = "M",
@@ -8404,22 +8469,6 @@ Regreso por similar recorrido.
                 Title = "Línea 372",
                 Description = @"
 De: Alsina y Gaboto - Rivadavia - Gaboto - H. Yrigoyen - Garibaldi - Alvear - 1º Junta - A. Brown - Río Gallegos - Cuenca - S. del Estero - Lavalle - Laguarda - Centenario - Sucre - Nicaragua - San Martín - Zolezzi - Centerio - Caracas - Florida - Minuto - Ecuador - Bahía Blanca - Panamá - Mar del Plata - Rep. de Francia - D. Rocha - F. Varela - Calchaquí - Derivador Cruce Varela - Cno. Gral. Belgrano - Calle 13 - Calle 102 - Av. 14 - hasta Garage. 
-Regreso por similar recorrido. 
-"
-            });
-
-            buss.Add(new Bus("Línea 371 a 380")
-            {
-                Tipo = "P",
-                Title = "Línea 373",
-                Description = @"
-Ramal '1': De Dr. Torre y Calle 816 - (Quilmes) - por Dr. Torre - Av. Eva Perón - T. Flores - San Marcos - R. Cisterna - Cno. Gral. Belgrano - (Avellaneda) - Suipacha - (Lanús) - S. de Bustamante - Av. H. Yrigoyen - (Avellaneda) - Av. Pavón - Cons. de Andrea - M. Acosta - Belgrano - Alsina - Sarmiento - F. Ameghino - 25 de Mayo - Leandro N. Alem - Sgto. Ponce - lateral Puente N. Avellaneda - Montaña - hasta C. Pellegrini. 
-Regreso por similar recorrido. 
-Ramal '2' por F. Onsari: Su ruta hasta Cno. Gral. Belgrano y F. Onsari - por ésta - Cangallo - Suipacha - (Lanús) - Bustamante - (Avellaneda) - Pavón - Cabildo - Rivadavia - Gribone - Rosetti - Pavón - su ruta. 
-Regreso por similar recorrido. 
-Ramal '3' por Montes de Oca: Su ruta hasta M. Acosta - (Avellaneda) - Montes de Oca - F. Ameghino - M. Estévez - Pinzón - hasta Montaña - su ruta - hasta cabecera Anglo. 
-Regreso por similar recorrido. 
-Ramal '4': De Av. Güemes y Arredondo - (Avellaneda) - por Av. Güemes - Av. Belgrano - Gral. Paz - San Martín - Alsina - Sarmiento - Ameghino - mismo recorrido del Ramal 1 hasta terminal. 
 Regreso por similar recorrido. 
 "
             });

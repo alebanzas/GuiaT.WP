@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Helpers;
@@ -55,8 +56,8 @@ namespace GuiaTBAWP.Views.Subtes
             ProgressBar.Show("Obteniendo estado del servicio...");
             SetApplicationBarEnabled(false);
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri(alwaysRefresh: true));
-            _httpReq.Method = "GET";
+            var client = new HttpClient();
+            _httpReq = client.Get("/api/subte".ToApiCallUri(alwaysRefresh: true));
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 

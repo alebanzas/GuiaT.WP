@@ -20,6 +20,7 @@ namespace GuiaTBAWP.Services
         }
 
         public WebRequest Request { get; set; }
+        public bool Canceled { get; private set; }
 
         public Func<int> EndRequest { get; set; }
         public Func<int> StartRequest { get; set; }
@@ -34,6 +35,7 @@ namespace GuiaTBAWP.Services
 
             StartRequest();
             DatosLoaded = false;
+            Canceled = false;
             var client = new HttpClient();
             Request = client.Get("/api/tren".ToApiCallUri());
             Request.BeginGetResponse(HTTPWebRequestCallBack, Request);
@@ -55,7 +57,10 @@ namespace GuiaTBAWP.Services
             }
             catch (Exception ex)
             {
-                ex.Log(EndRequest);
+                if (!Canceled)
+                {
+                    ex.Log(EndRequest);
+                }
             }
         }
 
@@ -70,6 +75,11 @@ namespace GuiaTBAWP.Services
             DatosLoaded = true;
 
             EndRequest();
+        }
+
+        public void CancelRequest()
+        {
+            Canceled = true;
         }
     }
 }

@@ -23,6 +23,7 @@ namespace GuiaTBAWP.Views.Colectivos
     public partial class Mapa : PhoneApplicationPage
     {
         Pushpin _posicionActual;
+        WebRequest _httpReq;
 
         public string Linea { get; set; }
         
@@ -34,6 +35,11 @@ namespace GuiaTBAWP.Views.Colectivos
             {
                 MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
                 GetColectivo();
+            };
+            Unloaded += (sender, args) =>
+            {
+                if (_httpReq != null)
+                    _httpReq.Abort();
             };
         }
 
@@ -98,9 +104,8 @@ namespace GuiaTBAWP.Views.Colectivos
                 };
 
             var client = new HttpClient();
-            var request = client.Get("/api/transporte".ToApiCallUri(param));
-
-            request.BeginGetResponse(HTTPWebRequestCallBack, request);
+            _httpReq = client.Get("/api/transporte".ToApiCallUri(param));
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 
         private void HTTPWebRequestCallBack(IAsyncResult result)

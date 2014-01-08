@@ -18,6 +18,7 @@ namespace GuiaTBAWP.Views.Trenes
         
             DataContext = ViewModel;
             Loaded += Page_Loaded;
+            Unloaded += (sender, args) => DataService.CancelRequest();
 
             ViewModel.Ramales.Clear();
             DataService.EndRequest = EndRequest;

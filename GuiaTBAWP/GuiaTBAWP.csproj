@@ -152,6 +152,9 @@
     <Compile Include="Views\Colectivos\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ruta\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
@@ -340,6 +343,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Ruta\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\SUBE\AtencionAlUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -469,6 +476,7 @@
     <Content Include="Images\Home\aviones.png" />
     <Content Include="Images\Home\bicicletas.png" />
     <Content Include="Images\Home\colectivos.png" />
+    <Content Include="Images\Home\ruta.png" />
     <Content Include="Images\Home\sube.png" />
     <Content Include="Images\Home\subtes.png" />
     <Content Include="Images\Home\taxis.png" />
@@ -636,6 +644,7 @@
       <Name>GuiaTBAWP.Commons</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

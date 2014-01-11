@@ -16,6 +16,11 @@ namespace GuiaTBAWP
             StatusChecker.Check("Home");
         }
 
+        private void Button_Click_Ruta(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Ruta/Home.xaml", UriKind.Relative));
+        }
+
         private void Button_Click_SUBE(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/SUBE/HomeSUBE.xaml", UriKind.Relative));
@@ -54,6 +59,11 @@ namespace GuiaTBAWP
         private void Button_Click_Aviones(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Aviones/Home.xaml", UriKind.Relative));
+        }
+
+        private void MenuRuta_OnClick(object sender, RoutedEventArgs e)
+        {
+            TileManager.Set(new Uri("/Views/Ruta/Home.xaml", UriKind.Relative), "", new Uri("/Images/Home/ruta.png", UriKind.Relative));
         }
 
         private void MenuSubte_OnClick(object sender, RoutedEventArgs e)

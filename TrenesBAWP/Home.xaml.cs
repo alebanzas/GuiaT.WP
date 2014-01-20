@@ -68,7 +68,7 @@ namespace TrenesBAWP
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                ProgressBar.Show(string.Format("{0} estado del servicio...", !App.Configuration.InitialDataTrenes ? "Obteniendo" : "Actualizando"));
+                ProgressBar.Show("Actualizando estado del servicio...");
 
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
@@ -102,7 +102,7 @@ namespace TrenesBAWP
             }
             catch (WebException e)
             {
-                if (e.Status == WebExceptionStatus.RequestCanceled && App.Configuration.InitialDataTrenes)
+                if (e.Status == WebExceptionStatus.RequestCanceled)
                 {
                     Dispatcher.BeginInvoke(() => MessageBox.Show(string.Format("La información del estado de servicio se actualizó por ultima vez el: {0}", ToLocalDateTime(App.Configuration.UltimaActualizacionTrenes))));
                 }
@@ -163,8 +163,6 @@ namespace TrenesBAWP
 
             TrenesLineaEstadoDC.Current.SubmitChanges();
             TrenesRamalEstadoDC.Current.SubmitChanges();
-
-            App.Configuration.InitialDataTrenes = true;
 
             EndRequest();
         }

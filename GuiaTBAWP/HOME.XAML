@@ -226,7 +226,9 @@
                             <LineBreak /><LineBreak />
                             1.7 (próximamente): Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
-                            1.6.1 (actual): Actualización de precios servicio de subte. Mejoras en actualización de estado de trenes.
+                            1.6.2 (actual): Fix a listado de taxis, orden de estaciones de bicicletas segun tu posición.
+                            <LineBreak /><LineBreak />
+                            1.6.1 (11-01-2014): Actualización de precios servicio de subte. Mejoras en actualización de estado de trenes.
                             <LineBreak /><LineBreak />
                             1.6 (28-12-2013): Buscador de colectivos, y recorridos en mapa. Lista de radio taxis para llamar con un toque.
                             <LineBreak /><LineBreak />

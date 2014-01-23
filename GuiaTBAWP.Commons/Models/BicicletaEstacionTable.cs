@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Linq.Mapping;
+using System.Device.Location;
 
 namespace GuiaTBAWP.Models
 {
@@ -98,6 +99,13 @@ namespace GuiaTBAWP.Models
         public bool Equals(BicicletaEstacionTable other)
         {
             return this.Nombre.Equals(other.Nombre);
+        }
+
+        public double GetDistanceTo(GeoPosition<GeoCoordinate> getCurrentLocation)
+        {
+            var point = getCurrentLocation.Location;
+            return ((Latitud - point.Latitude)*(Latitud - point.Latitude)) +
+                   ((Longitud - point.Longitude)*(Longitud - point.Longitude));
         }
     }
     

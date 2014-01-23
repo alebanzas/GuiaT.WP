@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
@@ -72,8 +73,12 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             MiMapa.Children.Clear();
             ViewModel.Estaciones.Clear();
-            
-            var list = BicicletaEstacionDC.GetAll().OrderBy(x => x.Nombre);
+
+            var bicicletaEstacionTables = BicicletaEstacionDC.GetAll();
+
+            var list = App.Configuration.IsLocationEnabled ?
+                bicicletaEstacionTables.OrderBy(x => x.GetDistanceTo(PositionService.GetCurrentLocation())) :
+                bicicletaEstacionTables.OrderBy(x => x.Nombre);
             
             var lugares = new ObservableCollection<BicicletaEstacionTable>(list);
             foreach (var lugar in lugares)

@@ -27,6 +27,15 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+            <StackPanel x:Name="Results" Canvas.ZIndex="98" Background="Black" Opacity="0.7" Width="480" MaxHeight="300" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <ListBox x:Name="ReferencesListBox" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="300">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Content="{Binding Nombre}" Click="References_OnChecked" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
             <StackPanel x:Name="NoResults" Canvas.ZIndex="99" Visibility="Collapsed" Height="780" Width="500" Background="Black" Opacity="0.7">
                 <TextBlock Margin="140,380,0,0">recorrido no encontrado</TextBlock>
             </StackPanel>
@@ -46,6 +55,7 @@
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.new.rest.png" Text="Acercar" Click="BtnAcercar_Click" />
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.minus.rest.png" Text="Alejar" Click="BtnAlejar_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.eye.rest.png" Text="Vista" Click="BtnVista_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/Directions.png" Text="referencias" Click="BtnReferencias_Click"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
             </shell:ApplicationBar.MenuItems>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Globalization;
 using System.Linq;
@@ -97,8 +98,6 @@ namespace GuiaTBAWP.Views.Colectivos
 
             var param = new Dictionary<string, object>
                 {
-                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                     {"linea", Linea},
                     {"puntos", true},
                 };
@@ -133,26 +132,33 @@ namespace GuiaTBAWP.Views.Colectivos
             if (Config.Get<List<TransporteViewModel>>("linea-" + Linea) == null && ls.Any())
                 Config.Set("linea-" + Linea, ls);
 
+            ls = ls.OrderBy(y => y.Nombre).ToList();
+
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
-            foreach (var transporteViewModel in ls)
+            for (int index = 0; index < ls.Count; index++)
             {
-                var routeColor = GetRandomColor();
+                TransporteViewModel transporteViewModel = ls[index];
+                var routeColor = GetRandomColor(index);
                 var routeBrush = new SolidColorBrush(routeColor);
 
                 var routeLine = new MapPolyline
-                    {
-                        Locations = new LocationCollection(),
-                        Stroke = routeBrush,
-                        Opacity = 0.65,
-                        StrokeThickness = 5.0,
-                    };
+                {
+                    Name = transporteViewModel.Nombre,
+                    Locations = new LocationCollection(),
+                    Stroke = routeBrush,
+                    Opacity = 0.8,
+                    Visibility = Visibility.Collapsed,
+                    StrokeThickness = 5.0,
+                };
 
                 foreach (var location in transporteViewModel.Puntos)
                 {
                     routeLine.Locations.Add(new GeoCoordinate(location.Y, location.X));
                 }
+
+                ReferencesListBox.ItemsSource = new ObservableCollection<TransporteViewModel>(ls);
 
                 MiMapa.Children.Add(routeLine);
             }
@@ -181,11 +187,29 @@ namespace GuiaTBAWP.Views.Colectivos
 
             ResetUI();
             NoResults.Visibility = ls.Any() ? Visibility.Collapsed : Visibility.Visible;
+            Results.Visibility = ls.Any() ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private readonly Random _random = new Random();
-        private Color GetRandomColor()
+        private Color GetRandomColor(int index)
         {
+            var colors = new[] { 
+                Colors.Red, 
+                Colors.Blue, 
+                Colors.Yellow,
+                Colors.Orange, 
+                Colors.Magenta, 
+                Colors.Cyan, 
+                ColorTranslator.FromHtml("#FF3C00"),
+                ColorTranslator.FromHtml("#33FF00"),
+                ColorTranslator.FromHtml("#FF0055"),
+            };
+
+            if (index < colors.Length)
+            {
+                return colors[index];
+            }
+
             var red = _random.Next(1, 175);
             var green = _random.Next(1, 175);
             var blue = _random.Next(1, 175);
@@ -197,6 +221,7 @@ namespace GuiaTBAWP.Views.Colectivos
         {
             Refreshing.Visibility = Visibility.Collapsed;
             NoResults.Visibility = Visibility.Collapsed;
+            Results.Visibility = Visibility.Collapsed;
             NoConnection.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
@@ -240,5 +265,47 @@ namespace GuiaTBAWP.Views.Colectivos
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
+        private void References_OnChecked(object sender, RoutedEventArgs routedEventArgs)
+        {
+            var item = (CheckBox) sender;
+            foreach (var child in MiMapa.Children.OfType<MapPolyline>().Where(x => x.Name.Equals(item.Content)))
+            {
+                child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
+        private void BtnReferencias_Click(object sender, EventArgs e)
+        {
+            Results.Visibility = Results.Visibility.Equals(Visibility.Collapsed)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+    }
+
+    internal class ColorTranslator
+    {
+        public static Color FromHtml(string hex)
+        {
+            //remove the # at the front
+            hex = hex.Replace("#", "");
+
+            byte a = 255;
+
+            var start = 0;
+
+            //handle ARGB strings (8 characters long)
+            if (hex.Length == 8)
+            {
+                a = byte.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
+                start = 2;
+            }
+
+            //convert RGB characters to bytes
+            var r = byte.Parse(hex.Substring(start, 2), NumberStyles.HexNumber);
+            var g = byte.Parse(hex.Substring(start + 2, 2), NumberStyles.HexNumber);
+            var b = byte.Parse(hex.Substring(start + 4, 2), NumberStyles.HexNumber);
+
+            return Color.FromArgb(a, r, g, b);
+        }
     }
 }

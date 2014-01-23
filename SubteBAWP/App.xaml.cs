@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using GuiaTBAWP;
+using GuiaTBAWP.Commons;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -21,7 +13,7 @@ namespace SubteBAWP
     public partial class App : Application
     {
         private const string AppName = "SubteBAWP";
-        private const string AppVersion = "1.5.1.0";
+        private const string AppVersion = "1.6.2.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

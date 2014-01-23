@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBAWP.Commons;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -10,7 +11,7 @@ namespace GuiaTBAWP
     public partial class App
     {
         private const string AppName = "GUIATBAWP";
-        private const string AppVersion = "1.6.1.0";
+        private const string AppVersion = "1.6.2.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
         

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Data.Linq;
+using System.Collections.Generic;
 using System.Device.Location;
 using GuiaTBAWP.Commons.Models;
-using GuiaTBAWP.Commons.ViewModels;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
-using System.Collections.Generic;
-using GuiaTBAWP.Commons;
-using GuiaTBAWP.Commons.Services;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Commons
 {
     public class ApplicationConfiguration
     {
@@ -35,6 +32,13 @@ namespace GuiaTBAWP
         {
             OpenCount++;
             Name = name;
+            
+            //Ante un cambio de version reinicializo los datos
+            if (version.Equals(Version))
+            {
+                SetInitialData();
+            }
+
             Version = version;
 
             if (IsInitialized) return;

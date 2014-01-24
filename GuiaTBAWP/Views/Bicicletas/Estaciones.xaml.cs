@@ -77,6 +77,11 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             var bicicletaEstacionTables = BicicletaEstacionDC.GetAll();
 
+            foreach (var bicicletaEstacionTable in bicicletaEstacionTables)
+            {
+                bicicletaEstacionTable.Distance = App.Configuration.IsLocationEnabled ? GetMeasureString(bicicletaEstacionTable) : string.Empty;
+            }
+
             var list = App.Configuration.IsLocationEnabled ?
                 bicicletaEstacionTables.OrderBy(x => x.GetDistanceTo(PositionService.GetCurrentLocation())) :
                 bicicletaEstacionTables.OrderBy(x => x.Nombre);
@@ -111,9 +116,17 @@ namespace GuiaTBAWP.Views.Bicicletas
                     where pushpin != null
                     select pushpin.Location;
 
-            GeoCoordinate po = PositionService.GetCurrentLocation().Location;
+            IEnumerable<GeoCoordinate> ox;
+            if (App.Configuration.IsLocationEnabled)
+            {
+                GeoCoordinate po = PositionService.GetCurrentLocation().Location;
 
-            var ox = x.OrderBy(y => y.GetDistanceTo(po)).Take(4);
+                ox = x.OrderBy(y => y.GetDistanceTo(po)).Take(4);
+            }
+            else
+            {
+                ox = x;
+            }
 
             MiMapa.SetView(LocationRect.CreateLocationRect(ox));
         }
@@ -166,7 +179,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
-                ll.Distance = App.Configuration.IsLocationEnabled ? string.Concat("distancia: ", GetMeasureString(ll)) : string.Empty;
+                ll.Distance = App.Configuration.IsLocationEnabled ? GetMeasureString(ll) : string.Empty;
                 if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
                 {
                     var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));

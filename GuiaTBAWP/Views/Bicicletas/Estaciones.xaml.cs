@@ -197,7 +197,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         private string GetMeasureString(BicicletaEstacionTable ll)
         {
             var meters = Math.Round(FromPointToMeters(ll.Latitud, ll.Longitud, PositionService.GetCurrentLocation()), 0);
-            return meters < 1000 ? string.Concat(meters, "m") : string.Concat(meters/1000, "km");
+            return meters < 1000 ? string.Concat(meters, "m") : string.Concat(Math.Round(meters/1000, 1), "km");
         }
 
         private double FromPointToMeters(double lat1, double lon1, GeoPosition<GeoCoordinate> getCurrentLocation)

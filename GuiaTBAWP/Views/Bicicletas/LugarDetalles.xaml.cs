@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Models;
 using JeffWilcox.Controls;
@@ -37,7 +38,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             Horario.Text = _bicicletaEstacion.Horario;
             Estado.Text = _bicicletaEstacion.Estado;
             Cantidad.Text = _bicicletaEstacion.Cantidad.ToString(CultureInfo.InvariantCulture);
-            Distancia.Text = _bicicletaEstacion.Distance;
+            Distancia.Text = string.IsNullOrWhiteSpace(_bicicletaEstacion.Distance) ? string.Empty : "distancia: " + _bicicletaEstacion.Distance;
 
             var nuevoLugar = new Pushpin
                 {
@@ -75,18 +76,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         
         private void Pin(object sender, EventArgs e)
         {
-            ShellTile toFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", _bicicletaEstacion.Id)));
-            
-            if (toFind == null)
-            {
-                var data = new StandardTileData
-                {
-                    Title = _bicicletaEstacion.Nombre,
-                    BackgroundImage = new Uri("/Images/Home/bicicletas.png", UriKind.Absolute),
-                };
-            
-                ShellTile.Create(new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", _bicicletaEstacion.Id), UriKind.Relative), data);
-            }
+            TileManager.Set(new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", _bicicletaEstacion.Id), UriKind.Relative), _bicicletaEstacion.Nombre, new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
         
         private void Share(object sender, EventArgs e)

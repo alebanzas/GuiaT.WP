@@ -74,15 +74,9 @@ namespace GuiaTBAWP.Views.Colectivos
             if (ViewModel.Items.Count == 0) Refreshing.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
-
-            var param = new Dictionary<string, object>
-                {
-                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                };
-
+            
             var client = new HttpClient();
-            _httpReq = client.Get("/transporte/cercano".ToApiCallUri(param));
+            _httpReq = client.Get("/transporte/cercano".ToApiCallUri());
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 

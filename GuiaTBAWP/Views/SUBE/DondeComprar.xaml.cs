@@ -78,8 +78,6 @@ namespace GuiaTBAWP.Views.SUBE
 
             var param = new Dictionary<string, object>
                 {
-                    {"lat", currentLocation.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
-                    {"lon", currentLocation.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".")},
                     {"cant", 10},
                 };
 

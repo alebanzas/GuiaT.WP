@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
@@ -83,6 +84,11 @@ namespace BicicletaBAWP.Views.Bicicletas
                     Content = lugar.Nombre,
                     Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud)
                 };
+                if (!App.Configuration.IsLocationEnabled)
+                {
+                    lugar.Distance = string.Empty;
+                }
+
                 MiMapa.Children.Add(pushpin);
                 ViewModel.AddEstacion(lugar);
             }
@@ -157,6 +163,7 @@ namespace BicicletaBAWP.Views.Bicicletas
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
+                ll.Distance = App.Configuration.IsLocationEnabled ? string.Concat(Math.Round(FromPointToMeters(ll.Latitud, ll.Longitud, PositionService.GetCurrentLocation()), 0), "m") : string.Empty;
                 if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
                 {
                     var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));
@@ -165,6 +172,7 @@ namespace BicicletaBAWP.Views.Bicicletas
                         estacion.Cantidad = ll.Cantidad;
                         estacion.Horario = ll.Horario;
                         estacion.Estado = ll.Estado;
+                        estacion.Distance = ll.Distance;
                     }
                 }
                 else
@@ -175,12 +183,26 @@ namespace BicicletaBAWP.Views.Bicicletas
             BicicletaEstacionDC.Current.SubmitChanges();
 
             App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
-            App.Configuration.InitialDataBicicletas = true;
 
             ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", l.Actualizacion.ToUpdateDateTime());
 
             MostrarLugares();
             EndRequest();
+        }
+
+        private double FromPointToMeters(double lat1, double lon1, GeoPosition<GeoCoordinate> getCurrentLocation)
+        {
+            var lat2 = getCurrentLocation.Location.Latitude;
+            var lon2 = getCurrentLocation.Location.Longitude;
+            var R = 6378.137; // Radius of earth in KM
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var a = Math.Sin(dLat/2) * Math.Sin(dLat/2) +
+            Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
+            Math.Sin(dLon/2) * Math.Sin(dLon/2);
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1-a));
+            var d = R * c;
+            return d * 1000; // meters
         }
 
         private void EndRequest()

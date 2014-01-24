@@ -11,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -88,6 +89,10 @@ namespace GuiaTBAWP.Views.Bicicletas
                         Content = lugar.Nombre,
                         Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud)
                     };
+                if (!App.Configuration.IsLocationEnabled)
+                {
+                    lugar.Distance = string.Empty;
+                }
                 MiMapa.Children.Add(pushpin);
                 ViewModel.AddEstacion(lugar);
             }
@@ -101,11 +106,16 @@ namespace GuiaTBAWP.Views.Bicicletas
         private void AjustarMapa()
         {
             //Ajusto el mapa para mostrar los items
-            var x = from l in MiMapa.Children
+            IEnumerable<GeoCoordinate> x = from l in MiMapa.Children
                     let pushpin = l as Pushpin
                     where pushpin != null
                     select pushpin.Location;
-            MiMapa.SetView(LocationRect.CreateLocationRect(x));
+
+            GeoCoordinate po = PositionService.GetCurrentLocation().Location;
+
+            var ox = x.OrderBy(y => y.GetDistanceTo(po)).Take(4);
+
+            MiMapa.SetView(LocationRect.CreateLocationRect(ox));
         }
         
         public void Cargar(bool refresh = false)
@@ -156,6 +166,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
+                ll.Distance = App.Configuration.IsLocationEnabled ? string.Concat("distancia: ", GetMeasureString(ll)) : string.Empty;
                 if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
                 {
                     var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));
@@ -164,6 +175,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                         estacion.Cantidad = ll.Cantidad;
                         estacion.Horario = ll.Horario;
                         estacion.Estado = ll.Estado;
+                        estacion.Distance = ll.Distance;
                     }
                 }
                 else
@@ -174,12 +186,33 @@ namespace GuiaTBAWP.Views.Bicicletas
             BicicletaEstacionDC.Current.SubmitChanges();
 
             App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
-            App.Configuration.InitialDataBicicletas = true;
             
             ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", l.Actualizacion.ToUpdateDateTime());
 
             MostrarLugares();
             EndRequest();
+        }
+
+        //TODO: helper
+        private string GetMeasureString(BicicletaEstacionTable ll)
+        {
+            var meters = Math.Round(FromPointToMeters(ll.Latitud, ll.Longitud, PositionService.GetCurrentLocation()), 0);
+            return meters < 1000 ? string.Concat(meters, "m") : string.Concat(meters/1000, "km");
+        }
+
+        private double FromPointToMeters(double lat1, double lon1, GeoPosition<GeoCoordinate> getCurrentLocation)
+        {
+            var lat2 = getCurrentLocation.Location.Latitude;
+            var lon2 = getCurrentLocation.Location.Longitude;
+            var R = 6378.137; // Radius of earth in KM
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+            Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
+            Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            var d = R * c;
+            return d * 1000; // meters
         }
 
         private int EndRequest()

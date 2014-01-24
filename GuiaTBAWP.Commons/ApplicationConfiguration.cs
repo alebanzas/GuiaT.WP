@@ -185,9 +185,7 @@ namespace GuiaTBAWP.Commons
         public double MinDiffGeography = 0.0001;
 
         public DateTime UltimaActualizacionBicicletas { get; set; }
-
-        public bool InitialDataBicicletas { get; set; }
-
+        
         public DateTime UltimaActualizacionTrenes { get; set; }
         
         private string _version;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
+using GuiaTBAWP.Commons.Models;
 
 namespace GuiaTBAWP.Models
 {

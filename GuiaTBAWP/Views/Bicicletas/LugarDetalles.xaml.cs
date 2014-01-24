@@ -4,11 +4,13 @@ using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Models;
 using JeffWilcox.Controls;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Controls.Maps.Core;
+using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Bicicletas
@@ -35,6 +37,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             Horario.Text = _bicicletaEstacion.Horario;
             Estado.Text = _bicicletaEstacion.Estado;
             Cantidad.Text = _bicicletaEstacion.Cantidad.ToString(CultureInfo.InvariantCulture);
+            Distancia.Text = _bicicletaEstacion.Distance;
 
             var nuevoLugar = new Pushpin
                 {
@@ -72,49 +75,20 @@ namespace GuiaTBAWP.Views.Bicicletas
         
         private void Pin(object sender, EventArgs e)
         {
-            /*
-            ShellTile toFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("LugarDetalles.xaml?id={0}", bicicletaEstacion.Id)));
-
+            ShellTile toFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", _bicicletaEstacion.Id)));
+            
             if (toFind == null)
             {
-                var frontFile = SaveTileAsImage("f", new TileData() { ImageSource = bicicletaEstacion.Imagen1, Text1 = bicicletaEstacion.Nombre});
-                
                 var data = new StandardTileData
                 {
-                    BackgroundImage = new Uri("isostore:" + frontFile, UriKind.Absolute),
+                    Title = _bicicletaEstacion.Nombre,
+                    BackgroundImage = new Uri("/Images/Home/bicicletas.png", UriKind.Absolute),
                 };
-
-                ShellTile.Create(new Uri(String.Format("/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative), data);
+            
+                ShellTile.Create(new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", _bicicletaEstacion.Id), UriKind.Relative), data);
             }
-            */
         }
-
-        /*
-        private string SaveTileAsImage(String tileType, TileData tileData)
-        {
-            TileControl tile = new TileControl();
-            tile.DataContext = tileData;
-
-            tile.Measure(new Size(173, 173));
-            tile.Arrange(new Rect(0, 0, 173, 173));
-            var bmp = new WriteableBitmap(173, 173);
-            bmp.Render(tile, null);
-            bmp.Invalidate();
-
-            var isf = IsolatedStorageFile.GetUserStoreForApplication();
-            var filename = String.Format("/Shared/ShellContent/tile_{0}_{1}.jpg", bicicletaEstacion.Id, tileType);
-
-            if (!isf.DirectoryExists("/Shared/ShellContent"))
-                isf.CreateDirectory("/Shared/ShellContent");
-
-            using (var stream = isf.OpenFile(filename, System.IO.FileMode.OpenOrCreate))
-            {
-                bmp.SaveJpeg(stream, 173, 173, 0, 100);
-            }
-            return filename;
-        }
-        */
-
+        
         private void Share(object sender, EventArgs e)
         {
             var shareLinkTask = new ShareLinkTask

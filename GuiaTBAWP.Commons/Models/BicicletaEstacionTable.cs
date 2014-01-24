@@ -2,7 +2,7 @@
 using System.Data.Linq.Mapping;
 using System.Device.Location;
 
-namespace GuiaTBAWP.Models
+namespace GuiaTBAWP.Commons.Models
 {
     [Table]
     public class BicicletaEstacionTable : IEquatable<BicicletaEstacionTable>
@@ -75,16 +75,31 @@ namespace GuiaTBAWP.Models
             set { url = value; }
         }
 
+        private string distance;
+        [Column]
+        public string Distance
+        {
+            get { return distance; }
+            set { distance = value; }
+        }
+
         public string Descripcion
         {
-            get { return string.Format("Cantidad disponible: {0}", Cantidad); }
+            get
+            {
+                if (string.IsNullOrWhiteSpace(Distance))
+                {
+                    return string.Format("Cantidad disponible: {0}", Cantidad);
+                }
+                return string.Concat(string.Format("Cantidad disponible: {0}", Cantidad), " | (a ", Distance, ")");
+            }
         }
 
         public BicicletaEstacionTable()
         {
         }
 
-        public BicicletaEstacionTable(Guid id, string nombre, double longitud, double latitud, string estado, int cantidad, string horario, string url)
+        public BicicletaEstacionTable(Guid id, string nombre, double longitud, double latitud, string estado, int cantidad, string horario, string url, string distance)
         {
             this.Id = id; 
             this.Nombre = nombre;
@@ -94,6 +109,7 @@ namespace GuiaTBAWP.Models
             this.Cantidad = cantidad;
             this.Horario = horario;
             this.Url = url;
+            this.Distance = distance;
         }
 
         public bool Equals(BicicletaEstacionTable other)

@@ -158,7 +158,6 @@ namespace GuiaTBAWP.Commons
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("595af820-0da0-4dc9-aef3-090b82f552dc"), Nombre = "Recoleta VIP", Telefono = "4983-0544", Url = null });
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("9c380268-0f24-4c32-8853-020d1d99b24c"), Nombre = "Tango", Telefono = "4862-2222", Url = null });
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("8b00205e-bcc4-41b5-a165-27c282728d46"), Nombre = "Tiempo", Telefono = "4854-3838", Url = "http://www.radiotaxitiemposrl.com.ar/" });
-
             RadioTaxiDC.Current.SubmitChanges();
         }
 

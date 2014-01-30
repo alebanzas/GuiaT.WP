@@ -19,6 +19,7 @@ namespace GuiaTBAWP.Commons.Models
 
         public static void Destroy()
         {
+            Current.DeleteDatabase();
             dataContext = null;
         }
 
@@ -35,7 +36,6 @@ namespace GuiaTBAWP.Commons.Models
             catch (Exception)
             {
                 //Ante un error en la query, reseteo todos.
-                Current.DeleteDatabase();
                 Destroy();
                 //TODO: refactor
                 return new List<RadioTaxiTable>();

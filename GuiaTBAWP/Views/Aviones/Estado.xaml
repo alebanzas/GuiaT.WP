@@ -26,19 +26,19 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="SearchPanel" Background="Black" Canvas.ZIndex="10d" Margin="0,-280,0,0" Height="80">
+        <StackPanel x:Name="SearchPanel" Background="Black" Canvas.ZIndex="10" Margin="0,-280,0,0" Height="80">
             <StackPanel Orientation="Horizontal" Margin="14,0">
                 <TextBox x:Name="AcBox" Height="80" Width="320" Tap="AcBox_OnGotFocus" KeyUp="AcBox_OnKeyUp"/>
                 <Button x:Name="BtnBuscar" Click="ButtonBuscar_OnClick" Opacity="1">Buscar</Button>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+        <StackPanel Grid.Row="0" Margin="12,17,0,28" Canvas.ZIndex="9">
             <TextBlock Text="{Binding Aeroestacion}" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="{Binding Titulo}" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <Grid Grid.Row="1" Margin="12,-10,0,10" Width="432">
+        <Grid Grid.Row="1" Margin="12,-10,0,10" Width="432" Canvas.ZIndex="9">
             <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
             <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
             <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionError">No hay conexión a la red.</TextBlock>

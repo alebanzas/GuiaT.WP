@@ -22,7 +22,7 @@
             
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
-                    <StackPanel Visibility="Collapsed">
+                    <StackPanel>
                         <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta">
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu>

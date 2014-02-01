@@ -37,8 +37,8 @@ namespace GuiaTBAWP.Extensions
             {
                 //no me importa si pincha.
             }
-            
-            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
+
+            var apiCallUri = new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
                 source,
                 App.Configuration.Name,
                 App.Configuration.Version,

@@ -45,7 +45,10 @@
 					<TextBlock Margin="-12,0,0,0" Text="el servicio" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Estaciones">
-					<TextBlock Margin="-12,0,0,0" Text="estaciones" />
+                    <TextBlock Margin="-12,0,0,0" Text="estaciones" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mapa">
+                    <TextBlock Margin="-12,0,0,0" Text="mapa de ciclovias" />
                 </Button>
 
                 <Grid Margin="0,220,0,0" HorizontalAlignment="Left" Grid.Row="1">

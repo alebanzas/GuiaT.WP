@@ -13,10 +13,10 @@ using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.Bicicletas
@@ -29,7 +29,6 @@ namespace GuiaTBAWP.Views.Bicicletas
             get { return _viewModel ?? (_viewModel = new EstacionesStatusViewModel()); }
         }
 
-        Pushpin _posicionActual;
         WebRequest _httpReq;
 
         public Estaciones()
@@ -48,31 +47,13 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", App.Configuration.UltimaActualizacionBicicletas.ToUpdateDateTime());
 
-            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
-
             MostrarLugares();
             
             Cargar();
         }
-
-        private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
-        {
-            MiMapa.Children.Remove(_posicionActual);
-
-            if (location == null) return;
-
-            _posicionActual = new Pushpin
-                {
-                    Location = location.Location,
-                    Template = (ControlTemplate) (Application.Current.Resources["locationPushpinTemplate"])
-                };
-            MiMapa.Children.Add(_posicionActual);
-        }
-
-
+        
         public void MostrarLugares()
         {
-            MiMapa.Children.Clear();
             ViewModel.Estaciones.Clear();
 
             var bicicletaEstacionTables = BicicletaEstacionDC.GetAll();
@@ -89,53 +70,19 @@ namespace GuiaTBAWP.Views.Bicicletas
             var lugares = new ObservableCollection<BicicletaEstacionTable>(list);
             foreach (var lugar in lugares)
             {
-                var pushpin = new Pushpin
-                    {
-                        Content = lugar.Nombre,
-                        Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud)
-                    };
                 if (!App.Configuration.IsLocationEnabled)
                 {
                     lugar.Distance = string.Empty;
                 }
-                MiMapa.Children.Add(pushpin);
                 ViewModel.AddEstacion(lugar);
             }
-
-            //Si uso localizacion, agrego mi ubicación
-            ActualizarUbicacion(App.Configuration.IsLocationEnabled ? PositionService.GetCurrentLocation() : null);
-
-            AjustarMapa();
-        }
-
-        private void AjustarMapa()
-        {
-            //Ajusto el mapa para mostrar los items
-            IEnumerable<GeoCoordinate> x = from l in MiMapa.Children
-                    let pushpin = l as Pushpin
-                    where pushpin != null
-                    select pushpin.Location;
-
-            IEnumerable<GeoCoordinate> ox;
-            if (App.Configuration.IsLocationEnabled)
-            {
-                GeoCoordinate po = PositionService.GetCurrentLocation().Location;
-
-                ox = x.OrderBy(y => y.GetDistanceTo(po)).Take(4);
-            }
-            else
-            {
-                ox = x;
-            }
-
-            MiMapa.SetView(LocationRect.CreateLocationRect(ox));
         }
         
         public void Cargar(bool refresh = false)
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                ProgressBar.Show(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
+                ProgressBar.Show("Actualizando estado...");
 
                 var client = new HttpClient();
                 _httpReq = client.Get("/api/bicicleta".ToApiCallUri(refresh));
@@ -217,14 +164,14 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             var lat2 = getCurrentLocation.Location.Latitude;
             var lon2 = getCurrentLocation.Location.Longitude;
-            var R = 6378.137; // Radius of earth in KM
+            const double r = 6378.137; // Radius of earth in KM
             var dLat = (lat2 - lat1) * Math.PI / 180;
             var dLon = (lon2 - lon1) * Math.PI / 180;
             var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
             Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
             Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
             var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            var d = R * c;
+            var d = r * c;
             return d * 1000; // meters
         }
 
@@ -265,11 +212,6 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
         }
-
-        private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
-        }
         
         private void ButtonGo_Click(object sender, EventArgs e)
         {
@@ -282,10 +224,17 @@ namespace GuiaTBAWP.Views.Bicicletas
             var selectedListBoxItem = List.ItemContainerGenerator.ContainerFromItem(((MenuItem)sender).DataContext) as ListBoxItem;
             if (selectedListBoxItem == null) return;
             var selectedIndex = List.ItemContainerGenerator.IndexFromContainer(selectedListBoxItem);
+            
             var item = (BicicletaEstacionTable)List.Items[selectedIndex];
             var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", item.Id), UriKind.Relative);
             TileManager.Set(uri, string.Format("Estación {0}", item.Nombre.ToLowerInvariant()), new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
+    }
+
+    public class BikeLine
+    {
+        public string Nombre { get; set; }
+        public IEnumerable<PuntoViewModel> Puntos { get; set; }
     }
 
     public class EstacionesStatusViewModel: INotifyPropertyChanged

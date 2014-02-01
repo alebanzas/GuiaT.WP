@@ -34,5 +34,10 @@ namespace GuiaTBAWP.Views.Bicicletas
         {
             NavigationService.Navigate(new Uri("/Views/Bicicletas/Estaciones.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_Mapa(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
+        }
     }
 }

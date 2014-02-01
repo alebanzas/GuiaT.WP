@@ -6,6 +6,8 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using GuiaTBAWP.BusData;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
@@ -15,7 +17,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 {
     public partial class Mapa : PhoneApplicationPage
     {
-        Pushpin PosicionActual;
+        Pushpin _posicionActual;
         public ObservableCollection<BicicletaEstacionTable> EnLugar;
 
         public Mapa()
@@ -32,14 +34,15 @@ namespace GuiaTBAWP.Views.Bicicletas
         
         private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
         {
-            MiMapa.Children.Remove(PosicionActual);
-            if (location != null && !location.Location.IsUnknown)
+            MiMapa.Children.Remove(_posicionActual);
+            if (location == null || location.Location.IsUnknown) return;
+
+            _posicionActual = new Pushpin
             {
-                PosicionActual = new Pushpin();
-                PosicionActual.Location = location.Location;
-                PosicionActual.Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"]);
-                MiMapa.Children.Add(PosicionActual);
-            }
+                Location = location.Location,
+                Template = App.Current.Resources["locationPushpinTemplate"] as ControlTemplate,
+            };
+            MiMapa.Children.Add(_posicionActual);
         }
 
         void MostrarLugares()
@@ -47,52 +50,86 @@ namespace GuiaTBAWP.Views.Bicicletas
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
-            var query = from MiLugar in BicicletaEstacionDC.Current.Estaciones
-                        orderby MiLugar.Id
-                        select MiLugar;
+            ReferencesListBox.ItemsSource = new List<BikeReference>
+            {
+                new BikeReference { Id = 1, Nombre = "Ciclovias", Checked = true},
+                new BikeReference { Id = 2, Nombre = "Estaciones", Checked = false},
+                //new BikeReference { Id = 3, Nombre = "Estacionamientos", Checked = false},
+            };
+
+            RenderBikeRoads();
+
+            var query = from miLugar in BicicletaEstacionDC.Current.Estaciones
+                        orderby miLugar.Id
+                        select miLugar;
 
             EnLugar = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
 
-            foreach (BicicletaEstacionTable ML in EnLugar)
+            foreach (var ml in EnLugar)
             {
 
-                Pushpin NuevoLugar = new Pushpin();
-                NuevoLugar.Content = ML.Nombre;
-                NuevoLugar.Location = new GeoCoordinate(ML.Latitud, ML.Longitud);
+                var nuevoLugar = new Pushpin
+                {
+                    Content = ml.Nombre,
+                    Location = new GeoCoordinate(ml.Latitud, ml.Longitud),
+                    Visibility = Visibility.Collapsed,
+                };
 
-                NuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
-                this.MiMapa.Children.Add(NuevoLugar);
+                nuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
+                MiMapa.Children.Add(nuevoLugar);
             }
 
             //Ajusto el mapa para mostrar los items
-            var x = from l in this.MiMapa.Children
-                    select (l as Pushpin).Location;
+            var x = from l in MiMapa.Children let pushpin = l as Pushpin where pushpin != null && pushpin.Location != null select pushpin.Location;
+
             MiMapa.SetView(LocationRect.CreateLocationRect(x));
 
             //Si uso localizacion, agrego mi ubicación
-            if (App.Configuration.IsLocationEnabled)
-                ActualizarUbicacion(App.Configuration.Ubicacion);
-            else
-                ActualizarUbicacion(null);
+            ActualizarUbicacion(App.Configuration.IsLocationEnabled ? App.Configuration.Ubicacion : null);
+        }
+
+        private void RenderBikeRoads()
+        {
+            var lineas = DataBicicletas.GetData();
+
+            var routeBrush = new SolidColorBrush(Colors.Blue);
+
+            foreach (var line in lineas)
+            {
+                var routeLine = new MapPolyline
+                {
+                    Name = line.Nombre,
+                    Locations = new LocationCollection(),
+                    Stroke = routeBrush,
+                    Opacity = 0.8,
+                    StrokeThickness = 5.0,
+                };
+
+                foreach (var location in line.Puntos)
+                {
+                    routeLine.Locations.Add(new GeoCoordinate(location.X, location.Y));
+                }
+
+                MiMapa.Children.Add(routeLine);
+            }
         }
 
         private void NuevoLugar_MouseLeftPuttonUp(object sender, MouseButtonEventArgs e)
         {
-            Pushpin pin = sender as Pushpin;
+            var pin = sender as Pushpin;
 
-            if (pin != null)
-            {
-                var query = from l in BicicletaEstacionDC.Current.Estaciones
-                            where l.Latitud == pin.Location.Latitude
-                            && l.Longitud == pin.Location.Longitude
-                            && l.Nombre == pin.Content.ToString()
-                            select l;
+            if (pin == null) return;
 
-                List<BicicletaEstacionTable> listaLugares = query.ToList();
-                BicicletaEstacionTable bicicletaEstacion = listaLugares.FirstOrDefault();
-                Uri uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
-                NavigationService.Navigate(uri);
-            }
+            var query = from l in BicicletaEstacionDC.Current.Estaciones
+                where l.Latitud == pin.Location.Latitude
+                      && l.Longitud == pin.Location.Longitude
+                      && l.Nombre == pin.Content.ToString()
+                select l;
+
+            var listaLugares = query.ToList();
+            var bicicletaEstacion = listaLugares.FirstOrDefault();
+            var uri = new Uri(String.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
 
         private void BtnAcercar_Click(object sender, EventArgs e)
@@ -118,5 +155,39 @@ namespace GuiaTBAWP.Views.Bicicletas
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
         }
 
+        private void BtnReferencias_Click(object sender, EventArgs e)
+        {
+            Results.Visibility = Results.Visibility.Equals(Visibility.Collapsed)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+
+        private void References_OnChecked(object sender, RoutedEventArgs e)
+        {
+            var item = (CheckBox)sender;
+            if (item.Content.Equals("Estaciones"))
+            {
+                foreach (var child in MiMapa.Children.OfType<Pushpin>().Where(x => x.Content != null))
+                {
+                    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                foreach (var child in MiMapa.Children.OfType<MapPolyline>())
+                {
+                    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                }
+            }
+        }
+    }
+
+    public class BikeReference
+    {
+        public int Id { get; set; }
+
+        public string Nombre { get; set; }
+
+        public bool Checked { get; set; }
     }
 }

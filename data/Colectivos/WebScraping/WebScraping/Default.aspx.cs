@@ -10,479 +10,137 @@ using ScrapySharp.Extensions;
 
 namespace WebScraping
 {
-
-    public class TipoTransporte
-    {
-        public Guid Id { get; set; }
-
-    }
-
     public partial class Default : System.Web.UI.Page
     {
-        public TipoTransporte Subte = new TipoTransporte
+
+        public List<string> LineasBici = new List<string>
         {
-            Id = new Guid("E74E932C-BF15-4ED6-ADA6-F0CBF0688B78"),
+            "ukra9kx2rzt",
+            "l1ov51ds16",
+            "line28",
+            "lqd53i7qhph9f6",
+            "br2629xk5ut052",
+            "line3",
+            "line4",
+            "line5",
+            "g4a8p7nhca24kj",
+            "vuac457fario1o",
+            "line8",
+            "paan4nf24bmrhp",
+            "line10",
+            "line12",
+            "line13",
+            "line14",
+            "line16",
+            "line17",
+            "line18",
+            "line19",
+            "line20",
+            "line21",
+            "line23",
+            "line24",
+            "line27",
+            "line29",
+            "line30",
+            "line31",
+            "line32",
+            "line34",
+            "line35",
+            "line36",
+            "line2",
+            "wt81hktlbass8a",
+            "hqg5lh277e6d2t",
+            "l5czfnojg6k9y6",
+            "gzhds5hhn2ricn",
+            "o02viz25cint57",
+            "f2mbcu6t70t3xr",
+            "gdaj5hl4bg6faj",
+            "76r9uudsa0mgqf",
+            "2kayk99fvstf0f",
+            "kn6chowks5hlg1",
+            "oug3igdd8amm42",
+            "d0jroybrwrn3ik",
+            "4n0tgr1mos6pqf",
+            "m0jt4qf0i4gw4s",
+            "7ayjil8mcguba9",
+            "hcwd4yhv0gpkfb",
+            "0gslo6ywmcu6us",
+            "line22",
+            "roflqt6yg7ouso",
+            "line25",
+            "8txw8uzzl9sve7",
+            "ow1xlgkoe6i27q",
+            "g54xbisclu8zol",
+            "ei4e6ww9m9yynw",
+            "rhi1n3utnblqh0",
+            "line11",
+            "line9",
+            "line2a",
+            "line7",
+            "line6",
+            "hmrvisy9x4gf1o",
+            "iy5t5mvojzzd7v",
+            "ue0c7l06cxamj9",
         };
-        public TipoTransporte Colectivo = new TipoTransporte
-        {
-            Id = new Guid("8C9A672B-9103-47BF-A373-0648C0F10C5C"),
-        };
-        public TipoTransporte Tren = new TipoTransporte
-        {
-            Id = new Guid("440C21D3-71DE-4C94-849D-66139EADCE4C"),
-        };
-
-        public List<string> LineasSubte = new List<string>
-            {
-                "A",
-                "B",
-                "C",
-                "D",
-                "E",
-                "H",
-                "P",
-            };
-
-        public List<string> LineasTren = new List<string>
-            {
-                "roca",
-                "sarmiento",
-                "san-martin",
-                "urquiza",
-                "mitre",
-                "belgrano-norte",
-                "belgrano-sur",
-            };
-
-        /*public List<string> LineasColectivo = new List<string>
-            {
-                "1",
-                "2",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "12",
-                "15",
-                "17",
-                "19",
-                "20",
-                "21",
-                "22",
-                "23",
-                "24",
-                "25",
-                "26",
-                "28",
-                "29",
-                "32",
-                "33",
-                "34",
-                "36",
-                "37",
-                "39",
-                "41",
-                "42",
-                "44",
-                "45",
-                "46",
-                "47",
-                "49",
-                "50",
-                "51",
-                "53",
-                "55",
-                "56",
-                "57",
-                "59",
-                "60",
-                "61",
-                "62",
-                "63",
-                "64",
-                "65",
-                "67",
-                "68",
-                "70",
-                "71",
-                "74",
-                "75",
-                "76",
-                "78",
-                "79",
-                "80",
-                "84",
-                "85",
-                "86",
-                "87",
-                "88",
-                "91",
-                "92",
-                "93",
-                "95",
-                "96",
-                "97",
-                "98",
-                "99",
-                "100",
-                "101",
-                "102",
-                "103",
-                "104",
-                "105",
-                "106",
-                "107",
-                "108",
-                "109",
-                "110",
-                "111",
-                "112",
-                "113",
-                "114",
-                "115",
-                "117",
-                "118",
-                "123",
-                "124",
-                "126",
-                "127",
-                "128",
-                "129",
-                "130",
-                "132",
-                "133",
-                "134",
-                "135",
-                "136",
-                "140",
-                "141",
-                "143",
-                "146",
-                "148",
-                "150",
-                "151",
-                "152",
-                "153",
-                "154",
-                "158",
-                "159",
-                "160",
-                "161",
-                "163",
-                "165",
-                "166",
-                "168",
-                "169",
-                "172",
-                "174",
-                "175",
-                "176",
-                "177",
-                "178",
-                "179",
-                "180",
-                "181",
-                "182",
-                "184",
-                "185",
-                "188",
-                "193",
-                "194",
-                "195"
-            };*/
-        /*
-        //Update metrobus 9 de julio
-        public List<string> LineasColectivo = new List<string>
-            {
-                "5",
-                "6",
-                "7",
-                "9",
-                "10",
-                "17",
-                "24",
-                "26",
-                "45",
-                "53",
-                "59",
-                "67",
-                "70",
-                "75",
-                "91",
-                "98",
-                "100",
-                "111",
-                "115",
-                "129",
-                "152",
-                "195"
-            };
-        */
-
-        //Nuevas provinciales y municipales
-        public List<string> LineasColectivo = new List<string>
-            {
-                "503",
-"505",
-"506",
-"508",
-"514",
-"518",
-"520",
-"521",
-"522",
-"523",
-"526",
-"527",
-"532",
-"540",
-"541",
-"542",
-"543",
-"548",
-"549",
-"550",
-"551",
-"552",
-"553",
-"561",
-"562",
-"564",
-"570",
-"580",
-"582",
-"583",
-"584",
-"585",
-"620",
-"621",
-"622",
-"624",
-"628",
-"630",
-"634",
-"635",
-"670",
-"707",
-"710",
-"720",
-"721",
-"723"
-            };
-
-        public List<string> LineasColectivoProv = new List<string>
-            {
-                "203",
-"204A",
-"204B",
-"205", 
-"218", 
-"219", 
-"228a",
-"228b",
-"228d",
-"228e",
-"228f",
-"236",
-"237",
-"238",
-"242",
-"243",
-"244",
-"247",
-"252",
-"253",
-"257",
-"263",
-"266",
-"269",
-"271",
-"273",
-"275",
-"277",
-"278",
-"281",
-"283",
-"284",
-"291",
-"293",
-"295",
-"298",
-"299",
-"300",
-"302",
-"303",
-"306",
-"307",
-"310",
-"312",
-"314",
-"315",
-"317",
-"318",
-"320",
-"321",
-"322",
-"324",
-"325",
-"326",
-"328",
-"333",
-"336",
-"338",
-"341",
-"343",
-"354",
-"365",
-"371",
-"372",
-"378",
-"379",
-"382",
-"384",
-"386",
-"390",
-"391",
-"392",
-"395",
-"403",
-"405",
-"406",
-"407",
-"410",
-"414",
-"418",
-"421",
-"422",
-"429",
-"430",
-"435",
-"437",
-"441",
-"443",
-"446",
-"461",
-"462",
-"463",
-"464",
-"500"
-            };
 
         public string Resultado { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ShowSubte();
-            //ShowTren();
-            
-            //ShowSubte(true);
-            //ShowTren(true);
-
-            ShowColectivo(LineasColectivo);
-            ShowColectivo(LineasColectivo, true);
-
-            //ShowColectivo(LineasColectivoProv);
-            //ShowColectivo(LineasColectivoProv, true);
+            ShowBici();
         }
 
-        protected void ShowSubte(bool regreso = false)
-        {
-            string result = string.Empty;
-
-            foreach (var linea in LineasSubte)
-            {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-subte-" + linea + "/" + (regreso ? "&r=1" : "")));
-
-                var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
-
-                string script = html.CssSelect("script").ToArray()[4].InnerText;
-
-                var i = 0;
-                foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
-                {
-                    string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
-                                "VALUES (NEWID(),'{0}','Linea {1}','{1}','{2}','{3}','',{4})";
-
-                    var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
-
-                    result += string.Format(query, Subte.Id, linea, ramales[i].InnerText, GetLocationsFromString(item[0]), regreso ? "1" : "0") + "<br><br>";
-                    i++;
-                }
-            }
-
-            Resultado = result;
-        }
-
-        protected void ShowTren(bool regreso = false)
+        protected void ShowBici()
         {
             string result = string.Empty;
 
             CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
             TextInfo textInfo = cultureInfo.TextInfo;
 
-            foreach (var linea in LineasTren)
+            foreach (var linea in LineasBici)
             {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-tren-" + linea + "/" + (regreso ? "&r=1" : "")));
+                BiciResult r = new JsonResult<BiciResult>().GetNodes(
+                    new Uri("http://190.210.190.48/bikepath/route/?bikepath_code=" + linea));
 
-                var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
+                var initT = "lineas.Add(new BikeLine<br>" +
+                            "            {<br>" +
+                            "                Nombre = \"" + r.bikepath_name + "\",<br>" +
+                            "                Puntos = new List&lt;PuntoViewModel&gt;<br>" +
+                            "                {<br>";
 
-                string script = html.CssSelect("script").ToArray()[4].InnerText;
-
-                var i = 0;
-                foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
+                foreach (var route in r.route)
                 {
-                    string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
-                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','',{5})";
-
-                    var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
-
-                    result += string.Format(query, Tren.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea, regreso ? "1" : "0") + "<br><br>";
-                    i++;
+                    initT += "                    new PuntoViewModel{ X = " + route.latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + ", Y = " + route.longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "},<br>";
                 }
+
+                initT += "                }<br>" +
+                        "            });<br>" +
+                        "            <br>";
+                
+                result += initT;
+
             }
 
             Resultado = result;
         }
 
-        protected void ShowColectivo(List<string> lineas, bool regreso = false)
+        public class BiciResult
         {
-            string result = string.Empty;
-
-            CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
-            TextInfo textInfo = cultureInfo.TextInfo;
-
-
-            Parallel.ForEach(lineas, linea =>
+            public BiciResult()
             {
-                HtmlNode html = new Scraper(Encoding.UTF7).GetNodes(new Uri("http://www.omnilineas.com.ar/buenos-aires/colectivo/linea-" + linea + "/" + (regreso ? "&r=1" : "")));
+                route = new List<BiciRouteItem>();
+            }
 
-                var ramales = html.CssSelect("ul").ToArray()[1].CssSelect("li").ToArray();
-
-                string script = html.CssSelect("script").ToArray()[4].InnerText;
-
-                var i = 0;
-                foreach (var info in script.Split(new[] { "str2garr('" }, StringSplitOptions.RemoveEmptyEntries).Skip(1))
-                {
-                    string query = "INSERT INTO [GUIATBA_Transporte]" +
-                                "([ID],[TipoTransporteID],[Nombre],[Codigo],[Ramal],[Ubicacion],[DescripcionRecorrido],[Regreso])" +
-                                "VALUES (NEWID(),'{0}','Linea {1} {2}','{4}','{2}','{3}','',{5})";
-
-                    var item = info.Split(new[] { "')" }, StringSplitOptions.RemoveEmptyEntries);
-
-                    result += string.Format(query, Colectivo.Id, textInfo.ToTitleCase(linea), ramales[i].InnerText, GetLocationsFromString(item[0]), linea, regreso ? "1" : "0") + "<br><br>";
-                    i++;
-                }
-            });
-
-            Resultado = result;
+            public string bikepath_name { get; set; }
+            public string bikepath_code { get; set; }
+            public List<BiciRouteItem> route { get; set; }
         }
 
-
+        public class BiciRouteItem
+        {
+            public double latitude { get; set; }
+            public double longitude { get; set; }
+        }
 
         private string GetLocationsFromString(string line)
         {
@@ -496,7 +154,8 @@ namespace WebScraping
         }
 
         public string DecodePoint(string pdat)
-        {			//decode polypoint of 18 chars, return array with lat and lng
+        {
+            //decode polypoint of 18 chars, return array with lat and lng
             if (pdat.Length != 18) return string.Empty;
             var datlat = pdat.Slice(0, 9);
             var datlng = pdat.Slice(9, 18);
@@ -525,37 +184,12 @@ namespace WebScraping
             var rfghlng = int.Parse(fghlng, NumberStyles.HexNumber);
 
 
-            double reslat = rslat * (rablat + (double)rcdelat / 1000 + (double)rfghlat / 1000000);
-            double reslng = rslng * (rablng + (double)rcdelng / 1000 + (double)rfghlng / 1000000);
+            double reslat = rslat*(rablat + (double) rcdelat/1000 + (double) rfghlat/1000000);
+            double reslng = rslng*(rablng + (double) rcdelng/1000 + (double) rfghlng/1000000);
 
             return string.Format("{0} {1}, <br>", reslng, reslat);
         }
 
 
-    }
-
-    public static class StringExtensions
-    {
-        public static IEnumerable<string> SplitByLength(this string str, int maxLength)
-        {
-            for (int index = 0; index < str.Length; index += maxLength)
-            {
-                yield return str.Substring(index, Math.Min(maxLength, str.Length - index));
-            }
-        }
-
-        /// <summary>
-        /// Get the string slice between the two indexes.
-        /// Inclusive for start index, exclusive for end index.
-        /// </summary>
-        public static string Slice(this string source, int start, int end)
-        {
-            if (end < 0) // Keep this for negative end support
-            {
-                end = source.Length + end;
-            }
-            int len = end - start;               // Calculate length
-            return source.Substring(start, len); // Return Substring of length
-        }
     }
 }

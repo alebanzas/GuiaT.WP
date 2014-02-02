@@ -34,7 +34,7 @@
             <TextBlock Text="estaciones" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Margin="12,50,0,0">
+        <StackPanel Grid.Row="1" Margin="12,0,0,0">
             <StackPanel Margin="12,0,0,0">
                 <ListBox x:Name="List" Height="510" Margin="0,0,0,10" ItemsSource="{Binding Estaciones}" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="LstLugares_SelectionChanged">
                     <ListBox.ItemTemplate>

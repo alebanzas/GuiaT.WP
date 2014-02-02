@@ -88,6 +88,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusData\DataTren.cs" />
+    <Compile Include="BusData\DataSubte.cs" />
     <Compile Include="BusData\DataBicicletas.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="GeneralError.xaml.cs">
@@ -165,6 +167,9 @@
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Subtes\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
       <DependentUpon>SubteEstado.xaml</DependentUpon>
     </Compile>
@@ -214,6 +219,9 @@
     </Compile>
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Trenes\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
@@ -360,6 +368,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Subtes\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Subtes\SubteEstado.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -423,6 +435,10 @@
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Trenes\Mitre.xaml">
       <SubType>Designer</SubType>

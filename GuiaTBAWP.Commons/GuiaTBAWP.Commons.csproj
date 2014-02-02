@@ -79,6 +79,7 @@
     <Compile Include="Models\BicicletaEstacionDC.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
+    <Compile Include="Models\TrackLine.cs" />
     <Compile Include="Models\ColectivoModel.cs" />
     <Compile Include="Models\RadioTaxiDC.cs" />
     <Compile Include="Models\RadioTaxiTable.cs" />

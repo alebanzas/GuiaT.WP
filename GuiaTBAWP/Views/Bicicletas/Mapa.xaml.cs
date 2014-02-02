@@ -105,7 +105,7 @@ namespace GuiaTBAWP.Views.Bicicletas
                     StrokeThickness = 5.0,
                 };
 
-                foreach (var location in line.Puntos)
+                foreach (var location in line.Trazado)
                 {
                     routeLine.Locations.Add(new GeoCoordinate(location.X, location.Y));
                 }

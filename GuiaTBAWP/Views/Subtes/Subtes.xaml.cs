@@ -18,27 +18,32 @@ namespace GuiaTBAWP.Views.Subtes
         
         private void Button_Click_SubteLineas(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/SubteLineas.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/SubteLineas.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SubteHorarios(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/SubteHorarios.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/SubteHorarios.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SubtePrecio(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/SubtePrecio.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/SubtePrecio.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SubteMapa(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/SubteMapa.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/SubteMapa.xaml", UriKind.Relative));
         }
 
         private void Button_Click_SubteEstado(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Views/Subtes/SubteEstado.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Subtes/SubteEstado.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_SubteMapaReal(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Subtes/Mapa.xaml", UriKind.Relative));
         }
     }
 }

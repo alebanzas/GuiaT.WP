@@ -47,5 +47,10 @@ namespace GuiaTBAWP.Views.Trenes
         {
             NavigationService.Navigate(new Uri("/Views/Trenes/Urquiza.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_Mapa(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Trenes/Mapa.xaml", UriKind.Relative));
+        }
     }
 }

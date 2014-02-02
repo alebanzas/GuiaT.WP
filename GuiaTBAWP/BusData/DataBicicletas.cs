@@ -1,4 +1,5 @@
-﻿using GuiaTBAWP.Commons.ViewModels;
+﻿using GuiaTBAWP.Commons.Models;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Views.Bicicletas;
 using System.Collections.Generic;
 
@@ -6,17 +7,17 @@ namespace GuiaTBAWP.BusData
 {
     public class DataBicicletas
     {
-        public static List<BikeLine> GetData()
+        public static List<TrackLine> GetData()
         {
             //wt81hktlbass8a
             //gzhds5hhn2ricn
 
-            var lineas = new List<BikeLine>
+            var lineas = new List<TrackLine>
             {
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Pampa",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5844731848619, Y = -58.4880995750427},
                         new PuntoViewModel {X = -34.5836693829063, Y = -58.4867906570435},
@@ -26,10 +27,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5706838126772, Y = -58.4641313552856},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Alcorta",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5786697368468, Y = -58.406925201416},
                         new PuntoViewModel {X = -34.5764789844524, Y = -58.4048223495483},
@@ -46,10 +47,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5652062973196, Y = -58.4198212623596},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 28",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5665429403057, Y = -58.4179710085983},
                         new PuntoViewModel {X = -34.5661183935429, Y = -58.4177090276127},
@@ -128,10 +129,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5713381345035, Y = -58.411627679554},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Serrano (dsd Padilla) - Jorge Luis Borges (hst AV. Santa Fe)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5980198871463, Y = -58.4446672350168},
                         new PuntoViewModel {X = -34.5971808898681, Y = -58.4435836225748},
@@ -162,10 +163,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5819273252683, Y = -58.4207848459482},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Godoy Cruz (dsd Gorriti hst Av. Santa Fe)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5875185631552, Y = -58.4339491277933},
                         new PuntoViewModel {X = -34.5868472811638, Y = -58.4329298883677},
@@ -190,10 +191,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5723692356078, Y = -58.4205380827188},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 3",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5805294165069, Y = -58.4047136269836},
                         new PuntoViewModel {X = -34.5815359220986, Y = -58.4051699067459},
@@ -207,19 +208,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.592342, Y = -58.412849},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 4",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.592308, Y = -58.412849},
                         new PuntoViewModel {X = -34.5928, Y = -58.412205},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 5",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.580894, Y = -58.442501},
                         new PuntoViewModel {X = -34.58736, Y = -58.434177},
@@ -230,10 +231,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.595665, Y = -58.413921},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Entre Av. Sarmiento y Republica de la India.",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5753543932807, Y = -58.4153146483004},
                         new PuntoViewModel {X = -34.5753543932807, Y = -58.4150866605341},
@@ -242,10 +243,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5757850455177, Y = -58.4132091142237},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Dsd Alem hst Moreau de Justo.",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6053389509706, Y = -58.3698423206806},
                         new PuntoViewModel {X = -34.6051201142183, Y = -58.3671621233225},
@@ -253,10 +254,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6051907601938, Y = -58.3669153600931},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 8",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6233328737699, Y = -58.413724093254},
                         new PuntoViewModel {X = -34.6231711497561, Y = -58.413137801092},
@@ -288,19 +289,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6197611459788, Y = -58.380405},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Dsd Gibson Hst Av. Caseros.",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6386613583461, Y = -58.419851437211},
                         new PuntoViewModel {X = -34.6394822822326, Y = -58.4195295721293},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 10",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6263897348009, Y = -58.4475076527787},
                         new PuntoViewModel {X = -34.627476389754, Y = -58.4470299153443},
@@ -319,10 +320,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6316533117199, Y = -58.4511015214958},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 12",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6370828632605, Y = -58.411913728836},
                         new PuntoViewModel {X = -34.6370605748257, Y = -58.4109052671967},
@@ -341,10 +342,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.629429, Y = -58.391731},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 13",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.634197, Y = -58.412678},
                         new PuntoViewModel {X = -34.634869, Y = -58.414562},
@@ -352,10 +353,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.635857, Y = -58.42083},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 14",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6231531981953, Y = -58.423481271164},
                         new PuntoViewModel {X = -34.625546, Y = -58.423061},
@@ -364,19 +365,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.638635, Y = -58.419867},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 16",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.637463, Y = -58.420208},
                         new PuntoViewModel {X = -34.639599, Y = -58.43259},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 17",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.631866, Y = -58.37933},
                         new PuntoViewModel {X = -34.6322191314416, Y = -58.3795233730164},
@@ -386,10 +387,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6485578693678, Y = -58.3749401865082},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 18",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6469684788982, Y = -58.3742658306886},
                         new PuntoViewModel {X = -34.6463694790895, Y = -58.3745033730164},
@@ -406,10 +407,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6314694838471, Y = -58.3782169153442},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 19",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.638985, Y = -58.360295},
                         new PuntoViewModel {X = -34.638103, Y = -58.360802},
@@ -422,10 +423,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.627029, Y = -58.36787},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 20",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.627029, Y = -58.36787},
                         new PuntoViewModel {X = -34.625192, Y = -58.36798},
@@ -448,19 +449,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.612252282482, Y = -58.3679539766864},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 21",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.612252651264, Y = -58.3679539766864},
                         new PuntoViewModel {X = -34.6121639825135, Y = -58.3671331018524},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 23",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6003954671828, Y = -58.369328317791},
                         new PuntoViewModel {X = -34.5998820273379, Y = -58.3693968834324},
@@ -482,20 +483,20 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5898550924919, Y = -58.3711168220901},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 24",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5874652447347, Y = -58.3836380085983},
                         new PuntoViewModel {X = -34.590576, Y = -58.386539},
                         new PuntoViewModel {X = -34.59333, Y = -58.39006},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 27",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.580719, Y = -58.420403},
                         new PuntoViewModel {X = -34.576019, Y = -58.416023},
@@ -506,10 +507,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5752120957631, Y = -58.4144184146805},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 29",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5965064802085, Y = -58.3798779300594},
                         new PuntoViewModel {X = -34.597323193214, Y = -58.3798532216228},
@@ -535,10 +536,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.608890700554, Y = -58.3791878429222},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 30",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6112909897021, Y = -58.3889870846558},
                         new PuntoViewModel {X = -34.6113351076948, Y = -58.3894163717756},
@@ -592,20 +593,20 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.607601, Y = -58.404778},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 31",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.616081, Y = -58.431686},
                         new PuntoViewModel {X = -34.612267, Y = -58.43306},
                         new PuntoViewModel {X = -34.608768, Y = -58.434692},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 32",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.594994, Y = -58.447994},
                         new PuntoViewModel {X = -34.597042, Y = -58.445808},
@@ -614,10 +615,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.602978, Y = -58.439754},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 34",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6275864850867, Y = -58.3942983558197},
                         new PuntoViewModel {X = -34.6264468243559, Y = -58.3944507880287},
@@ -635,29 +636,29 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6117682406114, Y = -58.3961665073576},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 35",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.62408, Y = -58.366703},
                         new PuntoViewModel {X = -34.623991, Y = -58.365598},
                         new PuntoViewModel {X = -34.623876, Y = -58.365147},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 36",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6123394149916, Y = -58.4043770030585},
                         new PuntoViewModel {X = -34.612557, Y = -58.407816},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 2",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.605339, Y = -58.369888},
                         new PuntoViewModel {X = -34.605511, Y = -58.37249},
@@ -691,10 +692,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.60799, Y = -58.432961},
                     }
                 },
-                //new BikeLine
+                //new TrackLine
                 //{
                 //    Nombre = "wt81hktlbass8a",
-                //    Puntos = new List<PuntoViewModel>
+                //    Trazado = new List<PuntoViewModel>
                 //    {
                 //        new PuntoViewModel {X = -34.5868950328991, Y = -58.4168601036072},
                 //        new PuntoViewModel {X = -34.5868961369851, Y = -58.4168560802937},
@@ -702,10 +703,10 @@ namespace GuiaTBAWP.BusData
                 //        new PuntoViewModel {X = -34.5868977931142, Y = -58.4168560802937},
                 //    }
                 //},
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Av. Del Libertador (Dsd Austria hst Virrey del Pino)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5831002025066, Y = -58.3973295986652},
                         new PuntoViewModel {X = -34.5827292118256, Y = -58.3993680775166},
@@ -745,10 +746,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.561615347262, Y = -58.4445579349995},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Dsd Esq F. Alcorta hst Tornquist - Olleros hst Av. Del Libertador.",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5592827756507, Y = -58.4273059666157},
                         new PuntoViewModel {X = -34.5599896224406, Y = -58.4280140697956},
@@ -766,10 +767,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5636297882844, Y = -58.4366185963154},
                     }
                 },
-                //new BikeLine
+                //new TrackLine
                 //{
                 //    Nombre = "gzhds5hhn2ricn",
-                //    Puntos = new List<PuntoViewModel>
+                //    Trazado = new List<PuntoViewModel>
                 //    {
                 //        new PuntoViewModel {X = -34.5721856490187, Y = -58.4407210350037},
                 //        new PuntoViewModel {X = -34.5721679805136, Y = -58.4407532215118},
@@ -778,10 +779,10 @@ namespace GuiaTBAWP.BusData
                 //        new PuntoViewModel {X = -34.5721856490187, Y = -58.4407210350037},
                 //    }
                 //},
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Ceretti (entre gandara y larralde)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5664923310682, Y = -58.5025043785572},
                         new PuntoViewModel {X = -34.5672583544663, Y = -58.5018689045683},
@@ -800,10 +801,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5865853361856, Y = -58.4863856434822},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Libertador - Udaondo - Figueroa Alcorta - Monroe - 11 de Septiembre - Congreso",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5447165292531, Y = -58.4597513079643},
                         new PuntoViewModel {X = -34.5460995347688, Y = -58.4581124782562},
@@ -863,10 +864,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.555502976177, Y = -58.4625629335642},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Av. Sarmiento (sobre Av. Del Libertador).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.575024846192, Y = -58.4154214337468},
                         new PuntoViewModel {X = -34.5752633624982, Y = -58.4154428914189},
@@ -874,10 +875,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5755902170657, Y = -58.4156091883779},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Av. Del Libertador (entre Av. Iraola y Av. Sarmiento)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5752049757574, Y = -58.4151092916727},
                         new PuntoViewModel {X = -34.5751254703422, Y = -58.4152863174677},
@@ -886,10 +887,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5744540882483, Y = -58.4160856157541},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Montevideo (entre Av. Cordoba y Av. Rivadavia).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.599468517432, Y = -58.3896544575691},
                         new PuntoViewModel {X = -34.6001958588508, Y = -58.3896252885461},
@@ -939,11 +940,11 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6091976132341, Y = -58.3891535550356},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre =
                         "Av. Pres. Figueroa Alcorta (desde Monroe hasta Av. Dorrego) - Av. Dorrego (hasta Av. Del Libertador)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5477445854831, Y = -58.4421888738871},
                         new PuntoViewModel {X = -34.5478506275895, Y = -58.4416524320841},
@@ -982,10 +983,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5706730457378, Y = -58.4238854795694},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "11 De Septiembre de 1988 (entre Monroe y Blanco Escalada).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.55496494342, Y = -58.4542920067906},
                         new PuntoViewModel {X = -34.5554332543968, Y = -58.4539057686925},
@@ -994,19 +995,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.555932488667, Y = -58.4535088017583},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Blanco Escalada (entre Blanco Escalada y Dr. Juan Angel Golfarini)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.555935940221, Y = -58.453518524766},
                         new PuntoViewModel {X = -34.5561656753293, Y = -58.4539154917002},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "11 de Septiembre de 1988 (entre Olazabal y Av. Juramento).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5561622237849, Y = -58.4539004042745},
                         new PuntoViewModel {X = -34.5565289150623, Y = -58.4535624459386},
@@ -1018,10 +1019,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5588394747261, Y = -58.4511752799153},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Estados Unidos (entre Azopardo y Av. Alicia Moreao De Justo).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6181723865226, Y = -58.3672870136797},
                         new PuntoViewModel {X = -34.6181657645006, Y = -58.3672092296183},
@@ -1033,10 +1034,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6180653304342, Y = -58.3657407201827},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Villaflor, Azucena (entre Ing. Huergo y Av. Alicia Moreau De Justo).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6121662368664, Y = -58.367129014805},
                         new PuntoViewModel {X = -34.6121452656106, Y = -58.3668809104711},
@@ -1053,10 +1054,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6123385424357, Y = -58.3663023496047},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Adolfo Alsina (entre Paseo Colon y Virrey Cevallos).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.611283749428, Y = -58.3889738470316},
                         new PuntoViewModel {X = -34.6111954484293, Y = -58.3876971155405},
@@ -1121,19 +1122,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6099818865564, Y = -58.3694906998426},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "San Martin 1351 (hasta Av. Antartida Argentina)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5898584160137, Y = -58.3711252547801},
                         new PuntoViewModel {X = -34.5900637684409, Y = -58.3711359836161},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 22",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.61225448998, Y = -58.3679463558197},
                         new PuntoViewModel {X = -34.6116641621478, Y = -58.3680436693115},
@@ -1197,10 +1198,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6003952078133, Y = -58.3693259533729},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Gral. Lucio Alberto Mansilla (entre Av. Cnel Diaz y Julian Alvarez).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5923071554459, Y = -58.4128496982157},
                         new PuntoViewModel {X = -34.5920311514544, Y = -58.4132842160761},
@@ -1230,10 +1231,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5886726614269, Y = -58.4178895689547},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 25",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5900564912089, Y = -58.3711436441803},
                         new PuntoViewModel {X = -34.5915346344975, Y = -58.3723508472214},
@@ -1260,10 +1261,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.583084, Y = -58.397312},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Quilmes (Dsd Av. Caseros hst Av. La Plata).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6394381467465, Y = -58.4186176210642},
                         new PuntoViewModel {X = -34.6399412898959, Y = -58.4184996038675},
@@ -1277,19 +1278,19 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6479117293864, Y = -58.4174589067698},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Cruzero Gral. Belgrano (entre Av. Del Libertador y Juncal).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5925274749741, Y = -58.375295586884},
                         new PuntoViewModel {X = -34.5926908684717, Y = -58.3754189684987},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Carlos Pellegrini - Bernardo de Irigoyen (entre Tte. Juan Domingo Peron y Av. Belgrano).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6130232599524, Y = -58.3804980665445},
                         new PuntoViewModel {X = -34.6121049442175, Y = -58.3805302530527},
@@ -1304,10 +1305,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6061268136949, Y = -58.3808521181345},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "French/Azcuenaga/Juncal/Arenales",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5856067536942, Y = -58.4075686333017},
                         new PuntoViewModel {X = -34.5863266258396, Y = -58.4066084024744},
@@ -1343,10 +1344,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5942980270136, Y = -58.3827376324916},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Julian Alvarez (entre Gorriti y Padilla).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.593489201168, Y = -58.4251729398966},
                         new PuntoViewModel {X = -34.5942575805178, Y = -58.4262458235025},
@@ -1373,10 +1374,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.603009537982, Y = -58.4398070722818},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 11",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.630379, Y = -58.396191},
                         new PuntoViewModel {X = -34.62812, Y = -58.39679},
@@ -1389,10 +1390,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.628792, Y = -58.388168},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 9",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6263924208094, Y = -58.4475082503319},
                         new PuntoViewModel {X = -34.625997904211, Y = -58.4463419472561},
@@ -1430,10 +1431,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6221023421132, Y = -58.4136945251312},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 2b",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.637939, Y = -58.41169},
                         new PuntoViewModel {X = -34.6356621867413, Y = -58.4122685846557},
@@ -1457,10 +1458,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5928, Y = -58.412163},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 7",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.616753, Y = -58.38903},
                         new PuntoViewModel {X = -34.6167032770861, Y = -58.3874879394797},
@@ -1478,10 +1479,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.616081, Y = -58.3745886269836},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Línea 6",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.633339, Y = -58.38765},
                         new PuntoViewModel {X = -34.619999, Y = -58.3888358220902},
@@ -1502,10 +1503,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.609192, Y = -58.389149},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Gorriti-Freire-Conc. Arenal-Gral. Martinez-V. Loreto-Superi (Esq. La Pampa)",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5760441949472, Y = -58.4567371755838},
                         new PuntoViewModel {X = -34.5755583322383, Y = -58.4562972933054},
@@ -1521,10 +1522,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.5706288736644, Y = -58.4641615301371},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "Av. Patricias Argentinas (dsd Diaz Veles hst Bravard).",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.6087847948858, Y = -58.4347001463175},
                         new PuntoViewModel {X = -34.6085905267175, Y = -58.4345284849405},
@@ -1547,10 +1548,10 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.6051024527151, Y = -58.4377793222666},
                     }
                 },
-                new BikeLine
+                new TrackLine
                 {
                     Nombre = "a",
-                    Puntos = new List<PuntoViewModel>
+                    Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.5808947986696, Y = -58.4424956515431},
                         new PuntoViewModel {X = -34.580696048594, Y = -58.4422810748219},

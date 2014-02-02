@@ -11,6 +11,7 @@ namespace GuiaTBAWP.Views.SUBE
         public AtencionAlUsuario()
         {
             InitializeComponent();
+            StatusChecker.Check("SUBE.AtencionAlUsuario");
         }
 
         private void Hyperlink_Belgrano_OnClick(object sender, RoutedEventArgs e)

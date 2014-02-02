@@ -20,6 +20,8 @@ namespace GuiaTBAWP.Views.Trenes
             Loaded += Page_Loaded;
             Unloaded += (sender, args) => DataService.CancelRequest();
 
+            StatusChecker.Check("SanMartin");
+
             ViewModel.Ramales.Clear();
             DataService.EndRequest = EndRequest;
             DataService.StartRequest = StartRequest;

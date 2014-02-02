@@ -19,7 +19,7 @@ namespace GuiaTBAWP.Views.Trenes
             Loaded += Page_Loaded;
             Unloaded += (sender, args) => DataService.CancelRequest();
 
-            StatusChecker.Check("Sarmiento");
+            StatusChecker.Check("Trenes.Sarmiento");
 
             ViewModel.Ramales.Clear();
             DataService.EndRequest = EndRequest;

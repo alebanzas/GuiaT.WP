@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
@@ -13,7 +12,6 @@ using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
-using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
@@ -229,12 +227,6 @@ namespace GuiaTBAWP.Views.Bicicletas
             var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", item.Id), UriKind.Relative);
             TileManager.Set(uri, string.Format("Estación {0}", item.Nombre.ToLowerInvariant()), new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
-    }
-
-    public class BikeLine
-    {
-        public string Nombre { get; set; }
-        public IEnumerable<PuntoViewModel> Puntos { get; set; }
     }
 
     public class EstacionesStatusViewModel: INotifyPropertyChanged

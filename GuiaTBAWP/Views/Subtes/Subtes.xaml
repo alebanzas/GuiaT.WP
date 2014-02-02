@@ -42,12 +42,15 @@
 					<TextBlock Margin="0" Text="precio" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteMapa">
-					<TextBlock Margin="0" Text="mapa de la red" />
+					<TextBlock Margin="0" Text="la red" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteEstado">
-					<TextBlock Margin="0" Text="estado del servicio" />
+                    <TextBlock Margin="0" Text="estado del servicio" />
                 </Button>
-                
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteMapaReal">
+                    <TextBlock Margin="0" Text="mapa (nuevo)" />
+                </Button>
+
                 <Grid Margin="10,140,0,0" HorizontalAlignment="Left" Grid.Row="1">
                     <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
                 </Grid>

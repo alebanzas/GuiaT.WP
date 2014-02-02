@@ -70,6 +70,7 @@
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\ColorTranslator.cs" />
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\HashSet.cs" />
     <Compile Include="Helpers\TouchBehavior.cs" />

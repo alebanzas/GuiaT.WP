@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Device.Location;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using GuiaTBAWP.BusData;
+using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 
@@ -44,6 +46,12 @@ namespace GuiaTBAWP.Views.Subtes
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
+            ReferencesListBox.ItemsSource = new List<MapReference>
+            {
+                new MapReference { Id = 1, Nombre = "Trazado", Checked = true},
+                new MapReference { Id = 2, Nombre = "Estaciones", Checked = false},
+            };
+
             var lineas = DataSubte.GetData();
 
             foreach (var line in lineas)
@@ -73,6 +81,7 @@ namespace GuiaTBAWP.Views.Subtes
                     {
                         Content = ml.Name,
                         Location = new GeoCoordinate(ml.X, ml.Y),
+                        Visibility = Visibility.Collapsed,
                     };
 
                     MiMapa.Children.Add(nuevoLugar);
@@ -109,6 +118,32 @@ namespace GuiaTBAWP.Views.Subtes
         private void Opciones_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
+        }
+
+        private void BtnReferencias_Click(object sender, EventArgs e)
+        {
+            Results.Visibility = Results.Visibility.Equals(Visibility.Collapsed)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+
+        private void References_OnChecked(object sender, RoutedEventArgs e)
+        {
+            var item = (CheckBox)sender;
+            if (item.Content.Equals("Estaciones"))
+            {
+                foreach (var child in MiMapa.Children.OfType<Pushpin>().Where(x => x.Content != null))
+                {
+                    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                foreach (var child in MiMapa.Children.OfType<MapPolyline>())
+                {
+                    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                }
+            }
         }
     }
 }

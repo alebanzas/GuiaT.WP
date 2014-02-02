@@ -9,12 +9,15 @@ namespace GuiaTBAWP.Views.SUBE
         public PerdidaRoboDanio()
         {
             InitializeComponent();
+            StatusChecker.Check("SUBE.PerdidaRoboDanio");
         }
 
         private void SUBETel_OnClick(object sender, RoutedEventArgs e)
         {
-            var task = new PhoneCallTask();
-            task.PhoneNumber = "0800-777-7823";
+            var task = new PhoneCallTask
+            {
+                PhoneNumber = "0800-777-7823"
+            };
             task.Show();
         }
     }

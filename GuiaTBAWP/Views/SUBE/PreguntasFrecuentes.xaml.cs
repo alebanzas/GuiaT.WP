@@ -7,6 +7,7 @@ namespace GuiaTBAWP.Views.SUBE
         public PreguntasFrecuentes()
         {
             InitializeComponent();
+            StatusChecker.Check("SUBE.PreguntasFrecuentes");
         }
     }
 }

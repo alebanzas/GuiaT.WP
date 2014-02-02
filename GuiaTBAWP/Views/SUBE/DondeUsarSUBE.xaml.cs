@@ -7,6 +7,7 @@ namespace GuiaTBAWP.Views.SUBE
         public DondeUsarSUBE()
         {
             InitializeComponent();
+            StatusChecker.Check("SUBE.DondeUsarSUBE");
         }
     }
 }

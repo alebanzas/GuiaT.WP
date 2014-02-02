@@ -19,6 +19,8 @@ namespace GuiaTBAWP.Views.Trenes
             Loaded += Page_Loaded;
             Unloaded += (sender, args) => DataService.CancelRequest();
 
+            StatusChecker.Check("Sarmiento");
+
             ViewModel.Ramales.Clear();
             DataService.EndRequest = EndRequest;
             DataService.StartRequest = StartRequest;
@@ -39,7 +41,7 @@ namespace GuiaTBAWP.Views.Trenes
 
         private static void FillViewModel()
         {
-            var query = TrenesRamalEstadoDC.Current.ByLineas(new[] {"sarmiento", "pto. madero"});
+            var query = TrenesRamalEstadoDC.Current.ByLineas(new[] {"sarmiento"});
             ViewModel.Ramales.Clear();
             foreach (var estadoTable in query.ToList())
             {

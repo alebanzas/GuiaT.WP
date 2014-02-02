@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using GuiaTBAWP.Commons.ViewModels;
@@ -20,6 +19,8 @@ namespace GuiaTBAWP.Views.Trenes
             DataContext = ViewModel;
             Loaded += Page_Loaded;
             Unloaded += (sender, args) => DataService.CancelRequest();
+
+            StatusChecker.Check("Mitre");
 
             ViewModel.Ramales.Clear();
             DataService.EndRequest = EndRequest;

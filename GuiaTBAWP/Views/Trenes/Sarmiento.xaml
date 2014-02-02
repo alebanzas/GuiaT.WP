@@ -198,7 +198,7 @@
                 </ScrollViewer>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal">
+            <controls:PanoramaItem Header="ramal" Visibility="Collapsed">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Puerto Madero - Castelar</TextBlock>

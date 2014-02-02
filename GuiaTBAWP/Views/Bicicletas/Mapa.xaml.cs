@@ -50,11 +50,11 @@ namespace GuiaTBAWP.Views.Bicicletas
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
-            ReferencesListBox.ItemsSource = new List<BikeReference>
+            ReferencesListBox.ItemsSource = new List<MapReference>
             {
-                new BikeReference { Id = 1, Nombre = "Ciclovias", Checked = true},
-                new BikeReference { Id = 2, Nombre = "Estaciones", Checked = false},
-                //new BikeReference { Id = 3, Nombre = "Estacionamientos", Checked = false},
+                new MapReference { Id = 1, Nombre = "Ciclovias", Checked = true},
+                new MapReference { Id = 2, Nombre = "Estaciones", Checked = false},
+                //new MapReference { Id = 3, Nombre = "Estacionamientos", Checked = false},
             };
 
             RenderBikeRoads();
@@ -180,14 +180,5 @@ namespace GuiaTBAWP.Views.Bicicletas
                 }
             }
         }
-    }
-
-    public class BikeReference
-    {
-        public int Id { get; set; }
-
-        public string Nombre { get; set; }
-
-        public bool Checked { get; set; }
     }
 }

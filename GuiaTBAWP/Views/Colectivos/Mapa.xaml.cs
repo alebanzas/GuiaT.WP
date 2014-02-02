@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Device.Location;
-using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -11,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
@@ -279,33 +279,6 @@ namespace GuiaTBAWP.Views.Colectivos
             Results.Visibility = Results.Visibility.Equals(Visibility.Collapsed)
                 ? Visibility.Visible
                 : Visibility.Collapsed;
-        }
-    }
-
-    internal class ColorTranslator
-    {
-        public static Color FromHtml(string hex)
-        {
-            //remove the # at the front
-            hex = hex.Replace("#", "");
-
-            byte a = 255;
-
-            var start = 0;
-
-            //handle ARGB strings (8 characters long)
-            if (hex.Length == 8)
-            {
-                a = byte.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
-                start = 2;
-            }
-
-            //convert RGB characters to bytes
-            var r = byte.Parse(hex.Substring(start, 2), NumberStyles.HexNumber);
-            var g = byte.Parse(hex.Substring(start + 2, 2), NumberStyles.HexNumber);
-            var b = byte.Parse(hex.Substring(start + 4, 2), NumberStyles.HexNumber);
-
-            return Color.FromArgb(a, r, g, b);
         }
     }
 }

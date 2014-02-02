@@ -1,4 +1,5 @@
 ﻿using System.Windows.Media;
+using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
 using System.Collections.Generic;
@@ -333,7 +334,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.41661, Y = -58.871198},
                         
                     },
-                    Color = Colors.Red,
+                    Color = ColorTranslator.FromHtml("#EF1729"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Retiro", X = -34.590153, Y = -58.373923},
@@ -525,7 +526,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.770964  , Y = -58.645921 },
                         new PuntoViewModel {X = -34.77176  , Y = -58.64694  },
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6F89C4"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Buenos Aires", X = -34.645628, Y = -58.394201},
@@ -722,7 +723,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.706887  , Y = -58.726332 },
                         new PuntoViewModel {X = -34.70871  , Y =  -58.730753},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43569B"),
                 },
                 new TrackLine
                 {
@@ -802,7 +803,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.770964  , Y = -58.645921 },
                         new PuntoViewModel {X = -34.77176  , Y =  -58.64694 },
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml(""),
                 },
                 new TrackLine
                 {
@@ -856,7 +857,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X =  -34.661064 , Y = -58.416344 },
                         new PuntoViewModel {X =  -34.66111 , Y =  -58.415421 },
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#28377C"),
                 },
                 new TrackLine
                 {
@@ -995,7 +996,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.535772 , Y = -58.574933},
                         new PuntoViewModel {X = -34.53478  , Y = -58.575887},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#4DBCF4"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Retiro", X = -34.59138, Y = -58.374803},
@@ -1141,7 +1142,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.517448 , Y = -58.491425},
                         new PuntoViewModel {X = -34.51461 , Y = -58.488872},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#2290CF"),
                 },
                 new TrackLine
                 {
@@ -1416,7 +1417,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.098204 , Y = -59.037523},
                         new PuntoViewModel {X = -34.09770  , Y = -59.037962},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6FD6F7"),
                 },
                 new TrackLine
                 {
@@ -1596,7 +1597,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.424309 , Y = -58.580812},
                         new PuntoViewModel {X = -34.42352  , Y = -58.581783},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#0E85D5"),
                 },
                 new TrackLine
                 {
@@ -1874,7 +1875,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.290942 , Y = -59.097175},
                         new PuntoViewModel {X = -34.28705  , Y = -59.101616},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6FD6F7"),
                 },
                 new TrackLine
                 {
@@ -1935,7 +1936,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.97477 , Y = -58.374481},
                         new PuntoViewModel {X = -34.98133 , Y = -58.373643},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#2A367E"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Constitución", X = -34.628335, Y = -58.380618},
@@ -2055,7 +2056,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.797893, Y = -58.353388},
                         new PuntoViewModel {X = -34.8013, Y = -58.337358},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6F89C2"),
                 },
                 new TrackLine
                 {
@@ -2137,11 +2138,11 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -35.050499, Y = -58.744003},
                         new PuntoViewModel {X = -35.06026, Y = -58.755419},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6F89C2"),
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca - Constitución - Claypole",
+                    Nombre = "Roca - Constitución - Claypole", //TODO: check
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252, Y = -58.380704},
@@ -2217,7 +2218,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.902676, Y = -57.95199 },
                         new PuntoViewModel {X = -34.90440, Y = -57.949694},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#6F89C2"),
                 },
                 new TrackLine
                 {
@@ -2258,7 +2259,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.644823, Y = -58.593864},
                         new PuntoViewModel {X = -34.64489, Y = -58.594915},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml(""),
                 },
                 new TrackLine
                 {
@@ -2321,7 +2322,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.820216 , Y = -58.228161},
                         new PuntoViewModel {X = -34.81907  , Y = -58.231509},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43559D"),
                 },
                 new TrackLine
                 {
@@ -2379,7 +2380,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.822575 , Y = -58.221144},
                         new PuntoViewModel {X = -34.83483 , Y = -58.183335},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#97B5E7"),
                 },
                 new TrackLine
                 {
@@ -2671,7 +2672,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.468845  , Y = -58.907468 },
                         new PuntoViewModel {X = -34.46855  , Y = -58.90838  },
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#1C92D0"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Palermo", X = -34.57988, Y = -58.42753},
@@ -2736,7 +2737,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.653967 , Y = -58.777521},
                         new PuntoViewModel {X = -34.65003  , Y = -58.791125},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43BEF7"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Once", X = -34.60831, Y = -58.406518},
@@ -2841,7 +2842,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.659722 , Y = -59.419919},
                         new PuntoViewModel {X = -34.6575   , Y = -59.433568},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43BEF7"),
                 },
                 new TrackLine
                 {
@@ -2872,7 +2873,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.659722 , Y = -59.419919},
                         new PuntoViewModel {X = -34.6575   , Y = -59.433568},
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43BEF7"),
                 },
                 new TrackLine
                 {
@@ -2938,7 +2939,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -35.179017 , Y = -59.09299 },
                         new PuntoViewModel {X = -35.18618  , Y = -59.09282 },
                     },
-                    Color = Colors.Blue,
+                    Color = ColorTranslator.FromHtml("#43BEF7"),
                 },
                 new TrackLine
                 {
@@ -3065,7 +3066,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.533951, Y = -58.699542},
                         new PuntoViewModel {X = -34.5330, Y = -58.700873},
                     },
-                    Color = Colors.Orange,
+                    Color = ColorTranslator.FromHtml("#F87324"),
                     Postas = new List<PuntoViewModel>
                     {
                         new PuntoViewModel { Name = "Federico Lacroze", X = -34.586796, Y = -58.455452},

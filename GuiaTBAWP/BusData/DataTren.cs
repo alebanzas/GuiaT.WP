@@ -803,7 +803,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.770964  , Y = -58.645921 },
                         new PuntoViewModel {X = -34.77176  , Y =  -58.64694 },
                     },
-                    Color = ColorTranslator.FromHtml(""),
+                    Color = ColorTranslator.FromHtml("#28377C"),
                 },
                 new TrackLine
                 {
@@ -2259,7 +2259,7 @@ namespace GuiaTBAWP.BusData
                         new PuntoViewModel {X = -34.644823, Y = -58.593864},
                         new PuntoViewModel {X = -34.64489, Y = -58.594915},
                     },
-                    Color = ColorTranslator.FromHtml(""),
+                    Color = ColorTranslator.FromHtml("#43559D"),
                 },
                 new TrackLine
                 {

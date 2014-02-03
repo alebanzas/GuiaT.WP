@@ -136,31 +136,42 @@ namespace GuiaTBAWP.Views.Colectivos
 
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
-
-            for (int index = 0; index < ls.Count; index++)
+            
+            try
             {
-                TransporteViewModel transporteViewModel = ls[index];
-                var routeColor = GetRandomColor(index);
-                var routeBrush = new SolidColorBrush(routeColor);
 
-                var routeLine = new MapPolyline
+                for (int index = 0; index < ls.Count; index++)
                 {
-                    Name = transporteViewModel.Nombre,
-                    Locations = new LocationCollection(),
-                    Stroke = routeBrush,
-                    Opacity = 0.8,
-                    Visibility = Visibility.Collapsed,
-                    StrokeThickness = 5.0,
-                };
+                    TransporteViewModel transporteViewModel = ls[index];
+                    var routeColor = GetRandomColor(index);
+                    var routeBrush = new SolidColorBrush(routeColor);
 
-                foreach (var location in transporteViewModel.Puntos)
-                {
-                    routeLine.Locations.Add(new GeoCoordinate(location.Y, location.X));
+                    var routeLine = new MapPolyline
+                    {
+                        Name = transporteViewModel.Nombre,
+                        Locations = new LocationCollection(),
+                        Stroke = routeBrush,
+                        Opacity = 0.8,
+                        Visibility = Visibility.Collapsed,
+                        StrokeThickness = 5.0,
+                    };
+
+                    foreach (var location in transporteViewModel.Puntos)
+                    {
+                        routeLine.Locations.Add(new GeoCoordinate(location.Y, location.X));
+                    }
+
+                    ReferencesListBox.ItemsSource = new ObservableCollection<TransporteViewModel>(ls);
+
+                    MiMapa.Children.Add(routeLine);
                 }
-
-                ReferencesListBox.ItemsSource = new ObservableCollection<TransporteViewModel>(ls);
-
-                MiMapa.Children.Add(routeLine);
+            }
+            catch
+            {
+                ResetUI();
+                NoResults.Visibility = Visibility.Visible;
+                Config.Remove("linea-" + Linea);
+                return;
             }
 
             //Si uso localizacion, agrego mi ubicación

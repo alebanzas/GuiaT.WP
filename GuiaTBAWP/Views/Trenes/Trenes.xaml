@@ -53,9 +53,6 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Urquiza">
                     <TextBlock Margin="0" Text="urquiza" />
                 </Button>
-                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mapa">
-                    <TextBlock Margin="0" Text="mapa de la red" />
-                </Button>
             </StackPanel>
         </Grid>
     </Grid>

@@ -31,7 +31,7 @@
                 <ListBox x:Name="ReferencesListBox" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="300">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <CheckBox IsChecked="{Binding Checked}" Content="{Binding Nombre}" Click="References_OnChecked" />
+                            <CheckBox IsChecked="{Binding Checked}" Tag="{Binding Id}" Content="{Binding Nombre}" Click="References_OnChecked" />
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>

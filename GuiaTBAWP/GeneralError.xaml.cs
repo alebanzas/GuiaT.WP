@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -27,6 +28,13 @@ namespace GuiaTBAWP
 #if DEBUG
             DvErrorDetail.Visibility = Visibility.Visible;
 #endif
+            //el back vuelve a la home
+            while (NavigationService.BackStack.Count() > 1)
+            {
+                NavigationService.RemoveBackEntry();
+            }
+            
+
             ErrorText.Text = Exception.ToString();
         }
 

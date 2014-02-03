@@ -839,6 +839,8 @@
 							  Opacity="0.7">
 
             <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
+            <shell:ApplicationBarIconButton Text="mapa" IconUri="/Resources/Icons/ApplicationBar/Route.png"  Click="VerEnMapa_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.pin.rest.png" Text="Anclar" Click="Pin_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Navigation;
 using GuiaTBAWP.BusData;
 using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
@@ -15,6 +16,7 @@ namespace GuiaTBAWP.Views.Trenes
     public partial class Mapa : PhoneApplicationPage
     {
         Pushpin _posicionActual;
+        private string _lineaTren;
 
         public Mapa()
         {
@@ -22,10 +24,18 @@ namespace GuiaTBAWP.Views.Trenes
             Loaded += Page_Loaded;
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            _lineaTren = Uri.EscapeUriString(NavigationContext.QueryString["linea"]);
+            
+            base.OnNavigatedTo(e);
+        }
+        
+
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
-            MostrarLugares();
+            MostrarLugares(_lineaTren);
         }
         
         private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
@@ -41,18 +51,19 @@ namespace GuiaTBAWP.Views.Trenes
             MiMapa.Children.Add(_posicionActual);
         }
 
-        void MostrarLugares()
+        void MostrarLugares(string linea)
         {
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
             MiMapa.Children.Clear();
 
+            //ReferencesListBox.ItemsSource = DataTren.GetTrenesList(linea);
             ReferencesListBox.ItemsSource = new List<MapReference>
             {
                 new MapReference { Id = 1, Nombre = "Trazado", Checked = true},
                 new MapReference { Id = 2, Nombre = "Estaciones", Checked = false},
             };
 
-            var lineas = DataTren.GetData();
+            var lineas = DataTren.GetData(_lineaTren);
 
             foreach (var line in lineas)
             {

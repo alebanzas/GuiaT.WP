@@ -1,4 +1,4 @@
-﻿using System.Windows.Media;
+﻿using System.Linq;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
@@ -8,13 +8,44 @@ namespace GuiaTBAWP.BusData
 {
     public class DataTren
     {
-        public static List<TrackLine> GetData()
-        {
-            var lineas = new List<TrackLine>
+        private static readonly List<MapReference> _ramalesList = new List<MapReference>
+            {
+                new MapReference { Id = "belgrano-norte-1", Nombre = "Boulogne - Villa Rosa" },//TODO
+                new MapReference { Id = "belgrano-norte-2", Nombre = "Retiro - Boulogne" },//TODO
+                new MapReference { Id = "belgrano-norte-3", Nombre = "Retiro - Grand Bourg" },//TODO
+                new MapReference { Id = "belgrano-norte-4", Nombre = "Retiro - Villa Rosa" },
+                new MapReference { Id = "belgrano-sur-1", Nombre = "Aldo Bonzi - Puente Alsina" },
+                new MapReference { Id = "belgrano-sur-2", Nombre = "Buenos Aires - Catán" },
+                new MapReference { Id = "belgrano-sur-3", Nombre = "Buenos Aires - M.C.G Belgrano" },
+                new MapReference { Id = "belgrano-sur-4", Nombre = "Tapiales - Catán" },
+                new MapReference { Id = "mitre-1", Nombre = "Retiro - J. L. Suaréz" },
+                new MapReference { Id = "mitre-2", Nombre = "Retiro - Mitre" },
+                new MapReference { Id = "mitre-3", Nombre = "Retiro - Tigre" },
+                new MapReference { Id = "mitre-4", Nombre = "Victoria - Capilla del Señor" },
+                new MapReference { Id = "mitre-5", Nombre = "Villa Ballester - Zarate" },
+                new MapReference { Id = "roca-1", Nombre = "Constitución - A.Korn" },
+                new MapReference { Id = "roca-2", Nombre = "Constitución - Bosques - Gutiérrez por Temperley" },
+                new MapReference { Id = "roca-3", Nombre = "Constitución - Bosques por Quilmes" },
+                new MapReference { Id = "roca-4", Nombre = "Constitución - Claypole" },
+                new MapReference { Id = "roca-5", Nombre = "Constitución - Ezeiza - Cañuelas" },
+                new MapReference { Id = "roca-6", Nombre = "Constitución - La Plata" },
+                new MapReference { Id = "roca-7", Nombre = "Temperley - Haedo" },
+                new MapReference { Id = "san-martin-1", Nombre = "José C. Paz - Pilar" },//TODO
+                new MapReference { Id = "san-martin-2", Nombre = "Retiro - José C. Paz" },//TODO
+                new MapReference { Id = "san-martin-3", Nombre = "Retiro - Pilar" },
+                new MapReference { Id = "sarmiento-1", Nombre = "Merlo - Lobos" },
+                new MapReference { Id = "sarmiento-2", Nombre = "Moreno - Mercedes" },
+                new MapReference { Id = "sarmiento-3", Nombre = "Once - Mercedes (Dif.)" },
+                new MapReference { Id = "sarmiento-4", Nombre = "Once - Moreno" },
+                new MapReference { Id = "urquiza-1", Nombre = "Federico Lacroze - Gral Lemos" },
+                new MapReference { Id = "urquiza-2", Nombre = "Martín Coronado - Servicio Local" },//TODO
+            };
+
+        private static readonly List<TrackLine> _lineas = new List<TrackLine>
             {
                 new TrackLine
                 {
-                    Nombre = "Belgrano Norte",
+                    Nombre = "belgrano-norte-4",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.589976, Y = -58.374009},
@@ -363,7 +394,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Belgrano-Sur Aldo Bonzi - Puente Alsina",
+                    Nombre = "belgrano-sur-1",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.645741  , Y = -58.394565 },
@@ -564,7 +595,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Belgrano Sur - Buenos Aires - Catán",
+                    Nombre = "belgrano-sur-2",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.645741  , Y = -58.394565 },
@@ -727,7 +758,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Belgrano Sur - Buenos Aires - M.C.G Belgrano",
+                    Nombre = "belgrano-sur-3",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.702573  , Y = -58.511499 },
@@ -807,7 +838,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Belgrano Sur - Tapiales - Catán",
+                    Nombre = "belgrano-sur-4",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X =  -34.710644 , Y = -58.514471 },
@@ -861,7 +892,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Mitre - Retiro - J. L. Suaréz",
+                    Nombre = "mitre-1",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.591248 , Y = -58.375039},
@@ -1061,7 +1092,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Mitre -  Retiro - Mitre",
+                    Nombre = "mitre-2",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.591248 , Y = -58.375039},
@@ -1146,7 +1177,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Mitre -  Retiro - Tigre",
+                    Nombre = "mitre-3",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.55086  , Y = -58.555981},
@@ -1421,7 +1452,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Mitre - Victoria - Capilla del Señor",
+                    Nombre = "mitre-4",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.591248 , Y = -58.375039},
@@ -1601,7 +1632,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Mitre - Villa Ballester - Zarate",
+                    Nombre = "mitre-5",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.456412 , Y = -58.540612},
@@ -1879,7 +1910,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca - Constitución - A.Korn",
+                    Nombre = "roca-1",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252, Y = -58.380704},
@@ -2011,7 +2042,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca - Constitución - Bosques - Gutiérrez por Temperley",
+                    Nombre = "roca-2",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252, Y = -58.380704},
@@ -2060,7 +2091,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca - Constitución - Bosques por Quilmes",
+                    Nombre = "roca-3",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252, Y = -58.380704},
@@ -2142,7 +2173,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca - Constitución - Claypole", //TODO: check
+                    Nombre = "roca-4", //TODO: check
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252, Y = -58.380704},
@@ -2222,7 +2253,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca -  Constitución - Ezeiza - Cañuelas",
+                    Nombre = "roca-5",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.774613, Y = -58.396368},
@@ -2263,7 +2294,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca -  Constitución - La Plata",
+                    Nombre = "roca-6",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252 , Y = -58.380704},
@@ -2326,7 +2357,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Roca -  Temperley - Haedo",
+                    Nombre = "roca-7",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.629252 , Y = -58.380704},
@@ -2384,7 +2415,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "San Martín",
+                    Nombre = "san-martin-3",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.589252  , Y = -58.3733   },
@@ -2699,7 +2730,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Sarmiento - Merlo - Lobos",
+                    Nombre = "sarmiento-1",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.608362 , Y = -58.407429},
@@ -2785,7 +2816,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Sarmiento - Moreno - Mercedes",
+                    Nombre = "sarmiento-2",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.608362 , Y = -58.407429},
@@ -2846,7 +2877,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Sarmiento - Once - Mercedes (Dif.)",
+                    Nombre = "sarmiento-3",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.650685 , Y = -58.788871},
@@ -2877,7 +2908,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Sarmiento - Once - Moreno",
+                    Nombre = "sarmiento-4",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.664655 , Y = -58.727181},
@@ -2943,7 +2974,7 @@ namespace GuiaTBAWP.BusData
                 },
                 new TrackLine
                 {
-                    Nombre = "Urquiza",
+                    Nombre = "urquiza-1",
                     Trazado = new List<PuntoViewModel>
                     {
                         new PuntoViewModel {X = -34.58668 , Y = -58.455579},
@@ -3096,7 +3127,15 @@ namespace GuiaTBAWP.BusData
                 },
             };
 
-            return lineas;
+
+        public static List<MapReference> GetTrenesList(string linea)
+        {
+            return _ramalesList.Where(x => x.Id.ToString().StartsWith(linea)).ToList();
+        }
+
+        public static List<TrackLine> GetData(string linea)
+        {
+            return _lineas.Where(x => x.Nombre.StartsWith(linea)).ToList();
         }
     }
 }

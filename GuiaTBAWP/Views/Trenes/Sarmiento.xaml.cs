@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
@@ -88,5 +89,15 @@ namespace GuiaTBAWP.Views.Trenes
             DataService.LoadData();
         }
         #endregion
+
+        private void VerEnMapa_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Trenes/Mapa.xaml?linea=sarmiento", UriKind.Relative));
+        }
+
+        private void Pin_Click(object sender, EventArgs e)
+        {
+            TileManager.Set(new Uri("/Views/Trenes/Sarmiento.xaml", UriKind.Relative), "Sarmiento", new Uri("/Images/Home/trenes.png", UriKind.Relative));
+        }
     }
 }

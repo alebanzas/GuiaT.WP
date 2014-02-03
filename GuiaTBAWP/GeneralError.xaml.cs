@@ -75,7 +75,7 @@ namespace GuiaTBAWP
             RequestModel = new ErrorReportRequestModel
             {
                 Date = DateTime.UtcNow,
-                InstallationId = "", //TODO: installationID
+                InstallationId = App.Configuration.InstallationId.ToString(),
                 ErrorDetail = Exception.ToString(),
                 UserMessage = TxtComentario.Text,
             };

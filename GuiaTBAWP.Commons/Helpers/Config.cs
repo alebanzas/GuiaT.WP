@@ -1,6 +1,6 @@
 ﻿using System.IO.IsolatedStorage;
 
-namespace GuiaTBAWP.Helpers
+namespace GuiaTBAWP.Commons.Helpers
 {
     public static class Config
     {
@@ -36,6 +36,11 @@ namespace GuiaTBAWP.Helpers
             }
 
             IsolatedStorageSettings.ApplicationSettings.Save();
+        }
+
+        public static void Remove(object key)
+        {
+            IsolatedStorageSettings.ApplicationSettings.Remove(key.ToString());
         }
     }
 }

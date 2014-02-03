@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;

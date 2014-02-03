@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;

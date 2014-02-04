@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -124,10 +125,7 @@ namespace GuiaTBAWP.Commons.Extensions
 
 		public static IEnumerable<string> SplitWords(this string composedPascalCaseWords)
 		{
-			foreach (Match regex in WordsSpliter.Matches(composedPascalCaseWords))
-			{
-				yield return regex.Value;
-			}
+		    return from Match regex in WordsSpliter.Matches(composedPascalCaseWords) select regex.Value;
 		}
 
         /// <summary>
@@ -221,5 +219,25 @@ namespace GuiaTBAWP.Commons.Extensions
 		}
 
 		#endregion
+
+
+        public static string GetMeasureString(double lat1, double lon1, double lat2, double lon2)
+        {
+            var meters = Math.Round(FromPointToMeters(lat1, lon1, lat2, lon2), 0);
+            return meters < 1000 ? string.Concat(meters, "m") : string.Concat(Math.Round(meters / 1000, 1), "km");
+        }
+
+        public static double FromPointToMeters(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double r = 6378.137; // Radius of earth in KM
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+            Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
+            Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            var d = r * c;
+            return d * 1000; // meters
+        }
 	}
 }

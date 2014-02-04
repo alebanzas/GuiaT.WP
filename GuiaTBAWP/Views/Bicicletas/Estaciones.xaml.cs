@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Device.Location;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -151,26 +150,11 @@ namespace GuiaTBAWP.Views.Bicicletas
             EndRequest();
         }
 
-        //TODO: helper
         private string GetMeasureString(BicicletaEstacionTable ll)
         {
-            var meters = Math.Round(FromPointToMeters(ll.Latitud, ll.Longitud, PositionService.GetCurrentLocation()), 0);
-            return meters < 1000 ? string.Concat(meters, "m") : string.Concat(Math.Round(meters/1000, 1), "km");
-        }
-
-        private double FromPointToMeters(double lat1, double lon1, GeoPosition<GeoCoordinate> getCurrentLocation)
-        {
-            var lat2 = getCurrentLocation.Location.Latitude;
-            var lon2 = getCurrentLocation.Location.Longitude;
-            const double r = 6378.137; // Radius of earth in KM
-            var dLat = (lat2 - lat1) * Math.PI / 180;
-            var dLon = (lon2 - lon1) * Math.PI / 180;
-            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-            Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
-            Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            var d = r * c;
-            return d * 1000; // meters
+            var currentLocation = PositionService.GetCurrentLocation();
+            return StringExtensions.GetMeasureString(ll.Latitud, ll.Longitud, 
+                                        currentLocation.Location.Latitude, currentLocation.Location.Longitude);
         }
 
         private int EndRequest()

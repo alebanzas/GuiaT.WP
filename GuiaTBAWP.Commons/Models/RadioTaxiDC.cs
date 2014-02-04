@@ -15,19 +15,19 @@ namespace GuiaTBAWP.Commons.Models
             
         }
 
-        static RadioTaxiDC dataContext = null;
+        static RadioTaxiDC _dataContext;
 
         public static void Destroy()
         {
             Current.DeleteDatabase();
-            dataContext = null;
+            _dataContext = null;
         }
 
         public static List<RadioTaxiTable> GetAll()
         {
             try
             {
-                var query = from l in RadioTaxiDC.Current.Lista
+                var query = from l in Current.Lista
                             orderby l.Id
                             select l;
 
@@ -37,7 +37,6 @@ namespace GuiaTBAWP.Commons.Models
             {
                 //Ante un error en la query, reseteo todos.
                 Destroy();
-                //TODO: refactor
                 return new List<RadioTaxiTable>();
             }
         }
@@ -45,25 +44,25 @@ namespace GuiaTBAWP.Commons.Models
         public void Truncate()
         {
             var query = from r in Lista select r;
-            dataContext.Lista.DeleteAllOnSubmit(query);
-            dataContext.SubmitChanges();
+            _dataContext.Lista.DeleteAllOnSubmit(query);
+            _dataContext.SubmitChanges();
         }
 
         public static RadioTaxiDC Current
         {
             get
             {
-                if (dataContext == null)
+                if (_dataContext == null)
                 {
-                    dataContext = new RadioTaxiDC("isostore:/RadioTaxiTable.sdf");
+                    _dataContext = new RadioTaxiDC("isostore:/RadioTaxiTable.sdf");
 
-                    if (!dataContext.DatabaseExists())
+                    if (!_dataContext.DatabaseExists())
                     {
-                        dataContext.CreateDatabase();
+                        _dataContext.CreateDatabase();
                     }
                 }
 
-                return dataContext;
+                return _dataContext;
             }
         }
 

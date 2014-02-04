@@ -30,8 +30,8 @@ namespace GuiaTBAWP.Extensions
                     var currentPosition = PositionService.GetCurrentLocation();
                     if (currentPosition != null)
                     {
-                        param += "&lat=" + currentPosition.Location.Latitude;
-                        param += "&lon=" + currentPosition.Location.Longitude;
+                        param += "&lat=" + currentPosition.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".");
+                        param += "&lon=" + currentPosition.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".");
                     }
                 }
             }
@@ -47,6 +47,10 @@ namespace GuiaTBAWP.Extensions
                 App.Configuration.InstallationId,
                 refresh,
                 param));
+
+            Debug.WriteLine(apiCallUri);
+
+            return apiCallUri;
         }
 
         public static Uri ToApiCallUri(this string source, Dictionary<string, object> param, bool alwaysRefresh = false)

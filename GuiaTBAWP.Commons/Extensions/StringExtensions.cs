@@ -195,7 +195,7 @@ namespace GuiaTBAWP.Commons.Extensions
 		//		return null;
 		//	}
 		//	MD5 md5 = MD5.Create();
-		//	byte[] inputBytes = Encoding.ASCII.GetBytes(source);
+        //    byte[] inputBytes = ASCII.GetBytes(source);
 		//	byte[] hash = md5.ComputeHash(inputBytes);
         //
 		//	var sb = new StringBuilder(64);

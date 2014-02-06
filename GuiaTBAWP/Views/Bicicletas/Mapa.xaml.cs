@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using GuiaTBAWP.BusData;
+using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;

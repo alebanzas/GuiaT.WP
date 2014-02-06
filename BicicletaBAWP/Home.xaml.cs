@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Phone.Tasks;
-using BicicletaBAWP;
 
-namespace GuiaTBAWP
+namespace BicicletaBAWP
 {
     public partial class Home
     {
         public Home()
         {
             InitializeComponent();
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
+
+            StatusChecker.Check("Bicicletas");
 
             TxtVersion.Text = string.Format("Versión {0}", App.Configuration.Version);
         }

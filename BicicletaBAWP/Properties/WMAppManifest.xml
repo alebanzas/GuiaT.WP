@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{B9394DDB-1D0D-4394-B1CB-E0F2D704C749}" Title="Bicicletas Buenos Aires" RuntimeType="Silverlight" Version="1.5.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de bicicletas de la Ciudad de Buenos Aires." Publisher="BTB Solutions">
+  <App xmlns="" ProductID="{B9394DDB-1D0D-4394-B1CB-E0F2D704C749}" Title="Bicicletas Buenos Aires" RuntimeType="Silverlight" Version="1.7.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="La mas completa información sobre el servicio de bicicletas de la Ciudad de Buenos Aires." Publisher="Ale Banzas">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_LOCATION" />

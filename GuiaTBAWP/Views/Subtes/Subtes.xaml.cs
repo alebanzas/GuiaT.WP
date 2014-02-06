@@ -10,7 +10,7 @@ namespace GuiaTBAWP.Views.Subtes
         {
             InitializeComponent();
 
-            StatusChecker.Check("HomeSubte");
+            StatusChecker.Check("Subte");
 
             MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
             MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;

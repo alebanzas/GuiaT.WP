@@ -89,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusData\DataTren.cs" />
-    <Compile Include="BusData\DataSubte.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>

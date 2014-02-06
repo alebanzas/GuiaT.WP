@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Phone.Tasks;
-using SubteBAWP;
 
-namespace GuiaTBAWP
+namespace SubteBAWP
 {
     public partial class Home
     {
         public Home()
         {
             InitializeComponent();
+
+            StatusChecker.Check("Subte");
+
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
 
             TxtVersion.Text = string.Format("Versión {0}", App.Configuration.Version);
         }
@@ -37,6 +41,11 @@ namespace GuiaTBAWP
         private void Button_Click_SubteEstado(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Subtes/SubteEstado.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_SubteMapaReal(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Subtes/Mapa.xaml", UriKind.Relative));
         }
 
         private void Opciones_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Phone.Controls;
 
-namespace GuiaTBAWP.Views.Subtes
+namespace SubteBAWP.Views.Subtes
 {
     public partial class SubteHorarios : PhoneApplicationPage
     {

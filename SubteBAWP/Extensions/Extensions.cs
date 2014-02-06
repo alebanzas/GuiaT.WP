@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
-using SubteBAWP;
 
-namespace GuiaTBAWP.Extensions
+namespace SubteBAWP.Extensions
 {
     public static class UriExtensions
     {
@@ -29,8 +30,8 @@ namespace GuiaTBAWP.Extensions
                     var currentPosition = PositionService.GetCurrentLocation();
                     if (currentPosition != null)
                     {
-                        param += "&lat=" + currentPosition.Location.Latitude;
-                        param += "&lon=" + currentPosition.Location.Longitude;
+                        param += "&lat=" + currentPosition.Location.Latitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".");
+                        param += "&lon=" + currentPosition.Location.Longitude.ToString(CultureInfo.InvariantCulture).Replace(",", ".");
                     }
                 }
             }
@@ -38,14 +39,18 @@ namespace GuiaTBAWP.Extensions
             {
                 //no me importa si pincha.
             }
-            
-            return new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
+
+            var apiCallUri = new Uri(string.Format("http://servicio.abhosting.com.ar{0}/?appId={1}&versionId={2}&installationId={3}{4}{5}",
                 source,
                 App.Configuration.Name,
                 App.Configuration.Version,
                 App.Configuration.InstallationId,
                 refresh,
                 param));
+
+            Debug.WriteLine(apiCallUri);
+
+            return apiCallUri;
         }
 
         public static Uri ToApiCallUri(this string source, Dictionary<string, object> param, bool alwaysRefresh = false)

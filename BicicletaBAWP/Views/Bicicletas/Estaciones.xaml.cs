@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
+using BicicletaBAWP.Extensions;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;

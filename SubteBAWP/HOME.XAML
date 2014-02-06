@@ -94,7 +94,7 @@
                     <StackPanel Margin="12,0,0,0">
                         <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
                         <TextBlock TextWrapping="Wrap">
-                            Desarrollado por BTB Solutions
+                            Desarrollado por AleBanzas
 						    <LineBreak /><LineBreak />
                             Encuentra toda la información sobre el transporte en Buenos Aires, puntos de carga, de venta de la tarjeta SUBE, encuentra la ruta al punto mas cercano. Información de colectivos, trenes, subte, estado del transito, y aviones.
                             <LineBreak /><LineBreak /><LineBreak />

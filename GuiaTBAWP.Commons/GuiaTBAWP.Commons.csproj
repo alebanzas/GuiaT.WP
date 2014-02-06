@@ -69,6 +69,7 @@
     <Compile Include="Converters\TextConverter.cs" />
     <Compile Include="Data\DataBicicletas.cs" />
     <Compile Include="Data\DataSubte.cs" />
+    <Compile Include="Data\DataTren.cs" />
     <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

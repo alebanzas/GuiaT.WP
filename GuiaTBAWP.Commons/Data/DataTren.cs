@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
-using System.Collections.Generic;
 
-namespace GuiaTBAWP.BusData
+namespace GuiaTBAWP.Commons.Data
 {
     public class DataTren
     {

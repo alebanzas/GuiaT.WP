@@ -6,13 +6,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Navigation;
-using GuiaTBAWP.BusData;
 using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 
-namespace GuiaTBAWP.Views.Trenes
+namespace TrenesBAWP.Views.Trenes
 {
     public partial class Mapa : PhoneApplicationPage
     {

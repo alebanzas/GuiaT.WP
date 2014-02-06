@@ -7,6 +7,7 @@ namespace BicicletaBAWP.Views.Bicicletas
         public Inscripcion()
         {
             InitializeComponent();
+            StatusChecker.Check("Bicicletas.Inscripcion");
         }
     }
 }

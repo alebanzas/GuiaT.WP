@@ -1,9 +1,8 @@
-﻿using GuiaTBAWP.Commons.Models;
+﻿using System.Collections.Generic;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
-using GuiaTBAWP.Views.Bicicletas;
-using System.Collections.Generic;
 
-namespace GuiaTBAWP.BusData
+namespace GuiaTBAWP.Commons.Data
 {
     public class DataBicicletas
     {

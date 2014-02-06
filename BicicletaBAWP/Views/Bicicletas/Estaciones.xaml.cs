@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Device.Location;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -9,17 +8,18 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
 using ProgressBar = GuiaTBAWP.ProgressBar;
 
 namespace BicicletaBAWP.Views.Bicicletas
 {
-    public partial class Estaciones : PhoneApplicationPage
+    public partial class Estaciones
     {
         private static EstacionesStatusViewModel _viewModel = new EstacionesStatusViewModel();
         public static EstacionesStatusViewModel ViewModel
@@ -27,7 +27,6 @@ namespace BicicletaBAWP.Views.Bicicletas
             get { return _viewModel ?? (_viewModel = new EstacionesStatusViewModel()); }
         }
 
-        Pushpin _posicionActual;
         WebRequest _httpReq;
 
         public Estaciones()
@@ -35,94 +34,56 @@ namespace BicicletaBAWP.Views.Bicicletas
             InitializeComponent();
             DataContext = ViewModel;
             Loaded += Page_Loaded;
-            Unloaded += Page_UnLoaded;
+            Unloaded += (sender, args) =>
+            {
+                if (_httpReq != null)
+                    _httpReq.Abort();
+            };
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", App.Configuration.UltimaActualizacionBicicletas.ToUpdateDateTime());
 
-            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
-
             MostrarLugares();
-
+            
             Cargar();
         }
-
-        void Page_UnLoaded(object sender, RoutedEventArgs e)
-        {
-            CancelarRequest();
-        }
-
-        private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
-        {
-            MiMapa.Children.Remove(_posicionActual);
-
-            if (location == null) return;
-
-            _posicionActual = new Pushpin
-            {
-                Location = location.Location,
-                Template = (ControlTemplate)(Application.Current.Resources["locationPushpinTemplate"])
-            };
-            MiMapa.Children.Add(_posicionActual);
-        }
-
-
+        
         public void MostrarLugares()
         {
-            MiMapa.Children.Clear();
             ViewModel.Estaciones.Clear();
 
-            var list = BicicletaEstacionDC.GetAll().OrderBy(x => x.Nombre);
+            var bicicletaEstacionTables = BicicletaEstacionDC.GetAll();
 
+            foreach (var bicicletaEstacionTable in bicicletaEstacionTables)
+            {
+                bicicletaEstacionTable.Distance = App.Configuration.IsLocationEnabled ? GetMeasureString(bicicletaEstacionTable) : string.Empty;
+            }
+
+            var list = App.Configuration.IsLocationEnabled ?
+                bicicletaEstacionTables.OrderBy(x => x.GetDistanceTo(PositionService.GetCurrentLocation())) :
+                bicicletaEstacionTables.OrderBy(x => x.Nombre);
+            
             var lugares = new ObservableCollection<BicicletaEstacionTable>(list);
             foreach (var lugar in lugares)
             {
-                var pushpin = new Pushpin
-                {
-                    Content = lugar.Nombre,
-                    Location = new GeoCoordinate(lugar.Latitud, lugar.Longitud)
-                };
                 if (!App.Configuration.IsLocationEnabled)
                 {
                     lugar.Distance = string.Empty;
                 }
-
-                MiMapa.Children.Add(pushpin);
                 ViewModel.AddEstacion(lugar);
             }
-
-            //Si uso localizacion, agrego mi ubicación
-            ActualizarUbicacion(App.Configuration.IsLocationEnabled ? PositionService.GetCurrentLocation() : null);
-
-            AjustarMapa();
         }
-
-        private void AjustarMapa()
-        {
-            //Ajusto el mapa para mostrar los items
-            var x = from l in MiMapa.Children
-                    let pushpin = l as Pushpin
-                    where pushpin != null
-                    select pushpin.Location;
-            MiMapa.SetView(LocationRect.CreateLocationRect(x));
-        }
-
-        private void CancelarRequest()
-        {
-            if (_httpReq != null)
-                _httpReq.Abort();
-        }
-
+        
         public void Cargar(bool refresh = false)
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                ProgressBar.Show(MiMapa.Children.Any() ? "Actualizando estado..." : "Obteniendo estado...");
+                ProgressBar.Show("Actualizando estado...");
 
-                _httpReq = WebRequest.Create("/bicicletas".ToApiCallUri(refresh));
-                _httpReq.Method = "GET";
+                var client = new HttpClient();
+                _httpReq = client.Get("/api/bicicleta".ToApiCallUri(refresh));
                 _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
             }
             else
@@ -150,9 +111,9 @@ namespace BicicletaBAWP.Views.Bicicletas
 
                 Dispatcher.BeginInvoke(new DelegateUpdateWebBrowser(UpdateWebBrowser), o);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                EndRequest();
+                ex.Log(EndRequest);
             }
         }
 
@@ -163,7 +124,7 @@ namespace BicicletaBAWP.Views.Bicicletas
 
             foreach (BicicletaEstacionTable ll in l.Estaciones.ConvertToBicicletaEstacionTable())
             {
-                ll.Distance = App.Configuration.IsLocationEnabled ? string.Concat(Math.Round(FromPointToMeters(ll.Latitud, ll.Longitud, PositionService.GetCurrentLocation()), 0), "m") : string.Empty;
+                ll.Distance = App.Configuration.IsLocationEnabled ? GetMeasureString(ll) : string.Empty;
                 if (BicicletaEstacionDC.Current.Estaciones.Contains(ll))
                 {
                     var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));
@@ -178,34 +139,26 @@ namespace BicicletaBAWP.Views.Bicicletas
                 else
                 {
                     BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(ll);
-                }
+                }   
             }
             BicicletaEstacionDC.Current.SubmitChanges();
 
             App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
-
+            
             ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", l.Actualizacion.ToUpdateDateTime());
 
             MostrarLugares();
             EndRequest();
         }
 
-        private double FromPointToMeters(double lat1, double lon1, GeoPosition<GeoCoordinate> getCurrentLocation)
+        private string GetMeasureString(BicicletaEstacionTable ll)
         {
-            var lat2 = getCurrentLocation.Location.Latitude;
-            var lon2 = getCurrentLocation.Location.Longitude;
-            var R = 6378.137; // Radius of earth in KM
-            var dLat = (lat2 - lat1) * Math.PI / 180;
-            var dLon = (lon2 - lon1) * Math.PI / 180;
-            var a = Math.Sin(dLat/2) * Math.Sin(dLat/2) +
-            Math.Cos(lat1 * Math.PI / 180) * Math.Cos(lat2 * Math.PI / 180) *
-            Math.Sin(dLon/2) * Math.Sin(dLon/2);
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1-a));
-            var d = R * c;
-            return d * 1000; // meters
+            var currentLocation = PositionService.GetCurrentLocation();
+            return StringExtensions.GetMeasureString(ll.Latitud, ll.Longitud, 
+                                        currentLocation.Location.Latitude, currentLocation.Location.Longitude);
         }
 
-        private void EndRequest()
+        private int EndRequest()
         {
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
@@ -215,6 +168,7 @@ namespace BicicletaBAWP.Views.Bicicletas
 
                 ProgressBar.Hide();
             });
+            return 0;
         }
 
         private void LstLugares_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -241,12 +195,7 @@ namespace BicicletaBAWP.Views.Bicicletas
         {
             NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
         }
-
-        private void MiMapa_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Views/Bicicletas/Mapa.xaml", UriKind.Relative));
-        }
-
+        
         private void ButtonGo_Click(object sender, EventArgs e)
         {
             Cargar(true);
@@ -258,13 +207,14 @@ namespace BicicletaBAWP.Views.Bicicletas
             var selectedListBoxItem = List.ItemContainerGenerator.ContainerFromItem(((MenuItem)sender).DataContext) as ListBoxItem;
             if (selectedListBoxItem == null) return;
             var selectedIndex = List.ItemContainerGenerator.IndexFromContainer(selectedListBoxItem);
+            
             var item = (BicicletaEstacionTable)List.Items[selectedIndex];
             var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", item.Id), UriKind.Relative);
             TileManager.Set(uri, string.Format("Estación {0}", item.Nombre.ToLowerInvariant()), new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
     }
 
-    public class EstacionesStatusViewModel : INotifyPropertyChanged
+    public class EstacionesStatusViewModel: INotifyPropertyChanged
     {
         public EstacionesStatusViewModel()
         {
@@ -286,8 +236,7 @@ namespace BicicletaBAWP.Views.Bicicletas
         public ObservableCollection<BicicletaEstacionTable> Estaciones
         {
             get { return _estaciones; }
-            private set
-            {
+            private set { 
                 _estaciones = value;
                 NotifyPropertyChanged("Estaciones");
             }

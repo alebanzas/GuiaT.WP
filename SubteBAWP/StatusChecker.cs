@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Windows;
-using BicicletaBAWP.Extensions;
 using GuiaTBAWP.Extensions;
+using SubteBAWP.Extensions;
 
-namespace BicicletaBAWP
+namespace SubteBAWP
 {
     public static class StatusChecker
     {

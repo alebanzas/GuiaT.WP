@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="GuiaTBAWP.Views.Subtes.SubtePrecio"
+    x:Class="SubteBAWP.Views.Subtes.SubtePrecio"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -27,32 +27,45 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RED DE SUBTES" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="RED DE SUBTE" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="precio" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-20,12,0">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
                     <StackPanel Width="300">
-                        <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">subte</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextLargeStyle}">subte</TextBlock>
                     </StackPanel>
-                    <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 2,50</TextBlock>
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 3,50</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="300">
-                        <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">premetro</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextLargeStyle}">premetro</TextBlock>
                         <TextBlock Style="{StaticResource PhoneTextSmallStyle}">sin combinación</TextBlock>
                     </StackPanel>
-                    <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 0,70</TextBlock>
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 1,00</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="300">
-                        <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">premetro</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextLargeStyle}">premetro</TextBlock>
                         <TextBlock Style="{StaticResource PhoneTextSmallStyle}">con combinación</TextBlock>
                     </StackPanel>
-                    <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 2,50</TextBlock>
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 3,50</TextBlock>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Right" Margin="0,20,0,0">
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">formas de pago</TextBlock>
+                    <Grid HorizontalAlignment="Left" Width="450">
+                        <Image HorizontalAlignment="Left" Source="/Images/Subtes/molinete.png" Width="300" Margin="-10,0,0,0"></Image>
+                        <TextBlock HorizontalAlignment="Right" Margin="0,50,10,0" Style="{StaticResource PhoneTextSmallStyle}">SUBE</TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Margin="0,150,10,0" Style="{StaticResource PhoneTextSmallStyle}">Monedero</TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Margin="0,210,10,0"  Style="{StaticResource PhoneTextSmallStyle}">SubtePass</TextBlock>
+                        <Rectangle HorizontalAlignment="Left" Height="1" Margin="171,64,0,0" Stroke="Azure" StrokeThickness="2" VerticalAlignment="Top" Width="159"></Rectangle>
+                        <Rectangle HorizontalAlignment="Left" Height="1" Margin="295,224,0,0" Stroke="Azure" StrokeThickness="2" VerticalAlignment="Top" Width="35"></Rectangle>
+                        <Rectangle HorizontalAlignment="Left" Height="1" Margin="271,164,0,0" Stroke="Azure" StrokeThickness="2" VerticalAlignment="Top" Width="59"></Rectangle>
+                    </Grid>
                 </StackPanel>
             </StackPanel>
         </Grid>

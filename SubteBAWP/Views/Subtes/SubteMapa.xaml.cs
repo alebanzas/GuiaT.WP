@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using Microsoft.Phone.Controls;
 
-namespace GuiaTBAWP.Views.Subtes
+namespace SubteBAWP.Views.Subtes
 {
     public partial class SubteMapa : PhoneApplicationPage
     {

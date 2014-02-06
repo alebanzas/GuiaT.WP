@@ -5,13 +5,12 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using GuiaTBAWP.BusData;
 using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 
-namespace GuiaTBAWP.Views.Subtes
+namespace SubteBAWP.Views.Subtes
 {
     public partial class Mapa : PhoneApplicationPage
     {

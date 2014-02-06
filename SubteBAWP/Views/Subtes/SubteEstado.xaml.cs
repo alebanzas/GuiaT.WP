@@ -3,14 +3,17 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
-using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
+using SubteBAWP.Extensions;
 
-namespace GuiaTBAWP.Views.Subtes
+namespace SubteBAWP.Views.Subtes
 {
     public partial class SubteEstado
     {
@@ -56,17 +59,18 @@ namespace GuiaTBAWP.Views.Subtes
             ProgressBar.Show("Obteniendo estado del servicio...");
             SetApplicationBarEnabled(false);
 
-            _httpReq = (HttpWebRequest)WebRequest.Create("/subte".ToApiCallUri(alwaysRefresh: true));
-            _httpReq.Method = "GET";
+            var client = new HttpClient();
+            _httpReq = client.Get("/api/subte".ToApiCallUri(alwaysRefresh: true));
             _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
         }
 
-        private void ResetUI()
+        private int ResetUI()
         {
             ConnectionError.Visibility = Visibility.Collapsed;
             Loading.Visibility = Visibility.Collapsed;
             ProgressBar.Hide();
             SetApplicationBarEnabled(true);
+            return 0;
         }
 
         void SetApplicationBarEnabled(bool isEnabled)
@@ -89,10 +93,9 @@ namespace GuiaTBAWP.Views.Subtes
 
                 Dispatcher.BeginInvoke(new DelegateUpdateEstado(UpdateEstadoServicio), o);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ResetUI();
-                Dispatcher.BeginInvoke(() => MessageBox.Show("Ocurrió un error al obtener el estado del servicio. Verifique su conexión a internet."));
+                ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
             }
         }
 

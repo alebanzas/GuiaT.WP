@@ -1,9 +1,9 @@
-﻿using System.Windows.Media;
+﻿using System.Collections.Generic;
+using System.Windows.Media;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
-using System.Collections.Generic;
 
-namespace GuiaTBAWP.BusData
+namespace GuiaTBAWP.Commons.Data
 {
     public class DataSubte
     {

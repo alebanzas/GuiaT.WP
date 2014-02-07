@@ -23,7 +23,7 @@
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel>
-                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta">
+                        <Button Visibility="Collapsed" Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta">
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu>
                                     <toolkit:MenuItem Header="anclar al inicio" Click="MenuRuta_OnClick" />
@@ -224,9 +224,9 @@
                             <LineBreak />
                             Armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                             <LineBreak /><LineBreak />
-                            1.8 (próximamente): Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
+                            1.8 (próximamente): BETA tren en vivo Línea Sarmiento. Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
-                            1.7.1 (actual): Actualización horario subtes, BETA tren en vivo Línea Sarmiento.
+                            1.7.1 (actual): Actualización horario subtes.
                             <LineBreak /><LineBreak />
                             1.7 (actual): Mapa de ciclovias, mapa de red de trenes y estaciones, mapa red de subte y estaciones.
                             <LineBreak /><LineBreak />

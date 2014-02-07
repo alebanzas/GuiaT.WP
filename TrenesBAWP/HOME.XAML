@@ -121,8 +121,6 @@
 							  IsMenuEnabled="True"
 							  Opacity="0.7">
 
-            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
-
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="danos tus comentarios" Click="RateReview_Click"/>
                 <shell:ApplicationBarMenuItem Text="versión completa gratis" Click="FullApp_OnClick"/>

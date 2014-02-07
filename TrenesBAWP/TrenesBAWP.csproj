@@ -140,6 +140,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\Home\trenes.png" />
     <Content Include="Images\Subtes\accesibilidad.png" />
     <Content Include="Images\Subtes\lineaA.png" />
     <Content Include="Images\Subtes\lineaB.png" />

@@ -1,0 +1,983 @@
+GET http://190.210.190.48/parking_lot HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 17 Jun 2013 13:49:14 GMT
+
+2000
+[{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":493,"number":"588","street":"Padilla","corner":"Malabia","latitude":-34.6007575,"longitude":-58.4417416},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":501,"number":"1922","street":"Jerónimo Salguero","corner":"San Mateo","latitude":-34.5878935,"longitude":-58.41426560000002},{"closed":false,"available_places":-1,"cost_per_hour":15.0,"cost_12_hours":0.0,"total_places":-1,"id":9,"number":"700","street":"Av Santa Fe","latitude":-34.596035,"longitude":-58.376606},{"closed":false,"available_places":-1,"cost_per_hour":15.0,"cost_12_hours":0.0,"total_places":-1,"id":8,"number":"1200","street":"Paraná","latitude":-34.593067,"longitude":-58.388708},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":504,"number":"3751","street":"San Mateo ","corner":"Julián Alvarez","latitude":-34.5874061,"longitude":-58.414654600000006},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":494,"number":"1280","street":"Paraná","corner":"Juncal","latitude":-34.5932219,"longitude":-58.388621899999976},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":496,"number":"1862","street":"Fragata Pres. Sarmiento","corner":"Avenida San Martín","latitude":-34.6045712,"longitude":-58.4600269},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":512,"number":"280","street":"Bolívar","corner":"Moreno","latitude":-34.6111743,"longitude":-58.373377600000026},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":502,"number":"1428","street":"Miró ","corner":"Santander","latitude":-34.6373852,"longitude":-58.4438174},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":507,"number":"1838","street":"Jerónimo Salguero","corner":"Charcas","latitude":-34.5887761,"longitude":-58.415315299999975},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":510,"number":"2060","street":"Avenida Raúl Scalabrini Ortiz","corner":"Paraguay","latitude":-34.5881097,"longitude":-58.42071709999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":11852,"number":"3001","street":"Chonino","corner":"","latitude":-34.5733292,"longitude":-58.4035828},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":13475,"number":"2161","street":"Av. Las Heras","corner":"Azcuenaga","latitude":-34.5888613,"longitude":-58.3954793},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":497,"number":"2150","street":"Billinghurst ","corner":"French","latitude":-34.5867862,"longitude":-58.40704830000004},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":489,"number":"2437","street":"Avenida Melián","corner":"Avenida Monroe","latitude":-34.5658101,"longitude":-58.47102699999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":505,"number":"135","street":"Avenida Angel Gallardo","corner":"Avenida Corrientes","latitude":-34.6031831,"longitude":-58.434345399999984},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":498,"number":"2346","street":"Aráoz","corner":"Charcas","latitude":-34.587162,"longitude":-58.41732730000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":503,"number":"4880","street":"Avenida Corrientes","corner":"Lavalleja","latitude":-34.6012951,"longitude":-58.434556799999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":508,"number":"1580","street":"Tte. Gral. Juan Domingo Perón","corner":"Montevideo","latitude":-34.6066251,"longitude":-58.38899349999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":511,"number":"2469","street":"Juncal","corner":"Avenida Pueyrredón","latitude":-34.5911593,"longitude":-58.40197999999998},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":515,"number":"832","street":"México","corner":"Piedras","latitude":-34.6151351,"longitude":-58.377927},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":520,"number":"4036","street":"Avenida Independencia","corner":"Quintino Bocayuva","latitude":-34.6214502,"longitude":-58.42274459999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":517,"number":"2769","street":"Núñez","corner":"Vidal","latitude":-34.551956,"longitude":-58.470764900000006},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":519,"number":"531","street":"Dr. Juan Felipe Aranguren","corner":"Avenida Acoyte","latitude":-34.61302939999999,"longitude":-58.4389314},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":522,"number":"764","street":"Pasteur","corner":"Avenida Córdoba","latitude":-34.6001681,"longitude":-58.399915899999996},{"closed":false,"available_places":-1,"cost_per_hour":25.0,"cost_12_hours":0.0,"total_places":370,"id":2,"number":"201-299","street":"Cerrito","latitude":-34.605312,"longitude":-58.382002},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":490,"number":"1665","street":"Sarmiento","corner":"Rodriguez Peña","latitude":-34.6054801,"longitude":-58.3902913},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":499,"number":"3846","street":"Avenida Santa Fe","corner":"Armenia","latitude":-34.5840323,"longitude":-58.417626900000016},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":415,"number":"3250","street":"Lafinur","corner":"Juan Francisco Seguí","latitude":-34.578211,"longitude":-58.412944700000025},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":416,"number":"2720","street":"Sarmiento ","corner":"Castelli","latitude":-34.6064924,"longitude":-58.40491199999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":417,"number":"1700","street":"A.M.Justo ","corner":"José antonio cabrera","latitude":-34.5868114,"longitude":-58.43663429999998},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":418,"number":"40","street":"Macacha Güemes","corner":"A.M. de Justo","latitude":-34.6051193,"longitude":-58.36716869999998},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":407,"number":"2551","street":"Av. Figueroa Alcorta","corner":"E. Couture","latitude":-34.5823291,"longitude":-58.394558200000006},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":408,"number":"351","street":"Báez","corner":"Arévalo","latitude":-34.5717207,"longitude":-58.43169009999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":409,"number":"153","street":"Suipacha","corner":"Bartolomé Mitre","latitude":-34.6065497,"longitude":-58.379290200000014},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":419,"number":"875","street":"Alicia Moreau de Justo","latitude":-34.6075083,"longitude":-58.366705300000035},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":410,"number":"680","street":"Av. Corrientes","corner":"Maipú","latitude":-34.6034047,"longitude":-58.37636650000002},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_
+2000
+hours":0.0,"total_places":-1,"id":424,"number":"940","street":"San Martin","corner":"Torre Plaza","latitude":-34.5969583,"longitude":-58.37429789999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":411,"number":"1216","street":"Belgrano ","corner":"Salta","latitude":-34.613253,"longitude":-58.3834119},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":412,"number":"2511","street":"Arribeños","corner":"Av Monroe","latitude":-34.554233,"longitude":-58.453366200000005},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":413,"number":"2454","street":"Lavalle","corner":"Larrea","latitude":-34.60344389999999,"longitude":-58.401614300000006},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":414,"number":"376","street":"Azcuenaga ","corner":"Av Corrientes","latitude":-34.6050454,"longitude":-58.40083470000002},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":420,"number":"1081","street":"Alicia Moreau de Justo","latitude":-34.61030700000001,"longitude":-58.36639500000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":421,"number":"702-1200","street":"Avenida Alicia Moreau de Justo","corner":"Bvd. Azucena Villaflor","latitude":-34.612092527018035,"longitude":-58.3662910759449},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":422,"number":"1058","street":"Libertad","corner":"Av Santa fe","latitude":-34.5961525,"longitude":-58.38424120000002},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":423,"number":"1048","street":"Azcuenaga ","corner":"Av Santa fe","latitude":-34.5960163,"longitude":-58.399998900000014},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":535,"number":"4352","street":"Avenida Monroe","corner":"Donado","latitude":-34.5697962,"longitude":-58.4785943},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":500,"number":"1959","street":"Avenida Raúl Scalabrini Ortiz","corner":"Guatemala","latitude":-34.5888842,"longitude":-58.42186730000003},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":548,"number":"265","street":"Río de Janeiro","corner":"General Venancio Flores","latitude":-34.6123852,"longitude":-58.43017279999998},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":514,"number":"5051","street":"Avenida Cnel. Ramón L. Falcon","corner":"Leopardi","latitude":-34.6385917,"longitude":-58.49851419999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":521,"number":"679","street":"Pasco ","corner":"Chile","latitude":-34.6170766,"longitude":-58.39765449999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":525,"number":"2538","street":"Yerbal","corner":"Bolivia","latitude":-34.6281837,"longitude":-58.46516759999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":492,"number":"4327","street":"Güemes","corner":"Jorge Luis Borges","latitude":-34.5831754,"longitude":-58.42141349999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":528,"number":"459","street":"Salta","corner":"Avenida Belgrano","latitude":-34.6139052,"longitude":-58.3831854},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":516,"number":"2125","street":"José Andrés Pacheco de Melo","corner":"Azcuénaga","latitude":-34.5900261,"longitude":-58.3959825},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":523,"number":"1161","street":"Pichincha","corner":"Avenida San Juan","latitude":-34.6227033,"longitude":-58.3979865},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":536,"number":"2367","street":"Sarmiento","corner":"Azcuénaga","latitude":-34.6060952,"longitude":-58.40023759999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":524,"number":"3880","street":"Avenida Piedra Buena","corner":"Saraza","latitude":-34.6775718,"longitude":-58.488121999999976},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":518,"number":"342","street":"Boulogne Sur Mer","corner":"Valentín Gómez","latitude":-34.6061296,"longitude":-58.40721189999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":533,"number":"3668","street":"Avenida Elcano","corner":"Giribone","latitude":-34.5792052,"longitude":-58.46049169999998},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":513,"number":"2481","street":"Avenida Lope de Vega","corner":"Nazarre","latitude":-34.6185106,"longitude":-58.5191719},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":530,"number":"256","street":"Avenida La Plata","corner":"Quito","latitude":-34.6178138,"longitude":-58.428641200000015},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":547,"number":"318","street":"Yerbal","corner":"Florencio Balcarce","latitude":-34.6162248,"longitude":-58.435020099999974},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":538,"number":"757","street":"Bartolomé Mitre","corner":"Esmeralda","latitude":-34.606986,"longitude":-58.37726420000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":531,"number":"1760","street":"Rocha","corner":"General Hornos","latitude":-34.6428292,"longitude":-58.374771399999986},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":526,"number":"262","street":"Quirno","corner":"José Bonifacio","latitude":-34.6344783,"longitude":-58.46965030000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":544,"number":"750","street":"Venezuela","corner":"Chacabuco","latitude":-34.61396690000001,"longitude":-58.37680739999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":550,"number":"760","street":"Hipólito Yrigoyen","corner":"Chacabuco","latitude":-34.6093788,"longitude":-58.3771825},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":551,"number":"2029","street":"Tte. Gral. Juan Domingo Perón","corner":"Junin","latitude":-34.6070615,"longitude":-58.39544919999997},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":546,"number":"1140","street":"Avenida Pueyrredón","corner":"Paraguay","latitude":-34.5969548,"longitude":-58.403198599999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":549,"number":"458","street":"Gral. Urquiza","corner":"Venezuela","latitude":-34.6160228,"longitude":-58.40954679999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":552,"number":"1240","street":"Manuel Ricardo Trelles","corner":"Luis Viale","latitude":-34.612928,"longitude":-58.461434199999985},{"closed":false,"available_places":60,"cost_per_hour":22.0,"cost_12_hours":96.0,"total_places":360,"id":11574,"number":"600","street":"Av Cordoba","corner":"Florida","latitude":-34.5987234,"longitude":-58.37535679999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":722,"number":"1202","street":"Tucumán","corner":"Libertad","latitude":-34.6014674,"longitude":-58.383894
+19ea
+5},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":712,"number":"3956","street":"Av. Santa Fe","corner":"Armenia","latitude":-34.5828945,"longitude":-58.419246799999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":718,"number":"1533","street":"Thames","corner":"Soria","latitude":-34.5884961,"longitude":-58.43175389999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":713,"number":"4056","street":"Guardia Vieja","corner":"Francisco Acuña de Figueroa","latitude":-34.6006208,"longitude":-58.421484899999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":714,"number":"118","street":"Tacuarí ","corner":"Alsina","latitude":-34.6097099,"longitude":-58.379125999999985},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":715,"number":"2036","street":"Juncal","corner":"Ayacucho","latitude":-34.5932672,"longitude":-58.39608799999996},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":711,"number":"1568","street":"México ","corner":"Sáenz Peña","latitude":-34.6155724,"longitude":-58.38848999999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":719,"number":"2750","street":"Godoy Cruz","corner":"Beruti","latitude":-34.5781657,"longitude":-58.42481359999999},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":716,"number":"1740","street":"Hidalgo","corner":"Galicia","latitude":-34.6017035,"longitude":-58.4460785},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":717,"number":"53","street":"Concordia","corner":"Yerbal","latitude":-34.6315959,"longitude":-58.475984600000004},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":720,"number":"1933","street":"Bartolomé Mitre","corner":"Riobamba","latitude":-34.6081081,"longitude":-58.393958999999995},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":723,"number":"33","street":"Mario Bravo","corner":"Mitre","latitude":-34.6104993,"longitude":-58.41731870000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":721,"number":"214","street":"Uruguay ","corner":"Perón","latitude":-34.6062866,"longitude":-58.38640950000001},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":725,"number":"660","street":"Aguirre ","corner":"Acevedo","latitude":-34.5963112,"longitude":-58.4369279},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":724,"number":"2950","street":"Charcas","corner":"Aguero","latitude":-34.5933153,"longitude":-58.407782699999984},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":11575,"number":"957","street":"Reconquista","corner":"Paraguay","latitude":-34.5966732,"longitude":-58.37303710000003},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":11573,"number":"478","street":"San Martin","corner":"Lavalle","latitude":-34.6023903,"longitude":-58.373912700000005},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":1570,"number":"562","street":"Anchorena","latitude":-34.6031056,"longitude":-58.410006299999964},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":2129,"number":"302-400","street":"Lima","corner":"Av Belgrano","latitude":-34.61306607589762,"longitude":-58.38175937541564},{"closed":false,"available_places":-1,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":-1,"id":2128,"number":"901-999","street":"Venezuela","corner":"Bernardo de Irigoyen","latitude":-34.614140052297586,"longitude":-58.380336463615095},{"closed":false,"available_places":1080,"cost_per_hour":18.0,"cost_12_hours":90.0,"total_places":1230,"id":11850,"number":"3121","street":"Lavalle","corner":"Anchorena","latitude":-34.6024657,"longitude":-58.41009329999997},{"closed":false,"available_places":209,"cost_per_hour":0.0,"cost_12_hours":0.0,"total_places":236,"id":22158,"number":"436","street":"Avenida Corrientes","corner":"Reconquista","latitude":-34.6032019,"longitude":-58.372945000000016},{"closed":false,"available_places":230,"cost_per_hour":18.0,"cost_12_hours":90.0,"total_places":1230,"id":11849,"number":"592","street":"Anchorena","corner":"Lavalle","latitude":-34.5892774,"longitude":-58.4002012},{"closed":false,"available_places":50,"cost_per_hour":21.0,"cost_12_hours":0.0,"total_places":265,"id":1,"number":"502-600","street":"Carlos Pellegrini","latitude":-34.602163,"longitude":-58.381304},{"closed":false,"available_places":106,"cost_per_hour":21.0,"cost_12_hours":0.0,"total_places":367,"id":3,"number":"902-1000","street":"Cerrito","latitude":-34.597584,"longitude":-58.382919},{"closed":false,"available_places":122,"cost_per_hour":16.5,"cost_12_hours":0.0,"total_places":430,"id":4,"number":"2-100","street":"Virrey Cevallos","latitude":-34.609358,"longitude":-58.38904},{"closed":false,"available_places":232,"cost_per_hour":21.0,"cost_12_hours":0.0,"total_places":405,"id":5,"number":"1801-1899","street":"Junín","latitude":-34.587918,"longitude":-58.391776},{"closed":false,"available_places":156,"cost_per_hour":21.0,"cost_12_hours":0.0,"total_places":482,"id":6,"number":"102-200","street":"Sarmiento","latitude":-34.604477,"longitude":-58.369358},{"closed":false,"available_places":91,"cost_per_hour":21.0,"cost_12_hours":0.0,"total_places":500,"id":7,"street":"Avenida 9 de Julio","latitude":-34.595023,"longitude":-58.382254},{"closed":false,"available_places":506,"cost_per_hour":19.5,"cost_12_hours":97.5,"total_places":585,"id":11846,"number":"3319","street":"Arenales","corner":"Av Coronel Diaz","latitude":-34.5880654,"longitude":-58.40977669999995},{"closed":false,"available_places":506,"cost_per_hour":19.5,"cost_12_hours":97.5,"total_places":585,"id":11848,"number":"3251","street":"Santa Fe","corner":"Av Coronel Diaz","latitude":-34.5884986,"longitude":-58.41089160000001},{"closed":false,"available_places":1962,"cost_per_hour":15.0,"cost_12_hours":75.0,"total_places":2290,"id":11851,"number":"3626","street":"Vedia","corner":"Av Melian","latitude":-34.5450449,"longitude":-58.4876094}]
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/traffic_state HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Last-Modified: Mon, 17 Jun 2013 13:49:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+Pragma: no-cache
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 17 Jun 2013 13:49:27 GMT
+
+2000
+[{"comment":"Corte total por obra.","source":"@batransito","delayBegins":"13:55:05","delayEnds":"11:49:00","delaySeconds":"50105","incidence_type":"CONSTRUCTION","circulation":"NONE","id":1635,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Marcelo T. de Alvear","corner":"","deleted":false,"latitude":-34.5967013,"longitude":-58.3813991,"delay":"0020","interruption_type":"NONE"},{"comment":"Corte total por obra.","source":"@batransito","delayBegins":"13:56:05","delayEnds":"11:49:01","delaySeconds":"50165","incidence_type":"CONSTRUCTION","circulation":"NONE","id":1636,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"900","street":"Sarmiento","corner":"","deleted":false,"latitude":-34.6048419,"longitude":-58.3793976,"delay":"0020","interruption_type":"NONE"},{"comment":"Corte total por obra.","source":"@batransito","delayBegins":"14:00:00","delayEnds":"11:49:00","delaySeconds":"50400","incidence_type":"CONSTRUCTION","circulation":"NONE","id":1637,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"600","street":"Bartolome Mitre","corner":"","deleted":false,"latitude":-34.6069241,"longitude":-58.3750332,"delay":"0020","interruption_type":"NONE"},{"comment":"Corte total por obra.","source":"@batransito","delayBegins":"14:01:05","delayEnds":"11:49:00","delaySeconds":"50465","incidence_type":"CONSTRUCTION","circulation":"NONE","id":1638,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"400","street":"25 de Mayo","corner":"","deleted":false,"latitude":-34.6030561,"longitude":-58.3710921,"delay":"0020","interruption_type":"NONE"},{"comment":"Alem Leandro N. Av. 1 al 1200","source":"@batransito","delayBegins":"08:46:00","delayEnds":"11:49:00","delaySeconds":"31560","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2201,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"500","street":"Alem Leandro N. Av.","corner":"","deleted":false,"latitude":-34.6018874,"longitude":-58.3703733,"delay":"0020","interruption_type":"NONE"},{"comment":"9 de julio 1 al 900","source":"@batransito","delayBegins":"08:46:00","delayEnds":"11:49:00","delaySeconds":"31560","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2202,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"500","street":"C. Pellegrini","corner":"","deleted":false,"latitude":-34.6025582,"longitude":-58.3810448,"delay":"0020","interruption_type":"NONE"},{"comment":"Alvear 1301 al 1600","source":"@batransito","delayBegins":"08:46:00","delayEnds":"11:49:00","delaySeconds":"31560","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2203,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1450","street":"Marcelo T. de Alvear","corner":"","deleted":false,"latitude":-34.5971047,"longitude":-58.3876474,"delay":"0020","interruption_type":"NONE"},{"comment":"Balcarce 851 al 900","source":"@batransito","delayBegins":"08:47:00","delayEnds":"11:49:00","delaySeconds":"31620","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2204,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"900","street":"Balcarce","corner":"","deleted":false,"latitude":-34.6184364,"longitude":-58.3701381,"delay":"0020","interruption_type":"NONE"},{"comment":"Cerrito 101 al 200","source":"@batransito","delayBegins":"08:49:00","delayEnds":"11:49:00","delaySeconds":"31740","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2205,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"150","street":"Cerrito","corner":"","deleted":false,"latitude":-34.6067519,"longitude":-58.3820669,"delay":"0020","interruption_type":"NONE"},{"comment":"Cerrito 501 al 600","source":"@batransito","delayBegins":"08:49:00","delayEnds":"11:49:00","delaySeconds":"31740","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2206,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"550","street":"Cerrito","corner":"","deleted":false,"latitude":-34.6020043,"longitude":-58.3823385,"delay":"0020","interruption_type":"NONE"},{"comment":"Irigoyen,bernardo 1 al 100","source":"@batransito","delayBegins":"08:51:00","delayEnds":"11:49:00","delaySeconds":"31860","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2209,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"50","street":"Irigoyen,bernardo","corner":"","deleted":false,"latitude":-34.6089882,"longitude":-58.3806735,"delay":"0020","interruption_type":"NONE"},{"comment":"Irigoyen,bernardo 301 al 400","source":"@batransito","delayBegins":"08:52:00","delayEnds":"11:49:00","delaySeconds":"31920","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2210,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"351","street":"Irigoyen,bernardo","corner":"","deleted":false,"latitude":-34.6124471,"longitude":-58.3805294,"delay":"0020","interruption_type":"NONE"},{"comment":"Libertad 1 al 800","source":"@batransito","delayBegins":"08:53:00","delayEnds":"11:49:00","delaySeconds":"31980","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2211,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"500","street":"Libertad","corner":"","deleted":false,"latitude":-34.6026358,"longitude":-58.3837914,"delay":"0020","interruption_type":"NONE"},{"comment":"Lima 1 al 100","source":"@batransito","delayBegins":"08:53:00","delayEnds":"11:49:00","delaySeconds":"31980","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2212,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"50","street":"lima","corner":"","deleted":false,"latitude":-34.6090756,"longitude":-58.3819212,"delay":"0020","interruption_type":"NONE"},{"comment":"Lima 301 al 400","source":"@batransito","delayBegins":"08:54:00","delayEnds":"11:49:00","delaySeconds":"32040","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2213,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"350","street":"lima","corner":"","deleted":false,"latitude":-34.6125255,"longitude":-58.3817751,"delay":"0020","interruption_type":"NONE"},{"comment":"Madero,eduardo av.1 al 1500","source":"@batransito","delayBegins":"08:55:00","delayEnds":"11:49:00","delaySeconds":"32100","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2214,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Madero,eduardo av.","corner":"","deleted":false,"latitude":-34.5961507,"longitude":-58.3703851,"delay":"0020","interruption_type":"NONE"},{"comment":"Maipu 1 al 700","source":"@batransito","delayBegins":"08:55:00","delayEnds":"11:49:00","delaySeconds":"32100","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2215,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"400","street":"Maipu","corner":"","deleted":false,"latitude":-34.6034221,"longitude":-58.3766928,"delay":"0020","interruption_type":"NONE"},{"comment":"Montevideo 1 al 800","source":"@batransito","delayBegins":"08:55:00","delayEnds":"11:49:01","delaySeconds":"32100","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2216,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"500","street":"Montevideo","corner":"","deleted":false,"latitude":-34.6030022,"longitude":-58.3894755,"delay":"0020","interruption_type":"NONE"},{"comment":"Parera 1 al 200","source":"@batransito","delayBegins":"08:57:00","delayEnds":"11:49:01","delaySeconds":"32220","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2218,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"150","street":"Parera","corner":"","deleted":false,"latitude":-34.5909545,"longitude":-58.3854748,"delay":"0020","interruption_type":"NONE"},{"comment":"Paseo Colon Av. 101 al 1700","source":"@batransito","delayBegins":"08:58:00","delayEnds":"11:49:00","delaySeconds":"32280","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2219,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Av. Paseo Colon","corner":"","deleted":false,"latitude":-34.6194111,"longitude":-58.3684856,"delay":"0020","interruption_type":"NONE"},{"comment":"Pellegrini,carlos 1 al 800","source":"@batransito","delayBegins":"08:58:00","delayEnds":"11:49:01","delaySeconds":"32280","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2220,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"500","street":"Pellegrini,carlos","corner":"","deleted":false,"latitude":-34.6025582,"longitude":-5
+2000
+8.3810448,"delay":"0020","interruption_type":"NONE"},{"comment":"Perón Juan Domingo Tte. Gral. 14...","source":"@batransito","delayBegins":"08:59:00","delayEnds":"11:49:01","delaySeconds":"32340","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2221,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1600","street":"Perón Juan Domingo Tte. Gral.","corner":"","deleted":false,"latitude":-34.6066427,"longitude":-58.389289,"delay":"0020","interruption_type":"NONE"},{"comment":"Peru 1601 al 1800","source":"@batransito","delayBegins":"08:59:00","delayEnds":"11:49:01","delaySeconds":"32340","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2222,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1700","street":"Peru","corner":"","deleted":false,"latitude":-34.628225,"longitude":-58.3734827,"delay":"0020","interruption_type":"NONE"},{"comment":"Corte parcial por obra en Av. Co...","source":"@batransito","delayBegins":"10:45:00","delayEnds":"11:49:00","delaySeconds":"38700","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2245,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"301","street":"Av. Corrientes","corner":"","deleted":false,"latitude":-34.6030283,"longitude":-58.37109,"delay":"0020","interruption_type":"NONE"},{"comment":"s/inc/nor/norte/total","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"NONE","circulation":"NORTH","id":2258,"state":"FLUENT","type":"TRAFFIC_REPORT","number":"1100-1148","street":"Avenida 13","deleted":false,"latitude":-34.92307101003179,"longitude":-57.9521834863408,"delay":"0005","interruption_type":"TOTAL"},{"comment":"acci/con/sur/tot","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"ACCIDENT","circulation":"SOUTH","id":2259,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"801-849","street":"Avenida 44","deleted":false,"latitude":-34.91529427134264,"longitude":-57.96029448509216,"delay":"0020","interruption_type":"TOTAL"},{"comment":"obra/dem/este/nin","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"CONSTRUCTION","circulation":"EAST","id":2260,"state":"DELAYED","type":"TRAFFIC_REPORT","number":"1150-1198","street":"Calle 49","deleted":false,"latitude":-34.92543768841055,"longitude":-57.9623007774353,"delay":"0030","interruption_type":"NONE"},{"comment":"otro/flui/oeste/par","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"WEST","id":2261,"state":"FLUENT","type":"TRAFFIC_REPORT","number":"802-850","street":"Calle 46","deleted":false,"latitude":-34.91627960067578,"longitude":-57.95733332633972,"delay":"0005","interruption_type":"PARTIAL"},{"comment":"fil/demo/nore/par","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"NORTHEAST","id":2262,"state":"DELAYED","type":"TRAFFIC_REPORT","number":"1352-1400","street":"Calle 116","deleted":false,"latitude":-34.914168164045236,"longitude":-57.93218493461609,"delay":"0030","interruption_type":"PARTIAL"},{"comment":"cor/flui/nin/nin","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"NONE","id":2263,"state":"FLUENT","type":"TRAFFIC_REPORT","number":"1751-1799","street":"Avenida 52","deleted":false,"latitude":-34.93798903193544,"longitude":-57.97299742567702,"delay":"0005","interruption_type":"NONE"},{"comment":"inc/conge/noroes/par","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"NORTHWEST","id":2264,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1802-1850","street":"Calle 16","deleted":false,"latitude":-34.93735577486888,"longitude":-57.939952612578054,"delay":"0020","interruption_type":"PARTIAL"},{"comment":"cultura/conge/sure/nin","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"SOUTHWEST","id":2265,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"750-798","street":"Calle 58","deleted":false,"latitude":-34.92288884879488,"longitude":-57.94730186462402,"delay":"0020","interruption_type":"NONE"},{"comment":"depor/conge/nin/total","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"OTHER","circulation":"NONE","id":2266,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1201-1249","street":"Calle 20","deleted":false,"latitude":-34.931235961393995,"longitude":-57.95753449201584,"delay":"0020","interruption_type":"TOTAL"},{"comment":"nin/flui/nin/nin","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"NONE","circulation":"NONE","id":2267,"state":"FLUENT","type":"TRAFFIC_REPORT","number":"","street":"Calle 115","deleted":false,"latitude":-34.90509756445845,"longitude":-57.94607877731323,"delay":"0005","interruption_type":"NONE"},{"comment":"nin/dem/nin/nin","source":"test","delayBegins":"08:00:00","delayEnds":"00:00:00","delaySeconds":"28800","incidence_type":"NONE","circulation":"NONE","id":2268,"state":"DELAYED","type":"TRAFFIC_REPORT","number":"1019-1099","street":"Diag. 76","deleted":false,"latitude":-34.931348752010706,"longitude":-57.968223094940186,"delay":"0030","interruption_type":"NONE"},{"comment":"nin/con/nin/nin","source":"test","delayBegins":"09:00:00","delayEnds":"00:00:00","delaySeconds":"32400","incidence_type":"NONE","circulation":"NONE","id":2269,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"550-598","street":"Bv. 82","deleted":false,"latitude":-34.919385431026,"longitude":-57.9897665977478,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre 2100 y 2600.","source":"@batransito","delayBegins":"15:25:00","delayEnds":"11:49:01","delaySeconds":"55500","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2346,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2300","street":"Nicasio Oroño","corner":"","deleted":false,"latitude":-34.6001042,"longitude":-58.4603595,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre el 1000 y el 2000.","source":"@batransito","delayBegins":"15:27:00","delayEnds":"11:49:01","delaySeconds":"55620","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2347,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1500","street":"Warnes","corner":"","deleted":false,"latitude":-34.5974044,"longitude":-58.4568525,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción de 3700 al 6000.","source":"@batransito","delayBegins":"15:32:00","delayEnds":"11:49:00","delaySeconds":"55920","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2349,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"4000","street":"La Pampa","corner":"","deleted":false,"latitude":-34.5739709,"longitude":-58.4699062,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 3700 al 6000.","source":"@batransito","delayBegins":"15:35:00","delayEnds":"11:49:00","delaySeconds":"56100","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2350,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"5000","street":"La Pampa","corner":"","deleted":false,"latitude":-34.5791105,"longitude":-58.4789712,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 1200 al 1700.","source":"@batransito","delayBegins":"15:36:00","delayEnds":"11:49:00","delaySeconds":"56160","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2351,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1500","street":"Del Campo","corner":"","deleted":false,"latitude":-34.5887646,"longitude":-58.4692352,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 2600 al 2800.","source":"@batransito","delayBegins":"15:40:00","delayEnds":"11:49:00","delaySeconds":"56400","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2352,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2700","street":"Benjamín Victorica Gral.","corner":"","deleted":false,"latitude":-34.5832896,"longitude":-58.
+2000
+4792862,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 01 al 600.","source":"@batransito","delayBegins":"15:42:00","delayEnds":"11:49:00","delaySeconds":"56520","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2353,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"400","street":"Charlone","corner":"","deleted":false,"latitude":-34.5833312,"longitude":-58.4502707,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 5900 al 6400","source":"@batransito","delayBegins":"15:45:00","delayEnds":"11:49:01","delaySeconds":"56700","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2354,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"5900","street":"Piran","corner":"","deleted":false,"latitude":-34.5685993,"longitude":-58.5007844,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre el 900 y el 1500.","source":"@batransito","delayBegins":"16:20:00","delayEnds":"11:49:00","delaySeconds":"58800","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2355,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1200","street":"Av. Udaondo","corner":"","deleted":false,"latitude":-34.5462565,"longitude":-58.4521034,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre el 3000 y el 3600.","source":"@batransito","delayBegins":"16:24:00","delayEnds":"11:49:00","delaySeconds":"59040","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2356,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"3400","street":"Av. Elcano","corner":"","deleted":false,"latitude":-34.5756276,"longitude":-58.459824,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 4400 al 5000.","source":"@batransito","delayBegins":"16:26:00","delayEnds":"11:49:01","delaySeconds":"59160","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2357,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"4600","street":"Ramallo","corner":"","deleted":false,"latitude":-34.5522161,"longitude":-58.4931528,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 4200 al 5000.","source":"@batransito","delayBegins":"16:28:00","delayEnds":"11:49:00","delaySeconds":"59280","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2358,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"4600","street":"Miller","corner":"","deleted":false,"latitude":-34.5524177,"longitude":-58.4955481,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 2600 al 2800.","source":"@batransito","delayBegins":"16:29:00","delayEnds":"11:49:00","delaySeconds":"59340","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2359,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2700","street":"Estrella Federal","corner":"","deleted":false,"latitude":-34.5740052,"longitude":-58.5081667,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre el 2600 y el 3000.","source":"@batransito","delayBegins":"16:41:00","delayEnds":"11:49:00","delaySeconds":"60060","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2362,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2700","street":"Ezeiza","corner":"","deleted":false,"latitude":-34.575011,"longitude":-58.5079241,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 5800 al 6100.","source":"@batransito","delayBegins":"16:54:00","delayEnds":"11:49:00","delaySeconds":"60840","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2363,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"6000","street":"Estado Plurinacional De Bolivia","corner":"","deleted":false,"latitude":-34.5739514,"longitude":-58.5080907,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 2900 al 3300.","source":"@batransito","delayBegins":"17:48:00","delayEnds":"11:49:00","delaySeconds":"64080","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2365,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"3100","street":"Bazurco","corner":"","deleted":false,"latitude":-34.5824304,"longitude":-58.5098298,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 2400 al 2600.","source":"@batransito","delayBegins":"17:50:00","delayEnds":"11:49:00","delaySeconds":"64200","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2366,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2500","street":"Manuel Álvarez Prado","corner":"","deleted":false,"latitude":-34.5724431,"longitude":-58.5088855,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción entre el 2700 y el 2900.","source":"@batransito","delayBegins":"17:53:00","delayEnds":"11:49:01","delaySeconds":"64380","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2367,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2800","street":"Santo Tomé","corner":"","deleted":false,"latitude":-34.6040717,"longitude":-58.4858714,"delay":"0020","interruption_type":"NONE"},{"comment":"Reducción del 3400 al 3900.","source":"@batransito","delayBegins":"17:55:00","delayEnds":"11:49:01","delaySeconds":"64500","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2368,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"3500","street":"Santo Tomé","corner":"","deleted":false,"latitude":-34.6081244,"longitude":-58.4928142,"delay":"0020","interruption_type":"NONE"},{"comment":"Rincón 801 al 1600","source":"@batransito","delayBegins":"10:13:00","delayEnds":"11:49:01","delaySeconds":"36780","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2381,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Rincón","corner":"","deleted":false,"latitude":-34.6206075,"longitude":-58.3957664,"delay":"0020","interruption_type":"NONE"},{"comment":"Av. Rivadavia 1801 al 2800","source":"@batransito","delayBegins":"10:14:00","delayEnds":"11:49:00","delaySeconds":"36840","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2382,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2200","street":"Av. Rivadavia","corner":"","deleted":false,"latitude":-34.609618,"longitude":-58.3975759,"delay":"0020","interruption_type":"NONE"},{"comment":"Av. Fernández de la Cruz 801 al ...","source":"@batransito","delayBegins":"10:15:00","delayEnds":"11:49:00","delaySeconds":"36900","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2383,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1200","street":"Av. Fernández de la Cruz","corner":"","deleted":false,"latitude":-34.6456546,"longitude":-58.4260255,"delay":"0020","interruption_type":"NONE"},{"comment":"Av. Corrientes 2801 al 3400","source":"@batransito","delayBegins":"10:15:00","delayEnds":"11:49:00","delaySeconds":"36900","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2384,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"3100","street":"Corrientes Av.","corner":"","deleted":false,"latitude":-34.6041118,"longitude":-58.4089078,"delay":"0020","interruption_type":"NONE"},{"comment":"Mom 2601 al 3600","source":"@batransito","delayBegins":"10:16:00","delayEnds":"11:49:00","delaySeconds":"36960","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2385,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"2900","street":"Mom","corner":"","deleted":false,"latitude":-34.6512923,"longitude":-58.4259755,"delay":"0020","interruption_type":"NONE"},{"comment":"Av. Saénz 801 al 1200","source":"@batransito","delayBegins":"10:17:00","delayEnds":"11:49:00","delaySeconds":"37020","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2386,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Av. Saénz","corner":"","deleted":false,"latitude":-34.6518148,"longitude":-58.4163687,"delay":"0020","interruption_type":"NONE"},{"comment":"Agustín de Vedia 2725 al 3900","source":"@batransito","delayBegins":"10:18:00","delayEnds":"11:49:00","delaySeconds":"37080","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2387,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"3200","street":"Agustín de Vedia","corner":"","deleted":false,"latitude":-34.6538446,"longitude":-58.4253384,"delay":"0020","interruption_type":"NONE"},{"comment":"Jerónimo Salguero 601 al 1100","source":"@batransito","delayBegins":"10:18:00","delayEnds":"11:49:00","delaySe
+73d
+conds":"37080","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2388,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"850","street":"Jerónimo Salguero","corner":"","deleted":false,"latitude":-34.6001632,"longitude":-58.4191029,"delay":"0020","interruption_type":"NONE"},{"comment":"Bertres 301 al 400","source":"@batransito","delayBegins":"10:19:00","delayEnds":"11:49:00","delaySeconds":"37140","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2389,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"350","street":"Bertres","corner":"","deleted":false,"latitude":-34.6223648,"longitude":-58.4389656,"delay":"0020","interruption_type":"NONE"},{"comment":"Av. Directorio 1 al 1700","source":"@batransito","delayBegins":"10:20:00","delayEnds":"11:49:00","delaySeconds":"37200","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2391,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1000","street":"Av. Directorio","corner":"","deleted":false,"latitude":-34.6291927,"longitude":-58.441732,"delay":"0020","interruption_type":"NONE"},{"comment":"Hidalgo 1 al 400","source":"@batransito","delayBegins":"10:21:00","delayEnds":"11:49:00","delaySeconds":"37260","incidence_type":"CONSTRUCTION","circulation":"NONE","id":2392,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"200","street":"Hidalgo","corner":"","deleted":false,"latitude":-34.6169489,"longitude":-58.438596,"delay":"0020","interruption_type":"NONE"},{"comment":"Corte por incendio en Humberto P...","source":"@batransito","delayBegins":"09:58:00","delayEnds":"11:49:00","delaySeconds":"35880","incidence_type":"OTHER","circulation":"NONE","id":2475,"state":"CONGESTED","type":"TRAFFIC_REPORT","number":"1969","street":"Humberto Primo","corner":"","deleted":false,"latitude":-34.6216571,"longitude":-58.3939635,"delay":"0020","interruption_type":"NONE"}]
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/lines HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=A HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=B HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=C HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=D HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=E HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=H HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=P HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/subway/line_route?line_code=P1 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:33 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/stations HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Last-Modified: Mon, 17 Jun 2013 13:49:01 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+1451
+[{"name":"ARENALES","closed":false,"bikes_available":7,"id":152,"type":"BICYCLE_STATION","number":"1102-1200","street":"Arenales","latitude":-34.594328,"longitude":-58.382804},{"name":"PLAZA ALMAGRO","closed":false,"bikes_available":0,"id":108,"type":"BICYCLE_STATION","number":"3701-3799","street":"Tte. Gral. Juan Domingo Perón","latitude":-34.605926,"longitude":-58.419482},{"name":"DISTRITO AUDIOVISUAL","closed":false,"bikes_available":14,"id":127,"type":"BICYCLE_STATION","number":"1898","street":"Dorrego","latitude":-34.580038,"longitude":-58.441553},{"name":"PLAZA GÜEMES","closed":false,"bikes_available":2,"id":130,"type":"BICYCLE_STATION","number":"1752-1800","street":"Jerónimo Salguero","latitude":-34.58963146510966,"longitude":-58.41630220413208},{"name":"EMMA DE LA BARRA","closed":false,"bikes_available":49,"id":129,"type":"BICYCLE_STATION","number":"301-399","street":"Emma de la Barra","latitude":-34.601037723406975,"longitude":-58.36383819580078},{"name":"CMD","closed":false,"bikes_available":12,"id":109,"type":"BICYCLE_STATION","number":"2401-2499","street":"Villarino","latitude":-34.654286,"longitude":-58.380429},{"name":"PLAZA DE MAYO","closed":false,"bikes_available":27,"id":107,"type":"BICYCLE_STATION","number":"101-199","street":"Perú","latitude":-34.609917,"longitude":-58.374721},{"name":"INDEPENDENCIA","closed":false,"bikes_available":15,"id":110,"type":"BICYCLE_STATION","street":"Av 9 de Julio","latitude":-34.617908,"longitude":-58.38047},{"name":"SUIPACHA","closed":false,"bikes_available":58,"id":131,"type":"BICYCLE_STATION","number":"701-799","street":"Suipacha","latitude":-34.6,"longitude":-58.37952},{"name":"PARQUE PATRICIOS","closed":false,"bikes_available":31,"id":154,"type":"BICYCLE_STATION","number":"3202-3280","street":"Av. Caseros","latitude":-34.638111588579335,"longitude":-58.41009557247162},{"name":"CONGRESO","closed":false,"bikes_available":3,"id":119,"type":"BICYCLE_STATION","number":"1-99","street":"Virrey Cevallos","latitude":-34.609829,"longitude":-58.389289},{"name":"ALSINA","closed":false,"bikes_available":27,"id":132,"type":"BICYCLE_STATION","number":"1001-1049","street":"Adolfo Alsina","latitude":-34.610729383164575,"longitude":-58.38093727827072},{"name":"ONCE","closed":false,"bikes_available":15,"id":124,"type":"BICYCLE_STATION","number":"2801-2999","street":"Bartolomé Mitre","latitude":-34.609475,"longitude":-58.407615},{"name":"PLAZA VICENTE LOPEZ","closed":false,"bikes_available":1,"id":123,"type":"BICYCLE_STATION","number":"1401-1459","street":"Montevideo","latitude":-34.593367,"longitude":-58.389698},{"name":"PLAZA ITALIA","closed":false,"bikes_available":34,"id":116,"type":"BICYCLE_STATION","street":"Calz Circular Plaza Italia","latitude":-34.580224,"longitude":-58.420751},{"name":"DERECHO","closed":false,"bikes_available":31,"id":114,"type":"BICYCLE_STATION","number":"2131-2199","street":"Av Pres. Figueroa Alcorta","latitude":-34.583669,"longitude":-58.391243},{"name":"VIRREY CEVALLOS","closed":false,"bikes_available":18,"id":126,"type":"BICYCLE_STATION","number":"1602-1690","street":"Av San Juan","latitude":-34.622755,"longitude":-58.388947},{"name":"PLAZA ROMA","closed":false,"bikes_available":83,"id":115,"type":"BICYCLE_STATION","number":"502-600","street":"Bouchard","latitude":-34.601599,"longitude":-58.369421},{"name":"PARQUE LAS HERAS","closed":false,"bikes_available":13,"id":120,"type":"BICYCLE_STATION","number":"2302-2400","street":"Av Coronel Díaz","latitude":-34.58503,"longitude":-58.407637},{"name":"PACIFICO","closed":false,"bikes_available":9,"id":125,"type":"BICYCLE_STATION","number":"302-600","street":"Av Int. Bullrich","latitude":-34.577468,"longitude":-58.426158},{"name":"PLAZA SAN MARTIN","closed":false,"bikes_available":16,"id":111,"type":"BICYCLE_STATION","number":"775-799","street":"Av Santa Fe","latitude":-34.594958,"longitude":-58.378283},{"name":"TRIBUNALES","closed":false,"bikes_available":23,"id":122,"type":"BICYCLE_STATION","number":"1201-1299","street":"Tucumán","latitude":-34.601342,"longitude":-58.385008},{"name":"UCA PUERTO MADERO","closed":false,"bikes_available":65,"id":121,"type":"BICYCLE_STATION","number":"1502-1600","street":"Av Alicia Moreau de Justo","latitude":-34.615974,"longitude":-58.365666},{"name":"ADUANA","closed":false,"bikes_available":38,"id":113,"type":"BICYCLE_STATION","number":"302-400","street":"Av Paseo Colón","latitude":-34.611365,"longitude":-58.369077},{"name":"PARQUE LEZAMA","closed":false,"bikes_available":24,"id":117,"type":"BICYCLE_STATION","number":"301","street":"Av Martin García","latitude":-34.628017,"longitude":-58.369853},{"name":"OBELISCO","closed":false,"bikes_available":34,"id":118,"type":"BICYCLE_STATION","number":"1002-1050","street":"Tte. Gral. Juan Domingo Perón","latitude":-34.606297,"longitude":-58.381051},{"name":"PLAZA HOUSSAY","closed":false,"bikes_available":17,"id":106,"type":"BICYCLE_STATION","number":"801-899","street":"Pres. José Evaristo Uriburu","latitude":-34.59902,"longitude":-58.398217},{"name":"RETIRO","closed":false,"bikes_available":15,"id":112,"type":"BICYCLE_STATION","street":"Av Dr. José María Ramos Mejía","latitude":-34.592308,"longitude":-58.37501}]
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line3 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line4 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line2a HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line5 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line6 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line10 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line8 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line7 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line11 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line9 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line12 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line22 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line23 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line25 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line21 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line20 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line17 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line19 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line18 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=gzhds5hhn2ricn HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=f0c3wcc8qynl8f HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=2chgkmnykpnfje HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=wt81hktlbass8a HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line2 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line24 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line35 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line34 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line36 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line14 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line15 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line16 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line13 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line26 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line27 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line28 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line30 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line29 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line33 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line32 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+
+GET http://190.210.190.48/bikepath/route/?bikepath_code=line31 HTTP/1.1
+Accept: */*
+Referer: file:///Applications/Install/6988665A-2E67-4E5A-8E3B-08F8071141B9/Install/
+Accept-Encoding: identity
+User-Agent: NativeHost
+Host: 190.210.190.48
+If-Modified-Since: Thu, 21 Feb 2013 19:01:59 GMT
+Connection: Keep-Alive
+
+
+HTTP/1.1 304 Not Modified
+Server: Apache-Coyote/1.1
+Date: Mon, 17 Jun 2013 13:49:39 GMT
+
+
+
+------------------------------------------------------------------
+

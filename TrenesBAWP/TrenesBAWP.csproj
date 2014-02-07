@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F20D091-EBE4-42C1-B686-6DA53BCD46FC}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrenesBAWP</RootNamespace>
+    <AssemblyName>TrenesBAWP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>TrenesBAWP.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>TrenesBAWP.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JeffWilcox.PhoneThemeManager">
+      <HintPath>..\packages\PhoneThemeManager.1.4\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="MobFox.Ads">
+      <HintPath>..\libs\MobFox.Ads.dll</HintPath>
+    </Reference>
+    <Reference Include="Phone.Controls">
+      <HintPath>..\libs\Phone.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="GeneralError.xaml.cs">
+      <DependentUpon>GeneralError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>HOME.XAML</DependentUpon>
+    </Compile>
+    <Compile Include="PositionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TrenStatusService.cs" />
+    <Compile Include="StatusChecker.cs" />
+    <Compile Include="Views\Acerca.xaml.cs">
+      <DependentUpon>Acerca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Opciones.xaml.cs">
+      <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
+      <DependentUpon>BelgranoNorte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoSur.xaml.cs">
+      <DependentUpon>BelgranoSur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mitre.xaml.cs">
+      <DependentUpon>Mitre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Roca.xaml.cs">
+      <DependentUpon>Roca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\SanMartin.xaml.cs">
+      <DependentUpon>SanMartin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Sarmiento.xaml.cs">
+      <DependentUpon>Sarmiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Urquiza.xaml.cs">
+      <DependentUpon>Urquiza.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\Home\trenes.png" />
+    <Content Include="Images\Subtes\accesibilidad.png" />
+    <Content Include="Images\Subtes\lineaA.png" />
+    <Content Include="Images\Subtes\lineaB.png" />
+    <Content Include="Images\Subtes\lineaC.png" />
+    <Content Include="Images\Subtes\lineaD.png" />
+    <Content Include="Images\Subtes\lineaE.png" />
+    <Content Include="Images\Subtes\lineaH.png" />
+    <Content Include="Images\Subtes\lineaP.png" />
+    <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\sanitarios.png" />
+    <Content Include="Images\Subtes\subtes.jpg" />
+    <Content Include="Images\Subtes\tren.png" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranosur.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_mitre.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_roca.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sanmartin.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sarmiento.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_urquiza.jpg" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.camera.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.clouds.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.pin.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.share.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.folder.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.minus.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.new.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.stop.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Directions.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Location.png" />
+    <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Mode.png" />
+    <Content Include="Resources\Icons\ApplicationBar\new.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Route.png" />
+    <Content Include="Resources\Icons\ApplicationBar\sync.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinBicycle.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinCar.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinDrink.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinFuel.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinHouse.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinLocation.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinRestaurant.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinShop.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Route\SearchBlack.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Route\SearchWhite.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\svg2raster.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Zoom\ZoomIn_Black.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Zoom\ZoomIn_White.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Zoom\ZoomOut_Black.png" />
+    <CodeAnalysisDictionary Include="Resources\Icons\Zoom\ZoomOut_White.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GeneralError.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HOME.XAML">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\DefaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acerca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Opciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoNorte.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoSur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Roca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\SanMartin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Sarmiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Urquiza.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuiaTBAWP.Commons\GuiaTBAWP.Commons.csproj">
+      <Project>{7B12C343-5C14-434E-882B-256DC35FAE1D}</Project>
+      <Name>GuiaTBAWP.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

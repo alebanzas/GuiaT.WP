@@ -1,0 +1,261 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="GuiaTBAWP.Views.Trenes.SanMartin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
+        </Grid.Background>
+
+        <controls:Panorama Title="tren san martín" TitleTemplate="{StaticResource SmallPanoramaTitle}">
+           
+            <controls:PanoramaItem Header="estado">
+                <StackPanel>
+                    <TextBlock Margin="12,-30,0,0" Text="{Binding Actualizacion}" />
+                    <Grid>
+                        <ListBox Height="500" ItemsSource="{Binding Ramales}" Margin="0,0,0,10" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,20" Width="432">
+                                        <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                        <TextBlock Text="{Binding Estado}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                                        <TextBlock Text="{Binding MasInfo}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </StackPanel>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="ramal">
+                <ScrollViewer>
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
+                        <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Retiro - Pilar</TextBlock>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                            <StackPanel Width="30" Margin="0,5,0,0">
+                                <StackPanel Margin="0,0,0,0">
+                                    <Rectangle Margin="0,15,0,0" Fill="#1C92D0" HorizontalAlignment="Left" Height="2020" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                </StackPanel>
+                                <StackPanel Margin="0,-2035,0,0">
+                                    <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Margin="12,0,0,0" Width="370">
+                                <StackPanel Height="130">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="150">
+                                            <Image Source="/Images/Subtes/lineaC.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                                <TextBlock>Mitre</TextBlock>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                                <TextBlock>Belgrano Norte</TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="130">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Palermo</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="130">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Chacarita</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                            <Image Source="/Images/Subtes/lineaB.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">La Paternal</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Villa del Parque</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Devoto</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sáenz Peña</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Santos Lugares</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Caseros</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">El Palomar</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Hurlingham</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">W. C. Morris</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bella Vista</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Muñiz</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San Miguel</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="130">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">José C. Paz</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                            <StackPanel Orientation="Horizontal" Width="150">
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
+                                                    <TextBlock>Urquiza</TextBlock>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Sol y Verde</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pte. Derqui</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Villa Astolfi</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="100">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pilar</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True"
+                              Mode="Default"
+							  IsMenuEnabled="True"
+							  Opacity="0.7">
+
+            <shell:ApplicationBarIconButton Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonGo_Click" />
+            <shell:ApplicationBarIconButton Text="mapa" IconUri="/Resources/Icons/ApplicationBar/Route.png"  Click="VerEnMapa_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.pin.rest.png" Text="Anclar" Click="Pin_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>

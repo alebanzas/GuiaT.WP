@@ -39,7 +39,7 @@
                         <TextBlock Margin="0" Text="estado del servicio" />
                     </Button>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteMapaReal">
-                        <TextBlock Margin="0" Text="mapa (nuevo)" />
+                        <TextBlock Margin="0" Text="mapa" />
                     </Button>
                 </StackPanel>
             </controls:PanoramaItem>

@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAAN", "GuiaTBAAN\Guia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBA.BLL", "GuiaTBA.BLL\GuiaTBA.BLL.csproj", "{D4C280FF-8502-47ED-B1D3-EBC1D6CD47B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBA.Common", "GuiaTBA.Common\GuiaTBA.Common.csproj", "{6609EE6A-8C83-41C5-9B46-4CF46CAAB6B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{D4C280FF-8502-47ED-B1D3-EBC1D6CD47B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4C280FF-8502-47ED-B1D3-EBC1D6CD47B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4C280FF-8502-47ED-B1D3-EBC1D6CD47B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6609EE6A-8C83-41C5-9B46-4CF46CAAB6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6609EE6A-8C83-41C5-9B46-4CF46CAAB6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6609EE6A-8C83-41C5-9B46-4CF46CAAB6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6609EE6A-8C83-41C5-9B46-4CF46CAAB6B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

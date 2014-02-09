@@ -1,4 +1,4 @@
-﻿namespace GuiaTBAWP.Commons.ViewModels
+﻿namespace GuiaTBA.BLL.ViewModels
 {
     public class SubteItemViewModel
     {

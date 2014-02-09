@@ -232,6 +232,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GuiaTBA.BLL\GuiaTBA.BLL.csproj">
+      <Project>{D4C280FF-8502-47ED-B1D3-EBC1D6CD47B3}</Project>
+      <Name>GuiaTBA.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuiaTBAWP.Commons\GuiaTBAWP.Commons.csproj">
       <Project>{7B12C343-5C14-434E-882B-256DC35FAE1D}</Project>
       <Name>GuiaTBAWP.Commons</Name>

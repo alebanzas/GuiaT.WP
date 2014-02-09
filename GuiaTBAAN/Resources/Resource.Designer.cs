@@ -61,10 +61,7 @@ namespace GuiaTBAAN
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
-			
-			// aapt resource value: 0x7f050001
-			public const int listView = 2131034113;
+			public const int listView = 2131034112;
 			
 			static Id()
 			{
@@ -80,7 +77,7 @@ namespace GuiaTBAAN
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int SubteEstado = 2130903040;
 			
 			static Layout()
 			{
@@ -95,11 +92,8 @@ namespace GuiaTBAAN
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
 			
 			static String()
 			{

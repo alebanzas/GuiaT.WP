@@ -1,4 +1,4 @@
-﻿namespace GuiaTBAWP.Models
+﻿namespace GuiaTBA.BLL.Models
 {
     public class SubteStatusItem
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GuiaTBAWP.Models
+namespace GuiaTBA.BLL.Models
 {
     public class SubteStatusModel
     {

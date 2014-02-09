@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace GuiaTBAWP.Commons.ViewModels
+namespace GuiaTBA.BLL.ViewModels
 {
     public class SubteStatusViewModel : INotifyPropertyChanged
     {

@@ -120,8 +120,6 @@
     <Compile Include="ViewModels\PuntoViewModel.cs" />
     <Compile Include="ViewModels\RadioTaxisItemViewModel.cs" />
     <Compile Include="ViewModels\RadioTaxisViewModel.cs" />
-    <Compile Include="ViewModels\SubteItemViewModel.cs" />
-    <Compile Include="ViewModels\SubteStatusViewModel.cs" />
     <Compile Include="ViewModels\TransporteViewModel.cs" />
     <Compile Include="ViewModels\TrenRamalItemViewModel.cs" />
     <Compile Include="ViewModels\TrenStatusViewModel.cs" />

@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBA.BLL.Models;
 using GuiaTBA.BLL.ViewModels;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;

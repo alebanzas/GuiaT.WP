@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{F0DD5DAE-85F4-4449-A905-A6F6C1172DCF}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.7.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas">
+  <App xmlns="" ProductID="{F0DD5DAE-85F4-4449-A905-A6F6C1172DCF}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.8.0.0" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

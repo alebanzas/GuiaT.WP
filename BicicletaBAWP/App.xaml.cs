@@ -13,7 +13,7 @@ namespace BicicletaBAWP
     public partial class App : Application
     {
         private const string AppName = "BicicletaBAWP";
-        private const string AppVersion = "1.7.1.0";
+        private const string AppVersion = "1.8.0.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

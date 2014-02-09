@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
 using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;

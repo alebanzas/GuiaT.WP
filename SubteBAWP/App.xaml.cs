@@ -13,7 +13,7 @@ namespace SubteBAWP
     public partial class App : Application
     {
         private const string AppName = "SubteBAWP";
-        private const string AppVersion = "1.7.1.0";
+        private const string AppVersion = "1.8.0.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

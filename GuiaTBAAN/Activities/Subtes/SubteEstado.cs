@@ -1,15 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using GuiaTBA.BLL.Models;
 using GuiaTBA.BLL.ViewModels;
+using GuiaTBAAN.Extensions;
+using GuiaTBAAN.Services;
+using Newtonsoft.Json;
 
 namespace GuiaTBAAN.Activities.Subtes
 {
     [Activity(Label = "SubteEstado", MainLauncher = true, Icon = "@drawable/icon")]
     public class SubteEstado : Activity
     {
+        WebRequest _httpReq;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -30,7 +41,50 @@ namespace GuiaTBAAN.Activities.Subtes
             };
 
             list.Adapter = new SubteEstadoAdapter(this, items);
-            
+
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            //ResetUI();
+            //if (!NetworkInterface.GetIsNetworkAvailable())
+            //{
+            //    ConnectionError.Visibility = Visibility.Visible;
+            //    Deployment.Current.Dispatcher.BeginInvoke(() => MessageBox.Show("Ha habido un error intentando acceder a los nuevos datos o no hay conexiones de red disponibles.\nPor favor asegúrese de contar con acceso de red y vuelva a intentarlo."));
+            //    return;
+            //}
+            //
+            //if (ViewModel.Lineas.Count == 0) Loading.Visibility = Visibility.Visible;
+            //ProgressBar.Show("Obteniendo estado del servicio...");
+            //SetApplicationBarEnabled(false);
+
+            var client = new HttpClient();
+            _httpReq = client.Get("/api/subte".ToApiCallUri(alwaysRefresh: true));
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
+        }
+
+        private void HTTPWebRequestCallBack(IAsyncResult result)
+        {
+            try
+            {
+                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var response = httpRequest.EndGetResponse(result);
+                var r = new SubteStatusModel();
+
+                using (var stream = new StreamReader(response.GetResponseStream()))
+                {
+                    var str = stream.ReadToEnd();
+
+                    r = JsonConvert.DeserializeObject<SubteStatusModel>(str);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                //ex.Log(ResetUI, () => { ConnectionError.Visibility = Visibility.Visible; return 0; });
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Device.Location;
+using GuiaTBA.BLL.Models;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;

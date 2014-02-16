@@ -15,21 +15,10 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-
-    <phone:PhoneApplicationPage.Resources>
-        <DataTemplate x:Name="MediumPanoramaTitle">
-            <ContentPresenter>
-                <TextBlock Text="{Binding}" Foreground="White" FontSize="70" Margin="12,20,0,0" />
-            </ContentPresenter>
-        </DataTemplate>
-    </phone:PhoneApplicationPage.Resources>
-
-    <Grid x:Name="LayoutRoot" Background="#10283a">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+        
         <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-            
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel>

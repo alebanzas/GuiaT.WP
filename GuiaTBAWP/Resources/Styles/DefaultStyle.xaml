@@ -37,6 +37,12 @@
         </ContentPresenter>
     </DataTemplate>
 
+    <DataTemplate x:Name="MediumPanoramaTitle">
+        <ContentPresenter>
+            <TextBlock Text="{Binding}" Foreground="White" FontSize="70" Margin="12,20,0,0" />
+        </ContentPresenter>
+    </DataTemplate>
+
     <DataTemplate x:Key="SmallHomePanoramaTitle">
         <ContentPresenter>
             <TextBlock Text="{Binding}" FontSize="50" Margin="0,0,0,0" />

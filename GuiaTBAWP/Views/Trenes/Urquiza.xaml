@@ -14,16 +14,13 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
 
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
-        
-        <controls:Panorama Title="tren urquiza" TitleTemplate="{StaticResource SmallPanoramaTitle}">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-            <controls:PanoramaItem Header="estado">
+        <controls:Panorama Title="tren urquiza" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+
+            <controls:PanoramaItem Header="estado" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <TextBlock Margin="12,-30,0,0" Text="{Binding Actualizacion}" />
                     <Grid>
@@ -42,7 +39,7 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal">
+            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}" FontSize="31">Federico Lacroze -  Gral. Lemos</TextBlock>
@@ -250,7 +247,6 @@
         </controls:Panorama>
     </Grid>
 
-    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True"
                               Mode="Default"

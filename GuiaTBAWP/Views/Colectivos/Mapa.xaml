@@ -15,16 +15,13 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+        
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <StackPanel x:Name="Results" Canvas.ZIndex="98" Background="Black" Opacity="0.7" Width="480" MaxHeight="300" VerticalAlignment="Top" HorizontalAlignment="Right">

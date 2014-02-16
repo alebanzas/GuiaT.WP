@@ -15,6 +15,7 @@ using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using ProgressBar = GuiaTBA.Common.ProgressBar;
 
 namespace GuiaTBAWP.Views.Bicicletas
 {

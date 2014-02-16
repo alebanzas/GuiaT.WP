@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
+using GuiaTBA.Common;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;

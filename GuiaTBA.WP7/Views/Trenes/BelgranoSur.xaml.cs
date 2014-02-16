@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using GuiaTBA.Common;
 using GuiaTBA.WP7.Services;
 using GuiaTBAWP;
 using GuiaTBAWP.Commons;

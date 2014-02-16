@@ -10,7 +10,7 @@ using System.Windows.Media;
 using GuiaTBA.WP7.BusData;
 using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 

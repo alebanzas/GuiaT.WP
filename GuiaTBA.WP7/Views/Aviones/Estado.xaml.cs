@@ -14,7 +14,7 @@ using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
 using GuiaTBA.WP7.Helpers;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBA.WP7.Views.Aviones

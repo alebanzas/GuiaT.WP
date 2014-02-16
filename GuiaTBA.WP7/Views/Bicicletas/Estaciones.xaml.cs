@@ -12,7 +12,7 @@ using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 

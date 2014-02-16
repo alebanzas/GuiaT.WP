@@ -8926,7 +8926,7 @@ Regreso por similar recorrido."
                              //orderby c.Key
                              select new PublicGrouping<string, Bus>(c);
 
-            control.ItemsSource = byCategory;
+            control.ItemsSource = byCategory.ToList();
         }
 
         public static IList<Bus> LoadBusesIUrb()

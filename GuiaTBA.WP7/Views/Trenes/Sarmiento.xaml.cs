@@ -4,7 +4,7 @@ using System.Windows;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using GuiaTBA.WP7.Services;
 using Microsoft.Phone.Shell;
 

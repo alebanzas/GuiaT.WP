@@ -15,7 +15,6 @@
     xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
     xmlns:geo="clr-namespace:System.Device.Location;assembly=System.Device">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
        
         <Grid.RowDefinitions>
@@ -25,7 +24,6 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="PageTitle" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextWrapping="Wrap" FontSize="56" />
         </StackPanel>
@@ -40,7 +38,6 @@
             <TextBlock x:Name="Distancia" Style="{StaticResource PhoneTextLargeStyle}"></TextBlock>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="2" Height="250" Width="450" Margin="9,220,0,0">
             <my:Map x:Name="MiMapa" Height="250" Width="450" VerticalAlignment="Top" CacheMode="BitmapCache" />
         </Grid>
@@ -50,8 +47,6 @@
         <shell:ApplicationBar x:Name="appBar" IsVisible="True" IsMenuEnabled="True" Mode="Default"  Opacity="1.0">
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.eye.rest.png" Text="Vista" Click="SwitchView"/>
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.pin.rest.png" Text="Anclar" Click="Pin"/>
-            <!--<shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.clouds.rest.png" Text="Web" Click="Browse"/>
-            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.share.rest.png" Text="Compartir" Click="Share"/>-->
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Como llegar" Click="Directions"/>
                 <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>

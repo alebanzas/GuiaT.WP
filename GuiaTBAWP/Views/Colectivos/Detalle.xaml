@@ -14,8 +14,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,8 +25,6 @@
         <controls:Panorama Grid.Row="0" x:Name="GeneralPanorama" Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top" />
     </Grid>
 
-
-    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar x:Name="applicationBar"
 							  IsVisible="True"

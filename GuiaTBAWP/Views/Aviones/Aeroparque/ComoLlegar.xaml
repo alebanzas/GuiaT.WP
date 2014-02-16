@@ -14,7 +14,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
 
         <Grid.RowDefinitions>
@@ -24,13 +23,11 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="AEROPARQUE" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="¿cómo llegar?" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
             <StackPanel>
                 <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,0,0">

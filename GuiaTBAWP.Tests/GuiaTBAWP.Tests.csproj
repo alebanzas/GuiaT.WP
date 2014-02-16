@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GuiaTBAWP\GuiaTBAWP.csproj">
+    <ProjectReference Include="..\GuiaTBAWP\GuiaTBA.WP8.csproj">
       <Project>{465f0bd9-e9bf-4aa1-a985-200948e54805}</Project>
-      <Name>GuiaTBAWP</Name>
+      <Name>GuiaTBA.WP8</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

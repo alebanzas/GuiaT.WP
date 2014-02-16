@@ -494,7 +494,7 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
                                             <Image Source="/Images/Subtes/tren.png" Height="30" Width="30" Margin="5"></Image>
-                                            <!--Image Source="/Images/Subtes/bus.png" Height="30" Width="30" Margin="5"></Image-->
+                                            <Image Source="/Images/Subtes/bus.png" Height="30" Width="30" Margin="5"></Image>
                                             <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
                                         </StackPanel>
                                     </StackPanel>

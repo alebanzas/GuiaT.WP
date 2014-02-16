@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP
@@ -14,6 +15,17 @@ namespace GuiaTBAWP
             TxtVersion.Text = string.Format("Versión {0}", App.Configuration.Version);
 
             StatusChecker.Check("Home");
+
+            if (!App.Configuration.IsRated && App.Configuration.OpenCount > 1)
+            {
+                if (MessageBox.Show("Queres calificar la aplicación?", "Ayudanos a mejorar", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                    App.Configuration.IsRated = true;
+                    Config.Set(App.Configuration);
+
+                    ShowReviewTask();
+                }
+            }
         }
 
         private void Button_Click_Ruta(object sender, RoutedEventArgs e)
@@ -118,8 +130,12 @@ namespace GuiaTBAWP
 
         private void RateReview_Click(object sender, EventArgs e)
         {
-            var marketplaceReviewTask = new MarketplaceReviewTask();
+            ShowReviewTask();
+        }
 
+        private static void ShowReviewTask()
+        {
+            var marketplaceReviewTask = new MarketplaceReviewTask();
             marketplaceReviewTask.Show();
         }
     }

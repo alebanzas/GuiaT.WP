@@ -11,7 +11,7 @@ using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
 using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
 

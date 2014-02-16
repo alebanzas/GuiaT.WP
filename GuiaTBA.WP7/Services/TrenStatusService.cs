@@ -6,7 +6,7 @@ using System.Windows;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 
 namespace GuiaTBA.WP7.Services
 {

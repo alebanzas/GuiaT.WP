@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Models;
-using GuiaTBA.WP7.Models;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Controls.Maps.Core;

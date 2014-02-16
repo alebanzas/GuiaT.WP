@@ -515,6 +515,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\ApplicationIcon.png" />
+    <Content Include="Images\Subtes\bus.png" />
     <Content Include="Images\Tiles\FlipCycleTileLarge.png" />
     <Content Include="Images\Tiles\FlipCycleTileMedium.png" />
     <Content Include="Images\Tiles\FlipCycleTileSmall.png" />
@@ -530,7 +531,6 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Images\background.jpg" />
     <Content Include="Images\Home\autos.png" />
     <Content Include="Images\Home\aviones.png" />
     <Content Include="Images\Home\bicicletas.png" />

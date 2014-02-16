@@ -1,0 +1,84 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBA.WP7.Views.Aviones.Aeroparque.InfoTecnica"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="AEROPARQUE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="info. técnica" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
+            <StackPanel>
+                <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,0,0">
+                    <Paragraph>
+                        Aeroparque Internacional "Jorge Newbery"
+                        <LineBreak/>
+                        <LineBreak/>
+                        El Aeroparque Jorge Newbery se encuentra ubicado en la zona noroeste de la Ciudad de Buenos Aires y a una distancia de 2 km del centro. Opera vuelos de cabotaje y vuelos internacionales con destino a Uruguay, Brasil, Chile y Paraguay.
+                        <LineBreak/>
+                        <LineBreak/>
+                    </Paragraph>
+                </RichTextBox>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="250" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">clave de referencia OACI</TextBlock>
+                    <TextBlock Width="180" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">4C</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="250" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">categoría de sanidad</TextBlock>
+                    <TextBlock Width="180" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">4</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="250" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">horario de operación</TextBlock>
+                    <TextBlock Width="180" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">24 hs</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="150" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">tipo</TextBlock>
+                    <TextBlock Width="280" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">internacional</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="150" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">pista</TextBlock>
+                    <TextBlock Width="280" Margin="0" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">13/31 2100m x 40m</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="150" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">material pista</TextBlock>
+                    <TextBlock Width="280" Margin="0" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Hormigón</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="150" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">superficie</TextBlock>
+                    <TextBlock Width="280" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">138 hectáreas</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="150" Margin="20,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="22" VerticalAlignment="Center">aeroestación</TextBlock>
+                    <TextBlock Width="280" Margin="0" Style="{StaticResource PhoneTextLargeStyle}">30.000 m2</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

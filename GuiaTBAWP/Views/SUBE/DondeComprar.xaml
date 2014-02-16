@@ -15,14 +15,12 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="¿dónde comprar?">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-            
-            <controls:PanoramaItem Header="venta">
+        
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="¿dónde comprar?" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <controls:PanoramaItem Header="venta" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Margin="12,0,0,12">
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
@@ -42,8 +40,8 @@
                     </ListBox>
                 </StackPanel>
             </controls:PanoramaItem>
-            
-            <controls:PanoramaItem Header="mapa">
+
+            <controls:PanoramaItem Header="mapa" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Margin="12,0,0,12">
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                     <my:Map Name="Mapa"

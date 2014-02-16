@@ -16,16 +16,13 @@
     shell:SystemTray.IsVisible="True">
 
     <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+        
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="GUÍA TRANSPORTE BA" Margin="12,0,0,0" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="colectivos" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>

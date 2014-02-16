@@ -32,7 +32,7 @@ namespace GuiaTBAWP
             // Phone-specific initialization
             InitializePhoneApplication();
 
-            ThemeManager.ToDarkTheme();
+            ThemeManager.ToLightTheme();
             
             LoadingBar.Instance.Initialize(RootFrame);
         }

@@ -16,12 +16,12 @@
     shell:SystemTray.IsVisible="True">
 
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="aviones">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
 
-            <controls:PanoramaItem Header="aeroparque">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="aviones" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+
+            <controls:PanoramaItem Header="aeroparque" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Margin="0,-20,0,0">
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueComoLlegar">
                         <TextBlock Margin="-12,0,0,0" Text="¿cómo llegar?" />
@@ -44,7 +44,7 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="ezeiza">
+            <controls:PanoramaItem Header="ezeiza" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Margin="0,-20,0,0">
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaComoLlegar">
                         <TextBlock Margin="-12,0,0,0" Text="¿cómo llegar?" />

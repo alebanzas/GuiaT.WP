@@ -74,11 +74,9 @@
     </phone:PhoneApplicationPage.Resources>
 
     <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
         
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
         <phone:Pivot Title="COLECTIVOS">
             <phone:PivotItem Header="interurbanos">
                 <phone:LongListSelector x:Name="busesIUrb" Background="Transparent"

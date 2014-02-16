@@ -33,21 +33,35 @@
 
     <DataTemplate x:Key="SmallPanoramaTitle">
         <ContentPresenter>
-            <TextBlock Text="{Binding}" FontSize="50" Margin="12,70,0,0" />
+            <TextBlock Text="{Binding}" FontSize="50" Margin="12,70,0,0" Foreground="White" />
         </ContentPresenter>
     </DataTemplate>
 
     <DataTemplate x:Name="MediumPanoramaTitle">
         <ContentPresenter>
-            <TextBlock Text="{Binding}" Foreground="White" FontSize="70" Margin="12,20,0,0" />
+            <TextBlock Text="{Binding}" FontSize="70" Margin="12,20,0,0" Foreground="White" />
         </ContentPresenter>
     </DataTemplate>
 
     <DataTemplate x:Key="SmallHomePanoramaTitle">
         <ContentPresenter>
-            <TextBlock Text="{Binding}" FontSize="50" Margin="0,0,0,0" />
+            <TextBlock Text="{Binding}" FontSize="50" Margin="0,0,0,0" Foreground="White" />
         </ContentPresenter>
     </DataTemplate>
+
+    <Style x:Key="PageTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeExtraExtraLarge}"/>
+        <Setter Property="Margin" Value="12,-7,0,0"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    
+    <Style x:Key="PageSubTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeNormal}"/>
+        <Setter Property="Margin" Value="12,0,0,0"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
 
     <!-- #Styles -->
     <Style x:Key="ListBoxStyle" TargetType="ListBoxItem">

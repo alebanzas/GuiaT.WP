@@ -9,8 +9,6 @@ namespace GuiaTBAWP.Views.Taxis
         public Taxis()
         {
             InitializeComponent();
-            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
-            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
 
             StatusChecker.Check("Taxis");
         }

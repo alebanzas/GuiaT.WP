@@ -7,15 +7,25 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Name="MediumPanoramaTitle">
+            <ContentPresenter>
+                <TextBlock Text="{Binding}" Foreground="White" FontSize="70" Margin="12,20,0,0" />
+            </ContentPresenter>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
     <Grid x:Name="LayoutRoot" Background="#0092D7">
-        <controls:Panorama Title="Guía Transporte BA">
+        <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
@@ -263,6 +273,11 @@
                 </ScrollViewer>
             </controls:PanoramaItem>
         </controls:Panorama>
+
+        <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/7197186882"
+                          Format="Banner"
+                          Margin="0,0,0,50"
+                          VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
     </Grid>
 
     <!-- Application Bar -->

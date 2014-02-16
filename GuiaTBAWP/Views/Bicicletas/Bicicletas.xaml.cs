@@ -9,8 +9,6 @@ namespace GuiaTBAWP.Views.Bicicletas
         public Bicicletas()
         {
             InitializeComponent();
-            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
-            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
 
             StatusChecker.Check("Bicicletas");
         }

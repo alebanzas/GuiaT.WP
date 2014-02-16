@@ -12,8 +12,6 @@ namespace GuiaTBAWP.Views.Colectivos
         public Home()
         {
             InitializeComponent();
-            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
-            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
 
             StatusChecker.Check("Colectivos");
 

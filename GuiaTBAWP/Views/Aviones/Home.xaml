@@ -7,7 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
+    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -41,10 +41,6 @@
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueInfoTecnica">
                         <TextBlock Margin="-12,0,0,0" Text="información técnica" />
                     </Button>
-
-                    <Grid Margin="0,100,0,0" HorizontalAlignment="Left" Grid.Row="1">
-                        <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
-                    </Grid>
                 </StackPanel>
             </controls:PanoramaItem>
 
@@ -71,6 +67,14 @@
                 </StackPanel>
             </controls:PanoramaItem>
         </controls:Panorama>
+
+        <Grid HorizontalAlignment="Left" Grid.Row="1">
+            <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/3410738082"
+                          Format="Banner"
+                          Margin="0,0,0,0"
+                          VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
+
+        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>

@@ -7,8 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Navigation;
 using GuiaTBA.WP7.BusData;
-using GuiaTBA.WP7.Commons.Data;
-using GuiaTBA.WP7.Commons.Models;
+using GuiaTBAWP.Commons.Data;
+using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 

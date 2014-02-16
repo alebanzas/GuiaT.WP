@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
-using GuiaTBA.WP7.Commons;
-using GuiaTBA.WP7.Commons.Helpers;
+using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBA.WP7

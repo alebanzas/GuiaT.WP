@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using GuiaTBA.WP7.Commons.Models;
-using GuiaTBA.WP7.Commons.ViewModels;
+using GuiaTBAWP.Commons.Models;
+using GuiaTBAWP.Commons.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
 

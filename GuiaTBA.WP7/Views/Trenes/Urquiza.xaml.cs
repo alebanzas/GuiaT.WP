@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using GuiaTBA.WP7.Commons;
-using GuiaTBA.WP7.Commons.ViewModels;
+using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
 using GuiaTBA.WP7.Models;
 using GuiaTBA.WP7.Services;

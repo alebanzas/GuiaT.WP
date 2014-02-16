@@ -514,6 +514,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\ApplicationIcon.png" />
+    <Content Include="Images\Tiles\FlipCycleTileLarge.png" />
+    <Content Include="Images\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Images\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Images\Tiles\IconicTileMediumLarge.png" />
+    <Content Include="Images\Tiles\IconicTileSmall.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -524,7 +530,6 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <Resource Include="PanoramaBackground.jpg" />
     <Content Include="Images\background.jpg" />
     <Content Include="Images\Home\autos.png" />
     <Content Include="Images\Home\aviones.png" />
@@ -557,8 +562,6 @@
     <Content Include="Images\Subtes\subtes.jpg" />
     <Content Include="Images\SUBE\logo-ministeriointeriorytransporte.png" />
     <Content Include="Images\SUBE\logo-transportepublico.png" />
-    <Content Include="PanoramaBackground.png" />
-    <Content Include="PanoramaBackgroundSUBE.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.camera.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.clouds.rest.png" />
     <Content Include="Resources\Icons\ApplicationBar\appbar.feature.eye.rest.png" />
@@ -662,12 +665,6 @@
     <Resource Include="Resources\Icons\Zoom\ZoomOut_White.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Icons\Pushpins\PushpinBicycle.png" />
     <Content Include="Resources\Icons\Pushpins\PushpinCar.png" />
     <Content Include="Resources\Icons\Pushpins\PushpinDrink.png" />

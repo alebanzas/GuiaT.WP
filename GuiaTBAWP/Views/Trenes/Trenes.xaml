@@ -13,17 +13,13 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,0">
             <TextBlock Text="GUÍA TRANSPORTE BA" Style="{StaticResource PhoneTextNormalStyle}"/>

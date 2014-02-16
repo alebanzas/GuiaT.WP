@@ -40,27 +40,20 @@
 
     <phone:PhoneApplicationPage.Resources>
 
-        <!-- The template for the list header. This will scroll as a part of the list. -->
-        <DataTemplate x:Key="BusListHeader">
-            
-        </DataTemplate>
+        <DataTemplate x:Key="BusListHeader"></DataTemplate>
 
-        <!-- The group header template, for groups in the main list -->
         <DataTemplate x:Key="BusGroupHeader">
             <Border Background="#10283a" Padding="{StaticResource PhoneTouchTargetOverhang}">
                 <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
             </Border>
         </DataTemplate>
-
-        <!-- The template for groups when they are items in the "jump list". Not setting -->
-        <!-- the GroupItemTemplate property will disable "jump list" functionality. -->
+        
         <DataTemplate x:Key="groupItemHeader">
             <Border Background="#10283a" Margin="{StaticResource PhoneTouchTargetOverhang}" Padding="{StaticResource PhoneTouchTargetOverhang}">
                 <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
             </Border>
         </DataTemplate>
 
-        <!-- The template for Bus items -->
         <DataTemplate x:Key="BusItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <StackPanel VerticalAlignment="Top">
@@ -69,7 +62,6 @@
                 </StackPanel>
             </Grid>
         </DataTemplate>
-
 
     </phone:PhoneApplicationPage.Resources>
 

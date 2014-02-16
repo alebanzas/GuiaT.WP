@@ -14,8 +14,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -48,8 +46,6 @@
         </Grid>
     </Grid>
 
-
-    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton x:Name="UpdateButton" Text="Actualizar" IconUri="/Resources/Icons/ApplicationBar/sync.png"  Click="ButtonRefresh_Click" />

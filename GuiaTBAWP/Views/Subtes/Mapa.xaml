@@ -36,7 +36,6 @@
         </Grid>
     </Grid>
  
-    <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.new.rest.png" Text="Acercar" Click="BtnAcercar_Click" />

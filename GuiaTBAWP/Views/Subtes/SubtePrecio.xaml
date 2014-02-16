@@ -13,7 +13,7 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,8 +22,8 @@
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RED DE SUBTE" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="precio" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="RED DE SUBTE" Style="{StaticResource PageSubTitle}"/>
+            <TextBlock Text="precio" Style="{StaticResource PageTitle}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-10,12,0">

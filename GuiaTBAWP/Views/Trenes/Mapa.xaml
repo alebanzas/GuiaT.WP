@@ -13,20 +13,18 @@
     mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <StackPanel x:Name="Results" Canvas.ZIndex="98" Background="Black" Opacity="0.7" Width="480" MaxHeight="300" VerticalAlignment="Top" HorizontalAlignment="Right">
                 <ListBox x:Name="ReferencesListBox" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="300">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <CheckBox IsChecked="{Binding Checked}" Tag="{Binding Id}" Content="{Binding Nombre}" Click="References_OnChecked" />
+                            <CheckBox IsChecked="{Binding Checked}" Tag="{Binding Id}" Content="{Binding Nombre}" Click="References_OnChecked" Foreground="White" />
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>

@@ -8925,6 +8925,7 @@ Regreso por similar recorrido."
                              group Bus by Bus.Category into c
                              //orderby c.Key
                              select new PublicGrouping<string, Bus>(c);
+            //TODO: no funciona
 
             control.ItemsSource = byCategory.ToList();
         }

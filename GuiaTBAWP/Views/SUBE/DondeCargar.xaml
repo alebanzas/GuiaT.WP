@@ -15,21 +15,20 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
         <controls:Panorama Title="¿dónde cargar?" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
             <controls:PanoramaItem Header="recarga" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <StackPanel Margin="12,0,0,12">
+                <Grid Margin="12,0,0,12">
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionError">No hay conexión a la red.</TextBlock>
                     <ListBox Margin="0,0,0,0" 
                              x:Name="Lista"
                              ItemContainerStyle="{StaticResource ListBoxStyle}" 
-                             ItemsSource="{Binding PuntosRecarga}"
-                             Height="400">
+                             ItemsSource="{Binding PuntosRecarga}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="0,0,0,12" Orientation="Horizontal">
@@ -38,7 +37,7 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ListBox>
-                </StackPanel>
+                </Grid>
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="mapa" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">

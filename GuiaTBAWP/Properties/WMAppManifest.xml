@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="&quot;es&quot;, UltimateResourceFallbackLocation.Satellite" />
-  <App xmlns="" ProductID="{45f9a37a-6a7f-45ce-af8a-236331a005b8}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.7.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas" PublisherID="{12247efe-bfdf-4fc9-ae48-bc806f2f20fe}">
+  <DefaultLanguage xmlns="" code="es-AR" />
+  <App xmlns="" ProductID="{45f9a37a-6a7f-45ce-af8a-236331a005b8}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.7.1.8" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas" PublisherID="{12247efe-bfdf-4fc9-ae48-bc806f2f20fe}">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -21,11 +21,15 @@
           <Count>0</Count>
           <BackgroundImageURI IsResource="false" IsRelative="true">Background.png</BackgroundImageURI>
           <Title>Guía Transporte BA</Title>
-          <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
-          <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge>false</HasLarge>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI>
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
+          <DeviceLockImageURI>
+          </DeviceLockImageURI>
+          <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

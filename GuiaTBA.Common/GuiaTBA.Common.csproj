@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7B12C343-5C14-434E-882B-256DC35FAE1D}</ProjectGuid>
+    <ProjectGuid>{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuiaTBAWP.Commons</RootNamespace>
-    <AssemblyName>GuiaTBAWP.Commons</AssemblyName>
+    <RootNamespace>GuiaTBA.Common</RootNamespace>
+    <AssemblyName>GuiaTBA.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
@@ -42,7 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
-    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="system.data.linq" />
     <Reference Include="System.Device" />
@@ -53,11 +52,11 @@
     <Reference Include="System.Net" />
     <Reference Include="mscorlib.extensions" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationConfiguration.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\SubteColorTituloConverter.cs" />
     <Compile Include="Converters\DateTimeToLocalConverter.cs" />
     <Compile Include="Converters\DistanceConverter.cs" />
     <Compile Include="Converters\ItineraryTextConverter.cs" />
@@ -65,6 +64,7 @@
     <Compile Include="Converters\NumberConverter.cs" />
     <Compile Include="Converters\PushpinTypeBrushConverter.cs" />
     <Compile Include="Converters\PushpinVisibilityIconConverter.cs" />
+    <Compile Include="Converters\SubteColorTituloConverter.cs" />
     <Compile Include="Converters\SubteNombreImagenConverter.cs" />
     <Compile Include="Converters\TextConverter.cs" />
     <Compile Include="Data\DataBicicletas.cs" />
@@ -85,21 +85,21 @@
     <Compile Include="Models\BicicletaEstacionDC.cs" />
     <Compile Include="Models\BicicletaEstacionTable.cs" />
     <Compile Include="Models\BicicletasStatusModel.cs" />
-    <Compile Include="Models\MapReference.cs" />
-    <Compile Include="Models\TrackLine.cs" />
     <Compile Include="Models\ColectivoModel.cs" />
-    <Compile Include="Models\RadioTaxiDC.cs" />
-    <Compile Include="Models\RadioTaxiTable.cs" />
     <Compile Include="Models\LineaTrenModel.cs" />
     <Compile Include="Models\LocalServiceModel.cs" />
+    <Compile Include="Models\MapReference.cs" />
     <Compile Include="Models\PointExtensions.cs" />
     <Compile Include="Models\PushpinCatalog.cs" />
     <Compile Include="Models\PushpinModel.cs" />
+    <Compile Include="Models\RadioTaxiDC.cs" />
+    <Compile Include="Models\RadioTaxiTable.cs" />
     <Compile Include="Models\RamalTrenModel.cs" />
     <Compile Include="Models\RouteModel.cs" />
     <Compile Include="Models\SUBEPuntoModel.cs" />
     <Compile Include="Models\SubteStatusItem.cs" />
     <Compile Include="Models\SubteStatusModel.cs" />
+    <Compile Include="Models\TrackLine.cs" />
     <Compile Include="Models\TransporteModel.cs" />
     <Compile Include="Models\TrenesLineaEstadoDC.cs" />
     <Compile Include="Models\TrenesLineaEstadoTable.cs" />

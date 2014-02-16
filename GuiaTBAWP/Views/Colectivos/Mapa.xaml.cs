@@ -18,6 +18,7 @@ using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
+using ProgressBar = GuiaTBA.Common.ProgressBar;
 
 namespace GuiaTBAWP.Views.Colectivos
 {

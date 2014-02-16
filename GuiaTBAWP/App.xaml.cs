@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBA.Common;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Controls;

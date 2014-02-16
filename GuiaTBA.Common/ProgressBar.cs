@@ -2,7 +2,7 @@
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Shell;
 
-namespace GuiaTBAWP
+namespace GuiaTBA.Common
 {
     public static class ProgressBar
     {

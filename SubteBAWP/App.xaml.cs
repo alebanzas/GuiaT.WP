@@ -6,7 +6,7 @@ using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using ProgressBar = GuiaTBAWP.ProgressBar;
+using ProgressBar = GuiaTBA.Common.ProgressBar;
 
 namespace SubteBAWP
 {

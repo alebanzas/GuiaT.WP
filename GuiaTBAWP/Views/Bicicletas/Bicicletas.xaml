@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
+    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -50,11 +50,12 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mapa">
                     <TextBlock Margin="-12,0,0,0" Text="mapa de ciclovias" />
                 </Button>
-
-                <Grid Margin="0,220,0,0" HorizontalAlignment="Left" Grid.Row="1">
-                    <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
-                </Grid>
             </StackPanel>
+
+            <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/4887471286"
+                        Format="Banner"
+                        Margin="0,0,0,0"
+                        VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
         </Grid>
     </Grid>
 

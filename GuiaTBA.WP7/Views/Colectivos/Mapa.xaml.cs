@@ -14,10 +14,10 @@ using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using Microsoft.Phone.Shell;
+using ProgressBar = GuiaTBAWP.ProgressBar;
 
 namespace GuiaTBA.WP7.Views.Colectivos
 {

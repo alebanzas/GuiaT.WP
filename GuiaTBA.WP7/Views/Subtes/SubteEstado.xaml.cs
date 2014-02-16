@@ -3,12 +3,13 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
+using GuiaTBAWP;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBA.WP7.Extensions;
-using GuiaTBA.WP7.Helpers;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
 

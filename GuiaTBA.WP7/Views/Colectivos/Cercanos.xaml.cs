@@ -14,6 +14,7 @@ using GuiaTBA.WP7.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
 using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
+using ProgressBar = GuiaTBAWP.ProgressBar;
 
 namespace GuiaTBA.WP7.Views.Colectivos
 {

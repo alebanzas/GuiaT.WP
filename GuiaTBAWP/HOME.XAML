@@ -24,8 +24,8 @@
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
-    <Grid x:Name="LayoutRoot" Background="#0092D7">
-        <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}">
+    <Grid x:Name="LayoutRoot" Background="#10283a">
+        <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="/Images/background.jpg" />
             </controls:Panorama.Background>
@@ -167,7 +167,7 @@
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <ScrollViewer>
+                <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                             <Paragraph>
@@ -208,15 +208,13 @@
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph></Paragraph>
-                            <Paragraph></Paragraph>
-                            <Paragraph></Paragraph>
                         </RichTextBox>
                     </StackPanel>
                 </ScrollViewer>
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <ScrollViewer>
+                <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel Margin="12,0,0,0">
                         <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
                         <TextBlock TextWrapping="Wrap">
@@ -276,7 +274,7 @@
 
         <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/7197186882"
                           Format="Banner"
-                          Margin="0,0,0,50"
+                          Margin="0,0,0,30"
                           VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
     </Grid>
 

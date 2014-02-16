@@ -693,9 +693,9 @@
     <WCFMetadataStorage Include="Service References\Bing.Search\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GuiaTBAWP.Commons\GuiaTBAWP.Commons.csproj">
-      <Project>{7B12C343-5C14-434E-882B-256DC35FAE1D}</Project>
-      <Name>GuiaTBAWP.Commons</Name>
+    <ProjectReference Include="..\GuiaTBA.Common\GuiaTBA.Common.csproj">
+      <Project>{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}</Project>
+      <Name>GuiaTBA.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

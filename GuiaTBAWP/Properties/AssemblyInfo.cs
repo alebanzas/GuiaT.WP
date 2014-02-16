@@ -5,15 +5,14 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GuiaTBAWP")]
+[assembly: AssemblyTitle("GuiaTBA.WP8")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AleBanzas")]
-[assembly: AssemblyProduct("GuiaTBAWP")]
+[assembly: AssemblyProduct("GuiaTBA.WP8")]
 [assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("es", UltimateResourceFallbackLocation.Satellite)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6424a96e-0e28-4607-b979-927069645e59")]
+[assembly: Guid("80fed970-f6b5-410f-8efc-a2db46f42d00")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +31,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.7.1.0")]
-[assembly: AssemblyFileVersion("1.7.1.0")]
+[assembly: AssemblyVersion("1.7.1.8")]
+[assembly: AssemblyFileVersion("1.7.1.8")]
+[assembly: NeutralResourcesLanguageAttribute("es-AR")]

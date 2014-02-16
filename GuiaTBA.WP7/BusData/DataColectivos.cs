@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GuiaTBA.WP7.Extensions;
 using Microsoft.Phone.Controls;
+using GuiaTBAWP.Extensions;
 
 namespace GuiaTBA.WP7.BusData
 {

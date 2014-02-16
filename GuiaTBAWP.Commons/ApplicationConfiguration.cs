@@ -220,5 +220,6 @@ namespace GuiaTBAWP.Commons
             }
         }
 
+        public bool IsRated { get; set; }
     }
 }

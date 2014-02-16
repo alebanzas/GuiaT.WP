@@ -3,8 +3,8 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
-using GuiaTBA.WP7.Commons.Extensions;
-using GuiaTBA.WP7.Commons.Services;
+using GuiaTBAWP.Commons.Extensions;
+using GuiaTBAWP.Commons.Services;
 using GuiaTBA.WP7.Extensions;
 using GuiaTBA.WP7.Models;
 

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
-using GuiaTBA.WP7.Commons;
-using GuiaTBA.WP7.Commons.Helpers;
+using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Helpers;
+using GuiaTBAWP;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 

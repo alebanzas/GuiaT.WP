@@ -21,7 +21,7 @@ namespace GuiaTBA.Common
             SystemTray.SetIsVisible(UIElement, true);
             SystemTray.SetProgressIndicator(UIElement, Progress);
             SystemTray.SetBackgroundColor(UIElement, ColorTranslator.FromHtml("#10283a"));
-            SystemTray.SetForegroundColor(UIElement, ColorTranslator.FromHtml("#005C84"));
+            SystemTray.SetForegroundColor(UIElement, ColorTranslator.FromHtml("#FFFFFF"));
         }
 
         public static void Hide()

@@ -178,7 +178,10 @@ namespace GuiaTBA.WP7
         void SetNavigatedPage(PhoneApplicationPage navigatedPage)
         {
             ProgressBar.UIElement = navigatedPage;
-            navigatedPage.Loaded += (sender, args) => SystemTray.SetBackgroundColor(navigatedPage, ColorTranslator.FromHtml("#10283a"));
+            if (navigatedPage != null)
+            {
+                navigatedPage.Loaded += (sender, args) => SystemTray.SetBackgroundColor(navigatedPage, ColorTranslator.FromHtml("#10283a"));
+            }
         }
 
         #endregion

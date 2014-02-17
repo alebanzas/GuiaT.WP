@@ -38,7 +38,7 @@ namespace GuiaTBA.WP7.Views.Colectivos
             {
                 var text = new TextBlock { Text = colectivo.Value, TextWrapping = TextWrapping.Wrap };
                 var scroll = new ScrollViewer { Margin = new Thickness(12, 0, 0, 40), Content = text };
-                var item = new PanoramaItem { Header = colectivo.Key, Content = scroll };
+                var item = new PanoramaItem { HeaderTemplate = Application.Current.Resources["SmallHomePanoramaTitle"] as DataTemplate, Header = colectivo.Key, Content = scroll };
                 GeneralPanorama.Items.Add(item);
             }
 

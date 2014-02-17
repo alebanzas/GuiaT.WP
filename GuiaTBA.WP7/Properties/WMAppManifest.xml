@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{F0DD5DAE-85F4-4449-A905-A6F6C1172DCF}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.7.1.0" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas">
+  <App xmlns="" ProductID="{F0DD5DAE-85F4-4449-A905-A6F6C1172DCF}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="2.0.0.7" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas" BitsPerPixel="32">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -16,9 +16,10 @@
     <Tokens>
       <PrimaryToken TokenID="GuiaTBA.WP7Token" TaskName="_default">
         <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">FlipCycleTileMedium.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Guía Transporte BA</Title>
+          <Title>
+          </Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

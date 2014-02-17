@@ -64,8 +64,7 @@
                 <Setter.Value>
                     <DataTemplate>
                         <Border Background="#10283a" Margin="6" >
-                            <TextBlock Text="{Binding Key}"  
-                                           FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                            <TextBlock Text="{Binding Key}"
                                            FontSize="48" Padding="11,0,0,0" 
                                            Foreground="White" VerticalAlignment="Bottom" />
                         </Border>

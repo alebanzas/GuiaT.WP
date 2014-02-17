@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Windows;
-using GuiaTBA.BLL.ViewModels;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
+using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using Microsoft.Phone.Controls;
 

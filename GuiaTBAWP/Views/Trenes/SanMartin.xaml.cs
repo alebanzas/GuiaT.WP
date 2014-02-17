@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using GuiaTBA.Common;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;

@@ -14,28 +14,17 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-
-    <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
-
+    <Grid x:Name="LayoutRoot" Background="#005C84">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <controls:Panorama x:Name="GeneralPanorama" Title="Guía Transporte BA">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-        </controls:Panorama>
+        <StackPanel Grid.Row="0" Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Grid.Row="0" x:Name="GeneralPanorama" Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top" />
     </Grid>
 
-
-    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar x:Name="applicationBar"
 							  IsVisible="True"

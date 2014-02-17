@@ -1,0 +1,91 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBA.WP7.Views.Taxis.Tarifas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="TAXI" Style="{StaticResource PageSubTitle}"/>
+            <TextBlock Text="tarifas" Style="{StaticResource PageTitle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel Margin="0,0,0,30">
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource PhoneTextLargeStyle}">de 06 hs a 22 hs</TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <StackPanel Width="300">
+                                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">inicial</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">bajada de bandera</TextBlock>
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 11</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Width="300">
+                                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">ficha</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-200 metros de recorrido</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-1 minuto de espera</TextBlock>
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 1,1</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="0,40,0,0">
+                        <TextBlock Style="{StaticResource PhoneTextLargeStyle}">de 22 hs a 06 hs</TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <StackPanel Width="300">
+                                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">inicial</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">bajada de bandera</TextBlock>
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 13,2</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Width="300">
+                                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">ficha</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-200 metros de recorrido</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">-1 minuto de espera</TextBlock>
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}">$ 1,32</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel>
+                        <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="0,40,0,0">
+                            <Paragraph>
+                                Las tarifas de taxi son exclusivamente en pesos argentinos.
+                                <LineBreak />
+                            </Paragraph>
+                            <Paragraph>
+                                Los viajes fuera de la Ciudad de Buenos Aires, sin regreso en el mismo taxi, pueden recibir un recargo por el recorrido que el vehículo deba realizar para volver a la Ciudad.
+                                <LineBreak />
+                            </Paragraph>
+                            <Paragraph>
+                                Podés denunciar incumplimientos llamando al
+                                <Hyperlink Click="GCBATel_OnClick">147</Hyperlink>, a la línea de asistencia al turista:
+                                <Hyperlink Click="TurTel_OnClick">0800-999-2838</Hyperlink>  o por mail a:
+                                <Hyperlink NavigateUri="mailto:taxis@buenosaires.gob.ar" TargetName="_blank">taxis@buenosaires.gob.ar</Hyperlink>
+                            </Paragraph>
+                        </RichTextBox>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

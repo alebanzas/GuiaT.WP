@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBA.WP7.Views.Trenes.Trenes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,0">
+            <TextBlock Text="GUÍA TRANSPORTE BA" Style="{StaticResource PageSubTitle}"/>
+            <TextBlock Text="trenes" Style="{StaticResource PageTitle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
+            <StackPanel>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_BelgranoNorte">
+                    <TextBlock Margin="0" Text="belgrano norte" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_BelgranoSur">
+                    <TextBlock Margin="0" Text="belgrano sur" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mitre">
+                    <TextBlock Margin="0" Text="mitre" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Roca">
+                    <TextBlock Margin="0" Text="roca" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SanMartin">
+                    <TextBlock Margin="0" Text="san martín" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Sarmiento">
+                    <TextBlock Margin="0" Text="sarmiento" />
+                </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Urquiza">
+                    <TextBlock Margin="0" Text="urquiza" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

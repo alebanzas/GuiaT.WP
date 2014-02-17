@@ -6,14 +6,14 @@ using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using ProgressBar = GuiaTBAWP.ProgressBar;
+using ProgressBar = GuiaTBA.Common.ProgressBar;
 
 namespace BicicletaBAWP
 {
     public partial class App : Application
     {
         private const string AppName = "BicicletaBAWP";
-        private const string AppVersion = "1.8.0.0";
+        private const string AppVersion = "1.7.1.0";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

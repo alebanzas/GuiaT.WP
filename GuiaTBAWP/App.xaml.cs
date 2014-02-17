@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBA.Common;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
-using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -12,7 +12,7 @@ namespace GuiaTBAWP
     public partial class App
     {
         private const string AppName = "GUIATBAWP";
-        private const string AppVersion = "1.7.0.0";
+        private const string AppVersion = "2.0.0.8";
 
         public static ApplicationConfiguration Configuration { get; set; }
         
@@ -177,6 +177,10 @@ namespace GuiaTBAWP
         void SetNavigatedPage(PhoneApplicationPage navigatedPage)
         {
             ProgressBar.UIElement = navigatedPage;
+            if (navigatedPage != null)
+            {
+                navigatedPage.Loaded += (sender, args) => SystemTray.SetBackgroundColor(navigatedPage, ColorTranslator.FromHtml("#10283a"));   
+            }
         }
 
         #endregion

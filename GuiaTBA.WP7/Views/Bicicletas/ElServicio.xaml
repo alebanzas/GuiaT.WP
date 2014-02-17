@@ -1,0 +1,72 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBA.WP7.Views.Bicicletas.ElServicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="BICICLETAS" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="el servicio" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel Margin="0,0,0,30">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">1</TextBlock>
+                            <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">Presentá tu número de documento al personal de Mejor en bici en cualquier estación.</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">2</TextBlock>
+                            <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">Se compara la foto del usuario y se registra la transacción ingresando tu número PIN de usuario.</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">3</TextBlock>
+                            <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">Retirás la bici y el casco.</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">4</TextBlock>
+                            <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">Siempre priorizá circular por las ciclovías protegidas. Tenés un máximo de 1 hora de uso por cada viaje.</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBlock Width="30" Style="{StaticResource PhoneTextExtraLargeStyle}">5</TextBlock>
+                            <TextBlock Width="400" TextWrapping="Wrap" VerticalAlignment="Center">Devolvé la bici al personal de Mejor en Bici en la estación más próxima a tu destino.</TextBlock>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                    <StackPanel>
+                        <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="0,40,0,0">
+                            <Paragraph>
+                                Una vez registrado, podés utilizar el servicio las veces que quieras de lunes a viernes entre las 8 y las 20 h y los sábados de 9 a 15 h con un límite de una hora.
+                                <LineBreak />
+                            </Paragraph>
+                            <Paragraph>
+                                Las bicicletas tienen un color y diseño distintivo. Para que el sistema siga funcionando necesitamos de tu colaboración, cuidá la bici y devolvela en el tiempo estipulado.
+                            </Paragraph>
+                        </RichTextBox>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

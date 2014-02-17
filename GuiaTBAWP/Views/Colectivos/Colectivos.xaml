@@ -6,10 +6,9 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:local="clr-namespace:GuiaTBAWP"
     xmlns:data="clr-namespace:GuiaTBAWP.BusData"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -41,29 +40,16 @@
 
     <phone:PhoneApplicationPage.Resources>
 
-        <!-- The template for the list header. This will scroll as a part of the list. -->
-        <DataTemplate x:Key="BusListHeader">
-            
-        </DataTemplate>
+        <DataTemplate x:Key="BusListHeader"></DataTemplate>
 
-        <!-- The group header template, for groups in the main list -->
         <DataTemplate x:Key="BusGroupHeader">
             <Border Background="#10283a" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
+                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" Foreground="White" />
             </Border>
         </DataTemplate>
-
-        <!-- The template for groups when they are items in the "jump list". Not setting -->
-        <!-- the GroupItemTemplate property will disable "jump list" functionality. -->
-        <DataTemplate x:Key="groupItemHeader">
-            <Border Background="#10283a" Margin="{StaticResource PhoneTouchTargetOverhang}" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
-            </Border>
-        </DataTemplate>
-
-        <!-- The template for Bus items -->
+        
         <DataTemplate x:Key="BusItemTemplate">
-            <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
+            <Grid>
                 <StackPanel VerticalAlignment="Top">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="0,0,0,6" />
 					<TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}" Margin="0,0,0,0" />
@@ -71,46 +57,62 @@
             </Grid>
         </DataTemplate>
 
+        <Style x:Key="LongListSelectorJumpListStyle" TargetType="phone:LongListSelector">
+            <Setter Property="LayoutMode" Value="List" />
+            <Setter Property="Margin" Value="18,12,0,0"/>
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border Background="#10283a" Margin="6" >
+                            <TextBlock Text="{Binding Key}"
+                                           FontSize="48" Padding="11,0,0,0" 
+                                           Foreground="White" VerticalAlignment="Bottom" />
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </phone:PhoneApplicationPage.Resources>
 
-    <Grid x:Name="LayoutRoot">
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/background.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="None" />
-        </Grid.Background>
+    <Grid x:Name="LayoutRoot" Background="#005C84">
         
-        <controls:Pivot Title="COLECTIVOS">
-            <controls:PivotItem Header="interurbanos">
-                <toolkit:LongListSelector x:Name="busesIUrb" Background="Transparent"
-                    ListHeaderTemplate="{StaticResource BusListHeader}"
-                    GroupHeaderTemplate="{StaticResource BusGroupHeader}"
-                    GroupItemTemplate="{StaticResource groupItemHeader}"
-                    ItemTemplate="{StaticResource BusItemTemplate}"
-                    SelectionChanged="Buses_OnSelectionChanged">
-                </toolkit:LongListSelector>
-            </controls:PivotItem>
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-            <controls:PivotItem Header="provinciales">
-                <toolkit:LongListSelector x:Name="busesProv" Background="Transparent"
+        <phone:Pivot Title="COLECTIVOS">
+            <phone:PivotItem Header="interurbanos">
+                <phone:LongListSelector x:Name="busesIUrb" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
-                    GroupItemTemplate="{StaticResource groupItemHeader}"
                     ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
                     SelectionChanged="Buses_OnSelectionChanged">
-                </toolkit:LongListSelector>
-            </controls:PivotItem>
+                </phone:LongListSelector>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="municipales">
-                <toolkit:LongListSelector x:Name="busesMuni" Background="Transparent"
+            <phone:PivotItem Header="provinciales">
+                <phone:LongListSelector x:Name="busesProv" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
-                    GroupItemTemplate="{StaticResource groupItemHeader}"
                     ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
                     SelectionChanged="Buses_OnSelectionChanged">
-                </toolkit:LongListSelector>
-            </controls:PivotItem>
-        </controls:Pivot>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="municipales">
+                <phone:LongListSelector x:Name="busesMuni" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
+                    ListHeaderTemplate="{StaticResource BusListHeader}"
+                    GroupHeaderTemplate="{StaticResource BusGroupHeader}"
+                    ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
+                    SelectionChanged="Buses_OnSelectionChanged">
+                </phone:LongListSelector>
+            </phone:PivotItem>
+        </phone:Pivot>
     </Grid>
 
 

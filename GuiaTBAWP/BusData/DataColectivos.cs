@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using GuiaTBAWP.Extensions;
+using GuiaTBAWP.Services;
 using Microsoft.Phone.Controls;
+using System;
 
 namespace GuiaTBAWP.BusData
 {
@@ -8921,12 +8923,17 @@ Regreso por similar recorrido."
 
         public static void SetData(LongListSelector control, IList<Bus> source)
         {
-            var byCategory = from Bus in source
-                             group Bus by Bus.Category into c
-                             //orderby c.Key
-                             select new PublicGrouping<string, Bus>(c);
+            control.ItemsSource = GetItemGroups(source, c => c.Category);
+        }
 
-            control.ItemsSource = byCategory;
+        private static List<Group<T>> GetItemGroups<T>(IEnumerable<T> itemList, Func<T, string> getKeyFunc)
+        {
+            IEnumerable<Group<T>> groupList = from item in itemList
+                                              group item by getKeyFunc(item) into g
+                                              //orderby g.Key
+                                              select new Group<T>(g.Key, g);
+
+            return groupList.ToList();
         }
 
         public static IList<Bus> LoadBusesIUrb()
@@ -8954,6 +8961,21 @@ Regreso por similar recorrido."
         {
             var list = Repository.Where(x => x.Title.Contains(" " + code + " ") || (x.Title.Contains(" " + code) && x.Title.EndsWith(code)));
             return list.ToDictionary(bus => bus.Title, bus => bus.Description);
+        }
+    }
+
+    public class Group<T> : List<T>
+    {
+        public Group(string name, IEnumerable<T> items)
+            : base(items)
+        {
+            Key = name;
+        }
+
+        public string Key
+        {
+            get;
+            set;
         }
     }
 }

@@ -5,24 +5,19 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <Grid>
-        <controls:Panorama Title="atención al usuario">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
 
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-            
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="inicio">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="atención al usuario" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <controls:PanoramaItem Header="inicio" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -78,8 +73,7 @@
                 </Grid>
             </controls:PanoramaItem>
 
-            <!--Panorama item two-->
-            <controls:PanoramaItem Header="CABA">
+            <controls:PanoramaItem Header="CABA" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -131,8 +125,7 @@
                 </Grid>
             </controls:PanoramaItem>
 
-            <!--Panorama item three-->
-            <controls:PanoramaItem Header="Zona Norte">
+            <controls:PanoramaItem Header="Zona Norte" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -170,8 +163,7 @@
                 </Grid>
             </controls:PanoramaItem>
 
-            <!--Panorama item four-->
-            <controls:PanoramaItem Header="Zona Oeste">
+            <controls:PanoramaItem Header="Zona Oeste" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -223,8 +215,7 @@
                 </Grid>
             </controls:PanoramaItem>
 
-            <!--Panorama item five-->
-            <controls:PanoramaItem Header="Zona Sur">
+            <controls:PanoramaItem Header="Zona Sur" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>

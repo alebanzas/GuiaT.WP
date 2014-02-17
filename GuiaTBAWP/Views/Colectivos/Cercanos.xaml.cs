@@ -14,6 +14,7 @@ using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Shell;
 using NetworkInterface = System.Net.NetworkInformation.NetworkInterface;
+using ProgressBar = GuiaTBA.Common.ProgressBar;
 
 namespace GuiaTBAWP.Views.Colectivos
 {

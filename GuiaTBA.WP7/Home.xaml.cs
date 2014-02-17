@@ -16,6 +16,9 @@ namespace GuiaTBA.WP7
 
             StatusChecker.Check("Home");
 
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
+
             if (!App.Configuration.IsRated && App.Configuration.OpenCount > 1)
             {
                 if (MessageBox.Show("Queres calificar la aplicación?", "Ayudanos a mejorar", MessageBoxButton.OKCancel) == MessageBoxResult.OK)

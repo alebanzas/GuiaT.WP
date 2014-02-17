@@ -7,19 +7,18 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ads="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <Grid x:Name="LayoutRoot" Background="#0092D7">
-        <controls:Panorama Title="Guía Transporte BA">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-            
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
             <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel>
@@ -157,7 +156,7 @@
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <ScrollViewer>
+                <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
                             <Paragraph>
@@ -198,15 +197,13 @@
                             </Paragraph>
                             <Paragraph></Paragraph>
                             <Paragraph></Paragraph>
-                            <Paragraph></Paragraph>
-                            <Paragraph></Paragraph>
                         </RichTextBox>
                     </StackPanel>
                 </ScrollViewer>
             </controls:PanoramaItem>
 
             <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
-                <ScrollViewer>
+                <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel Margin="12,0,0,0">
                         <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
                         <TextBlock TextWrapping="Wrap">
@@ -224,11 +221,13 @@
                             <LineBreak />
                             Armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                             <LineBreak /><LineBreak />
-                            1.8 (próximamente): BETA tren en vivo Línea Sarmiento. Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
+                            2.1 (próximamente): BETA tren en vivo Línea Sarmiento. Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
-                            1.7.1 (actual): Actualización horario subtes.
+                            2.0 (actual): Mejoras visuales, cambio de logo.
                             <LineBreak /><LineBreak />
-                            1.7 (actual): Mapa de ciclovias, mapa de red de trenes y estaciones, mapa red de subte y estaciones.
+                            1.7.1 (10-02-2014): Actualización horario subtes.
+                            <LineBreak /><LineBreak />
+                            1.7 (5-02-2014): Mapa de ciclovias, mapa de red de trenes y estaciones, mapa red de subte y estaciones.
                             <LineBreak /><LineBreak />
                             1.6.2 (31-01-2014): Fix a listado de taxis, orden de estaciones de bicicletas segun tu posición.
                             <LineBreak /><LineBreak />
@@ -263,9 +262,10 @@
                 </ScrollViewer>
             </controls:PanoramaItem>
         </controls:Panorama>
+
+        <ads:AdControl Name="MobFoxAdControl" VerticalAlignment="Bottom" Margin="0,0,0,30" />
     </Grid>
 
-    <!-- Application Bar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar x:Name="ApplicationBar"
 							  IsVisible="True"

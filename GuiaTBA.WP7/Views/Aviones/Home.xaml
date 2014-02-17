@@ -7,7 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
+    xmlns:ads="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -15,13 +15,13 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="aviones">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
+    <Grid x:Name="LayoutRoot" Background="#005C84">
 
-            <controls:PanoramaItem Header="aeroparque">
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="aviones" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+
+            <controls:PanoramaItem Header="aeroparque" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Margin="0,-20,0,0">
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueComoLlegar">
                         <TextBlock Margin="-12,0,0,0" Text="¿cómo llegar?" />
@@ -41,14 +41,10 @@
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_AeroparqueInfoTecnica">
                         <TextBlock Margin="-12,0,0,0" Text="información técnica" />
                     </Button>
-
-                    <Grid Margin="0,100,0,0" HorizontalAlignment="Left" Grid.Row="1">
-                        <mobfox:AdControl Name="MobFoxAdControl" VerticalAlignment="Top" />
-                    </Grid>
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="ezeiza">
+            <controls:PanoramaItem Header="ezeiza" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Margin="0,-20,0,0">
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_EzeizaComoLlegar">
                         <TextBlock Margin="-12,0,0,0" Text="¿cómo llegar?" />
@@ -71,6 +67,10 @@
                 </StackPanel>
             </controls:PanoramaItem>
         </controls:Panorama>
+
+        <Grid HorizontalAlignment="Left" Grid.Row="1">
+            <ads:AdControl Name="MobFoxAdControl" VerticalAlignment="Bottom" />
+        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>

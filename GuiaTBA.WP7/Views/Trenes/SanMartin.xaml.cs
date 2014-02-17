@@ -2,10 +2,8 @@
 using System.Linq;
 using System.Windows;
 using GuiaTBA.Common;
-using GuiaTBAWP;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.ViewModels;
-using GuiaTBA.WP7.Extensions;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBA.WP7.Services;

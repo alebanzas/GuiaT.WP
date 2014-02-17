@@ -13,7 +13,7 @@ namespace GuiaTBA.WP7
     public partial class App
     {
         private const string AppName = "GuiaTBA.WP7";
-        private const string AppVersion = "1.7.1.0";
+        private const string AppVersion = "2.0.0.7";
 
         public static ApplicationConfiguration Configuration { get; set; }
         
@@ -178,6 +178,7 @@ namespace GuiaTBA.WP7
         void SetNavigatedPage(PhoneApplicationPage navigatedPage)
         {
             ProgressBar.UIElement = navigatedPage;
+            navigatedPage.Loaded += (sender, args) => SystemTray.SetBackgroundColor(navigatedPage, ColorTranslator.FromHtml("#10283a"));
         }
 
         #endregion

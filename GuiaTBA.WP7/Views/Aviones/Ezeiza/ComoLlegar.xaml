@@ -1,0 +1,59 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBA.WP7.Views.Aviones.Ezeiza.ComoLlegar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="EZEIZA" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="¿cómo llegar?" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
+            <StackPanel>
+                <RichTextBox TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,0,0">
+                    <Paragraph>
+                        Aeropuerto Internacional de Ezeiza "Ministro Pistarini"
+                        <LineBreak/>
+                        <LineBreak/>
+                        Tel:
+                        <Hyperlink Click="Phone_OnClick">(+54 11) 5480 2500</Hyperlink>
+                        <LineBreak />
+                        <LineBreak />
+                        Autopista Tte. Gral. Ricchieri Km 33,5 , Buenos Aires.
+                    </Paragraph>
+                </RichTextBox>
+                <my:Map x:Name="Mapa" Margin="0,30,0,0" Height="350" Width="430" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar x:Name="appBar" IsVisible="True" IsMenuEnabled="True" Mode="Default"  Opacity="1.0">
+            <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.eye.rest.png" Text="Vista" Click="SwitchView"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Como llegar" Click="Directions"/>
+                <shell:ApplicationBarMenuItem Text="Opciones" Click="Opciones_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

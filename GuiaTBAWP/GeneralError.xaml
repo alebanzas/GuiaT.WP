@@ -13,12 +13,13 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,20,0,0">
             <TextBlock x:Name="ApplicationTitle" Text="GUIA TRANSPORTE BUENOS AIRES" 

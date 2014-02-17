@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFB5C86B-8464-4A9C-9A89-980D213CC9C7}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuiaTBA.WP7</RootNamespace>
+    <AssemblyName>GuiaTBA.WP7</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>GuiaTBA.WP7.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>GuiaTBA.WP7.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20803.0</ExpressionBlendVersion>
+    <SccProjectName />
+    <SccLocalPath />
+    <SccAuxPath />
+    <SccProvider />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JeffWilcox.Maps">
+      <HintPath>..\libs\JeffWilcox.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="JeffWilcox.PhoneThemeManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PhoneThemeManager.1.4\lib\sl4-windowsphone71\JeffWilcox.PhoneThemeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="MobFox.Ads">
+      <HintPath>..\libs\MobFox.Ads.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="Phone.Controls">
+      <HintPath>..\libs\Phone.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="GeneralError.xaml.cs">
+      <DependentUpon>GeneralError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PositionService.cs" />
+    <Compile Include="Services\TrenStatusService.cs" />
+    <Compile Include="StatusChecker.cs" />
+    <Compile Include="Views\Acerca.xaml.cs">
+      <DependentUpon>Acerca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Aeroparque\ComoLlegar.xaml.cs">
+      <DependentUpon>ComoLlegar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Aeroparque\InfoTecnica.xaml.cs">
+      <DependentUpon>InfoTecnica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Ezeiza\ComoLlegar.xaml.cs">
+      <DependentUpon>ComoLlegar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Ezeiza\InfoTecnica.xaml.cs">
+      <DependentUpon>InfoTecnica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Estado.xaml.cs">
+      <DependentUpon>Estado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aviones\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\Bicicletas.xaml.cs">
+      <DependentUpon>Bicicletas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\Inscripcion.xaml.cs">
+      <DependentUpon>Inscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\ElServicio.xaml.cs">
+      <DependentUpon>ElServicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\LugarDetalles.xaml.cs">
+      <DependentUpon>LugarDetalles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\Estaciones.xaml.cs">
+      <DependentUpon>Estaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bicicletas\ElSistema.xaml.cs">
+      <DependentUpon>ElSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colectivos\Cercanos.xaml.cs">
+      <DependentUpon>Cercanos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colectivos\Detalle.xaml.cs">
+      <DependentUpon>Detalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colectivos\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colectivos\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ruta\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
+      <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SUBE\DondeCargar.xaml.cs">
+      <DependentUpon>DondeCargar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Opciones.xaml.cs">
+      <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
+      <DependentUpon>SubteEstado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteHorarios.xaml.cs">
+      <DependentUpon>SubteHorarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteLineas.xaml.cs">
+      <DependentUpon>SubteLineas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubteMapa.xaml.cs">
+      <DependentUpon>SubteMapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\SubtePrecio.xaml.cs">
+      <DependentUpon>SubtePrecio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subtes\Subtes.xaml.cs">
+      <DependentUpon>Subtes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Taxis\RadioTaxiDetalles.xaml.cs">
+      <DependentUpon>RadioTaxiDetalles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Taxis\RadioTaxis.xaml.cs">
+      <DependentUpon>RadioTaxis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Taxis\Tarifas.xaml.cs">
+      <DependentUpon>Tarifas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Taxis\Taxis.xaml.cs">
+      <DependentUpon>Taxis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoNorte.xaml.cs">
+      <DependentUpon>BelgranoNorte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\BelgranoSur.xaml.cs">
+      <DependentUpon>BelgranoSur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusData\Bus.cs" />
+    <Compile Include="Views\Colectivos\Colectivos.xaml.cs">
+      <DependentUpon>Colectivos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusData\DataColectivos.cs" />
+    <Compile Include="Views\SUBE\HomeSUBE.xaml.cs">
+      <DependentUpon>HomeSUBE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SUBE\DondeUsarSUBE.xaml.cs">
+      <DependentUpon>DondeUsarSUBE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mitre.xaml.cs">
+      <DependentUpon>Mitre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Roca.xaml.cs">
+      <DependentUpon>Roca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\SanMartin.xaml.cs">
+      <DependentUpon>SanMartin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Sarmiento.xaml.cs">
+      <DependentUpon>Sarmiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Trenes.xaml.cs">
+      <DependentUpon>Trenes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Urquiza.xaml.cs">
+      <DependentUpon>Urquiza.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SUBE\PerdidaRoboDanio.xaml.cs">
+      <DependentUpon>PerdidaRoboDanio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SUBE\PreguntasFrecuentes.xaml.cs">
+      <DependentUpon>PreguntasFrecuentes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\SUBE\DondeComprar.xaml.cs">
+      <DependentUpon>DondeComprar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Bing.Geocode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Bing.Route\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Bing.Search\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="GeneralError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Acerca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Aeroparque\ComoLlegar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Aviones\Aeroparque\InfoTecnica.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Ezeiza\ComoLlegar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Ezeiza\InfoTecnica.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Estado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aviones\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bicicletas\Bicicletas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Bicicletas\Inscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\ElServicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\LugarDetalles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\Estaciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Bicicletas\ElSistema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Cercanos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Detalle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Colectivos\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Colectivos\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Ruta\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SUBE\AtencionAlUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SUBE\DondeCargar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Opciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteEstado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteHorarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteLineas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubteMapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\SubtePrecio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Subtes\Subtes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\RadioTaxiDetalles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\RadioTaxis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\Tarifas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Taxis\Taxis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoNorte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\BelgranoSur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Colectivos\Colectivos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SUBE\HomeSUBE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SUBE\DondeUsarSUBE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SUBE\PerdidaRoboDanio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SUBE\PreguntasFrecuentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SUBE\DondeComprar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\DefaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Roca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\SanMartin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\Sarmiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\Trenes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Trenes\Urquiza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="FlipCycleTileMedium.png" />
+    <Content Include="Images\Home\autos.png" />
+    <Content Include="Images\Home\aviones.png" />
+    <Content Include="Images\Home\bicicletas.png" />
+    <Content Include="Images\Home\colectivos.png" />
+    <Content Include="Images\Home\ruta.png" />
+    <Content Include="Images\Home\sube.png" />
+    <Content Include="Images\Home\subtes.png" />
+    <Content Include="Images\Home\taxis.png" />
+    <Content Include="Images\Home\trenes.png" />
+    <Content Include="Images\Subtes\accesibilidad.png" />
+    <Content Include="Images\Subtes\lineaA.png" />
+    <Content Include="Images\Subtes\lineaB.png" />
+    <Content Include="Images\Subtes\lineaC.png" />
+    <Content Include="Images\Subtes\lineaD.png" />
+    <Content Include="Images\Subtes\lineaE.png" />
+    <Content Include="Images\Subtes\lineaH.png" />
+    <Content Include="Images\Subtes\lineaP.png" />
+    <Content Include="Images\Subtes\lineaU.png" />
+    <Content Include="Images\Subtes\molinete.png" />
+    <Content Include="Images\Subtes\sanitarios.png" />
+    <Content Include="Images\Subtes\tren.png" />
+    <Content Include="Images\Tiles\FlipCycleTileLarge.png" />
+    <Content Include="Images\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Images\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Images\Tiles\IconicTileMediumLarge.png" />
+    <Content Include="Images\Tiles\IconicTileSmall.png" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranonorte.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_belgranosur.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_mitre.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_roca.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sanmartin.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_sarmiento.jpg" />
+    <Content Include="Images\Trenes\mapa_ffcc_urquiza.jpg" />
+    <Content Include="Images\Subtes\subtes.jpg" />
+    <Content Include="Images\SUBE\logo-ministeriointeriorytransporte.png" />
+    <Content Include="Images\SUBE\logo-transportepublico.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.camera.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.clouds.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.pin.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.feature.share.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.folder.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.minus.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.new.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\appbar.stop.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.eye.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.phone.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.search.png" />
+    <Content Include="Resources\Icons\ApplicationBar\feature.settings.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\minus.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Mode.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Directions.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Location.png" />
+    <Content Include="Resources\Icons\ApplicationBar\new.rest.png" />
+    <Content Include="Resources\Icons\ApplicationBar\Route.png" />
+    <None Include="Service References\Bing.Geocode\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Geocode\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Geocode\contracts.wsdl" />
+    <None Include="Service References\Bing.Geocode\contracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Geocode\geocode.wsdl" />
+    <None Include="Service References\Bing.Geocode\geocode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Geocode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Geocode\GuiaTBA.WP7.Bing.Geocode.GeocodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Bing.Route\configuration91.svcinfo" />
+    <None Include="Service References\Bing.Route\configuration.svcinfo" />
+    <None Include="Service References\Bing.Route\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Bing.Search\configuration91.svcinfo" />
+    <None Include="Service References\Bing.Search\configuration.svcinfo" />
+    <None Include="Service References\Bing.Search\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Icons\svg2raster.png" />
+    <Content Include="Resources\Icons\ApplicationBar\sync.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\Bing.Route\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Route\contracts.wsdl" />
+    <None Include="Service References\Bing.Route\contracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Route\route.wsdl" />
+    <None Include="Service References\Bing.Route\route.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Route\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Route\GuiaTBA.WP7.Bing.Route.MajorRoutesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Bing.Route\GuiaTBA.WP7.Bing.Route.RouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Bing.Search\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Search\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Search\contracts.wsdl" />
+    <None Include="Service References\Bing.Search\contracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Search\search.wsdl" />
+    <None Include="Service References\Bing.Search\search.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Search\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Bing.Search\GuiaTBA.WP7.Bing.Search.SearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Resource Include="Resources\Icons\Route\SearchBlack.png" />
+    <Resource Include="Resources\Icons\Route\SearchWhite.png" />
+    <Resource Include="Resources\Icons\Zoom\ZoomIn_Black.png" />
+    <Resource Include="Resources\Icons\Zoom\ZoomIn_White.png" />
+    <Resource Include="Resources\Icons\Zoom\ZoomOut_Black.png" />
+    <Resource Include="Resources\Icons\Zoom\ZoomOut_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\Pushpins\PushpinBicycle.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinCar.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinDrink.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinFuel.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinHouse.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinLocation.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinRestaurant.png" />
+    <Content Include="Resources\Icons\Pushpins\PushpinShop.png" />
+    <None Include="Service References\Bing.Geocode\configuration91.svcinfo" />
+    <None Include="Service References\Bing.Geocode\configuration.svcinfo" />
+    <None Include="Service References\Bing.Geocode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Bing.Geocode\" />
+    <WCFMetadataStorage Include="Service References\Bing.Route\" />
+    <WCFMetadataStorage Include="Service References\Bing.Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuiaTBA.Common\GuiaTBA.Common.csproj">
+      <Project>{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}</Project>
+      <Name>GuiaTBA.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

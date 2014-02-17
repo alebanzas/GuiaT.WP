@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{F0DD5DAE-85F4-4449-A905-A6F6C1172DCF}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="1.8.0.0" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas">
-    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="es-AR" />
+  <Languages xmlns="">
+    <Language code="es-AR" />
+  </Languages>
+  <App xmlns="" ProductID="{45f9a37a-6a7f-45ce-af8a-236331a005b8}" Title="Guía Transporte BA" RuntimeType="Silverlight" Version="2.0.0.8" Genre="apps.normal" Author="Alejandro Banzas" Description="" Publisher="AleBanzas" PublisherID="{12247efe-bfdf-4fc9-ae48-bc806f2f20fe}">
+    <IconPath IsRelative="true" IsResource="false">Images\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_LOCATION" />
@@ -9,18 +13,39 @@
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
       <Capability Name="ID_CAP_IDENTITY_USER" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_MAP" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="Home.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="GuiaTBAWPToken" TaskName="_default">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+        <TemplateFlip>
+          <SmallImageURI IsResource="false" IsRelative="true">Images\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
-          <Title>Guía Transporte BA</Title>
-        </TemplateType5>
+          <BackgroundImageURI IsResource="false" IsRelative="true">Images\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <Title>
+          </Title>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI>
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Images\Tiles\FlipCycleTileLarge.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
+          </LargeBackBackgroundImageURI>
+          <DeviceLockImageURI>
+          </DeviceLockImageURI>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>

@@ -14,15 +14,12 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="SUBE">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/Images/background.jpg" />
-            </controls:Panorama.Background>
-            
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="menú">
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <controls:Panorama Title="SUBE" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <controls:PanoramaItem Header="menú" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Venta">
 						<TextBlock Margin="-12,0,0,0" Text="¿dónde comprar la tarjeta?" />
@@ -45,8 +42,7 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <!--Panorama item two-->
-            <controls:PanoramaItem Header="¿qué es?">
+            <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">

@@ -44,24 +44,35 @@
 
         <DataTemplate x:Key="BusGroupHeader">
             <Border Background="#10283a" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
+                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" Foreground="White" />
             </Border>
         </DataTemplate>
         
-        <DataTemplate x:Key="groupItemHeader">
-            <Border Background="#10283a" Margin="{StaticResource PhoneTouchTargetOverhang}" Padding="{StaticResource PhoneTouchTargetOverhang}">
-                <TextBlock Text="{Binding Key}" Style="{StaticResource PhoneTextLargeStyle}" Margin="0,0,0,0" />
-            </Border>
-        </DataTemplate>
-
         <DataTemplate x:Key="BusItemTemplate">
-            <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
+            <Grid>
                 <StackPanel VerticalAlignment="Top">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" TextWrapping="Wrap" Margin="0,0,0,6" />
 					<TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilySemiLight}" Margin="0,0,0,0" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
+
+        <Style x:Key="LongListSelectorJumpListStyle" TargetType="phone:LongListSelector">
+            <Setter Property="LayoutMode" Value="List" />
+            <Setter Property="Margin" Value="18,12,0,0"/>
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border Background="#10283a" Margin="6" >
+                            <TextBlock Text="{Binding Key}"  
+                                           FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                                           FontSize="48" Padding="11,0,0,0" 
+                                           Foreground="White" VerticalAlignment="Bottom" />
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </phone:PhoneApplicationPage.Resources>
 
@@ -72,27 +83,33 @@
         <phone:Pivot Title="COLECTIVOS">
             <phone:PivotItem Header="interurbanos">
                 <phone:LongListSelector x:Name="busesIUrb" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
                     SelectionChanged="Buses_OnSelectionChanged">
                 </phone:LongListSelector>
             </phone:PivotItem>
 
             <phone:PivotItem Header="provinciales">
                 <phone:LongListSelector x:Name="busesProv" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
                     SelectionChanged="Buses_OnSelectionChanged">
                 </phone:LongListSelector>
             </phone:PivotItem>
 
             <phone:PivotItem Header="municipales">
                 <phone:LongListSelector x:Name="busesMuni" Background="Transparent"
+                    IsGroupingEnabled="True" LayoutMode="List" HideEmptyGroups="False"
                     ListHeaderTemplate="{StaticResource BusListHeader}"
                     GroupHeaderTemplate="{StaticResource BusGroupHeader}"
                     ItemTemplate="{StaticResource BusItemTemplate}"
+                    JumpListStyle="{StaticResource LongListSelectorJumpListStyle}" 
                     SelectionChanged="Buses_OnSelectionChanged">
                 </phone:LongListSelector>
             </phone:PivotItem>

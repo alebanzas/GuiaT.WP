@@ -18,8 +18,8 @@
     <Grid x:Name="LayoutRoot" Background="#005C84">
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
         
-        <controls:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+        <phone:Panorama Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <phone:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel>
                         <Button Visibility="Collapsed" Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta">
@@ -153,9 +153,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
@@ -200,9 +200,9 @@
                         </RichTextBox>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="acerca de..." HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer Height="500" VerticalAlignment="Top">
                     <StackPanel Margin="12,0,0,0">
                         <TextBlock x:Name="TxtVersion">Versión 0.0.0.0</TextBlock>
@@ -260,8 +260,8 @@
                         </TextBlock>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
 
         <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/7197186882"
                           Format="Banner"

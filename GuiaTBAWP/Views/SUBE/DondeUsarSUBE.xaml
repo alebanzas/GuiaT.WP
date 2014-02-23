@@ -18,8 +18,8 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="donde usar SUBE" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:PanoramaItem Header="colectivo" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+        <phone:Panorama Title="donde usar SUBE" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <phone:PanoramaItem Header="colectivo" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -74,9 +74,9 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="trenes" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="trenes" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
@@ -90,9 +90,9 @@
                         </RichTextBox>
                     </StackPanel>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="subtes" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="subtes" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
@@ -107,8 +107,8 @@
                         </RichTextBox>
                     </StackPanel>
                 </Grid>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
 </phone:PhoneApplicationPage>

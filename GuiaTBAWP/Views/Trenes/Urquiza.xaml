@@ -18,9 +18,9 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="tren urquiza" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+        <phone:Panorama Title="tren urquiza" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
 
-            <controls:PanoramaItem Header="estado" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="estado" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <TextBlock Margin="12,-30,0,0" Text="{Binding Actualizacion}" />
                     <Grid>
@@ -37,9 +37,9 @@
                         </ListBox>
                     </Grid>
                 </StackPanel>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}" FontSize="31">Federico Lacroze -  Gral. Lemos</TextBlock>
@@ -243,8 +243,8 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>

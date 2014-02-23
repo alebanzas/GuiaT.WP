@@ -14,7 +14,7 @@ using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
-using Microsoft.Phone.Controls.Maps;
+using Microsoft.Phone.Maps.Toolkit;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.SUBE
@@ -115,9 +115,10 @@ namespace GuiaTBAWP.Views.SUBE
                     Titulo = x.Nombre,
                 }));
 
-            var pp = from ll in ViewModel.Pushpins
-                    select ll.Location;
-            Mapa.SetView(LocationRect.CreateLocationRect(pp));
+            //TODO: ajusto mapa
+            //var pp = from ll in ViewModel.Pushpins
+            //        select ll.Location;
+            //Mapa.SetView(LocationRect.CreateLocationRect(pp));
 
             ResetUI();
             if (ViewModel.PuntosRecarga.Count == 0)
@@ -154,7 +155,7 @@ namespace GuiaTBAWP.Views.SUBE
             var pushpin = sender as Pushpin;
 
             // Center the map on a pushpin when touched.
-            if (pushpin != null) ViewModel.Center = pushpin.Location;
+            if (pushpin != null) ViewModel.Center = pushpin.GeoCoordinate;
         }
         
         private void Opciones_Click(object sender, EventArgs e)

@@ -18,9 +18,9 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Pivot Title="RED DE SUBTE">
+        <phone:Pivot Title="RED DE SUBTE">
 
-            <controls:PivotItem Header="línea A">
+            <phone:PivotItem Header="línea A">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
 					<StackPanel Orientation="Horizontal" Height="90">
                         <StackPanel Width="300">
@@ -75,9 +75,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea B">
+            <phone:PivotItem Header="línea B">
                 <StackPanel Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="300">
@@ -130,9 +130,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea C">
+            <phone:PivotItem Header="línea C">
                 <StackPanel Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="310">
@@ -185,9 +185,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea D">
+            <phone:PivotItem Header="línea D">
                 <StackPanel Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="300">
@@ -240,9 +240,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea E">
+            <phone:PivotItem Header="línea E">
                 <StackPanel Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="300">
@@ -295,9 +295,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea H">
+            <phone:PivotItem Header="línea H">
                 <StackPanel Margin="0,0,0,50">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="315">
@@ -350,9 +350,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea P">
+            <phone:PivotItem Header="línea P">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
                     <TextBlock Margin="12,0,0,20">A Centro Cívico Lugano</TextBlock>
                     <StackPanel Margin="0,0,0,0">
@@ -408,9 +408,9 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea P">
+            <phone:PivotItem Header="línea P">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
                     <TextBlock Margin="12,0,0,20">A General Savio</TextBlock>
                     <StackPanel Margin="0,0,0,0">
@@ -466,8 +466,8 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </controls:PivotItem>
-        </controls:Pivot>
+            </phone:PivotItem>
+        </phone:Pivot>
     </Grid>
     
 </phone:PhoneApplicationPage>

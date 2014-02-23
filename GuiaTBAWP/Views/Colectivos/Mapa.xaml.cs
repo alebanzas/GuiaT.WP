@@ -7,16 +7,14 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Json;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
-using GuiaTBAWP.Helpers;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
+using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Shell;
 using ProgressBar = GuiaTBA.Common.ProgressBar;
 
@@ -24,7 +22,7 @@ namespace GuiaTBAWP.Views.Colectivos
 {
     public partial class Mapa : PhoneApplicationPage
     {
-        Pushpin _posicionActual;
+        MapLayer _posicionActual;
         WebRequest _httpReq;
 
         public string Linea { get; set; }
@@ -35,7 +33,7 @@ namespace GuiaTBAWP.Views.Colectivos
 
             Loaded += (s, e) =>
             {
-                MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
+                MiMapa.Layers.Add(_posicionActual);
                 GetColectivo();
             };
             Unloaded += (sender, args) =>
@@ -136,35 +134,34 @@ namespace GuiaTBAWP.Views.Colectivos
             ls = ls.OrderBy(y => y.Nombre).ToList();
 
             //Limpio el mapa, tomo lugares de la tabla local y los agrego al mapa
-            MiMapa.Children.Clear();
+            //MiMapa.Layers.Clear();
             
             try
             {
-
                 for (int index = 0; index < ls.Count; index++)
                 {
                     TransporteViewModel transporteViewModel = ls[index];
-                    var routeColor = GetRandomColor(index);
-                    var routeBrush = new SolidColorBrush(routeColor);
-
                     var routeLine = new MapPolyline
                     {
-                        Name = transporteViewModel.Nombre,
-                        Locations = new LocationCollection(),
-                        Stroke = routeBrush,
-                        Opacity = 0.8,
-                        Visibility = Visibility.Collapsed,
+                        //TODO: name
+                        //Name = transporteViewModel.Nombre,
+                        Path = new GeoCoordinateCollection(),
+                        StrokeColor = GetRandomColor(index),
+                        //TODO: opacity
+                        //Opacity = 0.8,
+                        //TODO: visibility
+                        //Visibility = Visibility.Collapsed,
                         StrokeThickness = 5.0,
                     };
 
                     foreach (var location in transporteViewModel.Puntos)
                     {
-                        routeLine.Locations.Add(new GeoCoordinate(location.Y, location.X));
+                        routeLine.Path.Add(new GeoCoordinate(location.Y, location.X));
                     }
 
                     ReferencesListBox.ItemsSource = new ObservableCollection<TransporteViewModel>(ls);
 
-                    MiMapa.Children.Add(routeLine);
+                    MiMapa.MapElements.Add(routeLine);
                 }
             }
             catch
@@ -178,24 +175,23 @@ namespace GuiaTBAWP.Views.Colectivos
             //Si uso localizacion, agrego mi ubicación
             ActualizarUbicacion(App.Configuration.IsLocationEnabled ? App.Configuration.Ubicacion : null);
 
-            var x = new List<GeoCoordinate>();
-            //Ajusto el mapa para mostrar los items
-            foreach (var child in MiMapa.Children)
-            {
-                var pushpin = child as Pushpin;
-                if (pushpin != null)
-                {
-                    x.Add(pushpin.Location);
-                }
-
-                var line = child as MapPolyline;
-                if (line != null)
-                {
-                    x.AddRange(line.Locations);
-                }
-            }
-
-            MiMapa.SetView(LocationRect.CreateLocationRect(x));
+            //var x = new List<GeoCoordinate>();
+            //TODO: Ajusto el mapa para mostrar los items
+            //foreach (var child in MiMapa.Children)
+            //{
+            //    var pushpin = child as Pushpin;
+            //    if (pushpin != null)
+            //    {
+            //        x.Add(pushpin.Location);
+            //    }
+            //
+            //    var line = child as MapPolyline;
+            //    if (line != null)
+            //    {
+            //        x.AddRange(line.Locations);
+            //    }
+            //}
+            //MiMapa.SetView(LocationRect.CreateLocationRect(x));
 
             ResetUI();
             NoResults.Visibility = ls.Any() ? Visibility.Collapsed : Visibility.Visible;
@@ -243,15 +239,15 @@ namespace GuiaTBAWP.Views.Colectivos
         
         private void ActualizarUbicacion(GeoPosition<GeoCoordinate> location)
         {
-            MiMapa.Children.Remove(_posicionActual);
+            _posicionActual.Clear();
             if (location == null || location.Location.IsUnknown) return;
 
-            _posicionActual = new Pushpin
-                {
-                    Location = location.Location,
-                    Template = (ControlTemplate) (Application.Current.Resources["locationPushpinTemplate"])
-                };
-            MiMapa.Children.Add(_posicionActual);
+            _posicionActual.Add(new MapOverlay
+            {
+                GeoCoordinate = location.Location,
+                //TODO: template
+                //ContentTemplate = (ControlTemplate) (Application.Current.Resources["locationPushpinTemplate"]),
+            });
         }
         
         private void BtnAcercar_Click(object sender, EventArgs e)
@@ -266,10 +262,7 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private void BtnVista_Click(object sender, EventArgs e)
         {
-            if (MiMapa.Mode is RoadMode)
-                MiMapa.Mode = new AerialMode();
-            else
-                MiMapa.Mode = new RoadMode();
+            MiMapa.CartographicMode = (MiMapa.CartographicMode.Equals(MapCartographicMode.Road)) ? MapCartographicMode.Hybrid : MapCartographicMode.Road;
         }
 
         private void Opciones_Click(object sender, EventArgs e)
@@ -279,11 +272,12 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private void References_OnChecked(object sender, RoutedEventArgs routedEventArgs)
         {
-            var item = (CheckBox) sender;
-            foreach (var child in MiMapa.Children.OfType<MapPolyline>().Where(x => x.Name.Equals(item.Content)))
-            {
-                child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
-            }
+            //TODO:
+            //var item = (CheckBox) sender;
+            //foreach (var child in MiMapa.Children.OfType<MapPolyline>().Where(x => x.Name.Equals(item.Content)))
+            //{
+            //    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+            //}
         }
 
         private void BtnReferencias_Click(object sender, EventArgs e)

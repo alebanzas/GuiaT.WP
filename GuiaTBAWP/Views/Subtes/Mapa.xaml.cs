@@ -61,8 +61,6 @@ namespace GuiaTBAWP.Views.Subtes
                     //Name = line.Nombre,
                     Path = new GeoCoordinateCollection(),
                     StrokeColor = line.Color,
-                    //TODO: opacity 
-                    //Opacity = 0.8,
                     StrokeThickness = 5.0,
                 };
 

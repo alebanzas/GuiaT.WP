@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Device.Location;
-using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
-using Microsoft.Phone.Controls.Maps.Core;
+using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Aviones.Aeroparque
@@ -16,36 +13,41 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
         {
             InitializeComponent();
 
+            var markerLayer = new MapLayer();
             var posicion = new GeoCoordinate(-34.5584560886206, -58.4167098999023);
-            var pushpin = new Pushpin
+            var pushpin = new MapOverlay()
             {
-                Location = posicion,
-                Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
+                GeoCoordinate = posicion,
+                //TODO: template
+                //ContentTemplate = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
             };
+            markerLayer.Add(pushpin);
 
-            Mapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
+            Mapa.Layers.Add(markerLayer);
             Mapa.Center = posicion;
             Mapa.ZoomLevel = 14;
-            Mapa.Children.Add(pushpin);
 
             if (App.Configuration.IsLocationEnabled && PositionService.GetCurrentLocation().Location != null)
             {
-                pushpin = new Pushpin
+                pushpin = new MapOverlay
                 {
-                    Location = PositionService.GetCurrentLocation().Location,
-                    Template = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
+                    GeoCoordinate = PositionService.GetCurrentLocation().Location,
+                    //TODO: template
+                    //ContentTemplate = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
                 };
-                Mapa.Children.Add(pushpin);
+                markerLayer.Add(pushpin);
 
-                var x = from l in Mapa.Children
-                        select (l as Pushpin).Location;
-                Mapa.SetView(LocationRect.CreateLocationRect(x));
+                //TODO: acomodo segun contenido
+                //var x = from l in Mapa.Children
+                //        select (l as Pushpin).GeoCoordinate;
+                //Mapa.SetView(LocationRect.CreateLocationRect(x));
+
             }
         }
 
         private void SwitchView(object sender, EventArgs e)
         {
-            Mapa.Mode = (Mapa.Mode is RoadMode) ? (MapMode)new AerialMode() : new RoadMode();
+            Mapa.CartographicMode = (Mapa.CartographicMode.Equals(MapCartographicMode.Road)) ? MapCartographicMode.Hybrid : MapCartographicMode.Road;
         }
 
         private void Phone_OnClick(object sender, RoutedEventArgs e)

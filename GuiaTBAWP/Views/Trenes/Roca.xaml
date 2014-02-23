@@ -17,9 +17,9 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="tren roca" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+        <phone:Panorama Title="tren roca" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
 
-            <controls:PanoramaItem Header="estado" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="estado" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <TextBlock Margin="12,-30,0,0" Text="{Binding Actualizacion}" />
                     <Grid>
@@ -36,9 +36,9 @@
                         </ListBox>
                     </Grid>
                 </StackPanel>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Constitución - Ezeiza</TextBlock>
@@ -177,9 +177,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Temperley - Haedo</TextBlock>
@@ -297,9 +297,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Constitución - La Plata</TextBlock>
@@ -462,9 +462,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Constitución - Glew / Alejandro Korn</TextBlock>
@@ -603,9 +603,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}">Constitución - Bosques</TextBlock>
@@ -729,9 +729,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,0" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Constitución - Bosques / Gutiérrez</TextBlock>
@@ -871,9 +871,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Ezeiza - Cañuelas</TextBlock>
@@ -971,8 +971,8 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>

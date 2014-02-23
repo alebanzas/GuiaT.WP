@@ -27,11 +27,11 @@ namespace GuiaTBAWP.Views.Colectivos
 
             GeneralPanorama.Title = "Línea " + linea;
             /*
-             <controls:PanoramaItem Header="recorrido" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+             <phone:PanoramaItem Header="recorrido" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer Margin="12,0,0,0">
                     <TextBlock x:Name="TxtRecorrido"></TextBlock>
                 </ScrollViewer>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
              */
 
             foreach (var colectivo in colectivoRecorrido)

@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"  
+﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Maps.Toolkit"  
     x:Class="GuiaTBAWP.Views.Bicicletas.Estaciones"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

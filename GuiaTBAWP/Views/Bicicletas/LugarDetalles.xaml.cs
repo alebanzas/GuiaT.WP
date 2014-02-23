@@ -6,10 +6,8 @@ using System.Windows;
 using System.Windows.Navigation;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Models;
-using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Controls.Maps;
-using Microsoft.Phone.Controls.Maps.Core;
+using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views.Bicicletas
@@ -38,16 +36,18 @@ namespace GuiaTBAWP.Views.Bicicletas
             Cantidad.Text = _bicicletaEstacion.Cantidad.ToString(CultureInfo.InvariantCulture);
             Distancia.Text = string.IsNullOrWhiteSpace(_bicicletaEstacion.Distance) ? string.Empty : "distancia: " + _bicicletaEstacion.Distance;
 
-            var nuevoLugar = new Pushpin
+            var nuevoLugar = new MapOverlay
                 {
                     Content = _bicicletaEstacion.Nombre,
-                    Location = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud)
+                    GeoCoordinate = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud)
                 };
-            MiMapa.Children.Clear();
-            MiMapa.Children.Add(nuevoLugar);
+            var defaultLayer = new MapLayer();
+            defaultLayer.Clear();
+            defaultLayer.Add(nuevoLugar);
 
+            MiMapa.Layers.Add(defaultLayer);
             MiMapa.Center = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud);
-            MiMapa.Mode = new AerialMode();
+            MiMapa.CartographicMode = MapCartographicMode.Road;
             MiMapa.ZoomLevel = 17;
         }
 
@@ -61,7 +61,6 @@ namespace GuiaTBAWP.Views.Bicicletas
                         select miLugar;
 
             _bicicletaEstacion = query.FirstOrDefault();
-            MiMapa.CredentialsProvider = new ApplicationIdCredentialsProvider(App.Configuration.BingMapApiKey);
             UpdateLugar();
 
             base.OnNavigatedTo(e);
@@ -69,7 +68,7 @@ namespace GuiaTBAWP.Views.Bicicletas
         
         private void SwitchView(object sender, EventArgs e)
         {
-            MiMapa.Mode = (MiMapa.Mode is RoadMode) ? (MapMode) new AerialMode() : new RoadMode();
+            MiMapa.CartographicMode = (MiMapa.CartographicMode.Equals(MapCartographicMode.Road)) ? MapCartographicMode.Hybrid : MapCartographicMode.Road;
         }
         
         private void Pin(object sender, EventArgs e)

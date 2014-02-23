@@ -22,7 +22,7 @@
 
         <StackPanel Grid.Row="0" Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Grid.Row="0" x:Name="GeneralPanorama" Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top" />
+        <phone:Panorama Grid.Row="0" x:Name="GeneralPanorama" Title="Guía Transporte BA" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top" />
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>

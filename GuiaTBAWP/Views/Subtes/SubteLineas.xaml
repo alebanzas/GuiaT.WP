@@ -18,9 +18,9 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Pivot Title="RED DE SUBTE">
+        <phone:Pivot Title="RED DE SUBTE">
 
-            <controls:PivotItem Header="línea A">
+            <phone:PivotItem Header="línea A">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -242,9 +242,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea B">
+            <phone:PivotItem Header="línea B">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -461,9 +461,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea C">
+            <phone:PivotItem Header="línea C">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -582,9 +582,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea D">
+            <phone:PivotItem Header="línea D">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -787,9 +787,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea E">
+            <phone:PivotItem Header="línea E">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -987,9 +987,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea H">
+            <phone:PivotItem Header="línea H">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -1130,9 +1130,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea P">
+            <phone:PivotItem Header="línea P">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20">A Centro Cívico Lugano</TextBlock>
@@ -1208,9 +1208,9 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="línea P">
+            <phone:PivotItem Header="línea P">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
                         <TextBlock Margin="0,0,0,20">A General Savio</TextBlock>
@@ -1290,8 +1290,8 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PivotItem>
-        </controls:Pivot>
+            </phone:PivotItem>
+        </phone:Pivot>
     </Grid>
     
 </phone:PhoneApplicationPage>

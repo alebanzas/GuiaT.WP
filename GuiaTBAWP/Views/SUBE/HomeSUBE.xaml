@@ -18,8 +18,8 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="SUBE" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:PanoramaItem Header="menú" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+        <phone:Panorama Title="SUBE" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <phone:PanoramaItem Header="menú" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel>
                     <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Width="420" Click="Button_Click_Venta">
 						<TextBlock Margin="-12,0,0,0" Text="¿dónde comprar la tarjeta?" />
@@ -40,9 +40,9 @@
 						<TextBlock Margin="-12,0,0,0" Text="atención al usuario" />
                     </Button>
                 </StackPanel>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="¿qué es?" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel>
                         <RichTextBox VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,0,0,0">
@@ -82,8 +82,8 @@
                         </RichTextBox>
                     </StackPanel>
                 </ScrollViewer>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
 </phone:PhoneApplicationPage>

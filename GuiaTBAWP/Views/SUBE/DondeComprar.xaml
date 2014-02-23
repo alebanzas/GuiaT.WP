@@ -4,10 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    xmlns:my="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -19,8 +19,8 @@
         
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="¿dónde comprar?" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:PanoramaItem Header="venta" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+        <phone:Panorama Title="¿dónde comprar?" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <phone:PanoramaItem Header="venta" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Margin="12,0,0,12">
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResults">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="Refreshing">Actualizando...</TextBlock>
@@ -38,41 +38,19 @@
                         </ItemsControl.ItemTemplate>
                     </ListBox>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="mapa" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="mapa" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Margin="12,0,0,12">
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                     <my:Map Name="Mapa"
                         IsEnabled="False"
-                        CredentialsProvider="{Binding CredentialsProvider}"
-                        CopyrightVisibility="Collapsed" LogoVisibility="Collapsed"
                         ZoomLevel="{Binding Zoom, Mode=TwoWay}"
                         Center="{Binding Center, Mode=TwoWay}">
-
-                        <my:Map.Mode>
-                            <my:RoadMode />
-                        </my:Map.Mode>
-
-                        <my:MapItemsControl ItemsSource="{Binding Pushpins}">
-                            <my:MapItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <my:Pushpin Style="{StaticResource PushpinStyle}"
-                                            MouseLeftButtonUp="Pushpin_MouseLeftButtonUp"
-                                            Location="{Binding Location}"
-                                            Background="{Binding TypeName, Converter={StaticResource PushpinTypeBrushConverter}}">
-                                        <StackPanel Width="30">
-                                            <Image Visibility="{Binding Index, Converter={StaticResource PushpinVisibilityIconConverter}}" Source="{Binding Icon}" />
-                                            <TextBlock HorizontalAlignment="Center" Text="{Binding Index}"></TextBlock>
-                                        </StackPanel>
-                                    </my:Pushpin>
-                                </DataTemplate>
-                            </my:MapItemsControl.ItemTemplate>
-                        </my:MapItemsControl>
                     </my:Map>
                 </Grid>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>

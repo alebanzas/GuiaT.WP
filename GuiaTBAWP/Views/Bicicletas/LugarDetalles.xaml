@@ -11,9 +11,9 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True" 
-    xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
-    xmlns:geo="clr-namespace:System.Device.Location;assembly=System.Device">
+    shell:SystemTray.IsVisible="True"
+    xmlns:geo="clr-namespace:System.Device.Location;assembly=System.Device"
+    xmlns:my="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps">
 
     <Grid x:Name="LayoutRoot" Background="#005C84">
        

@@ -16,8 +16,8 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <controls:Panorama Title="atención al usuario" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
-            <controls:PanoramaItem Header="inicio" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+        <phone:Panorama Title="atención al usuario" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
+            <phone:PanoramaItem Header="inicio" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -71,9 +71,9 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="CABA" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="CABA" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -123,9 +123,9 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="Zona Norte" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="Zona Norte" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -161,9 +161,9 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="Zona Oeste" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="Zona Oeste" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -213,9 +213,9 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
+            </phone:PanoramaItem>
 
-            <controls:PanoramaItem Header="Zona Sur" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
+            <phone:PanoramaItem Header="Zona Sur" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <Grid Grid.Row="1" Margin="0,0,0,0">
                     <ScrollViewer>
                         <StackPanel>
@@ -279,8 +279,8 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </phone:PanoramaItem>
+        </phone:Panorama>
     </Grid>
 
 </phone:PhoneApplicationPage>

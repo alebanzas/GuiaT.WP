@@ -147,8 +147,6 @@ namespace GuiaTBAWP.Views.Colectivos
                         //Name = transporteViewModel.Nombre,
                         Path = new GeoCoordinateCollection(),
                         StrokeColor = GetRandomColor(index),
-                        //TODO: opacity
-                        //Opacity = 0.8,
                         //TODO: visibility
                         //Visibility = Visibility.Collapsed,
                         StrokeThickness = 5.0,

@@ -105,8 +105,6 @@ namespace GuiaTBAWP.Views.Bicicletas
                     //Name = line.Nombre,
                     Path = new GeoCoordinateCollection(),
                     StrokeColor = strokeColor,
-                    //TODO: opacity
-                    //Opacity = 0.8,
                     StrokeThickness = 5.0,
                 };
 

@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Windows;
-using System.Windows.Media;
 using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
+using GuiaTBAWP.Extensions;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
-using Microsoft.Phone.Maps.Toolkit;
 
 namespace GuiaTBAWP.Views.Subtes
 {
     public partial class Mapa : PhoneApplicationPage
     {
-        MapLayer _posicionActual;
+        readonly MapLayer _posicionActual = new MapLayer();
 
         public Mapa()
         {
@@ -78,7 +77,7 @@ namespace GuiaTBAWP.Views.Subtes
                 var estacionesLayer = new MapLayer();
                 foreach (var ml in line.Postas)
                 {
-                    var nuevoLugar = new MapOverlay()
+                    var nuevoLugar = new MapOverlay
                     {
                         Content = ml.Name,
                         GeoCoordinate = new GeoCoordinate(ml.X, ml.Y),
@@ -90,9 +89,7 @@ namespace GuiaTBAWP.Views.Subtes
                 MiMapa.Layers.Add(estacionesLayer);
             }
 
-            //Ajusto el mapa para mostrar los items
-            //var x = from l in MiMapa.Children let pushpin = l as Pushpin where pushpin != null && pushpin.Location != null select pushpin.Location;
-            //MiMapa.SetView(LocationRect.CreateLocationRect(x));
+            MiMapa.SetView(MiMapa.CreateBoundingRectangle());
 
             //Si uso localizacion, agrego mi ubicación
             ActualizarUbicacion(App.Configuration.IsLocationEnabled ? App.Configuration.Ubicacion : null);

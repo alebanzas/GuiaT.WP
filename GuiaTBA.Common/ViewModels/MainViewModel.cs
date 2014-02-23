@@ -4,17 +4,15 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
 using GuiaTBAWP.Models;
-using Microsoft.Phone.Controls.Maps;
 
 namespace GuiaTBAWP.Commons.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public MainViewModel(string bingMapsApiKey)
+        public MainViewModel()
         {
             PuntosVenta = new ObservableCollection<ItemViewModel>();
             PuntosRecarga = new ObservableCollection<ItemViewModel>();
-            _credentialsProvider = new ApplicationIdCredentialsProvider(bingMapsApiKey);
             InitializeDefaults();
         }
 
@@ -52,9 +50,6 @@ namespace GuiaTBAWP.Commons.ViewModels
 
         #region Fields
 
-        /// <value>Provides credentials for the map control.</value>
-        private readonly CredentialsProvider _credentialsProvider;
-        
         private readonly ObservableCollection<PushpinModel> _pushpins = new ObservableCollection<PushpinModel>();
         
         /// <value>Map zoom level.</value>
@@ -69,11 +64,6 @@ namespace GuiaTBAWP.Commons.ViewModels
 
         #region Properties
         
-        public CredentialsProvider CredentialsProvider
-        {
-            get { return _credentialsProvider; }
-        }
-
         public double Zoom
         {
             get { return _zoom; }

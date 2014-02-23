@@ -10,6 +10,7 @@ using System.Windows.Media;
 using GuiaTBAWP.BusData;
 using GuiaTBAWP.Commons.Data;
 using GuiaTBAWP.Commons.Models;
+using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
@@ -83,10 +84,8 @@ namespace GuiaTBAWP.Views.Bicicletas
                 //nuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
                 //MiMapa.Children.Add(nuevoLugar);
             }
-
-            //TODO: Ajusto el mapa para mostrar los items
-            //var x = from l in MiMapa.Children let pushpin = l as Pushpin where pushpin != null && pushpin.Location != null select pushpin.Location;
-            //MiMapa.SetView(LocationRect.CreateLocationRect(x));
+            
+            MiMapa.SetView(MiMapa.CreateBoundingRectangle());
 
             //Si uso localizacion, agrego mi ubicación
             ActualizarUbicacion(App.Configuration.IsLocationEnabled ? App.Configuration.Ubicacion : null);

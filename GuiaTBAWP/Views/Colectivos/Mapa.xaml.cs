@@ -22,7 +22,7 @@ namespace GuiaTBAWP.Views.Colectivos
 {
     public partial class Mapa : PhoneApplicationPage
     {
-        MapLayer _posicionActual;
+        MapLayer _posicionActual = new MapLayer();
         WebRequest _httpReq;
 
         public string Linea { get; set; }
@@ -175,24 +175,8 @@ namespace GuiaTBAWP.Views.Colectivos
             //Si uso localizacion, agrego mi ubicación
             ActualizarUbicacion(App.Configuration.IsLocationEnabled ? App.Configuration.Ubicacion : null);
 
-            //var x = new List<GeoCoordinate>();
-            //TODO: Ajusto el mapa para mostrar los items
-            //foreach (var child in MiMapa.Children)
-            //{
-            //    var pushpin = child as Pushpin;
-            //    if (pushpin != null)
-            //    {
-            //        x.Add(pushpin.Location);
-            //    }
-            //
-            //    var line = child as MapPolyline;
-            //    if (line != null)
-            //    {
-            //        x.AddRange(line.Locations);
-            //    }
-            //}
-            //MiMapa.SetView(LocationRect.CreateLocationRect(x));
-
+            MiMapa.SetView(MiMapa.CreateBoundingRectangle());
+            
             ResetUI();
             NoResults.Visibility = ls.Any() ? Visibility.Collapsed : Visibility.Visible;
             Results.Visibility = ls.Any() ? Visibility.Visible : Visibility.Collapsed;

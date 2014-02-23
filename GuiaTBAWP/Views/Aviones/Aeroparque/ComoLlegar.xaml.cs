@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Device.Location;
 using System.Windows;
+using GuiaTBAWP.Extensions;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Tasks;
@@ -37,11 +38,7 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
                 };
                 markerLayer.Add(pushpin);
 
-                //TODO: acomodo segun contenido
-                //var x = from l in Mapa.Children
-                //        select (l as Pushpin).GeoCoordinate;
-                //Mapa.SetView(LocationRect.CreateLocationRect(x));
-
+                Mapa.SetView(Mapa.CreateBoundingRectangle());
             }
         }
 

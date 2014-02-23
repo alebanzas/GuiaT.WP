@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Device.Location;
-using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -24,7 +23,7 @@ namespace GuiaTBAWP.Views.SUBE
         private static MainViewModel _viewModel;
         public static MainViewModel ViewModel
         {
-            get { return _viewModel ?? (_viewModel = new MainViewModel(App.Configuration.BingMapApiKey)); }
+            get { return _viewModel ?? (_viewModel = new MainViewModel()); }
         }
 
         private HttpWebRequest _httpReq;
@@ -116,10 +115,7 @@ namespace GuiaTBAWP.Views.SUBE
                 Titulo = x.Nombre,
             }));
 
-            //TODO: ajusto mapa
-            //var pp = from ll in ViewModel.Pushpins
-            //         select ll.Location;
-            //Mapa.SetView(LocationRect.CreateLocationRect(pp));
+            Mapa.SetView(Mapa.CreateBoundingRectangle());
 
             ResetUI();
             if (ViewModel.PuntosVenta.Count == 0)

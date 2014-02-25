@@ -19,8 +19,7 @@ namespace GuiaTBAWP.Views.Aviones.Ezeiza
             var pushpin = new MapOverlay
             {
                 GeoCoordinate = posicion,
-                //TODO: template
-                //ContentTemplate = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
+                ContentTemplate = App.Current.Resources["locationPushpinTemplate"] as DataTemplate,
             };
             markerLayer.Add(pushpin);
             
@@ -33,8 +32,7 @@ namespace GuiaTBAWP.Views.Aviones.Ezeiza
                 pushpin = new MapOverlay
                 {
                     GeoCoordinate = PositionService.GetCurrentLocation().Location,
-                    //TODO: template
-                    //ContentTemplate = (ControlTemplate)(App.Current.Resources["locationPushpinTemplate"])
+                    ContentTemplate = App.Current.Resources["locationPushpinTemplate"] as DataTemplate,
                 };
                 markerLayer.Add(pushpin);
 

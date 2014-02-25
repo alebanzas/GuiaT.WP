@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Device.Location;
+using System.Linq;
 using Microsoft.Phone.Maps.Controls;
 
 namespace GuiaTBAWP.Extensions
@@ -7,7 +9,7 @@ namespace GuiaTBAWP.Extensions
     {
         public static LocationRectangle CreateBoundingRectangle(this Map map)
         {
-            var geoCoordinates = (from layer in map.Layers from mapo in layer select mapo.GeoCoordinate).ToList();
+            var geoCoordinates = (from layer in map.Layers from mapo in layer where mapo.GeoCoordinate != null select mapo.GeoCoordinate).ToList();
 
             foreach (var mapElement in map.MapElements)
             {

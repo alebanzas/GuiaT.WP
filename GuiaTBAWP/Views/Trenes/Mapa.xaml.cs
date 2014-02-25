@@ -48,8 +48,7 @@ namespace GuiaTBAWP.Views.Trenes
             _posicionActual.Add(new MapOverlay
             {
                 GeoCoordinate = location.Location,
-                //TODO: template
-                //ContentTemplate = (ControlTemplate) (Application.Current.Resources["locationPushpinTemplate"]),
+                ContentTemplate = App.Current.Resources["locationPushpinTemplate"] as DataTemplate,
             });
         }
 

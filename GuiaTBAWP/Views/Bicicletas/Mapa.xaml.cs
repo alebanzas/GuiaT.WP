@@ -15,6 +15,7 @@ using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Toolkit;
+using MapExtensions = Microsoft.Phone.Maps.Toolkit.MapExtensions;
 
 namespace GuiaTBAWP.Views.Bicicletas
 {
@@ -43,8 +44,7 @@ namespace GuiaTBAWP.Views.Bicicletas
             var posicionActual = new MapOverlay
             {
                 GeoCoordinate = location.Location,
-                //TODO: template
-                //Template = App.Current.Resources["locationPushpinTemplate"] as ControlTemplate,
+                ContentTemplate = App.Current.Resources["locationPushpinTemplate"] as DataTemplate,
             };
             _posicionActualLayer.Add(posicionActual);
         }
@@ -79,12 +79,10 @@ namespace GuiaTBAWP.Views.Bicicletas
                     //TODO: visibility
                     //Visibility = Visibility.Collapsed,
                 };
-
                 //TODO
                 //nuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
                 //MiMapa.Children.Add(nuevoLugar);
             }
-            
             MiMapa.SetView(MiMapa.CreateBoundingRectangle());
 
             //Si uso localizacion, agrego mi ubicación

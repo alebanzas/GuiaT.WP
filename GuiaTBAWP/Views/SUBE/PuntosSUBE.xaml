@@ -44,7 +44,7 @@
                 <Grid Margin="12,0,0,12">
                     <Button Tap="MiMapa_Tap" Padding="0" BorderBrush="{x:Null}"></Button>
                     <my:Map Name="Mapa"
-                        IsEnabled="False"
+                        IsEnabled="True"
                         ZoomLevel="{Binding Zoom, Mode=TwoWay}"
                         Center="{Binding Center, Mode=TwoWay}">
                     </my:Map>

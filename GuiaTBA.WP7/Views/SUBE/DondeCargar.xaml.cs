@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
 using GuiaTBA.Common;
+using GuiaTBA.Common.ViewModels;
 using GuiaTBA.WP7.Extensions;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;

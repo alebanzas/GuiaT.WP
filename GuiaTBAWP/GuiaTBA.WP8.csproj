@@ -189,9 +189,6 @@
     <Compile Include="Views\SUBE\AtencionAlUsuario.xaml.cs">
       <DependentUpon>AtencionAlUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SUBE\DondeCargar.xaml.cs">
-      <DependentUpon>DondeCargar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
@@ -276,8 +273,8 @@
       <DependentUpon>PreguntasFrecuentes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\SUBE\DondeComprar.xaml.cs">
-      <DependentUpon>DondeComprar.xaml</DependentUpon>
+    <Compile Include="Views\SUBE\PuntosSUBE.xaml.cs">
+      <DependentUpon>PuntosSUBE.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -373,10 +370,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SUBE\DondeCargar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Opciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -465,7 +458,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SUBE\DondeComprar.xaml">
+    <Page Include="Views\SUBE\PuntosSUBE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

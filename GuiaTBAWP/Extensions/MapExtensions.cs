@@ -25,6 +25,14 @@ namespace GuiaTBAWP.Extensions
                 }
             }
 
+            //if (!geoCoordinates.Any())
+            //{
+            //    foreach (var dependencyObject in Microsoft.Phone.Maps.Toolkit.MapExtensions.GetChildren(map))
+            //    {
+            //        
+            //    }
+            //}
+
             return LocationRectangle.CreateBoundingRectangle(geoCoordinates);
         }
     }

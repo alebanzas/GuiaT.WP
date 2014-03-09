@@ -21,9 +21,9 @@ namespace GuiaTBAWP.Views.Bicicletas
 {
     public partial class Mapa : PhoneApplicationPage
     {
-        MapLayer _posicionActualLayer;
-        MapLayer _puntosLayer;
-        public ObservableCollection<BicicletaEstacionTable> EnLugar;
+        MapLayer _posicionActualLayer = new MapLayer();
+        MapLayer _puntosLayer = new MapLayer();
+        public ObservableCollection<BicicletaEstacionTable> Estaciones;
 
         public Mapa()
         {
@@ -33,6 +33,8 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            MiMapa.Layers.Add(_posicionActualLayer);
+            MiMapa.Layers.Add(_puntosLayer);
             MostrarLugares();
         }
         
@@ -67,21 +69,18 @@ namespace GuiaTBAWP.Views.Bicicletas
                         orderby miLugar.Id
                         select miLugar;
 
-            EnLugar = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
+            Estaciones = new ObservableCollection<BicicletaEstacionTable>(query.ToList());
 
-            foreach (var ml in EnLugar)
+            foreach (var ml in Estaciones)
             {
-
-                var nuevoLugar = new MapOverlay
+                Pushpin nuevoLugar = new Pushpin
                 {
                     Content = ml.Nombre,
                     GeoCoordinate = new GeoCoordinate(ml.Latitud, ml.Longitud),
-                    //TODO: visibility
-                    //Visibility = Visibility.Collapsed,
+                    Visibility = Visibility.Collapsed,
                 };
-                //TODO
-                //nuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
-                //MiMapa.Children.Add(nuevoLugar);
+                nuevoLugar.MouseLeftButtonUp += NuevoLugar_MouseLeftPuttonUp;
+                MapExtensions.GetChildren(MiMapa).Add(nuevoLugar);
             }
             MiMapa.SetView(MiMapa.CreateBoundingRectangle());
 
@@ -99,8 +98,6 @@ namespace GuiaTBAWP.Views.Bicicletas
             {
                 var routeLine = new MapPolyline()
                 {
-                    //TODO: name
-                    //Name = line.Nombre,
                     Path = new GeoCoordinateCollection(),
                     StrokeColor = strokeColor,
                     StrokeThickness = 5.0,
@@ -164,21 +161,21 @@ namespace GuiaTBAWP.Views.Bicicletas
         private void References_OnChecked(object sender, RoutedEventArgs e)
         {
             //TODO:
-            //var item = (CheckBox)sender;
-            //if (item.Content.Equals("Estaciones"))
-            //{
-            //    foreach (var child in MiMapa.Children.OfType<Pushpin>().Where(x => x.Content != null))
-            //    {
-            //        child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
-            //    }
-            //}
-            //else
-            //{
-            //    foreach (var child in MiMapa.Children.OfType<MapPolyline>())
-            //    {
-            //        child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
-            //    }
-            //}
+            var item = (CheckBox)sender;
+            if (item.Content.Equals("Estaciones"))
+            {
+                foreach (var child in MapExtensions.GetChildren(MiMapa).OfType<Pushpin>().Where(x => x.Content != null))
+                {
+                    child.Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                //foreach (var child in MapExtensions.GetChildren(MiMapa).OfType<MapPolyline>())
+                //{
+                //    child..Visibility = item.IsChecked != null && item.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
+                //}
+            }
         }
     }
 }

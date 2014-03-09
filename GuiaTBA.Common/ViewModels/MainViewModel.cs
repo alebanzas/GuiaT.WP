@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Device.Location;
-using GuiaTBAWP.Models;
+using GuiaTBAWP.Commons.ViewModels;
 
-namespace GuiaTBAWP.Commons.ViewModels
+namespace GuiaTBA.Common.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public MainViewModel()
+        public MainViewModel(GeoCoordinate center)
         {
-            PuntosVenta = new ObservableCollection<ItemViewModel>();
-            PuntosRecarga = new ObservableCollection<ItemViewModel>();
+            Puntos = new ObservableCollection<ItemViewModel>();
+            Center = center;
             InitializeDefaults();
         }
 
@@ -27,38 +27,16 @@ namespace GuiaTBAWP.Commons.ViewModels
 
         /// <value>Minimum map zoom level allowed.</value>
         public double MinZoomLevel = 1.0;
-
-        public PushpinModel DefaultPushPin = new PushpinModel
-        {
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinLocation.png", UriKind.Relative),
-            TypeName = "PushpinFuel",
-        };
         
-        public PushpinModel RecargaPushPin = new PushpinModel
-        {
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinFuel.png", UriKind.Relative),
-            TypeName = "PushpinShop",
-        };
-
-        public PushpinModel VentaPushPin = new PushpinModel
-        {
-            Icon = new Uri("/Resources/Icons/Pushpins/PushpinShop.png", UriKind.Relative),
-            TypeName = "PushpinHouse",
-        };
-
         #endregion
 
         #region Fields
 
-        private readonly ObservableCollection<PushpinModel> _pushpins = new ObservableCollection<PushpinModel>();
-        
         /// <value>Map zoom level.</value>
         private double _zoom;
 
         /// <value>Map center coordinate.</value>
         private GeoCoordinate _center;
-
-        private GeoCoordinate _currentPosition;
 
         #endregion
 
@@ -90,22 +68,7 @@ namespace GuiaTBAWP.Commons.ViewModels
                 }
             }
         }
-
-        public GeoCoordinate CurrentPosition
-        {
-            get { return _currentPosition; }
-            set
-            {
-                CreateNewPushpin(value);
-                _currentPosition = value;
-            }
-        }
-
-        public ObservableCollection<PushpinModel> Pushpins
-        {
-            get { return _pushpins; }
-        }
-
+        
         #endregion
         
         private void InitializeDefaults()
@@ -113,65 +76,21 @@ namespace GuiaTBAWP.Commons.ViewModels
             Zoom = DefaultZoomLevel;
         }
 
-        public ObservableCollection<ItemViewModel> PuntosVenta { get; private set; }
+        public ObservableCollection<ItemViewModel> Puntos { get; private set; }
+        public string Titulo { get; set; }
+        public string Tipo { get; set; }
 
-        public ObservableCollection<ItemViewModel> PuntosRecarga { get; private set; }
+        public void LoadPuntos(IEnumerable<ItemViewModel> items)
+        {
+            Puntos.Clear();
+            var i = 1;
+            foreach (var itemViewModel in items)
+            {
+                itemViewModel.Index = i++;
+                Puntos.Add(itemViewModel);
+            }
+        }
         
-        public void LoadPuntosRecarga(IEnumerable<ItemViewModel> items)
-        {
-            Pushpins.Clear();
-            PuntosRecarga.Clear();
-            var i = 1;
-            foreach (var itemViewModel in items)
-            {
-                itemViewModel.Index = i++;
-                CreateNewRecargaPushpin(itemViewModel);
-                PuntosRecarga.Add(itemViewModel);
-            }
-            CreateNewPushpin(CurrentPosition);
-        }
-
-        public void LoadPuntosVenta(IEnumerable<ItemViewModel> items)
-        {
-            Pushpins.Clear();
-            PuntosVenta.Clear();
-            var i = 1;
-            foreach (var itemViewModel in items)
-            {
-                itemViewModel.Index = i++;
-                CreateNewVentaPushpin(itemViewModel);
-                PuntosVenta.Add(itemViewModel);
-            }
-            CreateNewPushpin(CurrentPosition);
-        }
-
-        public void CreateNewPushpin(GeoCoordinate location)
-        {
-            var pushpin = DefaultPushPin.Clone(location);
-            CreateNewPushpin(pushpin);
-        }
-
-        public void CreateNewRecargaPushpin(ItemViewModel itemViewModel)
-        {
-            var pushpin = RecargaPushPin.Clone(itemViewModel.Punto);
-            pushpin.Title = itemViewModel.Titulo;
-            pushpin.Index = itemViewModel.Index;
-            CreateNewPushpin(pushpin);
-        }
-
-        public void CreateNewVentaPushpin(ItemViewModel itemViewModel)
-        {
-            var pushpin = VentaPushPin.Clone(itemViewModel.Punto);
-            pushpin.Title = itemViewModel.Titulo;
-            pushpin.Index = itemViewModel.Index;
-            CreateNewPushpin(pushpin);
-        }
-
-        private void CreateNewPushpin(PushpinModel pushpin)
-        {
-            Pushpins.Add(pushpin);
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
         {

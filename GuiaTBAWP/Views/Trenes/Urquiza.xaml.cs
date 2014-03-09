@@ -103,7 +103,9 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void VerEnMapa_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/Trenes/Mapa.xaml?linea=urquiza", UriKind.Relative));
+            TrenMapModel.SetMapModel("urquiza");
+
+            NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
         }
 
         private void Pin_Click(object sender, EventArgs e)

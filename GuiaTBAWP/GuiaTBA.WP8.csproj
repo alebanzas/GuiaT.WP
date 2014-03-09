@@ -246,9 +246,6 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Trenes\Mapa.xaml.cs">
-      <DependentUpon>Mapa.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Trenes\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
     </Compile>
@@ -264,6 +261,7 @@
     <Compile Include="Views\Trenes\Trenes.xaml.cs">
       <DependentUpon>Trenes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Trenes\TrenMapModel.cs" />
     <Compile Include="Views\Trenes\Urquiza.xaml.cs">
       <DependentUpon>Urquiza.xaml</DependentUpon>
     </Compile>
@@ -442,10 +440,6 @@
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Trenes\Mapa.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Trenes\Mitre.xaml">
       <SubType>Designer</SubType>

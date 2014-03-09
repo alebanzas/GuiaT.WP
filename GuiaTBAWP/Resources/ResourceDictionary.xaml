@@ -3,16 +3,47 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<!-- Resource dictionary entries should be defined here. -->
     <DataTemplate x:Key="locationPushpinTemplate">
-        <Grid Height="26" Width="26" Margin="-13,-13,0,0" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
-                <CompositeTransform Rotation="-45"/>
-            </Grid.RenderTransform>
-            <Rectangle Fill="Red" HorizontalAlignment="Center"          
-                Margin="0" Stroke="White" VerticalAlignment="Center"        
-                 Height="26" Width="26"/>
-            <Ellipse HorizontalAlignment="Center" Height="16" Margin="0"          
-                 VerticalAlignment="Center" Fill="Yellow"
-                 Width="16"/>
-        </Grid>
+        <Canvas Height="0"
+                            RenderTransformOrigin="0.5,0.5"
+                            Width="0">
+            <Canvas RenderTransformOrigin="0.5,0.5"
+                                Height="1"
+                                Width="1">
+                <Path Data="M22.5,1 C34.374123,1 44,10.625878 44,22.5 C44,31.034525 39.027256,38.407604 31.821138,41.879868 L31.359026,42.095631 L22.702744,60.864998 L13.900847,42.209641 L13.651964,42.100761 C6.1912994,38.727623 0.99999976,31.220058 1,22.5 C0.99999976,10.625878 10.625878,1 22.5,1 z"
+                                  Fill="white"
+                                  Height="61.865"
+                                  Stretch="Fill"
+                                  Stroke="Black"
+                                  StrokeThickness="2"
+                                  StrokeLineJoin="Miter"
+                                  UseLayoutRounding="False"
+                                  Width="45"
+                                  RenderTransformOrigin="0.5,0.5"
+                                  Canvas.Left="-2.703"
+                                  Canvas.Top="-7.187" >
+                    <Path.RenderTransform>
+                        <CompositeTransform TranslateX="-20"
+                                                        TranslateY="-55"/>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M35,17.5 C35,27.164984 27.164984,35 17.5,35 C7.8350167,35 0,27.164984 0,17.5 C0,7.8350167 7.8350167,0 17.5,0 C27.164984,0 35,7.8350167 35,17.5 z"
+                                  Fill="CornflowerBlue"
+                                  HorizontalAlignment="Left"
+                                  Height="35"
+                                  Stretch="Fill"
+                                  StrokeThickness="2"
+                                  VerticalAlignment="Top"
+                                  RenderTransformOrigin="0.5,0.5"
+                                  Width="35"
+                                  UseLayoutRounding="False"
+                                  Canvas.Top="-7.4"
+                                  Canvas.Left="-2.888" >
+                    <Path.RenderTransform>
+                        <CompositeTransform TranslateX="-15"
+                                                        TranslateY="-50"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+        </Canvas>
     </DataTemplate>
 </ResourceDictionary>

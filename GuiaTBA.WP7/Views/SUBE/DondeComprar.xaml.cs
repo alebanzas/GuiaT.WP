@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Input;
 using GuiaTBA.Common;
+using GuiaTBA.Common.ViewModels;
 using GuiaTBA.WP7.Extensions;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
@@ -72,7 +73,7 @@ namespace GuiaTBA.WP7.Views.SUBE
 
             ProgressBar.Show("Buscando más cercanos...");
             ViewModel.CurrentPosition = currentLocation.Location;
-            if (ViewModel.PuntosVenta.Count == 0) Refreshing.Visibility = Visibility.Visible;
+            if (ViewModel.Puntos.Count == 0) Refreshing.Visibility = Visibility.Visible;
             SetApplicationBarEnabled(false);
             CancelarRequest();
 
@@ -109,7 +110,7 @@ namespace GuiaTBA.WP7.Views.SUBE
         delegate void DelegateUpdateWebBrowser(List<SUBEPuntoModel> local);
         private void UpdateWebBrowser(List<SUBEPuntoModel> l)
         {
-            ViewModel.LoadPuntosVenta(l.Select(x => new ItemViewModel
+            ViewModel.LoadPuntos(l.Select(x => new ItemViewModel
             {
                 Punto = new GeoCoordinate(x.Latitud, x.Longitud),
                 Titulo = x.Nombre,
@@ -120,7 +121,7 @@ namespace GuiaTBA.WP7.Views.SUBE
             Mapa.SetView(LocationRect.CreateLocationRect(pp));
 
             ResetUI();
-            if (ViewModel.PuntosVenta.Count == 0)
+            if (ViewModel.Puntos.Count == 0)
             {
                 NoResults.Visibility = Visibility.Visible;
             }

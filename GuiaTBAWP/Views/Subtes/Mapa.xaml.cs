@@ -56,8 +56,6 @@ namespace GuiaTBAWP.Views.Subtes
                 //linea
                 var routeLine = new MapPolyline
                 {
-                    //TODO: name
-                    //Name = line.Nombre,
                     Path = new GeoCoordinateCollection(),
                     StrokeColor = line.Color,
                     StrokeThickness = 5.0,

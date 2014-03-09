@@ -19,7 +19,6 @@ namespace GuiaTBAWP.Views.Aviones.Aeroparque
             var pushpin = new MapOverlay()
             {
                 GeoCoordinate = posicion,
-                ContentTemplate = App.Current.Resources["locationPushpinTemplate"] as DataTemplate,
             };
             markerLayer.Add(pushpin);
 

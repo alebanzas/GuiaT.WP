@@ -90,8 +90,6 @@
     <Compile Include="Models\LocalServiceModel.cs" />
     <Compile Include="Models\MapReference.cs" />
     <Compile Include="Models\PointExtensions.cs" />
-    <Compile Include="Models\PushpinCatalog.cs" />
-    <Compile Include="Models\PushpinModel.cs" />
     <Compile Include="Models\RadioTaxiDC.cs" />
     <Compile Include="Models\RadioTaxiTable.cs" />
     <Compile Include="Models\RamalTrenModel.cs" />

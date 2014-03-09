@@ -15,12 +15,12 @@ namespace GuiaTBAWP.Views.SUBE
 
         private void Button_Click_Carga(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/SUBE/DondeCargar.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/SUBE/PuntosSUBE.xaml?titulo=¿dónde cargar?&tipo=recarga", UriKind.Relative));
         }
 
         private void Button_Click_Venta(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/SUBE/DondeComprar.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/SUBE/PuntosSUBE.xaml?titulo=¿dónde comprar?&tipo=venta", UriKind.Relative));
         }
 
         private void Button_Click_PerdidaRoboDanio(object sender, RoutedEventArgs e)

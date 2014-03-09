@@ -60,7 +60,7 @@ namespace GuiaTBAWP.Views.Trenes
         {
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
-                TEV_Actualizacion.Text = model.Actualizacion.ToUpdateDateTime();
+                //TEV_Actualizacion.Text = model.Actualizacion.ToUpdateDateTime();
                 var estaciones = model.Estaciones.ToArray();
                 TEV_0_1.Text = estaciones[0].Ida1 == 0 ? "andén" : string.Format("{0} min", estaciones[0].Ida1);
                 TEV_0_2.Text = estaciones[0].Ida2 == 0 ? "andén" : string.Format("{0} min", estaciones[0].Ida2);

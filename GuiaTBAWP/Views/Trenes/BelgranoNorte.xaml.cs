@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Device.Location;
 using System.Linq;
 using System.Windows;
 using GuiaTBA.Common;
 using GuiaTBAWP.Commons;
+using GuiaTBAWP.Commons.Data;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
 using GuiaTBAWP.Services;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Shell;
 
 namespace GuiaTBAWP.Views.Trenes
@@ -98,7 +102,9 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void VerEnMapa_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/Trenes/Mapa.xaml?linea=belgrano-norte", UriKind.Relative));
+            TrenMapModel.SetMapModel("belgrano-norte");
+
+            NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
         }
 
         private void Pin_Click(object sender, EventArgs e)

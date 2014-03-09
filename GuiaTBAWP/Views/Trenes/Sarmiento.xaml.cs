@@ -93,7 +93,9 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void VerEnMapa_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/Trenes/Mapa.xaml?linea=sarmiento", UriKind.Relative));
+            TrenMapModel.SetMapModel("sarmiento");
+
+            NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
         }
 
         private void Pin_Click(object sender, EventArgs e)

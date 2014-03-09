@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GuiaTBAWP.Views.Comments"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#005C84">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,20,0,0">
+            <TextBlock x:Name="ApplicationTitle" Text="GUIA TRANSPORTE BUENOS AIRES" 
+                    Style="{StaticResource PhoneTextNormalStyle}" Margin="0,0,0,10"/>
+            <TextBlock x:Name="PageTitle" Text="propuestas" Margin="0,-20,0,10"
+                    Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <StackPanel x:Name="DvError" Visibility="Visible" Margin="12,0,0,0" Orientation="Vertical">
+                <TextBlock TextWrapping="Wrap">
+                    Acercanos tus propuestas de mejoras por este medio, una baja calificación en la tienda no ayuda a mejorar.
+                </TextBlock>
+                <TextBlock Margin="0,30,0,10">¿Desea ayudarnos a mejorar?</TextBlock>
+                <TextBlock>Comentario:</TextBlock>
+                <TextBox x:Name="TxtComentario"></TextBox>
+                <Button x:Name="BtnSend" Click="SendErrorReport_OnClick">ENVIAR REPORTE</Button>
+                <TextBlock TextWrapping="Wrap">
+                    Utilizaremos tus comentarios para mejorar la aplicación.
+                    No almacenamos ni enviamos información que te identifique.
+                </TextBlock>
+            </StackPanel>
+            <StackPanel x:Name="DvThanks" Visibility="Collapsed">
+                <RichTextBox TextWrapping="Wrap">
+                    <Paragraph>GRACIAS POR AYUDARNOS A MEJORAR.</Paragraph>
+                    <Paragraph><LineBreak /></Paragraph>
+                    <Paragraph>Utilizamos tus comentarios para solucionar posibles problemas y mejorar la aplicación. Tu ayuda es muy importante.</Paragraph>
+                    <Paragraph><LineBreak /></Paragraph>
+                </RichTextBox>
+                <TextBlock x:Name="TxtErrorCode"></TextBlock>
+                <Button Click="GoToHome_OnClick">VOLVER AL INICIO</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

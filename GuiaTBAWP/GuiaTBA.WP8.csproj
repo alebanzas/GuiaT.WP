@@ -118,6 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorReportRequestModel.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\MapExtensions.cs" />
     <Compile Include="GeneralError.xaml.cs">
@@ -178,8 +179,12 @@
     <Compile Include="Views\Colectivos\Detalle.xaml.cs">
       <DependentUpon>Detalle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Colectivos\GetColectivoMapService.cs" />
     <Compile Include="Views\Colectivos\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Comments.xaml.cs">
+      <DependentUpon>Comments.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
@@ -351,6 +356,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Colectivos\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Comments.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

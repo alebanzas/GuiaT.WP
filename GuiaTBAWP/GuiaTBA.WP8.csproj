@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="MapViewModel.cs" />
     <Compile Include="PositionService.cs" />
+    <Compile Include="Services\TrenRealTimeStatusService.cs" />
     <Compile Include="Services\TrenStatusService.cs" />
     <Compile Include="StatusChecker.cs" />
     <Compile Include="Views\Acerca.xaml.cs">
@@ -492,6 +493,8 @@
     <Content Include="Images\Tiles\FlipCycleTileSmall.png" />
     <Content Include="Images\Tiles\IconicTileMediumLarge.png" />
     <Content Include="Images\Tiles\IconicTileSmall.png" />
+    <Content Include="Images\Trenes\sentido-down.png" />
+    <Content Include="Images\Trenes\sentido-up.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

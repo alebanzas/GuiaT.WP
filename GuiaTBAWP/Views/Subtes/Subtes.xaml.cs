@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using GuiaTBAWP.Commons.Data;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Maps.Controls;
+using GuiaTBAWP.Commons.Models;
+using System.Device.Location;
+using Microsoft.Phone.Maps.Toolkit;
 
 namespace GuiaTBAWP.Views.Subtes
 {
@@ -40,7 +46,39 @@ namespace GuiaTBAWP.Views.Subtes
 
         private void Button_Click_SubteMapaReal(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/Subtes/Mapa.xaml", UriKind.Relative));
+            App.MapViewModel.Reset();
+            var mapReferenceLines = new MapReference { Id = 1, Nombre = "Trazado", Checked = true};
+            var mapReferencePushpins = new MapReference { Id = 2, Nombre = "Estaciones", Checked = false};
+            var lineas = DataSubte.GetData();
+
+            foreach (var line in lineas)
+            {
+                //linea
+                var routeLine = new MapPolyline
+                {
+                    Path = new GeoCoordinateCollection(),
+                    StrokeColor = line.Color,
+                    StrokeThickness = 5.0,
+                };
+                foreach (var location in line.Trazado)
+                {
+                    routeLine.Path.Add(new GeoCoordinate(location.X, location.Y));
+                }
+                App.MapViewModel.AddElement(mapReferenceLines, routeLine);
+
+                //estaciones
+                foreach (var nuevoLugar in line.Postas.Select(ml => new MapOverlay
+                {
+                    Content = ml.Name,
+                    GeoCoordinate = new GeoCoordinate(ml.X, ml.Y),
+                }))
+                {
+                    App.MapViewModel.AddElement(mapReferencePushpins, nuevoLugar);
+                }
+            }
+
+
+            NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
         }
     }
 }

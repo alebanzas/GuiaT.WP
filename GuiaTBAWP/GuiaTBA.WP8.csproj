@@ -123,6 +123,7 @@
     <Compile Include="GeneralError.xaml.cs">
       <DependentUpon>GeneralError.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapViewModel.cs" />
     <Compile Include="PositionService.cs" />
     <Compile Include="Services\TrenStatusService.cs" />
     <Compile Include="StatusChecker.cs" />
@@ -183,6 +184,9 @@
     <Compile Include="Views\Colectivos\Mapa.xaml.cs">
       <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ruta\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -191,9 +195,6 @@
     </Compile>
     <Compile Include="Views\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subtes\Mapa.xaml.cs">
-      <DependentUpon>Mapa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Subtes\SubteEstado.xaml.cs">
       <DependentUpon>SubteEstado.xaml</DependentUpon>
@@ -362,6 +363,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Mapa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Ruta\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -371,10 +376,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Opciones.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Subtes\Mapa.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

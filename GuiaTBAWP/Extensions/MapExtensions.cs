@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Device.Location;
+﻿using System.Device.Location;
 using System.Linq;
 using Microsoft.Phone.Maps.Controls;
+using Microsoft.Phone.Maps.Toolkit;
 
 namespace GuiaTBAWP.Extensions
 {
@@ -25,13 +25,13 @@ namespace GuiaTBAWP.Extensions
                 }
             }
 
-            //if (!geoCoordinates.Any())
-            //{
-            //    foreach (var dependencyObject in Microsoft.Phone.Maps.Toolkit.MapExtensions.GetChildren(map))
-            //    {
-            //        
-            //    }
-            //}
+            geoCoordinates.AddRange(from dependencyObject in Microsoft.Phone.Maps.Toolkit.MapExtensions.GetChildren(map) where dependencyObject as Pushpin != null select (dependencyObject as Pushpin).GeoCoordinate);
+
+            if (!geoCoordinates.Any())
+            {
+                geoCoordinates.Add(new GeoCoordinate(-34.77828, -58.152802));
+                geoCoordinates.Add(new GeoCoordinate(-34.498069, -58.726151));
+            }
 
             return LocationRectangle.CreateBoundingRectangle(geoCoordinates);
         }

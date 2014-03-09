@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="GuiaTBAWP.Views.Subtes.Mapa"
+    x:Class="GuiaTBAWP.Views.Mapa"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:my="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -25,13 +26,13 @@
                 <ListBox x:Name="ReferencesListBox" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="300">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <CheckBox IsChecked="{Binding Checked}" Content="{Binding Nombre}" Click="References_OnChecked" Foreground="White" />
+                            <CheckBox IsChecked="{Binding Checked}" Content="{Binding Nombre}" Click="References_OnChecked" />
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </StackPanel>
-            
-            <my:Map Canvas.ZIndex="1" x:Name="MiMapa"/>
+
+            <my:Map Canvas.ZIndex="1" x:Name="MiMapa" />
         </Grid>
     </Grid>
  

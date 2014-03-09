@@ -15,6 +15,8 @@ namespace GuiaTBAWP
         private const string AppVersion = "2.0.0.8";
 
         public static ApplicationConfiguration Configuration { get; set; }
+
+        public static MapViewModel MapViewModel { get; set; }
         
         // Easy access to the root frame
         public static PhoneApplicationFrame RootFrame { get; private set; }
@@ -22,6 +24,8 @@ namespace GuiaTBAWP
         // Constructor
         public App()
         {
+            MapViewModel = new MapViewModel();
+
             Current.Host.Settings.EnableFrameRateCounter = false;
             // Global handler for uncaught exceptions. 
             // Note that exceptions thrown by ApplicationBarItem.Click will not get caught here.

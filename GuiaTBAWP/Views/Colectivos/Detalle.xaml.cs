@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -9,9 +10,12 @@ namespace GuiaTBAWP.Views.Colectivos
 {
     public partial class Detalle : PhoneApplicationPage
     {
+        private readonly GetColectivoMapService _getColectivoMapService;
+
         public Detalle()
         {
             InitializeComponent();
+            _getColectivoMapService = new GetColectivoMapService();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -46,10 +50,14 @@ namespace GuiaTBAWP.Views.Colectivos
 
         private void VerEnMapa_Click(object sender, EventArgs e)
         {
+            App.MapViewModel.Reset();
             var bus = NavigationContext.QueryString["id"];
-
-            Uri uri = new Uri(String.Format("/Views/Colectivos/Mapa.xaml?linea={0}", bus), UriKind.Relative);
-            NavigationService.Navigate(uri);
+            _getColectivoMapService.SuccessFunc = () =>
+            {
+                NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
+                return 0;
+            };
+            _getColectivoMapService.GetColectivo(bus);
         }
     }
 }

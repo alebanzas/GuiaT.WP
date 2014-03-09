@@ -8,14 +8,14 @@ using System.Windows;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 
-namespace GuiaTBAWP
+namespace GuiaTBAWP.Views
 {
-    public partial class GeneralError : PhoneApplicationPage
+    public partial class Comments : PhoneApplicationPage
     {
         public string RegisterURL = "http://servicio.abhosting.com.ar/report/error/?type=WP&version=" + App.Configuration.Version;
         public ErrorReportRequestModel RequestModel { get; set; }
 
-        public GeneralError()
+        public Comments()
         {
             InitializeComponent();
         }
@@ -25,17 +25,11 @@ namespace GuiaTBAWP
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-#if DEBUG
-            DvErrorDetail.Visibility = Visibility.Visible;
-#endif
             //el back vuelve a la home
             while (NavigationService.BackStack.Count() > 1)
             {
                 NavigationService.RemoveBackEntry();
             }
-            
-
-            ErrorText.Text = Exception.ToString();
         }
 
         private void GoToHome_OnClick(object sender, RoutedEventArgs e)

@@ -77,18 +77,10 @@
                                             <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>
                                             <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
                                         </StackPanel>
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_0_1" />
-                                                </StackPanel>
-                                            </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_0_2" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_0_1" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -96,26 +88,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Caballito</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_1_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_1_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_1_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_1_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_1_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_1_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -123,26 +103,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Flores</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_2_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_2_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_2_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_2_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_2_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_2_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -150,26 +118,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Floresta</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_3_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_3_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_3_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_3_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_3_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_3_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -177,26 +133,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Villa Luro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_4_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_4_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_4_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_4_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_4_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_4_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -204,26 +148,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Liniers</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_5_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_5_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_5_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_5_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_5_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_5_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -231,26 +163,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ciudadela</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_6_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_6_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_6_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_6_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_6_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_6_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -258,26 +178,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ramos Mejía</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_7_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_7_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_7_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_7_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_7_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_7_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -294,52 +202,28 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
-                                    <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                        <StackPanel Width="180">
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                <TextBlock x:Name="TEV_8_3" />
-                                            </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                <TextBlock x:Name="TEV_8_1" />
-                                            </StackPanel>
+                                    <StackPanel Margin="0,10,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_8_1" />
                                         </StackPanel>
-                                        <StackPanel Width="180">
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                <TextBlock x:Name="TEV_8_4" />
-                                            </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                <TextBlock x:Name="TEV_8_2" />
-                                            </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_8_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Morón</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_9_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_9_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_9_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_9_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_9_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_9_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -347,26 +231,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Castelar</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_10_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_10_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_10_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_10_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_10_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_10_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -374,26 +246,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ituzaingó</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_11_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_11_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_11_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_11_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_11_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_11_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -401,26 +261,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">San Antonio de Padua</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_12_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_12_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_12_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_12_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_12_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_12_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -428,26 +276,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Merlo</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_13_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_13_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_13_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_13_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_13_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_13_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -455,26 +291,14 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Paso del Rey</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_14_3" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_14_1" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_14_1" />
                                             </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_14_4" />
-                                                </StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_14_2" />
-                                                </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_14_2" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -482,18 +306,10 @@
                                 <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Moreno</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_15_3" />
-                                                </StackPanel>
-                                            </StackPanel>
-                                            <StackPanel Width="180">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
-                                                    <TextBlock x:Name="TEV_15_4" />
-                                                </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_15_1" />
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>

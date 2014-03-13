@@ -9,7 +9,6 @@ using GuiaTBA.Common.Models;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Extensions;
-using GuiaTBAWP.Models;
 
 namespace GuiaTBAWP.Services
 {
@@ -77,7 +76,7 @@ namespace GuiaTBAWP.Services
             {
                 if (!Canceled)
                 {
-                    ex.Log();
+                    ex.Log(false);
                 }
             }
         }

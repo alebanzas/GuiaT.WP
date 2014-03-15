@@ -22,7 +22,7 @@
             <phone:PanoramaItem Header="menú" Orientation="Horizontal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel>
-                        <Button Visibility="Collapsed" Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta">
+                        <Button Background="#10283a" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Ruta" Height="463">
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu>
                                     <toolkit:MenuItem Header="anclar al inicio" Click="MenuRuta_OnClick" />
@@ -30,8 +30,8 @@
                             </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel Margin="0" Orientation="Horizontal" Width="190" Height="360">
                                 <Image Source="/Images/Home/ruta.png" Width="190" Height="190"/>
-                                <StackPanel Margin="-190,335,0,0">
-                                    <TextBlock Foreground="White" Margin="10,0,0,0" Text="RUTA" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                <StackPanel Margin="-190,365,0,-32">
+                                    <TextBlock Foreground="White" Margin="10,0,0,0" Text="¿QUÉ ME DEJA?" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
                                 </StackPanel>
                             </StackPanel>
                         </Button>

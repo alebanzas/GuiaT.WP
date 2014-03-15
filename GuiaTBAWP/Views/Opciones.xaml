@@ -20,13 +20,19 @@
         </Grid.RowDefinitions>
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
-        
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="Opciones" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="GUÍA TRANSPORTE BA" Style="{StaticResource PageSubTitle}"/>
+            <TextBlock Text="opciones" Style="{StaticResource PageTitle}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:ToggleSwitch Header="Permitir buscar mi localización" Height="111" HorizontalAlignment="Left" Margin="0,47,0,0" Name="TglLocalizacion" VerticalAlignment="Top" Width="456" Checked="Localizacion_Changed" Unchecked="Localizacion_Changed"/>
+            <StackPanel>
+                <toolkit:ToggleSwitch Header="Permitir buscar mi localización" Height="111" HorizontalAlignment="Left" Margin="0,47,0,0" Name="TglLocalizacion" VerticalAlignment="Top" Width="456" Checked="Localizacion_Changed" Unchecked="Localizacion_Changed"/>
+            
+                <TextBlock Margin="12,0,0,0" Opacity="0.6">Utiliza los mapas sin conexión</TextBlock>
+                <Button Click="ButtonDownloadMaps_OnClick">DESCARGAR MAPAS</Button>
+            </StackPanel>
         </Grid>
     </Grid>
  

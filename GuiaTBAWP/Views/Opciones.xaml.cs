@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Microsoft.Phone.Tasks;
 
 namespace GuiaTBAWP.Views
 {
@@ -30,5 +31,9 @@ namespace GuiaTBAWP.Views
             TglLocalizacion.Content = activated ? "Activado" : "Desactivado";
         }
 
+        private void ButtonDownloadMaps_OnClick(object sender, RoutedEventArgs e)
+        {
+            (new MapDownloaderTask()).Show();
+        }
     }
 }

@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mobfox="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
+    xmlns:my="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -15,39 +15,87 @@
     shell:SystemTray.IsVisible="True">
 
     <Grid x:Name="LayoutRoot" Background="#005C84">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
-        
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="GUÍA TRANSPORTE BA" Style="{StaticResource PageSubTitle}"/>
-            <TextBlock Text="ruta" Style="{StaticResource PageTitle}"/>
-        </StackPanel>
 
-        <Grid Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="TxtBuscar" Width="300"></TextBox>
-                <Button Click="ButtonBase_OnClick">BUSCAR</Button>
-            </StackPanel>
-        </Grid>
+        <phone:Pivot Title="¿QUÉ ME DEJA?">
 
-        <Grid Grid.Row="2" Margin="12,0,12,0">
-            <ListBox ItemsSource="{Binding Lineas}" Margin="0,0,0,20" ScrollViewer.VerticalScrollBarVisibility="Visible">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="0,0,0,0" Width="432">
-                            <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
-                            <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap"/>
-                            <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </Grid>
+            <phone:PivotItem Header="origen">
+                <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="TxtBuscarOrigen" Width="300"></TextBox>
+                        <Button Click="ButtonBuscarOrigen_OnClick">BUSCAR</Button>
+                    </StackPanel>
+                    <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsOrigen">No hay resultados.</TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingOrigen">Buscando...</TextBlock>
+                    <ListBox x:Name="ResultadosListOrigen" ItemsSource="{Binding BusquedaOrigen}" Margin="0,0,0,20" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="SelectorOrigen_OnSelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,0" Width="432">
+                                    <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                    <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap" Margin="12,0,0,0"/>
+                                    <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <StackPanel Height="200">
+                        <my:Map Canvas.ZIndex="1" x:Name="MiMapaOrigen" Height="200" />
+                    </StackPanel>
+                </StackPanel>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="destino">
+                <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="TxtBuscarDestino" Width="300"></TextBox>
+                        <Button Click="ButtonBuscarDestino_OnClick">BUSCAR</Button>
+                    </StackPanel>
+                    <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsDestino">No hay resultados.</TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingDestino">Buscando...</TextBlock>
+                    <ListBox x:Name="ResultadosListDestino" ItemsSource="{Binding BusquedaDestino}" Margin="0,0,0,20" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="SelectorDestino_OnSelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,0" Width="432">
+                                    <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                    <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap" Margin="12,0,0,0"/>
+                                    <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <StackPanel Height="200">
+                        <my:Map Canvas.ZIndex="1" x:Name="MiMapaDestino" Height="200" />
+                    </StackPanel>
+                </StackPanel>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="buscar">
+                <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0" Width="450">
+                    <TextBlock Margin="12,0,0,0">Origen:</TextBlock>
+                    <TextBlock x:Name="TxtOrigen" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Seleccione origen</TextBlock>
+                    <TextBlock Margin="12,30,0,0">Destino:</TextBlock>
+                    <TextBlock x:Name="TxtDestino" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Seleccione destino</TextBlock>
+                    <Button Margin="0,30,0,0" Click="ButtonBusqueda_OnClick">¿QUÉ ME DEJA?</Button>
+                </StackPanel>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="resultados">
+                <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
+                    <ListBox x:Name="Resultados" ItemsSource="{Binding Resultados}" Margin="0,0,0,20" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="SelectorOrigen_OnSelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,0" Width="432">
+                                    <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                    <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap" Margin="12,0,0,0"/>
+                                    <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </phone:PivotItem>
+        </phone:Pivot>
     </Grid>
 
 </phone:PhoneApplicationPage>

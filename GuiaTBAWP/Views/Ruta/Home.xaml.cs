@@ -5,11 +5,18 @@ using System.ComponentModel;
 using System.Device.Location;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
+using GuiaTBAWP.Commons.Services;
+using GuiaTBAWP.Commons.ViewModels;
+using GuiaTBAWP.Extensions;
+using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
@@ -18,10 +25,11 @@ namespace GuiaTBAWP.Views.Ruta
 {
     public partial class Home : PhoneApplicationPage
     {
-        GeocodeQuery _geoQo;
-        GeocodeQuery _geoQd;
+        private GeocodeQuery _geoQo;
+        private GeocodeQuery _geoQd;
         private GeoCoordinate _origen;
         private GeoCoordinate _destino;
+        private WebRequest _httpReq;
 
         private static RuteBusquedaViewModel _viewModel = new RuteBusquedaViewModel();
         public static RuteBusquedaViewModel ViewModel
@@ -53,6 +61,8 @@ namespace GuiaTBAWP.Views.Ruta
                 };
             Unloaded += (sender, args) =>
                 {
+                    if (_httpReq != null)
+                        _httpReq.Abort();
                     if (_geoQo != null)
                     {
                         _geoQo.CancelAsync();
@@ -282,7 +292,64 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void ButtonBusqueda_OnClick(object sender, RoutedEventArgs e)
         {
+            var button = (Button) sender;
+            button.IsEnabled = false;
+
+            LoadingBuscar.Visibility = Visibility.Visible;
+            ConnectionErrorBuscar.Visibility = Visibility.Collapsed;
+            NoResultsBuscar.Visibility = Visibility.Collapsed;
+
+            var param = new Dictionary<string, object>
+                {
+                    {"lat", _origen.Latitude.ToString(CultureInfo.InvariantCulture).Replace(',','.')},
+                    {"lon", _origen.Longitude.ToString(CultureInfo.InvariantCulture).Replace(',','.')},
+                    {"lat2", _destino.Latitude.ToString(CultureInfo.InvariantCulture).Replace(',','.')},
+                    {"lon2", _destino.Longitude.ToString(CultureInfo.InvariantCulture).Replace(',','.')},
+                };
+            var client = new HttpClient();
+            _httpReq = client.Get("/api/transporte".ToApiCallUri(param));
+            _httpReq.BeginGetResponse(HTTPWebRequestCallBack, _httpReq);
+        }
+
+        private void HTTPWebRequestCallBack(IAsyncResult result)
+        {
+            var o = new List<TransporteModel>();
+
+            try
+            {
+                var httpRequest = (HttpWebRequest)result.AsyncState;
+                var response = httpRequest.EndGetResponse(result);
+                var stream = response.GetResponseStream();
+                var serializer = new DataContractJsonSerializer(typeof(List<TransporteModel>));
+                o = (List<TransporteModel>)serializer.ReadObject(stream);
+            }
+            catch (Exception ex)
+            {
+                ex.Log();
+            }
             
+            if (o.Any())
+            {
+                foreach (IGrouping<string, TransporteModel> transporteModel in o.GroupBy(x => x.Linea))
+                {
+                    ViewModel.BusquedaResultados.Add(new ColectivoItemViewModel
+                    {
+                        Id = transporteModel.Key,
+                        Nombre = "Línea " + transporteModel.Key,
+                        Detalles = SetDetalleByLinea(transporteModel.Key, o),
+                    });
+                }
+                PivotControl.SelectedIndex = 3;
+            }
+            else
+            {
+                NoResultsBuscar.Visibility = Visibility.Visible;
+            }
+        }
+
+        private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)
+        {
+            return string.Join("\n", transporteModels.Where(x => x.Linea.Equals(key)).OrderBy(x => x.Ramal).Select(x => x.Ramal));
         }
     }
 
@@ -290,11 +357,13 @@ namespace GuiaTBAWP.Views.Ruta
     {
         private ObservableCollection<GeocoderResult> _busquedaOrigen;
         private ObservableCollection<GeocoderResult> _busquedaDestino;
+        private ObservableCollection<ColectivoItemViewModel> _busquedaResults;
 
         public RuteBusquedaViewModel()
         {
             BusquedaOrigen = new ObservableCollection<GeocoderResult>();
             BusquedaDestino = new ObservableCollection<GeocoderResult>();
+            BusquedaResultados = new ObservableCollection<ColectivoItemViewModel>();
         }
 
         public ObservableCollection<GeocoderResult> BusquedaOrigen
@@ -314,6 +383,16 @@ namespace GuiaTBAWP.Views.Ruta
             {
                 _busquedaDestino = value;
                 NotifyPropertyChanged("BusquedaDestino");
+            }
+        }
+
+        public ObservableCollection<ColectivoItemViewModel> BusquedaResultados
+        {
+            get { return _busquedaResults; }
+            set
+            {
+                _busquedaResults = value;
+                NotifyPropertyChanged("BusquedaResultados");
             }
         }
 

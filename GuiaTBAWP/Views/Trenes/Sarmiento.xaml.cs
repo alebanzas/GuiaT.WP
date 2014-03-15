@@ -65,47 +65,47 @@ namespace GuiaTBAWP.Views.Trenes
 
                 TEV_0_1.Text = GetTimeStringIda(estaciones[0]);
 
-                TEV_1_1.Text = GetTimeStringIda(estaciones[1]);
-                TEV_1_2.Text = GetTimeStringVuelta(estaciones[1]);
+                TEV_1_1.Text = GetTimeStringVuelta(estaciones[1]);
+                TEV_1_2.Text = GetTimeStringIda(estaciones[1]);
 
-                TEV_2_1.Text = GetTimeStringIda(estaciones[2]);
-                TEV_2_2.Text = GetTimeStringVuelta(estaciones[2]);
+                TEV_2_1.Text = GetTimeStringVuelta(estaciones[2]);
+                TEV_2_2.Text = GetTimeStringIda(estaciones[2]);
 
-                TEV_3_1.Text = GetTimeStringIda(estaciones[3]);
-                TEV_3_2.Text = GetTimeStringVuelta(estaciones[3]);
+                TEV_3_1.Text = GetTimeStringVuelta(estaciones[3]);
+                TEV_3_2.Text = GetTimeStringIda(estaciones[3]);
 
-                TEV_4_1.Text = GetTimeStringIda(estaciones[4]);
-                TEV_4_2.Text = GetTimeStringVuelta(estaciones[4]);
+                TEV_4_1.Text = GetTimeStringVuelta(estaciones[4]);
+                TEV_4_2.Text = GetTimeStringIda(estaciones[4]);
 
-                TEV_5_1.Text = GetTimeStringIda(estaciones[5]);
-                TEV_5_2.Text = GetTimeStringVuelta(estaciones[5]);
+                TEV_5_1.Text = GetTimeStringVuelta(estaciones[5]);
+                TEV_5_2.Text = GetTimeStringIda(estaciones[5]);
 
-                TEV_6_1.Text = GetTimeStringIda(estaciones[6]);
-                TEV_6_2.Text = GetTimeStringVuelta(estaciones[6]);
+                TEV_6_1.Text = GetTimeStringVuelta(estaciones[6]);
+                TEV_6_2.Text = GetTimeStringIda(estaciones[6]);
 
-                TEV_7_1.Text = GetTimeStringIda(estaciones[7]);
-                TEV_7_2.Text = GetTimeStringVuelta(estaciones[7]);
+                TEV_7_1.Text = GetTimeStringVuelta(estaciones[7]);
+                TEV_7_2.Text = GetTimeStringIda(estaciones[7]);
 
-                TEV_8_1.Text = GetTimeStringIda(estaciones[8]);
-                TEV_8_2.Text = GetTimeStringVuelta(estaciones[8]);
+                TEV_8_1.Text = GetTimeStringVuelta(estaciones[8]);
+                TEV_8_2.Text = GetTimeStringIda(estaciones[8]);
 
-                TEV_9_1.Text = GetTimeStringIda(estaciones[9]);
-                TEV_9_2.Text = GetTimeStringVuelta(estaciones[9]);
+                TEV_9_1.Text = GetTimeStringVuelta(estaciones[9]);
+                TEV_9_2.Text = GetTimeStringIda(estaciones[9]);
 
-                TEV_10_1.Text = GetTimeStringIda(estaciones[10]);
-                TEV_10_2.Text = GetTimeStringVuelta(estaciones[10]);
+                TEV_10_1.Text = GetTimeStringVuelta(estaciones[10]);
+                TEV_10_2.Text = GetTimeStringIda(estaciones[10]);
 
-                TEV_11_1.Text = GetTimeStringIda(estaciones[11]);
-                TEV_11_2.Text = GetTimeStringVuelta(estaciones[11]);
+                TEV_11_1.Text = GetTimeStringVuelta(estaciones[11]);
+                TEV_11_2.Text = GetTimeStringIda(estaciones[11]);
 
-                TEV_12_1.Text = GetTimeStringIda(estaciones[12]);
-                TEV_12_2.Text = GetTimeStringVuelta(estaciones[12]);
+                TEV_12_1.Text = GetTimeStringVuelta(estaciones[12]);
+                TEV_12_2.Text = GetTimeStringIda(estaciones[12]);
 
-                TEV_13_1.Text = GetTimeStringIda(estaciones[13]);
-                TEV_13_2.Text = GetTimeStringVuelta(estaciones[13]);
+                TEV_13_1.Text = GetTimeStringVuelta(estaciones[13]);
+                TEV_13_2.Text = GetTimeStringIda(estaciones[13]);
 
-                TEV_14_1.Text = GetTimeStringIda(estaciones[14]);
-                TEV_14_2.Text = GetTimeStringVuelta(estaciones[14]);
+                TEV_14_1.Text = GetTimeStringVuelta(estaciones[14]);
+                TEV_14_2.Text = GetTimeStringIda(estaciones[14]);
 
                 TEV_15_1.Text = GetTimeStringVuelta(estaciones[15]);
             });
@@ -118,7 +118,7 @@ namespace GuiaTBAWP.Views.Trenes
                 return "no hay servicios";
             }
 
-            var i = "prox. a Tigre en ";
+            var i = "prox. a Moreno en ";
             i += (estaciones.Ida1 == 0 ? "andén" : string.Format("{0} min", estaciones.Ida1));
             if (estaciones.Ida2 == -1) return i;
             if (estaciones.Ida2 != 0)
@@ -133,7 +133,7 @@ namespace GuiaTBAWP.Views.Trenes
                 return "no hay servicios";
             }
 
-            var i = "prox. a Retiro en ";
+            var i = "prox. a Once en ";
             i += (estaciones.Vuelta1 == 0 ? "andén" : string.Format("{0} min", estaciones.Vuelta1));
             if (estaciones.Vuelta2 == -1) return i;
             if (estaciones.Vuelta2 != 0)

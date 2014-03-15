@@ -5,17 +5,11 @@ using System.ComponentModel;
 using System.Device.Location;
 using System.Globalization;
 using System.Linq;
-using System.Net;
-using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
-using GuiaTBAWP.Commons.Services;
-using GuiaTBAWP.Commons.ViewModels;
-using GuiaTBAWP.Extensions;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
@@ -24,9 +18,10 @@ namespace GuiaTBAWP.Views.Ruta
 {
     public partial class Home : PhoneApplicationPage
     {
-        GeocodeQuery geoQ = null;
-        private GeoCoordinate origen;
-        private GeoCoordinate destino;
+        GeocodeQuery _geoQo;
+        GeocodeQuery _geoQd;
+        private GeoCoordinate _origen;
+        private GeoCoordinate _destino;
 
         private static RuteBusquedaViewModel _viewModel = new RuteBusquedaViewModel();
         public static RuteBusquedaViewModel ViewModel
@@ -41,14 +36,33 @@ namespace GuiaTBAWP.Views.Ruta
             DataContext = ViewModel;
             Loaded += (sender, args) =>
                 {
-                    geoQ = new GeocodeQuery();
+                    _geoQo = new GeocodeQuery();
+                    _geoQd = new GeocodeQuery();
+                    ViewModel.BusquedaOrigen.Clear();
+                    ViewModel.BusquedaDestino.Clear();
+                    TxtOrigen.Text = "Seleccione origen";
+                    TxtOrigen.Tap += (o, eventArgs) =>
+                    {
+                        PivotControl.SelectedIndex = 0;
+                    };
+                    TxtDestino.Text = "Seleccione destino";
+                    TxtDestino.Tap += (o, eventArgs) =>
+                    {
+                        PivotControl.SelectedIndex = 1;
+                    };
                 };
             Unloaded += (sender, args) =>
                 {
-                    if (geoQ == null) return;
-
-                    geoQ.CancelAsync();
-                    geoQ.Dispose();
+                    if (_geoQo != null)
+                    {
+                        _geoQo.CancelAsync();
+                        _geoQo.Dispose();
+                    }
+                    if (_geoQd != null)
+                    {
+                        _geoQd.CancelAsync();
+                        _geoQd.Dispose();
+                    }
                 };
             
             StatusChecker.Check("HomeRuta");
@@ -56,32 +70,32 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void ButtonBuscarOrigen_OnClick(object sender, RoutedEventArgs e)
         {
-            if (geoQ.IsBusy)
+            if (_geoQo.IsBusy)
             {
-                geoQ.CancelAsync();
+                _geoQo.CancelAsync();
             }
 
-            geoQ.QueryCompleted += geoQ_OrigenQueryCompleted;
-            geoQ.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
-            geoQ.SearchTerm = TxtBuscarOrigen.Text;
-            geoQ.MaxResultCount = 200;
-            geoQ.QueryAsync();
+            _geoQo.QueryCompleted += geoQ_OrigenQueryCompleted;
+            _geoQo.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
+            _geoQo.SearchTerm = TxtBuscarOrigen.Text;
+            _geoQo.MaxResultCount = 200;
+            _geoQo.QueryAsync();
             NoResultsOrigen.Visibility = Visibility.Collapsed;
             LoadingOrigen.Visibility = Visibility.Visible;
         }
 
         private void ButtonBuscarDestino_OnClick(object sender, RoutedEventArgs e)
         {
-            if (geoQ.IsBusy)
+            if (_geoQd.IsBusy)
             {
-                geoQ.CancelAsync();
+                _geoQd.CancelAsync();
             }
 
-            geoQ.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
-            geoQ.QueryCompleted += geoQ_DestinoQueryCompleted;
-            geoQ.SearchTerm = TxtBuscarDestino.Text;
-            geoQ.MaxResultCount = 200;
-            geoQ.QueryAsync();
+            _geoQd.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
+            _geoQd.QueryCompleted += geoQ_DestinoQueryCompleted;
+            _geoQd.SearchTerm = TxtBuscarDestino.Text;
+            _geoQd.MaxResultCount = 200;
+            _geoQd.QueryAsync();
             NoResultsDestino.Visibility = Visibility.Collapsed;
             LoadingDestino.Visibility = Visibility.Visible;
         }
@@ -174,7 +188,7 @@ namespace GuiaTBAWP.Views.Ruta
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaOrigen.Center = point;
             MiMapaOrigen.ZoomLevel = 15;
-            origen = point;
+            _origen = point;
 
             ResultadosListOrigen.SelectedIndex = -1;
         }
@@ -191,7 +205,7 @@ namespace GuiaTBAWP.Views.Ruta
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaDestino.Center = point;
             MiMapaDestino.ZoomLevel = 15;
-            destino = point;
+            _destino = point;
             
             ResultadosListDestino.SelectedIndex = -1;
         }

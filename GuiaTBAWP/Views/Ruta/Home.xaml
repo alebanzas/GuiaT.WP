@@ -18,7 +18,7 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <phone:Pivot Title="¿QUÉ ME DEJA?">
+        <phone:Pivot x:Name="PivotControl" Title="¿QUÉ ME DEJA?">
 
             <phone:PivotItem Header="origen">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">

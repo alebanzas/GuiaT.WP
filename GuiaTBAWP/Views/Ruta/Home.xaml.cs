@@ -20,6 +20,7 @@ using GuiaTBAWP.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
+using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace GuiaTBAWP.Views.Ruta
 {
@@ -30,6 +31,9 @@ namespace GuiaTBAWP.Views.Ruta
         private GeoCoordinate _origen;
         private GeoCoordinate _destino;
         private WebRequest _httpReq;
+        private bool _results;
+        private Stack<int> _navHistory;
+        private bool _backButton;
 
         private static RuteBusquedaViewModel _viewModel = new RuteBusquedaViewModel();
         public static RuteBusquedaViewModel ViewModel
@@ -44,6 +48,8 @@ namespace GuiaTBAWP.Views.Ruta
             DataContext = ViewModel;
             Loaded += (sender, args) =>
                 {
+                    _navHistory = new Stack<int>(); 
+                    _navHistory.Push(0);
                     _geoQo = new GeocodeQuery();
                     _geoQd = new GeocodeQuery();
                     ViewModel.BusquedaOrigen.Clear();
@@ -92,6 +98,8 @@ namespace GuiaTBAWP.Views.Ruta
             _geoQo.SearchTerm = TxtBuscarOrigen.Text;
             _geoQo.MaxResultCount = 200;
             _geoQo.QueryAsync();
+            ViewModel.BusquedaOrigen.Clear(); 
+            MiMapaOrigen.Layers.Clear();
             NoResultsOrigen.Visibility = Visibility.Collapsed;
             LoadingOrigen.Visibility = Visibility.Visible;
         }
@@ -110,6 +118,8 @@ namespace GuiaTBAWP.Views.Ruta
             _geoQd.SearchTerm = TxtBuscarDestino.Text;
             _geoQd.MaxResultCount = 200;
             _geoQd.QueryAsync();
+            MiMapaDestino.Layers.Clear();
+            ViewModel.BusquedaDestino.Clear();
             NoResultsDestino.Visibility = Visibility.Collapsed;
             LoadingDestino.Visibility = Visibility.Visible;
         }
@@ -117,8 +127,6 @@ namespace GuiaTBAWP.Views.Ruta
         private void geoQ_OrigenQueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
             var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
-            ViewModel.BusquedaOrigen.Clear();
-            MiMapaOrigen.Layers.Clear();
             LoadingOrigen.Visibility = Visibility.Collapsed;
 
             if (list.Any())
@@ -155,8 +163,6 @@ namespace GuiaTBAWP.Views.Ruta
         private void geoQ_DestinoQueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
             var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
-            ViewModel.BusquedaDestino.Clear();
-            MiMapaDestino.Layers.Clear();
             LoadingDestino.Visibility = Visibility.Collapsed;
 
             if (list.Any())
@@ -204,8 +210,6 @@ namespace GuiaTBAWP.Views.Ruta
             MiMapaOrigen.Center = point;
             MiMapaOrigen.ZoomLevel = 15;
             _origen = point;
-
-            ResultadosListOrigen.SelectedIndex = -1;
         }
 
         private void SelectorDestino_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -222,8 +226,6 @@ namespace GuiaTBAWP.Views.Ruta
             MiMapaDestino.Center = point;
             MiMapaDestino.ZoomLevel = 15;
             _destino = point;
-            
-            ResultadosListDestino.SelectedIndex = -1;
         }
 
         private MapOverlay GetMapOverlay(String text, GeoCoordinate location)
@@ -338,6 +340,7 @@ namespace GuiaTBAWP.Views.Ruta
 
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
+                ViewModel.BusquedaResultados.Clear();
                 if (o.Any())
                 {
                     foreach (var transporteModel in o.GroupBy(x => x.Linea))
@@ -349,18 +352,51 @@ namespace GuiaTBAWP.Views.Ruta
                             Detalles = SetDetalleByLinea(transporteModel.Key, o),
                         });
                     }
+                    _results = true;
                     PivotControl.SelectedIndex = 3;
                 }
                 else
                 {
                     NoResultsBuscar.Visibility = Visibility.Visible;
-                }    
+                }
+                LoadingBuscar.Visibility = Visibility.Collapsed;
             });
         }
 
         private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)
         {
             return string.Join("\n", transporteModels.Where(x => x.Linea.Equals(key)).OrderBy(x => x.Ramal).Select(x => x.Ramal));
+        }
+
+        private void PivotControl_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var pivot = sender as Pivot;
+            if (pivot == null) return;
+
+            if (!_results && pivot.SelectedIndex == 3)
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    pivot.SelectedIndex = 2; 
+                });
+                return;
+            }
+
+            if(!_backButton) _navHistory.Push(pivot.SelectedIndex);
+        }
+
+        private void UIElement_OnDoubleTap(object sender, GestureEventArgs e)
+        {
+            PivotControl.SelectedIndex++;
+        }
+        
+        protected override void OnBackKeyPress(CancelEventArgs e)
+        {
+            if (!_navHistory.Any()) return;
+
+            _backButton = true;
+            PivotControl.SelectedIndex = _navHistory.Pop();
+            e.Cancel = true;
         }
     }
 

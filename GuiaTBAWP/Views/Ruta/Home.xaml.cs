@@ -80,6 +80,8 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void ButtonBuscarOrigen_OnClick(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TxtBuscarOrigen.Text)) return;
+
             if (_geoQo.IsBusy)
             {
                 _geoQo.CancelAsync();
@@ -96,6 +98,8 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void ButtonBuscarDestino_OnClick(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TxtBuscarDestino.Text)) return;
+
             if (_geoQd.IsBusy)
             {
                 _geoQd.CancelAsync();
@@ -193,6 +197,7 @@ namespace GuiaTBAWP.Views.Ruta
             var r = e.AddedItems[0] as GeocoderResult;
             if (r == null) return;
 
+            BtnBuscar.IsEnabled = true;
             TxtOrigen.Text = string.Format("{0}, {1}", r.Nombre.Split('.')[1], r.Detalles);
 
             var point = new GeoCoordinate(r.X, r.Y);
@@ -210,6 +215,7 @@ namespace GuiaTBAWP.Views.Ruta
             var r = e.AddedItems[0] as GeocoderResult;
             if (r == null) return;
 
+            BtnBuscar.IsEnabled = true;
             TxtDestino.Text = string.Format("{0}, {1}", r.Nombre.Split('.')[1], r.Detalles);
 
             var point = new GeoCoordinate(r.X, r.Y);
@@ -292,6 +298,8 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void ButtonBusqueda_OnClick(object sender, RoutedEventArgs e)
         {
+            if (_origen == null || _destino == null) return;
+
             var button = (Button) sender;
             button.IsEnabled = false;
 
@@ -327,24 +335,27 @@ namespace GuiaTBAWP.Views.Ruta
             {
                 ex.Log();
             }
-            
-            if (o.Any())
+
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
-                foreach (IGrouping<string, TransporteModel> transporteModel in o.GroupBy(x => x.Linea))
+                if (o.Any())
                 {
-                    ViewModel.BusquedaResultados.Add(new ColectivoItemViewModel
+                    foreach (var transporteModel in o.GroupBy(x => x.Linea))
                     {
-                        Id = transporteModel.Key,
-                        Nombre = "Línea " + transporteModel.Key,
-                        Detalles = SetDetalleByLinea(transporteModel.Key, o),
-                    });
+                        ViewModel.BusquedaResultados.Add(new ColectivoItemViewModel
+                        {
+                            Id = transporteModel.Key,
+                            Nombre = "Línea " + transporteModel.Key,
+                            Detalles = SetDetalleByLinea(transporteModel.Key, o),
+                        });
+                    }
+                    PivotControl.SelectedIndex = 3;
                 }
-                PivotControl.SelectedIndex = 3;
-            }
-            else
-            {
-                NoResultsBuscar.Visibility = Visibility.Visible;
-            }
+                else
+                {
+                    NoResultsBuscar.Visibility = Visibility.Visible;
+                }    
+            });
         }
 
         private string SetDetalleByLinea(string key, IEnumerable<TransporteModel> transporteModels)

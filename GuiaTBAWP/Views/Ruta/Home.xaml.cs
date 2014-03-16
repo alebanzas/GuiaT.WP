@@ -33,7 +33,6 @@ namespace GuiaTBAWP.Views.Ruta
         private WebRequest _httpReq;
         private bool _results;
         private Stack<int> _navHistory;
-        private bool _backButton;
 
         private static RuteBusquedaViewModel _viewModel = new RuteBusquedaViewModel();
         public static RuteBusquedaViewModel ViewModel
@@ -382,7 +381,7 @@ namespace GuiaTBAWP.Views.Ruta
                 return;
             }
 
-            if(!_backButton) _navHistory.Push(pivot.SelectedIndex);
+            if (_navHistory != null && _navHistory.Peek() != pivot.SelectedIndex) _navHistory.Push(pivot.SelectedIndex);
         }
 
         private void UIElement_OnDoubleTap(object sender, GestureEventArgs e)
@@ -393,9 +392,13 @@ namespace GuiaTBAWP.Views.Ruta
         protected override void OnBackKeyPress(CancelEventArgs e)
         {
             if (!_navHistory.Any()) return;
+            _navHistory.Pop();
+            if (!_navHistory.Any()) return;
 
-            _backButton = true;
-            PivotControl.SelectedIndex = _navHistory.Pop();
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                PivotControl.SelectedIndex = _navHistory.Peek();
+            });
             e.Cancel = true;
         }
     }

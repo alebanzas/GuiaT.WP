@@ -18,7 +18,7 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <phone:Pivot x:Name="PivotControl" Title="¿QUÉ ME DEJA?">
+        <phone:Pivot x:Name="PivotControl" Title="¿QUÉ ME DEJA?" SelectionChanged="PivotControl_OnSelectionChanged">
 
             <phone:PivotItem Header="origen">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
@@ -35,7 +35,7 @@
                              SelectionChanged="SelectorOrigen_OnSelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Margin="0,0,0,0" Width="432">
+                                <StackPanel Margin="0,0,0,0" Width="432" DoubleTap="UIElement_OnDoubleTap">
                                     <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
                                     <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap" Margin="12,0,0,0"/>
                                     <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>
@@ -57,10 +57,14 @@
                     </StackPanel>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsDestino">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingDestino">Buscando...</TextBlock>
-                    <ListBox x:Name="ResultadosListDestino" ItemsSource="{Binding BusquedaDestino}" Margin="0,0,0,20" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="SelectorDestino_OnSelectionChanged">
+                    <ListBox x:Name="ResultadosListDestino" 
+                             ItemsSource="{Binding BusquedaDestino}" 
+                             Margin="0,0,0,20" Height="300" 
+                             ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                             SelectionChanged="SelectorDestino_OnSelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Margin="0,0,0,0" Width="432">
+                                <StackPanel Margin="0,0,0,0" Width="432" DoubleTap="UIElement_OnDoubleTap">
                                     <TextBlock Text="{Binding Nombre}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
                                     <TextBlock Text="{Binding Detalles}" TextWrapping="Wrap" Margin="12,0,0,0"/>
                                     <Line StrokeThickness="2" Stretch="Fill" Height="2" Fill="Blue"></Line>

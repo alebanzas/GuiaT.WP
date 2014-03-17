@@ -334,7 +334,15 @@ namespace GuiaTBAWP.Views.Ruta
             }
             catch (Exception ex)
             {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    BtnBuscar.IsEnabled = true;
+                    LoadingBuscar.Visibility = Visibility.Collapsed;
+                    NoResultsBuscar.Visibility = Visibility.Collapsed;
+                    ConnectionErrorBuscar.Visibility = Visibility.Visible;
+                });
                 ex.Log();
+                return;
             }
 
             Deployment.Current.Dispatcher.BeginInvoke(() =>
@@ -352,6 +360,10 @@ namespace GuiaTBAWP.Views.Ruta
                         });
                     }
                     _results = true;
+                    _navHistory.Clear();
+                    _navHistory.Push(0);
+                    _navHistory.Push(1);
+                    _navHistory.Push(2);
                     PivotControl.SelectedIndex = 3;
                 }
                 else
@@ -400,6 +412,11 @@ namespace GuiaTBAWP.Views.Ruta
                 PivotControl.SelectedIndex = _navHistory.Peek();
             });
             e.Cancel = true;
+        }
+
+        private void Resultados_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 

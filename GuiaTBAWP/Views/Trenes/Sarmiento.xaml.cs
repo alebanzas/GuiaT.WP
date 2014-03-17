@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using GuiaTBA.Common;
@@ -60,8 +61,13 @@ namespace GuiaTBAWP.Views.Trenes
         {
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
+                var e = new List<LiveTrenItemModel>(model.Estaciones);
                 //TEV_Actualizacion.Text = model.Actualizacion.ToUpdateDateTime();
-                var estaciones = model.Estaciones.ToArray();
+                for (var i = 0; i < 16 - model.Estaciones.Count; i++)
+                {
+                    e.Add(new LiveTrenItemModel());
+                }
+                var estaciones = e.ToArray();
 
                 TEV_0_1.Text = GetTimeStringIda(estaciones[0]);
 
@@ -111,33 +117,41 @@ namespace GuiaTBAWP.Views.Trenes
             });
         }
 
-        private static string GetTimeStringIda(LiveTrenItemModel estaciones)
+        private static string GetTimeStringIda(LiveTrenItemModel estacion)
         {
-            if (estaciones.Ida1 == -1 && estaciones.Ida2 == -1)
+            if (string.IsNullOrWhiteSpace(estacion.Nombre))
+            {
+                return "información no disponible";
+            }
+            if (estacion.Ida1 == -1 && estacion.Ida2 == -1)
             {
                 return "no hay servicios";
             }
 
             var i = "prox. a Moreno en ";
-            i += (estaciones.Ida1 == 0 ? "andén" : string.Format("{0} min", estaciones.Ida1));
-            if (estaciones.Ida2 == -1) return i;
-            if (estaciones.Ida2 != 0)
-                i += string.Format(" y en {0} min", estaciones.Ida2);
+            i += (estacion.Ida1 == 0 ? "andén" : string.Format("{0} min", estacion.Ida1));
+            if (estacion.Ida2 == -1) return i;
+            if (estacion.Ida2 != 0)
+                i += string.Format(" y en {0} min", estacion.Ida2);
             return i;
         }
 
-        private static string GetTimeStringVuelta(LiveTrenItemModel estaciones)
+        private static string GetTimeStringVuelta(LiveTrenItemModel estacion)
         {
-            if (estaciones.Vuelta1 == -1 && estaciones.Vuelta2 == -1)
+            if (string.IsNullOrWhiteSpace(estacion.Nombre))
+            {
+                return "información no disponible";
+            }
+            if (estacion.Vuelta1 == -1 && estacion.Vuelta2 == -1)
             {
                 return "no hay servicios";
             }
 
             var i = "prox. a Once en ";
-            i += (estaciones.Vuelta1 == 0 ? "andén" : string.Format("{0} min", estaciones.Vuelta1));
-            if (estaciones.Vuelta2 == -1) return i;
-            if (estaciones.Vuelta2 != 0)
-                i += string.Format(" y en {0} min", estaciones.Vuelta2);
+            i += (estacion.Vuelta1 == 0 ? "andén" : string.Format("{0} min", estacion.Vuelta1));
+            if (estacion.Vuelta2 == -1) return i;
+            if (estacion.Vuelta2 != 0)
+                i += string.Format(" y en {0} min", estacion.Vuelta2);
             return i;
         }
 

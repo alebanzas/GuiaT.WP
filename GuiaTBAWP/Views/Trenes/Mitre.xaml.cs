@@ -130,33 +130,41 @@ namespace GuiaTBAWP.Views.Trenes
             });
         }
 
-        private static string GetTimeStringIda(LiveTrenItemModel estaciones)
+        private static string GetTimeStringIda(LiveTrenItemModel estacion)
         {
-            if (estaciones.Ida1 == -1 && estaciones.Ida2 == -1)
+            if (string.IsNullOrWhiteSpace(estacion.Nombre))
+            {
+                return "información no disponible";
+            }
+            if (estacion.Ida1 == -1 && estacion.Ida2 == -1)
             {
                 return "no hay servicios";
             }
 
             var i = "prox. a Tigre en ";
-            i += (estaciones.Ida1 == 0 ? "andén" : string.Format("{0} min", estaciones.Ida1));
-            if (estaciones.Ida2 == -1) return i;
-            if (estaciones.Ida2 != 0)
-                i += string.Format(" y en {0} min", estaciones.Ida2);
+            i += (estacion.Ida1 == 0 ? "andén" : string.Format("{0} min", estacion.Ida1));
+            if (estacion.Ida2 == -1) return i;
+            if (estacion.Ida2 != 0)
+                i += string.Format(" y en {0} min", estacion.Ida2);
             return i;
         }
 
-        private static string GetTimeStringVuelta(LiveTrenItemModel estaciones)
+        private static string GetTimeStringVuelta(LiveTrenItemModel estacion)
         {
-            if (estaciones.Vuelta1 == -1 && estaciones.Vuelta2 == -1)
+            if (string.IsNullOrWhiteSpace(estacion.Nombre))
+            {
+                return "información no disponible";
+            }
+            if (estacion.Vuelta1 == -1 && estacion.Vuelta2 == -1)
             {
                 return "no hay servicios";
             }
 
             var i = "prox. a Retiro en ";
-            i += (estaciones.Vuelta1 == 0 ? "andén" : string.Format("{0} min", estaciones.Vuelta1));
-            if (estaciones.Vuelta2 == -1) return i;
-            if(estaciones.Vuelta2 != 0)
-                i += string.Format(" y en {0} min", estaciones.Vuelta2);
+            i += (estacion.Vuelta1 == 0 ? "andén" : string.Format("{0} min", estacion.Vuelta1));
+            if (estacion.Vuelta2 == -1) return i;
+            if(estacion.Vuelta2 != 0)
+                i += string.Format(" y en {0} min", estacion.Vuelta2);
             return i;
         }
 

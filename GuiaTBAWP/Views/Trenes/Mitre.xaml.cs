@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using GuiaTBA.Common;
@@ -70,8 +71,13 @@ namespace GuiaTBAWP.Views.Trenes
         {
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
+                var e = new List<LiveTrenItemModel>(model.Estaciones);
                 //TEV_Actualizacion.Text = model.Actualizacion.ToUpdateDateTime();
-                var estaciones = model.Estaciones.ToArray();
+                for (var i = 0; i < 17 - model.Estaciones.Count; i++)
+                {
+                    e.Add(new LiveTrenItemModel());
+                }
+                var estaciones = e.ToArray();
                 
                 TEV_0_1.Text = GetTimeStringIda(estaciones[0]);
 

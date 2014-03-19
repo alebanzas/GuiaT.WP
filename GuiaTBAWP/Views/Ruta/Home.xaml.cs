@@ -13,10 +13,12 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Helpers;
+using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
 using GuiaTBAWP.Commons.ViewModels;
 using GuiaTBAWP.Extensions;
 using GuiaTBAWP.Models;
+using GuiaTBAWP.Views.Colectivos;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
@@ -26,6 +28,7 @@ namespace GuiaTBAWP.Views.Ruta
 {
     public partial class Home : PhoneApplicationPage
     {
+        private GetColectivoMapService _getColectivoMapService;
         private GeocodeQuery _geoQo;
         private GeocodeQuery _geoQd;
         private GeoCoordinate _origen;
@@ -46,7 +49,8 @@ namespace GuiaTBAWP.Views.Ruta
             
             DataContext = ViewModel;
             Loaded += (sender, args) =>
-                {
+            {
+                    _getColectivoMapService = new GetColectivoMapService();
                     _navHistory = new Stack<int>(); 
                     _navHistory.Push(0);
                     _geoQo = new GeocodeQuery();
@@ -97,6 +101,7 @@ namespace GuiaTBAWP.Views.Ruta
             _geoQo.SearchTerm = TxtBuscarOrigen.Text;
             _geoQo.MaxResultCount = 200;
             _geoQo.QueryAsync();
+            BtnBuscarOrigen.IsEnabled = false;
             ViewModel.BusquedaOrigen.Clear(); 
             MiMapaOrigen.Layers.Clear();
             NoResultsOrigen.Visibility = Visibility.Collapsed;
@@ -117,6 +122,7 @@ namespace GuiaTBAWP.Views.Ruta
             _geoQd.SearchTerm = TxtBuscarDestino.Text;
             _geoQd.MaxResultCount = 200;
             _geoQd.QueryAsync();
+            BtnBuscarDestino.IsEnabled = false;
             MiMapaDestino.Layers.Clear();
             ViewModel.BusquedaDestino.Clear();
             NoResultsDestino.Visibility = Visibility.Collapsed;
@@ -127,6 +133,7 @@ namespace GuiaTBAWP.Views.Ruta
         {
             var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
             LoadingOrigen.Visibility = Visibility.Collapsed;
+            BtnBuscarOrigen.IsEnabled = true;
 
             if (list.Any())
             {
@@ -163,6 +170,7 @@ namespace GuiaTBAWP.Views.Ruta
         {
             var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
             LoadingDestino.Visibility = Visibility.Collapsed;
+            BtnBuscarDestino.IsEnabled = true;
 
             if (list.Any())
             {
@@ -203,7 +211,7 @@ namespace GuiaTBAWP.Views.Ruta
             if (r == null) return;
 
             BtnBuscar.IsEnabled = true;
-            TxtOrigen.Text = string.Format("{0}, {1}", r.Nombre.Split('.')[1], r.Detalles);
+            TxtOrigen.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
 
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaOrigen.Center = point;
@@ -219,7 +227,7 @@ namespace GuiaTBAWP.Views.Ruta
             if (r == null) return;
 
             BtnBuscar.IsEnabled = true;
-            TxtDestino.Text = string.Format("{0}, {1}", r.Nombre.Split('.')[1], r.Detalles);
+            TxtDestino.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
 
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaDestino.Center = point;
@@ -416,7 +424,39 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void Resultados_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var list = sender as ListBox;
+            if (list == null) return;
+            var item = list.SelectedItem as ColectivoItemViewModel;
+            if (item == null) return;
+
+            App.MapViewModel.Reset();
+            _getColectivoMapService.SuccessFunc = () =>
+            {
+                App.MapViewModel.AddElement(new MapReference
+                {
+                    Checked = true,
+                    Nombre = "Origen"
+                }, new MapOverlay
+                {
+                    GeoCoordinate = _origen,
+                    ContentTemplate = Application.Current.Resources["locationPushpinTemplate"] as DataTemplate,
+                });
+                App.MapViewModel.AddElement(new MapReference
+                {
+                    Checked = true,
+                    Nombre = "Destino"
+                }, new MapOverlay
+                {
+                    GeoCoordinate = _destino,
+                    ContentTemplate = Application.Current.Resources["locationPushpinTemplate"] as DataTemplate,
+                });
+                NavigationService.Navigate(new Uri("/Views/Mapa.xaml", UriKind.Relative));
+                return 0;
+            };
+            _getColectivoMapService.GetColectivo(item.Id);
             
+            //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
+            list.SelectedIndex = -1;
         }
     }
 

@@ -53,7 +53,8 @@ namespace GuiaTBAWP.Views
             }
             foreach (var mapOverlay in App.MapViewModel.Pushpins.Where(x => x.Key.Checked).Select(x => x.Value).SelectMany(pushpin => pushpin))
             {
-                mapOverlay.ContentTemplate = Application.Current.Resources["Pushpin"] as DataTemplate;
+                if(mapOverlay.ContentTemplate == null)
+                    mapOverlay.ContentTemplate = Application.Current.Resources["Pushpin"] as DataTemplate;
                 mapOverlay.PositionOrigin = new Point(0,1);
                 _puntosLayer.Add(mapOverlay);
             }

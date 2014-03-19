@@ -1,3 +1,5 @@
+using System.Windows.Media;
+
 namespace GuiaTBAWP.Commons.Models
 {
     public class MapReference
@@ -7,5 +9,7 @@ namespace GuiaTBAWP.Commons.Models
         public string Nombre { get; set; }
 
         public bool Checked { get; set; }
+
+        public SolidColorBrush Color { get; set; }
     }
 }

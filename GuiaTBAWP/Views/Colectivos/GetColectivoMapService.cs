@@ -101,10 +101,11 @@ namespace GuiaTBAWP.Views.Colectivos
                 for (int index = 0; index < ls.Count; index++)
                 {
                     TransporteViewModel transporteViewModel = ls[index];
+                    Color randomColor = GetRandomColor(index);
                     var routeLine = new MapPolyline
                     {
                         Path = new GeoCoordinateCollection(),
-                        StrokeColor = GetRandomColor(index),
+                        StrokeColor = randomColor,
                         StrokeThickness = 5.0,
                     };
 
@@ -112,7 +113,7 @@ namespace GuiaTBAWP.Views.Colectivos
                     {
                         routeLine.Path.Add(new GeoCoordinate(location.Y, location.X));
                     }
-                    App.MapViewModel.AddElement(new MapReference { Nombre = transporteViewModel.Nombre }, routeLine);
+                    App.MapViewModel.AddElement(new MapReference { Nombre = transporteViewModel.Nombre, Color = new SolidColorBrush(randomColor), }, routeLine);
                 }
 
                 SuccessFunc();

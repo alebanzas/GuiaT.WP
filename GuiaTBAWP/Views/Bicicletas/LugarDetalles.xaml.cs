@@ -39,7 +39,8 @@ namespace GuiaTBAWP.Views.Bicicletas
             var nuevoLugar = new MapOverlay
                 {
                     Content = _bicicletaEstacion.Nombre,
-                    GeoCoordinate = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud)
+                    GeoCoordinate = new GeoCoordinate(_bicicletaEstacion.Latitud, _bicicletaEstacion.Longitud),
+                    ContentTemplate = Application.Current.Resources["Pushpin"] as DataTemplate,
                 };
             var defaultLayer = new MapLayer();
             defaultLayer.Clear();

@@ -25,9 +25,9 @@ namespace GuiaTBAWP.Views.Colectivos
                 if (listBox.SelectedItem == null) return;
 
                 var bus = ((Bus)e.AddedItems[0]).Title.Split(' ')[1];
-
-                var uri = new Uri(String.Format("/Views/Colectivos/Mapa.xaml?linea={0}", bus), UriKind.Relative);
+                var uri = new Uri(String.Format("/Views/Colectivos/Detalle.xaml?id={0}", bus), UriKind.Relative);
                 NavigationService.Navigate(uri);
+
                 listBox.SelectedItem = null;
             }
             catch (Exception) {}

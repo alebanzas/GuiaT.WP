@@ -36,7 +36,7 @@
 					<TextBlock Margin="0" Text="horarios" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubtePrecio">
-					<TextBlock Margin="0" Text="precio" />
+					<TextBlock Margin="0" Text="tarifas" />
                 </Button>
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_SubteMapa">
 					<TextBlock Margin="0" Text="la red" />

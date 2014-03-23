@@ -425,7 +425,8 @@ namespace GuiaTBAWP.Views.Ruta
                     _navHistory.Push(0);
                     _navHistory.Push(1);
                     _navHistory.Push(2);
-                    PivotControl.SelectedIndex = 3;
+                    _navHistory.Push(3);
+                    PivotControl.SelectedIndex = 4;
                 }
                 else
                 {
@@ -445,11 +446,11 @@ namespace GuiaTBAWP.Views.Ruta
             var pivot = sender as Pivot;
             if (pivot == null) return;
 
-            if (!_results && pivot.SelectedIndex == 3)
+            if (!_results && pivot.SelectedIndex == 4)
             {
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    pivot.SelectedIndex = 2; 
+                    pivot.SelectedIndex = 3; 
                 });
                 return;
             }
@@ -464,12 +465,13 @@ namespace GuiaTBAWP.Views.Ruta
         
         protected override void OnBackKeyPress(CancelEventArgs e)
         {
-            if (PivotControl.SelectedIndex != 3 && PivotControl.SelectedIndex != _navHistory.Peek())
+            if (PivotControl.SelectedIndex != 4 && PivotControl.SelectedIndex != _navHistory.Peek())
             {
                 _navHistory.Clear();
                 _navHistory.Push(0);
                 _navHistory.Push(1);
                 _navHistory.Push(2);
+                _navHistory.Push(3);
             }
 
             if (!_navHistory.Any()) return;
@@ -518,6 +520,11 @@ namespace GuiaTBAWP.Views.Ruta
             
             //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
             list.SelectedIndex = -1;
+        }
+
+        private void ButtonComentarios_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Comments.xaml", UriKind.Relative));
         }
     }
 

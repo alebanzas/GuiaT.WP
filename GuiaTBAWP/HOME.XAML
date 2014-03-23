@@ -218,8 +218,6 @@
                             Próximamente: 
                             <LineBreak />
                             Frecuencias y horarios de todas las líneas de trenes.
-                            <LineBreak />
-                            Armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
                             <LineBreak /><LineBreak />
                             2.3 (próximamente): Horarios de Tren Urquiza, Belgrano Norte y Belgrano Sur. Estado del transito en tiempo real y estacionamientos. Suscripción a información de vuelos.
                             <LineBreak /><LineBreak />
@@ -229,6 +227,8 @@
                             <LineBreak /><LineBreak />
                             2.0 (20-02-2014): Mejoras visuales, cambio de logo.
                             <LineBreak /><LineBreak />
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap">
                             1.7.1 (10-02-2014): Actualización horario subtes.
                             <LineBreak /><LineBreak />
                             1.7 (5-02-2014): Mapa de ciclovias, mapa de red de trenes y estaciones, mapa red de subte y estaciones.

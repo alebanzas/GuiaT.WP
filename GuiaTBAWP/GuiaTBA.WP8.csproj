@@ -495,6 +495,8 @@
     <Content Include="Images\Tiles\IconicTileSmall.png" />
     <Content Include="Images\Trenes\sentido-down.png" />
     <Content Include="Images\Trenes\sentido-up.png" />
+    <Content Include="Resources\Icons\feature.search.png" />
+    <Content Include="Resources\Icons\Location.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -585,6 +587,11 @@
       <Project>{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}</Project>
       <Name>GuiaTBA.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Trenes\BelgranoSur\" />
+    <Folder Include="Views\Trenes\Mitre\" />
+    <Folder Include="Views\Trenes\Roca\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

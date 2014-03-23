@@ -24,7 +24,12 @@
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <TextBox x:Name="TxtBuscarOrigen" Width="300"></TextBox>
-                        <Button x:Name="BtnBuscarOrigen" Click="ButtonBuscarOrigen_OnClick">BUSCAR</Button>
+                        <Button x:Name="BtnBuscarOrigen" Click="ButtonBuscarOrigen_OnClick">
+                            <Image Source="/Resources/Icons/feature.search.png" Stretch="UniformToFill"></Image>
+                        </Button>
+                        <Button x:Name="BtnGpsOrigen" Click="ButtonGpsOrigen_OnClick">
+                            <Image Source="/Resources/Icons/Location.png" Stretch="Uniform"></Image>
+                        </Button>
                     </StackPanel>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsOrigen">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingOrigen">Buscando...</TextBlock>
@@ -53,7 +58,12 @@
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <TextBox x:Name="TxtBuscarDestino" Width="300"></TextBox>
-                        <Button x:Name="BtnBuscarDestino" Click="ButtonBuscarDestino_OnClick">BUSCAR</Button>
+                        <Button x:Name="BtnBuscarDestino" Click="ButtonBuscarDestino_OnClick">
+                            <Image Source="/Resources/Icons/feature.search.png" Stretch="UniformToFill"></Image>
+                        </Button>
+                        <Button x:Name="BtnGpsDestino" Click="ButtonGpsDestino_OnClick">
+                            <Image Source="/Resources/Icons/Location.png" Stretch="Uniform"></Image>
+                        </Button>
                     </StackPanel>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsDestino">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingDestino">Buscando...</TextBlock>

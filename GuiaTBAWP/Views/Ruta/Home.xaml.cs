@@ -55,6 +55,8 @@ namespace GuiaTBAWP.Views.Ruta
                     _navHistory.Push(0);
                     _geoQo = new GeocodeQuery();
                     _geoQd = new GeocodeQuery();
+                    BtnGpsOrigen.IsEnabled = App.Configuration.IsLocationEnabled;
+                    BtnGpsDestino.IsEnabled = App.Configuration.IsLocationEnabled;
                     ViewModel.BusquedaOrigen.Clear();
                     ViewModel.BusquedaDestino.Clear();
                     TxtOrigen.Text = "Seleccione origen";
@@ -127,6 +129,52 @@ namespace GuiaTBAWP.Views.Ruta
             ViewModel.BusquedaDestino.Clear();
             NoResultsDestino.Visibility = Visibility.Collapsed;
             LoadingDestino.Visibility = Visibility.Visible;
+        }
+
+        private void ButtonGpsOrigen_OnClick(object sender, RoutedEventArgs e)
+        {
+            var currentPosition = PositionService.GetCurrentLocation();
+            if (currentPosition != null)
+            {
+                _origen = currentPosition.Location;
+                MiMapaOrigen.Layers.Clear();
+                MiMapaOrigen.Layers.Add(new MapLayer{ new MapOverlay
+                {
+                    GeoCoordinate = currentPosition.Location,
+                    ContentTemplate = Application.Current.Resources["locationPushpinTemplate"] as DataTemplate,
+                } });
+                MiMapaOrigen.Center = currentPosition.Location;
+                MiMapaOrigen.ZoomLevel = 15;
+                TxtBuscarOrigen.Text = "Mi Ubicación";
+                TxtOrigen.Text = "Mi Ubicación";
+            }
+            else
+            {
+                MessageBox.Show("No se pudo obtener la posición actual.");
+            }
+        }
+
+        private void ButtonGpsDestino_OnClick(object sender, RoutedEventArgs e)
+        {
+            var currentPosition = PositionService.GetCurrentLocation();
+            if (currentPosition != null)
+            {
+                _destino = currentPosition.Location;
+                MiMapaDestino.Layers.Clear();
+                MiMapaDestino.Layers.Add(new MapLayer{ new MapOverlay
+                {
+                    GeoCoordinate = currentPosition.Location,
+                    ContentTemplate = Application.Current.Resources["locationPushpinTemplate"] as DataTemplate,
+                } });
+                MiMapaDestino.Center = currentPosition.Location;
+                MiMapaDestino.ZoomLevel = 15;
+                TxtBuscarDestino.Text = "Mi Ubicación";
+                TxtDestino.Text = "Mi Ubicación";
+            }
+            else
+            {
+                MessageBox.Show("No se pudo obtener la posición actual.");
+            }
         }
 
         private void geoQ_OrigenQueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
@@ -411,6 +459,14 @@ namespace GuiaTBAWP.Views.Ruta
         
         protected override void OnBackKeyPress(CancelEventArgs e)
         {
+            if (PivotControl.SelectedIndex == 3 && !_navHistory.Any())
+            {
+                _navHistory.Clear();
+                _navHistory.Push(0);
+                _navHistory.Push(1);
+                _navHistory.Push(2);
+            }
+
             if (!_navHistory.Any()) return;
             _navHistory.Pop();
             if (!_navHistory.Any()) return;

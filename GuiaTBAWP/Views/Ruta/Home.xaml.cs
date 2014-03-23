@@ -36,6 +36,7 @@ namespace GuiaTBAWP.Views.Ruta
         private WebRequest _httpReq;
         private bool _results;
         private Stack<int> _navHistory;
+        private bool Initialized { get; set; }
 
         private static RuteBusquedaViewModel _viewModel = new RuteBusquedaViewModel();
         public static RuteBusquedaViewModel ViewModel
@@ -50,26 +51,30 @@ namespace GuiaTBAWP.Views.Ruta
             DataContext = ViewModel;
             Loaded += (sender, args) =>
             {
-                    _getColectivoMapService = new GetColectivoMapService();
-                    _navHistory = new Stack<int>(); 
-                    _navHistory.Push(0);
-                    _geoQo = new GeocodeQuery();
-                    _geoQd = new GeocodeQuery();
-                    BtnGpsOrigen.IsEnabled = App.Configuration.IsLocationEnabled;
-                    BtnGpsDestino.IsEnabled = App.Configuration.IsLocationEnabled;
-                    ViewModel.BusquedaOrigen.Clear();
-                    ViewModel.BusquedaDestino.Clear();
-                    TxtOrigen.Text = "Seleccione origen";
-                    TxtOrigen.Tap += (o, eventArgs) =>
-                    {
-                        PivotControl.SelectedIndex = 0;
-                    };
-                    TxtDestino.Text = "Seleccione destino";
-                    TxtDestino.Tap += (o, eventArgs) =>
-                    {
-                        PivotControl.SelectedIndex = 1;
-                    };
+                _geoQo = new GeocodeQuery();
+                _geoQd = new GeocodeQuery();
+
+                if (Initialized) return;
+
+                Initialized = true;
+                _getColectivoMapService = new GetColectivoMapService();
+                _navHistory = new Stack<int>();
+                _navHistory.Push(0);
+                BtnGpsOrigen.IsEnabled = App.Configuration.IsLocationEnabled;
+                BtnGpsDestino.IsEnabled = App.Configuration.IsLocationEnabled;
+                ViewModel.BusquedaOrigen.Clear();
+                ViewModel.BusquedaDestino.Clear();
+                TxtOrigen.Text = "Seleccione origen";
+                TxtOrigen.Tap += (o, eventArgs) =>
+                {
+                    PivotControl.SelectedIndex = 0;
                 };
+                TxtDestino.Text = "Seleccione destino";
+                TxtDestino.Tap += (o, eventArgs) =>
+                {
+                    PivotControl.SelectedIndex = 1;
+                };
+            };
             Unloaded += (sender, args) =>
                 {
                     if (_httpReq != null)
@@ -459,7 +464,7 @@ namespace GuiaTBAWP.Views.Ruta
         
         protected override void OnBackKeyPress(CancelEventArgs e)
         {
-            if (PivotControl.SelectedIndex == 3 && !_navHistory.Any())
+            if (PivotControl.SelectedIndex != 3 && PivotControl.SelectedIndex != _navHistory.Peek())
             {
                 _navHistory.Clear();
                 _navHistory.Push(0);

@@ -36,6 +36,9 @@
                 <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ColectivosCercanos">
                     <TextBlock Margin="0" Text="cercanos" />
                 </Button>
+                <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_ColectivosRuta">
+                    <TextBlock Margin="0" Text="¿qué me deja?" />
+                </Button>
                 <TextBlock Margin="24,20,0,0">Buscador (beta):</TextBlock>
                 <StackPanel Orientation="Horizontal" Margin="14,0">
                     <toolkit:AutoCompleteBox x:Name="AcBox" InputScope="Number" Height="80" Width="320" Tap="AcBox_OnGotFocus" KeyUp="AcBox_OnKeyUp"/>
@@ -44,9 +47,6 @@
                 <StackPanel Margin="24,20,0,0" Height="30">
                     <TextBlock x:Name="NoResults" Visibility="Collapsed" Foreground="Yellow">No hay resultados.</TextBlock>
                 </StackPanel>
-                <TextBlock Margin="24,20,0,0" TextWrapping="Wrap">
-                    Próximamente podrás armar tus recorridos en base a un origen y destino, combinando colectivos, trenes, y subte.
-                </TextBlock>
             </StackPanel>
 
             <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/7840937683"

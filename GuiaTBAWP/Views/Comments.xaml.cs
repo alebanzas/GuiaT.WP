@@ -70,7 +70,7 @@ namespace GuiaTBAWP.Views
             {
                 Date = DateTime.UtcNow,
                 InstallationId = App.Configuration.InstallationId.ToString(),
-                ErrorDetail = Exception.ToString(),
+                ErrorDetail = null,
                 UserMessage = TxtComentario.Text,
             };
 

@@ -74,6 +74,11 @@ namespace GuiaTBAWP.Views.Colectivos
             NavigationService.Navigate(new Uri("/Views/Colectivos/Cercanos.xaml", UriKind.Relative));
         }
 
+        private void Button_Click_ColectivosRuta(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Ruta/Home.xaml", UriKind.Relative));
+        }
+
         private void AcBox_OnGotFocus(object sender, RoutedEventArgs e)
         {
             AcBox.Text = string.Empty;

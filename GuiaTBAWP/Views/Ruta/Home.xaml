@@ -18,8 +18,29 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <phone:Pivot x:Name="PivotControl" Title="¿QUÉ ME DEJA?" SelectionChanged="PivotControl_OnSelectionChanged">
+        <phone:Pivot x:Name="PivotControl" Title="¿QUÉ ME DEJA? (beta)" SelectionChanged="PivotControl_OnSelectionChanged">
 
+            <phone:PivotItem Header="inicio">
+                <StackPanel Margin="12,20,0,0">
+                    <TextBlock TextWrapping="Wrap" FontSize="22">
+                        ¿Qué me deja? (beta) encuentra la forma de viajar desde un origen hacia un destino.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="22" Margin="0,30,0,0">
+                        Actualmente encuentra el recorrido sin combinacion de transporte.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="22" Margin="0,30,0,0">
+                        Proximamente podras combinar medios de transporte, elegir el tipo, calcular el precio del viaje, etc.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="26" Margin="0,30,0,0">
+                        Ayudanos a mejorar:
+                    </TextBlock>
+                    <Button Click="ButtonComentarios_OnClick">ENVIA TUS COMENTARIOS.</Button>
+                    <TextBlock TextWrapping="Wrap" FontSize="26" Margin="0,80,0,0">
+                        Para empezar, desliza la pantalla hacia la izquierda.
+                    </TextBlock>
+                </StackPanel>
+            </phone:PivotItem>
+            
             <phone:PivotItem Header="origen">
                 <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">

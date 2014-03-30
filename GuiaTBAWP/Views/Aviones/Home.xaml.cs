@@ -11,6 +11,9 @@ namespace GuiaTBAWP.Views.Aviones
             InitializeComponent();
 
             StatusChecker.Check("Aviones");
+
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
         }
 
         //AEROPARQUE

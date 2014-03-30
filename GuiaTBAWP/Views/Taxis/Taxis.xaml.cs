@@ -11,6 +11,9 @@ namespace GuiaTBAWP.Views.Taxis
             InitializeComponent();
 
             StatusChecker.Check("Taxis");
+
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
         }
 
         private void Button_Click_Tarifas(object sender, RoutedEventArgs e)

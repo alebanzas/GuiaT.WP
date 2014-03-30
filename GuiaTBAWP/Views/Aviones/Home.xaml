@@ -4,10 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
+    xmlns:ads="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -69,10 +68,10 @@
         </phone:Panorama>
 
         <Grid HorizontalAlignment="Left" Grid.Row="1">
-            <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/3410738082"
-                          Format="Banner"
-                          Margin="0,0,0,0"
-                          VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
+            <ads:AdControl 
+                Name="MobFoxAdControl" 
+                Margin="0,0,0,0"
+                VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
 
         </Grid>
     </Grid>

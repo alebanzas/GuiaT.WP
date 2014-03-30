@@ -4,11 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
+    xmlns:ads="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -267,10 +266,10 @@
             </phone:PanoramaItem>
         </phone:Panorama>
 
-        <googleAds:AdView AdUnitID="ca-app-pub-4463374879380815/7197186882"
-                          Format="Banner"
-                          Margin="0,0,0,30"
-                          VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
+        <ads:AdControl 
+            Name="MobFoxAdControl" 
+            Margin="0,0,0,30"
+            VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>
@@ -280,9 +279,8 @@
 							  IsMenuEnabled="True"
 							  Opacity="0.7">
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="danos tus comentarios" Click="RateReview_Click"/>
-                <shell:ApplicationBarMenuItem Text="acerca de" Click="Acerca_Click"/>
-                <shell:ApplicationBarMenuItem Text="opciones" Click="Opciones_Click"/>
+                <shell:ApplicationBarMenuItem Text="danos tus comentarios" Click="ButtonComentarios_Click"/>
+                <shell:ApplicationBarMenuItem Text="califica la aplicación" Click="RateReview_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

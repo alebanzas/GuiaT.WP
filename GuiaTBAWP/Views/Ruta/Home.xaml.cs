@@ -22,6 +22,7 @@ using GuiaTBAWP.Views.Colectivos;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
+using Microsoft.Phone.Tasks;
 using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace GuiaTBAWP.Views.Ruta
@@ -425,8 +426,7 @@ namespace GuiaTBAWP.Views.Ruta
                     _navHistory.Push(0);
                     _navHistory.Push(1);
                     _navHistory.Push(2);
-                    _navHistory.Push(3);
-                    PivotControl.SelectedIndex = 4;
+                    PivotControl.SelectedIndex = 3;
                 }
                 else
                 {
@@ -446,11 +446,11 @@ namespace GuiaTBAWP.Views.Ruta
             var pivot = sender as Pivot;
             if (pivot == null) return;
 
-            if (!_results && pivot.SelectedIndex == 4)
+            if (!_results && pivot.SelectedIndex == 3)
             {
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    pivot.SelectedIndex = 3; 
+                    pivot.SelectedIndex = 2; 
                 });
                 return;
             }
@@ -471,7 +471,6 @@ namespace GuiaTBAWP.Views.Ruta
                 _navHistory.Push(0);
                 _navHistory.Push(1);
                 _navHistory.Push(2);
-                _navHistory.Push(3);
             }
 
             if (!_navHistory.Any()) return;
@@ -522,9 +521,36 @@ namespace GuiaTBAWP.Views.Ruta
             list.SelectedIndex = -1;
         }
 
-        private void ButtonComentarios_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonComentarios_Click(object sender, EventArgs eventArgs)
         {
             NavigationService.Navigate(new Uri("/Views/Comments.xaml", UriKind.Relative));
+        }
+
+        private void ButtonEmpezar_OnClick(object sender, RoutedEventArgs e)
+        {
+            StartPanel.Visibility = Visibility.Collapsed;
+            PivotControl.SelectedIndex = 0;
+        }
+
+        private void Opciones_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Opciones.xaml", UriKind.Relative));
+        }
+
+        private void Acerca_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/Acerca.xaml", UriKind.Relative));
+        }
+
+        private void RateReview_Click(object sender, EventArgs e)
+        {
+            ShowReviewTask();
+        }
+
+        private static void ShowReviewTask()
+        {
+            var marketplaceReviewTask = new MarketplaceReviewTask();
+            marketplaceReviewTask.Show();
         }
     }
 

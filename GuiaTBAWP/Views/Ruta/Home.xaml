@@ -85,7 +85,7 @@
 
         <StackPanel Height="150" VerticalAlignment="Top" Background="#10283a"></StackPanel>
 
-        <StackPanel x:Name="StartPanel" Margin="0,150,0,0" Background="#005C84" Canvas.ZIndex="2">
+        <StackPanel Visibility="Collapsed" x:Name="StartPanel" Margin="0,150,0,0" Background="#005C84" Canvas.ZIndex="2">
             <TextBlock TextWrapping="Wrap" FontSize="22" Margin="12,40,0,0">
                 ¿Qué me deja? (beta) encuentra la forma de viajar desde un origen hacia un destino.
             </TextBlock>
@@ -174,10 +174,16 @@
                     <TextBlock x:Name="TxtOrigen" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Seleccione origen</TextBlock>
                     <TextBlock Margin="12,30,0,0">Destino:</TextBlock>
                     <TextBlock x:Name="TxtDestino" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">Seleccione destino</TextBlock>
-                    <Button x:Name="BtnBuscar" Margin="0,30,0,0" Click="ButtonBusqueda_OnClick">¿QUÉ ME DEJA?</Button>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnBuscar" Margin="0,30,0,0" Click="ButtonBusqueda_OnClick" Width="350">¿QUÉ ME DEJA?</Button>
+                        <Button Margin="0,30,0,0" Click="ButtonSwap_OnClick" Width="100">
+                            <Image Source="/Resources/Icons/ApplicationBar/swap.png" Stretch="Uniform"></Image>
+                        </Button>
+                    </StackPanel>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="NoResultsBuscar">No hay resultados.</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="LoadingBuscar">Buscando...</TextBlock>
                     <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="ConnectionErrorBuscar">No hay conexión a la red.</TextBlock>
+                    <TextBlock Visibility="Collapsed" Margin="12,0,12,0" Opacity="0.7" Style="{StaticResource PhoneTextLargeStyle}" x:Name="SamePointsErrorBuscar">Origen y destino deben ser distintos.</TextBlock>
                 </StackPanel>
             </phone:PivotItem>
 

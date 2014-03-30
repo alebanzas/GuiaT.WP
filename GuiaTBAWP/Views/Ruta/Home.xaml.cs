@@ -53,7 +53,9 @@ namespace GuiaTBAWP.Views.Ruta
             Loaded += (sender, args) =>
             {
                 _geoQo = new GeocodeQuery();
+                _geoQo.QueryCompleted += geoQ_OrigenQueryCompleted;
                 _geoQd = new GeocodeQuery();
+                _geoQd.QueryCompleted += geoQ_DestinoQueryCompleted;
 
                 if (Initialized) return;
 
@@ -104,7 +106,6 @@ namespace GuiaTBAWP.Views.Ruta
                 _geoQo.CancelAsync();
             }
 
-            _geoQo.QueryCompleted += geoQ_OrigenQueryCompleted;
             _geoQo.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
             _geoQo.SearchTerm = TxtBuscarOrigen.Text;
             _geoQo.MaxResultCount = 200;
@@ -126,7 +127,6 @@ namespace GuiaTBAWP.Views.Ruta
             }
 
             _geoQd.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
-            _geoQd.QueryCompleted += geoQ_DestinoQueryCompleted;
             _geoQd.SearchTerm = TxtBuscarDestino.Text;
             _geoQd.MaxResultCount = 200;
             _geoQd.QueryAsync();
@@ -153,6 +153,7 @@ namespace GuiaTBAWP.Views.Ruta
                 MiMapaOrigen.ZoomLevel = 15;
                 TxtBuscarOrigen.Text = "Mi Ubicación";
                 TxtOrigen.Text = "Mi Ubicación";
+                BtnBuscar.IsEnabled = true;
             }
             else
             {
@@ -176,6 +177,7 @@ namespace GuiaTBAWP.Views.Ruta
                 MiMapaDestino.ZoomLevel = 15;
                 TxtBuscarDestino.Text = "Mi Ubicación";
                 TxtDestino.Text = "Mi Ubicación";
+                BtnBuscar.IsEnabled = true;
             }
             else
             {
@@ -551,6 +553,41 @@ namespace GuiaTBAWP.Views.Ruta
         {
             var marketplaceReviewTask = new MarketplaceReviewTask();
             marketplaceReviewTask.Show();
+        }
+
+        private void ButtonSwap_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (_origen == null && _destino == null) return;
+
+            if (_origen == null || _destino == null)
+            {
+                if (_origen == null)
+                {
+                    _origen = new GeoCoordinate(_destino.Latitude, _destino.Longitude);
+                    _destino = null;
+                    TxtOrigen.Text = TxtDestino.Text;
+                    TxtDestino.Text = "Seleccione destino";
+                    return;
+                }
+                if (_destino == null)
+                {
+                    _destino = new GeoCoordinate(_origen.Latitude, _origen.Longitude);
+                    _origen = null;
+                    TxtDestino.Text = TxtOrigen.Text;
+                    TxtOrigen.Text = "Seleccione origen";
+                    return;
+                }
+            }
+
+            var aux = new GeoCoordinate(_origen.Latitude, _origen.Longitude);
+            _origen = new GeoCoordinate(_destino.Latitude, _destino.Longitude);
+            _destino = aux;
+
+            var auxN = TxtOrigen.Text;
+            TxtOrigen.Text = TxtDestino.Text;
+            TxtDestino.Text = auxN;
+
+            BtnBuscar.IsEnabled = true;
         }
     }
 

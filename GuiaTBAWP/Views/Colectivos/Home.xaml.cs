@@ -17,6 +17,9 @@ namespace GuiaTBAWP.Views.Colectivos
 
             StatusChecker.Check("Colectivos");
 
+            MobFoxAdControl.PublisherID = App.Configuration.MobFoxID;
+            MobFoxAdControl.TestMode = App.Configuration.MobFoxInTestMode;
+
             AcBox.ItemsSource = DataColectivos.Repository.Select(x => x.Title);
             AcBox.FilterMode = AutoCompleteFilterMode.Contains;
             _getColectivoMapService = new GetColectivoMapService();

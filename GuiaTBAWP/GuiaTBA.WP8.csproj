@@ -495,6 +495,7 @@
     <Content Include="Images\Tiles\IconicTileSmall.png" />
     <Content Include="Images\Trenes\sentido-down.png" />
     <Content Include="Images\Trenes\sentido-up.png" />
+    <Content Include="Resources\Icons\ApplicationBar\swap.png" />
     <Content Include="Resources\Icons\feature.search.png" />
     <Content Include="Resources\Icons\Location.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />

@@ -90,10 +90,10 @@
                 ¿Qué me deja? (beta) encuentra la forma de viajar desde un origen hacia un destino.
             </TextBlock>
             <TextBlock TextWrapping="Wrap" FontSize="22" Margin="12,30,0,0">
-                Actualmente encuentra el recorrido sin combinacion de transporte.
+                Actualmente encuentra el recorrido sin combinación de transporte.
             </TextBlock>
             <TextBlock TextWrapping="Wrap" FontSize="22" Margin="12,30,0,0">
-                  Proximamente podras combinar medios de transporte, elegir el tipo, calcular el precio del viaje, etc.
+                  Próximamente podrás combinar medios de transporte, elegir el tipo, calcular el precio del viaje y tiempo con la información en tiempo real, etc.
             </TextBlock>
             <Button Height="100" Margin="12,100" Background="#005C84" Click="ButtonEmpezar_OnClick">EMPEZAR</Button>
         </StackPanel>

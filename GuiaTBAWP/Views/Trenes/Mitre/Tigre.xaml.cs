@@ -12,11 +12,11 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GuiaTBA.Common.Models;
 
-namespace GuiaTBAWP.Views.Trenes
+namespace GuiaTBAWP.Views.Trenes.Mitre
 {
-    public partial class Mitre : PhoneApplicationPage
+    public partial class Tigre : PhoneApplicationPage
     {
-        public Mitre()
+        public Tigre()
         {
             InitializeComponent();
 

@@ -109,24 +109,7 @@ namespace GuiaTBAWP.Views.Trenes.Mitre
                 TEV_9_2.Text = GetTimeStringIda(estaciones[9]);
 
                 TEV_10_1.Text = GetTimeStringVuelta(estaciones[10]);
-                TEV_10_2.Text = GetTimeStringIda(estaciones[10]);
 
-                TEV_11_1.Text = GetTimeStringVuelta(estaciones[11]);
-                TEV_11_2.Text = GetTimeStringIda(estaciones[11]);
-
-                TEV_12_1.Text = GetTimeStringVuelta(estaciones[12]);
-                TEV_12_2.Text = GetTimeStringIda(estaciones[12]);
-
-                TEV_13_1.Text = GetTimeStringVuelta(estaciones[13]);
-                TEV_13_2.Text = GetTimeStringIda(estaciones[13]);
-
-                TEV_14_1.Text = GetTimeStringVuelta(estaciones[14]);
-                TEV_14_2.Text = GetTimeStringIda(estaciones[14]);
-
-                TEV_15_1.Text = GetTimeStringVuelta(estaciones[15]);
-                TEV_15_2.Text = GetTimeStringIda(estaciones[15]);
-
-                TEV_16_1.Text = GetTimeStringVuelta(estaciones[16]);
             });
         }
 
@@ -141,7 +124,7 @@ namespace GuiaTBAWP.Views.Trenes.Mitre
                 return "no hay servicios";
             }
 
-            var i = "prox. a Tigre en ";
+            var i = "prox. a Mitre en ";
             i += (estacion.Ida1 == 0 ? "andén" : string.Format("{0} min", estacion.Ida1));
             if (estacion.Ida2 == -1) return i;
             if (estacion.Ida2 != 0)

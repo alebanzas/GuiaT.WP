@@ -25,7 +25,7 @@ namespace GuiaTBAWP.Views.Trenes
 
         private void Button_Click_Mitre(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/Trenes/Mitre.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Trenes/Mitre/Home.xaml", UriKind.Relative));
         }
 
         private void Button_Click_Roca(object sender, RoutedEventArgs e)

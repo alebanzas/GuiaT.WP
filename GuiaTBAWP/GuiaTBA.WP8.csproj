@@ -250,7 +250,13 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Trenes\Mitre.xaml.cs">
+    <Compile Include="Views\Trenes\Mitre\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mitre\Tigre.xaml.cs">
+      <DependentUpon>Tigre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Trenes\Mitre\Mitre.xaml.cs">
       <DependentUpon>Mitre.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Trenes\Roca.xaml.cs">
@@ -445,7 +451,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Trenes\Mitre.xaml">
+    <Page Include="Views\Trenes\Mitre\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre\Tigre.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre\Mitre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -592,7 +606,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Trenes\BelgranoSur\" />
-    <Folder Include="Views\Trenes\Mitre\" />
     <Folder Include="Views\Trenes\Roca\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

@@ -19,6 +19,20 @@
 
         <phone:Panorama Title="tren mitre" TitleTemplate="{StaticResource MediumPanoramaTitle}" VerticalAlignment="Top">
 
+            <phone:PanoramaItem>
+                <StackPanel Margin="0,30,0,0">
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Tigre">
+                        <TextBlock Margin="0" Text="tigre" />
+                    </Button>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_Mitre">
+                        <TextBlock Margin="0" Text="mitre" />
+                    </Button>
+                    <Button Height="80" BorderBrush="Transparent" HorizontalContentAlignment="Left" Click="Button_Click_JLSuarez">
+                        <TextBlock Margin="0" Text="jl suarez" />
+                    </Button>
+                </StackPanel>
+            </phone:PanoramaItem>
+            
             <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
                     <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">

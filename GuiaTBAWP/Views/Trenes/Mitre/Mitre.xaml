@@ -40,30 +40,30 @@
 
             <phone:PanoramaItem Header="ramal" HeaderTemplate="{StaticResource SmallHomePanoramaTitle}">
                 <ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,0">
+                    <StackPanel HorizontalAlignment="Left" Margin="12,0,0,30">
                         <TextBlock Margin="0,0,0,20" Style="{StaticResource PhoneTextLargeStyle}">Retiro - Bartolomé Mitre</TextBlock>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#2290CF" HorizontalAlignment="Left" Height="1060" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#2290CF" HorizontalAlignment="Left" Height="1600" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
-                                <StackPanel Margin="0,-1075,0,0">
-                                    <Ellipse Margin="0,3,0,103" Width="30" Height="30" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,103" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
-                                    <Ellipse Margin="0,3,0,73" Width="24" Height="24" Fill="White" />
+                                <StackPanel Margin="0,-1615,0,0">
+                                    <Ellipse Margin="0,0,0,180" Width="30" Height="30" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" RenderTransformOrigin="0.554,0.427" />
+                                    <Ellipse Margin="0,3,0,163" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
+                                    <Ellipse Margin="0,3,0,123" Width="24" Height="24" Fill="White" />
                                     <Ellipse Margin="0,0,0,0" Width="30" Height="30" Fill="White" />
                                 </StackPanel>
                             </StackPanel>
 
                             <StackPanel Margin="12,0,0,0" Width="370">
-                                <StackPanel Height="130">
+                                <StackPanel Height="210">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Retiro</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="150">
@@ -80,76 +80,143 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-                                <StackPanel Height="100">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">3 de Febrero</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                        <TextBlock x:Name="TEV_0_1" />
+                                    </StackPanel>
+
+                                </StackPanel>
+                                <StackPanel Height="150">
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">3 de Febrero</TextBlock>
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_2_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_2_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="130">
+                                <StackPanel Height="190">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ministro Carranza</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
-                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel Margin="0,10,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_1_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_1_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Colegiales</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_3_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_3_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Belgrano R.</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_4_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_4_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Coghland</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_5_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_5_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Saavedra</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_6_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_6_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Juan B. Justo</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_7_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_7_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Florida</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_8_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_8_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Dr. Cetrángolo</TextBlock>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_9_1" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Images/Trenes/sentido-down.png" Height="20" Width="20" Margin="5"></Image>
+                                            <TextBlock x:Name="TEV_9_2" />
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel Height="100">
+                                <StackPanel Height="150">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Bartolomé Mitre</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
-                                        </StackPanel>
+                                        <StackPanel Margin="0,10,0,0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="/Images/Trenes/sentido-up.png" Height="20" Width="20" Margin="5"></Image>
+                                                <TextBlock x:Name="TEV_10_1" />
+                                            </StackPanel>
+                                            </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
@@ -671,5 +738,5 @@
             <shell:ApplicationBarIconButton IconUri="/Resources/Icons/ApplicationBar/appbar.feature.pin.rest.png" Text="Anclar" Click="Pin_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
-    
+
 </phone:PhoneApplicationPage>

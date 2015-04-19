@@ -4,9 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using GuiaTBAWP.Commons.Helpers;
 
-namespace GuiaTBAWP.Commons.Extensions
+namespace GuiaTBA.Common.Extensions
 {
     public static class StringExtensions
     {

@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using GuiaTBA.Common.Extensions;
 using GuiaTBAWP.Commons.Extensions;
 
 namespace GuiaTBAWP.Commons.ViewModels

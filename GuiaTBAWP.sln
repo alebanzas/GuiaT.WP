@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows Phone 8", "Windows Phone 8", "{7498A4E5-6D32-48B6-978E-8188CB7E12C1}"
 EndProject
@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBA.WP8", "GuiaTBAWP\Gu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAWP.Tests", "GuiaTBAWP.Tests\GuiaTBAWP.Tests.csproj", "{06DFD589-222B-45D4-98CE-79B354432366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBAAN", "GuiaTBAAN\GuiaTBAAN.csproj", "{A8ABCE74-A336-440D-81A0-3EE60F669AAC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaTBA.Common", "GuiaTBA.Common\GuiaTBA.Common.csproj", "{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows 10", "Windows 10", "{1C583575-D652-40D4-8A8F-2E56A4043C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,16 +51,6 @@ Global
 		{06DFD589-222B-45D4-98CE-79B354432366}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06DFD589-222B-45D4-98CE-79B354432366}.Release|ARM.ActiveCfg = Release|Any CPU
 		{06DFD589-222B-45D4-98CE-79B354432366}.Release|x86.ActiveCfg = Release|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Release|ARM.ActiveCfg = Release|Any CPU
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC}.Release|x86.ActiveCfg = Release|Any CPU
 		{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A488C2F3-FC8B-4E49-A40F-A7C2F8007697}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -75,6 +65,5 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{465F0BD9-E9BF-4AA1-A985-200948E54805} = {7498A4E5-6D32-48B6-978E-8188CB7E12C1}
-		{A8ABCE74-A336-440D-81A0-3EE60F669AAC} = {748D998E-787A-4D12-B4C8-DF31DF4561AB}
 	EndGlobalSection
 EndGlobal

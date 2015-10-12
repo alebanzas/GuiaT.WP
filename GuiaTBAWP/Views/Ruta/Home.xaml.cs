@@ -30,8 +30,8 @@ namespace GuiaTBAWP.Views.Ruta
     public partial class Home : PhoneApplicationPage
     {
         private GetColectivoMapService _getColectivoMapService;
-        private GeocodeQuery _geoQo;
-        private GeocodeQuery _geoQd;
+        //private GeocodeQuery _geoQo;
+        //private GeocodeQuery _geoQd;
         private GeoCoordinate _origen;
         private GeoCoordinate _destino;
         private WebRequest _httpReq;
@@ -52,10 +52,10 @@ namespace GuiaTBAWP.Views.Ruta
             DataContext = ViewModel;
             Loaded += (sender, args) =>
             {
-                _geoQo = new GeocodeQuery();
-                _geoQo.QueryCompleted += geoQ_OrigenQueryCompleted;
-                _geoQd = new GeocodeQuery();
-                _geoQd.QueryCompleted += geoQ_DestinoQueryCompleted;
+                //_geoQo = new GeocodeQuery();
+                //_geoQo.QueryCompleted += geoQ_OrigenQueryCompleted;
+                //_geoQd = new GeocodeQuery();
+                //_geoQd.QueryCompleted += geoQ_DestinoQueryCompleted;
 
                 if (Initialized) return;
 
@@ -78,21 +78,21 @@ namespace GuiaTBAWP.Views.Ruta
                     PivotControl.SelectedIndex = 1;
                 };
             };
-            Unloaded += (sender, args) =>
-                {
-                    if (_httpReq != null)
-                        _httpReq.Abort();
-                    if (_geoQo != null)
-                    {
-                        _geoQo.CancelAsync();
-                        _geoQo.Dispose();
-                    }
-                    if (_geoQd != null)
-                    {
-                        _geoQd.CancelAsync();
-                        _geoQd.Dispose();
-                    }
-                };
+            //Unloaded += (sender, args) =>
+            //    {
+            //        if (_httpReq != null)
+            //            _httpReq.Abort();
+            //        if (_geoQo != null)
+            //        {
+            //            _geoQo.CancelAsync();
+            //            _geoQo.Dispose();
+            //        }
+            //        if (_geoQd != null)
+            //        {
+            //            _geoQd.CancelAsync();
+            //            _geoQd.Dispose();
+            //        }
+            //    };
             
             StatusChecker.Check("HomeRuta");
         }
@@ -101,40 +101,141 @@ namespace GuiaTBAWP.Views.Ruta
         {
             if (string.IsNullOrWhiteSpace(TxtBuscarOrigen.Text)) return;
 
-            if (_geoQo.IsBusy)
-            {
-                _geoQo.CancelAsync();
-            }
 
-            _geoQo.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
-            _geoQo.SearchTerm = TxtBuscarOrigen.Text;
-            _geoQo.MaxResultCount = 200;
-            _geoQo.QueryAsync();
+            var client = new HttpClient();
+            var param = new Dictionary<string, object> 
+            {
+                {"id", TxtBuscarOrigen.Text},
+            };
+            _httpReq = client.Get(("/api/geocoder").ToApiCallUri(param));
+            _httpReq.BeginGetResponse(HTTPWebRequestBuscarOrigenCallBack, _httpReq);
+
+
+            //if (_geoQo.IsBusy)
+            //{
+            //    _geoQo.CancelAsync();
+            //}
+            //
+            //_geoQo.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
+            //_geoQo.SearchTerm = TxtBuscarOrigen.Text;
+            //_geoQo.MaxResultCount = 200;
+            //_geoQo.QueryAsync();
             BtnBuscarOrigen.IsEnabled = false;
             ViewModel.BusquedaOrigen.Clear(); 
             MiMapaOrigen.Layers.Clear();
             NoResultsOrigen.Visibility = Visibility.Collapsed;
             LoadingOrigen.Visibility = Visibility.Visible;
         }
-
         private void ButtonBuscarDestino_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtBuscarDestino.Text)) return;
 
-            if (_geoQd.IsBusy)
+            var client = new HttpClient();
+            var param = new Dictionary<string, object>
             {
-                _geoQd.CancelAsync();
-            }
+                {"id", TxtBuscarDestino.Text},
+            };
+            _httpReq = client.Get(("/api/geocoder").ToApiCallUri(param));
+            _httpReq.BeginGetResponse(HTTPWebRequestBuscarDestinoCallBack, _httpReq);
 
-            _geoQd.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
-            _geoQd.SearchTerm = TxtBuscarDestino.Text;
-            _geoQd.MaxResultCount = 200;
-            _geoQd.QueryAsync();
+            //if (_geoQd.IsBusy)
+            //{
+            //    _geoQd.CancelAsync();
+            //}
+
+            //_geoQd.GeoCoordinate = new GeoCoordinate(-34.603577, -58.381802, 1000);
+            //_geoQd.SearchTerm = TxtBuscarDestino.Text;
+            //_geoQd.MaxResultCount = 200;
+            //_geoQd.QueryAsync();
             BtnBuscarDestino.IsEnabled = false;
             MiMapaDestino.Layers.Clear();
             ViewModel.BusquedaDestino.Clear();
             NoResultsDestino.Visibility = Visibility.Collapsed;
             LoadingDestino.Visibility = Visibility.Visible;
+        }
+
+        private void HTTPWebRequestBuscarOrigenCallBack(IAsyncResult result)
+        {
+
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                try
+                {
+                    LoadingOrigen.Visibility = Visibility.Collapsed;
+                    BtnBuscarOrigen.IsEnabled = true;
+
+                    var httpRequest = (HttpWebRequest)result.AsyncState;
+                    var response = httpRequest.EndGetResponse(result);
+                    var stream = response.GetResponseStream();
+                    var serializer = new DataContractJsonSerializer(typeof(List<GeocoderResult>));
+                    var list = (List<GeocoderResult>)serializer.ReadObject(stream);
+
+                    if (!list.Any())
+                    {
+                        NoResultsOrigen.Visibility = Visibility.Visible;
+                        return;
+                    }
+
+                    var mapLayer = new MapLayer();
+                    for (var index = 0; index < list.Count; index++)
+                    {
+                        var geocoderResult = list[index];
+                        ViewModel.BusquedaOrigen.Add(geocoderResult);
+                        mapLayer.Add(GetMapOverlay((index+1).ToString(CultureInfo.InvariantCulture),
+                            new GeoCoordinate(geocoderResult.X, geocoderResult.Y)));
+                    }
+
+                    MiMapaOrigen.Layers.Add(mapLayer);
+                    SetMapView(MiMapaOrigen, mapLayer);
+
+                }
+                catch (Exception ex)
+                {
+                    ex.Log();
+                }
+            });
+        }
+
+        private void HTTPWebRequestBuscarDestinoCallBack(IAsyncResult result)
+        {
+
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+                try
+                {
+                    LoadingDestino.Visibility = Visibility.Collapsed;
+                    BtnBuscarDestino.IsEnabled = true;
+
+                    var httpRequest = (HttpWebRequest)result.AsyncState;
+                    var response = httpRequest.EndGetResponse(result);
+                    var stream = response.GetResponseStream();
+                    var serializer = new DataContractJsonSerializer(typeof(List<GeocoderResult>));
+                    var list = (List<GeocoderResult>)serializer.ReadObject(stream);
+
+                    if (!list.Any())
+                    {
+                        NoResultsDestino.Visibility = Visibility.Visible;
+                        return;
+                    }
+
+                    var mapLayer = new MapLayer();
+                    for (var index = 0; index < list.Count; index++)
+                    {
+                        var geocoderResult = list[index];
+                        ViewModel.BusquedaDestino.Add(geocoderResult);
+                        mapLayer.Add(GetMapOverlay((index + 1).ToString(CultureInfo.InvariantCulture),
+                            new GeoCoordinate(geocoderResult.X, geocoderResult.Y)));
+                    }
+
+                    MiMapaDestino.Layers.Add(mapLayer);
+                    SetMapView(MiMapaDestino, mapLayer);
+
+                }
+                catch (Exception ex)
+                {
+                    ex.Log();
+                }
+            });
         }
 
         private void ButtonGpsOrigen_OnClick(object sender, RoutedEventArgs e)
@@ -187,7 +288,8 @@ namespace GuiaTBAWP.Views.Ruta
 
         private void geoQ_OrigenQueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
-            var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
+            //var list = e.Result.Where(x => x.Information.Address.Neighborhood.Equals("Gran Buenos Aires")).ToList();
+            var list = e.Result.ToList();
             LoadingOrigen.Visibility = Visibility.Collapsed;
             BtnBuscarOrigen.IsEnabled = true;
 
@@ -267,7 +369,8 @@ namespace GuiaTBAWP.Views.Ruta
             if (r == null) return;
 
             BtnBuscar.IsEnabled = true;
-            TxtOrigen.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
+            //TxtOrigen.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
+            TxtOrigen.Text = r.Nombre;
 
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaOrigen.Center = point;
@@ -283,7 +386,8 @@ namespace GuiaTBAWP.Views.Ruta
             if (r == null) return;
 
             BtnBuscar.IsEnabled = true;
-            TxtDestino.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
+            //TxtDestino.Text = string.Format("{0}, {1}", string.Join(".", r.Nombre.Split('.').Skip(1)), r.Detalles);
+            TxtDestino.Text = r.Nombre;
 
             var point = new GeoCoordinate(r.X, r.Y);
             MiMapaDestino.Center = point;

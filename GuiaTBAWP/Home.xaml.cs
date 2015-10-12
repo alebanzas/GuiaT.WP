@@ -12,7 +12,7 @@ namespace GuiaTBAWP
         {
             InitializeComponent();
 
-            TxtVersion.Text = string.Format("Versión {0}", App.Configuration.Version);
+            TxtVersion.Text = $"Versión {App.Configuration.Version}";
 
             StatusChecker.Check("Home");
 

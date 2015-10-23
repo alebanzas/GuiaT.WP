@@ -12,7 +12,7 @@ namespace GuiaTBAWP
     public partial class App
     {
         private const string AppName = "GUIATBAWP";
-        private const string AppVersion = "2.2.1.8";
+        private const string AppVersion = "2.2.2.8";
 
         public static ApplicationConfiguration Configuration { get; set; }
 

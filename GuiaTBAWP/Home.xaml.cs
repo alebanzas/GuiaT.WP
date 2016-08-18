@@ -3,10 +3,11 @@ using System.Windows;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Tasks;
+using Microsoft.Azure.Engagement;
 
 namespace GuiaTBAWP
 {
-    public partial class Home
+    public partial class Home : EngagementPage
     {
         public Home()
         {

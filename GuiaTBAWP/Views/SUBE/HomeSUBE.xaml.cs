@@ -4,7 +4,7 @@ using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.SUBE
 {
-    public partial class HomeSUBE : PhoneApplicationPage
+    public partial class HomeSUBE
     {
         public HomeSUBE()
         {

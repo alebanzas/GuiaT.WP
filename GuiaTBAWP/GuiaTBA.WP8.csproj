@@ -109,6 +109,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\PhoneThemeManager.2.0\lib\windowsphone8\JeffWilcox.PhoneThemeManager.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Azure.Engagement.EngagementAgent.Portable, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftAzure.MobileEngagement.3.4.0\lib\wp80\Microsoft.Azure.Engagement.EngagementAgent.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Engagement.EngagementAgent.WP, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftAzure.MobileEngagement.3.4.0\lib\wp80\Microsoft.Azure.Engagement.EngagementAgent.WP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Engagement.EngagementReach.Portable, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftAzure.MobileEngagement.3.4.0\lib\wp80\Microsoft.Azure.Engagement.EngagementReach.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Engagement.EngagementReach.WP, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftAzure.MobileEngagement.3.4.0\lib\wp80\Microsoft.Azure.Engagement.EngagementReach.WP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
@@ -510,6 +526,12 @@
     <Content Include="Images\Tiles\IconicTileSmall.png" />
     <Content Include="Images\Trenes\sentido-down.png" />
     <Content Include="Images\Trenes\sentido-up.png" />
+    <Content Include="Resources\EngagementConfiguration.xml" />
+    <Content Include="Resources\EngagementIconCancel.png" />
+    <Content Include="Resources\EngagementIconCloseDark.png" />
+    <Content Include="Resources\EngagementIconCloseLight.png" />
+    <Content Include="Resources\EngagementIconNotification.png" />
+    <Content Include="Resources\EngagementIconOk.png" />
     <Content Include="Resources\Icons\ApplicationBar\swap.png" />
     <Content Include="Resources\Icons\feature.search.png" />
     <Content Include="Resources\Icons\Location.png" />

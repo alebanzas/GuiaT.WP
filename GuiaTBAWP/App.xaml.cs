@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
+using Windows.ApplicationModel.Activation;
 using GuiaTBA.Common;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Azure.Engagement;
 
 namespace GuiaTBAWP
 {
     public partial class App
     {
         private const string AppName = "GUIATBAWP";
-        private const string AppVersion = "2.2.2.8";
+        private const string AppVersion = "2.2.3.8";
 
         public static ApplicationConfiguration Configuration { get; set; }
 
@@ -48,6 +50,8 @@ namespace GuiaTBAWP
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            EngagementAgent.Instance.Init();
+
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
 
@@ -62,6 +66,8 @@ namespace GuiaTBAWP
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            EngagementAgent.Instance.Init();
+
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
 

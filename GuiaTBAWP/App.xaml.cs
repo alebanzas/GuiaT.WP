@@ -66,7 +66,7 @@ namespace GuiaTBAWP
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            EngagementAgent.Instance.Init();
+            EngagementAgent.Instance.OnActivated(e);
 
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);

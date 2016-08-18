@@ -4,7 +4,7 @@ using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.Bicicletas
 {
-    public partial class Bicicletas : PhoneApplicationPage
+    public partial class Bicicletas
     {
         public Bicicletas()
         {

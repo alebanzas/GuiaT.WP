@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Navigation;
 using Windows.ApplicationModel.Activation;
@@ -50,7 +51,9 @@ namespace GuiaTBAWP
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            Debug.WriteLine(EngagementAgent.Instance.GetDeviceId());
             EngagementAgent.Instance.Init();
+            EngagementReach.Instance.Init();
 
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
@@ -67,6 +70,7 @@ namespace GuiaTBAWP
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             EngagementAgent.Instance.OnActivated(e);
+            EngagementReach.Instance.OnActivated(e);
 
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);

@@ -27,7 +27,7 @@ using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace GuiaTBAWP.Views.Ruta
 {
-    public partial class Home : PhoneApplicationPage
+    public partial class Home
     {
         private GetColectivoMapService _getColectivoMapService;
         //private GeocodeQuery _geoQo;

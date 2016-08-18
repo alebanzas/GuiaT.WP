@@ -10,7 +10,7 @@ using Microsoft.Phone.Maps.Toolkit;
 
 namespace GuiaTBAWP.Views.Subtes
 {
-    public partial class Subtes : PhoneApplicationPage
+    public partial class Subtes
     {
         public Subtes()
         {

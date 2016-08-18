@@ -4,7 +4,7 @@ using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.Trenes
 {
-    public partial class Trenes : PhoneApplicationPage
+    public partial class Trenes
     {
         public Trenes()
         {

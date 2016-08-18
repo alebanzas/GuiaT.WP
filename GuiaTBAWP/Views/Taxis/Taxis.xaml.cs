@@ -4,7 +4,7 @@ using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.Taxis
 {
-    public partial class Taxis : PhoneApplicationPage
+    public partial class Taxis
     {
         public Taxis()
         {

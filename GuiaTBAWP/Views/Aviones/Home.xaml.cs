@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows;
+using Microsoft.Azure.Engagement;
 using Microsoft.Phone.Controls;
 
 namespace GuiaTBAWP.Views.Aviones
 {
-    public partial class Home : PhoneApplicationPage
+    public partial class Home : EngagementPage
     {
         public Home()
         {

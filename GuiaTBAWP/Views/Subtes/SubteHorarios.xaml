@@ -36,8 +36,8 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Plaza de Mayo</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -47,30 +47,30 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde San Pedrito</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
 					<StackPanel Orientation="Horizontal" Height="90">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Plaza de Mayo</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:56</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:56</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:56</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:56</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:36</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde San Pedrito</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:28</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:28</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:28</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:28</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:08</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -91,8 +91,8 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Leandro N. Alem</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -102,30 +102,30 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Juan Manuel de Rosas</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Leandro N. Alem</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:49</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:49</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:49</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:49</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:28</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Juan Manuel de Rosas</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:21</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:21</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:21</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:21</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -146,8 +146,8 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Retiro</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -157,30 +157,30 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Constitución</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Retiro</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:47</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:47</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:47</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:47</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:23</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Constitución</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:45</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:45</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:45</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:45</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:21</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -201,8 +201,8 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Catedral</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -212,30 +212,30 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Congreso de Tucumán</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Catedral</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:51</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:51</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:51</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:51</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:28</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Congreso de Tucumán</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:24</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:24</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:24</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:24</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -256,8 +256,8 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Bolívar</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -267,30 +267,30 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Plaza de los Virreyes</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Bolívar</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:59</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:59</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:59</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:59</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:35</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Plaza de los Virreyes</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 22:27</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 22:27</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 22:27</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 22:27</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:03</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -303,16 +303,16 @@
                         <StackPanel Width="315">
                             <TextBlock Style="{StaticResource PhoneTextLargeStyle}">viaje completo</TextBlock>
                         </StackPanel>
-                        <TextBlock Height="90" Style="{StaticResource PhoneTextExtraLargeStyle}">13 min</TextBlock>
+                        <TextBlock Height="90" Style="{StaticResource PhoneTextExtraLargeStyle}">18 min</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
                             <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Primer tren</TextBlock>
-                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Corrientes</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Las Heras</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -322,31 +322,31 @@
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Hospitales</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:00</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Corrientes</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 23:02</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 23:00</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 23:02</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 23:02</TextBlock>
                             <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:30</TextBlock>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="290">
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                             <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Hospitales</TextBlock>
                         </StackPanel>
                         <StackPanel Width="160" Height="90">
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 23:06</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 23:00</TextBlock>
-                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:30</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 23:22</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 23:22</TextBlock>
+                            <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 22:50</TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -368,8 +368,8 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Intendente Saguier</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:30</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:30</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:30</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:30</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:00</TextBlock>
                             </StackPanel>
                         </StackPanel>
@@ -379,30 +379,30 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Centro Cívico Lugano</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 06:01</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 06:01</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 06:01</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 06:01</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:31</TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="290">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Intendente Saguier</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 21:00</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 21:07</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 21:00</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 21:07</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 21:03</TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="290">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Centro Cívico Lugano</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 21:30</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 21:34</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 21:30</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 21:34</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 21:29</TextBlock>
                             </StackPanel>
                         </StackPanel>
@@ -426,8 +426,8 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Intendente Saguier</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 05:37</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 05:39</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 05:37</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 05:39</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:09</TextBlock>
                             </StackPanel>
                         </StackPanel>
@@ -437,30 +437,30 @@
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde General Savio</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 06:06</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 06:08</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 06:06</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 06:08</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 08:38</TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="290">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde Intendente Saguier</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 20:56</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 20:58</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 20:56</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 20:58</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 20:53</TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Width="290">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Ultimo tren</TextBlock>
+                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Último tren</TextBlock>
                                 <TextBlock Style="{StaticResource PhoneTextSmallStyle}">desde General Savio</TextBlock>
                             </StackPanel>
                             <StackPanel Width="160" Height="90">
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Habiles: 21:23</TextBlock>
-                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sabado: 21:26</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Hábiles: 21:23</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Sábado: 21:26</TextBlock>
                                 <TextBlock HorizontalAlignment="Right" Style="{StaticResource PhoneTextSmallStyle}">Domingo: 21:22</TextBlock>
                             </StackPanel>
                         </StackPanel>

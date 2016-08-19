@@ -68,58 +68,6 @@
                         <TextBlock Style="{StaticResource PhoneTextSmallStyle}">*Se podrá utilizar todos los días, sin limite de horario y viajes.</TextBlock>
                     </StackPanel>
 
-                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}" Margin="12,0,0,20">SubtePass (1 viaje)</TextBlock>
-                    <StackPanel Margin="0,0,0,50">
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="300">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">Subte</TextBlock>
-                            </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 5,00</TextBlock>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="300">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">premetro</TextBlock>
-                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">sin combinación</TextBlock>
-                            </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 2,00</TextBlock>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="300">
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">premetro</TextBlock>
-                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">con combinación</TextBlock>
-                            </StackPanel>
-                            <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 5,00</TextBlock>
-                        </StackPanel>
-
-                    </StackPanel>
-
-                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">SubtePass con descuento</TextBlock>
-                    <StackPanel Margin="0,0,0,50">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Width="200" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">30 viajes</TextBlock>
-                            <StackPanel>
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 126</TextBlock>
-                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">$ 4,20 por viaje</TextBlock>
-                            </StackPanel>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Width="200" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">40 viajes</TextBlock>
-                            <StackPanel>
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 157</TextBlock>
-                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">$ 3,92 por viaje</TextBlock>
-                            </StackPanel>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Width="200" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">50 viajes</TextBlock>
-                            <StackPanel>
-                                <TextBlock Style="{StaticResource PhoneTextLargeStyle}">$ 184</TextBlock>
-                                <TextBlock Style="{StaticResource PhoneTextSmallStyle}">$ 3,68 por viaje</TextBlock>
-                            </StackPanel>
-                        </StackPanel>
-                        <TextBlock Style="{StaticResource PhoneTextSmallStyle}">*30 días a partir del primer uso</TextBlock>
-                        <TextBlock Style="{StaticResource PhoneTextSmallStyle}">*Se podrá utilizar todos los días, sin límite de horario.</TextBlock>
-                    </StackPanel>
-
                     <StackPanel HorizontalAlignment="Right" Margin="0,20,0,0">
                         <TextBlock Style="{StaticResource PhoneTextLargeStyle}">formas de pago</TextBlock>
                         <Grid HorizontalAlignment="Left" Width="450">

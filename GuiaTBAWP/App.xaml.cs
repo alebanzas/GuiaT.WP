@@ -77,17 +77,11 @@ namespace GuiaTBAWP
                 channel = new HttpNotificationChannel("MyPushChannel");
             }
 
-            channel.ChannelUriUpdated += new EventHandler<NotificationChannelUriEventArgs>(async (o, args) =>
+            channel.ChannelUriUpdated += async (o, args) =>
             {
                 var hub = new NotificationHub("guiatbanh", "Endpoint=sb://guiatbanhns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=7iaqH211eYZCT2AHHueK5y6POSjVsBQnSovubTyIAhg=");
-                var result = await hub.RegisterNativeAsync(args.ChannelUri.ToString());
-
-                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    MessageBox.Show("Registration :" + result.RegistrationId, "Registered", MessageBoxButton.OK);
-                });
-            });
-
+                await hub.RegisterNativeAsync(args.ChannelUri.ToString());
+            };
             channel.Open();
             channel.BindToShellToast();
         }

@@ -9,6 +9,8 @@ using GuiaTBAWP.Commons.Helpers;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Azure.Engagement;
+using Microsoft.Phone.Notification;
+using Microsoft.WindowsAzure.Messaging;
 
 namespace GuiaTBAWP
 {
@@ -55,6 +57,8 @@ namespace GuiaTBAWP
             EngagementAgent.Instance.Init();
             EngagementReach.Instance.Init();
 
+            InitPushNotification();
+
             Configuration = Config.Get<ApplicationConfiguration>() ?? new ApplicationConfiguration(AppName, AppVersion);
             Configuration.SetInitialConfiguration(AppName, AppVersion);
 
@@ -63,6 +67,29 @@ namespace GuiaTBAWP
                 PositionService.Initialize();
                 ProgressBar.Initialize();
             });
+        }
+
+        private void InitPushNotification()
+        {
+            var channel = HttpNotificationChannel.Find("MyPushChannel");
+            if (channel == null)
+            {
+                channel = new HttpNotificationChannel("MyPushChannel");
+            }
+
+            channel.ChannelUriUpdated += new EventHandler<NotificationChannelUriEventArgs>(async (o, args) =>
+            {
+                var hub = new NotificationHub("guiatbanh", "Endpoint=sb://guiatbanhns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=7iaqH211eYZCT2AHHueK5y6POSjVsBQnSovubTyIAhg=");
+                var result = await hub.RegisterNativeAsync(args.ChannelUri.ToString());
+
+                System.Windows.Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    MessageBox.Show("Registration :" + result.RegistrationId, "Registered", MessageBoxButton.OK);
+                });
+            });
+
+            channel.Open();
+            channel.BindToShellToast();
         }
 
         // Code to execute when the application is activated (brought to foreground)

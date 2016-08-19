@@ -334,7 +334,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasteur</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pasteur - Amia</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
                                         </StackPanel>
@@ -677,9 +677,11 @@
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Pueyrredón</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <StackPanel Orientation="Horizontal" Width="175">
+                                        <StackPanel Orientation="Horizontal" Width="225">
+                                            <Image Source="/Images/Subtes/lineaH.png" Height="30" Width="30" Margin="5"></Image>
+                                            <TextBlock TextWrapping="Wrap" Width="180">consultar personal en estación</TextBlock>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                        <StackPanel Orientation="Horizontal" Width="125" FlowDirection="RightToLeft">
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
@@ -995,8 +997,8 @@
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                             <StackPanel Width="30" Margin="0,5,0,0">
                                 <StackPanel Margin="0,0,0,0">
-                                    <Rectangle Margin="0,15,0,0" Fill="#999999" HorizontalAlignment="Left" Height="520" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
-                                    <Rectangle Margin="0,0,0,0" Fill="#FFD601" HorizontalAlignment="Left" Height="915" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                    <Rectangle Margin="0,15,0,0" Fill="#999999" HorizontalAlignment="Left" Height="130" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
+                                    <Rectangle Margin="0,0,0,0" Fill="#FFD601" HorizontalAlignment="Left" Height="1305" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                     <Rectangle Margin="0,0,0,0" Fill="#999999" HorizontalAlignment="Left" Height="130" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="30"/>
                                 </StackPanel>
                                 <StackPanel Margin="0,-1580,0,0">
@@ -1022,15 +1024,36 @@
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Las Heras</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175"></StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Santa Fe</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                                        <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                        <StackPanel Orientation="Horizontal" Width="225">
+                                            <Image Source="/Images/Subtes/lineaD.png" Height="30" Width="30" Margin="5"></Image>
+                                            <TextBlock TextWrapping="Wrap" Width="180">consultar personal en estación</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="125" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Córdoba</TextBlock>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                                        <StackPanel Orientation="Horizontal" Width="175"></StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="175" FlowDirection="RightToLeft">
+                                            <Image Source="/Images/Subtes/sanitarios.png" Height="30" Width="30" Margin="5"></Image>
+                                            <Image Source="/Images/Subtes/accesibilidad.png" Height="30" Width="30" Margin="5"></Image>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
                                     <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Corrientes</TextBlock>
@@ -1045,7 +1068,7 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Height="130">
-                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once</TextBlock>
+                                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}">Once - 30 de Diciembre</TextBlock>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                                         <StackPanel Orientation="Horizontal" Width="175">
                                             <Image Source="/Images/Subtes/lineaA.png" Height="30" Width="30" Margin="5"></Image>

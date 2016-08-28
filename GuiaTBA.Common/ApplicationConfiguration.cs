@@ -132,6 +132,8 @@ namespace GuiaTBAWP.Commons
             var trenService = new TrenDataService();
             trenService.UpdateStatus(trenesStatusModel);
 
+            BicicletaEstacionDC.Destroy();
+
             RadioTaxiDC.Destroy();
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("eee11015-d3aa-4f34-9ac4-223149a7d254"), Nombre = "24 Horas", Telefono = "4523-2222", Url = "http://www.radiotaxi24.com.ar/" });
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("195911c6-8706-4f8b-a413-abf98a3e2810"), Nombre = "Ale", Telefono = "4983-3800", Url = null });

@@ -273,6 +273,9 @@
     <Compile Include="Views\Trenes\Mitre\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Trenes\Mitre\JLSuarez.xaml.cs">
+      <DependentUpon>JLSuarez.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Trenes\Mitre\Tigre.xaml.cs">
       <DependentUpon>Tigre.xaml</DependentUpon>
     </Compile>
@@ -472,6 +475,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Trenes\Mitre\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Trenes\Mitre\JLSuarez.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

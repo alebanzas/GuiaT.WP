@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using GuiaTBAWP.Commons.Models;
 
-namespace GuiaTBAWP.Models
+namespace GuiaTBA.Common.Models
 {
     public static class BicicletasStatusModelExtensions
     {
@@ -18,6 +17,8 @@ namespace GuiaTBAWP.Models
                     Nombre = x.Nombre,
                     Estado = x.Estado, 
                     Cantidad = x.Cantidad,
+                    CantidadEspacios = x.CantidadEspacios,
+                    ExternalId = x.ExternalId,
                 });
         }
     }
@@ -34,10 +35,7 @@ namespace GuiaTBAWP.Models
 
         public DateTime Actualizacion { get; set; }
 
-        public string ActualizacionStr
-        {
-            get { return string.Format("{0} {1}", Actualizacion.ToLongDateString(), Actualizacion.ToLongTimeString()); }
-        }
+        public string ActualizacionStr => $"{Actualizacion.ToLongDateString()} {Actualizacion.ToLongTimeString()}";
     }
 
     public class BicicletaEstacion
@@ -53,5 +51,9 @@ namespace GuiaTBAWP.Models
         public string Horario { get; set; }
 
         public int Cantidad { get; set; }
+
+        public int CantidadEspacios { get; set; }
+
+        public int ExternalId { get; set; }
     }
 }

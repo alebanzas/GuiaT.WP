@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
 using GuiaTBA.Common.Extensions;
+using GuiaTBA.Common.Models;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Extensions;
 using GuiaTBAWP.Commons.Models;
@@ -23,10 +24,7 @@ namespace GuiaTBAWP.Views.Bicicletas
     public partial class Estaciones
     {
         private static EstacionesStatusViewModel _viewModel = new EstacionesStatusViewModel();
-        public static EstacionesStatusViewModel ViewModel
-        {
-            get { return _viewModel ?? (_viewModel = new EstacionesStatusViewModel()); }
-        }
+        public static EstacionesStatusViewModel ViewModel => _viewModel ?? (_viewModel = new EstacionesStatusViewModel());
 
         WebRequest _httpReq;
 
@@ -37,14 +35,14 @@ namespace GuiaTBAWP.Views.Bicicletas
             Loaded += Page_Loaded;
             Unloaded += (sender, args) =>
             {
-                if (_httpReq != null)
-                    _httpReq.Abort();
+                _httpReq?.Abort();
             };
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", App.Configuration.UltimaActualizacionBicicletas.ToUpdateDateTime());
+            ViewModel.Actualizacion =
+                $"Actualizado hace {App.Configuration.UltimaActualizacionBicicletas.ToUpdateDateTime()}.";
 
             MostrarLugares();
             
@@ -131,10 +129,16 @@ namespace GuiaTBAWP.Views.Bicicletas
                     var estacion = BicicletaEstacionDC.Current.Estaciones.FirstOrDefault(x => x.Equals(ll));
                     if (estacion != null)
                     {
+                        if ((new Guid()).Equals(estacion.Id))
+                        {
+                            estacion.Id = Guid.NewGuid();
+                        }
                         estacion.Cantidad = ll.Cantidad;
                         estacion.Horario = ll.Horario;
                         estacion.Estado = ll.Estado;
                         estacion.Distance = ll.Distance;
+                        estacion.CantidadEspacios = ll.CantidadEspacios;
+                        estacion.Distance = App.Configuration.IsLocationEnabled ? GetMeasureString(ll) : string.Empty;
                     }
                 }
                 else
@@ -146,7 +150,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             App.Configuration.UltimaActualizacionBicicletas = l.Actualizacion;
             
-            ViewModel.Actualizacion = string.Format("Actualizado hace {0}.", l.Actualizacion.ToUpdateDateTime());
+            ViewModel.Actualizacion = $"Actualizado hace {l.Actualizacion.ToUpdateDateTime()}.";
 
             MostrarLugares();
             EndRequest();
@@ -180,7 +184,7 @@ namespace GuiaTBAWP.Views.Bicicletas
 
             var bicicletaEstacion = (BicicletaEstacionTable)listBox.SelectedItem;
 
-            var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", bicicletaEstacion.Id), UriKind.Relative);
+            var uri = new Uri($"/Views/Bicicletas/LugarDetalles.xaml?id={bicicletaEstacion.Id}", UriKind.Relative);
             NavigationService.Navigate(uri);
 
             //Vuelvo el indice del item seleccionado a -1 para que pueda hacer tap en el mismo item y navegarlo
@@ -204,14 +208,13 @@ namespace GuiaTBAWP.Views.Bicicletas
 
         private void PinToStart_Click(object sender, RoutedEventArgs e)
         {
-            if (List.ItemContainerGenerator == null) return;
-            var selectedListBoxItem = List.ItemContainerGenerator.ContainerFromItem(((MenuItem)sender).DataContext) as ListBoxItem;
+            var selectedListBoxItem = List.ItemContainerGenerator?.ContainerFromItem(((MenuItem)sender).DataContext) as ListBoxItem;
             if (selectedListBoxItem == null) return;
             var selectedIndex = List.ItemContainerGenerator.IndexFromContainer(selectedListBoxItem);
             
             var item = (BicicletaEstacionTable)List.Items[selectedIndex];
-            var uri = new Uri(string.Format("/Views/Bicicletas/LugarDetalles.xaml?id={0}", item.Id), UriKind.Relative);
-            TileManager.Set(uri, string.Format("Estación {0}", item.Nombre.ToLowerInvariant()), new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
+            var uri = new Uri($"/Views/Bicicletas/LugarDetalles.xaml?id={item.Id}", UriKind.Relative);
+            TileManager.Set(uri, $"Estación {item.Nombre.ToLowerInvariant()}", new Uri("/Images/Home/bicicletas.png", UriKind.Relative));
         }
     }
 
@@ -250,13 +253,10 @@ namespace GuiaTBAWP.Views.Bicicletas
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String propertyName)
+        private void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            var handler = PropertyChanged;
+            handler?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
     }

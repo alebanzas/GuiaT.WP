@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
+using GuiaTBA.Common.Models;
 using GuiaTBAWP.Commons;
 using GuiaTBAWP.Commons.Models;
 using Microsoft.Phone.Controls;

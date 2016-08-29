@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Device.Location;
+using GuiaTBA.Common.Models;
 using GuiaTBAWP.Commons.Helpers;
 using GuiaTBAWP.Commons.Models;
 using GuiaTBAWP.Commons.Services;
-using GuiaTBAWP.Helpers;
 using GuiaTBAWP.Models;
 
-namespace GuiaTBAWP.Commons
+namespace GuiaTBA.Common
 {
     public class ApplicationConfiguration
     {
@@ -133,6 +133,89 @@ namespace GuiaTBAWP.Commons
             trenService.UpdateStatus(trenesStatusModel);
 
             BicicletaEstacionDC.Destroy();
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 1, Latitud = -34.583271, Longitud = -58.392579, Nombre = "Facultad de Derecho" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 2, Latitud = -34.592966, Longitud = -58.374379, Nombre = "Retiro" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 3, Latitud = -34.611376, Longitud = -58.369009, Nombre = "Aduana" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 4, Latitud = -34.601714, Longitud = -58.369202, Nombre = "Plaza Roma" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 5, Latitud = -34.580563, Longitud = -58.420605, Nombre = "Plaza Italia" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 6, Latitud = -34.628233, Longitud = -58.369606, Nombre = "Parque Lezama" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 7, Latitud = -34.605997, Longitud = -58.38098, Nombre = "Obelisco " });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 8, Latitud = -34.609733, Longitud = -58.389253, Nombre = "Congreso" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 9, Latitud = -34.58529, Longitud = -58.407598, Nombre = "Parque Las Heras" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 10, Latitud = -34.616106, Longitud = -58.366017, Nombre = "Madero UCA" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 11, Latitud = -34.601343, Longitud = -58.38525, Nombre = "Tribunales" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 12, Latitud = -34.592583, Longitud = -58.388965, Nombre = "Plaza Vicente López" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 13, Latitud = -34.609881, Longitud = -58.406346, Nombre = "Once" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 14, Latitud = -34.578112, Longitud = -58.426416, Nombre = "Pacífico" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 16, Latitud = -34.610158, Longitud = -58.374814, Nombre = "Legislatura" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 17, Latitud = -34.606463, Longitud = -58.418705, Nombre = "Plaza Almagro" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 18, Latitud = -34.61769, Longitud = -58.380473, Nombre = "Independencia" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 19, Latitud = -34.595699, Longitud = -58.377203, Nombre = "Plaza San Martín" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 20, Latitud = -34.579996, Longitud = -58.441615, Nombre = "Distrito Audiovisual" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 21, Latitud = -34.640112, Longitud = -58.406552, Nombre = "Parque Patricios" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 22, Latitud = -34.594087, Longitud = -58.382662, Nombre = "Arenales" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 23, Latitud = -34.60014, Longitud = -58.379679, Nombre = "Suipacha" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 24, Latitud = -34.610656, Longitud = -58.380845, Nombre = "Alsina" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 25, Latitud = -34.589746, Longitud = -58.4165, Nombre = "Plaza Güemes" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 26, Latitud = -34.600525, Longitud = -58.363645, Nombre = "Juana Manso" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 27, Latitud = -34.599506, Longitud = -58.389902, Nombre = "Montevideo" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 28, Latitud = -34.622995, Longitud = -58.41258, Nombre = "Plaza Boedo" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 29, Latitud = -34.607873, Longitud = -58.43354, Nombre = "Parque Centenario " });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 30, Latitud = -34.590586, Longitud = -58.397434, Nombre = "Peña" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 31, Latitud = -34.603173, Longitud = -58.439635, Nombre = "Padilla" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 32, Latitud = -34.607559, Longitud = -58.3736, Nombre = "Catedral" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 33, Latitud = -34.597211, Longitud = -58.398887, Nombre = "Facultad de Medicina" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 34, Latitud = -34.599097, Longitud = -58.37416, Nombre = "Galerías Pacífico" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 35, Latitud = -34.596146, Longitud = -58.371839, Nombre = "Ingeniero Butty" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 36, Latitud = -34.604841, Longitud = -58.376584, Nombre = "Maipú" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 37, Latitud = -34.607948, Longitud = -58.377993, Nombre = "Piedras" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 38, Latitud = -34.596969, Longitud = -58.382798, Nombre = "Libertad" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 40, Latitud = -34.604436, Longitud = -58.373785, Nombre = "Sarmiento" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 41, Latitud = -34.636356, Longitud = -58.40766, Nombre = "Urquiza" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 42, Latitud = -34.60472, Longitud = -58.37967, Nombre = "Diagonal Norte" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 43, Latitud = -34.599755, Longitud = -58.397834, Nombre = "Plaza Houssay" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 44, Latitud = -34.575548, Longitud = -58.413716, Nombre = "Zoológico" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 46, Latitud = -34.616327, Longitud = -58.374491, Nombre = "Chile" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 47, Latitud = -34.611002, Longitud = -58.373413, Nombre = "Colegio Nacional Buenos Aires" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 48, Latitud = -34.605429, Longitud = -58.371528, Nombre = "Perón" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 50, Latitud = -34.583712, Longitud = -58.401047, Nombre = "Hospital Rivadavia" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 51, Latitud = -34.601347, Longitud = -58.382268, Nombre = "Tucumán" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 53, Latitud = -34.595389, Longitud = -58.374469, Nombre = "Ricardo Rojas" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 55, Latitud = -34.59939, Longitud = -58.369413, Nombre = "Bouchard" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 56, Latitud = -34.589416, Longitud = -58.425143, Nombre = "Plaza Palermo Viejo" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 57, Latitud = -34.613024, Longitud = -58.370706, Nombre = "Belgrano" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 58, Latitud = -34.575139, Longitud = -58.434778, Nombre = "Ministro Carranza" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 59, Latitud = -34.590202, Longitud = -58.411614, Nombre = "Coronel Díaz" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 60, Latitud = -34.601586, Longitud = -58.371224, Nombre = "25 de Mayo" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 61, Latitud = -34.609017, Longitud = -58.370908, Nombre = "Ministerio de Economía" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 62, Latitud = -34.598506, Longitud = -58.376938, Nombre = "Córdoba" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 63, Latitud = -34.599506, Longitud = -58.372761, Nombre = "Reconquista" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 64, Latitud = -34.594263, Longitud = -58.39433, Nombre = "Riobamba" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 65, Latitud = -34.587184, Longitud = -58.415815, Nombre = "Julián Álvarez" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 66, Latitud = -34.594615, Longitud = -58.413818, Nombre = "Billinghurst" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 68, Latitud = -34.606681, Longitud = -58.385455, Nombre = "Rivarola" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 69, Latitud = -34.595984, Longitud = -58.404459, Nombre = "Ecuador" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 70, Latitud = -34.592667, Longitud = -58.425827, Nombre = "Araoz" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 71, Latitud = -34.603027, Longitud = -58.382824, Nombre = "Cerrito" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 72, Latitud = -34.613635, Longitud = -58.374675, Nombre = "Venezuela" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 74, Latitud = -34.604646, Longitud = -58.434769, Nombre = "Instituto Leloir" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 76, Latitud = -34.607551, Longitud = -58.394959, Nombre = "Ayacucho" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 78, Latitud = -34.591493, Longitud = -58.380276, Nombre = "Arroyo" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 81, Latitud = -34.615746, Longitud = -58.370755, Nombre = "Balcarce" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 82, Latitud = -34.608095, Longitud = -58.426184, Nombre = "Hospital Italiano" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 84, Latitud = -34.602192, Longitud = -58.395588, Nombre = "Lavalle" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 85, Latitud = -34.594522, Longitud = -58.409038, Nombre = "Agüero" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 88, Latitud = -34.612886, Longitud = -58.404286, Nombre = "Misiones" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 91, Latitud = -34.617276, Longitud = -58.397672, Nombre = "Pasco" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 94, Latitud = -34.591811, Longitud = -58.449442, Nombre = "Guzmán" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 95, Latitud = -34.60221, Longitud = -58.378212, Nombre = "Esmeralda" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 96, Latitud = -34.602914, Longitud = -58.411465, Nombre = "Carlos Gardel" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 98, Latitud = -34.611711, Longitud = -58.378285, Nombre = "Moreno" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 99, Latitud = -34.596331, Longitud = -58.435565, Nombre = "Malabia" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 114, Latitud = -34.594811, Longitud = -58.372649, Nombre = "Della Paolera" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 115, Latitud = -34.58766, Longitud = -58.390828, Nombre = "Quintana" });
+            BicicletaEstacionDC.Current.Estaciones.InsertOnSubmit(new BicicletaEstacionTable { ExternalId = 121, Latitud = -34.60081, Longitud = -58.428378, Nombre = "Yatay" });
+            BicicletaEstacionDC.Current.SubmitChanges();
 
             RadioTaxiDC.Destroy();
             RadioTaxiDC.Current.Lista.InsertOnSubmit(new RadioTaxiTable { Id = new Guid("eee11015-d3aa-4f34-9ac4-223149a7d254"), Nombre = "24 Horas", Telefono = "4523-2222", Url = "http://www.radiotaxi24.com.ar/" });
@@ -165,11 +248,11 @@ namespace GuiaTBAWP.Commons
         }
 
         /// <value>Registered ID used to access map control and Bing maps service.</value>
-        public string BingMapApiKey { get { return "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp"; } }
+        public string BingMapApiKey => "AgagZE2Ku0M0iPH8uolBeUSZUgHmGRrqbd-5etCjKym4dmTaH59yeS6Ka_kz_SDp";
 
         public bool IsInitialized { get; set; }
 
-        public bool IsLocationEnabled { get { return IsLocationEnabledByPhone && IsLocationEnabledByAppConfig; } }
+        public bool IsLocationEnabled => IsLocationEnabledByPhone && IsLocationEnabledByAppConfig;
 
         public bool IsLocationEnabledByPhone { get; set; }
 

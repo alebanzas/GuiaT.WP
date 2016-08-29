@@ -2,7 +2,7 @@
 using System.Data.Linq.Mapping;
 using System.Device.Location;
 
-namespace GuiaTBAWP.Commons.Models
+namespace GuiaTBA.Common.Models
 {
     [Table]
     public class BicicletaEstacionTable : IEquatable<BicicletaEstacionTable>
@@ -55,6 +55,22 @@ namespace GuiaTBAWP.Commons.Models
             set { _cantidad = value; }
         }
 
+        private int _cantidadEspacios;
+        [Column]
+        public int CantidadEspacios
+        {
+            get { return _cantidadEspacios; }
+            set { _cantidadEspacios = value; }
+        }
+
+        private int _externalId;
+        [Column]
+        public int ExternalId
+        {
+            get { return _externalId; }
+            set { _externalId = value; }
+        }
+
         private string _horario;
         [Column]
         public string Horario
@@ -99,22 +115,24 @@ namespace GuiaTBAWP.Commons.Models
         {
         }
 
-        public BicicletaEstacionTable(Guid id, string nombre, double longitud, double latitud, string estado, int cantidad, string horario, string url, string distance)
+        public BicicletaEstacionTable(Guid id, string nombre, double longitud, double latitud, string estado, int cantidad, int cantidadespacios, string horario, string url, string distance, int externalId)
         {
-            this.Id = id; 
-            this.Nombre = nombre;
-            this.Longitud = longitud;
-            this.Latitud = latitud;
-            this.Estado = estado;
-            this.Cantidad = cantidad;
-            this.Horario = horario;
-            this.Url = url;
-            this.Distance = distance;
+            Id = id; 
+            Nombre = nombre;
+            Longitud = longitud;
+            Latitud = latitud;
+            Estado = estado;
+            Cantidad = cantidad;
+            CantidadEspacios = cantidadespacios;
+            Horario = horario;
+            Url = url;
+            Distance = distance;
+            ExternalId = externalId;
         }
 
         public bool Equals(BicicletaEstacionTable other)
         {
-            return this.Nombre.Equals(other.Nombre);
+            return Nombre.Equals(other.Nombre) || ExternalId.Equals(other.ExternalId);
         }
 
         public double GetDistanceTo(GeoPosition<GeoCoordinate> getCurrentLocation)
